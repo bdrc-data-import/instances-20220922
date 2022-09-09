@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30039 {
+    bda:LG46D2FF10D79C5BDD
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-02-27T15:36:51.422Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG91DCB98ECCE0B8D9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30039  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30039 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b3/MW30039.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30039 ;
+        adm:logEntry        bda:LG46D2FF10D79C5BDD , bda:LG91DCB98ECCE0B8D9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12A901236604C848
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID70EC54E81A7778B7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624507597" .
+    
+    bdr:IDEFAA1ED2D38C3231
+        a                   bdr:HollisId ;
+        rdf:value           "014260583" .
+    
+    bdr:MW30039  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "sngon 'gro'i khrid yig thar lam gsal sgron/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID70EC54E81A7778B7 , bdr:IDEFAA1ED2D38C3231 ;
+        :authorshipStatement  "ngag blo rin po ches brtsams ; mkhan po rdo rjes bsgrigs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi 1"@bo-x-ewts ;
+        :extentStatement    "2, 32, 442 p." ;
+        :hasTitle           bdr:TT712BECD8E2EC979E , bdr:TT8467B3448683B26B , bdr:TT9EB2E30645C74BE5 ;
+        :instanceEvent      bdr:EV12A901236604C848 ;
+        :instanceHasReproduction  bdr:IE30039 , bdr:W30039 ;
+        :instanceOf         bdr:WA1KG18038 , bdr:WA30039 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zhang kang /"@bo-x-ewts ;
+        :publisherName      "zhang kang then mA dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG18038 ;
+        :seriesNumber       "v. 4" .
+    
+    bdr:TT712BECD8E2EC979E
+        a                   :CoverTitle ;
+        rdfs:label          "sa skya'i sngon 'gro'i khrid yig"@bo-x-ewts .
+    
+    bdr:TT8467B3448683B26B
+        a                   :Title ;
+        rdfs:label          "sngon 'gro'i khrid yig thar lam gsal sgron/"@bo-x-ewts .
+    
+    bdr:TT9EB2E30645C74BE5
+        a                   :TitlePageTitle ;
+        rdfs:label          "bla med rdo rje theg pa'i lam gyi sngon 'gro thun mong dang thun mong ma yin pa'i khrid rim thar pa thams cad mkhyen pa'i lam gyi sgron me/"@bo-x-ewts .
+}

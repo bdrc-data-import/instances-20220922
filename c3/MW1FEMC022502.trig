@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022502 {
+    bda:LGC26F4C37F281ECE5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-22"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022502"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022502
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022502 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "c3/MW1FEMC022502.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022502 ;
+        adm:logEntry        bda:LGC26F4C37F281ECE5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA1D2933031872F5B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "B.68.VII" .
+    
+    bdr:MW1FEMC022502
+        a                   :Instance ;
+        skos:prefLabel      "ទសជាតក"@km , "dasa jātaka"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA1D2933031872F5B ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1412C80C5A767655 , bdr:TT52FC3061BB0E83C6 , bdr:TTCC257680B5ACB74A , bdr:TTD502A26A5133A4FB , bdr:TTE347A3EBFEC6C71D , bdr:TTEF004A4FEE5E7AF0 ;
+        :instanceHasReproduction  bdr:W1FEMC022502 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT84756ABEF3BEA065 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "425" .
+    
+    bdr:NT84756ABEF3BEA065
+        a                   :Note ;
+        :contentLocationStatement  "pg. 446" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1412C80C5A767655
+        a                   :CoverTitle ;
+        rdfs:label          "សុវណ្ណសាម្មជាតក"@km .
+    
+    bdr:TT52FC3061BB0E83C6
+        a                   :CoverTitle ;
+        rdfs:label          "សុវណ្ណសាមជាតក"@km ;
+        :femcConversionOf   bdr:TT1412C80C5A767655 .
+    
+    bdr:TTCC257680B5ACB74A
+        a                   :CoverTitle ;
+        rdfs:label          "suvaṇṇasāmma jātaka"@km-x-twktt .
+    
+    bdr:TTD502A26A5133A4FB
+        a                   :CoverTitle ;
+        rdfs:label          "suvaṇṇasāma jātaka"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCC257680B5ACB74A .
+    
+    bdr:TTE347A3EBFEC6C71D
+        a                   :Title ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTEF004A4FEE5E7AF0
+        a                   :Title ;
+        rdfs:label          "dasa jātaka"@km-x-twktt .
+}

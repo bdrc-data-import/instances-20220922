@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14689 {
+    bda:LGBA1A03C5F6C63125
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-07-25T14:50:53.45Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14689  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14689 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "5d/MW1KG14689.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14689 ;
+        adm:logEntry        bda:LGBA1A03C5F6C63125 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39F519AAFC7AD040
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8F7B221265BAD314
+        a                   bdr:HollisId ;
+        rdf:value           "014256222" .
+    
+    bdr:MW1KG14689  a       :Instance ;
+        skos:prefLabel      "kaHpad+ma chos ldan gyi rnam thar dad gsum dang ba 'dren pa'i shing rta/"@bo-x-ewts , "噶白玛曲登历史三信宝轮"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8F7B221265BAD314 ;
+        :authorshipStatement  "mkhan chos grags kyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "100 p." ;
+        :hasTitle           bdr:TT1AFAC3E339DBD497 , bdr:TT88B1D62A32856079 , bdr:TTEB7D5F3DD6925AD0 ;
+        :illustrations      "ill. (col. plates)" ;
+        :instanceEvent      bdr:EV39F519AAFC7AD040 ;
+        :instanceHasReproduction  bdr:W1KG14689 ;
+        :instanceOf         bdr:WA1KG14689 ;
+        :note               bdr:NT145D1CA9AD17F5AA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "[s.l.]"@en ;
+        :publisherName      "[s.n.]"@en ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:NT145D1CA9AD17F5AA
+        a                   :Note ;
+        :noteText           "in tibetan and chinese"@en .
+    
+    bdr:TT1AFAC3E339DBD497
+        a                   :Title ;
+        rdfs:label          "kaHpad+ma chos ldan gyi rnam thar dad gsum dang ba 'dren pa'i shing rta/"@bo-x-ewts .
+    
+    bdr:TT88B1D62A32856079
+        a                   :OtherTitle ;
+        rdfs:label          "噶白玛曲登历史三信宝轮"@zh-hans .
+    
+    bdr:TTEB7D5F3DD6925AD0
+        a                   :OtherTitle ;
+        rdfs:label          "ga bai ma qu deng li shi san xin bao lun"@zh-latn-pinyin-x-ndia .
+}

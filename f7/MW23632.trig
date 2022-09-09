@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23632 {
+    bda:LG7DE1830B8E262A80
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-09-14T11:35:32.837Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBA914EEC908BCBCD
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-05T16:48:52.122Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGC28D1F10CDD13716
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23632  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23632 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "f7/MW23632.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23632 ;
+        adm:logEntry        bda:LG7DE1830B8E262A80 , bda:LGBA914EEC908BCBCD , bda:LGC28D1F10CDD13716 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV87995ED301ABDBF2
+        a                   :PublishedEvent ;
+        :eventWhen          "199X"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID11CECFC91C99FDFB
+        a                   bdr:HollisId ;
+        rdf:value           "014259001" .
+    
+    bdr:MW23632  a          :Instance ;
+        skos:prefLabel      "dbyangs can byA ka ra Na'i 'grel pa rab tu bya ba gsal ldan/ （bla brang par ma/）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID11CECFC91C99FDFB ;
+        :authorshipStatement  "se'i rigs las skyes pa ngag dbang phun tshogs lhun grub bam tshe dbang rab brtan rdo rje/"@bo-x-ewts ;
+        :biblioNote         "impressions from blocks carved and preserved at bla brang bkra shis 'khyil monastery"@en ;
+        :extentStatement    "151 ff." ;
+        :hasSourcePrintery  bdr:G1PD129183 ;
+        :hasTitle           bdr:TT791BE6E601BD330B , bdr:TT981BA7018510ECE4 ;
+        :instanceEvent      bdr:EV87995ED301ABDBF2 ;
+        :instanceHasReproduction  bdr:W23632 ;
+        :instanceOf         bdr:WA23632 ;
+        :note               bdr:NTD2341EECC774F2C9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[bkra shis 'khyil]"@en ;
+        :publisherName      "[bkra shis 'khyil dgon]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTD2341EECC774F2C9
+        a                   :Note ;
+        :noteSource         bdr:MW15179 ;
+        :noteText           "other version of dbyangs can byA ka na Na, W15179"@en .
+    
+    bdr:TT791BE6E601BD330B
+        a                   :TitlePageTitle ;
+        rdfs:label          "brda sprod pa'i bstan bcos chen po dbyangs can byA ka ra Na'i 'grel pa rab tu bya ba gsal ldan/"@bo-x-ewts .
+    
+    bdr:TT981BA7018510ECE4
+        a                   :Title ;
+        rdfs:label          "dbyangs can byA ka ra Na'i 'grel pa rab tu bya ba gsal ldan/ （bla brang par ma/）"@bo-x-ewts .
+}

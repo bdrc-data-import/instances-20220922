@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21750 {
+    bda:LG6204B86B2466911C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF2B65B26B751DB4D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-01T15:55:56.112Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Editor, add cat info, print tyep and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21750  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21750 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ce/MW21750.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21750 ;
+        adm:logEntry        bda:LG6204B86B2466911C , bda:LGF2B65B26B751DB4D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA7EF5CDFEC3E3FD4
+        a                   :PublishedEvent ;
+        :eventWhen          "1995"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID9E9795FED90207E7
+        a                   bdr:HollisId ;
+        rdf:value           "014258427" .
+    
+    bdr:MW21750  a          :Instance ;
+        skos:prefLabel      "lha sa khul gyi dmangs gzhas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9E9795FED90207E7 ;
+        :authorshipStatement  "krung go dmangs khrod rtsom rigs bod ljongs yan lag ; grong khyer lha sa'i phyogs sgrig khag gsum rtsom sgrig khang /"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "v. 2 only" ;
+        :hasTitle           bdr:TT65E0181AB78B3EB3 ;
+        :instanceEvent      bdr:EVA7EF5CDFEC3E3FD4 ;
+        :instanceHasReproduction  bdr:W21750 ;
+        :instanceOf         bdr:WA21750 ;
+        :note               bdr:NTBE38D70B87B16ACA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "grong khyer lha sa'i mang tshogs sgyu rtsal khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTBE38D70B87B16ACA
+        a                   :Note ;
+        :noteText           "tbrc holds volume 2 only; acquisition of vol. 1 is in progress\n5828 (volume 2)"@en .
+    
+    bdr:TT65E0181AB78B3EB3
+        a                   :Title ;
+        rdfs:label          "lha sa khul gyi dmangs gzhas/"@bo-x-ewts .
+}

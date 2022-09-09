@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1104 {
+    bda:LG4D9A3D80AFFF4F4F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-12-05T14:27:33.098Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB26BE787770E0755
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-05-19T09:48:32.004Z"^^xsd:dateTime ;
+        adm:logMessage      "republished"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1104  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1104 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e0/MW1KG1104.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1104 ;
+        adm:logEntry        bda:LG4D9A3D80AFFF4F4F , bda:LGB26BE787770E0755 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9A0403879E6878D7
+        a                   :PublishedEvent ;
+        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID49A3F1A18E67E36A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105090396" .
+    
+    bdr:IDCBFA91E18FD18C6F
+        a                   bdr:HollisId ;
+        rdf:value           "014255698" .
+    
+    bdr:MW1KG1104  a        :Instance , :SerialInstance ;
+        skos:altLabel       "gen ben bu yi dian zhu shi hui bian"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rtsa rgyud 'grel pa phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID49A3F1A18E67E36A , bdr:IDCBFA91E18FD18C6F ;
+        :contentLocationStatement  "TBRC Library: Editor's Room" ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "3, 4, 3, 322 p." ;
+        :hasTitle           bdr:TT104AB8D392435594 , bdr:TT8769873940D8320E ;
+        :instanceEvent      bdr:EV9A0403879E6878D7 ;
+        :instanceHasReproduction  bdr:IE1KG1104 , bdr:W1KG1104 ;
+        :instanceOf         bdr:WA1KG1104 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC418 ;
+        :seriesNumber       "062" .
+    
+    bdr:TT104AB8D392435594
+        a                   :Title ;
+        rdfs:label          "rtsa rgyud 'grel pa phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT8769873940D8320E
+        a                   :ColophonTitle ;
+        rdfs:label          "gen ben bu yi dian zhu shi hui bian"@zh-latn-pinyin-x-ndia .
+}

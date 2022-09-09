@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20433 {
+    bda:LG2941FF8212B394CF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-07T15:25:04.609Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info, print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG9120EC0F146CD617
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20433  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20433 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4d/MW20433.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20433 ;
+        adm:logEntry        bda:LG2941FF8212B394CF , bda:LG9120EC0F146CD617 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8C2D1516512D9538
+        a                   :PublishedEvent ;
+        :eventWhen          "1995"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7975ACBE6B82D9AA
+        a                   bdr:HollisId ;
+        rdf:value           "014258150" .
+    
+    bdr:IDF8A8C5573AACEF97
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "722300855X" .
+    
+    bdr:MW20433  a          :Instance ;
+        skos:prefLabel      "khyad du 'phags pa'i byang thang ngo mtshar 'os pa'i thon khungs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7975ACBE6B82D9AA , bdr:IDF8A8C5573AACEF97 ;
+        :authorshipStatement  "bod ljongs nag chu sa khul srid gros rig gnas lo rgyus dpyad yig khang /"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "335 p." ;
+        :hasTitle           bdr:TT15E004DDB128A83F , bdr:TT8B00920ED003939E ;
+        :illustrations      "20 p. of col. plates" ;
+        :instanceEvent      bdr:EV8C2D1516512D9538 ;
+        :instanceHasReproduction  bdr:W20433 ;
+        :instanceOf         bdr:WA20433 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT15E004DDB128A83F
+        a                   :Title ;
+        rdfs:label          "khyad du 'phags pa'i byang thang ngo mtshar 'os pa'i thon khungs/"@bo-x-ewts .
+    
+    bdr:TT8B00920ED003939E
+        a                   :Subtitle ;
+        rdfs:label          "'dzam gling yang rtse bod ljongs byang phyogs nag chu sa khul gyi gnas tshul rags bsdus ngo sprod/"@bo-x-ewts .
+}

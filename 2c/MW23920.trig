@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23920 {
+    bda:LG0404AD67F488B604
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T10:22:38.012Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGFB6A52FAC9450C96
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23920  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23920 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "2c/MW23920.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23920 ;
+        adm:logEntry        bda:LG0404AD67F488B604 , bda:LGFB6A52FAC9450C96 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9B12BFE0B248EACA
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0CE052710A5C30CE
+        a                   bdr:HollisId ;
+        rdf:value           "014259230" .
+    
+    bdr:ID30021CD48F562F65
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-463" .
+    
+    bdr:ID3E67C96189C943CB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902822" .
+    
+    bdr:IDC508707677E51A77
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7564 .T43 1985" .
+    
+    bdr:MW23920  a          :Instance , :SerialInstance ;
+        skos:altLabel       "grub thob chen po'i thigs thig gi skor : the collected revelations revealed in a vision of than-ston-rgyal-po to 'jam-dbyans mkhyen-brtse'i-dban-po"@en-x-mixed ;
+        skos:prefLabel      "grub thob chen po'i thugs thig gi skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0CE052710A5C30CE , bdr:ID30021CD48F562F65 , bdr:ID3E67C96189C943CB , bdr:IDC508707677E51A77 ;
+        :biblioNote         "reproduced from rare manuscripts from the library of grub-thob rin-po-che"@en ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT18D203C56519A7B6 , bdr:TT6F7262F95BE43F38 ;
+        :instanceEvent      bdr:EV9B12BFE0B248EACA ;
+        :instanceHasReproduction  bdr:W23920 ;
+        :instanceOf         bdr:WA23920 ;
+        :note               bdr:NTEF70DB3AE2C8F29D ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "national library of bhutan"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS23916 ;
+        :seriesNumber       "v. 3-5" .
+    
+    bdr:NTEF70DB3AE2C8F29D
+        a                   :Note ;
+        :noteText           "-3507"@en .
+    
+    bdr:TT18D203C56519A7B6
+        a                   :TitlePageTitle ;
+        rdfs:label          "grub thob chen po'i thigs thig gi skor : the collected revelations revealed in a vision of than-ston-rgyal-po to 'jam-dbyans mkhyen-brtse'i-dban-po"@en-x-mixed .
+    
+    bdr:TT6F7262F95BE43F38
+        a                   :Title ;
+        rdfs:label          "grub thob chen po'i thugs thig gi skor/"@bo-x-ewts .
+}

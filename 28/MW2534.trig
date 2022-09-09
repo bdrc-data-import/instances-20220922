@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2534 {
+    bda:LGC2C8564AAF434EB5
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-08T11:03:02.853Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGD78EF518E0A03060
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2534  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW2534 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "28/MW2534.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2534 ;
+        adm:logEntry        bda:LGC2C8564AAF434EB5 , bda:LGD78EF518E0A03060 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9D53B1C532099726
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID45921F107AC4015D
+        a                   bdr:HollisId ;
+        rdf:value           "014259457" .
+    
+    bdr:ID643FBDF66D122DD0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7695 .S54 1985" .
+    
+    bdr:IDCF813636BACCD61C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85905304" .
+    
+    bdr:IDEE97227E5C007E41
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2958" .
+    
+    bdr:MW2534  a           :Instance ;
+        skos:prefLabel      "mi tra brgya rtsa'i dkyil 'khor gyi mngon rtogs blo gsal mgul rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID45921F107AC4015D , bdr:ID643FBDF66D122DD0 , bdr:IDCF813636BACCD61C , bdr:IDEE97227E5C007E41 ;
+        :authorshipStatement  "by 'on rgyal-sras bskal-bzang-thub-bstan-'jigs-med-rgyal-mtshan"@en ;
+        :biblioNote         "reproduced from prints from the 'on chos-sdins blocks"@en ;
+        :extentStatement    "236 p." ;
+        :hasSourcePrintery  bdr:G2CN10880 ;
+        :hasTitle           bdr:TT36E29B2B3873A1DA ;
+        :instanceEvent      bdr:EV9D53B1C532099726 ;
+        :instanceHasReproduction  bdr:W2534 ;
+        :instanceOf         bdr:WA2534 ;
+        :note               bdr:NT2A9A7124F437CF7D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "nagwang topgyal"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT2A9A7124F437CF7D
+        a                   :Note ;
+        :noteText           "another example described:\n118 ff. in vol. 2 of the 3 vol. printed gsung 'bum in the Potala collection (00792-2)"@en .
+    
+    bdr:TT36E29B2B3873A1DA
+        a                   :Title ;
+        rdfs:label          "mi tra brgya rtsa'i dkyil 'khor gyi mngon rtogs blo gsal mgul rgyan/"@bo-x-ewts .
+}

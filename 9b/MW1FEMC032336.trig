@@ -1,0 +1,78 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC032336 {
+    bda:LGB3F70F400CA4910A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-12-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC032336"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC032336
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC032336 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "9b/MW1FEMC032336.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC032336 ;
+        adm:logEntry        bda:LGB3F70F400CA4910A , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDBDFB9E0F43E5B7F4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "140-B.09.04.02..VI.6" .
+    
+    bdr:MW1FEMC032336
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនឆាក្ខ ខ្វាននាគ (១-១៩)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBDFB9E0F43E5B7F4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTC456FD1B77AD57F1 ;
+        :instanceHasReproduction  bdr:W1FEMC032336 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT3672D630921F45AA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3672D630921F45AA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTC456FD1B77AD57F1
+        a                   :Title ;
+        rdfs:label          "ក្បួនឆាក្ខ ខ្វាននាគ (១-១៩)"@km .
+}

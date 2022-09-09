@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044413 {
+    bda:LG39EF5611694FD308
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044413"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044413
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044413 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "35/MW1FEMC044413.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044413 ;
+        adm:logEntry        bda:LG39EF5611694FD308 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB23EEC7CBF705CBA
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "053-B.09.12.01.III.6" .
+    
+    bdr:MFFF75442D718B101A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "165" .
+    
+    bdr:MW1FEMC044413
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សភ្លើង"@km , "ānisaṅ bhlőṅ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB23EEC7CBF705CBA ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT3C0F88137795C610 , bdr:TT8C3AD121BFCDA396 ;
+        :instanceHasReproduction  bdr:W1FEMC034413 , bdr:W1FEMC044413 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFFF75442D718B101A ;
+        :note               bdr:NT1D55D78E7417E6EC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1D55D78E7417E6EC
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3C0F88137795C610
+        a                   :Title ;
+        rdfs:label          "អានិសង្សភ្លើង"@km .
+    
+    bdr:TT8C3AD121BFCDA396
+        a                   :Title ;
+        rdfs:label          "ānisaṅ bhlőṅ"@km-x-twktt .
+}

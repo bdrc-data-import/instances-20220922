@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011267 {
+    bda:LG9CA5A68D63ABC6C7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011267"@en ;
+        adm:logWho          bdu:U00086 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011267
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011267 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "49/MW1FEMC011267.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011267 ;
+        adm:logEntry        bda:LG9CA5A68D63ABC6C7 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID298F1EAE17E993DE
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "002-A.07.01.05.VII" .
+    
+    bdr:MF9CF72D5D92B2C7D6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "VI" ;
+        :microfilmStrip     "26" .
+    
+    bdr:MW1FEMC011267
+        a                   :Instance ;
+        skos:prefLabel      "ភិក្ខុប្បាដិមោក្ខ"@pi-khmr , "bhikkhuppāṭimokkha"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID298F1EAE17E993DE ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT4B09ACA193848029 , bdr:TTBDD5B92ED12A7A83 , bdr:TTD1423F304495238D , bdr:TTE601EAF07ABA8F01 ;
+        :instanceHasReproduction  bdr:W1FEMC011267 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF9CF72D5D92B2C7D6 ;
+        :note               bdr:NT1F7632CAB01E9836 , bdr:NTD098AF663B3FF9AB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1F7632CAB01E9836
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:NTD098AF663B3FF9AB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 299" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT4B09ACA193848029
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ"@pi-khmr ;
+        :femcConversionOf   bdr:TTD1423F304495238D .
+    
+    bdr:TTBDD5B92ED12A7A83
+        a                   :Title ;
+        rdfs:label          "bhikkhuppāṭimokkha"@pi-x-twktt ;
+        :femcConversionOf   bdr:TTE601EAF07ABA8F01 .
+    
+    bdr:TTD1423F304495238D
+        a                   :CoverTitle ;
+        rdfs:label          "បាដ្ឌិមោក្ខ (វាន)"@pi-khmr .
+    
+    bdr:TTE601EAF07ABA8F01
+        a                   :CoverTitle ;
+        rdfs:label          "pāṭḍimokkha"@pi-x-twktt .
+}

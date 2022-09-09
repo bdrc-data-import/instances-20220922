@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29237 {
+    bda:LGFCDC6C8F8203FEAE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29237  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29237 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "11/MW29237.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29237 ;
+        adm:logEntry        bda:LGFCDC6C8F8203FEAE , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVECA7CDBC73DFA6A4
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8B590E489B314FA7
+        a                   bdr:HollisId ;
+        rdf:value           "014259954" .
+    
+    bdr:IDBE403CD78662D35C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7536726708" .
+    
+    bdr:IDD8F38818FED09829
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "010176092-2" .
+    
+    bdr:MW29237  a          :Instance ;
+        skos:altLabel       "Mi gźiʼi sñiṅ stobs /Me-lces brtsams."@en-x-mixed , "ren ge jing shen"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "mi gzhi'i snying stobs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8B590E489B314FA7 , bdr:IDBE403CD78662D35C , bdr:IDD8F38818FED09829 ;
+        :authorshipStatement  "me lces brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "258 p." ;
+        :hasTitle           bdr:TT6966D6222F4926A8 , bdr:TT7F94E5B5BBA49C0A , bdr:TTBAB6DC3D00C9A462 ;
+        :instanceEvent      bdr:EVECA7CDBC73DFA6A4 ;
+        :instanceHasReproduction  bdr:W29237 ;
+        :instanceOf         bdr:WA29237 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "kun ming /"@bo-x-ewts ;
+        :publisherName      "yun nan mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS29235 .
+    
+    bdr:TT6966D6222F4926A8
+        a                   :ColophonTitle ;
+        rdfs:label          "ren ge jing shen"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT7F94E5B5BBA49C0A
+        a                   :Title ;
+        rdfs:label          "mi gzhi'i snying stobs/"@bo-x-ewts .
+    
+    bdr:TTBAB6DC3D00C9A462
+        a                   :CoverTitle ;
+        rdfs:label          "Mi gźiʼi sñiṅ stobs /Me-lces brtsams."@en-x-mixed .
+}

@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023132 {
+    bda:LGA3E704C37BCB21AC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023132"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023132
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023132 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "25/MW1FEMC023132.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023132 ;
+        adm:logEntry        bda:LGA3E704C37BCB21AC , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF23B911C41299A0A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.954.VI.6" .
+    
+    bdr:MW1FEMC023132
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះវិន័យ ព្រះសូត្រ ព្រះអភិធម្ម (អានត្រៃ)"@km , "braḥ vinăya braḥ sūtra braḥ abhidhamma (ān trai)"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF23B911C41299A0A ;
+        :biblioNote         "This manuscript was digitized by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imagining Services, and Fonds pour l’Edition des Manuscripts du Cambodge (FEMC), under the auspices of The Ministry of Culture and Fine Arts, Cambodia (ក្រសួងវប្បធម៌ និងវិចិត្រសិល្បៈ). We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT85974304AD62FE8A , bdr:TT8630F8F5E7E88FDE ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :note               bdr:NTF47EAFE3375649ED ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "UB070" .
+    
+    bdr:NTF47EAFE3375649ED
+        a                   :Note ;
+        :contentLocationStatement  "pg. 555" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT85974304AD62FE8A
+        a                   :Title ;
+        rdfs:label          "ព្រះវិន័យ ព្រះសូត្រ ព្រះអភិធម្ម (អានត្រៃ)"@km .
+    
+    bdr:TT8630F8F5E7E88FDE
+        a                   :Title ;
+        rdfs:label          "braḥ vinăya braḥ sūtra braḥ abhidhamma (ān trai)"@km-x-twktt .
+}

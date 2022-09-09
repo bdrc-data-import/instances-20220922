@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG23270 {
+    bda:LGDB5C13D93AACC07B
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2017-04-26T04:06:29.698Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDC9DFE4BCB0D9102
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2016-04-18T09:18:11.386Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW1KG23270  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG23270 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "89/MW1KG23270.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG23270 ;
+        adm:logEntry        bda:LGDB5C13D93AACC07B , bda:LGDC9DFE4BCB0D9102 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9216E165B2194537
+        a                   :PublishedEvent ;
+        :eventWhen          "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3AC9A01FB045D4BB
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789383441402" .
+    
+    bdr:MW1KG23270  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "bod kyi tha snyad 'byung khungs tshig mdzod/"@bo-x-ewts , "tibetan etymological dictionary"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3AC9A01FB045D4BB ;
+        :authorshipStatement  "blo bzang thabs mkhas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "xvii, 246 p." ;
+        :hasTitle           bdr:TTB7191DA86854B2C6 , bdr:TTD9F39105C07A7F07 ;
+        :instanceEvent      bdr:EV9216E165B2194537 ;
+        :instanceHasReproduction  bdr:W1KG23270 ;
+        :instanceOf         bdr:WA1KG23270 ;
+        :note               bdr:NT08926DA13553C860 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@bo-x-ewts ;
+        :publisherName      "bod kyi dpe mdzod khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG13995 ;
+        :seriesNumber       "21" .
+    
+    bdr:NT08926DA13553C860
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. D33806"@en .
+    
+    bdr:TTB7191DA86854B2C6
+        a                   :OtherTitle ;
+        rdfs:label          "tibetan etymological dictionary"@en .
+    
+    bdr:TTD9F39105C07A7F07
+        a                   :Title ;
+        rdfs:label          "bod kyi tha snyad 'byung khungs tshig mdzod/"@bo-x-ewts .
+}

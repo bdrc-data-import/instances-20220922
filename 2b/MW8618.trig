@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8618 {
+    bda:LG2C12850F3020CABE
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-11-14T10:37:48.185Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG99EEF67203A8D173
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-26T10:29:38.565Z"^^xsd:dateTime ;
+        adm:logMessage      "addded print type and source printrey"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGBA9E965115780273
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW8618  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW8618 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "2b/MW8618.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8618 ;
+        adm:logEntry        bda:LG2C12850F3020CABE , bda:LG99EEF67203A8D173 , bda:LGBA9E965115780273 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D8C86EC8245B8D0
+        a                   :PublishedEvent ;
+        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID13750D43C35A710E
+        a                   bdr:HollisId ;
+        rdf:value           "014261096" .
+    
+    bdr:MW8618  a           :Instance ;
+        skos:prefLabel      "phar phyin bsam 'phel dbang rgyal dang dbu ma thar 'dod ded dpon/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID13750D43C35A710E ;
+        :biblioNote         "impression from the blocks preserved at bkra shis lhun po monastery in tibet"@en ;
+        :extentStatement    "1 v. (446, 134 ff.)" ;
+        :hasSourcePrintery  bdr:G2CN10913 ;
+        :hasTitle           bdr:TT11D120419E9D23F3 ;
+        :instanceEvent      bdr:EV1D8C86EC8245B8D0 ;
+        :instanceHasReproduction  bdr:W8618 ;
+        :instanceOf         bdr:WA8618 ;
+        :note               bdr:NT54E9651CA852A091 , bdr:NTE934AFCCE4FB0C2E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "gzhis ka rtse/"@bo-x-ewts ;
+        :publisherName      "bkra shis lhun dgon/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT54E9651CA852A091
+        a                   :Note ;
+        :noteText           "contents: \n1. bstan bcos mngon par rtogs pa'i rgyan 'grel pa 'grel bshad dang bcas pa'i rgya cher bshad pa bsam 'phel dbang gi rgyal po/ 449 ff.; unknown author, probably a portion of the yig cha of thos-bsam-gling. abhisamayalamkara part 1.\n2. rnam bshad dgongs pa rab gsal gyi dka' ba'i gnad rnams gsal bar byed pa legs par bshad pa thar 'dod ded dpon/ 134 ff."@en .
+    
+    bdr:NTE934AFCCE4FB0C2E
+        a                   :Note ;
+        :noteText           "Rnam bshad dgongs pa rab gsal gyi dka' ba'i gnad rnams gsal bar byed pa legs par bshad pa thar 'dod ded dpon.\nBkra shis lhun po : Dgon gzhung, 1997.\n134 ff. (pp. 20-895-20-1159)\nMarginal title: Thos gling dbu ma.\nLithographic print based on an earlier Bkra-shis-lhun-po print. Folia 133 is missing"@en .
+    
+    bdr:TT11D120419E9D23F3
+        a                   :Title ;
+        rdfs:label          "phar phyin bsam 'phel dbang rgyal dang dbu ma thar 'dod ded dpon/"@bo-x-ewts .
+}

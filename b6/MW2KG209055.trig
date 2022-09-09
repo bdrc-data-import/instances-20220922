@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2KG209055 {
+    bda:LG7457B27B2E178723
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-01-05T07:29:54.784Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG8A7AB622C4039A2E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-11-22T15:58:54.08Z"^^xsd:dateTime ;
+        adm:logMessage      "simple cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW2KG209055  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW2KG209055 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b6/MW2KG209055.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2KG209055 ;
+        adm:logEntry        bda:LG7457B27B2E178723 , bda:LG8A7AB622C4039A2E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV202CB823BF203593
+        a                   :PublishedEvent ;
+        :eventWhen          "2013,2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID743DCA3296F3C261
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223038669" .
+    
+    bdr:MW2KG209055  a      :Instance ;
+        skos:prefLabel      "dud 'gro'i gzhis ka"@bo-x-ewts , "动物庄园"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID743DCA3296F3C261 ;
+        :authorshipStatement  "written by George Orwell and translated by Yardrokpa Kalsang Yeshe."@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/ par thengs gnyis pa/"@bo-x-ewts ;
+        :extentStatement    "5, 1, 327 p." ;
+        :hasTitle           bdr:TT3F4E7B3E9FFB98B2 , bdr:TTB1E56C98F787A241 ;
+        :instanceEvent      bdr:EV202CB823BF203593 ;
+        :instanceHasReproduction  bdr:W2KG209055 ;
+        :instanceOf         bdr:WA2KG209055 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT3F4E7B3E9FFB98B2
+        a                   :Title ;
+        rdfs:label          "dud 'gro'i gzhis ka"@bo-x-ewts .
+    
+    bdr:TTB1E56C98F787A241
+        a                   :OtherTitle ;
+        rdfs:label          "动物庄园"@zh-hans .
+}

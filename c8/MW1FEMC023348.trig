@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023348 {
+    bda:LG1F78AC5EAF7E82C2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023348"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023348
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023348 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c8/MW1FEMC023348.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023348 ;
+        adm:logEntry        bda:LG1F78AC5EAF7E82C2 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID1CC9E92ED48BBBC4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.435.VII" .
+    
+    bdr:MW1FEMC023348
+        a                   :Instance ;
+        skos:prefLabel      "មហាសមយសូត្រ, ករុណា,​ ករណី, ធម្មចក្កប្បវត្តនសូត្រ"@pi-khmr , "mahāsamayasūtra, karuṇā, karaṇī, dhammacakkappavattanasūtra"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1CC9E92ED48BBBC4 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT224C7B76A58B0713 , bdr:TT6EB248CA0B35FFA3 , bdr:TTAB63AF6DE6A9FE65 , bdr:TTE71DFA5CCBCFFD01 ;
+        :instanceHasReproduction  bdr:W1FEMC023348 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT1957222019F4AC90 , bdr:NT46A67D1BE8F16F69 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1957222019F4AC90
+        a                   :Note ;
+        :contentLocationStatement  "pg. 576" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NT46A67D1BE8F16F69
+        a                   :Note ;
+        :noteText           "should we write (វាន) ?"@en .
+    
+    bdr:TT224C7B76A58B0713
+        a                   :CoverTitle ;
+        rdfs:label          "មហាសម័យ, កណា, កណី, ធម្មច័ក្ខ (វាន)"@pi-khmr .
+    
+    bdr:TT6EB248CA0B35FFA3
+        a                   :Title ;
+        rdfs:label          "មហាសមយសូត្រ, ករុណា,​ ករណី, ធម្មចក្កប្បវត្តនសូត្រ"@pi-khmr ;
+        :femcConversionOf   bdr:TT224C7B76A58B0713 .
+    
+    bdr:TTAB63AF6DE6A9FE65
+        a                   :Title ;
+        rdfs:label          "mahāsamayasūtra, karuṇā, karaṇī, dhammacakkappavattanasūtra"@pi-x-twktt ;
+        :femcConversionOf   bdr:TTE71DFA5CCBCFFD01 .
+    
+    bdr:TTE71DFA5CCBCFFD01
+        a                   :CoverTitle ;
+        rdfs:label          "mahāsamăya, kaṇā, kaṇī, dhammacăkkha"@pi-x-twktt .
+}

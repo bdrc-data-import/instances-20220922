@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023265 {
+    bda:LG72D6AB0D3F028B39
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023265"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023265
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023265 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "49/MW1FEMC023265.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023265 ;
+        adm:logEntry        bda:LG72D6AB0D3F028B39 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID374F30BB0F4F58CD
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.979.V.1" .
+    
+    bdr:MW1FEMC023265
+        a                   :Instance ;
+        skos:prefLabel      "ត្រៃភូមិអន្ធការអស្ដា"@km , "trai bhūmi andhakār astā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID374F30BB0F4F58CD ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT212FB4C1092888BE , bdr:TT6C5B4A425E8A2175 , bdr:TT6F0ED1E1B4118E66 , bdr:TTCBAE8E5A633D8380 ;
+        :instanceHasReproduction  bdr:W1FEMC023265 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT5E1B0E4B45E987B8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT5E1B0E4B45E987B8
+        a                   :Note ;
+        :contentLocationStatement  "pg. 567" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT212FB4C1092888BE
+        a                   :Title ;
+        rdfs:label          "trai bhūmi andhakār astā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6C5B4A425E8A2175 .
+    
+    bdr:TT6C5B4A425E8A2175
+        a                   :CoverTitle ;
+        rdfs:label          "trai bhūm anthakār āstār"@km-x-twktt .
+    
+    bdr:TT6F0ED1E1B4118E66
+        a                   :Title ;
+        rdfs:label          "ត្រៃភូមិអន្ធការអស្ដា"@km ;
+        :femcConversionOf   bdr:TTCBAE8E5A633D8380 .
+    
+    bdr:TTCBAE8E5A633D8380
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃភូមអន្ថការ៌អាស្ដារ (វាន)"@km .
+}

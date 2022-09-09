@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023314 {
+    bda:LGECDFA37659715613
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023314"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023314
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023314 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0c/MW1FEMC023314.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023314 ;
+        adm:logEntry        bda:LGECDFA37659715613 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5E1C7F86BD45A240
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.1.002.VI.6" .
+    
+    bdr:MW1FEMC023314
+        a                   :Instance ;
+        skos:prefLabel      "មន្តបង្កក់ស្លុតី (វាន)"@km , "mant paṅkak' slutī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5E1C7F86BD45A240 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT4FAF441F0AC64569 , bdr:TTCAE1B57ADB5E6511 ;
+        :instanceHasReproduction  bdr:W1FEMC023314 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT1B500608D13F21D4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1B500608D13F21D4
+        a                   :Note ;
+        :contentLocationStatement  "pg. 572" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4FAF441F0AC64569
+        a                   :Title ;
+        rdfs:label          "មន្តបង្កក់ស្លុតី (វាន)"@km .
+    
+    bdr:TTCAE1B57ADB5E6511
+        a                   :Title ;
+        rdfs:label          "mant paṅkak' slutī"@km-x-twktt .
+}

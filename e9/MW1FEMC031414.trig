@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031414 {
+    bda:LGD28253A1892D5A02
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031414"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031414
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031414 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e9/MW1FEMC031414.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031414 ;
+        adm:logEntry        bda:LGD28253A1892D5A02 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID439E7545C5A74BB3
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "057-PP.02.01.01.VII" .
+    
+    bdr:MF83C8AC6A0F26F486
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "9" ;
+        :microfilmStrip     "33" .
+    
+    bdr:MW1FEMC031414
+        a                   :Instance ;
+        skos:prefLabel      "ចតុបារិសុទ្ទិសីល"@pi-khmr , "catupārisuddhisīla"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID439E7545C5A74BB3 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT0459A37E860B0629 , bdr:TT821185C0FE1B7631 , bdr:TTDFD0B4400F6079AF , bdr:TTEBD23296050AB3BF ;
+        :instanceHasReproduction  bdr:W1FEMC010200 , bdr:W1FEMC031414 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF83C8AC6A0F26F486 ;
+        :note               bdr:NT9C073341B664D55D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9C073341B664D55D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 93" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT0459A37E860B0629
+        a                   :Title ;
+        rdfs:label          "catupārisuddhisīla"@pi-x-twktt ;
+        :femcConversionOf   bdr:TTEBD23296050AB3BF .
+    
+    bdr:TT821185C0FE1B7631
+        a                   :Title ;
+        rdfs:label          "ចតុបារិសុទ្ទិសីល"@pi-khmr ;
+        :femcConversionOf   bdr:TTDFD0B4400F6079AF .
+    
+    bdr:TTDFD0B4400F6079AF
+        a                   :CoverTitle ;
+        rdfs:label          "ចតុបារិសុទ្ធសីល"@pi-khmr .
+    
+    bdr:TTEBD23296050AB3BF
+        a                   :CoverTitle ;
+        rdfs:label          "catupārisuddhasila"@pi-x-twktt .
+}

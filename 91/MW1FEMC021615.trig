@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021615 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021615
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021615 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "91/MW1FEMC021615.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021615 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA5CB51FCDB7D5EDA
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.524.I.1" .
+    
+    bdr:MW1FEMC021615
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់កូនចៅ"@km , "cpāp' kūn cau"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA5CB51FCDB7D5EDA ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT2EBCA6678E22BFDC , bdr:TT341608ABE11AC390 , bdr:TT6CFCCC137D0D6DED , bdr:TT7F67A159B6A3F2F9 ;
+        :instanceHasReproduction  bdr:W1FEMC021615 ;
+        :instanceOf         bdr:WA1FEMC021615 , bdr:WA1FEMC100047 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT9DC9181F67A1F797 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9DC9181F67A1F797
+        a                   :Note ;
+        :contentLocationStatement  "pg. 291" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2EBCA6678E22BFDC
+        a                   :Title ;
+        rdfs:label          "cpāp' kūn cau"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6CFCCC137D0D6DED .
+    
+    bdr:TT341608ABE11AC390
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាបកូនចោវ"@km .
+    
+    bdr:TT6CFCCC137D0D6DED
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp kūn cov"@km-x-twktt .
+    
+    bdr:TT7F67A159B6A3F2F9
+        a                   :Title ;
+        rdfs:label          "ច្បាប់កូនចៅ"@km ;
+        :femcConversionOf   bdr:TT341608ABE11AC390 .
+}

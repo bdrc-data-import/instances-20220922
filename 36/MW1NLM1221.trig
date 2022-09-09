@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1221 {
+    bda:LG06F27A7BD7BA9C7D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG45E60951A7F771CC
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-13T16:24:43.573Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGC46896A7F7DE19E1
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1221  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1221 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "36/MW1NLM1221.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1221 ;
+        adm:logEntry        bda:LG06F27A7BD7BA9C7D , bda:LG45E60951A7F771CC , bda:LGC46896A7F7DE19E1 , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1221  a       :Instance ;
+        skos:prefLabel      "phar phyin rnam bshad snying po'i rgyan/"@bo-x-ewts ;
+        :dimensionsStatement  "47.5x6.5" ;
+        :extentStatement    "371 ff." ;
+        :hasTitle           bdr:TT875BACB6C40CBC9D , bdr:TTFED716BCC5CDD0B8 ;
+        :instanceHasReproduction  bdr:W1NLM1221 ;
+        :instanceOf         bdr:WA1KG15417 , bdr:WA1NLM1221 ;
+        :note               bdr:NTC6652CCC107546B2 , bdr:NTF25504B00EE9D2C1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTC6652CCC107546B2
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NTF25504B00EE9D2C1
+        a                   :Note ;
+        :noteText           "nlmId: M0059139"@en .
+    
+    bdr:TT875BACB6C40CBC9D
+        a                   :Title ;
+        rdfs:label          "phar phyin rnam bshad snying po'i rgyan/"@bo-x-ewts .
+    
+    bdr:TTFED716BCC5CDD0B8
+        a                   :TitlePageTitle ;
+        rdfs:label          "shes rab kyi pha rol tu phyin ba'i man ngag bstan bcos mngon par rtogs pa'i rgyan gyi 'grel pa don gsal ba'i rnam bshad snying po'i rgyan/"@bo-x-ewts .
+}

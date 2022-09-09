@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22292 {
+    bda:LGDA9A335849C794C1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW22292  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22292 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "e8/MW22292.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22292 ;
+        adm:logEntry        bda:LGDA9A335849C794C1 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:CR687F7A4C65802F23
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7366 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB931CABE7059D81D
+        a                   :PublishedEvent ;
+        :eventWhen          "1993,2003printing"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDA245BA5C1616B0E5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7810 .B77 1996" .
+    
+    bdr:IDAC550B3606F5A386
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542006339" .
+    
+    bdr:IDBAC793D5B27A4F2A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98900266" .
+    
+    bdr:IDDCEE9BF225021515
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008107381-X" .
+    
+    bdr:MW22292  a          :Instance ;
+        skos:prefLabel      "bstod smon phyogs bsgrigs/"@bo-x-ewts , "Bstod smon phyogs bsgrigs /[dpe sgrig ʾgan khur ba Saṅs-rgyas]."@en-x-mixed , "sung tz'u hui pien"@zh-latn-wadegile ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA245BA5C1616B0E5 , bdr:IDAC550B3606F5A386 , bdr:IDBAC793D5B27A4F2A , bdr:IDDCEE9BF225021515 ;
+        :authorshipStatement  "rtsom sgrig 'gan 'khur pa sangs rgyas/"@bo-x-ewts ;
+        :biblioNote         "tbrc holds different editions"@en ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :creator            bdr:CR687F7A4C65802F23 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 376 p." ;
+        :hasTitle           bdr:TT30963AA2AE334D77 , bdr:TT4EA805CE59E0D349 , bdr:TT87ACBF60B9A05BF4 , bdr:TTF1121DF527CF6C4C ;
+        :instanceEvent      bdr:EVB931CABE7059D81D ;
+        :instanceOf         bdr:WA22292 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:TT30963AA2AE334D77
+        a                   :Title ;
+        rdfs:label          "bstod smon phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT4EA805CE59E0D349
+        a                   :ColophonTitle ;
+        rdfs:label          "shong ci hui bian"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT87ACBF60B9A05BF4
+        a                   :CoverTitle ;
+        rdfs:label          "Bstod smon phyogs bsgrigs /[dpe sgrig ʾgan khur ba Saṅs-rgyas]."@en-x-mixed .
+    
+    bdr:TTF1121DF527CF6C4C
+        a                   :ColophonTitle ;
+        rdfs:label          "sung tz'u hui pien"@zh-latn-wadegile .
+}

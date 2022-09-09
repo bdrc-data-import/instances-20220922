@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD100944 {
+    bda:LG953EE7A505703E7A
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-09-10T12:34:33.525Z"^^xsd:dateTime ;
+        adm:logMessage      "clean pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB7E522AC1CFDBCCE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-25T12:36:44.213Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGCAA8827CC244E1AE
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-03-25T12:41:35.964Z"^^xsd:dateTime ;
+        adm:logMessage      "bc0s"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD100944  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD100944 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "46/MW1PD100944.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD100944 ;
+        adm:logEntry        bda:LG953EE7A505703E7A , bda:LGB7E522AC1CFDBCCE , bda:LGCAA8827CC244E1AE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR2F6DFAE7EFC29A7D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6614 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD022B491AF87C3C8
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID65258CBC87E23C8D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787540942113" .
+    
+    bdr:IDC237EB295139DA02
+        a                   bdr:HollisId ;
+        rdf:value           "014257655" .
+    
+    bdr:MW1PD100944  a      :Instance ;
+        skos:altLabel       "藏族古译文献宝典"@zh-hans ;
+        skos:prefLabel      "snga 'gyur bka' ma shin tu rgyas pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID65258CBC87E23C8D , bdr:IDC237EB295139DA02 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR2F6DFAE7EFC29A7D ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "133 v." ;
+        :hasTitle           bdr:TT9CF227B738084657 , bdr:TTBE7699CA5AF05FB3 ;
+        :instanceEvent      bdr:EVD022B491AF87C3C8 ;
+        :instanceHasReproduction  bdr:W1PD100944 ;
+        :instanceOf         bdr:WA1PD100944 ;
+        :numberOfVolumes    133 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "chengdu"@en ;
+        :publisherName      "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT9CF227B738084657
+        a                   :Title ;
+        rdfs:label          "snga 'gyur bka' ma shin tu rgyas pa/"@bo-x-ewts .
+    
+    bdr:TTBE7699CA5AF05FB3
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏族古译文献宝典"@zh-hans .
+}

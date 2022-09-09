@@ -1,0 +1,78 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21883 {
+    bda:LG32AE56957D57EC55
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW21883  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21883 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "25/MW21883.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21883 ;
+        adm:logEntry        bda:LG32AE56957D57EC55 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EV2C024A5BD9178F9B
+        a                   :PublishedEvent ;
+        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4B4C7063E473500B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786 .D453 1978" .
+    
+    bdr:ID6EADDD036C98D208
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "78908645" .
+    
+    bdr:IDE9443A053EF1E140
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001381086-3" .
+    
+    bdr:MW21883  a          :Instance ;
+        skos:prefLabel      "the white annals = deb ther dkar po/"@bo-x-ewts , "The white annals =Deb-ther dkar-po /by Gedun Chos-ʾphel ; translated from the Tibetan by Samten Norboo."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4B4C7063E473500B , bdr:ID6EADDD036C98D208 , bdr:IDE9443A053EF1E140 ;
+        :authorshipStatement  "by gedun chos-'phel ; translated from the tibetan by samten norboo/"@bo-x-ewts ;
+        :editionStatement   "1st ed."@bo-x-ewts ;
+        :extentStatement    "103 p." ;
+        :hasTitle           bdr:TT3385346CF95D34C5 , bdr:TT905E911E8C660AF1 , bdr:TT971E06C256BDC3D2 ;
+        :instanceEvent      bdr:EV2C024A5BD9178F9B ;
+        :instanceOf         bdr:WA21883 ;
+        :publisherLocation  "dharamsala"@en ;
+        :publisherName      "library of tibetan works & archives"@en ;
+        :script             bdr:ScriptLatn ;
+        :serialInstanceOf   bdr:WAS21883 .
+    
+    bdr:TT3385346CF95D34C5
+        a                   :CoverTitle ;
+        rdfs:label          "The white annals =Deb-ther dkar-po /by Gedun Chos-ʾphel ; translated from the Tibetan by Samten Norboo."@en-x-mixed .
+    
+    bdr:TT905E911E8C660AF1
+        a                   :OtherTitle ;
+        rdfs:label          "deb ther dkar po/"@bo-x-ewts .
+    
+    bdr:TT971E06C256BDC3D2
+        a                   :Title ;
+        rdfs:label          "the white annals = deb ther dkar po/"@bo-x-ewts .
+}

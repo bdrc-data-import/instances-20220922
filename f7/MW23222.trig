@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23222 {
+    bda:LG61FA5273F42444A7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23222  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23222 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "f7/MW23222.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23222 ;
+        adm:logEntry        bda:LG61FA5273F42444A7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR22DF1DE5191D26DF
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7761 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV7BCB184EDCE1C2B6
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID894DCD0CC20F7835
+        a                   bdr:HollisId ;
+        rdf:value           "014258859" .
+    
+    bdr:MW23222  a          :Instance ;
+        skos:prefLabel      "dge tshul gyi tshig le'ur byas pa'i mchan 'grel nor bu'i phreng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID894DCD0CC20F7835 ;
+        :creator            bdr:CR22DF1DE5191D26DF ;
+        :extentStatement    "35 p." ;
+        :hasTitle           bdr:TT7A21FBBA0E512BE7 , bdr:TTAEBC3B6829CA09DA ;
+        :instanceEvent      bdr:EV7BCB184EDCE1C2B6 ;
+        :instanceHasReproduction  bdr:W23222 ;
+        :instanceOf         bdr:WA23222 ;
+        :note               bdr:NT8601F57428007491 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[bylakuppe]"@en ;
+        :publisherName      "snga 'gyur mtho slob mdo sngags rig pa'i 'byung gnas gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT8601F57428007491
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 0858"@en .
+    
+    bdr:TT7A21FBBA0E512BE7
+        a                   :Title ;
+        rdfs:label          "dge tshul gyi tshig le'ur byas pa'i mchan 'grel nor bu'i phreng ba/"@bo-x-ewts .
+    
+    bdr:TTAEBC3B6829CA09DA
+        a                   :TitlePageTitle ;
+        rdfs:label          "gzhi thams cad yod par smra ba'i dge tshul gyi tshig le'ur byas pa'i mchan 'grel nor bu'i phreng ba/"@bo-x-ewts .
+}

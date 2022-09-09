@@ -1,0 +1,105 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW26041 {
+    bda:LG1DE2018824028E1F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG45659AAFBFF91B96
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-02-14T10:53:33.166Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG8C3AE4291BFCEE5E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T16:41:25.763Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW26041  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW26041 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "20/MW26041.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW26041 ;
+        adm:logEntry        bda:LG1DE2018824028E1F , bda:LG45659AAFBFF91B96 , bda:LG8C3AE4291BFCEE5E , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE62D5BFD5518610D
+        a                   :PublishedEvent ;
+        :eventWhen          "1981"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2476920A8F5CEA82
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BF1714.T53 C64 1981" .
+    
+    bdr:ID5974E4629B5A12C5
+        a                   bdr:HollisId ;
+        rdf:value           "014259504" .
+    
+    bdr:IDFDFD5D88687FEF7C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "81901734" .
+    
+    bdr:MW26041  a          :Instance ;
+        skos:altLabel       "collected astrological and prognosticatory texts from bhutan"@en ;
+        skos:prefLabel      "dkar rtsis dang nag rtsis kyi gzhung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2476920A8F5CEA82 , bdr:ID5974E4629B5A12C5 , bdr:IDFDFD5D88687FEF7C ;
+        :biblioNote         "hand written manuscript in dbu can"@en ;
+        :extentStatement    "594 p." ;
+        :hasTitle           bdr:TT27314434996343BE , bdr:TT4996A13DF414B1EC , bdr:TTF3F84D8D7CDBF71D ;
+        :instanceEvent      bdr:EVE62D5BFD5518610D ;
+        :instanceHasReproduction  bdr:W26041 ;
+        :instanceOf         bdr:WA26041 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "kunsang topgyal"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT27314434996343BE
+        a                   :Title ;
+        rdfs:label          "dkar rtsis dang nag rtsis kyi gzhung /"@bo-x-ewts .
+    
+    bdr:TT4996A13DF414B1EC
+        a                   :CoverTitle ;
+        rdfs:label          "astrological and prognosticatory texts from bhutan"@en .
+    
+    bdr:TTF3F84D8D7CDBF71D
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected astrological and prognosticatory texts from bhutan"@en .
+}

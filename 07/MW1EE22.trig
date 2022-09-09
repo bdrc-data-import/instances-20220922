@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1EE22 {
+    bda:LG513C09B73DB8BF3A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-03-20T13:39:00.62Z"^^xsd:dateTime ;
+        adm:logMessage      "newly created"@en .
+    
+    bda:LG8FFA16080DEFB5F8
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-02-26T14:56:50.144Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW1EE22  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW1EE22 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "07/MW1EE22.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1EE22 ;
+        adm:logEntry        bda:LG513C09B73DB8BF3A , bda:LG8FFA16080DEFB5F8 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1EE22  a          :Instance ;
+        skos:prefLabel      "sgrol ma'i bstod pa/（sog yig）"@bo-x-ewts , "dar-a eke-yin magtagal"@mn-alalc97 ;
+        :biblioNote         "blockprint in mongolian language"@en ;
+        :extentStatement    "20 ff." ;
+        :hasTitle           bdr:TT657AACEF2E1EC25F , bdr:TTCF569DDF008EA9DB , bdr:TTD1773A7D7951B5C5 ;
+        :instanceHasReproduction  bdr:W1EE22 ;
+        :instanceOf         bdr:WA1EE22 ;
+        :note               bdr:NT84C69E4DA1A5D56D ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptMong ;
+        :sourceNote         "toda bicig"@en .
+    
+    bdr:NT84C69E4DA1A5D56D
+        a                   :Note ;
+        :noteText           "photographed from dr. lokesh chandra's collection"@en .
+    
+    bdr:TT657AACEF2E1EC25F
+        a                   :FullTitle ;
+        rdfs:label          "qutugtu dare ekeyin magtal kemeku sudur orusibo"@mn-alalc97 .
+    
+    bdr:TTCF569DDF008EA9DB
+        a                   :Title ;
+        rdfs:label          "dar-a eke-yin magtagal"@mn-alalc97 .
+    
+    bdr:TTD1773A7D7951B5C5
+        a                   :Title ;
+        rdfs:label          "sgrol ma'i bstod pa/（sog yig）"@bo-x-ewts .
+}

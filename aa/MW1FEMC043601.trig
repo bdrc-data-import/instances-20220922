@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043601 {
+    bda:LGDB763A2DD560D75C
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043601"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043601
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043601 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "aa/MW1FEMC043601.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043601 ;
+        adm:logEntry        bda:LGDB763A2DD560D75C , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID31AE136AD6F99912
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "018-B.11.11.05.III.1" .
+    
+    bdr:MF8E47C3E104CC4906
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "185" .
+    
+    bdr:MW1FEMC043601
+        a                   :Instance ;
+        skos:prefLabel      "អរិយសេច"@km , "ariya sec"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID31AE136AD6F99912 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2-4, ឃ-ងៅ" ;
+        :hasTitle           bdr:TT2622FCE253E6F449 , bdr:TT78BCB841B939834C ;
+        :instanceHasReproduction  bdr:W1FEMC033601 , bdr:W1FEMC043601 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8E47C3E104CC4906 ;
+        :note               bdr:NT1A1501F8374C6A9A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1A1501F8374C6A9A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2622FCE253E6F449
+        a                   :Title ;
+        rdfs:label          "អរិយសេច"@km .
+    
+    bdr:TT78BCB841B939834C
+        a                   :Title ;
+        rdfs:label          "ariya sec"@km-x-twktt .
+}

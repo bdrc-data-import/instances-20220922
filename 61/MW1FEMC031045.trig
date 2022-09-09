@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031045 {
+    bda:LGD179FFA10B5B344C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-09-09"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031045"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031045
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031045 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "61/MW1FEMC031045.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031045 ;
+        adm:logEntry        bda:LGD179FFA10B5B344C , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC041045 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:ID0230BCF128E6C678
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "1033-B.01.06.01.VI.6" .
+    
+    bdr:MF964DDAC1636B5D99
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "126" ;
+        :microfilmStrip     "220" .
+    
+    bdr:MW1FEMC031045
+        a                   :Instance ;
+        skos:prefLabel      "ពុទ្ធាភិសេក"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0230BCF128E6C678 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTAD0B46DA9802B9A3 , bdr:TTD9841B6F5DBD727C ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF964DDAC1636B5D99 ;
+        :note               bdr:NT9854A30F5A2853E4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9854A30F5A2853E4
+        a                   :Note ;
+        :contentLocationStatement  "pg. 30" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TTAD0B46DA9802B9A3
+        a                   :Title ;
+        rdfs:label          "ពុទ្ធាភិសេក"@km ;
+        :femcConversionOf   bdr:TTD9841B6F5DBD727C .
+    
+    bdr:TTD9841B6F5DBD727C
+        a                   :CoverTitle ;
+        rdfs:label          "ពុទ្ធាអភិសេក ធម្មយោគ ផ្ចាញ់មារគ្រប់រឿង អភិសេកព្រះ"@km .
+}

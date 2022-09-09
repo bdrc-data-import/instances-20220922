@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011531 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011531
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011531 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d4/MW1FEMC011531.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011531 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC2AC7B226F5C1D70
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "015-A.10.09.02.III.5" .
+    
+    bdr:MF6021148AA9639A41
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "52" ;
+        :microfilmStrip     "137" .
+    
+    bdr:MW1FEMC011531
+        a                   :Instance ;
+        skos:prefLabel      "មហោសថ​"@km , "mahosath"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC2AC7B226F5C1D70 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "9, 10" ;
+        :hasTitle           bdr:TT11D39F836DBE6037 , bdr:TT22523D50FC4EC6C7 , bdr:TT616CBB6B16E55954 , bdr:TT8B8E82A9AAC1160C , bdr:TTC34446C5865A7095 , bdr:TTEEEA4542C59EF2EB ;
+        :instanceHasReproduction  bdr:W1FEMC011531 ;
+        :instanceOf         bdr:WA1FEMC011531 , bdr:WA1FEMC050006 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6021148AA9639A41 ;
+        :note               bdr:NTA89B66320D23E0D6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA89B66320D23E0D6
+        a                   :Note ;
+        :contentLocationStatement  "pg. 350" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT11D39F836DBE6037
+        a                   :Title ;
+        rdfs:label          "mahosath"@km-x-twktt ;
+        :femcConversionOf   bdr:TTEEEA4542C59EF2EB .
+    
+    bdr:TT22523D50FC4EC6C7
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT616CBB6B16E55954
+        a                   :CoverTitle ;
+        rdfs:label          "មហោស្សុថ្ថ"@km .
+    
+    bdr:TT8B8E82A9AAC1160C
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTC34446C5865A7095
+        a                   :Title ;
+        rdfs:label          "មហោសថ​"@km ;
+        :femcConversionOf   bdr:TT616CBB6B16E55954 .
+    
+    bdr:TTEEEA4542C59EF2EB
+        a                   :CoverTitle ;
+        rdfs:label          "mahossuthth"@km-x-twktt .
+}

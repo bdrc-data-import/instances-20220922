@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043756 {
+    bda:LG9E656E0FB867CCD5
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043756"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043756
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043756 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a9/MW1FEMC043756.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043756 ;
+        adm:logEntry        bda:LG9E656E0FB867CCD5 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0AC551E611F728B5
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "047-B.11.05.03.II.1" .
+    
+    bdr:MF703D3A8B11601FDF
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "188" .
+    
+    bdr:MW1FEMC043756
+        a                   :Instance ;
+        skos:prefLabel      "សូគុនថោង (ក-ស)"@km , "sūgun thoń"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0AC551E611F728B5 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT20A2273EFB68672D , bdr:TT43027088161A8153 ;
+        :instanceHasReproduction  bdr:W1FEMC033756 , bdr:W1FEMC043756 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF703D3A8B11601FDF ;
+        :note               bdr:NTEA1B279F7E7F811A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTEA1B279F7E7F811A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT20A2273EFB68672D
+        a                   :Title ;
+        rdfs:label          "sūgun thoń"@km-x-twktt .
+    
+    bdr:TT43027088161A8153
+        a                   :Title ;
+        rdfs:label          "សូគុនថោង (ក-ស)"@km .
+}

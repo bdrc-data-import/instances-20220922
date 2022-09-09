@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010282 {
+    bda:LGACB8AC8B03F6039A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010282"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010282
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010282 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ef/MW1FEMC010282.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010282 ;
+        adm:logEntry        bda:LGACB8AC8B03F6039A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC039563 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:IDEC014717B6EC80DB
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "053-PP.02.08.01.III.1" .
+    
+    bdr:MF1C8DBF9A4A9ABAAA
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "13" ;
+        :microfilmStrip     "52" .
+    
+    bdr:MW1FEMC010282
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះធម្មសង្គណី​ អាការវតារសូត្រ គិរិមានន្ទសូត្រ"@km , "braḥ dhamm saṅgaṇi, ākāravatār sūtr, girimānand sūtr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEC014717B6EC80DB ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT14D175B5219FD036 , bdr:TT3DE2ED039812B1A8 , bdr:TT4F3BF1A8DDBE8E51 , bdr:TT88E7A22F5B0A643F ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF1C8DBF9A4A9ABAAA ;
+        :note               bdr:NT0310BB80C2A34B39 , bdr:NT9F8FC2115EDB05AF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT0310BB80C2A34B39
+        a                   :Note ;
+        :noteText           "Should we write [1 volume] ?"@en .
+    
+    bdr:NT9F8FC2115EDB05AF
+        a                   :Note ;
+        :contentLocationStatement  "pg. 108" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT14D175B5219FD036
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះធម្មសង្គណី​ ការតា គីរីមានន្ទ (ក្រាំង)"@km .
+    
+    bdr:TT3DE2ED039812B1A8
+        a                   :CoverTitle ;
+        rdfs:label          "braḥ dhamm saṅganī kāvatā gīrīmānand"@km-x-twktt .
+    
+    bdr:TT4F3BF1A8DDBE8E51
+        a                   :Title ;
+        rdfs:label          "braḥ dhamm saṅgaṇi, ākāravatār sūtr, girimānand sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3DE2ED039812B1A8 .
+    
+    bdr:TT88E7A22F5B0A643F
+        a                   :Title ;
+        rdfs:label          "ព្រះធម្មសង្គណី​ អាការវតារសូត្រ គិរិមានន្ទសូត្រ"@km ;
+        :femcConversionOf   bdr:TT14D175B5219FD036 .
+}

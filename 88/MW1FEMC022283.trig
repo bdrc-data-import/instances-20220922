@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022283 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022283
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022283 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "88/MW1FEMC022283.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022283 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID84B47FF69CCB4B3F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.361.V.1" .
+    
+    bdr:MF46707C1ACF93DD6D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "143" ;
+        :microfilmStrip     "237" .
+    
+    bdr:MW1FEMC022283
+        a                   :Instance ;
+        skos:prefLabel      "ត្រៃ​ភេទ"@km , "trai bhed"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID84B47FF69CCB4B3F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT3A9D175411A26AB3 , bdr:TT4C12E319D4034A13 , bdr:TT5AE203C623B68EEB , bdr:TT70B8A2B1B405D239 , bdr:TT7F14A91085DFAF65 , bdr:TTC0E2487686B376A5 ;
+        :instanceHasReproduction  bdr:W1FEMC022283 ;
+        :instanceOf         bdr:WA1FEMC022283 , bdr:WA1FEMC070018 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF46707C1ACF93DD6D ;
+        :note               bdr:NTBD3153EC88DD5239 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1043" .
+    
+    bdr:NTBD3153EC88DD5239
+        a                   :Note ;
+        :contentLocationStatement  "pg. 408" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT3A9D175411A26AB3
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃយុគ ត្រៃតា"@km ;
+        :femcConversionOf   bdr:TT5AE203C623B68EEB .
+    
+    bdr:TT4C12E319D4034A13
+        a                   :CoverTitle ;
+        rdfs:label          "trai yut trai ṭā"@km-x-twktt .
+    
+    bdr:TT5AE203C623B68EEB
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃយុតត្រៃដា"@km .
+    
+    bdr:TT70B8A2B1B405D239
+        a                   :CoverTitle ;
+        rdfs:label          "trai yug trai tā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4C12E319D4034A13 .
+    
+    bdr:TT7F14A91085DFAF65
+        a                   :Title ;
+        rdfs:label          "trai bhed"@km-x-twktt .
+    
+    bdr:TTC0E2487686B376A5
+        a                   :Title ;
+        rdfs:label          "ត្រៃ​ភេទ"@km .
+}

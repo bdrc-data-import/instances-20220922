@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021347 {
+    bda:LG004EF3559B01F7A2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021347"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021347
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021347 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "90/MW1FEMC021347.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021347 ;
+        adm:logEntry        bda:LG004EF3559B01F7A2 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC71B3E8A024BF6FB
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.161.VII" .
+    
+    bdr:MW1FEMC021347
+        a                   :Instance ;
+        skos:prefLabel      "មូលកច្ចាយនមេសូត្រ"@km , "mūlakaccāyana mesūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC71B3E8A024BF6FB ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT132A7DC80BF7E4AB , bdr:TT448D85457C64022F , bdr:TT6E4B37024CC1582C , bdr:TT8FCEC143AF1D879E , bdr:TTA63CC18C8690BD34 , bdr:TTB67CE1EF7B69C28D ;
+        :instanceHasReproduction  bdr:W1FEMC021347 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT37328E8C45010A69 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT37328E8C45010A69
+        a                   :Note ;
+        :contentLocationStatement  "pg. 246" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT132A7DC80BF7E4AB
+        a                   :Title ;
+        rdfs:label          "មូលកច្ចាយនមេសូត្រ"@km .
+    
+    bdr:TT448D85457C64022F
+        a                   :CoverTitle ;
+        rdfs:label          "mesūtra sandhi nāma samāsa taddhita ākhyāta krita Uṇādi kāraka"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB67CE1EF7B69C28D .
+    
+    bdr:TT6E4B37024CC1582C
+        a                   :CoverTitle ;
+        rdfs:label          "សូតសុទ្ធិនាមសមាសតទ្ធិតអាខ្យាតក្រិតឧណាតការក"@km .
+    
+    bdr:TT8FCEC143AF1D879E
+        a                   :CoverTitle ;
+        rdfs:label          "មេសូត្រ សន្ធិ​ នាម សមាស​ តទ្ធិត​ អាខ្យាត​ ក្រិត ឧណាទិការក"@km ;
+        :femcConversionOf   bdr:TT6E4B37024CC1582C .
+    
+    bdr:TTA63CC18C8690BD34
+        a                   :Title ;
+        rdfs:label          "mūlakaccāyana mesūtra"@km-x-twktt .
+    
+    bdr:TTB67CE1EF7B69C28D
+        a                   :CoverTitle ;
+        rdfs:label          "sūta suddhi nāma samāsa taddhita ākhyāta krita Uṇāta kāraka"@km-x-twktt .
+}

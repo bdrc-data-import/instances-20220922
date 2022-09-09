@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031350 {
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031350
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031350 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "99/MW1FEMC031350.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031350 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID2110CB98BBDAF9C6
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "044-PP.02.01.01.II.1" .
+    
+    bdr:MW1FEMC031350
+        a                   :Instance ;
+        skos:prefLabel      "ស័ង្ខបត្ត"@km , "săṅkh patt"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2110CB98BBDAF9C6 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT50D38CCAAAD6E736 , bdr:TT727F0893861387E3 , bdr:TT753B143145AF1934 , bdr:TTF02CD0E21E6F9438 ;
+        :instanceHasReproduction  bdr:W1FEMC010175 , bdr:W1FEMC031350 ;
+        :instanceOf         bdr:WA1FEMC031350 , bdr:WA1FEMC120029 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTC230D9B69EBEE051 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTC230D9B69EBEE051
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT50D38CCAAAD6E736
+        a                   :Title ;
+        rdfs:label          "săṅkh patt"@km-x-twktt ;
+        :femcConversionOf   bdr:TT727F0893861387E3 .
+    
+    bdr:TT727F0893861387E3
+        a                   :CoverTitle ;
+        rdfs:label          "sāṅgaphāt'"@km-x-twktt .
+    
+    bdr:TT753B143145AF1934
+        a                   :CoverTitle ;
+        rdfs:label          "សាង្គផាត់"@km .
+    
+    bdr:TTF02CD0E21E6F9438
+        a                   :Title ;
+        rdfs:label          "ស័ង្ខបត្ត"@km ;
+        :femcConversionOf   bdr:TT753B143145AF1934 .
+}

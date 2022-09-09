@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW665 {
+    bda:LGA82451DD17CB30EC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW665  a            adm:AdminData ;
+        adm:adminAbout      bdr:MW665 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d5/MW665.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW665 ;
+        adm:logEntry        bda:LGA82451DD17CB30EC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV905D90BC5058D049
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7BBC012B5A7C348C
+        a                   bdr:HollisId ;
+        rdf:value           "014261021" .
+    
+    bdr:IDD44D7033EC2FC07A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624509026" .
+    
+    bdr:MW665  a            :Instance ;
+        skos:altLabel       "shi liang lun shu jie"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "tshad ma rnam 'grel gyi rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7BBC012B5A7C348C , bdr:IDD44D7033EC2FC07A ;
+        :authorshipStatement  "rgyal tshab dar ma rin chen gyis brtsams/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 538 p." ;
+        :hasTitle           bdr:TT0A3B305B35BB3DA1 , bdr:TT76D130B4F6D79AF2 , bdr:TT9179E4CE109F14AB , bdr:TT95A63DF73E5761FE ;
+        :instanceEvent      bdr:EV905D90BC5058D049 ;
+        :instanceHasReproduction  bdr:W665 ;
+        :instanceOf         bdr:WA665 ;
+        :note               bdr:NT458FC258A01AAD28 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zhang kang /"@bo-x-ewts ;
+        :publisherName      "zhang kang then mA dpe skrun kung zi"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT458FC258A01AAD28
+        a                   :Note ;
+        :noteText           "other edition:\n436 ff. in vol. 6 of the 8 vol. collected works in the Potala collection.\n\"'di ni dge lugs pa'i tshad ma'i gzhung la sbyor ba mtha' dag gi rang lugs su 'dzin\"\n436 ff. in vol. cha of the  8 vol. New Zhol Par-khang  edition of the collected works of Rgyal-tshab Rje Dar-ma-rin-chen.\nTOH 5450."@en .
+    
+    bdr:TT0A3B305B35BB3DA1
+        a                   :Title ;
+        rdfs:label          "tshad ma rnam 'grel gyi rnam bshad/"@bo-x-ewts .
+    
+    bdr:TT76D130B4F6D79AF2
+        a                   :ColophonTitle ;
+        rdfs:label          "shi liang lun shu jie"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT9179E4CE109F14AB
+        a                   :CoverTitle ;
+        rdfs:label          "rnam 'grel thar lam gsal byed/"@bo-x-ewts .
+    
+    bdr:TT95A63DF73E5761FE
+        a                   :TitlePageTitle ;
+        rdfs:label          "tshad ma rnam 'grel gyi tshig le'ur byas pa'i rnam bshad thar lam phyin ci ma log par gsal bar byed pa/"@bo-x-ewts .
+}

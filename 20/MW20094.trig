@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20094 {
+    bda:LGC4C243781EB73753
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF41C0E6600D4B009
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-06-24T14:35:43.377Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20094  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20094 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "20/MW20094.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20094 ;
+        adm:logEntry        bda:LGC4C243781EB73753 , bda:LGF41C0E6600D4B009 , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVABF4E06464FC3B9C
+        a                   :PublishedEvent ;
+        :eventWhen          "1989"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID687473DE569A4D50
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95910750" .
+    
+    bdr:ID7D5C6600AABDA261
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "GR337 .D65 1989" .
+    
+    bdr:IDD01C14F63D4166EE
+        a                   bdr:HollisId ;
+        rdf:value           "014258039" .
+    
+    bdr:IDF9F6DE0D8B98E942
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542001922" .
+    
+    bdr:MW20094  a          :Instance ;
+        skos:altLabel       "格萨尔遗迹传说"@zh-hans ;
+        skos:prefLabel      "ging ge sar rgyal po'i shul rten gyi ngag rgyun ngo mtshar me tog phreng mdzes/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID687473DE569A4D50 , bdr:ID7D5C6600AABDA261 , bdr:IDD01C14F63D4166EE , bdr:IDF9F6DE0D8B98E942 ;
+        :authorshipStatement  "gcod pa don grub nas rtsom sgrig byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "8, 245 p." ;
+        :hasTitle           bdr:TT08DF2E9C4BB0E0F4 , bdr:TT1F29CECDD3510B87 , bdr:TT2E79F539102366D2 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVABF4E06464FC3B9C ;
+        :instanceHasReproduction  bdr:W20094 ;
+        :instanceOf         bdr:WA20094 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:TT08DF2E9C4BB0E0F4
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "格萨尔遗迹传说"@zh-hans .
+    
+    bdr:TT1F29CECDD3510B87
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ge sa er wang yi ji chuan shuo"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT2E79F539102366D2
+        a                   :Title ;
+        rdfs:label          "ging ge sar rgyal po'i shul rten gyi ngag rgyun ngo mtshar me tog phreng mdzes/"@bo-x-ewts .
+}

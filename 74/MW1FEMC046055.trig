@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046055 {
+    bda:LG4F003659ABA44675
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046055"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046055
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046055 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "74/MW1FEMC046055.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046055 ;
+        adm:logEntry        bda:LG4F003659ABA44675 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID50EF174990B9C945
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "014-B.04.03.03.III.4" .
+    
+    bdr:MF41CFF0CC84FB6D03
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "173" .
+    
+    bdr:MW1FEMC046055
+        a                   :Instance ;
+        skos:prefLabel      "មហាបដ្ឋាន (១-៤១)"@km , "mahā paṭṭhān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID50EF174990B9C945 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT2D4E0BEF59FBD6DE , bdr:TTC2C004EB3FE62A00 ;
+        :instanceHasReproduction  bdr:W1FEMC036055 , bdr:W1FEMC046055 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF41CFF0CC84FB6D03 ;
+        :note               bdr:NTF579EE249349B831 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF579EE249349B831
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2D4E0BEF59FBD6DE
+        a                   :Title ;
+        rdfs:label          "មហាបដ្ឋាន (១-៤១)"@km .
+    
+    bdr:TTC2C004EB3FE62A00
+        a                   :Title ;
+        rdfs:label          "mahā paṭṭhān"@km-x-twktt .
+}

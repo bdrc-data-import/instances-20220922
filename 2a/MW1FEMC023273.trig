@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023273 {
+    bda:LG2E61A333CB936B5C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023273"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023273
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023273 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "2a/MW1FEMC023273.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023273 ;
+        adm:logEntry        bda:LG2E61A333CB936B5C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID04DB1B60D42E262D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.985.VI.6" .
+    
+    bdr:MW1FEMC023273
+        a                   :Instance ;
+        skos:prefLabel      "ថ្វាយសារពើទៀនធូបទៅទេវតា (ឧទ្ទិសទេវតា) (វាន)"@km , "thvāy sārabö dīen dhūp dau devatā (Uddis devata)"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID04DB1B60D42E262D ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT65268CB3D91E2B11 , bdr:TTADFF74E24D90ED8B ;
+        :instanceHasReproduction  bdr:W1FEMC023273 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT835E0F553957EB08 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT835E0F553957EB08
+        a                   :Note ;
+        :contentLocationStatement  "pg. 568" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT65268CB3D91E2B11
+        a                   :Title ;
+        rdfs:label          "ថ្វាយសារពើទៀនធូបទៅទេវតា (ឧទ្ទិសទេវតា) (វាន)"@km .
+    
+    bdr:TTADFF74E24D90ED8B
+        a                   :Title ;
+        rdfs:label          "thvāy sārabö dīen dhūp dau devatā (Uddis devata)"@km-x-twktt .
+}

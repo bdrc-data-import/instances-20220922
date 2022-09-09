@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20403 {
+    bda:LG86121284F5A5A4EB
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE1D7F527137258F1
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-01-13T12:01:34.573Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW20403  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20403 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a5/MW20403.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20403 ;
+        adm:logEntry        bda:LG86121284F5A5A4EB , bda:LGE1D7F527137258F1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV71060D1DC7257D02
+        a                   :PublishedEvent ;
+        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID9E5E837774F4357E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "HD59.6.C6 K46 1997" .
+    
+    bdr:IDC2C23FCF768CFBA5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98902426" .
+    
+    bdr:IDD4F117AEED104229
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542104942" .
+    
+    bdr:MW20403  a          :Instance ;
+        skos:altLabel       "公共关系学"@zh-hans ;
+        skos:prefLabel      "spyi 'brel rig pa'i rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9E5E837774F4357E , bdr:IDC2C23FCF768CFBA5 , bdr:IDD4F117AEED104229 ;
+        :authorshipStatement  "dge 'dun dang mgon po skyabs kyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 4, 441 p" ;
+        :hasTitle           bdr:TT23D37C7B75A6BA87 , bdr:TT9F23B64DA512562B , bdr:TTE1A4BE8C3ECB5B4C ;
+        :instanceEvent      bdr:EV71060D1DC7257D02 ;
+        :instanceHasReproduction  bdr:W20403 ;
+        :instanceOf         bdr:WA20403 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT23D37C7B75A6BA87
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "公共关系学"@zh-hans .
+    
+    bdr:TT9F23B64DA512562B
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "gong gong guan xi xue"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTE1A4BE8C3ECB5B4C
+        a                   :Title ;
+        rdfs:label          "spyi 'brel rig pa'i rnam bshad/"@bo-x-ewts .
+}

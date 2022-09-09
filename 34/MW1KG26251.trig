@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG26251 {
+    bda:LGEB5B4499C724960A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-02-22T15:01:20.559Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG26251  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG26251 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "34/MW1KG26251.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG26251 ;
+        adm:logEntry        bda:LGEB5B4499C724960A , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV84A1A43A4AE621D7
+        a                   :PublishedEvent ;
+        :eventWhen          "1998"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5BB2AF013C0CA562
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98903177" .
+    
+    bdr:IDBB7CEF5AD0274EE4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G33 G36 1990Z" .
+    
+    bdr:MW1KG26251  a       :Instance ;
+        skos:altLabel       "in search of snow lion"@en ;
+        skos:prefLabel      "gangs seng 'tshol du phyin pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5BB2AF013C0CA562 , bdr:IDBB7CEF5AD0274EE4 ;
+        :authorshipStatement  "pad+ma tshe ring gi bris rtsom phyogs sgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "5, 173 p." ;
+        :hasTitle           bdr:TT7D34DD533F6487F6 , bdr:TT843CE13D08242A77 , bdr:TTFD9E96AF74E845A5 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV84A1A43A4AE621D7 ;
+        :instanceHasReproduction  bdr:W1KG26251 ;
+        :instanceOf         bdr:WA1KG26251 ;
+        :note               bdr:NT3E4851CFBE18C747 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "na ga sangs rgyas bstan dar/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT3E4851CFBE18C747
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. D27789"@en .
+    
+    bdr:TT7D34DD533F6487F6
+        a                   :Title ;
+        rdfs:label          "gangs seng 'tshol du phyin pa/"@bo-x-ewts .
+    
+    bdr:TT843CE13D08242A77
+        a                   :OtherTitle ;
+        rdfs:label          "in search of snow lion"@en .
+    
+    bdr:TTFD9E96AF74E845A5
+        a                   :TitlePageTitle ;
+        rdfs:label          "gangs seng 'tshol du phyin pa/ slob ma'i dus skabs (1985-1993) kyi bris rtsom phyogs sgrig"@bo-x-ewts .
+}

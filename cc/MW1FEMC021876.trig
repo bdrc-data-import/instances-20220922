@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021876 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021876
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021876 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "cc/MW1FEMC021876.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021876 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDCDBD20D5B5C45104
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.658.III.1" .
+    
+    bdr:MW1FEMC021876
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះមាល័យ"@km , "braḥ mālăy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCDBD20D5B5C45104 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2" ;
+        :hasTitle           bdr:TT12207621BADB5DDB , bdr:TT7258133B5E484543 , bdr:TT7D023430F8391CED , bdr:TTA72A8AE4098F9C94 ;
+        :instanceHasReproduction  bdr:W1FEMC021876 ;
+        :instanceOf         bdr:WA1FEMC010018 , bdr:WA1FEMC021876 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTB3E1E7A3AFF62E03 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB3E1E7A3AFF62E03
+        a                   :Note ;
+        :contentLocationStatement  "pg. 335" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT12207621BADB5DDB
+        a                   :CoverTitle ;
+        rdfs:label          "mālaiy° debb ther"@km-x-twktt .
+    
+    bdr:TT7258133B5E484543
+        a                   :Title ;
+        rdfs:label          "ព្រះមាល័យ"@km ;
+        :femcConversionOf   bdr:TTA72A8AE4098F9C94 .
+    
+    bdr:TT7D023430F8391CED
+        a                   :Title ;
+        rdfs:label          "braḥ mālăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT12207621BADB5DDB .
+    
+    bdr:TTA72A8AE4098F9C94
+        a                   :CoverTitle ;
+        rdfs:label          "មាល្យៃទេព្វថេរ"@km .
+}

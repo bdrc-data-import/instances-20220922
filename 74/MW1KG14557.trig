@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14557 {
+    bda:LGD2F7EDC47CA68295
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-05-31T09:38:39.606Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14557  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14557 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "74/MW1KG14557.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14557 ;
+        adm:logEntry        bda:LGD2F7EDC47CA68295 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB30AAEC56DBF5187
+        a                   :PublishedEvent ;
+        :eventWhen          "2011"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID19DD8852544B5D31
+        a                   bdr:HollisId ;
+        rdf:value           "014256172" .
+    
+    bdr:ID6CEB9273FE141122
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789937841391" .
+    
+    bdr:MW1KG14557  a       :Instance ;
+        skos:altLabel       "the collected works of dag-kar choe-kyi wang-chuk (1775-1837)"@en ;
+        skos:prefLabel      "gsung 'bum/_chos kyi dbang phyug"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID19DD8852544B5D31 , bdr:ID6CEB9273FE141122 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :editionStatement   "1st ed."@en ;
+        :extentStatement    "13 v." ;
+        :hasTitle           bdr:TT759FB7D9A052A813 , bdr:TTC1EAB617F0900370 , bdr:TTE88ADE28ECB26193 ;
+        :instanceEvent      bdr:EVB30AAEC56DBF5187 ;
+        :instanceHasReproduction  bdr:IE1KG14557 , bdr:W1KG14557 ;
+        :instanceOf         bdr:WA1KG14557 ;
+        :numberOfVolumes    13 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "swayambhunath, kathmandu"@en ;
+        :publisherName      "khenpo shedup tenzin"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT759FB7D9A052A813
+        a                   :TitlePageTitle ;
+        rdfs:label          "kun mkhyen brag dkar ba chos kyi dbang phyug mchog gi gsum 'bum/"@bo-x-ewts .
+    
+    bdr:TTC1EAB617F0900370
+        a                   :OtherTitle ;
+        rdfs:label          "the collected works of dag-kar choe-kyi wang-chuk (1775-1837)"@en .
+    
+    bdr:TTE88ADE28ECB26193
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_chos kyi dbang phyug"@bo-x-ewts .
+}

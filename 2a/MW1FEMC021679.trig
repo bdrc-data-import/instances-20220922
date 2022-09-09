@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021679 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021679
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021679 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "2a/MW1FEMC021679.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021679 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6F88590697DC8F57
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.584.V.2" .
+    
+    bdr:MF8BE6CF34370775EB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "133" ;
+        :microfilmStrip     "227" .
+    
+    bdr:MW1FEMC021679
+        a                   :Instance ;
+        skos:prefLabel      "មាតាក្រឺត្យ"@km , "mātā krịty"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6F88590697DC8F57 ;
+        :biblioNote         "This manuscript was digitized from a film negative (Kodak Technical Pan, 35mm) produced during an earlier manuscript documentation project carried out by the Fonds pour l’Edition des Manuscripts du Cambodge of the École française d'Extrême-Orient (EFEO-FEMC). The digitization was carried out by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imaging Services and the FEMC, with the permission of the EFEO. We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT0B38430DFE60C751 , bdr:TT85D242F2DEFD4C58 , bdr:TTC08A9C60205C2FD3 , bdr:TTEE62C6D97D88A292 ;
+        :instanceOf         bdr:WA1FEMC021679 , bdr:WA1FEMC140017 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8BE6CF34370775EB ;
+        :note               bdr:NT3406E4176FBACCCB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3406E4176FBACCCB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 302" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0B38430DFE60C751
+        a                   :CoverTitle ;
+        rdfs:label          "mātā krit"@km-x-twktt .
+    
+    bdr:TT85D242F2DEFD4C58
+        a                   :CoverTitle ;
+        rdfs:label          "មាតាក្រិត"@km .
+    
+    bdr:TTC08A9C60205C2FD3
+        a                   :Title ;
+        rdfs:label          "មាតាក្រឺត្យ"@km ;
+        :femcConversionOf   bdr:TT85D242F2DEFD4C58 .
+    
+    bdr:TTEE62C6D97D88A292
+        a                   :Title ;
+        rdfs:label          "mātā krịty"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0B38430DFE60C751 .
+}

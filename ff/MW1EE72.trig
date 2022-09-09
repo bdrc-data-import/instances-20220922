@@ -1,0 +1,60 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1EE72 {
+    bda:LG76517FF7F49EDB09
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-23T15:14:02.686Z"^^xsd:dateTime ;
+        adm:logMessage      "first publish"@en ;
+        adm:logWho          bdu:U00034 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW1EE72  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW1EE72 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ff/MW1EE72.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1EE72 ;
+        adm:logEntry        bda:LG76517FF7F49EDB09 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1EE72  a          :Instance ;
+        skos:prefLabel      "gzungs bsdus/ (sog yig)"@bo-x-ewts , "sungdui orusiba"@mn-alalc97 ;
+        :biblioNote         "blockprint in mongolian language"@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TTB83029CDDEA13ED8 , bdr:TTE2B218275C081EA4 ;
+        :instanceHasReproduction  bdr:W1EE72 ;
+        :instanceOf         bdr:WA1EE55 , bdr:WA1EE72 ;
+        :note               bdr:NTDE153240209D7BB8 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptMong .
+    
+    bdr:NTDE153240209D7BB8
+        a                   :Note ;
+        :noteText           "photographed from dr. lokesh chandra's collection"@en .
+    
+    bdr:TTB83029CDDEA13ED8
+        a                   :Title ;
+        rdfs:label          "sungdui orusiba"@mn-alalc97 .
+    
+    bdr:TTE2B218275C081EA4
+        a                   :Title ;
+        rdfs:label          "gzungs bsdus/ (sog yig)"@bo-x-ewts .
+}

@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044763 {
+    bda:LG85E524DFAD1CF9FD
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044763"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044763
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044763 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a0/MW1FEMC044763.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044763 ;
+        adm:logEntry        bda:LG85E524DFAD1CF9FD , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF171A9D471E3B74A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "026-B.11.06.01.II.1" .
+    
+    bdr:MFA7E91E4DE534204B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "189" .
+    
+    bdr:MW1FEMC044763
+        a                   :Instance ;
+        skos:prefLabel      "រភៀន"@km , "rabhien"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF171A9D471E3B74A ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT087A08027C440AE1 , bdr:TTC3C46994D046F840 ;
+        :instanceHasReproduction  bdr:W1FEMC034763 , bdr:W1FEMC044763 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA7E91E4DE534204B ;
+        :note               bdr:NTB7AD59F314711AD7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB7AD59F314711AD7
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT087A08027C440AE1
+        a                   :Title ;
+        rdfs:label          "រភៀន"@km .
+    
+    bdr:TTC3C46994D046F840
+        a                   :Title ;
+        rdfs:label          "rabhien"@km-x-twktt .
+}

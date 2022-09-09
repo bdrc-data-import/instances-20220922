@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN10625 {
+    bda:LG7BDAB8A860E3BED3
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-04T14:15:23.323Z"^^xsd:dateTime ;
+        adm:logMessage      "added edition statement"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGF205970BFD6800FE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-09-26T09:58:31.524Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:MW3CN10625  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN10625 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "0e/MW3CN10625.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN10625 ;
+        adm:logEntry        bda:LG7BDAB8A860E3BED3 , bda:LGF205970BFD6800FE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2B5A167122D9BD5E
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID13507AC56E490CDC
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789380091280" .
+    
+    bdr:MW3CN10625  a       :Instance ;
+        skos:prefLabel      "bdag nyid chen po gAn+d+hI/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID13507AC56E490CDC ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi/ 1"@bo-x-ewts ;
+        :extentStatement    "193 p." ;
+        :hasTitle           bdr:TTB60D585968ACEBFE ;
+        :instanceEvent      bdr:EV2B5A167122D9BD5E ;
+        :instanceHasReproduction  bdr:W3CN10625 ;
+        :instanceOf         bdr:WA3CN10625 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "North Amirica"@en ;
+        :publisherName      "shes rig las khungs/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTB60D585968ACEBFE
+        a                   :Title ;
+        rdfs:label          "bdag nyid chen po gAn+d+hI/"@bo-x-ewts .
+}

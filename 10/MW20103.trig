@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20103 {
+    bda:LGD4202B8E7F92F54F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF0319C051B897C30
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-23T11:12:10.76Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20103  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20103 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "10/MW20103.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20103 ;
+        adm:logEntry        bda:LGD4202B8E7F92F54F , bda:LGF0319C051B897C30 , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC62611F3A211A86C
+        a                   :PublishedEvent ;
+        :eventWhen          "1980"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID535C0CE97DD4E3C9
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 L48 1980" .
+    
+    bdr:ID7792256004753B69
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "90186373" .
+    
+    bdr:ID923E551A51DA8B48
+        a                   bdr:HollisId ;
+        rdf:value           "014258046" .
+    
+    bdr:MW20103  a          :Instance ;
+        skos:altLabel       "格萨尔王传 --仙界遣使"@zh-hans ;
+        skos:prefLabel      "lha gling gab tse dgu skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID535C0CE97DD4E3C9 , bdr:ID7792256004753B69 , bdr:ID923E551A51DA8B48 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "152 p." ;
+        :hasTitle           bdr:TT09503AA3C90FFC4A , bdr:TT2A1CE06BCE8537B1 , bdr:TT354B930157480CF0 , bdr:TT72D52D852FD06974 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVC62611F3A211A86C ;
+        :instanceHasReproduction  bdr:W20103 ;
+        :instanceOf         bdr:WA1KG16566 , bdr:WA20103 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT09503AA3C90FFC4A
+        a                   :Title ;
+        rdfs:label          "lha gling gab tse dgu skor/"@bo-x-ewts .
+    
+    bdr:TT2A1CE06BCE8537B1
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "格萨尔王传 --仙界遣使"@zh-hans .
+    
+    bdr:TT354B930157480CF0
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling rje ge sar rgyal po'i sgrung lha gling gab tse dgu skor/"@bo-x-ewts .
+    
+    bdr:TT72D52D852FD06974
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ge sa er wang zhuan--xian jie qian shi"@zh-latn-pinyin-x-ndia .
+}

@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1201 {
+    bda:LG02339CAAD69C1B60
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG1381930E0179F3E8
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGD8689A9F6D86478F
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-30T14:46:49.05Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1201  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1201 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7c/MW1NLM1201.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1201 ;
+        adm:logEntry        bda:LG02339CAAD69C1B60 , bda:LG1381930E0179F3E8 , bda:LGD8689A9F6D86478F , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1201  a       :Instance ;
+        skos:prefLabel      "dam can chos kyi rgyal po'i gtor chog bskang gso bstod bskul dang bcas pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "38x6" ;
+        :extentStatement    "30 ff., 18 ff., 26 ff., 18 ff.,4 ff., 5 ff., 28 ff., 3 ff., 5 ff., 14 ff., 28 ff., 2 ff., 3 ff., 4 ff." ;
+        :hasTitle           bdr:TT70EB439795FD0191 ;
+        :instanceHasReproduction  bdr:W1NLM1201 ;
+        :instanceOf         bdr:WA1NLM1201 ;
+        :note               bdr:NT26BD77145EE461F7 , bdr:NT95113CF4DB2842C1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT26BD77145EE461F7
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT95113CF4DB2842C1
+        a                   :Note ;
+        :noteText           "nlmId: M0059119"@en .
+    
+    bdr:TT70EB439795FD0191
+        a                   :Title ;
+        rdfs:label          "dam can chos kyi rgyal po'i gtor chog bskang gso bstod bskul dang bcas pa sogs/"@bo-x-ewts .
+}

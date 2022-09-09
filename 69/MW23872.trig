@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23872 {
+    bda:LG240DF34C6B8CB74D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG32EE872C5C4F9C0E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-06T15:58:24.33Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23872  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23872 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "69/MW23872.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23872 ;
+        adm:logEntry        bda:LG240DF34C6B8CB74D , bda:LG32EE872C5C4F9C0E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB7AF08AADF646BBD
+        a                   :PublishedEvent ;
+        :eventWhen          "1981"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID44220597ED769106
+        a                   bdr:HollisId ;
+        rdf:value           "014259192" .
+    
+    bdr:ID7A330F2C90512DB0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82900979" .
+    
+    bdr:IDB1C70E6679AB80CA
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .B564 1981" .
+    
+    bdr:MW23872  a          :Instance ;
+        skos:altLabel       "collected works (gsun 'bum) of 'bron-rtse yons-'dzin blo-bzan-tshul-khrims"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_blo bzang tshul khrims/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID44220597ED769106 , bdr:ID7A330F2C90512DB0 , bdr:IDB1C70E6679AB80CA ;
+        :biblioNote         "reproduced from tracings from a set of prints from the bkra-sis-lhun-po blocks from the collections of bka'-chen blo-bzan-bzod-pa"@en ;
+        :extentStatement    "2 v." ;
+        :hasSourcePrintery  bdr:G2CN10913 ;
+        :hasTitle           bdr:TTB27DCEBF2FA60846 , bdr:TTEFA446EFFD6E6B6C ;
+        :instanceEvent      bdr:EVB7AF08AADF646BBD ;
+        :instanceHasReproduction  bdr:W23872 ;
+        :instanceOf         bdr:WA23872 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "chophel legdan"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTB27DCEBF2FA60846
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected works (gsun 'bum) of 'bron-rtse yons-'dzin blo-bzan-tshul-khrims"@en-x-mixed .
+    
+    bdr:TTEFA446EFFD6E6B6C
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang tshul khrims/"@bo-x-ewts .
+}

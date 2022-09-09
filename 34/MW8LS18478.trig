@@ -1,0 +1,74 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8LS18478 {
+    bda:LG7B13E1F71A5EF8D4
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-19T16:15:33.506Z"^^xsd:dateTime ;
+        adm:logMessage      "added author and series name and number"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB61C6F168E5509B0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-05T10:34:44.361Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info, topic and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:MW8LS18478  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW8LS18478 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "34/MW8LS18478.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8LS18478 ;
+        adm:logEntry        bda:LG7B13E1F71A5EF8D4 , bda:LGB61C6F168E5509B0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV508B47A6800BF091
+        a                   :PublishedEvent ;
+        :eventWhen          "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDFF228703ACE3EDCB
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105050499" .
+    
+    bdr:MW8LS18478  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "lho kha sa khul gyi gnas yig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFF228703ACE3EDCB ;
+        :authorshipStatement  "chos 'phel gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par thengs drug pa/"@bo-x-ewts ;
+        :extentStatement    "146 p." ;
+        :hasTitle           bdr:TT4DB6FF1581B715E8 , bdr:TT9155DAA50E780B87 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV508B47A6800BF091 ;
+        :instanceHasReproduction  bdr:W8LS18478 ;
+        :instanceOf         bdr:WA8LS18478 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS8LS18745 ;
+        :seriesNumber       "1" .
+    
+    bdr:TT4DB6FF1581B715E8
+        a                   :TitlePageTitle ;
+        rdfs:label          "gangs can bod kyi gnas bshad lam yig gsar ma/ lho kha sa khul gyi gnas yig"@bo-x-ewts .
+    
+    bdr:TT9155DAA50E780B87
+        a                   :Title ;
+        rdfs:label          "lho kha sa khul gyi gnas yig"@bo-x-ewts .
+}

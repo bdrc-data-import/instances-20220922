@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG07618 {
+    bda:LGFFCB590016275DC6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-03-31T16:24:34.109Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG07618  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG07618 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3b/MW00KG07618.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG07618 ;
+        adm:logEntry        bda:LGFFCB590016275DC6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BBF05921EEA0034
+        a                   :PublishedEvent ;
+        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID48A520254A7AF631
+        a                   bdr:HollisId ;
+        rdf:value           "014254497" .
+    
+    bdr:IDC20F8162F739A25F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223021203" .
+    
+    bdr:MW00KG07618  a      :Instance ;
+        skos:altLabel       "zheng fa da yuan man xian jian jie tuo wei li guang ming lun"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rdzogs pa chen po'i rnam gzhag mthong grol byin rlabs 'bar ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID48A520254A7AF631 , bdr:IDC20F8162F739A25F ;
+        :authorshipStatement  "reb gong rdo rje mkhar gyis/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "8, 4, 5, 632 p." ;
+        :hasTitle           bdr:TT3E34A851EDAF6802 , bdr:TT4E19466A7BAA8C24 , bdr:TT65566B8B7D4356C4 , bdr:TTD8324A6BB39E9EB6 ;
+        :instanceEvent      bdr:EV1BBF05921EEA0034 ;
+        :instanceHasReproduction  bdr:IE00KG07618 , bdr:W00KG07618 ;
+        :instanceOf         bdr:WA00KG07618 ;
+        :note               bdr:NT9A3BA6C21AF37A85 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT9A3BA6C21AF37A85
+        a                   :Note ;
+        :noteText           "same text published in 2003 according to library of congress record"@en .
+    
+    bdr:TT3E34A851EDAF6802
+        a                   :ColophonTitle ;
+        rdfs:label          "zheng fa da yuan man xian jian jie tuo wei li guang ming lun"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT4E19466A7BAA8C24
+        a                   :SpineTitle ;
+        rdfs:label          "dam chos rdzogs pa chen po'i rnam gzhag"@bo-x-ewts .
+    
+    bdr:TT65566B8B7D4356C4
+        a                   :TitlePageTitle ;
+        rdfs:label          "dam chos rdzogs pa chen po'i rnam gzhag che long tsam brjod pa mthong grol byin rlabs 'bar ba'i 'od gsal/"@bo-x-ewts .
+    
+    bdr:TTD8324A6BB39E9EB6
+        a                   :Title ;
+        rdfs:label          "rdzogs pa chen po'i rnam gzhag mthong grol byin rlabs 'bar ba/"@bo-x-ewts .
+}

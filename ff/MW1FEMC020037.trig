@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020037 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020037
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020037 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ff/MW1FEMC020037.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020037 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6A7257104E7F8944
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "a.35.II.1" .
+    
+    bdr:MFA4432EED6C148578
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "20" ;
+        :microfilmStrip     "9" .
+    
+    bdr:MW1FEMC020037
+        a                   :Instance ;
+        skos:prefLabel      "សុរព្ភ"@km , "surabbh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6A7257104E7F8944 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "5, 6" ;
+        :hasTitle           bdr:TT43BAA30846F7F70B , bdr:TT54F69F78A999A052 , bdr:TT70C4D5DCC2A3ED80 , bdr:TT78E995E703E265B5 , bdr:TT840A783F57136199 , bdr:TTE7C70E546487745F ;
+        :instanceHasReproduction  bdr:W1FEMC020037 ;
+        :instanceOf         bdr:WA1FEMC020037 , bdr:WA1FEMC120037 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA4432EED6C148578 ;
+        :note               bdr:NT3265E468BD2B210F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1529" .
+    
+    bdr:NT3265E468BD2B210F
+        a                   :Note ;
+        :contentLocationStatement  "pg. 8" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT43BAA30846F7F70B
+        a                   :CoverTitle ;
+        rdfs:label          "surabbh nidān"@km-x-twktt ;
+        :femcConversionOf   bdr:TT840A783F57136199 .
+    
+    bdr:TT54F69F78A999A052
+        a                   :CoverTitle ;
+        rdfs:label          "សុរព្ភនិទាន"@km ;
+        :femcConversionOf   bdr:TT70C4D5DCC2A3ED80 .
+    
+    bdr:TT70C4D5DCC2A3ED80
+        a                   :CoverTitle ;
+        rdfs:label          "សោរុព្ភនីទាន"@km .
+    
+    bdr:TT78E995E703E265B5
+        a                   :Title ;
+        rdfs:label          "សុរព្ភ"@km .
+    
+    bdr:TT840A783F57136199
+        a                   :CoverTitle ;
+        rdfs:label          "sorubbh nīdān"@km-x-twktt .
+    
+    bdr:TTE7C70E546487745F
+        a                   :Title ;
+        rdfs:label          "surabbh"@km-x-twktt .
+}

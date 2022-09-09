@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20466 {
+    bda:LG4C81505BA53DF920
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-02-12T16:30:49.14Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG5B5ED7D759D3D726
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW20466  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20466 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "fb/MW20466.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20466 ;
+        adm:logEntry        bda:LG4C81505BA53DF920 , bda:LG5B5ED7D759D3D726 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC74563AD01EE3975
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID09FD91AEBF1603CB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSA 2001/00532 PL3748" .
+    
+    bdr:ID6C4E9C4A69DCA2E2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223012099" .
+    
+    bdr:IDAA1F466FD8663DBE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99949060" .
+    
+    bdr:MW20466  a          :Instance ;
+        skos:altLabel       "平措扎西小品相声选"@zh-hans ;
+        skos:prefLabel      "'khrab gzhung 'dzum shor don ldan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID09FD91AEBF1603CB , bdr:ID6C4E9C4A69DCA2E2 , bdr:IDAA1F466FD8663DBE ;
+        :authorshipStatement  "phun tshogs bkra shis kyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 199 p." ;
+        :hasTitle           bdr:TT0FAEC375376A67A8 , bdr:TTF454C2FAE34BC17D , bdr:TTF6052E901D8D2686 ;
+        :instanceEvent      bdr:EVC74563AD01EE3975 ;
+        :instanceHasReproduction  bdr:W20466 ;
+        :instanceOf         bdr:WA20466 ;
+        :note               bdr:NT9BB50354071B317A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT9BB50354071B317A
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 7025"@en .
+    
+    bdr:TT0FAEC375376A67A8
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ping cuo zha xi xiao pin xiang sheng xuan"@zh-hans .
+    
+    bdr:TTF454C2FAE34BC17D
+        a                   :Title ;
+        rdfs:label          "'khrab gzhung 'dzum shor don ldan/"@bo-x-ewts .
+    
+    bdr:TTF6052E901D8D2686
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "平措扎西小品相声选"@zh-hans .
+}

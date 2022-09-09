@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046075 {
+    bda:LG8CBDF8C21DC29EF0
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046075"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046075
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046075 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8a/MW1FEMC046075.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046075 ;
+        adm:logEntry        bda:LG8CBDF8C21DC29EF0 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD7415B571FDDDD68
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "034-B.04.03.03.V.1" .
+    
+    bdr:MFE238CD2DCD9EA115
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "174" .
+    
+    bdr:MW1FEMC046075
+        a                   :Instance ;
+        skos:prefLabel      "ធម្ដាមហាអនន្ទគុន្យ (១ង-២៣ចុ)"@km , "dhamtā mahā anandaguny"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD7415B571FDDDD68 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT583702700EFA72B2 , bdr:TTEAA29C194AE8E569 ;
+        :instanceHasReproduction  bdr:W1FEMC036075 , bdr:W1FEMC046075 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE238CD2DCD9EA115 ;
+        :note               bdr:NTEB4FBB1EDA669BF7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTEB4FBB1EDA669BF7
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT583702700EFA72B2
+        a                   :Title ;
+        rdfs:label          "ធម្ដាមហាអនន្ទគុន្យ (១ង-២៣ចុ)"@km .
+    
+    bdr:TTEAA29C194AE8E569
+        a                   :Title ;
+        rdfs:label          "dhamtā mahā anandaguny"@km-x-twktt .
+}

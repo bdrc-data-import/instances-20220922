@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021826 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021826
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021826 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "dc/MW1FEMC021826.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021826 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB1115BC631260F0C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.608.I.1" .
+    
+    bdr:MW1FEMC021826
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់កូន​ចៅផ្លែល្វា"@km , "cpāp' kūn cau phlè lvā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB1115BC631260F0C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT4430EDF410400FB0 , bdr:TT84453EA72612C297 , bdr:TT8FDAE5967AF8DC74 , bdr:TTCC8B53673933DAB5 ;
+        :instanceHasReproduction  bdr:W1FEMC021826 ;
+        :instanceOf         bdr:WA1FEMC021826 , bdr:WA1FEMC100049 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT1D46110644F17FFB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1D46110644F17FFB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 327" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4430EDF410400FB0
+        a                   :Title ;
+        rdfs:label          "cpāp' kūn cau phlè lvā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8FDAE5967AF8DC74 .
+    
+    bdr:TT84453EA72612C297
+        a                   :CoverTitle ;
+        rdfs:label          "កូនចោវផ្លែរល្វារ"@km .
+    
+    bdr:TT8FDAE5967AF8DC74
+        a                   :CoverTitle ;
+        rdfs:label          "kūn cov phlèr lvār"@km-x-twktt .
+    
+    bdr:TTCC8B53673933DAB5
+        a                   :Title ;
+        rdfs:label          "ច្បាប់កូន​ចៅផ្លែល្វា"@km ;
+        :femcConversionOf   bdr:TT84453EA72612C297 .
+}

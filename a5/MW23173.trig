@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23173 {
+    bda:LG4F29DC857EF7C172
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-15T11:47:57.648Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG5B8F6222573235D6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23173  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23173 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "a5/MW23173.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23173 ;
+        adm:logEntry        bda:LG4F29DC857EF7C172 , bda:LG5B8F6222573235D6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV38DC4E40B9D242FE
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID36C157CCA4660A71
+        a                   bdr:HollisId ;
+        rdf:value           "014258814" .
+    
+    bdr:ID47660DADC060C7FF
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .D53 1985" .
+    
+    bdr:IDD88D160496F13FD0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85905294" .
+    
+    bdr:MW23173  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of nin-rdzon khri-pa dkon-mchog-don-grub-chos-dban"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_dkon mchog don grub chos dbang /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID36C157CCA4660A71 , bdr:ID47660DADC060C7FF , bdr:IDD88D160496F13FD0 ;
+        :biblioNote         "reproduced from rare manuscripts recently brought to india by yudra rinpoche"@en ;
+        :extentStatement    "822 p." ;
+        :hasTitle           bdr:TT0C1C9C2AAF5B04B1 , bdr:TT56764629CCA8E621 , bdr:TT56EE4FC46799F068 ;
+        :instanceEvent      bdr:EV38DC4E40B9D242FE ;
+        :instanceHasReproduction  bdr:W23173 ;
+        :instanceOf         bdr:WA23173 ;
+        :note               bdr:NT49CA2DBDFCDD0622 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "bir tibetan society"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT49CA2DBDFCDD0622
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files.\n0379."@en .
+    
+    bdr:TT0C1C9C2AAF5B04B1
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of nin-rdzon khri-pa dkon-mchog-don-grub-chos-dban"@en-x-mixed .
+    
+    bdr:TT56764629CCA8E621
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dkon mchog don grub chos dbang /"@bo-x-ewts .
+    
+    bdr:TT56EE4FC46799F068
+        a                   :CoverTitle ;
+        rdfs:label          "khri pa dkon mchog don grub chos dbang gi gsung 'bum/"@bo-x-ewts .
+}

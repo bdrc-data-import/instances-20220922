@@ -1,0 +1,65 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM2026 {
+    bda:LG0C7111148FD11F1C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGED190EADA96ED7D7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM2026  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM2026 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "d5/MW1NLM2026.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM2026 ;
+        adm:logEntry        bda:LG0C7111148FD11F1C , bda:LGED190EADA96ED7D7 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM2026  a       :Instance ;
+        skos:prefLabel      "mdo sde brgyad brgya ba sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "31x6.5" ;
+        :extentStatement    "75 ff., 66 ff." ;
+        :hasTitle           bdr:TT4352315C0728C9E1 ;
+        :instanceHasReproduction  bdr:W1NLM2026 ;
+        :instanceOf         bdr:WA1NLM2026 , bdr:WA1NLM95 ;
+        :note               bdr:NT945A7ED9A364DDB0 , bdr:NTD68AD8D0A65A34A8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT945A7ED9A364DDB0
+        a                   :Note ;
+        :noteText           "missingPages: M0059944-002 [Missing page from 2A-26B] Image 153 M0059944-002 [Missing page from 42A-46B] Image 184"@en .
+    
+    bdr:NTD68AD8D0A65A34A8
+        a                   :Note ;
+        :noteText           "nlmId: M0059944"@en .
+    
+    bdr:TT4352315C0728C9E1
+        a                   :Title ;
+        rdfs:label          "mdo sde brgyad brgya ba sogs/"@bo-x-ewts .
+}

@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG15471 {
+    bda:LG2C881494D0B0B89D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-01-06T11:30:17.48Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG15471  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG15471 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "25/MW1KG15471.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG15471 ;
+        adm:logEntry        bda:LG2C881494D0B0B89D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA6B536B1581ED849
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDCE11C7214665FD66
+        a                   bdr:HollisId ;
+        rdf:value           "014256290" .
+    
+    bdr:MW1KG15471  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "gsung 'bum/_bstan pa'i dbang phyug (glog klad par ma/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCE11C7214665FD66 ;
+        :authorshipStatement  "stag lung dgon gyi sde snod rigs pa'i dpe tshogs par sgrig khang gis bsgrigs/"@bo-x-ewts ;
+        :biblioNote         "par gzhi dang po/"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "8 v." ;
+        :hasTitle           bdr:TT2FB21CEF568202ED , bdr:TTF70DE2EABF3E2E46 ;
+        :instanceEvent      bdr:EVA6B536B1581ED849 ;
+        :instanceHasReproduction  bdr:W1KG15471 ;
+        :instanceOf         bdr:WA1KG15471 ;
+        :note               bdr:NT3658548291C5B9FE , bdr:NT649C3E5C46921815 ;
+        :numberOfVolumes    8 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "mdo smad snga 'gyur stag lung dgon/"@bo-x-ewts ;
+        :publisherName      "stag lung dgon gyi sde snod rigs pa'i dpe tshogs par sgrig khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG15471 ;
+        :seriesNumber       "v. 1-8" .
+    
+    bdr:NT3658548291C5B9FE
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:NT649C3E5C46921815
+        a                   :Note ;
+        :noteText           "volume number 2 is missing and will be added when it is available"@en .
+    
+    bdr:TT2FB21CEF568202ED
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_bstan pa'i dbang phyug (glog klad par ma/)"@bo-x-ewts .
+    
+    bdr:TTF70DE2EABF3E2E46
+        a                   :TitlePageTitle ;
+        rdfs:label          "khyab bdag bla ma rdo rje 'chang dbon sprul bstan pa'i dbang phyug gi gsung 'bum/"@bo-x-ewts .
+}

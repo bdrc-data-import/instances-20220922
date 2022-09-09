@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031071 {
+    bda:LGE0E62F3B726AF826
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-10-05"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031071"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031071
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031071 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "84/MW1FEMC031071.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031071 ;
+        adm:logEntry        bda:LGE0E62F3B726AF826 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB7BC33FA84EC6590
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-PP.03.03.03.I.1" .
+    
+    bdr:MW1FEMC031071
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ក្រម"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB7BC33FA84EC6590 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT19AA5723853EAF45 , bdr:TT20DB2844016A63A0 ;
+        :instanceHasReproduction  bdr:W1FEMC031071 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT2021DC90411A5801 , bdr:NT52DD0BADDECBA034 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2021DC90411A5801
+        a                   :Note ;
+        :noteText           "(១-៣) ជាអង្កា"@en .
+    
+    bdr:NT52DD0BADDECBA034
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT19AA5723853EAF45
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាបក្រំម"@km .
+    
+    bdr:TT20DB2844016A63A0
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ក្រម"@km ;
+        :femcConversionOf   bdr:TT19AA5723853EAF45 .
+}

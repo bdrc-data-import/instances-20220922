@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20011 {
+    bda:LG4F36AE93F6D5508C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG54DB40A8D9918C43
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-02T16:48:35.316Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, cat info, print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF8667813AC08D11A
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-06T17:35:18.314Z"^^xsd:dateTime ;
+        adm:logMessage      "added genre and topics"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20011  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20011 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "1a/MW20011.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20011 ;
+        adm:logEntry        bda:LG4F36AE93F6D5508C , bda:LG54DB40A8D9918C43 , bda:LGF8667813AC08D11A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR64F3CB3ACAC24B3B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P4852 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRE578C22077D8F1F2
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG229084 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVC8778029527DB1BC
+        a                   :PublishedEvent ;
+        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID090D01D56F42A409
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542102397" .
+    
+    bdr:ID60D876E00D82FF44
+        a                   bdr:HollisId ;
+        rdf:value           "014257999" .
+    
+    bdr:MW20011  a          :Instance ;
+        skos:prefLabel      "kan lho bod kyi sman rtsis ched rtsom phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID090D01D56F42A409 , bdr:ID60D876E00D82FF44 ;
+        :authorshipStatement  "kan lho khul 'phrod bsten cus/ gtso sgrig pa/ klu 'bum rgyal/ sangs lo/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR64F3CB3ACAC24B3B , bdr:CRE578C22077D8F1F2 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 5, 395 p." ;
+        :hasTitle           bdr:TTBF655FDC4A830E20 ;
+        :instanceEvent      bdr:EVC8778029527DB1BC ;
+        :instanceHasReproduction  bdr:W20011 ;
+        :instanceOf         bdr:WA20011 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kro'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTBF655FDC4A830E20
+        a                   :Title ;
+        rdfs:label          "kan lho bod kyi sman rtsis ched rtsom phyogs bsgrigs/"@bo-x-ewts .
+}

@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1959 {
+    bda:LGA6324BA88B74E955
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-05T14:12:43.771Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGEC08A766DB12D7BA
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGF7A2EEC62B5FAA07
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1959  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1959 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a7/MW1NLM1959.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1959 ;
+        adm:logEntry        bda:LGA6324BA88B74E955 , bda:LGEC08A766DB12D7BA , bda:LGF7A2EEC62B5FAA07 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1959  a       :Instance ;
+        skos:prefLabel      "dmag zor rgyal mo'i bskang gso bstod pa bskul ba/"@bo-x-ewts ;
+        :dimensionsStatement  "29x6.5" ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TTBF0B6BA2C31B3B6F , bdr:TTC7FD59E790A57FC3 ;
+        :instanceHasReproduction  bdr:W1NLM1959 ;
+        :instanceOf         bdr:WA1NLM1959 ;
+        :note               bdr:NT171071F851B15FAC , bdr:NT51806BD693AB7CC7 , bdr:NTA74BAF4F59DE92C1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT171071F851B15FAC
+        a                   :Note ;
+        :noteText           "01)  dmag zor rgyal mo'i bskangs gso bstod pa bskul bya/   31 ff.\n02)  phyag na rdo rje'i bskang bshags/  17 ff.\n03)  mo dpe/ 5 ff.\n04)  rnam thos sras la mchod gtor 'bul ba'i rim pa dngos grub bang mdzod/  12 ff.\n05)  gdugs dkar gyi bzlog bsgyur/  9 ff.\n06)  glud gtor gyi cho ga kun phan 'dod 'jo/ 10 ff.\n07)  spyod 'jug smon lam/ 7 ff.\n08)  yig drug bzlas pa'i phan yon/ ff. 1-8\n09)  zor ram bzlog bsgyur ram gtor ma'i las bcol/ 2 ff."@en .
+    
+    bdr:NT51806BD693AB7CC7
+        a                   :Note ;
+        :noteText           "nlmId: M0059877"@en .
+    
+    bdr:NTA74BAF4F59DE92C1
+        a                   :Note ;
+        :noteText           "missingPages: M0059877-001 [Missing page from 19A-19B] Image 37-38 M0059877-012 [Final pages are missing 9A] Image 199"@en .
+    
+    bdr:TTBF0B6BA2C31B3B6F
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dod khams dbang phyug ma dmag zor rgyal mo'i skangs gso bstod pa bskul ba/"@bo-x-ewts .
+    
+    bdr:TTC7FD59E790A57FC3
+        a                   :Title ;
+        rdfs:label          "dmag zor rgyal mo'i bskang gso bstod pa bskul ba/"@bo-x-ewts .
+}

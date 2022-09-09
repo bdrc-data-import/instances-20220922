@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13703 {
+    bda:LG4AF6DA3C9843DFD3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-05-14T11:53:29.054Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13703  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13703 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "7b/MW1KG13703.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13703 ;
+        adm:logEntry        bda:LG4AF6DA3C9843DFD3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRFE55019F421C40B5
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG13704 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF530E65B1275BFB4
+        a                   :PublishedEvent ;
+        :eventWhen          "1962"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4A10D0FA94C6DA6E
+        a                   bdr:HollisId ;
+        rdf:value           "014256053" .
+    
+    bdr:MW1KG13703  a       :Instance ;
+        skos:altLabel       "catalogue and index : the tibetan tripitaka, peking edition"@en , "北京版西藏大藏经总目录"@zh-hans ;
+        skos:prefLabel      "otani slob grwa chen mo na yod pa'i pe cin par ma'i bod kyi sde snod gsum gyi dpe tho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4A10D0FA94C6DA6E ;
+        :authorshipStatement  "edited by dr. daisetz t. suzuki, president of suzuki research foundation"@en ;
+        :biblioNote         "preface and explanatory remarks in english and japanese"@en ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRFE55019F421C40B5 ;
+        :extentStatement    "xii, 916, 222 p." ;
+        :hasTitle           bdr:TT3D218E54A36909B1 , bdr:TT422934D72304239B , bdr:TT442C67CE837E2560 , bdr:TT4CE7135075494680 ;
+        :instanceEvent      bdr:EVF530E65B1275BFB4 ;
+        :instanceHasReproduction  bdr:W1KG13703 ;
+        :instanceOf         bdr:WA1KG13703 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "tokyo"@en ;
+        :publisherName      "suzuki research foundation"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT3D218E54A36909B1
+        a                   :OtherTitle ;
+        rdfs:label          "catalogue and index : the tibetan tripitaka, peking edition"@en .
+    
+    bdr:TT422934D72304239B
+        a                   :TitlePageTitle ;
+        rdfs:label          "bei jing ban xi zang da zang jing zong mu lu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT442C67CE837E2560
+        a                   :Title ;
+        rdfs:label          "otani slob grwa chen mo na yod pa'i pe cin par ma'i bod kyi sde snod gsum gyi dpe tho/"@bo-x-ewts .
+    
+    bdr:TT4CE7135075494680
+        a                   :TitlePageTitle ;
+        rdfs:label          "北京版西藏大藏经总目录"@zh-hans .
+}

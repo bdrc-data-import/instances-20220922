@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042011 {
+    bda:LGC224989A1185307A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042011"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042011
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC042011 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f0/MW1FEMC042011.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042011 ;
+        adm:logEntry        bda:LGC224989A1185307A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA61B0C1EDC87C13C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "150-B.01.03.03.I.3" .
+    
+    bdr:MW1FEMC042011
+        a                   :Instance ;
+        skos:prefLabel      "ល្បើកទសជាតិ"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA61B0C1EDC87C13C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "...2-12" ;
+        :hasTitle           bdr:TT236D000B4336BD7E ;
+        :instanceHasReproduction  bdr:W1FEMC032011 , bdr:W1FEMC042011 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT4FFC50B43CD1A992 , bdr:NTE12CC81F463E654E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT4FFC50B43CD1A992
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:NTE12CC81F463E654E
+        a                   :Note ;
+        :noteText           "Canister130_Strip224"@en .
+    
+    bdr:TT236D000B4336BD7E
+        a                   :Title ;
+        rdfs:label          "ល្បើកទសជាតិ"@km .
+}

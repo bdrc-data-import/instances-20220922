@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022115 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022115
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022115 ;
+        adm:contentProvider  bda:CP044 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0f/MW1FEMC022115.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022115 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID78D5DE24B20E2BC1
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "064.III.6" .
+    
+    bdr:MF231B771D74130C97
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "8" ;
+        :microfilmStrip     "29" .
+    
+    bdr:MW1FEMC022115
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សឆាកមហាបង្សុកូល"@km , "ānisaṅs chāk mahā paṅsukūl"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID78D5DE24B20E2BC1 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT20BC8A6BDB9266E3 , bdr:TT757263621940757F , bdr:TT7C49E966F494E70C , bdr:TTD10C76A3A9ABA7BA , bdr:TTD70E31FA88724F37 , bdr:TTF8C03993D1110735 ;
+        :instanceHasReproduction  bdr:W1FEMC022115 ;
+        :instanceOf         bdr:WA1FEMC022115 , bdr:WA1FEMC060012 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF231B771D74130C97 ;
+        :note               bdr:NT77883E3C4B86D771 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT77883E3C4B86D771
+        a                   :Note ;
+        :contentLocationStatement  "pg. 374" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT20BC8A6BDB9266E3
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សឆាក៤ជំពូក"@km ;
+        :femcConversionOf   bdr:TTD10C76A3A9ABA7BA .
+    
+    bdr:TT757263621940757F
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅgh chāk 4 jaṃbūk"@km-x-twktt .
+    
+    bdr:TT7C49E966F494E70C
+        a                   :Title ;
+        rdfs:label          "ānisaṅs chāk mahā paṅsukūl"@km-x-twktt .
+    
+    bdr:TTD10C76A3A9ABA7BA
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្ឃឆាក៤ជំពូក"@km .
+    
+    bdr:TTD70E31FA88724F37
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs chāk 4 jaṃbūk"@km-x-twktt ;
+        :femcConversionOf   bdr:TT757263621940757F .
+    
+    bdr:TTF8C03993D1110735
+        a                   :Title ;
+        rdfs:label          "អានិសង្សឆាកមហាបង្សុកូល"@km .
+}

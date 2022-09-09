@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW18619 {
+    bda:LG13B0FCE0AC9AFF36
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-09-19T12:16:40.833Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGEC68C30BBE981A98
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW18619  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW18619 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ec/MW18619.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW18619 ;
+        adm:logEntry        bda:LG13B0FCE0AC9AFF36 , bda:LGEC68C30BBE981A98 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV82AE5AC39D890143
+        a                   :PublishedEvent ;
+        :eventWhen          "1950"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID374CBC83AA9A0857
+        a                   bdr:HollisId ;
+        rdf:value           "014254824" .
+    
+    bdr:MW18619  a          :Instance ;
+        skos:altLabel       "the denkar-ma, an oldest catalogue of the tibetan buddhist canons"@en ;
+        skos:prefLabel      "bka' bstan dkar chag ldan dkar ma/ (dbu can bris ma/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID374CBC83AA9A0857 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "pp. 101-199" ;
+        :hasTitle           bdr:TT14C390096ED15D2B , bdr:TT38271E491DCFB2CD , bdr:TT71DEF60B4DC83DB5 , bdr:TT9C90CF24988D1AA1 ;
+        :instanceEvent      bdr:EV82AE5AC39D890143 ;
+        :instanceHasReproduction  bdr:W18619 ;
+        :instanceOf         bdr:WA18619 ;
+        :note               bdr:NT5EE15E0138BD6DED , bdr:NT82E95BD99693DB11 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "kyoto"@en ;
+        :publisherName      "ryukoku university"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT5EE15E0138BD6DED
+        a                   :Note ;
+        :noteText           "in tibetan; preface in japanese"@en .
+    
+    bdr:NT82E95BD99693DB11
+        a                   :Note ;
+        :noteText           "A-khu Dpe tho MHTL 10842: ldan dkar ma."@en .
+    
+    bdr:TT14C390096ED15D2B
+        a                   :FullTitle ;
+        rdfs:label          "pho brang stong thang ldan dkar gyi chos 'gyur ro chog gi dkar chag"@bo-x-ewts .
+    
+    bdr:TT38271E491DCFB2CD
+        a                   :Title ;
+        rdfs:label          "bka' bstan dkar chag ldan dkar ma/ (dbu can bris ma/)"@bo-x-ewts .
+    
+    bdr:TT71DEF60B4DC83DB5
+        a                   :OtherTitle ;
+        rdfs:label          "dkar chag ldan dkar ma/"@bo-x-ewts .
+    
+    bdr:TT9C90CF24988D1AA1
+        a                   :TitlePageTitle ;
+        rdfs:label          "the denkar-ma, an oldest catalogue of the tibetan buddhist canons"@en .
+}

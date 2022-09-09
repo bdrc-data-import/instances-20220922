@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039563 {
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039563
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC039563 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "2d/MW1FEMC039563.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039563 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID3ABBAB5C0DC582BA
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "053-PP.02.08.01.III.1" .
+    
+    bdr:MFAC56FAC8E4FC3AD9
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "13" ;
+        :microfilmStrip     "52" .
+    
+    bdr:MW1FEMC039563
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះធម្មសង្គណី អាការវតារសូត្រ គិរិមានន្ទសូត្រ"@km , "braḥ dhamm saṅgaṇī, ākāravatār sūtr, girimānand sūtr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3ABBAB5C0DC582BA ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TTA13BB099F2BE7B23 , bdr:TTB989F9070BB68754 , bdr:TTD5396AD59615FFB5 , bdr:TTEA4B50675851E142 ;
+        :instanceHasReproduction  bdr:W1FEMC010282 , bdr:W1FEMC039563 ;
+        :instanceOf         bdr:WA1FEMC010017 , bdr:WA1FEMC039563 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MFAC56FAC8E4FC3AD9 ;
+        :note               bdr:NT66DEC1C2F5E3FDC9 , bdr:NTC186D82473B84241 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT66DEC1C2F5E3FDC9
+        a                   :Note ;
+        :contentLocationStatement  "pg. 108" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:NTC186D82473B84241
+        a                   :Note ;
+        :noteText           "1 volume"@en .
+    
+    bdr:TTA13BB099F2BE7B23
+        a                   :CoverTitle ;
+        rdfs:label          "braḥ dhamm saṅgaṇī kāvatā gīrīmānand"@km-x-twktt .
+    
+    bdr:TTB989F9070BB68754
+        a                   :CoverTitle ;
+        rdfs:label          "ព្រះធម្មសង្គណី កាវតា គីរីមានន្ទ"@km .
+    
+    bdr:TTD5396AD59615FFB5
+        a                   :Title ;
+        rdfs:label          "braḥ dhamm saṅgaṇī, ākāravatār sūtr, girimānand sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA13BB099F2BE7B23 .
+    
+    bdr:TTEA4B50675851E142
+        a                   :Title ;
+        rdfs:label          "ព្រះធម្មសង្គណី អាការវតារសូត្រ គិរិមានន្ទសូត្រ"@km ;
+        :femcConversionOf   bdr:TTB989F9070BB68754 .
+}

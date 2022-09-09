@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031320 {
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031320
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031320 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "02/MW1FEMC031320.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031320 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDFBE2D917695B910C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "014-PP.02.01.01.V.1" .
+    
+    bdr:MW1FEMC031320
+        a                   :Instance ;
+        skos:prefLabel      "មូលព្រះធម្មត្រៃ"@km , "mūl braḥ dhamm trai"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFBE2D917695B910C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-4" ;
+        :hasTitle           bdr:TT40925274C05DC7CB , bdr:TT4C3F1753AC8FA125 , bdr:TT5213E1E52CD8AEC0 , bdr:TTF4302A913C56F69F ;
+        :instanceHasReproduction  bdr:W1FEMC010146 , bdr:W1FEMC031320 ;
+        :instanceOf         bdr:WA1FEMC031320 , bdr:WA1FEMC070011 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTE6F5EBFD8EF7A553 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "a 1395" .
+    
+    bdr:NTE6F5EBFD8EF7A553
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT40925274C05DC7CB
+        a                   :Title ;
+        rdfs:label          "mūl braḥ dhamm trai"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4C3F1753AC8FA125 .
+    
+    bdr:TT4C3F1753AC8FA125
+        a                   :CoverTitle ;
+        rdfs:label          "mūl dhamm trai"@km-x-twktt .
+    
+    bdr:TT5213E1E52CD8AEC0
+        a                   :Title ;
+        rdfs:label          "មូលព្រះធម្មត្រៃ"@km ;
+        :femcConversionOf   bdr:TTF4302A913C56F69F .
+    
+    bdr:TTF4302A913C56F69F
+        a                   :CoverTitle ;
+        rdfs:label          "មូលធម្មត្រៃ"@km .
+}

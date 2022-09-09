@@ -1,0 +1,103 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG4211 {
+    bda:LG6C0747A296614BD0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-21T15:40:27.91Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA415C3EAC063B513
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-04-07T12:20:33.362Z"^^xsd:dateTime ;
+        adm:logMessage      "added cover image and preface"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGD55AC017638E281D
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-03T11:48:30.494Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG4211  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG4211 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "20/MW1KG4211.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG4211 ;
+        adm:logEntry        bda:LG6C0747A296614BD0 , bda:LGA415C3EAC063B513 , bda:LGD55AC017638E281D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF9931B889D331D53
+        a                   :PublishedEvent ;
+        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDB50D1E754A212B5C
+        a                   bdr:HollisId ;
+        rdf:value           "014256831" .
+    
+    bdr:MW1KG4211  a        :Instance ;
+        skos:altLabel       "historical texts from the monastery of kyi in spiti"@en ;
+        skos:prefLabel      "lots+tsha ba chen po rin chen bzang po'i rnam thar sogs chos tshan khag cig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB50D1E754A212B5C ;
+        :biblioNote         "hand written dbu chen script"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "238 p." ;
+        :hasTitle           bdr:TT03EBC4BA95F73E12 , bdr:TT3178863CB710B60D , bdr:TT3ED46AB1051B40A7 ;
+        :instanceEvent      bdr:EVF9931B889D331D53 ;
+        :instanceHasReproduction  bdr:W1KG4211 ;
+        :instanceOf         bdr:WA1KG4211 ;
+        :note               bdr:NT21D2B433A515E124 , bdr:NT7266F40A26E2F5E6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "losar, spiti, h.p."@en ;
+        :publisherName      "lama rdo rje tshe brtan/"@bo-x-ewts ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT21D2B433A515E124
+        a                   :Note ;
+        :noteText           "preface in english"@en .
+    
+    bdr:NT7266F40A26E2F5E6
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TT03EBC4BA95F73E12
+        a                   :TitlePageTitle ;
+        rdfs:label          "lots+tsha ba chen po rin chen bzang po'i rnam thar dad ldan dge 'phel/"@bo-x-ewts .
+    
+    bdr:TT3178863CB710B60D
+        a                   :CoverTitle ;
+        rdfs:label          "historical texts from the monastery of kyi in spiti"@en .
+    
+    bdr:TT3ED46AB1051B40A7
+        a                   :Title ;
+        rdfs:label          "lots+tsha ba chen po rin chen bzang po'i rnam thar sogs chos tshan khag cig"@bo-x-ewts .
+}

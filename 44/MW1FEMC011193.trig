@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011193 {
+    bda:LG4432CEED608F24CD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011193"@en ;
+        adm:logWho          bdu:U00086 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011193
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011193 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "44/MW1FEMC011193.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011193 ;
+        adm:logEntry        bda:LG4432CEED608F24CD , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0CAC76C9577F3908
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-A.05.11.01.VII" .
+    
+    bdr:MF8EE87794B575A3FD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "VII" ;
+        :microfilmStrip     "28" .
+    
+    bdr:MW1FEMC011193
+        a                   :Instance ;
+        skos:prefLabel      "សមន្តបាសាទិកា"@pi-khmr , "samantapāsādikā"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0CAC76C9577F3908 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "7" ;
+        :hasTitle           bdr:TT301C1642BD63F825 , bdr:TT3CF495CBD0C797BF , bdr:TT6380F73DA77AA0A2 , bdr:TTADD49B61A019B244 , bdr:TTB05A661C7FD2765A , bdr:TTC35FF47B256293F6 ;
+        :instanceHasReproduction  bdr:W1FEMC011193 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8EE87794B575A3FD ;
+        :note               bdr:NT6C2B1B39A37FFB31 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT6C2B1B39A37FFB31
+        a                   :Note ;
+        :contentLocationStatement  "pg. 286" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT301C1642BD63F825
+        a                   :CoverTitle ;
+        rdfs:label          "dutiyasāmanta aṭṭhakathā braḥ pācittiya"@pi-x-twktt .
+    
+    bdr:TT3CF495CBD0C797BF
+        a                   :CoverTitle ;
+        rdfs:label          "dutiya-samanta aṭṭhakathā braḥ pācittiya"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT301C1642BD63F825 .
+    
+    bdr:TT6380F73DA77AA0A2
+        a                   :CoverTitle ;
+        rdfs:label          "ទុតិយសមន្តអដ្ឋកថាព្រះបាចិត្តិយ"@pi-khmr ;
+        :femcConversionOf   bdr:TTC35FF47B256293F6 .
+    
+    bdr:TTADD49B61A019B244
+        a                   :Title ;
+        rdfs:label          "សមន្តបាសាទិកា"@pi-khmr .
+    
+    bdr:TTB05A661C7FD2765A
+        a                   :Title ;
+        rdfs:label          "samantapāsādikā"@pi-x-twktt .
+    
+    bdr:TTC35FF47B256293F6
+        a                   :CoverTitle ;
+        rdfs:label          "ទុតិយសាមន្តអត្ថកថាព្រះបាចិត្តិយ"@pi-khmr .
+}

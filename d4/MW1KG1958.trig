@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1958 {
+    bda:LG8B08E33E16B573C0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-05-07T14:45:14.966Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB21127D032486A54
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-28T12:22:22.536Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGEB92AAB34B3069CE
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-03-02T11:38:21.964Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad and other title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1958  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1958 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "d4/MW1KG1958.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1958 ;
+        adm:logEntry        bda:LG8B08E33E16B573C0 , bda:LGB21127D032486A54 , bda:LGEB92AAB34B3069CE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA7143E3E30B8B68D
+        a                   :PublishedEvent ;
+        :eventWhen          "200?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC12E82A977C6D087
+        a                   bdr:HollisId ;
+        rdf:value           "014256595" .
+    
+    bdr:MW1KG1958  a        :Instance ;
+        skos:prefLabel      "gter chos/_pad+ma gtum po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC12E82A977C6D087 ;
+        :biblioNote         "hand written manuscripts in dbu med and dbu can"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "18 v." ;
+        :hasTitle           bdr:TT214AEC2E643A43ED , bdr:TTF47837E789F4D0BE ;
+        :instanceEvent      bdr:EVA7143E3E30B8B68D ;
+        :instanceHasReproduction  bdr:W1KG1958 ;
+        :instanceOf         bdr:WA1KG1958 ;
+        :note               bdr:NTA19C7D9C241AAEE0 ;
+        :numberOfVolumes    18 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTA19C7D9C241AAEE0
+        a                   :Note ;
+        :noteText           "missing pages in volume 1: 15-20, 35-60, 175,176, 413-418, 805-846, 881-890, these are pagination missing and might by whole text are missing;\nvolume 3 has many pagination disorder"@en .
+    
+    bdr:TT214AEC2E643A43ED
+        a                   :Title ;
+        rdfs:label          "gter chos/_pad+ma gtum po/"@bo-x-ewts .
+    
+    bdr:TTF47837E789F4D0BE
+        a                   :OtherTitle ;
+        rdfs:label          "gter chen pad+ma gtum po'i gter chos/"@bo-x-ewts .
+}

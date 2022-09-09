@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM17 {
+    bda:LG953249150D00326B
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-01-16T23:52:12.364Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE00D3D80310218C5
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-11-06T17:25:29.984Z"^^xsd:dateTime ;
+        adm:logMessage      "added bib note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGEFE72052EAEFEB5E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM17  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM17 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "02/MW1NLM17.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM17 ;
+        adm:logEntry        bda:LG953249150D00326B , bda:LGE00D3D80310218C5 , bda:LGEFE72052EAEFEB5E , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM17  a         :Instance ;
+        skos:prefLabel      "bcom ldan 'das dam tshig rdo rje bsgom bzlas bya tshul sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "20x7.5" ;
+        :extentStatement    "1 v. (200 p.)" ;
+        :hasTitle           bdr:TT36AF3B2159E560D4 ;
+        :instanceHasReproduction  bdr:W1NLM17 ;
+        :instanceOf         bdr:WA1NLM17 ;
+        :note               bdr:NT0E657A374ECDB8E4 , bdr:NTA30F502EFAD84D06 , bdr:NTCCF894E9F8C2E20C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT0E657A374ECDB8E4
+        a                   :Note ;
+        :noteText           "missingPages: missing images 126,127"@en .
+    
+    bdr:NTA30F502EFAD84D06
+        a                   :Note ;
+        :noteText           "nlmId: M0057911"@en .
+    
+    bdr:NTCCF894E9F8C2E20C
+        a                   :Note ;
+        :noteText           "coverType: paper cover"@en .
+    
+    bdr:TT36AF3B2159E560D4
+        a                   :Title ;
+        rdfs:label          "bcom ldan 'das dam tshig rdo rje bsgom bzlas bya tshul sogs/"@bo-x-ewts .
+}

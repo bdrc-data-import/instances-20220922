@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022278 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022278
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022278 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "be/MW1FEMC022278.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022278 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB77A7F919F382646
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.356.III.1" .
+    
+    bdr:MW1FEMC022278
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ២"@km , "saṅgāyanā grè 2"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB77A7F919F382646 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2" ;
+        :hasTitle           bdr:TT43D91C5D7C21B803 , bdr:TT452028BD4E1E5BE6 , bdr:TT56D9B0ECC2C700EE , bdr:TT9DACFA411E63D3F1 , bdr:TTCEF6AB4492912910 , bdr:TTCF601C396FA90E5C ;
+        :instanceHasReproduction  bdr:W1FEMC022278 ;
+        :instanceOf         bdr:WA1FEMC010057 , bdr:WA1FEMC022278 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT056DE8D2248108FD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1014" .
+    
+    bdr:NT056DE8D2248108FD
+        a                   :Note ;
+        :contentLocationStatement  "pg. 407" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT43D91C5D7C21B803
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសំសចោទឆ្លើយ"@km .
+    
+    bdr:TT452028BD4E1E5BE6
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 2"@km-x-twktt .
+    
+    bdr:TT56D9B0ECC2C700EE
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សចោទឆ្លើយ"@km ;
+        :femcConversionOf   bdr:TT43D91C5D7C21B803 .
+    
+    bdr:TT9DACFA411E63D3F1
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ២"@km .
+    
+    bdr:TTCEF6AB4492912910
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs cod chlöy"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCF601C396FA90E5C .
+    
+    bdr:TTCF601C396FA90E5C
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṃs cod chlöy"@km-x-twktt .
+}

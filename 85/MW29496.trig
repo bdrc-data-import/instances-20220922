@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29496 {
+    bda:LGA3841EEC6EF16212
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-17T15:23:48.025Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, cat info and lang encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC7F7E0041CDA462E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29496  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29496 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "85/MW29496.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29496 ;
+        adm:logEntry        bda:LGA3841EEC6EF16212 , bda:LGC7F7E0041CDA462E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF97C66BC4D297D29
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID10F606E7D340C6FB
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542108514" .
+    
+    bdr:ID93EFA37A844123B7
+        a                   bdr:HollisId ;
+        rdf:value           "014260011" .
+    
+    bdr:MW29496  a          :Instance ;
+        skos:altLabel       "藏族哲学思想文化论集"@zh-hans ;
+        skos:prefLabel      "gzhung don mdor bstan gyi rnam bshad bsdus pa'i snying po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID10F606E7D340C6FB , bdr:ID93EFA37A844123B7 ;
+        :authorshipStatement  "'brug thar gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "326 p." ;
+        :hasTitle           bdr:TT1432DC22F85989FD , bdr:TT76C84F57722484A6 , bdr:TTB9009AEAC4A5881E ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVF97C66BC4D297D29 ;
+        :instanceHasReproduction  bdr:W29496 ;
+        :instanceOf         bdr:WA29496 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1432DC22F85989FD
+        a                   :OtherTitle ;
+        rdfs:label          "藏族哲学思想文化论集"@zh-hans .
+    
+    bdr:TT76C84F57722484A6
+        a                   :OtherTitle ;
+        rdfs:label          "zang zu zhe xue si xiang wen hua lun ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTB9009AEAC4A5881E
+        a                   :Title ;
+        rdfs:label          "gzhung don mdor bstan gyi rnam bshad bsdus pa'i snying po/"@bo-x-ewts .
+}

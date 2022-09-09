@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC041742 {
+    bda:LGE1950627D97D4FF4
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC041742"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC041742
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC041742 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8f/MW1FEMC041742.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC041742 ;
+        adm:logEntry        bda:LGE1950627D97D4FF4 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID7AA8748489832DAC
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "090-B.01.05.03.IV.1" .
+    
+    bdr:MF8043DCA680676C00
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "222" .
+    
+    bdr:MW1FEMC041742
+        a                   :Instance ;
+        skos:prefLabel      "ន្យីាយអំពី្យព្រះជេត្តពុន (ប្រវត្តិ)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7AA8748489832DAC ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "ក¹-កេ)" ;
+        :hasTitle           bdr:TTB9D1F0F7ACFA1AC4 ;
+        :instanceHasReproduction  bdr:W1FEMC031742 , bdr:W1FEMC041742 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8043DCA680676C00 ;
+        :note               bdr:NT0F10099093FBFF31 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT0F10099093FBFF31
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTB9D1F0F7ACFA1AC4
+        a                   :Title ;
+        rdfs:label          "ន្យីាយអំពី្យព្រះជេត្តពុន (ប្រវត្តិ)"@km .
+}

@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039581 {
+    bda:LGBA461DBD73D3BA0B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC039581"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039581
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC039581 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "35/MW1FEMC039581.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039581 ;
+        adm:logEntry        bda:LGBA461DBD73D3BA0B , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC2A3A504DB8D4F01
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "017-PP.02.08.01.VII" .
+    
+    bdr:MF8864BC4391BA2862
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "10" ;
+        :microfilmStrip     "38-39" .
+    
+    bdr:MW1FEMC039581
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មបទដ្ឋកថាប៉េនប្ថាយ"@pi-khmr , "dhammapadaṭṭhakathā p''en plāy"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC2A3A504DB8D4F01 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-18, 20" ;
+        :hasTitle           bdr:TT0596BB7E538E2CBF , bdr:TT090DC2CCBAB8DED9 , bdr:TT41F6B205362839E7 , bdr:TT7DF189A16A7D27B3 ;
+        :instanceHasReproduction  bdr:W1FEMC039581 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8864BC4391BA2862 ;
+        :note               bdr:NT97370FBC600EA062 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT97370FBC600EA062
+        a                   :Note ;
+        :contentLocationStatement  "pg. 109" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT0596BB7E538E2CBF
+        a                   :Title ;
+        rdfs:label          "dhammapadaṭṭhakathā p''en plāy"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT41F6B205362839E7 .
+    
+    bdr:TT090DC2CCBAB8DED9
+        a                   :Title ;
+        rdfs:label          "ធម្មបទដ្ឋកថាប៉េនប្ថាយ"@pi-khmr ;
+        :femcConversionOf   bdr:TT7DF189A16A7D27B3 .
+    
+    bdr:TT41F6B205362839E7
+        a                   :CoverTitle ;
+        rdfs:label          "dhammapada panº plāy"@pi-x-twktt .
+    
+    bdr:TT7DF189A16A7D27B3
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មបទបន្នប្ថាយ"@pi-khmr .
+}

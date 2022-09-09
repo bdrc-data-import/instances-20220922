@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020114 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020114
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020114 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c4/MW1FEMC020114.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020114 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID4A44F7AA6C40DA19
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.7.III.5" .
+    
+    bdr:MFE25C07D1FEEED583
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "30" ;
+        :microfilmStrip     "51" .
+    
+    bdr:MW1FEMC020114
+        a                   :Instance ;
+        skos:prefLabel      "នារទព្រហ្មជាតក"@km , "nārad brahm jātak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4A44F7AA6C40DA19 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT13D45B33D6778D78 , bdr:TT47F8D190A9732057 , bdr:TT9F623A2D81D433CE , bdr:TTB0CF49F90D537E19 , bdr:TTCD2E17A5B2DCED2B , bdr:TTD4A260E59F607F3E ;
+        :instanceHasReproduction  bdr:W1FEMC020114 ;
+        :instanceOf         bdr:WA1FEMC020114 , bdr:WA1FEMC050007 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE25C07D1FEEED583 ;
+        :note               bdr:NT3357DCC198AA237B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "520" .
+    
+    bdr:NT3357DCC198AA237B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 24" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT13D45B33D6778D78
+        a                   :CoverTitle ;
+        rdfs:label          "nāratṭh braṃhm"@km-x-twktt .
+    
+    bdr:TT47F8D190A9732057
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT9F623A2D81D433CE
+        a                   :CoverTitle ;
+        rdfs:label          "នារត្ឋព្រំហ្ម"@km .
+    
+    bdr:TTB0CF49F90D537E19
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTCD2E17A5B2DCED2B
+        a                   :Title ;
+        rdfs:label          "nārad brahm jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT13D45B33D6778D78 .
+    
+    bdr:TTD4A260E59F607F3E
+        a                   :Title ;
+        rdfs:label          "នារទព្រហ្មជាតក"@km ;
+        :femcConversionOf   bdr:TT9F623A2D81D433CE .
+}

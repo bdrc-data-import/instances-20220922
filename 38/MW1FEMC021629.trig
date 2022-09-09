@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021629 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021629
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021629 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "38/MW1FEMC021629.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021629 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0925B00847B6F833
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.538.III.1" .
+    
+    bdr:MFE2892CF6E4486D8B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "132" ;
+        :microfilmStrip     "226" .
+    
+    bdr:MW1FEMC021629
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣ពិស្តារ"@km , "saṅgāyanā grè 3 bistār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0925B00847B6F833 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT2012D2EC266AFC53 , bdr:TT225A12C02100E9CA , bdr:TT22CDEB027A68BEDB , bdr:TT6C2872A926BC8751 , bdr:TT87AA4134C059B623 , bdr:TTB900C59DCFDA4CE0 ;
+        :instanceHasReproduction  bdr:W1FEMC021629 ;
+        :instanceOf         bdr:WA1FEMC010129 , bdr:WA1FEMC021629 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE2892CF6E4486D8B ;
+        :note               bdr:NT2BC60C9ED9021949 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2BC60C9ED9021949
+        a                   :Note ;
+        :contentLocationStatement  "pg. 293" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2012D2EC266AFC53
+        a                   :CoverTitle ;
+        rdfs:label          "បុច្ឆាវិសុជ្ជនាព្រះវិន្យៃ"@km .
+    
+    bdr:TT225A12C02100E9CA
+        a                   :CoverTitle ;
+        rdfs:label          "pucchā visujjanā braḥ vinaiy°"@km-x-twktt .
+    
+    bdr:TT22CDEB027A68BEDB
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣ពិស្តារ"@km .
+    
+    bdr:TT6C2872A926BC8751
+        a                   :CoverTitle ;
+        rdfs:label          "pucchā vissajjanā braḥ vinăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT225A12C02100E9CA .
+    
+    bdr:TT87AA4134C059B623
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3 bistār"@km-x-twktt .
+    
+    bdr:TTB900C59DCFDA4CE0
+        a                   :CoverTitle ;
+        rdfs:label          "បុច្ឆាវិស្សជ្ជនាព្រះវិន័យ"@km ;
+        :femcConversionOf   bdr:TT2012D2EC266AFC53 .
+}

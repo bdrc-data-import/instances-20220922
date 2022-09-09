@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC030317 {
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC030317
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC030317 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ad/MW1FEMC030317.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC030317 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID08D591EAA736BC72
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "0314-B.01.06.01.III.6" .
+    
+    bdr:MW1FEMC030317
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សចម្លងបុណ្យ"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID08D591EAA736BC72 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT1EB6DA8AE5AA1B1D , bdr:TT47F6574C51E4393C ;
+        :instanceHasReproduction  bdr:W1FEMC030317 ;
+        :instanceOf         bdr:WA1FEMC030317 , bdr:WA1FEMC060011 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT9F3C6B3BBF315D5E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9F3C6B3BBF315D5E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 15" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT1EB6DA8AE5AA1B1D
+        a                   :Title ;
+        rdfs:label          "អានិសង្សចម្លងបុណ្យ"@km .
+    
+    bdr:TT47F6574C51E4393C
+        a                   :CoverTitle ;
+        rdfs:label          "ចម្លងបុណ្យ"@km .
+}

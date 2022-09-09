@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21212 {
+    bda:LG2D5E611C14F63531
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA57E89EF19D3A98A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM7CC15F8F  a     adm:UpdateData ;
+        adm:logAgent        "works-mark-restrictedInChina.xql" ;
+        adm:logDate         "2021-11-30T06:34:21.447Z"^^xsd:dateTime ;
+        adm:logMessage      "changed access to restrictedInChina"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW21212  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21212 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "dc/MW21212.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21212 ;
+        adm:logEntry        bda:LG2D5E611C14F63531 , bda:LGA57E89EF19D3A98A , bda:LGIM7CC15F8F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV82B5BD7B1B95CFC3
+        a                   :PublishedEvent ;
+        :eventWhen          "1970"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC509BA7CEB255252
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73917981" .
+    
+    bdr:MW21212  a          :Instance ;
+        skos:prefLabel      "rdo rje 'chang chen po'i rnam par thar pa rin chen 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC509BA7CEB255252 ;
+        :authorshipStatement  "reproduced from the manuscript collections of gra sku-zhabs bstan-'dzin-nor-bu"@en ;
+        :extentStatement    "4 v. (v. 1, pp. 1-33)" ;
+        :hasTitle           bdr:TT390E9E9635446F7A , bdr:TT91FB54D40005CB65 ;
+        :instanceEvent      bdr:EV82B5BD7B1B95CFC3 ;
+        :language           bdr:LangBo ;
+        :note               bdr:NT58FC079FA004DC3A ;
+        :publisherLocation  "dehradun"@en ;
+        :publisherName      "ngawang gyaltsen and ngawang lungtok"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:NT58FC079FA004DC3A
+        a                   :Note ;
+        :noteText           "appended (pp. 30-33): yum rdo rje rnal 'byor ma'i rnam thar"@en .
+    
+    bdr:TT390E9E9635446F7A
+        a                   :Title ;
+        rdfs:label          "rdo rje 'chang chen po'i rnam par thar pa rin chen 'od zer/"@bo-x-ewts .
+    
+    bdr:TT91FB54D40005CB65
+        a                   :TitlePageTitle ;
+        rdfs:label          "chos sku rdo rje 'chang chen po'i rnam par thar pa rin chen 'od zer/"@bo-x-ewts .
+}

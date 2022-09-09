@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20851 {
+    bda:LGD346F11469848849
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-01-11T11:49:30.71Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGFB9F362E6B43CC12
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20851  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20851 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "81/MW20851.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20851 ;
+        adm:logEntry        bda:LGD346F11469848849 , bda:LGFB9F362E6B43CC12 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV030F0D28D8530E52
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID47C428430B98622E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83907133" .
+    
+    bdr:ID838977F9A368C3B0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS485.Z36 B57 1979" .
+    
+    bdr:ID8F51B366960ABBF6
+        a                   bdr:HollisId ;
+        rdf:value           "014258255" .
+    
+    bdr:MW20851  a          :Instance ;
+        skos:altLabel       "an introduction to the history and monastery zanskar"@en ;
+        skos:prefLabel      "zangs dkar gyi rgyal rabs dang chos 'byung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID47C428430B98622E , bdr:ID838977F9A368C3B0 , bdr:ID8F51B366960ABBF6 ;
+        :authorshipStatement  "bka' chen blo bzang bzod pa dang ngag dbang tshe ring /"@bo-x-ewts ;
+        :biblioNote         "dka' chen blo bzang bzod pa dang ngag dbang tshe ring /"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "dpar theng 1."@bo-x-ewts ;
+        :extentStatement    "6, 70 p." ;
+        :hasTitle           bdr:TT909D495ED640B274 , bdr:TT96335F37FFB5A289 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV030F0D28D8530E52 ;
+        :instanceHasReproduction  bdr:W20851 ;
+        :instanceOf         bdr:WA20851 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "ngag dbang tshe ring /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "bho ja pu rI par khang /"@bo-x-ewts .
+    
+    bdr:TT909D495ED640B274
+        a                   :OtherTitle ;
+        rdfs:label          "an introduction to the history and monastery zanskar"@en .
+    
+    bdr:TT96335F37FFB5A289
+        a                   :Title ;
+        rdfs:label          "zangs dkar gyi rgyal rabs dang chos 'byung /"@bo-x-ewts .
+}

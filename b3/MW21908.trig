@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21908 {
+    bda:LG09AFAE54129C5E00
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG4DC784AC2A4884A9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-02T16:41:44.815Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog,add  author, editor, cat info, print tyep and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGA1D8F5100EDB6756
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-02-05T15:16:28.06Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW21908  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21908 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b3/MW21908.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21908 ;
+        adm:logEntry        bda:LG09AFAE54129C5E00 , bda:LG4DC784AC2A4884A9 , bda:LGA1D8F5100EDB6756 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR6FF3A8792123C93B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7395 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD6908B76D5802100
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID016842D456DB9788
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3745 .B63 1985" .
+    
+    bdr:IDA5741D20DBC62198
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95918961" .
+    
+    bdr:MW21908  a          :Instance ;
+        skos:altLabel       "西藏散文选"@zh-hans ;
+        skos:prefLabel      "bod kyi lhug rtsom 'dems sgrig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID016842D456DB9788 , bdr:IDA5741D20DBC62198 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR6FF3A8792123C93B ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "6, 3, 327 p." ;
+        :hasTitle           bdr:TT10D2B24CAD6469F6 , bdr:TT287F292C4E8A202E , bdr:TT2928F517320A5878 ;
+        :instanceEvent      bdr:EVD6908B76D5802100 ;
+        :instanceHasReproduction  bdr:W21908 ;
+        :instanceOf         bdr:WA21908 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT10D2B24CAD6469F6
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xi zang san wen xuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT287F292C4E8A202E
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "西藏散文选"@zh-hans .
+    
+    bdr:TT2928F517320A5878
+        a                   :Title ;
+        rdfs:label          "bod kyi lhug rtsom 'dems sgrig"@bo-x-ewts .
+}

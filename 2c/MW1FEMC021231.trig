@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021231 {
+    bda:LG349CCF9C1E9E12F7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021231"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021231
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021231 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "2c/MW1FEMC021231.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021231 ;
+        adm:logEntry        bda:LG349CCF9C1E9E12F7 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID11A755A136C9C115
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.49.VII" .
+    
+    bdr:MFA5B1E96009AFAEC6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XXII" ;
+        :microfilmStrip     "49" .
+    
+    bdr:MW1FEMC021231
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មបទដ្ឋកថា​ប៉េនប្លាយ"@km , "dhammapadaṭṭhakathā p''en plāy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID11A755A136C9C115 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "6, 7, 13, 14, 16, 17" ;
+        :hasTitle           bdr:TT2E5995B89CA362B9 , bdr:TT492664BE02AA7414 , bdr:TT5A23A76F9D3F26FE , bdr:TT6C1DF6DF02D68730 ;
+        :instanceHasReproduction  bdr:W1FEMC021231 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA5B1E96009AFAEC6 ;
+        :note               bdr:NTA05E0F161813D0A4 , bdr:NTD69A84DC3BB4611C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA05E0F161813D0A4
+        a                   :Note ;
+        :noteText           "what does[CPD 2,5,2,1]refer to ?"@en .
+    
+    bdr:NTD69A84DC3BB4611C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 225" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2E5995B89CA362B9
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មបទប័នប្លាយ"@km .
+    
+    bdr:TT492664BE02AA7414
+        a                   :Title ;
+        rdfs:label          "dhammapadaṭṭhakathā p''en plāy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5A23A76F9D3F26FE .
+    
+    bdr:TT5A23A76F9D3F26FE
+        a                   :CoverTitle ;
+        rdfs:label          "dhammapada păn plāy"@km-x-twktt .
+    
+    bdr:TT6C1DF6DF02D68730
+        a                   :Title ;
+        rdfs:label          "ធម្មបទដ្ឋកថា​ប៉េនប្លាយ"@km ;
+        :femcConversionOf   bdr:TT2E5995B89CA362B9 .
+}

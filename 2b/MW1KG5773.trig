@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG5773 {
+    bda:LGCCF0320C13BAB9F9
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-08-11T11:34:16.513Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG5773  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG5773 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "2b/MW1KG5773.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5773 ;
+        adm:logEntry        bda:LGCCF0320C13BAB9F9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC756AFA8EE59D19D
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID155E6C72730EBBCD
+        a                   bdr:HollisId ;
+        rdf:value           "014257192" .
+    
+    bdr:ID4182B2B523A6DD21
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7536719671" .
+    
+    bdr:MW1KG5773  a        :Instance ;
+        skos:prefLabel      "bod kyi dpal 'byor lo rgyus mdor bsdus/"@bo-x-ewts , "zang zu jing ji jian shi"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID155E6C72730EBBCD , bdr:ID4182B2B523A6DD21 ;
+        :authorshipStatement  "ldong ka dge shis chos grags kyis brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 7, 301 p." ;
+        :hasTitle           bdr:TT54176223DF641F47 , bdr:TT591BB2D0CC79EECA ;
+        :instanceEvent      bdr:EVC756AFA8EE59D19D ;
+        :instanceHasReproduction  bdr:IE1KG5773 , bdr:W1KG5773 ;
+        :instanceOf         bdr:WA1KG5773 ;
+        :note               bdr:NTFFA318E74F5D5D3F ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "kun ming /"@bo-x-ewts ;
+        :publisherName      "yun nan mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:NTFFA318E74F5D5D3F
+        a                   :Note ;
+        :noteText           "written in tibetan and chinese"@en .
+    
+    bdr:TT54176223DF641F47
+        a                   :Title ;
+        rdfs:label          "bod kyi dpal 'byor lo rgyus mdor bsdus/"@bo-x-ewts .
+    
+    bdr:TT591BB2D0CC79EECA
+        a                   :OtherTitle ;
+        rdfs:label          "zang zu jing ji jian shi"@zh-latn-pinyin-x-ndia .
+}

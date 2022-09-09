@@ -1,0 +1,103 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14992 {
+    bda:LG4B8FD8898C37EB6A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-08-29T15:00:52.476Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14992  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14992 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "40/MW1KG14992.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14992 ;
+        adm:logEntry        bda:LG4B8FD8898C37EB6A , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV572D3C6D835D2DD5
+        a                   :PublishedEvent ;
+        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0AD3BC97128AEB08
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "Z7862.4 .E35 1993 BQ1267" .
+    
+    bdr:ID3A21E87C363EFEF0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "94167806" .
+    
+    bdr:IDC3080EB5F5DA2AD2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "4906267327" .
+    
+    bdr:IDCDAE53FF39EE2C23
+        a                   bdr:HollisId ;
+        rdf:value           "014256257" .
+    
+    bdr:MW1KG14992  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "phug brag bka' 'gyur gyi dkar chag"@bo-x-ewts , "location list of the texts in the microfiche edition of the phug brag kanjur : compiled from the microfiche edition and jampa samten's descriptive catalogue"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0AD3BC97128AEB08 , bdr:ID3A21E87C363EFEF0 , bdr:IDC3080EB5F5DA2AD2 , bdr:IDCDAE53FF39EE2C23 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "xii, 126 p." ;
+        :hasTitle           bdr:TT8585C46E8807267A , bdr:TT895EB71D3EC704AF ;
+        :instanceEvent      bdr:EV572D3C6D835D2DD5 ;
+        :instanceHasReproduction  bdr:W1KG14992 ;
+        :instanceOf         bdr:WA1KG14992 ;
+        :note               bdr:NT619F22E85DA41755 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "tokyo"@en ;
+        :publisherName      "the international institute for buddhist studies"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG14992 ;
+        :seriesNumber       "5" .
+    
+    bdr:NT619F22E85DA41755
+        a                   :Note ;
+        :noteText           "in english and wylie transliteration"@en .
+    
+    bdr:TT8585C46E8807267A
+        a                   :Title ;
+        rdfs:label          "phug brag bka' 'gyur gyi dkar chag"@bo-x-ewts .
+    
+    bdr:TT895EB71D3EC704AF
+        a                   :TitlePageTitle ;
+        rdfs:label          "location list of the texts in the microfiche edition of the phug brag kanjur : compiled from the microfiche edition and jampa samten's descriptive catalogue"@en .
+}

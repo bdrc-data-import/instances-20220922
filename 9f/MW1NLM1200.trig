@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1200 {
+    bda:LG0E3AED7AA25588E2
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGD0607B646904EA21
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-30T10:28:13.595Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFC155982F9DF6E3D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1200  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1200 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9f/MW1NLM1200.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1200 ;
+        adm:logEntry        bda:LG0E3AED7AA25588E2 , bda:LGD0607B646904EA21 , bda:LGFC155982F9DF6E3D , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1200  a       :Instance ;
+        skos:prefLabel      "grub pa'i mtha' rnam par bzhag pa rin po che'i 'phreng ba sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "35.5x7" ;
+        :extentStatement    "54 ff., 22 ff., 5 ff.,4 ff. end folio missing, 8 ff., 4 ff., 10 ff., 13 ff., 3 ff., 3 ff., 15 ff., 5 ff., 32 ff., 2 ff." ;
+        :hasTitle           bdr:TT8757253490A930F9 ;
+        :instanceHasReproduction  bdr:W1NLM1200 ;
+        :instanceOf         bdr:WA1NLM1200 ;
+        :note               bdr:NT92C4375574C9FC08 , bdr:NT9445A6AB2DEB632A , bdr:NTD4EF525C4ECF3C04 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT92C4375574C9FC08
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT9445A6AB2DEB632A
+        a                   :Note ;
+        :noteText           "missingPages: M0059113-005 [Final pages are missing 5A] Image 171"@en .
+    
+    bdr:NTD4EF525C4ECF3C04
+        a                   :Note ;
+        :noteText           "nlmId: M0059113"@en .
+    
+    bdr:TT8757253490A930F9
+        a                   :Title ;
+        rdfs:label          "grub pa'i mtha' rnam par bzhag pa rin po che'i 'phreng ba sogs/"@bo-x-ewts .
+}

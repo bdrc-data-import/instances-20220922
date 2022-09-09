@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021909 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021909
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021909 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0d/MW1FEMC021909.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021909 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID40B8C29FF2ACA01B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.691.III.1" .
+    
+    bdr:MW1FEMC021909
+        a                   :Instance ;
+        skos:prefLabel      "សង្រួមព្រះសារីរិកធាតុ"@km , "saṅruom braḥ sārīrikadhātu"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID40B8C29FF2ACA01B ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT0FD3050DA84A4C70 , bdr:TT5A31710703BAB389 , bdr:TTD4E1EA6D8938C524 , bdr:TTE27474D5873E1ED8 ;
+        :instanceHasReproduction  bdr:W1FEMC021909 ;
+        :instanceOf         bdr:WA1FEMC010060 , bdr:WA1FEMC021909 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTB68A2C8CD8C4935E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB68A2C8CD8C4935E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 340" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0FD3050DA84A4C70
+        a                   :CoverTitle ;
+        rdfs:label          "សង្រួមព្រះសិរិកធាតុ"@km .
+    
+    bdr:TT5A31710703BAB389
+        a                   :Title ;
+        rdfs:label          "សង្រួមព្រះសារីរិកធាតុ"@km ;
+        :femcConversionOf   bdr:TT0FD3050DA84A4C70 .
+    
+    bdr:TTD4E1EA6D8938C524
+        a                   :CoverTitle ;
+        rdfs:label          "saṅruom braḥ sirikadhātu"@km-x-twktt .
+    
+    bdr:TTE27474D5873E1ED8
+        a                   :Title ;
+        rdfs:label          "saṅruom braḥ sārīrikadhātu"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD4E1EA6D8938C524 .
+}

@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29280 {
+    bda:LG080032A3D5A4EABD
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-20T14:45:31.869Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFBE711D75488C262
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW29280  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29280 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "d0/MW29280.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29280 ;
+        adm:logEntry        bda:LG080032A3D5A4EABD , bda:LGFBE711D75488C262 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR4F840032FBC8864E
+        a                   :AgentAsCreator ;
+        :agent              bdr:P9630 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV8DE322EDD08CC3B8
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID68CA0DE3D289BC2C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4399.R463 T37 2004" .
+    
+    bdr:ID749FD06778BC9EB5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005389129" .
+    
+    bdr:ID8B9F5FAC12022239
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9993664103" .
+    
+    bdr:MW29280  a          :Instance ;
+        skos:altLabel       "guide to gyelsey laglen"@en ;
+        skos:prefLabel      "lag len lam ston snang ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID68CA0DE3D289BC2C , bdr:ID749FD06778BC9EB5 , bdr:ID8B9F5FAC12022239 ;
+        :authorshipStatement  "by tashi wangdi; compiler sangyay wangdi"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR4F840032FBC8864E ;
+        :editionStatement   "1st ed."@en ;
+        :extentStatement    "iv, iii, 176, 2 p." ;
+        :hasTitle           bdr:TTAD513E8D7AC3C359 , bdr:TTF992EE781168EE49 ;
+        :instanceEvent      bdr:EV8DE322EDD08CC3B8 ;
+        :instanceHasReproduction  bdr:W29280 ;
+        :instanceOf         bdr:WA29280 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "sangyay wangdi"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTAD513E8D7AC3C359
+        a                   :Title ;
+        rdfs:label          "lag len lam ston snang ba/"@bo-x-ewts .
+    
+    bdr:TTF992EE781168EE49
+        a                   :OtherTitle ;
+        rdfs:label          "guide to gyelsey laglen"@en .
+}

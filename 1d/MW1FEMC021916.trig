@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021916 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021916
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021916 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1d/MW1FEMC021916.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021916 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID19D976B8923B2321
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.698.III.2" .
+    
+    bdr:MW1FEMC021916
+        a                   :Instance ;
+        skos:prefLabel      "ចន្ទសុកគិរីសូត្រ"@km , "cand suk girī sūtr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID19D976B8923B2321 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1F2510F3FA75E7AA , bdr:TT762ECC1A4DCBE6A7 , bdr:TTC13735396C7AC62F , bdr:TTF10C07F5E2A9F67E ;
+        :instanceHasReproduction  bdr:W1FEMC021916 ;
+        :instanceOf         bdr:WA1FEMC020018 , bdr:WA1FEMC021916 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTA856CA9907727FD2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA856CA9907727FD2
+        a                   :Note ;
+        :contentLocationStatement  "pg. 342" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1F2510F3FA75E7AA
+        a                   :Title ;
+        rdfs:label          "cand suk girī sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF10C07F5E2A9F67E .
+    
+    bdr:TT762ECC1A4DCBE6A7
+        a                   :Title ;
+        rdfs:label          "ចន្ទសុកគិរីសូត្រ"@km ;
+        :femcConversionOf   bdr:TTC13735396C7AC62F .
+    
+    bdr:TTC13735396C7AC62F
+        a                   :CoverTitle ;
+        rdfs:label          "ចន្ទសុក្ខរិសូត"@km .
+    
+    bdr:TTF10C07F5E2A9F67E
+        a                   :CoverTitle ;
+        rdfs:label          "candh sukkharisūt"@km-x-twktt .
+}

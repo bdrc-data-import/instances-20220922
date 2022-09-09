@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW914 {
+    bda:LG9BE978920F911B46
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA6D8D94BE91B853B
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-02-18T10:38:59.59Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGAEEDE9CF4BAF33CA
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-16T09:37:04.983Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW914  a            adm:AdminData ;
+        adm:adminAbout      bdr:MW914 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8b/MW914.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW914 ;
+        adm:logEntry        bda:LG9BE978920F911B46 , bda:LGA6D8D94BE91B853B , bda:LGAEEDE9CF4BAF33CA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV09FC7EE9D79510DC
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID400D50E8BE692976
+        a                   bdr:HollisId ;
+        rdf:value           "014261122" .
+    
+    bdr:MW914  a            :Instance ;
+        skos:prefLabel      "rgyud sde spyi'i rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID400D50E8BE692976 ;
+        :biblioNote         "reprinted from the wood blocks made available by rgyal khang rtse mchog sprul rin po che and preserved at kun dga' chos gling monastery"@en ;
+        :extentStatement    "ff. 63 (125 p.)" ;
+        :hasTitle           bdr:TT211FB5B5471EB3D5 , bdr:TT6F9B3E151F806A3C ;
+        :instanceEvent      bdr:EV09FC7EE9D79510DC ;
+        :instanceHasReproduction  bdr:W914 ;
+        :instanceOf         bdr:WA914 ;
+        :note               bdr:NT5A9472060ADFEB0E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT5A9472060ADFEB0E
+        a                   :Note ;
+        :noteText           "Translated into English as:\nOverview of Buddhist tantra : general presentation of the classes of tantra, captivating the minds of the fortunate ones = Rgyud sde spyi'i rnam par bzhag pa skal bzang gi yid 'phrog ces bye ba bzhugs so / by Panchen Sonam Dragpa ; English translation by Martin J. Boord & Losang Norbu Tsonawa. -- Dharamsala : Library of Tibetan Works and Archives, 1996.\nix, 159 p.\nBQ2145 .B7413 1996  96-904756."@en .
+    
+    bdr:TT211FB5B5471EB3D5
+        a                   :Title ;
+        rdfs:label          "rgyud sde spyi'i rnam bshad/"@bo-x-ewts .
+    
+    bdr:TT6F9B3E151F806A3C
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyud sde spyi'i rnam par bzhag pa skal bzang gi yid 'phrog"@bo-x-ewts .
+}

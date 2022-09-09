@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022306 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022306
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022306 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3a/MW1FEMC022306.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022306 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5A8BCE49435ADDDE
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.384.III.4" .
+    
+    bdr:MW1FEMC022306
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5A8BCE49435ADDDE ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-7" ;
+        :hasTitle           bdr:TT40FAB9C330ED5A4B , bdr:TT608212A9F156E2C5 , bdr:TT7ED567107AF3828D , bdr:TTFFA0B6BE79AD7DEE ;
+        :instanceHasReproduction  bdr:W1FEMC022306 ;
+        :instanceOf         bdr:WA1FEMC022306 , bdr:WA1FEMC040001 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT79BA1BC2831DFFA2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1168" .
+    
+    bdr:NT79BA1BC2831DFFA2
+        a                   :Note ;
+        :contentLocationStatement  "pg. 412" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT40FAB9C330ED5A4B
+        a                   :CoverTitle ;
+        rdfs:label          "សត្តបករណាភិធម្ម"@km .
+    
+    bdr:TT608212A9F156E2C5
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km ;
+        :femcConversionOf   bdr:TT40FAB9C330ED5A4B .
+    
+    bdr:TT7ED567107AF3828D
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTFFA0B6BE79AD7DEE .
+    
+    bdr:TTFFA0B6BE79AD7DEE
+        a                   :CoverTitle ;
+        rdfs:label          "sattapakaraṇābhidhamm"@km-x-twktt .
+}

@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1174 {
+    bda:LGC952DDA8FED7212D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1174  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW1174 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "d8/MW1174.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1174 ;
+        adm:logEntry        bda:LGC952DDA8FED7212D , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE9CE1B59B5A4F030
+        a                   :PublishedEvent ;
+        :eventWhen          "0199/?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5D04E934F37760C9
+        a                   bdr:HollisId ;
+        rdf:value           "014254650" .
+    
+    bdr:ID6C2D6043FFFC75BD
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008389316-4" .
+    
+    bdr:MW1174  a           :Instance ;
+        skos:altLabel       "Paṇ chen thams cad mkhyen pa Blo bzaṅ ye śe dpal bzaṅ poʾi gsuṅ ʾbum bzhugs."@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_blo bzang ye shes/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5D04E934F37760C9 , bdr:ID6C2D6043FFFC75BD ;
+        :biblioNote         "photomechanical reprint of a set of clear impressions from the earlier bkra shis lhun po blocks"@en ;
+        :extentStatement    "4 v." ;
+        :hasTitle           bdr:TT192FF6FEA35C6DE5 , bdr:TT1BECDF3F38C1A345 ;
+        :instanceEvent      bdr:EVE9CE1B59B5A4F030 ;
+        :instanceHasReproduction  bdr:W1174 ;
+        :instanceOf         bdr:WA1174 ;
+        :note               bdr:NTD0B1445BD2B09E2F ;
+        :numberOfVolumes    4 ;
+        :publisherLocation  "[bkra shis lhun po?]"@en ;
+        :publisherName      "[bkras lhun chos sde tshogs pa]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTD0B1445BD2B09E2F
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1791-1794\n\nTashilhunpo reprint.\n4 v.\nCopy: TBRC."@en .
+    
+    bdr:TT192FF6FEA35C6DE5
+        a                   :CoverTitle ;
+        rdfs:label          "Paṇ chen thams cad mkhyen pa Blo bzaṅ ye śe dpal bzaṅ poʾi gsuṅ ʾbum bzhugs."@en-x-mixed .
+    
+    bdr:TT1BECDF3F38C1A345
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang ye shes/"@bo-x-ewts .
+}

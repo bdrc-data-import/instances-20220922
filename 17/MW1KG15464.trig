@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG15464 {
+    bda:LG0431927CACE4A0D7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-10-09T14:32:23.756Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG15464  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG15464 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "17/MW1KG15464.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG15464 ;
+        adm:logEntry        bda:LG0431927CACE4A0D7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID433B60521703AD18
+        a                   bdr:HollisId ;
+        rdf:value           "014256289" .
+    
+    bdr:MW1KG15464  a       :Instance ;
+        skos:altLabel       "sa-skya-pa bibliography"@en ;
+        skos:prefLabel      "dkar chag mthong bas yid 'phrog chos mdzod bye ba'i lde mig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID433B60521703AD18 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "551 p." ;
+        :hasTitle           bdr:TT279B21BED8B7F9B1 , bdr:TT567C208E423AA77B ;
+        :instanceHasReproduction  bdr:W1KG15464 ;
+        :instanceOf         bdr:WA1KG15464 ;
+        :note               bdr:NT2076EF359FD324E5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT2076EF359FD324E5
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT279B21BED8B7F9B1
+        a                   :SpineTitle ;
+        rdfs:label          "sa-skya-pa bibliography"@en .
+    
+    bdr:TT567C208E423AA77B
+        a                   :Title ;
+        rdfs:label          "dkar chag mthong bas yid 'phrog chos mdzod bye ba'i lde mig"@bo-x-ewts .
+}

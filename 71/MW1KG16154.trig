@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16154 {
+    bda:LG605788CC036BEC0F
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-05T15:48:07.444Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG685F6D2E0A82A0F0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-05-05T15:15:01.79Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG16154  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG16154 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "71/MW1KG16154.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16154 ;
+        adm:logEntry        bda:LG605788CC036BEC0F , bda:LG685F6D2E0A82A0F0 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV662D93B09D4AB9E2
+        a                   :PublishedEvent ;
+        :eventWhen          "1998/2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID56A0A0CD9ACFB109
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3701 .N67" .
+    
+    bdr:IDC3C8FA2063DC814C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99950876" .
+    
+    bdr:MW1KG16154  a       :Instance ;
+        skos:altLabel       "norgyun"@en ;
+        skos:prefLabel      "nor rgyun/ (dus deb/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID56A0A0CD9ACFB109 , bdr:IDC3C8FA2063DC814C ;
+        :authorshipStatement  "nor rgyun rtsom sgrig tshogs chung /"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "v. 1-9" ;
+        :hasTitle           bdr:TTA3D4AC423D94C9A4 , bdr:TTAB6567E748885A60 ;
+        :instanceEvent      bdr:EV662D93B09D4AB9E2 ;
+        :instanceHasReproduction  bdr:W1KG16154 ;
+        :instanceOf         bdr:WA1KG16154 ;
+        :note               bdr:NT0A118F8CC6AAA3BA , bdr:NT18C195CDA011491D ;
+        :numberOfVolumes    9 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "nor gling bod kyi rig gzhung gces skyong khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT0A118F8CC6AAA3BA
+        a                   :Note ;
+        :noteText           "tbrc holdings:\n1999-2\n2000-3\n2001-4\n2002-5\n2003-6\n2004-7"@en .
+    
+    bdr:NT18C195CDA011491D
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TTA3D4AC423D94C9A4
+        a                   :OtherTitle ;
+        rdfs:label          "norgyun"@en .
+    
+    bdr:TTAB6567E748885A60
+        a                   :Title ;
+        rdfs:label          "nor rgyun/ (dus deb/)"@bo-x-ewts .
+}

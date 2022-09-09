@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22152 {
+    bda:LG1ACB7166790F32D8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG2EF558D7E0ED3FDA
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-06-11T10:44:08.519Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22152  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22152 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "69/MW22152.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22152 ;
+        adm:logEntry        bda:LG1ACB7166790F32D8 , bda:LG2EF558D7E0ED3FDA , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA27ABBA6EB6E0206
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID9091679D298AAE7D
+        a                   bdr:HollisId ;
+        rdf:value           "014258664" .
+    
+    bdr:MW22152  a          :Instance ;
+        skos:altLabel       "the bdud 'dul version the tibetan gesar epic"@en ;
+        skos:prefLabel      "bdud 'dul/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9091679D298AAE7D ;
+        :biblioNote         "reproduced from the 1980 lhasa tibetan people's publishing house edition"@en ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "1st ed."@en ;
+        :extentStatement    "470 p." ;
+        :hasTitle           bdr:TT07A953EC07A26147 , bdr:TT2F91713C2975FA71 , bdr:TT5FE99CC9143B68F1 ;
+        :instanceEvent      bdr:EVA27ABBA6EB6E0206 ;
+        :instanceHasReproduction  bdr:W22152 ;
+        :instanceOf         bdr:WA22152 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "sherab gyaltsen"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT07A953EC07A26147
+        a                   :Title ;
+        rdfs:label          "bdud 'dul/"@bo-x-ewts .
+    
+    bdr:TT2F91713C2975FA71
+        a                   :CoverTitle ;
+        rdfs:label          "bdud gling ge sar/"@bo-x-ewts .
+    
+    bdr:TT5FE99CC9143B68F1
+        a                   :TitlePageTitle ;
+        rdfs:label          "the bdud 'dul version the tibetan gesar epic"@en .
+}

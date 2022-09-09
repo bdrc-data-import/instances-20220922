@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM2280 {
+    bda:LGAAE45D5EB522CD3D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-04T18:46:48.834Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGB304F1FE5A95E78F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-08-18T10:32:08.112Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, author, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB4FD6414514E9811
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM11768AC0  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-09-18T17:08:04.78Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM2280  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM2280 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "23/MW1NLM2280.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM2280 ;
+        adm:logEntry        bda:LGAAE45D5EB522CD3D , bda:LGB304F1FE5A95E78F , bda:LGB4FD6414514E9811 , bda:LGIM11768AC0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM2280  a       :Instance ;
+        skos:prefLabel      "chos mngon pa mdzod kyi bsdus don chos mngon rgya mtshor 'jug pa'i gru gzings sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "20.5x5.5" ;
+        :extentStatement    "77 ff., 4 ff., 6 ff., 7 ff., 51 ff." ;
+        :hasTitle           bdr:TTB16B8F65F73F3AD7 ;
+        :instanceHasReproduction  bdr:W1NLM2280 ;
+        :instanceOf         bdr:WA1NLM2280 , bdr:WA1NLM251 ;
+        :note               bdr:NTD8A63A129CC5B11C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTD8A63A129CC5B11C
+        a                   :Note ;
+        :noteText           "nlmId: M0060198"@en .
+    
+    bdr:TTB16B8F65F73F3AD7
+        a                   :Title ;
+        rdfs:label          "chos mngon pa mdzod kyi bsdus don chos mngon rgya mtshor 'jug pa'i gru gzings sogs/"@bo-x-ewts .
+}

@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23604 {
+    bda:LG5BC3E18C6372EF12
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23604  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23604 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "57/MW23604.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23604 ;
+        adm:logEntry        bda:LG5BC3E18C6372EF12 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB32A7626ADF87640
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID9921669C71724100
+        a                   bdr:HollisId ;
+        rdf:value           "014258979" .
+    
+    bdr:MW23604  a          :Instance ;
+        skos:altLabel       "sku gsum dgongs 'dus 'don cha : liturgical texts from the sku gsum dgongs 'dus cycle"@en-x-mixed ;
+        skos:prefLabel      "sku gsum dgongs 'dus 'don cha/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9921669C71724100 ;
+        :authorshipStatement  "revealed by 'gro 'dul pad rgyal gling pa (1924-1988)"@bo-x-ewts ;
+        :biblioNote         "reproduced from a set of prints from a digital edition prepared by tulku kunga rinpoche"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "12, 737 p." ;
+        :hasTitle           bdr:TT7ECFB49FAD95BE61 , bdr:TT8BE9BB18BFC1F69D ;
+        :instanceEvent      bdr:EVB32A7626ADF87640 ;
+        :instanceHasReproduction  bdr:W23604 ;
+        :instanceOf         bdr:WA23604 ;
+        :note               bdr:NTBD5AFF11A1F8003F ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "trulku kuenga rinpoche"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTBD5AFF11A1F8003F
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 2263."@en .
+    
+    bdr:TT7ECFB49FAD95BE61
+        a                   :Title ;
+        rdfs:label          "sku gsum dgongs 'dus 'don cha/"@bo-x-ewts .
+    
+    bdr:TT8BE9BB18BFC1F69D
+        a                   :TitlePageTitle ;
+        rdfs:label          "sku gsum dgongs 'dus 'don cha : liturgical texts from the sku gsum dgongs 'dus cycle"@en-x-mixed .
+}

@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21879 {
+    bda:LG6C9BE22A7F13852F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGC2DD28B8395DFECD
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-12-03T10:06:30.977Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21879  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21879 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "e2/MW21879.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21879 ;
+        adm:logEntry        bda:LG6C9BE22A7F13852F , bda:LGC2DD28B8395DFECD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF3BBFE12B4AC5CD0
+        a                   :PublishedEvent ;
+        :eventWhen          "1995"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDCE52860FA16E6CAC
+        a                   bdr:HollisId ;
+        rdf:value           "014258482" .
+    
+    bdr:MW21879  a          :Instance ;
+        skos:prefLabel      "bdag gi re smon/"@bo-x-ewts , "我的心愿"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCE52860FA16E6CAC ;
+        :authorshipStatement  "sde rong tshe ring don 'grub kyis brtsams ; karma rgyal mtshan gyis bod yig tu bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "6, 73, 229 p." ;
+        :hasTitle           bdr:TT7E03E0481CD15552 , bdr:TTA8F53FEAD3740DCB , bdr:TTC6C7B8EC916ABFCF ;
+        :instanceEvent      bdr:EVF3BBFE12B4AC5CD0 ;
+        :instanceHasReproduction  bdr:W21879 ;
+        :instanceOf         bdr:WA21879 ;
+        :note               bdr:NT2EFEEC17BFAFE2BA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "甘孜"@zh-hans ;
+        :publisherName      "甘孜报社印刷厂"@zh-hans ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:NT2EFEEC17BFAFE2BA
+        a                   :Note ;
+        :noteText           "in tibetan and chinese"@en .
+    
+    bdr:TT7E03E0481CD15552
+        a                   :Title ;
+        rdfs:label          "bdag gi re smon/"@bo-x-ewts .
+    
+    bdr:TTA8F53FEAD3740DCB
+        a                   :OtherTitle ;
+        rdfs:label          "我的心愿"@zh-hans .
+    
+    bdr:TTC6C7B8EC916ABFCF
+        a                   :ColophonTitle ;
+        rdfs:label          "wo de xin yuan"@zh-latn-pinyin-x-ndia .
+}

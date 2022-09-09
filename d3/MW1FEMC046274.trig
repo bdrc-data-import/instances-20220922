@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046274 {
+    bda:LG41DBFFC8E97EAC4F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046274"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046274
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046274 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d3/MW1FEMC046274.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046274 ;
+        adm:logEntry        bda:LG41DBFFC8E97EAC4F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB05C87C66A12FC8F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "013-B.04.03.04.III.5" .
+    
+    bdr:MFC562DB5405FDF5DE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "168" .
+    
+    bdr:MW1FEMC046274
+        a                   :Instance ;
+        skos:prefLabel      "សង្ខេបវេស្សន្ដរជាតក (១-២៥)"@km , "saṅkhep vessantara jātaka"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB05C87C66A12FC8F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTA8113AABB5662A84 , bdr:TTE0662B88DFDD5115 ;
+        :instanceHasReproduction  bdr:W1FEMC036274 , bdr:W1FEMC046274 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC562DB5405FDF5DE ;
+        :note               bdr:NTB5A6EC0115C01301 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB5A6EC0115C01301
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTA8113AABB5662A84
+        a                   :Title ;
+        rdfs:label          "saṅkhep vessantara jātaka"@km-x-twktt .
+    
+    bdr:TTE0662B88DFDD5115
+        a                   :Title ;
+        rdfs:label          "សង្ខេបវេស្សន្ដរជាតក (១-២៥)"@km .
+}

@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG02741 {
+    bda:LG74F7E8045AC6AFEC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-08-07T11:18:47.165Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released first time"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG02741  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG02741 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "98/MW00KG02741.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG02741 ;
+        adm:logEntry        bda:LG74F7E8045AC6AFEC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F979A58491DBFBE
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID66AE7C086C5F2E2A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "542104675" .
+    
+    bdr:ID7D5874FF9E968C44
+        a                   bdr:HollisId ;
+        rdf:value           "014254348" .
+    
+    bdr:ID89BC820C503DC31A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786 .T6896 1996" .
+    
+    bdr:ID8A9F84A1A8B7949B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98902330" .
+    
+    bdr:MW00KG02741  a      :Instance ;
+        skos:prefLabel      "mgar rtse tsho bco brgyad kyi lo rgyus shel dkar me long /"@bo-x-ewts , "gua shi ze bu luo shi"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID66AE7C086C5F2E2A , bdr:ID7D5874FF9E968C44 , bdr:ID89BC820C503DC31A , bdr:ID8A9F84A1A8B7949B ;
+        :authorshipStatement  "tshul blo/ rnam thar rgyal/ blo bzang don grub bcas kyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "10, 1, 7, 387 p." ;
+        :hasTitle           bdr:TT794C8214EDDCBF24 , bdr:TT7B7BB3144A527AA2 ;
+        :instanceEvent      bdr:EV2F979A58491DBFBE ;
+        :instanceHasReproduction  bdr:W00KG02741 ;
+        :instanceOf         bdr:WA00KG02741 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang gis bskrun"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT794C8214EDDCBF24
+        a                   :Title ;
+        rdfs:label          "mgar rtse tsho bco brgyad kyi lo rgyus shel dkar me long /"@bo-x-ewts .
+    
+    bdr:TT7B7BB3144A527AA2
+        a                   :ColophonTitle ;
+        rdfs:label          "gua shi ze bu luo shi"@zh-latn-pinyin-x-ndia .
+}

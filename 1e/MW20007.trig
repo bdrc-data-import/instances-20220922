@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20007 {
+    bda:LG36507304D923C6E0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6BC8FC9281F1FADF
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-09-21T14:29:50.916Z"^^xsd:dateTime ;
+        adm:logMessage      "changed onhold to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20007  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20007 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "1e/MW20007.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20007 ;
+        adm:logEntry        bda:LG36507304D923C6E0 , bda:LG6BC8FC9281F1FADF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C606F42E4B0A146
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8599914A584C3EB8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754200848X" .
+    
+    bdr:IDBAF3A16E58B8A80A
+        a                   bdr:HollisId ;
+        rdf:value           "014257996" .
+    
+    bdr:MW20007  a          :Instance ;
+        skos:altLabel       "社会语言学概论"@zh-hans ;
+        skos:prefLabel      "spyi tshogs skad brda rig pa'i spyi don/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8599914A584C3EB8 , bdr:IDBAF3A16E58B8A80A ;
+        :authorshipStatement  "don grub tshe ring gis rtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 469 p." ;
+        :hasTitle           bdr:TT0E97C48AB5BAB49A , bdr:TTCD24650AEFD89625 , bdr:TTDB1F0B22CEC3B83B ;
+        :instanceEvent      bdr:EV1C606F42E4B0A146 ;
+        :instanceHasReproduction  bdr:W20007 ;
+        :instanceOf         bdr:WA1KG25356 , bdr:WA20007 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0E97C48AB5BAB49A
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "she hui yu yan xue gai lun"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTCD24650AEFD89625
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "社会语言学概论"@zh-hans .
+    
+    bdr:TTDB1F0B22CEC3B83B
+        a                   :Title ;
+        rdfs:label          "spyi tshogs skad brda rig pa'i spyi don/"@bo-x-ewts .
+}

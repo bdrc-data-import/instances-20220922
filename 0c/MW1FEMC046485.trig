@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046485 {
+    bda:LG243C109A23068D7F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046485"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046485
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046485 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0c/MW1FEMC046485.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046485 ;
+        adm:logEntry        bda:LG243C109A23068D7F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE0BF0555A00C755B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "047-B.04.03.04.VII" .
+    
+    bdr:MF7BC3021D5FD91C94
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "48" .
+    
+    bdr:MW1FEMC046485
+        a                   :Instance ;
+        skos:prefLabel      "ភិក្ខុព្របាដិមោក្ខ (១-៥០)"@pi-khmr , "bhikku bra pātimokkh"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE0BF0555A00C755B ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT246B4D198F260C9E , bdr:TTDBA2C641A2AB84F3 ;
+        :instanceHasReproduction  bdr:W1FEMC036485 , bdr:W1FEMC046485 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF7BC3021D5FD91C94 ;
+        :note               bdr:NT4FB11C065D69A1CC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT4FB11C065D69A1CC
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT246B4D198F260C9E
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុព្របាដិមោក្ខ (១-៥០)"@pi-khmr .
+    
+    bdr:TTDBA2C641A2AB84F3
+        a                   :Title ;
+        rdfs:label          "bhikku bra pātimokkh"@pi-x-twktt .
+}

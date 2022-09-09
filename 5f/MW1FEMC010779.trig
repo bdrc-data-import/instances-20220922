@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010779 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010779
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010779 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "5f/MW1FEMC010779.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010779 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE9F9578AEC3271A5
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "015-A.03.08.02.III.4" .
+    
+    bdr:MF1C812179C5F01EA7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "51" ;
+        :microfilmStrip     "131" .
+    
+    bdr:MW1FEMC010779
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៧គម្ពីរ"@km , "abhidhamm 7 gambīr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE9F9578AEC3271A5 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT4A65F57C8C049AB8 , bdr:TTA6667586DC88BFC5 , bdr:TTB695E0CAA57CF778 , bdr:TTD8978784B92D861F ;
+        :instanceHasReproduction  bdr:W1FEMC010779 ;
+        :instanceOf         bdr:WA1FEMC010779 , bdr:WA1FEMC040001 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1C812179C5F01EA7 ;
+        :note               bdr:NT794999EFA34D6450 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT794999EFA34D6450
+        a                   :Note ;
+        :contentLocationStatement  "pg. 207" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT4A65F57C8C049AB8
+        a                   :Title ;
+        rdfs:label          "abhidhamm 7 gambīr"@km-x-twktt .
+    
+    bdr:TTA6667586DC88BFC5
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មសង្គណី"@km .
+    
+    bdr:TTB695E0CAA57CF778
+        a                   :CoverTitle ;
+        rdfs:label          "abhidhamm saṅgaṇī"@km-x-twktt .
+    
+    bdr:TTD8978784B92D861F
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៧គម្ពីរ"@km .
+}

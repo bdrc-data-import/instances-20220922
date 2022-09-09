@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21025 {
+    bda:LG2B397509BFA6478B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8597E833CF10F28E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-10T09:31:13.053Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGD86550780C7B03ED
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-05-18T11:43:53.196Z"^^xsd:dateTime ;
+        adm:logMessage      "completed"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21025  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21025 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "7a/MW21025.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21025 ;
+        adm:logEntry        bda:LG2B397509BFA6478B , bda:LG8597E833CF10F28E , bda:LGD86550780C7B03ED , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2393D0535C768488
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1884562F88D5E8CA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "80900287" .
+    
+    bdr:ID233C52551A98477E
+        a                   bdr:HollisId ;
+        rdf:value           "014258288" .
+    
+    bdr:ID7EE9837870D1601A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "Z7861.T55 T46" .
+    
+    bdr:MW21025  a          :Instance ;
+        skos:altLabel       "a list of teachings received with transmission lineages of a lama of the rdo-dmar tradition"@en-x-mixed ;
+        skos:prefLabel      "thob yig zin bris su bkod pa yid bzhin nor bu'i gter mdzod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1884562F88D5E8CA , bdr:ID233C52551A98477E , bdr:ID7EE9837870D1601A ;
+        :biblioNote         "reproduced from a manuscript from the libgrary of the late sno-ra bla ma"@en ;
+        :extentStatement    "126 columns" ;
+        :hasTitle           bdr:TT63E64AB81A804342 , bdr:TT9CA4258CB6368D87 ;
+        :instanceEvent      bdr:EV2393D0535C768488 ;
+        :instanceHasReproduction  bdr:W21025 ;
+        :instanceOf         bdr:WA21025 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "chophel legdan"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT63E64AB81A804342
+        a                   :Title ;
+        rdfs:label          "thob yig zin bris su bkod pa yid bzhin nor bu'i gter mdzod/"@bo-x-ewts .
+    
+    bdr:TT9CA4258CB6368D87
+        a                   :Subtitle ;
+        rdfs:label          "a list of teachings received with transmission lineages of a lama of the rdo-dmar tradition"@en-x-mixed .
+}

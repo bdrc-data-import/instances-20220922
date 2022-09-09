@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09671 {
+    bda:LG5E2645569F64E150
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-05-30T16:32:58.375Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released first time"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCC13A375B091BB81
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-12-20T14:47:32.427Z"^^xsd:dateTime ;
+        adm:logMessage      "changed author and added chinese lang title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09671  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09671 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0b/MW00KG09671.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09671 ;
+        adm:logEntry        bda:LG5E2645569F64E150 , bda:LGCC13A375B091BB81 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4F561C7B8DB06D78
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5F88090EAA4C78D8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223017333" .
+    
+    bdr:IDDC555A5DD302748C
+        a                   bdr:HollisId ;
+        rdf:value           "014254536" .
+    
+    bdr:MW00KG09671  a      :Instance ;
+        skos:altLabel       "直孔 巴琼仁波且详传"@zh-hans ;
+        skos:prefLabel      "'bri gung grub dbang dpa' chung rin po che'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5F88090EAA4C78D8 , bdr:IDDC555A5DD302748C ;
+        :authorshipStatement  "dkon mchog 'phel rgyas kyis brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "263 p." ;
+        :hasTitle           bdr:TT1B69BE589325E317 , bdr:TT55AAA609B288AA33 , bdr:TT603DFDEE084E2175 , bdr:TTA926C421D8BAB8EF ;
+        :instanceEvent      bdr:EV4F561C7B8DB06D78 ;
+        :instanceHasReproduction  bdr:W00KG09671 ;
+        :instanceOf         bdr:WA00KG09671 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1B69BE589325E317
+        a                   :TitlePageTitle ;
+        rdfs:label          "rdo rje 'chang dkon mchog 'phrin las 'od zer gyi rtogs pa ji bzhin brjod pa'i gtam thar pa dang thams cad mkhyen pa'i lam ston thub bstan mdzes pa'i rgyan/"@bo-x-ewts .
+    
+    bdr:TT55AAA609B288AA33
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zhi kong ba qiong ren bo qie xiang zhuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT603DFDEE084E2175
+        a                   :Title ;
+        rdfs:label          "'bri gung grub dbang dpa' chung rin po che'i rnam thar/"@bo-x-ewts .
+    
+    bdr:TTA926C421D8BAB8EF
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "直孔 巴琼仁波且详传"@zh-hans .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043727 {
+    bda:LG3F01D99D3B6C8346
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043727"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043727
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043727 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "97/MW1FEMC043727.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043727 ;
+        adm:logEntry        bda:LG3F01D99D3B6C8346 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID248B98779B40FCE2
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "018-B.11.05.03.III.1" .
+    
+    bdr:MFCF99BAF95A5B70EA
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "187" .
+    
+    bdr:MW1FEMC043727
+        a                   :Instance ;
+        skos:prefLabel      "វិនិច្ឆេយវិសុទ្ធិមគ្គ"@km , "Vinicchey Visuddhi magg"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID248B98779B40FCE2 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2, 3, 14, 26" ;
+        :hasTitle           bdr:TT1C18BFB114CF3B3C , bdr:TT5777365A7ABE42AA ;
+        :instanceHasReproduction  bdr:W1FEMC033727 , bdr:W1FEMC043727 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFCF99BAF95A5B70EA ;
+        :note               bdr:NTF1C9ABAB8FB5CCD7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF1C9ABAB8FB5CCD7
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1C18BFB114CF3B3C
+        a                   :Title ;
+        rdfs:label          "Vinicchey Visuddhi magg"@km-x-twktt .
+    
+    bdr:TT5777365A7ABE42AA
+        a                   :Title ;
+        rdfs:label          "វិនិច្ឆេយវិសុទ្ធិមគ្គ"@km .
+}

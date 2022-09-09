@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22071 {
+    bda:LG4230948528067547
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-06-27T10:41:00.609Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGAD9FB2BF932DBCBD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22071  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22071 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "71/MW22071.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22071 ;
+        adm:logEntry        bda:LG4230948528067547 , bda:LGAD9FB2BF932DBCBD , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5DE7457D810B1ADD
+        a                   :PublishedEvent ;
+        :eventWhen          "1985,1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0C7F15838BFAE1B3
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542006762" .
+    
+    bdr:ID1F13204C382AB707
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 R56 1997" .
+    
+    bdr:ID8E5C5FDB79B0193F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99940071" .
+    
+    bdr:IDF9E309A62611A959
+        a                   bdr:HollisId ;
+        rdf:value           "014258602" .
+    
+    bdr:MW22071  a          :Instance ;
+        skos:altLabel       "格萨尔传奇--日努"@zh-hans ;
+        skos:prefLabel      "ri nub/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0C7F15838BFAE1B3 , bdr:ID1F13204C382AB707 , bdr:ID8E5C5FDB79B0193F , bdr:IDF9E309A62611A959 ;
+        :authorshipStatement  "mtsho sngon zhing chen dmangs krhod rig rtsal zhig 'jug tshogs pas 'tshol bsdu byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 176 p." ;
+        :hasTitle           bdr:TT3681B4993B7ADFDE , bdr:TT44C03586F9C18602 , bdr:TTE54ECC65F29C0E5A , bdr:TTF2A4433FAFEC844F ;
+        :instanceEvent      bdr:EV5DE7457D810B1ADD ;
+        :instanceHasReproduction  bdr:W22071 ;
+        :instanceOf         bdr:WA22071 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT3681B4993B7ADFDE
+        a                   :Title ;
+        rdfs:label          "ri nub/"@bo-x-ewts .
+    
+    bdr:TT44C03586F9C18602
+        a                   :ColophonTitle ;
+        rdfs:label          "ge sa er chuan qi --ri nu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTE54ECC65F29C0E5A
+        a                   :ColophonTitle ;
+        rdfs:label          "格萨尔传奇--日努"@zh-hans .
+    
+    bdr:TTF2A4433FAFEC844F
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dzam gling ge sar rgyal po'i sgrung ri nub/"@bo-x-ewts .
+}

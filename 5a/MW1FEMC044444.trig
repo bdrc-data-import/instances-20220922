@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044444 {
+    bda:LGB2C73AA068D22C8D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044444"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044444
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044444 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5a/MW1FEMC044444.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044444 ;
+        adm:logEntry        bda:LGB2C73AA068D22C8D , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDDDAB0DD1EF094530
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "077-B.09.12.01.III.3" .
+    
+    bdr:MF7D9FD40916BE24E8
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "166" .
+    
+    bdr:MW1FEMC044444
+        a                   :Instance ;
+        skos:prefLabel      "អធិករណសមថ៧ឈ្មោះភិក្ខុទុំលា្យព្រះសាស្នារ"@km , "adhikaraṇasamatha 7 jhmoḥ bhikkhuduṃlāy braḥ sārnār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDDAB0DD1EF094530 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT5BD4CBE434E7B583 , bdr:TT8960EF0105421D29 ;
+        :instanceHasReproduction  bdr:W1FEMC034444 , bdr:W1FEMC044444 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF7D9FD40916BE24E8 ;
+        :note               bdr:NTA5B963492876F98E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA5B963492876F98E
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5BD4CBE434E7B583
+        a                   :Title ;
+        rdfs:label          "អធិករណសមថ៧ឈ្មោះភិក្ខុទុំលា្យព្រះសាស្នារ"@km .
+    
+    bdr:TT8960EF0105421D29
+        a                   :Title ;
+        rdfs:label          "adhikaraṇasamatha 7 jhmoḥ bhikkhuduṃlāy braḥ sārnār"@km-x-twktt .
+}

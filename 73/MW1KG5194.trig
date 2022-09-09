@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG5194 {
+    bda:LGA0CF5F26B9D18B4C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-05-24T16:56:13.632Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE574A808FDE62318
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-22T14:33:14.583Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG5194  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG5194 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "73/MW1KG5194.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5194 ;
+        adm:logEntry        bda:LGA0CF5F26B9D18B4C , bda:LGE574A808FDE62318 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC53DCD41F8A32916
+        a                   bdr:HollisId ;
+        rdf:value           "014257088" .
+    
+    bdr:MW1KG5194  a        :Instance ;
+        skos:prefLabel      "dar mo bka' rgya ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC53DCD41F8A32916 ;
+        :biblioNote         "impressions from the woodblocks carved at labrang tashi khyil, in 1784"@en ;
+        :extentStatement    "346 ff." ;
+        :hasSourcePrintery  bdr:G1PD129183 ;
+        :hasTitle           bdr:TT3B5853BDF256C2E8 , bdr:TT8986DA7A13723F55 ;
+        :instanceHasReproduction  bdr:W1KG5194 ;
+        :instanceOf         bdr:WA1GS2162 , bdr:WA1KG5194 ;
+        :note               bdr:NT62B04B6E6E466E9E , bdr:NTCFA20EDB3ADE8F3E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT62B04B6E6E466E9E
+        a                   :Note ;
+        :noteSource         bdr:MW1GS2162 ;
+        :noteText           "another edition"@en .
+    
+    bdr:NTCFA20EDB3ADE8F3E
+        a                   :Note ;
+        :noteSource         bdr:MW30139 ;
+        :noteText           "another edition"@en .
+    
+    bdr:TT3B5853BDF256C2E8
+        a                   :Title ;
+        rdfs:label          "dar mo bka' rgya ma/"@bo-x-ewts .
+    
+    bdr:TT8986DA7A13723F55
+        a                   :TitlePageTitle ;
+        rdfs:label          "man ngag zab mo kun gyi snying khu bsdus pa dar mo sman rams pa'i gdams ngag bka' rgya ma/"@bo-x-ewts .
+}

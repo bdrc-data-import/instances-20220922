@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1789 {
+    bda:LG2DC998EFC7A08C88
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-03-24T12:36:41.16Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6EDB29B465C50E6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-12-03T14:56:21.491Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1789  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1789 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "71/MW1KG1789.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1789 ;
+        adm:logEntry        bda:LG2DC998EFC7A08C88 , bda:LG6EDB29B465C50E6C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD80EE9D8AB05DB7A
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID34B2515151271048
+        a                   bdr:HollisId ;
+        rdf:value           "014256543" .
+    
+    bdr:IDCB3FAEF7DA083C88
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9957761" .
+    
+    bdr:MW1KG1789  a        :Instance ;
+        skos:prefLabel      "blo sbyong dang zhal gdams nyer mkho phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID34B2515151271048 , bdr:IDCB3FAEF7DA083C88 ;
+        :biblioNote         "printed from computerized input"@en ;
+        :extentStatement    "360 p." ;
+        :hasTitle           bdr:TTB3BF65CDE9BA6AB0 ;
+        :instanceEvent      bdr:EVD80EE9D8AB05DB7A ;
+        :instanceHasReproduction  bdr:W1KG1789 ;
+        :instanceOf         bdr:WA1KG1789 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "xiang gang"@en ;
+        :publisherName      "xiang gang xin zhi chu ban shi"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTB3BF65CDE9BA6AB0
+        a                   :Title ;
+        rdfs:label          "blo sbyong dang zhal gdams nyer mkho phyogs bsgrigs/"@bo-x-ewts .
+}

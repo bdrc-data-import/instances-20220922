@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG4781 {
+    bda:LGE6BA77570FC3FC49
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-04-13T16:57:49.288Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG4781  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG4781 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "11/MW1KG4781.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG4781 ;
+        adm:logEntry        bda:LGE6BA77570FC3FC49 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0DB3168E40CCE586
+        a                   :PublishedEvent ;
+        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID064D60AA62B7F0A9
+        a                   bdr:HollisId ;
+        rdf:value           "014257001" .
+    
+    bdr:ID94F2D737BE6EBC8D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7576 .Y94 1993" .
+    
+    bdr:IDC8806517997C9AC4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "96906161" .
+    
+    bdr:MW1KG4781  a        :Instance ;
+        skos:prefLabel      "grub mtha' khag gi chos 'byung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID064D60AA62B7F0A9 , bdr:ID94F2D737BE6EBC8D , bdr:IDC8806517997C9AC4 ;
+        :authorshipStatement  "rtsom pa po/ dge bshes ye shes dbang phyug"@bo-x-ewts ;
+        :biblioNote         "photo offset printed text"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "7, 423 p." ;
+        :hasTitle           bdr:TT609C0C7322A0AFDE ;
+        :instanceEvent      bdr:EV0DB3168E40CCE586 ;
+        :instanceHasReproduction  bdr:W1KG4781 ;
+        :instanceOf         bdr:WA1KG4781 ;
+        :note               bdr:NT0BAD82190BF1E4B0 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "bylakuppe, karnataka"@en ;
+        :publisherName      "ser smad gsung rab 'phrul spar khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT0BAD82190BF1E4B0
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 5397"@en .
+    
+    bdr:TT609C0C7322A0AFDE
+        a                   :Title ;
+        rdfs:label          "grub mtha' khag gi chos 'byung /"@bo-x-ewts .
+}

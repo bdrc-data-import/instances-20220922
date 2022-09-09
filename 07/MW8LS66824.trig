@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8LS66824 {
+    bda:LG076EED89AB5BDC36
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-06T09:50:32.967Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG1C87790B326FF1A2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-10-10T09:38:00.877Z"^^xsd:dateTime ;
+        adm:logMessage      "new work record created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:MW8LS66824  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW8LS66824 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "07/MW8LS66824.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8LS66824 ;
+        adm:logEntry        bda:LG076EED89AB5BDC36 , bda:LG1C87790B326FF1A2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCC4E00C6ED83860B
+        a                   :PublishedEvent ;
+        :eventWhen          "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID25AEF23D7F7D8B76
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223033251" .
+    
+    bdr:MW8LS66824  a       :Instance ;
+        skos:prefLabel      "'bri lugs gso rig gi man ngag gsal ba'i spyi bshad 'gro phan snying nor phyogs bsgrigs/ deb dang po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID25AEF23D7F7D8B76 ;
+        :authorshipStatement  "chos rje bzang pos bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "153 p." ;
+        :hasTitle           bdr:TT59488C9FAFCBBA8A , bdr:TTA6C31465F698FF3B ;
+        :instanceEvent      bdr:EVCC4E00C6ED83860B ;
+        :instanceHasReproduction  bdr:W8LS66824 ;
+        :instanceOf         bdr:WA8LS66824 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljong mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS8LS66824 .
+    
+    bdr:TT59488C9FAFCBBA8A
+        a                   :Title ;
+        rdfs:label          "'bri lugs gso rig gi man ngag gsal ba'i spyi bshad 'gro phan snying nor phyogs bsgrigs/ deb dang po/"@bo-x-ewts .
+    
+    bdr:TTA6C31465F698FF3B
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod lugs gso rig lus gso dang bde thang /'bri lugs gso rig gi man ngag gsal ba'i spyi bshad 'gro phan snying nor phyogs bsgrigs/ deb dang po/"@bo-x-ewts .
+}

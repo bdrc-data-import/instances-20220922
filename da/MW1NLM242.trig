@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM242 {
+    bda:LG3CA28BA8652D7CB4
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-08-13T16:05:42.505Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio title, topic, cat info and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG93AFF7FD1F63CAF3
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-29T17:06:15.848Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBFCC8B201AD558EB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM242  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM242 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "da/MW1NLM242.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM242 ;
+        adm:logEntry        bda:LG3CA28BA8652D7CB4 , bda:LG93AFF7FD1F63CAF3 , bda:LGBFCC8B201AD558EB , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM242  a        :Instance ;
+        skos:prefLabel      "bka' gdams chos 'byung gsal ba'i sgron me/"@bo-x-ewts ;
+        :dimensionsStatement  "53.5x9" ;
+        :extentStatement    "487 ff." ;
+        :hasTitle           bdr:TT957BF797703CF6A4 , bdr:TTC66B816DD2AF0EAA ;
+        :instanceHasReproduction  bdr:W1NLM242 ;
+        :instanceOf         bdr:WA15964 , bdr:WA1NLM242 ;
+        :note               bdr:NT9058057C8600B86B , bdr:NT97C2B218B1804996 , bdr:NTC7A155B39FCCF77A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT9058057C8600B86B
+        a                   :Note ;
+        :noteText           "coverType: wooden cover"@en .
+    
+    bdr:NT97C2B218B1804996
+        a                   :Note ;
+        :noteText           "nlmId: M0058155"@en .
+    
+    bdr:NTC7A155B39FCCF77A
+        a                   :Note ;
+        :noteText           "missingPages: M0058155-001 [Missing pages from 13A-13B, 26A-26B, 28A-28B] Image 26-27, 52-53, 56-57"@en .
+    
+    bdr:TT957BF797703CF6A4
+        a                   :Title ;
+        rdfs:label          "bka' gdams chos 'byung gsal ba'i sgron me/"@bo-x-ewts .
+    
+    bdr:TTC66B816DD2AF0EAA
+        a                   :TitlePageTitle ;
+        rdfs:label          "bka' gdams kyi rnam par thar pa bka' gdams chos 'byung gsal ba'i sgron me/"@bo-x-ewts .
+}

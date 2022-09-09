@@ -1,0 +1,112 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17054 {
+    bda:LGA012A63DACE38352
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-03-26T15:24:30.005Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17054  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17054 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "d7/MW1KG17054.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17054 ;
+        adm:logEntry        bda:LGA012A63DACE38352 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR2F100AABEBF6FCD7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG17076 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVCDA91C278D548F43
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID133257816A6283FE
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7536660197,9787536660199" .
+    
+    bdr:ID197848B40D572F9F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "ND2849.N437 X53 2003 CHINA" .
+    
+    bdr:ID56156234981EB532
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "7536660197" .
+    
+    bdr:IDE5D98557AF2FDC3C
+        a                   bdr:HollisId ;
+        rdf:value           "014256441" .
+    
+    bdr:MW1KG17054  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "zhang zhung gi ldebs ris/"@bo-x-ewts , "xiang xiong murals"@en , "象雄壁画"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID133257816A6283FE , bdr:ID197848B40D572F9F , bdr:ID56156234981EB532 , bdr:IDE5D98557AF2FDC3C ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR2F100AABEBF6FCD7 ;
+        :editionStatement   "di 1 ban."@zh-latn-pinyin ;
+        :extentStatement    "4,146 p." ;
+        :hasTitle           bdr:TT5036018EBA4A671C , bdr:TT8CA1FC6CFF9005B9 , bdr:TTC5215637CB307A64 , bdr:TTFDA31C91D8DA3552 ;
+        :illustrations      "chiefly col. illustrations" ;
+        :instanceEvent      bdr:EVCDA91C278D548F43 ;
+        :instanceHasReproduction  bdr:W1KG17054 ;
+        :instanceOf         bdr:WA1KG17054 ;
+        :note               bdr:NT46AB747F9FC5D48B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "chongqing shi"@en ;
+        :publisherName      "chongqing publishing house"@en ;
+        :script             bdr:ScriptHani ;
+        :serialInstanceOf   bdr:WAS1KG17054 ;
+        :seriesNumber       "[not available]" .
+    
+    bdr:NT46AB747F9FC5D48B
+        a                   :Note ;
+        :noteText           "in chinese"@en .
+    
+    bdr:TT5036018EBA4A671C
+        a                   :OtherTitle ;
+        rdfs:label          "xiang xiong murals"@en .
+    
+    bdr:TT8CA1FC6CFF9005B9
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xiang xiong bi hua"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTC5215637CB307A64
+        a                   :Title ;
+        rdfs:label          "zhang zhung gi ldebs ris/"@bo-x-ewts .
+    
+    bdr:TTFDA31C91D8DA3552
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "象雄壁画"@zh-hans .
+}

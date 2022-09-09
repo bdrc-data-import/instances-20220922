@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17200 {
+    bda:LGD7E5AB3A64685572
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-07-08T11:46:03.59Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17200  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17200 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "3e/MW1KG17200.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17200 ;
+        adm:logEntry        bda:LGD7E5AB3A64685572 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21EEF5EBF88050AF
+        a                   :PublishedEvent ;
+        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDEE9040B1585C24E8
+        a                   bdr:HollisId ;
+        rdf:value           "014256469" .
+    
+    bdr:MW1KG17200  a       :Instance ;
+        skos:prefLabel      "lam 'bras brgyud 'debs dang bla mchod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEE9040B1585C24E8 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "78 p." ;
+        :hasTitle           bdr:TT94DFA1FBDE0F7CFA , bdr:TTA2432A98B64001AF ;
+        :instanceEvent      bdr:EV21EEF5EBF88050AF ;
+        :instanceHasReproduction  bdr:W1KG17200 ;
+        :instanceOf         bdr:WA1KG17200 ;
+        :note               bdr:NTA457976776644EA3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "kathmandu"@en ;
+        :publisherName      "sa skya rgyal yongs gsung rab slob gnyer khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTA457976776644EA3
+        a                   :Note ;
+        :noteText           "scanned made available through the kindly lending the books by guru lama"@en .
+    
+    bdr:TT94DFA1FBDE0F7CFA
+        a                   :Title ;
+        rdfs:label          "lam 'bras brgyud 'debs dang bla mchod/"@bo-x-ewts .
+    
+    bdr:TTA2432A98B64001AF
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsung ngag rin po che lam 'bras bu dang bcas pa'i bla ma brgyud pa la gsol ba 'debs pa nyung gsal/"@bo-x-ewts .
+}

@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031376 {
+    bda:LG2E06522BCE801B67
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031376"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031376
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031376 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "fb/MW1FEMC031376.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031376 ;
+        adm:logEntry        bda:LG2E06522BCE801B67 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF9504616C5281762
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "019-PP.02.01.01.VII" .
+    
+    bdr:MF66BA4D9B76743F5C
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "8" ;
+        :microfilmStrip     "31" .
+    
+    bdr:MW1FEMC031376
+        a                   :Instance ;
+        skos:prefLabel      "លីនាត្ថអភិធម្មាវតារ"@pi-khmr , "lināttha-abhidhammāvatāra"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF9504616C5281762 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "4" ;
+        :hasTitle           bdr:TT60ADD6F99F38F8DB , bdr:TTA73864F09FA74552 , bdr:TTA993530FE895A375 , bdr:TTC2D0E8BA0075EA92 ;
+        :instanceHasReproduction  bdr:W1FEMC010190 , bdr:W1FEMC031376 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF66BA4D9B76743F5C ;
+        :note               bdr:NT5F64B743AE1CA1FF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT5F64B743AE1CA1FF
+        a                   :Note ;
+        :contentLocationStatement  "pg. 91" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT60ADD6F99F38F8DB
+        a                   :Title ;
+        rdfs:label          "lināttha-abhidhammāvatāra"@pi-x-twktt ;
+        :femcConversionOf   bdr:TTC2D0E8BA0075EA92 .
+    
+    bdr:TTA73864F09FA74552
+        a                   :CoverTitle ;
+        rdfs:label          "លិនាថអភិធម្មតារ"@pi-khmr .
+    
+    bdr:TTA993530FE895A375
+        a                   :Title ;
+        rdfs:label          "លីនាត្ថអភិធម្មាវតារ"@pi-khmr ;
+        :femcConversionOf   bdr:TTA73864F09FA74552 .
+    
+    bdr:TTC2D0E8BA0075EA92
+        a                   :CoverTitle ;
+        rdfs:label          "linātha abhidhammavatāra"@pi-x-twktt .
+}

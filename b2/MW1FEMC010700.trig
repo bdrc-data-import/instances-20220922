@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010700 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010700
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010700 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b2/MW1FEMC010700.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010700 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID03F48271F4D37B76
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "010-A.03.07.01.III.1" .
+    
+    bdr:MF7AD7F403A6424E3B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "46" ;
+        :microfilmStrip     "113" .
+    
+    bdr:MW1FEMC010700
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID03F48271F4D37B76 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT2837F8C6F0147320 , bdr:TT7F4C2E891E49A5BB , bdr:TT7F6A0F619300D8EA , bdr:TTF1EDD895D56ACA73 ;
+        :instanceHasReproduction  bdr:W1FEMC010700 ;
+        :instanceOf         bdr:WA1FEMC010059 , bdr:WA1FEMC010700 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF7AD7F403A6424E3B ;
+        :note               bdr:NT2D8DA0969ED1AFC1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2D8DA0969ED1AFC1
+        a                   :Note ;
+        :contentLocationStatement  "pg. 192" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT2837F8C6F0147320
+        a                   :CoverTitle ;
+        rdfs:label          "គ្រែរ ៥ (ញ-ដេ)"@km .
+    
+    bdr:TT7F4C2E891E49A5BB
+        a                   :CoverTitle ;
+        rdfs:label          "grèr 5"@km-x-twktt .
+    
+    bdr:TT7F6A0F619300D8EA
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៥"@km ;
+        :femcConversionOf   bdr:TT2837F8C6F0147320 .
+    
+    bdr:TTF1EDD895D56ACA73
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 5"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7F4C2E891E49A5BB .
+}

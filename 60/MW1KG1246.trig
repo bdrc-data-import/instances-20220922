@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1246 {
+    bda:LG1A79A2F4580B9A61
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-12-17T12:18:22.968Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA49C2C78C79B42E8
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-27T14:10:07.317Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1246  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1246 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "60/MW1KG1246.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1246 ;
+        adm:logEntry        bda:LG1A79A2F4580B9A61 , bda:LGA49C2C78C79B42E8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV72004A2E2B4C0E10
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4B44A95E0E39C055
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ976.R447 O74 1985" .
+    
+    bdr:ID963B8F9732B4DFBD
+        a                   bdr:HollisId ;
+        rdf:value           "014255881" .
+    
+    bdr:IDD07C1D8BB4325564
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903335" .
+    
+    bdr:MW1KG1246  a        :Instance ;
+        skos:altLabel       "a brief autobiography of the 17th century dolpo lama, o rgyan bstan 'dzin"@en ;
+        skos:prefLabel      "sprang rgan o rgyan bstan 'dzin pa'i rnam thar bsdus pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4B44A95E0E39C055 , bdr:ID963B8F9732B4DFBD , bdr:IDD07C1D8BB4325564 ;
+        :biblioNote         "reproduced from a manuscript from the library of trulku tsewang"@en ;
+        :extentStatement    "95 ff., (182 p.)" ;
+        :hasTitle           bdr:TT7FF73D585F9FE91E , bdr:TTC08E24D1A8304EA5 , bdr:TTC11FBB5B8FD7B1F5 ;
+        :instanceEvent      bdr:EV72004A2E2B4C0E10 ;
+        :instanceHasReproduction  bdr:W1KG1246 ;
+        :instanceOf         bdr:WA1KG1246 ;
+        :note               bdr:NT8A9D83C8B1510286 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dalhousie, h.p."@en ;
+        :publisherName      "damchoe sangpo"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT8A9D83C8B1510286
+        a                   :Note ;
+        :noteText           "folio 9 is missing, folio 62 might not missing, content seems connected with the next page"@en .
+    
+    bdr:TT7FF73D585F9FE91E
+        a                   :OtherTitle ;
+        rdfs:label          "a brief autobiography of the 17th century dolpo lama, o rgyan bstan 'dzin"@en .
+    
+    bdr:TTC08E24D1A8304EA5
+        a                   :Title ;
+        rdfs:label          "sprang rgan o rgyan bstan 'dzin pa'i rnam thar bsdus pa/"@bo-x-ewts .
+    
+    bdr:TTC11FBB5B8FD7B1F5
+        a                   :CoverTitle ;
+        rdfs:label          "sprang rgan o rgyan brtan 'dzin pas rnam thar bsdus pa/"@bo-x-ewts .
+}

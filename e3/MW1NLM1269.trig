@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1269 {
+    bda:LG24568C9D4A10E7C6
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG9707B9B826E6CA0D
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGE59C9CF4CB9256AC
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-01T12:20:44.006Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1269  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1269 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e3/MW1NLM1269.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1269 ;
+        adm:logEntry        bda:LG24568C9D4A10E7C6 , bda:LG9707B9B826E6CA0D , bda:LGE59C9CF4CB9256AC , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1269  a       :Instance ;
+        skos:prefLabel      "lam rim chen mo/"@bo-x-ewts ;
+        :dimensionsStatement  "49x6.5" ;
+        :extentStatement    "519 ff. (marked as pa)" ;
+        :hasTitle           bdr:TT4ABD8E74A4C173B8 , bdr:TTC4936B8135EFC337 ;
+        :instanceHasReproduction  bdr:W1NLM1269 ;
+        :instanceOf         bdr:WA1NLM1269 , bdr:WA466 ;
+        :note               bdr:NT149C194F2199DB64 , bdr:NT9BE7F54F0AC1FB47 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT149C194F2199DB64
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT9BE7F54F0AC1FB47
+        a                   :Note ;
+        :noteText           "nlmId: M0059187"@en .
+    
+    bdr:TT4ABD8E74A4C173B8
+        a                   :Title ;
+        rdfs:label          "lam rim chen mo/"@bo-x-ewts .
+    
+    bdr:TTC4936B8135EFC337
+        a                   :TitlePageTitle ;
+        rdfs:label          "mnyam med tsong kha pa chen pos mdzad pa'i byang chub lam rim che ba/"@bo-x-ewts .
+}

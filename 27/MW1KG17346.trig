@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17346 {
+    bda:LG0DB7DF3B5462C56C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-05-05T16:25:33.343Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17346  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17346 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "27/MW1KG17346.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17346 ;
+        adm:logEntry        bda:LG0DB7DF3B5462C56C , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1694E4F9F85D7F8A
+        a                   :PublishedEvent ;
+        :eventWhen          "2002/2011"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6EE13E1BDCBE96D3
+        a                   bdr:HollisId ;
+        rdf:value           "014256494" .
+    
+    bdr:ID72F718FA51DBF0BA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003313731" .
+    
+    bdr:IDE85EDEB191EDA624
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "LA1130 .S45" .
+    
+    bdr:MW1KG17346  a       :Instance ;
+        skos:altLabel       "sherig"@en ;
+        skos:prefLabel      "shes rig (dus deb/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6EE13E1BDCBE96D3 , bdr:ID72F718FA51DBF0BA , bdr:IDE85EDEB191EDA624 ;
+        :authorshipStatement  "Central Tibetan Administration-in-Exile (India). Department of Education"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "v. 1-11" ;
+        :hasTitle           bdr:TT460055E5BA4B7EC0 , bdr:TTB047E0DCFF9A9FF5 ;
+        :instanceEvent      bdr:EV1694E4F9F85D7F8A ;
+        :instanceHasReproduction  bdr:W1KG17346 ;
+        :instanceOf         bdr:WA1KG17346 ;
+        :note               bdr:NTF1E3B3F11F4F509F ;
+        :numberOfVolumes    15 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "bod gzhung shes rig las khungs/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTF1E3B3F11F4F509F
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TT460055E5BA4B7EC0
+        a                   :Title ;
+        rdfs:label          "shes rig (dus deb/)"@bo-x-ewts .
+    
+    bdr:TTB047E0DCFF9A9FF5
+        a                   :OtherTitle ;
+        rdfs:label          "sherig"@en .
+}

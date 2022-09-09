@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044740 {
+    bda:LG0ABC26AF996161B4
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044740"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044740
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044740 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f1/MW1FEMC044740.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044740 ;
+        adm:logEntry        bda:LG0ABC26AF996161B4 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB531965BFF1BD50C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-B.11.06.01.II.1" .
+    
+    bdr:MF904C27A474FF0C0B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "189" .
+    
+    bdr:MW1FEMC044740
+        a                   :Instance ;
+        skos:prefLabel      "ចាន្ទឃាត"@km , "cānd ghāt"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB531965BFF1BD50C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2, 4, 5, 6, 8, 9, 10" ;
+        :hasTitle           bdr:TT2C4E26C4E5A19BE5 , bdr:TT793BC58D39990904 ;
+        :instanceHasReproduction  bdr:W1FEMC034740 , bdr:W1FEMC044740 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF904C27A474FF0C0B ;
+        :note               bdr:NT30640779B932A60A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT30640779B932A60A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2C4E26C4E5A19BE5
+        a                   :Title ;
+        rdfs:label          "ចាន្ទឃាត"@km .
+    
+    bdr:TT793BC58D39990904
+        a                   :Title ;
+        rdfs:label          "cānd ghāt"@km-x-twktt .
+}

@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW0TT0 {
+    bda:LG3BD4447996A2D599
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-12-15T16:54:11.735Z"^^xsd:dateTime ;
+        adm:logMessage      "added pubinfo"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LGCB78E094FB62F44C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-10T08:58:11.735Z"^^xsd:dateTime ;
+        adm:logMessage      "add some actual pubinfo"@en ;
+        adm:logWho          bdu:U00053 .
+    
+    bda:MW0TT0  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW0TT0 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f1/MW0TT0.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW0TT0 ;
+        adm:logEntry        bda:LG3BD4447996A2D599 , bda:LGCB78E094FB62F44C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4D682218A6C4E91F
+        a                   :PublishedEvent ;
+        :eventWhen          "1924/1935"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW0TT0  a           :Instance ;
+        skos:prefLabel      "Taishō Tripitaka"@en , "大正新脩大藏經"@zh-hant ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "100 v." ;
+        :hasTitle           bdr:TT0B4FCBF20541C863 , bdr:TT56B11EA860104221 , bdr:TT9D10BE7E38F64159 ;
+        :instanceEvent      bdr:EV4D682218A6C4E91F ;
+        :instanceHasReproduction  bdr:W0TT0 ;
+        :instanceOf         bdr:WA0BC003 , bdr:WA0TT0 ;
+        :numberOfVolumes    100 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "Japan"@en ;
+        :publisherName      "[s.n.]"@en ;
+        :script             bdr:ScriptHani .
+    
+    bdr:TT0B4FCBF20541C863
+        a                   :Title ;
+        rdfs:label          "Taishō Tripitaka"@en .
+    
+    bdr:TT56B11EA860104221
+        a                   :Title ;
+        rdfs:label          "Taishō shinshū daizō-kyō"@en .
+    
+    bdr:TT9D10BE7E38F64159
+        a                   :Title ;
+        rdfs:label          "大正新脩大藏經"@zh-hant .
+}

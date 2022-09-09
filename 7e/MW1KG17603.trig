@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17603 {
+    bda:LG18BFF8CCD62AE72A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-07-17T10:05:56.414Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17603  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17603 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "7e/MW1KG17603.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17603 ;
+        adm:logEntry        bda:LG18BFF8CCD62AE72A , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV57E9F73D9E78BA6D
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2DC047A529B3D93E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001291207" .
+    
+    bdr:ID9316B996BFF50CD7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105036141" .
+    
+    bdr:IDF19DA75D86278B6B
+        a                   bdr:HollisId ;
+        rdf:value           "014256534" .
+    
+    bdr:IDF681658A018EE6A3
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ2429.8.G86 D54 1999" .
+    
+    bdr:MW1KG17603  a       :Instance ;
+        skos:prefLabel      "'dul TIk rin chen 'phreng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2DC047A529B3D93E , bdr:ID9316B996BFF50CD7 , bdr:IDF19DA75D86278B6B , bdr:IDF681658A018EE6A3 ;
+        :authorshipStatement  "rje dge 'dun grub pas brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "2, 631 p." ;
+        :hasTitle           bdr:TT7551F3696243646A , bdr:TTF014018C493E187E ;
+        :instanceEvent      bdr:EV57E9F73D9E78BA6D ;
+        :instanceHasReproduction  bdr:W1KG17603 ;
+        :instanceOf         bdr:WA00EGS1016951 , bdr:WA1KG17603 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cing /"@en ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT7551F3696243646A
+        a                   :Title ;
+        rdfs:label          "'dul TIk rin chen 'phreng ba/"@bo-x-ewts .
+    
+    bdr:TTF014018C493E187E
+        a                   :TitlePageTitle ;
+        rdfs:label          "legs par gsungs pa'i dam pa'i chos 'dul ba mtha' dag gi snying po'i don legs par bshad pa rin po che'i 'phreng ba/"@bo-x-ewts .
+}

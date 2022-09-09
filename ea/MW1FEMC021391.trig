@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021391 {
+    bda:LGB52893F36B5970A8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021391"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021391
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021391 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ea/MW1FEMC021391.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021391 ;
+        adm:logEntry        bda:LGB52893F36B5970A8 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID54F0582AED397EB9
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D*.206.VII" .
+    
+    bdr:MFD1C8D05FD2064B97
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "X" ;
+        :microfilmStrip     "35" .
+    
+    bdr:MW1FEMC021391
+        a                   :Instance ;
+        skos:prefLabel      "ភៀនយក្ខ​ (វាន)"@km , "bhīen yakkha"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID54F0582AED397EB9 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT2EC9075C115E081C , bdr:TT92D94EF6F44A6F07 ;
+        :instanceHasReproduction  bdr:W1FEMC021391 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD1C8D05FD2064B97 ;
+        :note               bdr:NT4206874EC2FC244A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT4206874EC2FC244A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 253" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2EC9075C115E081C
+        a                   :Title ;
+        rdfs:label          "bhīen yakkha"@km-x-twktt .
+    
+    bdr:TT92D94EF6F44A6F07
+        a                   :Title ;
+        rdfs:label          "ភៀនយក្ខ​ (វាន)"@km .
+}

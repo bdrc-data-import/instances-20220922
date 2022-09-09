@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW16138 {
+    bda:LG4465CEF82AC1FC0D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGEA0B30684503D9B0
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-06T12:00:35.083Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and soyrce printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGFFF0A3C73A3DA200
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-08-27T12:22:01.369Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info and subjects"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW16138  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW16138 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "26/MW16138.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW16138 ;
+        adm:logEntry        bda:LG4465CEF82AC1FC0D , bda:LGEA0B30684503D9B0 , bda:LGFFF0A3C73A3DA200 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9B7F1A94DDB46A64
+        a                   :PublishedEvent ;
+        :eventWhen          "199-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4B5378F287555FC8
+        a                   bdr:HollisId ;
+        rdf:value           "014254756" .
+    
+    bdr:MW16138  a          :Instance ;
+        skos:prefLabel      "lam rim khrid yig chen mo'i dka' gnad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4B5378F287555FC8 ;
+        :biblioNote         "impressions from the woodblock preserved at sku 'bum byams pa gling"@en ;
+        :extentStatement    "207 ff." ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TT38895844DA1D66C9 , bdr:TT889EF0E205E3E09E ;
+        :instanceEvent      bdr:EV9B7F1A94DDB46A64 ;
+        :instanceHasReproduction  bdr:W16138 ;
+        :instanceOf         bdr:WA16138 ;
+        :note               bdr:NTF489FE0B4D9A15A4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[sku 'bum]"@en ;
+        :publisherName      "[sku 'bum byams pa gling]"@en ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "sku 'bum par khang /"@bo-x-ewts .
+    
+    bdr:NTF489FE0B4D9A15A4
+        a                   :Note ;
+        :noteText           "233 ff. in the manuscript gsung 'bum of the author in the Potala"@en .
+    
+    bdr:TT38895844DA1D66C9
+        a                   :TitlePageTitle ;
+        rdfs:label          "byang chub lam gyi rim pa'i khrid yig chen po dka' ba'i gnad rnams gsal bar bkod pa'i lam rim rab gsal me long /"@bo-x-ewts .
+    
+    bdr:TT889EF0E205E3E09E
+        a                   :Title ;
+        rdfs:label          "lam rim khrid yig chen mo'i dka' gnad/"@bo-x-ewts .
+}

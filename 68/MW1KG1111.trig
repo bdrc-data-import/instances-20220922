@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1111 {
+    bda:LG5B690BA99AB2CC09
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-12-09T10:09:15.455Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE99CB7795BFD2F72
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-15T12:55:27.471Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1111  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1111 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "68/MW1KG1111.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1111 ;
+        adm:logEntry        bda:LG5B690BA99AB2CC09 , bda:LGE99CB7795BFD2F72 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV54C307685D71F9CB
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDDEA9FD9871509C29
+        a                   bdr:HollisId ;
+        rdf:value           "014255700" .
+    
+    bdr:MW1KG1111  a        :Instance ;
+        skos:altLabel       "the biographies of sa skya lo tstsha ba 'jam pa'i rdo rje (1485-1533), sngags 'chang grags pa blo gros (1563-1617), and 'jam dbyangs bsod nams dbang po (1559-1621)"@en ;
+        skos:prefLabel      "sa lo 'jam pa'i rdo rje/ sngags 'chang grags pa blo gros/ 'jam dbyangs bsod nams dbang po gsum gyi rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDEA9FD9871509C29 ;
+        :biblioNote         "reproduced from clear prints of the sde dge dgon chen blocks"@en ;
+        :extentStatement    "192 p." ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TT74CA0C12225A2165 , bdr:TT952F53D91DB84B2A ;
+        :instanceEvent      bdr:EV54C307685D71F9CB ;
+        :instanceHasReproduction  bdr:W1KG1111 ;
+        :instanceOf         bdr:WA1KG1111 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dehradun, u.p."@en ;
+        :publisherName      "Sakya Centre"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT74CA0C12225A2165
+        a                   :Title ;
+        rdfs:label          "sa lo 'jam pa'i rdo rje/ sngags 'chang grags pa blo gros/ 'jam dbyangs bsod nams dbang po gsum gyi rnam thar/"@bo-x-ewts .
+    
+    bdr:TT952F53D91DB84B2A
+        a                   :OtherTitle ;
+        rdfs:label          "the biographies of sa skya lo tstsha ba 'jam pa'i rdo rje (1485-1533), sngags 'chang grags pa blo gros (1563-1617), and 'jam dbyangs bsod nams dbang po (1559-1621)"@en .
+}

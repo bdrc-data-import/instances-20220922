@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17419 {
+    bda:LG2AA2C5C59363677F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-05-08T15:18:48.958Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17419  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17419 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "db/MW1KG17419.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17419 ;
+        adm:logEntry        bda:LG2AA2C5C59363677F , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1517F5CB99EA100A
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID46AF4AC4CC213916
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83907138" .
+    
+    bdr:ID6E81E52B65C2FA9C
+        a                   bdr:HollisId ;
+        rdf:value           "014256496" .
+    
+    bdr:IDF0A25F27FD9801A0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 B48 1983" .
+    
+    bdr:MW1KG17419  a       :Instance ;
+        skos:altLabel       "the bdud 'dul version of the tibetan gesar epic"@en ;
+        skos:prefLabel      "bdud gling /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID46AF4AC4CC213916 , bdr:ID6E81E52B65C2FA9C , bdr:IDF0A25F27FD9801A0 ;
+        :biblioNote         "reproduced from the 1980 kansu people's publishing house edition"@en ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "1st Indian ed."@en ;
+        :extentStatement    "201 p." ;
+        :hasTitle           bdr:TT1CB43D64DC3A0A0B , bdr:TT7C3F593A59424619 , bdr:TTFC21377B070BC2BA ;
+        :instanceEvent      bdr:EV1517F5CB99EA100A ;
+        :instanceHasReproduction  bdr:W1KG17419 ;
+        :instanceOf         bdr:WA1KG17419 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "sherab gyaltsen"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1CB43D64DC3A0A0B
+        a                   :Title ;
+        rdfs:label          "bdud gling /"@bo-x-ewts .
+    
+    bdr:TT7C3F593A59424619
+        a                   :TitlePageTitle ;
+        rdfs:label          "the bdud 'dul version of the tibetan gesar epic"@en .
+    
+    bdr:TTFC21377B070BC2BA
+        a                   :CoverTitle ;
+        rdfs:label          "bdud gling ge sar/"@bo-x-ewts .
+}

@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW27299 {
+    bda:LGF8F60FB78E659C0B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW27299  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW27299 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b3/MW27299.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27299 ;
+        adm:logEntry        bda:LGF8F60FB78E659C0B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE15A7F74F1E1D3C6
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID96418C05FAFE21E5
+        a                   bdr:HollisId ;
+        rdf:value           "014259596" .
+    
+    bdr:MW27299  a          :Instance ;
+        skos:altLabel       "the collected works of 'phags-mchog rdo rje (1893-1943)"@en ;
+        skos:prefLabel      "gsung 'bum/_'phags mchog rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID96418C05FAFE21E5 ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT0D8AB26C5D7A2569 , bdr:TT42DDC73D001049BE , bdr:TT9E6D0522B3EC57CB , bdr:TTF54F0090230524A7 ;
+        :instanceEvent      bdr:EVE15A7F74F1E1D3C6 ;
+        :instanceHasReproduction  bdr:W27299 ;
+        :instanceOf         bdr:WA27299 ;
+        :note               bdr:NTA718F774D446717F ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "kathmandu, nepal"@en ;
+        :publisherName      "khenpo shedrup tenzin & lama thinley namgyal"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTA718F774D446717F
+        a                   :Note ;
+        :noteText           "-4423"@en .
+    
+    bdr:TT0D8AB26C5D7A2569
+        a                   :OtherTitle ;
+        rdfs:label          "the collected works of 'phags-mchog rdo rje (1893-1943)"@en .
+    
+    bdr:TT42DDC73D001049BE
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_'phags mchog rdo rje/"@bo-x-ewts .
+    
+    bdr:TT9E6D0522B3EC57CB
+        a                   :TitlePageTitle ;
+        rdfs:label          "mtshungs med grub sras 'phags mchog rdo rje mchog gi gsung 'bum rin po che/"@bo-x-ewts .
+    
+    bdr:TTF54F0090230524A7
+        a                   :TitlePageTitle ;
+        rdfs:label          "mtshuns-med grub-sras 'phags-mchog rdo-rje mchog gi gsun-'bum rin-po-che"@bo-alalc97 .
+}

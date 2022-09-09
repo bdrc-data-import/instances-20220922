@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021803 {
+    bda:LG4E391610CCD50195
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021803"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021803
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021803 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "39/MW1FEMC021803.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021803 ;
+        adm:logEntry        bda:LG4E391610CCD50195 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDEE04157BB966F97E
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.387.VII (វាន)" .
+    
+    bdr:MW1FEMC021803
+        a                   :Instance ;
+        skos:prefLabel      "កស្សប​ មោគ្គល្លាន ចុន្ទ, គិរិមានន្ទសូត្រ"@km , "kassapa moggallāna cunda, girimānanda sūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEE04157BB966F97E ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT07564DFC5551038D , bdr:TTC2A8F3F9C6FFC8FB , bdr:TTD40C657847233DD5 , bdr:TTF28D8203BB392474 ;
+        :instanceHasReproduction  bdr:W1FEMC021803 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTCDE3CA462BDC437E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTCDE3CA462BDC437E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 323" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT07564DFC5551038D
+        a                   :CoverTitle ;
+        rdfs:label          "មហាកស្សបត្ថេរពោជ្ឈង្គំ មហាមោគ្គល្លានត្ថេរពោជ្ឈង្គំ មហាចុន្ទត្ថេរពោជ្ឈង្គំ គិរីមានន្ទ"@km .
+    
+    bdr:TTC2A8F3F9C6FFC8FB
+        a                   :Title ;
+        rdfs:label          "កស្សប​ មោគ្គល្លាន ចុន្ទ, គិរិមានន្ទសូត្រ"@km ;
+        :femcConversionOf   bdr:TT07564DFC5551038D .
+    
+    bdr:TTD40C657847233DD5
+        a                   :CoverTitle ;
+        rdfs:label          "mahākassapattherabojjhaṅgaṃ mahāmoggallānattherabojjhaṅgaṃ mahācundattherabojjhaṅgaṃ girīmānanda"@km-x-twktt .
+    
+    bdr:TTF28D8203BB392474
+        a                   :Title ;
+        rdfs:label          "kassapa moggallāna cunda, girimānanda sūtra"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD40C657847233DD5 .
+}

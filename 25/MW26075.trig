@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW26075 {
+    bda:LGFDA324B21450428C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFED338C04B72FAE6
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T16:41:30.362Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW26075  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW26075 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "25/MW26075.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW26075 ;
+        adm:logEntry        bda:LGFDA324B21450428C , bda:LGFED338C04B72FAE6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR03D67F5DE7AD7556
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7800 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV244A83EE35CC6535
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC2216452032AE388
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7935.D497 A34 1979" .
+    
+    bdr:IDCD5A2D75086C0B17
+        a                   bdr:HollisId ;
+        rdf:value           "014259510" .
+    
+    bdr:IDFE08FD935A8FBC05
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "80901550" .
+    
+    bdr:MW26075  a          :Instance ;
+        skos:prefLabel      "rgyal ba dge 'dun rgya mtsho'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC2216452032AE388 , bdr:IDCD5A2D75086C0B17 , bdr:IDFE08FD935A8FBC05 ;
+        :authorshipStatement  "zus dag byed pa po slob-dpon padma-lags/"@bo-x-ewts ;
+        :creator            bdr:CR03D67F5DE7AD7556 ;
+        :extentStatement    "133 p." ;
+        :hasTitle           bdr:TTA2E6F10D0DA3C680 ;
+        :instanceEvent      bdr:EV244A83EE35CC6535 ;
+        :instanceHasReproduction  bdr:W26075 ;
+        :instanceOf         bdr:WA26075 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thim-phu"@en ;
+        :publisherName      "kunsang topgyel and mani dorji"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TTA2E6F10D0DA3C680
+        a                   :Title ;
+        rdfs:label          "rgyal ba dge 'dun rgya mtsho'i rnam thar/"@bo-x-ewts .
+}

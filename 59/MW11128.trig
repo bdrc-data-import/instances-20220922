@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW11128 {
+    bda:LG2D0812572D56FD8F
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-02-23T14:11:37.294Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG5CA4A183AE890C5C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-04T16:54:30.579Z"^^xsd:dateTime ;
+        adm:logMessage      "added Print type and sourcePrintery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG7005AB8923E40382
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG7C304AEA7E480531
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-07-16T10:56:04.187Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info, title page, subjects etc"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW11128  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW11128 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "59/MW11128.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW11128 ;
+        adm:logEntry        bda:LG2D0812572D56FD8F , bda:LG5CA4A183AE890C5C , bda:LG7005AB8923E40382 , bda:LG7C304AEA7E480531 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7A36CD759A77A9DD
+        a                   :PublishedEvent ;
+        :eventWhen          "200?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6FD3ECFA769E8C15
+        a                   bdr:HollisId ;
+        rdf:value           "014254640" .
+    
+    bdr:MW11128  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_blo bzang don grub/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6FD3ECFA769E8C15 ;
+        :biblioNote         "reproduced from the Tashi lhunpo's xylographic blocks"@en ;
+        :extentStatement    "2 v." ;
+        :hasSourcePrintery  bdr:G2CN10913 ;
+        :hasTitle           bdr:TT0048620C9971453F , bdr:TT6859D5D243C427E8 ;
+        :instanceEvent      bdr:EV7A36CD759A77A9DD ;
+        :instanceHasReproduction  bdr:W11128 ;
+        :instanceOf         bdr:WA11128 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[chengdu]"@en ;
+        :publisherName      "[lho nub mi rigs par khang?]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0048620C9971453F
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang don grub/"@bo-x-ewts .
+    
+    bdr:TT6859D5D243C427E8
+        a                   :TitlePageTitle ;
+        rdfs:label          "grub pa'i dbang phyug chen po rgyal ba dben sa pa blo bzang don grub dpal bzang po'i gsung 'bum/"@bo-x-ewts .
+}

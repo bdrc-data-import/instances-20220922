@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1CZ1989 {
+    bda:LG5B152F23B659132C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-25T11:12:09.882Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG7D5DAF7E7DCA6991
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-06-29T11:47:23.327Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGC709E7C1BDE50E13
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-24T10:00:32.763Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1CZ1989  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1CZ1989 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "dc/MW1CZ1989.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1CZ1989 ;
+        adm:logEntry        bda:LG5B152F23B659132C , bda:LG7D5DAF7E7DCA6991 , bda:LGC709E7C1BDE50E13 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD72B724A0E12D678
+        a                   bdr:HollisId ;
+        rdf:value           "014255284" .
+    
+    bdr:MW1CZ1989  a        :Instance ;
+        skos:prefLabel      "gsang ba ye shes kyi mkha' 'gro'i bskang bshags bsdus pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD72B724A0E12D678 ;
+        :extentStatement    "4 ff." ;
+        :hasTitle           bdr:TTE1E4C82404ABC556 ;
+        :instanceHasReproduction  bdr:W1CZ1989 ;
+        :instanceOf         bdr:WA1CZ1989 ;
+        :note               bdr:NT4194E15C277C4693 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT4194E15C277C4693
+        a                   :Note ;
+        :noteText           "also in the scans of a printed version of the mkha' 'gro gsang ba ye shes kyi chos skor W9209"@en .
+    
+    bdr:TTE1E4C82404ABC556
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsang ba ye shes kyi mkha' 'gro'i bskang bshags bsdus pa/"@bo-x-ewts .
+}

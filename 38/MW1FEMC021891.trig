@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021891 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021891
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021891 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "38/MW1FEMC021891.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021891 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDECF690001AAB3128
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.673.III.1" .
+    
+    bdr:MW1FEMC021891
+        a                   :Instance ;
+        skos:prefLabel      "ក្រុងមហាជម្ពូរាជាធិបតី"@km , "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDECF690001AAB3128 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT2F70523D18A8BE16 , bdr:TT6E6F9A3CAB8F5016 , bdr:TTAB832A2EF3A300E8 , bdr:TTF807A828F4C1EB9C ;
+        :instanceHasReproduction  bdr:W1FEMC021891 ;
+        :instanceOf         bdr:WA1FEMC010036 , bdr:WA1FEMC021891 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTBF1BA34683EF8786 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTBF1BA34683EF8786
+        a                   :Note ;
+        :contentLocationStatement  "pg. 337" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2F70523D18A8BE16
+        a                   :Title ;
+        rdfs:label          "ក្រុងមហាជម្ពូរាជាធិបតី"@km ;
+        :femcConversionOf   bdr:TTAB832A2EF3A300E8 .
+    
+    bdr:TT6E6F9A3CAB8F5016
+        a                   :CoverTitle ;
+        rdfs:label          "mahā juṃbūv putī"@km-x-twktt .
+    
+    bdr:TTAB832A2EF3A300E8
+        a                   :CoverTitle ;
+        rdfs:label          "មហាជុំពូវបុតី"@km .
+    
+    bdr:TTF807A828F4C1EB9C
+        a                   :Title ;
+        rdfs:label          "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6E6F9A3CAB8F5016 .
+}

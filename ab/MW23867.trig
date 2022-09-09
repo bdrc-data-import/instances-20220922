@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23867 {
+    bda:LG0F5EEBF04105311F
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-10-20T15:29:19.635Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed title page title"@en ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LG563B59054FDF26ED
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T16:53:44.531Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGC42E44081C47F6E6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23867  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23867 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ab/MW23867.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23867 ;
+        adm:logEntry        bda:LG0F5EEBF04105311F , bda:LG563B59054FDF26ED , bda:LGC42E44081C47F6E6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E51E0D177A478C8
+        a                   :PublishedEvent ;
+        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID337513C7473A9BCF
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76902028" .
+    
+    bdr:ID4B0042D8F007BE90
+        a                   bdr:HollisId ;
+        rdf:value           "014259189" .
+    
+    bdr:ID51529F4000CE4A0B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683 .R46 1976" .
+    
+    bdr:MW23867  a          :Instance ;
+        skos:altLabel       "collected works (gsun 'bum) of rgod-tshan-pa mgon-po-rdo-rje"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_mgon po rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID337513C7473A9BCF , bdr:ID4B0042D8F007BE90 , bdr:ID51529F4000CE4A0B ;
+        :biblioNote         "repproduced from the manuscript once belonging to rje sakya-rin-chen and preserved at pha-jo-ldin monastery"@en ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT5C257FA470EB3B2D , bdr:TTDB00BCD926026921 ;
+        :instanceEvent      bdr:EV3E51E0D177A478C8 ;
+        :instanceHasReproduction  bdr:W23867 ;
+        :instanceOf         bdr:WA23661 , bdr:WA23867 ;
+        :note               bdr:NTEE0D8B925B7CDCEB ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "kunzang tobgey"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTEE0D8B925B7CDCEB
+        a                   :Note ;
+        :noteText           "-4375"@en .
+    
+    bdr:TT5C257FA470EB3B2D
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected works (gsun 'bum) of rgod-tshan-pa mgon-po-rdo-rje"@en-x-mixed .
+    
+    bdr:TTDB00BCD926026921
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_mgon po rdo rje/"@bo-x-ewts .
+}

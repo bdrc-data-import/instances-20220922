@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047255 {
+    bda:LG6E9587FA6F5A4A31
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047255"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047255
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047255 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9d/MW1FEMC047255.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047255 ;
+        adm:logEntry        bda:LG6E9587FA6F5A4A31 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID65122025BA1B1ED3
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "Coll part.17.11.95.1.I.3" .
+    
+    bdr:MFDF8ACF23D751085C
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "69" ;
+        :microfilmStrip     "163" .
+    
+    bdr:MW1FEMC047255
+        a                   :Instance ;
+        skos:prefLabel      "អរាទ្ទនារអសុព្ភ"@km , "arāddanār asubdh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID65122025BA1B1ED3 ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT40BA480EDA57F952 , bdr:TTC6E705682C4B9D97 ;
+        :instanceHasReproduction  bdr:W1FEMC047255 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MFDF8ACF23D751085C ;
+        :note               bdr:NT963B256AE1DB242F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT963B256AE1DB242F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT40BA480EDA57F952
+        a                   :Title ;
+        rdfs:label          "arāddanār asubdh"@km-x-twktt .
+    
+    bdr:TTC6E705682C4B9D97
+        a                   :Title ;
+        rdfs:label          "អរាទ្ទនារអសុព្ភ"@km .
+}

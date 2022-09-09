@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG21274 {
+    bda:LG5D2DEAC65807D259
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2015-03-09T16:50:19.979Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG21274  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG21274 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "14/MW1KG21274.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG21274 ;
+        adm:logEntry        bda:LG5D2DEAC65807D259 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV22FD68D1A9A0EEF5
+        a                   :PublishedEvent ;
+        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID91EED10B421B5AE1
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542111353" .
+    
+    bdr:IDAABAB65A8EE70165
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSC 2007/00001 (P) PL3748.S42" .
+    
+    bdr:IDB89B1CA782F03558
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2006448393" .
+    
+    bdr:MW1KG21274  a       :Instance ;
+        skos:altLabel       "桑格多吉诗集"@zh-hans ;
+        skos:prefLabel      "gru zur gyi gsal sgrib/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID91EED10B421B5AE1 , bdr:IDAABAB65A8EE70165 , bdr:IDB89B1CA782F03558 ;
+        :authorshipStatement  "seng ge rdo rjes brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "5, 195 p." ;
+        :hasTitle           bdr:TT531A213F2289B9D9 , bdr:TT9DEDBF220820ACA9 , bdr:TTB4C05909EB5D9ECD ;
+        :instanceEvent      bdr:EV22FD68D1A9A0EEF5 ;
+        :instanceHasReproduction  bdr:W1KG21274 ;
+        :instanceOf         bdr:WA1KG21274 ;
+        :note               bdr:NT8AB08BAF534C0A7B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT8AB08BAF534C0A7B
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 9966"@en .
+    
+    bdr:TT531A213F2289B9D9
+        a                   :Title ;
+        rdfs:label          "gru zur gyi gsal sgrib/"@bo-x-ewts .
+    
+    bdr:TT9DEDBF220820ACA9
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "sang ge duo ji shi ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTB4C05909EB5D9ECD
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "桑格多吉诗集"@zh-hans .
+}

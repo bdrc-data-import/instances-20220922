@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21578 {
+    bda:LG4C0487A7D20079E4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21578  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21578 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "fb/MW21578.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21578 ;
+        adm:logEntry        bda:LG4C0487A7D20079E4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV52E4F4967E9CB560
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5F2E0B2CE09752F7
+        a                   bdr:HollisId ;
+        rdf:value           "014258341" .
+    
+    bdr:ID747A0ADFA9913CEF
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .M52 1983" .
+    
+    bdr:ID9A3BCCD5E6F803B7
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-371" .
+    
+    bdr:IDCCF16FB4546A41AA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84901303" .
+    
+    bdr:MW21578  a          :Instance ;
+        skos:altLabel       "collection des tresors"@en ;
+        skos:prefLabel      "gnam chos/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5F2E0B2CE09752F7 , bdr:ID747A0ADFA9913CEF , bdr:ID9A3BCCD5E6F803B7 , bdr:IDCCF16FB4546A41AA ;
+        :authorshipStatement  "reveles par gnam-chos mi-'gyur-rdo-rje"@en ;
+        :biblioNote         "reproduit d'apres un jeu d'imprimes de l'edition xylographique de rmug-sans preserves dans le fond migot"@en ;
+        :extentStatement    "13 v." ;
+        :hasTitle           bdr:TT537500A4ECE27536 , bdr:TTE23BC34A21639109 , bdr:TTEDDAD68A049AFC56 ;
+        :instanceEvent      bdr:EV52E4F4967E9CB560 ;
+        :instanceHasReproduction  bdr:W21578 ;
+        :instanceOf         bdr:WA21578 ;
+        :note               bdr:NT048BAEDD76AFBEF5 ;
+        :numberOfVolumes    13 ;
+        :publisherLocation  "paro kyichu, bhoutan"@en ;
+        :publisherName      "dilgo khyentsey rinpoche"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT048BAEDD76AFBEF5
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 1662-1674"@en .
+    
+    bdr:TT537500A4ECE27536
+        a                   :TitlePageTitle ;
+        rdfs:label          "collection des tresors"@en .
+    
+    bdr:TTE23BC34A21639109
+        a                   :Title ;
+        rdfs:label          "gnam chos/"@bo-x-ewts .
+    
+    bdr:TTEDDAD68A049AFC56
+        a                   :OtherTitle ;
+        rdfs:label          "gnam chos thugs kyi gter kha snyan brgyud zab mo'i skor/"@bo-x-ewts .
+}

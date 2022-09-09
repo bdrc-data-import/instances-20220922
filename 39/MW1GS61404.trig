@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1GS61404 {
+    bda:LG233247CF2FD2F1F7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-24T17:22:28.53Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging completed for scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1GS61404  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1GS61404 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "39/MW1GS61404.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS61404 ;
+        adm:logEntry        bda:LG233247CF2FD2F1F7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB2DD07FC1554B80A
+        a                   :PublishedEvent ;
+        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4F7AA3CBE081B2A3
+        a                   bdr:HollisId ;
+        rdf:value           "014255515" .
+    
+    bdr:MW1GS61404  a       :Instance ;
+        skos:prefLabel      "gsung 'bum/_kun bzang 'gro 'dul bde chen rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4F7AA3CBE081B2A3 ;
+        :biblioNote         "reproduced from the input text"@en ;
+        :extentStatement    "8 v." ;
+        :hasTitle           bdr:TT0051C3979F0B2623 , bdr:TT879639727B07518C ;
+        :instanceEvent      bdr:EVB2DD07FC1554B80A ;
+        :instanceHasReproduction  bdr:W1GS61404 ;
+        :instanceOf         bdr:WA1GS61404 ;
+        :note               bdr:NT8F4D536180D410AD ;
+        :numberOfVolumes    8 ;
+        :publisherLocation  "[mer chen?]"@en ;
+        :publisherName      "[mer chen dgon pa]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT8F4D536180D410AD
+        a                   :Note ;
+        :noteText           "permission to digitize kindly provided by antonio terrone"@en .
+    
+    bdr:TT0051C3979F0B2623
+        a                   :CoverTitle ;
+        rdfs:label          "mkhyen sprul kun bzang 'gro 'dul bde chen rdo rje'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TT879639727B07518C
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_kun bzang 'gro 'dul bde chen rdo rje/"@bo-x-ewts .
+}

@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22121 {
+    bda:LG1E4A69A26F79101B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG33224C80819ABCFB
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-11T16:07:41.027Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22121  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22121 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "4f/MW22121.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22121 ;
+        adm:logEntry        bda:LG1E4A69A26F79101B , bda:LG33224C80819ABCFB , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF1D8A4F4051A34E0
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID71F011C847DF97DF
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ978.H757 A37 1983" .
+    
+    bdr:ID75FABD549A79E16A
+        a                   bdr:HollisId ;
+        rdf:value           "014258639" .
+    
+    bdr:IDA55525555ECD7BF1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83902798" .
+    
+    bdr:MW22121  a          :Instance ;
+        skos:altLabel       "the autobiography and collected songs of 'phrin-las-lhun-grub-rgyal-mtshan of mu-gum"@en ;
+        skos:prefLabel      "rig 'dzin chen po 'phrin las lhun grub rgyal mtshan gyi rnam thar nyung ngur bsdus pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID71F011C847DF97DF , bdr:ID75FABD549A79E16A , bdr:IDA55525555ECD7BF1 ;
+        :biblioNote         "reproduced from a rare manuscript from the collection of sprul sku tshe-dbang"@en ;
+        :extentStatement    "224 p." ;
+        :hasTitle           bdr:TT05713D7C7F60E42E , bdr:TT86CDFF4F9A4FC4D4 , bdr:TT8BC953FCED769B9D , bdr:TTA72A78CBC9C61B02 ;
+        :instanceEvent      bdr:EVF1D8A4F4051A34E0 ;
+        :instanceHasReproduction  bdr:W22121 ;
+        :instanceOf         bdr:WA22121 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dalhousie"@en ;
+        :publisherName      "damchoe sangpo"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT05713D7C7F60E42E
+        a                   :OtherTitle ;
+        rdfs:label          "the autobiography and collected songs of 'phrin-las-lhun-grub-rgyal-mtshan of mu-gum"@en .
+    
+    bdr:TT86CDFF4F9A4FC4D4
+        a                   :Title ;
+        rdfs:label          "rig 'dzin chen po 'phrin las lhun grub rgyal mtshan gyi rnam thar nyung ngur bsdus pa/"@bo-x-ewts .
+    
+    bdr:TT8BC953FCED769B9D
+        a                   :CoverTitle ;
+        rdfs:label          "the autobiography and songs of spiritual experience of rig-'dzin 'phrin-las-lhun-grub-rgyal-mtshan"@en .
+    
+    bdr:TTA72A78CBC9C61B02
+        a                   :TitlePageTitle ;
+        rdfs:label          "rig-'dzin chen po 'phrin-las-lhun-grub-rgyal-mtshan gyi rnam thar nun nur bsdus pa/"@bo-x-ewts .
+}

@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW5424 {
+    bda:LG4DB0B7487A7279E8
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-22T13:57:53.48Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG5299F2559863CB16
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW5424  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW5424 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fb/MW5424.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW5424 ;
+        adm:logEntry        bda:LG4DB0B7487A7279E8 , bda:LG5299F2559863CB16 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV61398E15D7974935
+        a                   :PublishedEvent ;
+        :eventWhen          "2000?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2E2E92C003718A75
+        a                   bdr:HollisId ;
+        rdf:value           "014260973" .
+    
+    bdr:MW5424  a           :Instance ;
+        skos:prefLabel      "gsung 'bum/_'jigs med bsam gtan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2E2E92C003718A75 ;
+        :biblioNote         "impressions from blocks preserved at sku 'bum byams pa gling in amdo"@en ;
+        :extentStatement    "2 v." ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TT230B1C335DA43802 , bdr:TT801104C3B7243DFA ;
+        :instanceEvent      bdr:EV61398E15D7974935 ;
+        :instanceHasReproduction  bdr:W5424 ;
+        :instanceOf         bdr:WA5424 ;
+        :note               bdr:NT61AA0CC5371F24FE ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[sku 'bum]"@en ;
+        :publisherName      "[sku 'bum byams pa gling]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT61AA0CC5371F24FE
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scanned images of this collection\n5401-5402"@en .
+    
+    bdr:TT230B1C335DA43802
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_'jigs med bsam gtan/"@bo-x-ewts .
+    
+    bdr:TT801104C3B7243DFA
+        a                   :OtherTitle ;
+        rdfs:label          "'jigs med bsam gtan gyi gsung 'bum/"@bo-x-ewts .
+}

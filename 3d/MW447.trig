@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW447 {
+    bda:LG979BC54D4D60510A
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-21T14:14:06.787Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGDF85FF95E4C08D94
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW447  a            adm:AdminData ;
+        adm:adminAbout      bdr:MW447 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "3d/MW447.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW447 ;
+        adm:logEntry        bda:LG979BC54D4D60510A , bda:LGDF85FF95E4C08D94 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30C3A3A40D24AF86
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0CD3A44067C91C5E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .B6 1983" .
+    
+    bdr:ID7AFC3982CA894176
+        a                   bdr:HollisId ;
+        rdf:value           "014260863" .
+    
+    bdr:IDD2C564506DC254BC
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82903915" .
+    
+    bdr:MW447  a            :Instance , :SerialInstance ;
+        skos:altLabel       "the collected works (gsun 'bum) of spyan-sna blo-gros-rgyal-mtshan of rgya-ma rin-chen-sgan"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_blo gros rgyal mtshan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0CD3A44067C91C5E , bdr:ID7AFC3982CA894176 , bdr:IDD2C564506DC254BC ;
+        :biblioNote         "reproduced from a set of prints from the 'bras spungs dga' ldan pho brang blocks under the supervision of ngawang gelek demo"@en ;
+        :extentStatement    "5 v." ;
+        :hasSourcePrintery  bdr:G2CN10836 ;
+        :hasTitle           bdr:TT5E733A22D4F46F71 , bdr:TTE7B9D058989B54E1 ;
+        :instanceEvent      bdr:EV30C3A3A40D24AF86 ;
+        :instanceHasReproduction  bdr:W447 ;
+        :instanceOf         bdr:WA1KG2144 , bdr:WA447 ;
+        :note               bdr:NT830824C50E8FC33A ;
+        :numberOfVolumes    5 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "ngagwang gelek demo"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS11818 ;
+        :seriesNumber       "v. 154-158" .
+    
+    bdr:NT830824C50E8FC33A
+        a                   :Note ;
+        :noteText           "the gsung 'bum, originally  in 3 vols., was carved at the order of khri 61 ngag dbang tshul khrims (1721-1791) in 1781 through the efforst of do dam pa g.yul kha ba skal bzang dpal 'bar; however some of the prints appear to have been struck from blocks carved at the order of the 7th dalai lama; researclh needed here\ncopies of this collection are to be found in ismeo and the potala\n\ntbrc holds digitally scanned images, tiffs and pdf files; scanned at 600 dpi"@en .
+    
+    bdr:TT5E733A22D4F46F71
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:TTE7B9D058989B54E1
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of spyan-sna blo-gros-rgyal-mtshan of rgya-ma rin-chen-sgan"@en-x-mixed .
+}

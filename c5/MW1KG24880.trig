@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG24880 {
+    bda:LGB20DCE790F286136
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-13T10:32:37.716Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB328286193760E06
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-10T10:45:04.2Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG24880  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG24880 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c5/MW1KG24880.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG24880 ;
+        adm:logEntry        bda:LGB20DCE790F286136 , bda:LGB328286193760E06 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV795124E7F9137075
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC041F50A7418783B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R644.T524 A23 2016" .
+    
+    bdr:IDC7AFC4CCA350C75B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2016325549" .
+    
+    bdr:IDF2855FFC32EF5467
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105142279" .
+    
+    bdr:MW1KG24880  a       :Instance ;
+        skos:altLabel       "藏医药学史上\"十大名医\"研究"@zh-hans ;
+        skos:prefLabel      "bod kyi gso ba rig par mdzad che ba'i mkhas chen bcu'i lo rgyus zhib 'jug"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC041F50A7418783B , bdr:IDC7AFC4CCA350C75B , bdr:IDF2855FFC32EF5467 ;
+        :authorshipStatement  "rin chen rdo rje/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "5, 2, 6, 410 p." ;
+        :hasTitle           bdr:TT67FD0A63024ADA29 , bdr:TTC9F9BA6039B38762 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV795124E7F9137075 ;
+        :instanceHasReproduction  bdr:W1KG24880 ;
+        :instanceOf         bdr:WA1KG24880 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT67FD0A63024ADA29
+        a                   :OtherTitle ;
+        rdfs:label          "藏医药学史上\"十大名医\"研究"@zh-hans .
+    
+    bdr:TTC9F9BA6039B38762
+        a                   :Title ;
+        rdfs:label          "bod kyi gso ba rig par mdzad che ba'i mkhas chen bcu'i lo rgyus zhib 'jug"@bo-x-ewts .
+}

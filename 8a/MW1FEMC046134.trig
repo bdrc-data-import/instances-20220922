@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046134 {
+    bda:LG11CC85FAD96A543D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046134"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046134
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046134 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8a/MW1FEMC046134.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046134 ;
+        adm:logEntry        bda:LG11CC85FAD96A543D , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID28CE4496BECB5A6D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "092-B.04.03.03.VI.6" .
+    
+    bdr:MFCCFFB58906DE0AED
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC046134
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនមើលយាម (១-៦)"@km , "Kpoun mōl yām"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID28CE4496BECB5A6D ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT3AD27E827E8EA4C6 , bdr:TTE2EC6A5B47CA2344 ;
+        :instanceHasReproduction  bdr:W1FEMC036134 , bdr:W1FEMC046134 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFCCFFB58906DE0AED ;
+        :note               bdr:NTB86957FBE140FDFE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB86957FBE140FDFE
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3AD27E827E8EA4C6
+        a                   :Title ;
+        rdfs:label          "Kpoun mōl yām"@km-x-twktt .
+    
+    bdr:TTE2EC6A5B47CA2344
+        a                   :Title ;
+        rdfs:label          "ក្បួនមើលយាម (១-៦)"@km .
+}

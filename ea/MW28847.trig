@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW28847 {
+    bda:LG490CA6BA40F2B383
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFE4CB6870B559DA5
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-03-25T15:26:12.793Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed the pub year"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW28847  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW28847 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ea/MW28847.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28847 ;
+        adm:logEntry        bda:LG490CA6BA40F2B383 , bda:LGFE4CB6870B559DA5 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC06367B7E0033F8F
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID48E8294AF5C14D1D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624502585" .
+    
+    bdr:ID48EFA7B5014994C5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSC 2004/00013 (P) PL3748.S" .
+    
+    bdr:ID7EE241ABF61666BA
+        a                   bdr:HollisId ;
+        rdf:value           "014259801" .
+    
+    bdr:IDC6FE523A46AED135
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004325350" .
+    
+    bdr:MW28847  a          :Instance ;
+        skos:prefLabel      "sems kyi me dpung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID48E8294AF5C14D1D , bdr:ID48EFA7B5014994C5 , bdr:ID7EE241ABF61666BA , bdr:IDC6FE523A46AED135 ;
+        :authorshipStatement  "rig btsun skal bzang dge legs/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 4, 182 p." ;
+        :hasTitle           bdr:TTA22D1FBAD4B5BB40 ;
+        :instanceEvent      bdr:EVC06367B7E0033F8F ;
+        :instanceHasReproduction  bdr:W28847 ;
+        :instanceOf         bdr:WA28847 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zhang kang /"@bo-x-ewts ;
+        :publisherName      "zhang kang then mA dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTA22D1FBAD4B5BB40
+        a                   :Title ;
+        rdfs:label          "sems kyi me dpung /"@bo-x-ewts .
+}

@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG3708 {
+    bda:LG37A36822C0A9A3CD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-10-19T15:50:14.918Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG7426E3C1FA697B15
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-01T12:50:44.864Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG3708  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG3708 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d0/MW1KG3708.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG3708 ;
+        adm:logEntry        bda:LG37A36822C0A9A3CD , bda:LG7426E3C1FA697B15 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7B1FE791782D1BB7
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0B6293966CF0835A
+        a                   bdr:HollisId ;
+        rdf:value           "014256726" .
+    
+    bdr:ID9C12D1D6487746DF
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.5 .M55 1985" .
+    
+    bdr:IDB5C38EDA8DE75EC0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903442" .
+    
+    bdr:MW1KG3708  a        :Instance ;
+        skos:prefLabel      "mkhyud spyad sna tshogs phyogs bsdus tsin+ta ma Ni/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0B6293966CF0835A , bdr:ID9C12D1D6487746DF , bdr:IDB5C38EDA8DE75EC0 ;
+        :biblioNote         "reproduced from a rare manuscript belonging to blo bzang bstan 'dzin"@en ;
+        :extentStatement    "114 ff. (227 p.)" ;
+        :hasTitle           bdr:TT0DE2B2B848537FF8 ;
+        :instanceEvent      bdr:EV7B1FE791782D1BB7 ;
+        :instanceHasReproduction  bdr:W1KG3708 ;
+        :instanceOf         bdr:WA1KG3708 , bdr:WA8LS17221 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT0DE2B2B848537FF8
+        a                   :Title ;
+        rdfs:label          "mkhyud spyad sna tshogs phyogs bsdus tsin+ta ma Ni/"@bo-x-ewts .
+}

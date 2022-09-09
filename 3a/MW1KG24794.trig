@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG24794 {
+    bda:LG2EC64397B8188B39
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-05T12:39:19.349Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG24794  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG24794 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3a/MW1KG24794.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG24794 ;
+        adm:logEntry        bda:LG2EC64397B8188B39 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDD3211C052C26230
+        a                   :PublishedEvent ;
+        :eventWhen          "1998,2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0EB28ADD322C9C2D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105030585" .
+    
+    bdr:ID2613C690BE21368B
+        a                   bdr:HollisId ;
+        rdf:value           "014258375" .
+    
+    bdr:ID38BDE45C20D147D1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003333529" .
+    
+    bdr:IDF87CDB2B676B9874
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "RC74 .Z53 2002" .
+    
+    bdr:MW1KG24794  a       :Instance ;
+        skos:prefLabel      "brtag pa rtsa chu'i rgyas spros go don reg mthong yid kyi me long /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0EB28ADD322C9C2D , bdr:ID2613C690BE21368B , bdr:ID38BDE45C20D147D1 , bdr:IDF87CDB2B676B9874 ;
+        :authorshipStatement  "zla ba tshe ring gis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "6, 1, 149 p." ;
+        :hasTitle           bdr:TT2466F52FA8259CF4 , bdr:TTCAFEA3AC3D33C3B2 ;
+        :instanceEvent      bdr:EVDD3211C052C26230 ;
+        :instanceHasReproduction  bdr:W1KG24794 ;
+        :instanceOf         bdr:WA1KG24794 ;
+        :note               bdr:NT3B044495E9FFA75D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT3B044495E9FFA75D
+        a                   :Note ;
+        :noteText           "same text W21655"@en .
+    
+    bdr:TT2466F52FA8259CF4
+        a                   :Title ;
+        rdfs:label          "brtag pa rtsa chu'i rgyas spros go don reg mthong yid kyi me long /"@bo-x-ewts .
+    
+    bdr:TTCAFEA3AC3D33C3B2
+        a                   :TitlePageTitle ;
+        rdfs:label          "bdud rtsi snying po yan lag brgyad pa gsang ba man ngag gi rgyud las blta reg gnyis kyis nad ngos bzung thabs rgyas par spros pa reg mthong don ldan/"@bo-x-ewts .
+}

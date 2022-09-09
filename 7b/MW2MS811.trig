@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2MS811 {
+    bda:LG39D15023F6C54ECC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-04-21T16:43:20.799Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdu:U00020 .
+    
+    bda:LGF5934E667E44459C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-17T12:04:03.665Z"^^xsd:dateTime ;
+        adm:logMessage      "added about uncontroled, cat info, topic, print type, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2MS811  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW2MS811 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7b/MW2MS811.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2MS811 ;
+        adm:logEntry        bda:LG39D15023F6C54ECC , bda:LGF5934E667E44459C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF32706A6DC16059E
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID687EA9B6847877BD
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7800573869" .
+    
+    bdr:IDC5BF8337544E71AD
+        a                   bdr:HollisId ;
+        rdf:value           "014260561" .
+    
+    bdr:MW2MS811  a         :Instance ;
+        skos:prefLabel      "hor khang bsod nams dpal 'bar gyi gsung rtsom phyogs bsgrigs/"@bo-x-ewts , "huo er kang suo lang bian ba xuan ji"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID687EA9B6847877BD , bdr:IDC5BF8337544E71AD ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "1999 par gzhi dang po/ 1999 par thengs dagn po/"@bo-x-ewts ;
+        :extentStatement    "3, 3, 677 p." ;
+        :hasTitle           bdr:TT1EF55474D0F34EC5 , bdr:TT4D6C250B7387B645 ;
+        :instanceEvent      bdr:EVF32706A6DC16059E ;
+        :instanceHasReproduction  bdr:W2MS811 ;
+        :instanceOf         bdr:WA2MS811 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod kyi shes rig dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1EF55474D0F34EC5
+        a                   :Title ;
+        rdfs:label          "hor khang bsod nams dpal 'bar gyi gsung rtsom phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT4D6C250B7387B645
+        a                   :ColophonTitle ;
+        rdfs:label          "huo er kang suo lang bian ba xuan ji"@zh-latn-pinyin-x-ndia .
+}

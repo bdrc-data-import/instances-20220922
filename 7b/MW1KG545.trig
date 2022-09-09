@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG545 {
+    bda:LG2109E36C0F4EC850
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-09-09T16:42:11.594Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG545  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG545 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7b/MW1KG545.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG545 ;
+        adm:logEntry        bda:LG2109E36C0F4EC850 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8DACFF842AD16BA8
+        a                   :PublishedEvent ;
+        :eventWhen          "2008?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE8E8B139141598B2
+        a                   bdr:HollisId ;
+        rdf:value           "014257138" .
+    
+    bdr:MW1KG545  a         :Instance ;
+        skos:prefLabel      "rnam rtog gi rba rlabs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE8E8B139141598B2 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "67 p." ;
+        :hasTitle           bdr:TT1B4036F222FB719A , bdr:TTC2B8090844BA2540 ;
+        :instanceEvent      bdr:EV8DACFF842AD16BA8 ;
+        :instanceHasReproduction  bdr:IE1KG545 , bdr:W1KG545 ;
+        :instanceOf         bdr:WA1KG545 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[bla brang]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1B4036F222FB719A
+        a                   :TitlePageTitle ;
+        rdfs:label          "snyan deb thor rtsom phyogs bsgrigs rnam rtog gi rba rlabs/"@bo-x-ewts .
+    
+    bdr:TTC2B8090844BA2540
+        a                   :Title ;
+        rdfs:label          "rnam rtog gi rba rlabs/"@bo-x-ewts .
+}

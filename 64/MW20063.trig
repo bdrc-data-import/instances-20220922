@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20063 {
+    bda:LG1DD3088B014D533F
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-09-21T14:30:53.28Z"^^xsd:dateTime ;
+        adm:logMessage      "changed onhold to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG40F2535C8E234B50
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20063  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20063 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "64/MW20063.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20063 ;
+        adm:logEntry        bda:LG1DD3088B014D533F , bda:LG40F2535C8E234B50 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB9E9628A5B0BDEA2
+        a                   :PublishedEvent ;
+        :eventWhen          "1980"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID99C6C6E2B66B4F38
+        a                   bdr:HollisId ;
+        rdf:value           "014258019" .
+    
+    bdr:MW20063  a          :Instance ;
+        skos:altLabel       "草原雏鹰"@zh-hans ;
+        skos:prefLabel      "rtswa thang gi glag phrug"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID99C6C6E2B66B4F38 ;
+        :authorshipStatement  "'jam dbyangs sogs kyis bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "223 p." ;
+        :hasTitle           bdr:TT224A5F3068F4EC1B , bdr:TT99B9D4D6A6782FEE , bdr:TTEFE01752A01FD76C ;
+        :instanceEvent      bdr:EVB9E9628A5B0BDEA2 ;
+        :instanceHasReproduction  bdr:W20063 ;
+        :instanceOf         bdr:WA20063 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT224A5F3068F4EC1B
+        a                   :Title ;
+        rdfs:label          "rtswa thang gi glag phrug"@bo-x-ewts .
+    
+    bdr:TT99B9D4D6A6782FEE
+        a                   :ColophonTitle ;
+        rdfs:label          "cao yuan chu ying"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTEFE01752A01FD76C
+        a                   :ColophonTitle ;
+        rdfs:label          "草原雏鹰"@zh-hans .
+}

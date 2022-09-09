@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14794 {
+    bda:LGB30F603424FD7844
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-07-02T16:28:33.104Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14794  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14794 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "f5/MW1KG14794.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14794 ;
+        adm:logEntry        bda:LGB30F603424FD7844 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA6F00938DF60EE1E
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1023EF940DF57F62
+        a                   bdr:HollisId ;
+        rdf:value           "014256239" .
+    
+    bdr:ID34799AFE653944C7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542116246" .
+    
+    bdr:MW1KG14794  a       :Instance ;
+        skos:prefLabel      "tun hong bod btsan po'i dus kyi rig gnas dpyad gleng tshogs 'du'i dpyad rtsom phyogs bsgrigs/"@bo-x-ewts , "敦煌吐蕃文化学术研讨会论文集"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1023EF940DF57F62 , bdr:ID34799AFE653944C7 ;
+        :authorshipStatement  "敦煌吐蕃文化学术研讨会 (2008 : 敦煌, 中国)"@zh-hans ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "第1版."@zh-hans ;
+        :extentStatement    "2, 2, 4, 490 p." ;
+        :hasTitle           bdr:TT90B84FBFD52A9485 , bdr:TTA375AAACC13714C3 , bdr:TTC43898DD0D6F06E8 ;
+        :illustrations      "ill. (some col.)" ;
+        :instanceEvent      bdr:EVA6F00938DF60EE1E ;
+        :instanceHasReproduction  bdr:W1KG14794 ;
+        :instanceOf         bdr:WA1KG14794 ;
+        :note               bdr:NT155F96D01ABFDB2C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "兰州市"@zh-hans ;
+        :publisherName      "甘肃民族出版社"@zh-hans ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:NT155F96D01ABFDB2C
+        a                   :Note ;
+        :noteText           "in chinese and tibetan"@en .
+    
+    bdr:TT90B84FBFD52A9485
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "敦煌吐蕃文化学术研讨会论文集"@zh-hans .
+    
+    bdr:TTA375AAACC13714C3
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "dun huang tu bo wen hua xue shu yan tao hui lun wen ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTC43898DD0D6F06E8
+        a                   :Title ;
+        rdfs:label          "tun hong bod btsan po'i dus kyi rig gnas dpyad gleng tshogs 'du'i dpyad rtsom phyogs bsgrigs/"@bo-x-ewts .
+}

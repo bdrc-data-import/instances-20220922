@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022413 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022413
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022413 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "60/MW1FEMC022413.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022413 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID2F2F120EF28E0455
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.900.I.1" .
+    
+    bdr:MW1FEMC022413
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ពណ៌នា"@km , "cpāp' baṛṇanā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2F2F120EF28E0455 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT011AAE0A8922BF04 , bdr:TT3015F54EB358CDBC , bdr:TTB6F7FFBD63DC6655 , bdr:TTC15B103425011EAF ;
+        :instanceHasReproduction  bdr:W1FEMC022413 ;
+        :instanceOf         bdr:WA1FEMC022413 , bdr:WA1FEMC100029 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT2256A5AD6E56B837 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2256A5AD6E56B837
+        a                   :Note ;
+        :contentLocationStatement  "pg. 432" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT011AAE0A8922BF04
+        a                   :CoverTitle ;
+        rdfs:label          "bānā"@km-x-twktt .
+    
+    bdr:TT3015F54EB358CDBC
+        a                   :Title ;
+        rdfs:label          "cpāp' baṛṇanā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT011AAE0A8922BF04 .
+    
+    bdr:TTB6F7FFBD63DC6655
+        a                   :CoverTitle ;
+        rdfs:label          "ពានា"@km .
+    
+    bdr:TTC15B103425011EAF
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ពណ៌នា"@km ;
+        :femcConversionOf   bdr:TTB6F7FFBD63DC6655 .
+}

@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2CZ8086 {
+    bda:LG4E579FB26ADB4983
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-21T15:42:58.392Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2CZ8086  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW2CZ8086 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "87/MW2CZ8086.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ8086 ;
+        adm:logEntry        bda:LG4E579FB26ADB4983 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF2EAD77823C9E9E9
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID00567D6ED258224A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6128.T5 B77 1982" .
+    
+    bdr:ID14CFA54D7A3FC27A
+        a                   bdr:HollisId ;
+        rdf:value           "014260344" .
+    
+    bdr:ID73D4BC411D6EED7F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83907640" .
+    
+    bdr:MW2CZ8086  a        :Instance ;
+        skos:prefLabel      "dge slong gi bslab bya'i rnam gzhag thub dbang zhal lung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID00567D6ED258224A , bdr:ID14CFA54D7A3FC27A , bdr:ID73D4BC411D6EED7F ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "vii, 71 p. ; 23 cm." ;
+        :hasTitle           bdr:TTB3AD326D70EBED3A , bdr:TTF24717F7E3953C84 ;
+        :instanceEvent      bdr:EVF2EAD77823C9E9E9 ;
+        :instanceHasReproduction  bdr:W2CZ8086 ;
+        :instanceOf         bdr:WA2CZ8086 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, india"@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTB3AD326D70EBED3A
+        a                   :TitlePageTitle ;
+        rdfs:label          "dge slong gi bslab bya'i rnam gzhag mdo tsam brjod pa thub dbang zhal lung /"@bo-x-ewts .
+    
+    bdr:TTF24717F7E3953C84
+        a                   :Title ;
+        rdfs:label          "dge slong gi bslab bya'i rnam gzhag thub dbang zhal lung /"@bo-x-ewts .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021089 {
+    bda:LGDF7EB43AFEF1058C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021089"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021089
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021089 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "4c/MW1FEMC021089.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021089 ;
+        adm:logEntry        bda:LGDF7EB43AFEF1058C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID075E3A672014892F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "C.29.VII" .
+    
+    bdr:MF6A646158D854D093
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XIV" ;
+        :microfilmStrip     "39" .
+    
+    bdr:MW1FEMC021089
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធិមគ្គប៉េនតន"@km , "visuddhimagga p\"en tan"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID075E3A672014892F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "4, 6, 15, 17" ;
+        :hasTitle           bdr:TT083905CA7E8E5738 , bdr:TT8AB4D13955FC37DF , bdr:TTA15A389AA91A9497 , bdr:TTFFCEE584D2C92692 ;
+        :instanceHasReproduction  bdr:W1FEMC021089 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6A646158D854D093 ;
+        :note               bdr:NTFA74158044CE58CD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "296" .
+    
+    bdr:NTFA74158044CE58CD
+        a                   :Note ;
+        :contentLocationStatement  "pg. 195" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT083905CA7E8E5738
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គប៉េនតន"@km ;
+        :femcConversionOf   bdr:TTFFCEE584D2C92692 .
+    
+    bdr:TT8AB4D13955FC37DF
+        a                   :Title ;
+        rdfs:label          "visuddhimagga p\"en tan"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA15A389AA91A9497 .
+    
+    bdr:TTA15A389AA91A9497
+        a                   :CoverTitle ;
+        rdfs:label          "visuddhimagga pantan"@km-x-twktt .
+    
+    bdr:TTFFCEE584D2C92692
+        a                   :CoverTitle ;
+        rdfs:label          "វិសុទ្ធិមគ្គបន្តន"@km .
+}

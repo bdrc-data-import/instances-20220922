@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16564 {
+    bda:LGB4C75D734AC0B19E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-01-23T10:40:49.679Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCCFAD69E98D8ABC2
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-04-13T11:26:41.505Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW1KG16564  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG16564 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "05/MW1KG16564.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16564 ;
+        adm:logEntry        bda:LGB4C75D734AC0B19E , bda:LGCCFAD69E98D8ABC2 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE1B7E2887AABF716
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1CA004AD6969CA28
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542117694" .
+    
+    bdr:MW1KG16564  a       :Instance , :SerialInstance ;
+        skos:altLabel       "鲁国朱沙宗"@zh-hans ;
+        skos:prefLabel      "li yul mtshal rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1CA004AD6969CA28 ;
+        :authorshipStatement  "gu ru rgyal mtshan gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "6, 3, 167 p." ;
+        :hasTitle           bdr:TT517A0DF561A8C519 , bdr:TT7053A76105299151 , bdr:TT735AF072C7113330 , bdr:TT7C9F9960D6CD9EC3 ;
+        :instanceEvent      bdr:EVE1B7E2887AABF716 ;
+        :instanceHasReproduction  bdr:W1KG16564 ;
+        :instanceOf         bdr:WA1KG16564 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG16562 ;
+        :seriesNumber       "[not available]" .
+    
+    bdr:TT517A0DF561A8C519
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dzam gling skyes mchog seng chen nor bu dgra 'dul gyi rnam par thar ba mu tig phreng mdzes las/ li yul mtshal rdzong /"@bo-x-ewts .
+    
+    bdr:TT7053A76105299151
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "鲁国朱沙宗"@zh-hans .
+    
+    bdr:TT735AF072C7113330
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "lu guo zhu sha zong"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT7C9F9960D6CD9EC3
+        a                   :Title ;
+        rdfs:label          "li yul mtshal rdzong /"@bo-x-ewts .
+}

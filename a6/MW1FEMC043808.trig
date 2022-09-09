@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043808 {
+    bda:LGDD0E2B6CAF9EBD24
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043808"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043808
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043808 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a6/MW1FEMC043808.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043808 ;
+        adm:logEntry        bda:LGDD0E2B6CAF9EBD24 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID1BA7F3F9AF03F355
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "046-B.11.11.04.VI.6" .
+    
+    bdr:MF2E56C76C18F52E2D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "180" .
+    
+    bdr:MW1FEMC043808
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនតំម្រារខ្មេង (១-៥) (តម្រាទាយពីជម្ងឺតម្កាត់តាមថ្ងៃ)"@km , "kpoun taṃ mrār khmeń"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1BA7F3F9AF03F355 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT1F738509AD4A9685 , bdr:TTB390715D570B8298 ;
+        :instanceHasReproduction  bdr:W1FEMC033808 , bdr:W1FEMC043808 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2E56C76C18F52E2D ;
+        :note               bdr:NT2307DF6575345585 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2307DF6575345585
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1F738509AD4A9685
+        a                   :Title ;
+        rdfs:label          "kpoun taṃ mrār khmeń"@km-x-twktt .
+    
+    bdr:TTB390715D570B8298
+        a                   :Title ;
+        rdfs:label          "ក្បួនតំម្រារខ្មេង (១-៥) (តម្រាទាយពីជម្ងឺតម្កាត់តាមថ្ងៃ)"@km .
+}

@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020203 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020203
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020203 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b4/MW1FEMC020203.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020203 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA83F3E766850DC4A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.96.III.1" .
+    
+    bdr:MFF6D9A3925696D810
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "33" ;
+        :microfilmStrip     "61" .
+    
+    bdr:MW1FEMC020203
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA83F3E766850DC4A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT1A43F4B2F9E9046C , bdr:TT3AA95DC68D4E6880 , bdr:TT5D98A3B3AD0DFAA1 , bdr:TT5EF3B5CD97860E95 , bdr:TTBDCD7FC12EC56004 , bdr:TTFA2524E9946D67DB ;
+        :instanceHasReproduction  bdr:W1FEMC020203 ;
+        :instanceOf         bdr:WA1FEMC010058 , bdr:WA1FEMC020203 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF6D9A3925696D810 ;
+        :note               bdr:NTC11CE8FBD2CB9545 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "884" .
+    
+    bdr:NTC11CE8FBD2CB9545
+        a                   :Note ;
+        :contentLocationStatement  "pg. 41" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1A43F4B2F9E9046C
+        a                   :CoverTitle ;
+        rdfs:label          "បឋមសង្គាយនាគ្រែ៣"@km ;
+        :femcConversionOf   bdr:TTBDCD7FC12EC56004 .
+    
+    bdr:TT3AA95DC68D4E6880
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
+    
+    bdr:TT5D98A3B3AD0DFAA1
+        a                   :CoverTitle ;
+        rdfs:label          "thamm saṃṅghāyyanāṛr grè 3"@km-x-twktt .
+    
+    bdr:TT5EF3B5CD97860E95
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TTBDCD7FC12EC56004
+        a                   :CoverTitle ;
+        rdfs:label          "ថម្មសំង្ឃាយ្យនារ៍គ្រែ៣"@km .
+    
+    bdr:TTFA2524E9946D67DB
+        a                   :CoverTitle ;
+        rdfs:label          "paṭham saṅgāyanā grè 3"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5D98A3B3AD0DFAA1 .
+}

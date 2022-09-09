@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW5926 {
+    bda:LGB167AC844C2C6734
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGDD402C437609ED7C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-22T14:12:27.767Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW5926  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW5926 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "3b/MW5926.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW5926 ;
+        adm:logEntry        bda:LGB167AC844C2C6734 , bda:LGDD402C437609ED7C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV64FD832E3D39A763
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8C12BC0AD4D7BDBC
+        a                   bdr:HollisId ;
+        rdf:value           "014260980" .
+    
+    bdr:IDB0C4DB6C17C1F294
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83905048" .
+    
+    bdr:IDB51C6FC572F6406E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .N335 1983" .
+    
+    bdr:MW5926  a           :Instance ;
+        skos:altLabel       "the collected works of chos-rje nag-dban-dpal-ldan of urga"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang dpal ldan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8C12BC0AD4D7BDBC , bdr:IDB0C4DB6C17C1F294 , bdr:IDB51C6FC572F6406E ;
+        :biblioNote         "reproduced from clear prints of the urga blocks"@en ;
+        :extentStatement    "7 v." ;
+        :hasSourcePrintery  bdr:G3JT12593 ;
+        :hasTitle           bdr:TT729E5D72CC46248F , bdr:TTDCB523D0BC5CF88A , bdr:TTF48606EFD0BCDC02 ;
+        :instanceEvent      bdr:EV64FD832E3D39A763 ;
+        :instanceHasReproduction  bdr:W5926 ;
+        :instanceOf         bdr:WA5926 ;
+        :note               bdr:NT3E63376ECF34DECF ;
+        :numberOfVolumes    7 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "mongolian lama gurudeva"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT3E63376ECF34DECF
+        a                   :Note ;
+        :noteText           "other examples\nFive volume printed gsung 'bum from Urga with other manuscript works which were not included. Described in v.2,  Materials for a history of Tibetan literature.\nCopies:\nOriental Institute u. 52, Gdk, State Library in Ulan Bator"@en .
+    
+    bdr:TT729E5D72CC46248F
+        a                   :CoverTitle ;
+        rdfs:label          "rje btsun bla ma 'dul 'dzin nag dban dpal ldan gyi gsung 'bum"@bo-alalc97 .
+    
+    bdr:TTDCB523D0BC5CF88A
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang dpal ldan/"@bo-x-ewts .
+    
+    bdr:TTF48606EFD0BCDC02
+        a                   :Title ;
+        rdfs:label          "the collected works of chos-rje nag-dban-dpal-ldan of urga"@en-x-mixed .
+}

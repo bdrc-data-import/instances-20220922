@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW9140 {
+    bda:LG1280AB428AF67BED
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW9140  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW9140 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "1c/MW9140.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW9140 ;
+        adm:logEntry        bda:LG1280AB428AF67BED , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA66FD793D575C2EB
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1C625A86EE310D95
+        a                   bdr:HollisId ;
+        rdf:value           "014261123" .
+    
+    bdr:MW9140  a           :Instance ;
+        skos:altLabel       "collected works (gsun 'bum) of Smin-glin Lo-chhen Dharma-shrI"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_d+harma shrI/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1C625A86EE310D95 ;
+        :extentStatement    "20 v." ;
+        :hasTitle           bdr:TT3FD940878FE1C484 , bdr:TT5DD72B5BA4DC4D2B ;
+        :instanceEvent      bdr:EVA66FD793D575C2EB ;
+        :instanceHasReproduction  bdr:W9140 ;
+        :instanceOf         bdr:WA22197 , bdr:WA9140 ;
+        :note               bdr:NT03B8784240BCBB3E , bdr:NT6A2ABCEFEB65AD73 ;
+        :numberOfVolumes    20 ;
+        :publisherLocation  "dehra dun"@en ;
+        :publisherName      "d.g. khochen tulku"@en ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "micro mint/"@bo-x-ewts .
+    
+    bdr:NT03B8784240BCBB3E
+        a                   :Note ;
+        :noteText           "1999 Dehra Dun edition. 20 v."@en .
+    
+    bdr:NT6A2ABCEFEB65AD73
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files of , tbrc volume number 2529-2548.\n\nCollected works (gsun 'bum) of Smin-glin Lo-chen Dharma-sri. -- Reproduced from various manuscripts and blockprints available in India and Nepal. -- Dehra Dun : D. G. Khochen Tulku, 1975-<1977>.\nv. 1-4, 6-7, 9-19.\nBQ7662 .S58 1975  75-904278..\nCopy: TBRC.\n\nGsung 'bum / Smin gling Lo chen Dharma shrii. -- [Chengdu : Southwest Minorities Training College, 198-?]\nPhotomechanical reprint.\nCopy: TBRC.\nTBRC has volumes 1, 2, 3, 10, 13, 14, 17, 18, 19\nunmarked (rtsis nyin byed snang ba)\n\nThe Collected works (gsun 'bum) of Smin-glin Lo-chhen Dharma-shri. -- Dehra Dun : D. G. Khochhen Tulku, [1999?]\n20 v.\nCopy: TBRC."@en .
+    
+    bdr:TT3FD940878FE1C484
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected works (gsun 'bum) of Smin-glin Lo-chhen Dharma-shrI"@en-x-mixed .
+    
+    bdr:TT5DD72B5BA4DC4D2B
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_d+harma shrI/"@bo-x-ewts .
+}

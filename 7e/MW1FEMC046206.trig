@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046206 {
+    bda:LG2AFC21E28AACCF83
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046206"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046206
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046206 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7e/MW1FEMC046206.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046206 ;
+        adm:logEntry        bda:LG2AFC21E28AACCF83 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF322A59156DB9A6E
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "030-B.04.10.01.II.1" .
+    
+    bdr:MF784836E68F4641EC
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "178" .
+    
+    bdr:MW1FEMC046206
+        a                   :Instance ;
+        skos:prefLabel      "ល្បើកលោកន្យៃ"@km , "Lpők lok naiy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF322A59156DB9A6E ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "7, 12, 14" ;
+        :hasTitle           bdr:TT40BEBD7302CF637C , bdr:TTF18C194A4262D184 ;
+        :instanceHasReproduction  bdr:W1FEMC036206 , bdr:W1FEMC046206 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF784836E68F4641EC ;
+        :note               bdr:NT8757994B1180EDE3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT8757994B1180EDE3
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT40BEBD7302CF637C
+        a                   :Title ;
+        rdfs:label          "ល្បើកលោកន្យៃ"@km .
+    
+    bdr:TTF18C194A4262D184
+        a                   :Title ;
+        rdfs:label          "Lpők lok naiy"@km-x-twktt .
+}

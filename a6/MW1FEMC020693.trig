@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020693 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020693
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020693 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a6/MW1FEMC020693.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020693 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0AD5B4D2E9F4BA1B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.326.III.1" .
+    
+    bdr:MW1FEMC020693
+        a                   :Instance ;
+        skos:prefLabel      "មិលិន្ទប្បញ្ហា"@km , "milindappañhā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0AD5B4D2E9F4BA1B ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT30778B1BBDE19670 , bdr:TT8058B17E305E8897 , bdr:TT8D309079BBE566D5 , bdr:TTB0300FA455A7F07E , bdr:TTB0F8EAF26D6EB133 , bdr:TTB4B0DD67F7AE3017 ;
+        :instanceHasReproduction  bdr:W1FEMC020693 ;
+        :instanceOf         bdr:WA1FEMC010044 , bdr:WA1FEMC020693 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTF209C9E0B2E17E24 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF209C9E0B2E17E24
+        a                   :Note ;
+        :contentLocationStatement  "pg. 127" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT30778B1BBDE19670
+        a                   :CoverTitle ;
+        rdfs:label          "kruṅ milindrādhirāj"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8D309079BBE566D5 .
+    
+    bdr:TT8058B17E305E8897
+        a                   :Title ;
+        rdfs:label          "មិលិន្ទប្បញ្ហា"@km .
+    
+    bdr:TT8D309079BBE566D5
+        a                   :CoverTitle ;
+        rdfs:label          "kruṅ mālindrādhīrāj"@km-x-twktt .
+    
+    bdr:TTB0300FA455A7F07E
+        a                   :Title ;
+        rdfs:label          "milindappañhā"@km-x-twktt .
+    
+    bdr:TTB0F8EAF26D6EB133
+        a                   :CoverTitle ;
+        rdfs:label          "ក្រុងមិលិន្ទ្រាធិរាជ"@km ;
+        :femcConversionOf   bdr:TTB4B0DD67F7AE3017 .
+    
+    bdr:TTB4B0DD67F7AE3017
+        a                   :CoverTitle ;
+        rdfs:label          "ក្រុងមាលិន្ទ្រាធីរាជ"@km .
+}

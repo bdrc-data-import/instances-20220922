@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG12076 {
+    bda:LGF167983CEF713BDF
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-27T10:27:30.6Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGFB6634878CBD9512
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-03-28T09:15:23.948Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG12076  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG12076 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "97/MW1KG12076.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG12076 ;
+        adm:logEntry        bda:LGF167983CEF713BDF , bda:LGFB6634878CBD9512 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F54C7A5813E2D4F
+        a                   :PublishedEvent ;
+        :eventWhen          "1982/1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5F61FE7B7E4CE289
+        a                   bdr:HollisId ;
+        rdf:value           "014255785" .
+    
+    bdr:MW1KG12076  a       :Instance ;
+        skos:prefLabel      "shes rab sbyin pas mdzad pa'i yig cha/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5F61FE7B7E4CE289 ;
+        :biblioNote         "hand written manuscripts in dbu med; preserved at Otani University"@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT101F1C4FE1576D1A , bdr:TT2B09CE5114708AC0 , bdr:TTF5F05E30B4D58862 ;
+        :instanceEvent      bdr:EV2F54C7A5813E2D4F ;
+        :instanceHasReproduction  bdr:W1KG12076 ;
+        :instanceOf         bdr:WA1KG12076 ;
+        :note               bdr:NTCB0FD511237F96B4 , bdr:NTCD5F83EA41E8CD73 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "京都市"@zh-hans ;
+        :publisherName      "大谷大学图书馆"@zh-hans ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NTCB0FD511237F96B4
+        a                   :Note ;
+        :noteText           "marked volumns as ca and tha"@en .
+    
+    bdr:NTCD5F83EA41E8CD73
+        a                   :Note ;
+        :noteText           "otani 13949-13954, 13956"@en .
+    
+    bdr:TT101F1C4FE1576D1A
+        a                   :Title ;
+        rdfs:label          "shes rab sbyin pas mdzad pa'i yig cha/"@bo-x-ewts .
+    
+    bdr:TT2B09CE5114708AC0
+        a                   :TitlePageTitle ;
+        rdfs:label          "nyi ma thang dpon slob shes rab sbyin pas mdzad pa'i bden gnyis kyi mtha' dpyod/"@bo-x-ewts .
+    
+    bdr:TTF5F05E30B4D58862
+        a                   :SpineTitle ;
+        rdfs:label          "shes rab sbyin pa/ yig cha/"@bo-x-ewts .
+}

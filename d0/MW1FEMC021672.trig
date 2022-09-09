@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021672 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021672
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021672 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d0/MW1FEMC021672.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021672 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID644DAA1049CAF22C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.581.III.2" .
+    
+    bdr:MFCB1A6A559962F0F2
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "133" ;
+        :microfilmStrip     "227" .
+    
+    bdr:MW1FEMC021672
+        a                   :Instance ;
+        skos:prefLabel      "មតកសូត្រ"@km , "matak sūtr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID644DAA1049CAF22C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT54496AA0A20A46C4 , bdr:TTA21CC130BDF487FD , bdr:TTB52F1E47A821CC16 , bdr:TTC75CA2A1B6E277BB , bdr:TTDFF49EA7FAA1B5CC , bdr:TTF5C409B41F909251 ;
+        :instanceHasReproduction  bdr:W1FEMC021672 ;
+        :instanceOf         bdr:WA1FEMC020006 , bdr:WA1FEMC021672 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFCB1A6A559962F0F2 ;
+        :note               bdr:NTD4A9D8471FF31CD2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD4A9D8471FF31CD2
+        a                   :Note ;
+        :contentLocationStatement  "pg. 301" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT54496AA0A20A46C4
+        a                   :CoverTitle ;
+        rdfs:label          "mat sūtr jhāpanakicc mahānisaṅso"@km-x-twktt .
+    
+    bdr:TTA21CC130BDF487FD
+        a                   :CoverTitle ;
+        rdfs:label          "មតសូត្រឈាបនកិច្ចមហានិសង្សោ"@km .
+    
+    bdr:TTB52F1E47A821CC16
+        a                   :CoverTitle ;
+        rdfs:label          "មតកសូត្រឈាបនកិច្ចមហានិសង្សោ"@km ;
+        :femcConversionOf   bdr:TTA21CC130BDF487FD .
+    
+    bdr:TTC75CA2A1B6E277BB
+        a                   :Title ;
+        rdfs:label          "matak sūtr"@km-x-twktt .
+    
+    bdr:TTDFF49EA7FAA1B5CC
+        a                   :CoverTitle ;
+        rdfs:label          "matak sūtr jhāpanakicc mahānisaṅso"@km-x-twktt ;
+        :femcConversionOf   bdr:TT54496AA0A20A46C4 .
+    
+    bdr:TTF5C409B41F909251
+        a                   :Title ;
+        rdfs:label          "មតកសូត្រ"@km .
+}

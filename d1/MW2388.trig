@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2388 {
+    bda:LG78BB0ACD63E62705
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW2388  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW2388 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d1/MW2388.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2388 ;
+        adm:logEntry        bda:LG78BB0ACD63E62705 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVECB6351876513FA8
+        a                   :PublishedEvent ;
+        :eventWhen          "1974"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5A9F799E8F2C515F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .D48 1974" .
+    
+    bdr:ID7364B9ABF007C1EA
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001381074-X" .
+    
+    bdr:IDAE17DF2306EF7EFF
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "74902534" .
+    
+    bdr:MW2388  a           :Instance , :SerialInstance ;
+        skos:prefLabel      "skyabs 'gro'i khrid yig thub bstan sgo 'byed/"@bo-x-ewts , "The collected works of Dbal-maṅ Dkon-mchog-rgyal-mtshan."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5A9F799E8F2C515F , bdr:ID7364B9ABF007C1EA , bdr:IDAE17DF2306EF7EFF ;
+        :authorshipStatement  "written at the behest of u ciumu chin dge slong dkon mchog yar 'phel at dge ldan bstan pa 'phel rgyas gling"@en ;
+        :biblioNote         "in the gsung 'bum of dbal mang dkon mchog rgyal mtshan the example from which this is reproduced is missing many texts"@en ;
+        :extentStatement    "v. 1, pp. 636-661" ;
+        :hasTitle           bdr:TTF633D2A56583DEAB , bdr:TTF64EFD46893228BC ;
+        :instanceEvent      bdr:EVECB6351876513FA8 ;
+        :instanceOf         bdr:WA2388 ;
+        :note               bdr:NTF4CB47307E525595 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "gyalten gelek namgyal"@en ;
+        :script             bdr:ScriptLatn ;
+        :serialInstanceOf   bdr:WAS11818 ;
+        :seriesNumber       "60-70" .
+    
+    bdr:NTF4CB47307E525595
+        a                   :Note ;
+        :noteText           "other examples:\n13 ff. in vol. 1 of the 12 vol. printed gsung 'bum in the potala collection\nalso in\ndpal ri bo dge ldan pa'i chos spyod sna tshogs kyi 'grel pa phyogs bsgrigs / cha ris skal bzang thogs med dang rngog rgyud 'jam dbyangs 'phrin las gnyis kyis zhu dag byas. -- lan kru'u : kan su'u mi rigs dpe skrung khang, 1997.  isbn 7-5421-0556-6. pp. 1-21."@en .
+    
+    bdr:TTF633D2A56583DEAB
+        a                   :CoverTitle ;
+        rdfs:label          "The collected works of Dbal-maṅ Dkon-mchog-rgyal-mtshan."@en-x-mixed .
+    
+    bdr:TTF64EFD46893228BC
+        a                   :Title ;
+        rdfs:label          "skyabs 'gro'i khrid yig thub bstan sgo 'byed/"@bo-x-ewts .
+}

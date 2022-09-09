@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021125 {
+    bda:LGD5BD192DA8C480F7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021125"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021125
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021125 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3c/MW1FEMC021125.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021125 ;
+        adm:logEntry        bda:LGD5BD192DA8C480F7 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID339433095DF9B51A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "C.62.VII" .
+    
+    bdr:MF19D144573BF5E1F1
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XVI" ;
+        :microfilmStrip     "41" .
+    
+    bdr:MW1FEMC021125
+        a                   :Instance ;
+        skos:prefLabel      "យោជ​នាដីកាអភិធម្មត្ថសង្គហ"@km , "yojanā ṭīkā abhidhammatthasaṅgaha"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID339433095DF9B51A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 5, 6, 8" ;
+        :hasTitle           bdr:TT132B7D44E49CAA4C , bdr:TT40ECD890C9548AF6 , bdr:TT7909FED7AD25F238 , bdr:TT832A5375542C55A5 ;
+        :instanceHasReproduction  bdr:W1FEMC021125 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF19D144573BF5E1F1 ;
+        :note               bdr:NT56345284A6654174 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "373" .
+    
+    bdr:NT56345284A6654174
+        a                   :Note ;
+        :contentLocationStatement  "pg. 203" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT132B7D44E49CAA4C
+        a                   :CoverTitle ;
+        rdfs:label          "យោ​ជនាដីកាអភិធម្មសង្គហ"@km .
+    
+    bdr:TT40ECD890C9548AF6
+        a                   :Title ;
+        rdfs:label          "យោជ​នាដីកាអភិធម្មត្ថសង្គហ"@km ;
+        :femcConversionOf   bdr:TT132B7D44E49CAA4C .
+    
+    bdr:TT7909FED7AD25F238
+        a                   :CoverTitle ;
+        rdfs:label          "yojanā ṭīkā abhidhammasaṅgaha"@km-x-twktt .
+    
+    bdr:TT832A5375542C55A5
+        a                   :Title ;
+        rdfs:label          "yojanā ṭīkā abhidhammatthasaṅgaha"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7909FED7AD25F238 .
+}

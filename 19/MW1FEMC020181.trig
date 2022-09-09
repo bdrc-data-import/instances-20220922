@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020181 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020181
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020181 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "19/MW1FEMC020181.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020181 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID200C6DC4FF86F904
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.74.III.1" .
+    
+    bdr:MFC3A5F808DE93D1A2
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "32" ;
+        :microfilmStrip     "58" .
+    
+    bdr:MW1FEMC020181
+        a                   :Instance ;
+        skos:prefLabel      "មិលិន្ទប្បញ្ហា"@km , "milindappañhā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID200C6DC4FF86F904 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT470F0250269831E5 , bdr:TT5194FFA6A3A13E1D , bdr:TT8343E1C410B154F8 , bdr:TT894ABCBB548728B9 , bdr:TT9B1AD440E37FFAB8 , bdr:TTBF87EB05957ECE71 ;
+        :instanceHasReproduction  bdr:W1FEMC020181 ;
+        :instanceOf         bdr:WA1FEMC010044 , bdr:WA1FEMC020181 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC3A5F808DE93D1A2 ;
+        :note               bdr:NT032B007C570DE0FB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "819" .
+    
+    bdr:NT032B007C570DE0FB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 37" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT470F0250269831E5
+        a                   :CoverTitle ;
+        rdfs:label          "នាគ្គសេន"@km .
+    
+    bdr:TT5194FFA6A3A13E1D
+        a                   :CoverTitle ;
+        rdfs:label          "nāggasen"@km-x-twktt .
+    
+    bdr:TT8343E1C410B154F8
+        a                   :Title ;
+        rdfs:label          "មិលិន្ទប្បញ្ហា"@km .
+    
+    bdr:TT894ABCBB548728B9
+        a                   :Title ;
+        rdfs:label          "milindappañhā"@km-x-twktt .
+    
+    bdr:TT9B1AD440E37FFAB8
+        a                   :CoverTitle ;
+        rdfs:label          "nāgasen"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5194FFA6A3A13E1D .
+    
+    bdr:TTBF87EB05957ECE71
+        a                   :CoverTitle ;
+        rdfs:label          "នាគសេន"@km ;
+        :femcConversionOf   bdr:TT470F0250269831E5 .
+}

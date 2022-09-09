@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022177 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022177
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022177 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "84/MW1FEMC022177.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022177 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDDB8B2087DE1520D5
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "a.164.V.1" .
+    
+    bdr:MF83EBD8476BD47D38
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "139" ;
+        :microfilmStrip     "233" .
+    
+    bdr:MW1FEMC022177
+        a                   :Instance ;
+        skos:prefLabel      "ថ្នាក់ព្រះខណិកាព្រះកោនាគមនោ"@km , "thnāk' braḥ khaṇikā braḥ konāgamano"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDB8B2087DE1520D5 ;
+        :biblioNote         "This manuscript was digitized from a film negative (Kodak Technical Pan, 35mm) produced during an earlier manuscript documentation project carried out by the Fonds pour l’Edition des Manuscripts du Cambodge of the École française d'Extrême-Orient (EFEO-FEMC). The digitization was carried out by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imaging Services and the FEMC, with the permission of the EFEO. We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT3E9644374632CD66 , bdr:TT59365537E0F5E5CE , bdr:TT7C65B786ED77E54F , bdr:TTF37381201E6CF91E ;
+        :instanceOf         bdr:WA1FEMC022177 , bdr:WA1FEMC070032 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF83EBD8476BD47D38 ;
+        :note               bdr:NTA75287D1928AEF32 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1532" .
+    
+    bdr:NTA75287D1928AEF32
+        a                   :Note ;
+        :contentLocationStatement  "pg. 388" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT3E9644374632CD66
+        a                   :Title ;
+        rdfs:label          "thnāk' braḥ khaṇikā braḥ konāgamano"@km-x-twktt ;
+        :femcConversionOf   bdr:TT59365537E0F5E5CE .
+    
+    bdr:TT59365537E0F5E5CE
+        a                   :CoverTitle ;
+        rdfs:label          "thnāk braḥ Aokhannikār braḥ nāggammano"@km-x-twktt .
+    
+    bdr:TT7C65B786ED77E54F
+        a                   :CoverTitle ;
+        rdfs:label          "ថ្នាកព្រះខន្និកាព្រះនាគ្គម្មនោ"@km .
+    
+    bdr:TTF37381201E6CF91E
+        a                   :Title ;
+        rdfs:label          "ថ្នាក់ព្រះខណិកាព្រះកោនាគមនោ"@km ;
+        :femcConversionOf   bdr:TT7C65B786ED77E54F .
+}

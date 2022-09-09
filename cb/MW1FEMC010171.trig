@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010171 {
+    bda:LG1DB7008B4D069C82
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010171"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010171
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010171 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "cb/MW1FEMC010171.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010171 ;
+        adm:logEntry        bda:LG1DB7008B4D069C82 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC031346 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:ID5B6005087BADE275
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "040-PP.02.01.01.III.5" .
+    
+    bdr:MFB0100F3601FEB1F6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "6" ;
+        :microfilmStrip     "23" .
+    
+    bdr:MW1FEMC010171
+        a                   :Instance ;
+        skos:prefLabel      "មហាជនក"@km , "mahā janak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5B6005087BADE275 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1206AAC19C7BB3A6 , bdr:TT128AC3ADA5C8B885 , bdr:TT57A4208614D070B0 , bdr:TT6E5C27F1003D27E6 , bdr:TTECD573C6B182C580 , bdr:TTEE71426E6108BC48 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFB0100F3601FEB1F6 ;
+        :note               bdr:NT2EEF0AC88E477F7B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2EEF0AC88E477F7B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 87" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1206AAC19C7BB3A6
+        a                   :CoverTitle ;
+        rdfs:label          "មហារជីនុករាជកុមារ"@km .
+    
+    bdr:TT128AC3ADA5C8B885
+        a                   :CoverTitle ;
+        rdfs:label          "mahār jīnuk rāj kumār"@km-x-twktt .
+    
+    bdr:TT57A4208614D070B0
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT6E5C27F1003D27E6
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTECD573C6B182C580
+        a                   :Title ;
+        rdfs:label          "មហាជនក"@km ;
+        :femcConversionOf   bdr:TT1206AAC19C7BB3A6 .
+    
+    bdr:TTEE71426E6108BC48
+        a                   :Title ;
+        rdfs:label          "mahā janak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT128AC3ADA5C8B885 .
+}

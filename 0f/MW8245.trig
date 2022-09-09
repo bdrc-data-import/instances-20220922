@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8245 {
+    bda:LG935460808575DAD4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW8245  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW8245 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "0f/MW8245.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8245 ;
+        adm:logEntry        bda:LG935460808575DAD4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9FE5081D8A00C552
+        a                   :PublishedEvent ;
+        :eventWhen          "1991"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8D42DA6CCED05A88
+        a                   bdr:HollisId ;
+        rdf:value           "014261079" .
+    
+    bdr:ID908180BACAE0C9D3
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "722300388x" .
+    
+    bdr:IDBFFD28C63E7E6DFF
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98901109" .
+    
+    bdr:IDE55F15D7869FA5CB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCMA 2000/01879(M)" .
+    
+    bdr:MW8245  a           :Instance ;
+        skos:altLabel       "xizang gu dian yin yue"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "mig yid rna ba'i dga' ston/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8D42DA6CCED05A88 , bdr:ID908180BACAE0C9D3 , bdr:IDBFFD28C63E7E6DFF , bdr:IDE55F15D7869FA5CB ;
+        :authorshipStatement  "sde srid sangs rgyas rgya mtshos brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi 1"@bo-x-ewts ;
+        :extentStatement    "2, 5, 111 p" ;
+        :hasTitle           bdr:TT7DA1BC57A5301B7B , bdr:TT84F8980B7715925F , bdr:TTE3C668D8A4B6A5A3 ;
+        :instanceEvent      bdr:EV9FE5081D8A00C552 ;
+        :instanceHasReproduction  bdr:W8245 ;
+        :instanceOf         bdr:WA8245 ;
+        :note               bdr:NT70C80DEE28FAEDA7 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT70C80DEE28FAEDA7
+        a                   :Note ;
+        :noteText           "scanned for preservation purposes only; not for preservation\n5001;"@en .
+    
+    bdr:TT7DA1BC57A5301B7B
+        a                   :TitlePageTitle ;
+        rdfs:label          "gna' bo'i lugs bzang ya rabs srol gtod pa'i deb ther mig yid rna ba'i dga' ston 'gugs pa'i lcags kyo/"@bo-x-ewts .
+    
+    bdr:TT84F8980B7715925F
+        a                   :ColophonTitle ;
+        rdfs:label          "xizang gu dian yin yue"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTE3C668D8A4B6A5A3
+        a                   :Title ;
+        rdfs:label          "mig yid rna ba'i dga' ston/"@bo-x-ewts .
+}

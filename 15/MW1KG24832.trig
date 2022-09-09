@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG24832 {
+    bda:LG2A1DA7FBB4ECC500
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-06T12:52:40.587Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA64002A8BBBC0F0A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T22:14:28.455Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW1KG24832  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG24832 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "15/MW1KG24832.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG24832 ;
+        adm:logEntry        bda:LG2A1DA7FBB4ECC500 , bda:LGA64002A8BBBC0F0A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5F53F1E70BB78B40
+        a                   :PublishedEvent ;
+        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID40A872D804B88FF6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSC 2015/00007 (P)" .
+    
+    bdr:ID4A628D19ADAFB918
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105138067" .
+    
+    bdr:ID9BE7BF7154F10815
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2015363736" .
+    
+    bdr:MW1KG24832  a       :Instance ;
+        skos:altLabel       "游子亲笔"@zh-hans ;
+        skos:prefLabel      "'khyam po'i zin bris/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID40A872D804B88FF6 , bdr:ID4A628D19ADAFB918 , bdr:ID9BE7BF7154F10815 ;
+        :authorshipStatement  "rtsom pa po/ rnam rgyal/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 343 p." ;
+        :hasTitle           bdr:TT357F11F34D8BA054 , bdr:TTA8935D79B5DA3CB3 , bdr:TTF060A5095B644039 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV5F53F1E70BB78B40 ;
+        :instanceHasReproduction  bdr:W1KG24832 ;
+        :instanceOf         bdr:WA1KG24832 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT357F11F34D8BA054
+        a                   :OtherTitle ;
+        rdfs:label          "游子亲笔"@zh-hans .
+    
+    bdr:TTA8935D79B5DA3CB3
+        a                   :Title ;
+        rdfs:label          "'khyam po'i zin bris/"@bo-x-ewts .
+    
+    bdr:TTF060A5095B644039
+        a                   :OtherTitle ;
+        rdfs:label          "you zi qin bi"@zh-latn-pinyin-x-ndia .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043778 {
+    bda:LG879848966FABB551
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043778"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043778
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043778 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0a/MW1FEMC043778.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043778 ;
+        adm:logEntry        bda:LG879848966FABB551 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD774913C649B7039
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "016-B.11.11.04.III.4" .
+    
+    bdr:MFE2C2686874B75E33
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "180" .
+    
+    bdr:MW1FEMC043778
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្មត្រៃ្យត្រិង"@km , "abhidhamm traiy triṅ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD774913C649B7039 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2, 4, 5" ;
+        :hasTitle           bdr:TTAA3CBB5BDF2D1900 , bdr:TTC56E80C9674E0EFD ;
+        :instanceHasReproduction  bdr:W1FEMC033778 , bdr:W1FEMC043778 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE2C2686874B75E33 ;
+        :note               bdr:NT1D18400760DA925F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1D18400760DA925F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTAA3CBB5BDF2D1900
+        a                   :Title ;
+        rdfs:label          "abhidhamm traiy triṅ"@km-x-twktt .
+    
+    bdr:TTC56E80C9674E0EFD
+        a                   :Title ;
+        rdfs:label          "អភិធម្មត្រៃ្យត្រិង"@km .
+}

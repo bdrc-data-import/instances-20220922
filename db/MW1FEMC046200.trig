@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046200 {
+    bda:LG69AF2916FC17ED76
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046200"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046200
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046200 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "db/MW1FEMC046200.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046200 ;
+        adm:logEntry        bda:LG69AF2916FC17ED76 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID049C275F572B2A03
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "024-B.04.10.01.III.1" .
+    
+    bdr:MF55EA42369F4F263E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "178" .
+    
+    bdr:MW1FEMC046200
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះធម្មធាតុ (ក-ឃា)"@km , "braḥ dhamma dhātu"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID049C275F572B2A03 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT0C59998CD7A639A0 , bdr:TT87B952331075E7FB ;
+        :instanceHasReproduction  bdr:W1FEMC036200 , bdr:W1FEMC046200 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF55EA42369F4F263E ;
+        :note               bdr:NT445BFBE73F8632F5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT445BFBE73F8632F5
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0C59998CD7A639A0
+        a                   :Title ;
+        rdfs:label          "ព្រះធម្មធាតុ (ក-ឃា)"@km .
+    
+    bdr:TT87B952331075E7FB
+        a                   :Title ;
+        rdfs:label          "braḥ dhamma dhātu"@km-x-twktt .
+}

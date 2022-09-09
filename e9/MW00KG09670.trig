@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09670 {
+    bda:LG1E78CF35E3CDD9B6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-05-30T16:32:29.516Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released first time"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG9954617AF5501A19
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-12-20T14:45:50.353Z"^^xsd:dateTime ;
+        adm:logMessage      "changed author and added chinese lang title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09670  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09670 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "e9/MW00KG09670.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09670 ;
+        adm:logEntry        bda:LG1E78CF35E3CDD9B6 , bda:LG9954617AF5501A19 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV67F425F54B71DA6B
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDABA053360813691A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223017236" .
+    
+    bdr:IDCA6DEBC30F3B095F
+        a                   bdr:HollisId ;
+        rdf:value           "014254535" .
+    
+    bdr:MW00KG09670  a      :Instance ;
+        skos:prefLabel      "'bri gung grub dbang a mgon rin po che'i rnam thar/"@bo-x-ewts , "直孔禅王阿贡传"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDABA053360813691A , bdr:IDCA6DEBC30F3B095F ;
+        :authorshipStatement  "'bri gung dkon mchog rgya mtshos/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "163 p." ;
+        :hasTitle           bdr:TT7609D507D54D246A , bdr:TT778B5407B5F1CC37 , bdr:TT8A313C04F941B63B , bdr:TTBB08EDAF438C1937 ;
+        :instanceEvent      bdr:EV67F425F54B71DA6B ;
+        :instanceHasReproduction  bdr:W00KG09670 ;
+        :instanceOf         bdr:WA00KG09670 ;
+        :note               bdr:NT99F9FB99CECAC3FB ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:NT99F9FB99CECAC3FB
+        a                   :Note ;
+        :noteText           "Biography is in both Tibetan and Chinese language"@en .
+    
+    bdr:TT7609D507D54D246A
+        a                   :Title ;
+        rdfs:label          "'bri gung grub dbang a mgon rin po che'i rnam thar/"@bo-x-ewts .
+    
+    bdr:TT778B5407B5F1CC37
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "直孔禅王阿贡传"@zh-hans .
+    
+    bdr:TT8A313C04F941B63B
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zhi kong chan wang a gong zhuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTBB08EDAF438C1937
+        a                   :TitlePageTitle ;
+        rdfs:label          "grub pa'i dbang phyug chen po a mgon rdo rje 'chang gi rnam thar rags bsdus bka' brgyud bstan pa'i mdzes rgyan/"@bo-x-ewts .
+}

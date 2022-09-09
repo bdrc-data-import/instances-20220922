@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29235 {
+    bda:LGA7E46720678E96E4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29235  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29235 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b9/MW29235.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29235 ;
+        adm:logEntry        bda:LGA7E46720678E96E4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFE856B08DC830350
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID30433393B7F0C22F
+        a                   bdr:HollisId ;
+        rdf:value           "014259952" .
+    
+    bdr:ID95D9E12B0A288793
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7536731027" .
+    
+    bdr:MW29235  a          :Instance ;
+        skos:altLabel       "wen hua jing shen"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rig gnas snying stobs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID30433393B7F0C22F , bdr:ID95D9E12B0A288793 ;
+        :authorshipStatement  "nyi gzhon gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "282 p." ;
+        :hasTitle           bdr:TT5EC640D3A81D98B4 , bdr:TT83295A5B24B12ABB ;
+        :instanceEvent      bdr:EVFE856B08DC830350 ;
+        :instanceHasReproduction  bdr:W29235 ;
+        :instanceOf         bdr:WA29235 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "kun ming /"@bo-x-ewts ;
+        :publisherName      "yun nan mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS29235 .
+    
+    bdr:TT5EC640D3A81D98B4
+        a                   :ColophonTitle ;
+        rdfs:label          "wen hua jing shen"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT83295A5B24B12ABB
+        a                   :Title ;
+        rdfs:label          "rig gnas snying stobs/"@bo-x-ewts .
+}

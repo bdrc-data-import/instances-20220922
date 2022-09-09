@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021180 {
+    bda:LGB7787A3771F0F61A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021180"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021180
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021180 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3f/MW1FEMC021180.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021180 ;
+        adm:logEntry        bda:LGB7787A3771F0F61A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC62334432326BD73
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "C*.117.VII" .
+    
+    bdr:MFD40F9FBE7844F341
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "IX" ;
+        :microfilmStrip     "34" .
+    
+    bdr:MW1FEMC021180
+        a                   :Instance ;
+        skos:prefLabel      "សារត្ថវិលាសនីដីកាគណ្ឋដ្ឋី"@km , "sāratthavilāsanī ṭīkā gaṇṭhaṭṭhī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC62334432326BD73 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TTB49C2267CBE2D8C2 , bdr:TTD166AFE8370DE353 , bdr:TTFB30F68BC8C1377B , bdr:TTFDD5FEAE8F6E4766 ;
+        :instanceHasReproduction  bdr:W1FEMC021180 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD40F9FBE7844F341 ;
+        :note               bdr:NT53F36CF9B7F0B121 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "396" .
+    
+    bdr:NT53F36CF9B7F0B121
+        a                   :Note ;
+        :contentLocationStatement  "pg. 214" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TTB49C2267CBE2D8C2
+        a                   :Title ;
+        rdfs:label          "sāratthavilāsanī ṭīkā gaṇṭhaṭṭhī"@km-x-twktt ;
+        :femcConversionOf   bdr:TTFB30F68BC8C1377B .
+    
+    bdr:TTD166AFE8370DE353
+        a                   :CoverTitle ;
+        rdfs:label          "សារត្ថវិលាសនីដិកាគណ្ឋដ្ឋិ"@km .
+    
+    bdr:TTFB30F68BC8C1377B
+        a                   :CoverTitle ;
+        rdfs:label          "sāratthavilāsanī ṭikā gaṇṭhaṭṭhi"@km-x-twktt .
+    
+    bdr:TTFDD5FEAE8F6E4766
+        a                   :Title ;
+        rdfs:label          "សារត្ថវិលាសនីដីកាគណ្ឋដ្ឋី"@km ;
+        :femcConversionOf   bdr:TTD166AFE8370DE353 .
+}

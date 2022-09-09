@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2KG209050 {
+    bda:LG79DB1CD4BDC1E5DB
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-11-22T15:58:53.077Z"^^xsd:dateTime ;
+        adm:logMessage      "simple cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA1ED346DDF194ED6
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-01-05T07:29:52.878Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW2KG209050  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW2KG209050 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "03/MW2KG209050.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2KG209050 ;
+        adm:logEntry        bda:LG79DB1CD4BDC1E5DB , bda:LGA1ED346DDF194ED6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9F70422D3F317A46
+        a                   :PublishedEvent ;
+        :eventWhen          "2012,2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE434F11C32FE1E2B
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223034272" .
+    
+    bdr:MW2KG209050  a      :Instance ;
+        skos:altLabel       "life in the city"@en , "城市生活——万玛才旦小说集"@zh-hans ;
+        skos:prefLabel      "grong khyer gyi 'tsho ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE434F11C32FE1E2B ;
+        :authorshipStatement  "pad+ma tshe brtan nas brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs gnyis pa/"@bo-x-ewts ;
+        :extentStatement    "234 p." ;
+        :hasTitle           bdr:TT0C30E2A20EDEA4E0 , bdr:TTE44CFF066E2FB68B , bdr:TTEE497EFC0C56FE3B ;
+        :instanceEvent      bdr:EV9F70422D3F317A46 ;
+        :instanceHasReproduction  bdr:W2KG209050 ;
+        :instanceOf         bdr:WA2KG209050 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0C30E2A20EDEA4E0
+        a                   :OtherTitle ;
+        rdfs:label          "life in the city"@en .
+    
+    bdr:TTE44CFF066E2FB68B
+        a                   :OtherTitle ;
+        rdfs:label          "城市生活——万玛才旦小说集"@zh-hans .
+    
+    bdr:TTEE497EFC0C56FE3B
+        a                   :Title ;
+        rdfs:label          "grong khyer gyi 'tsho ba/"@bo-x-ewts .
+}

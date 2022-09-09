@@ -1,0 +1,74 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22070 {
+    bda:LG09A1F5105059274C
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T10:39:49.545Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG1E1127C36DC0B3D1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:MW22070  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22070 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "89/MW22070.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22070 ;
+        adm:logEntry        bda:LG09A1F5105059274C , bda:LG1E1127C36DC0B3D1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVE273264016BA2823
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID234E9B658FCBAEC6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 M4 1983" .
+    
+    bdr:IDFEB9AC350CA19BB8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83907627" .
+    
+    bdr:MW22070  a          :Instance ;
+        skos:prefLabel      "me gling g.yul 'khrug"@bo-x-ewts , "the me gling g.yul 'khrug version of the tibetan gesar epic"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID234E9B658FCBAEC6 , bdr:IDFEB9AC350CA19BB8 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :extentStatement    "328 p." ;
+        :hasTitle           bdr:TTB828EF8F2C38909B , bdr:TTC7B5A550A03AEADD ;
+        :instanceEvent      bdr:EVE273264016BA2823 ;
+        :instanceOf         bdr:WA22069 , bdr:WA22070 ;
+        :note               bdr:NT1A2AD2B341B009CB ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dolanji"@en ;
+        :publisherName      "p.l. sonam gyaltsen"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT1A2AD2B341B009CB
+        a                   :Note ;
+        :noteSource         bdr:MW22069 ;
+        :noteText           "reprinted of the 1982 lhasa people's publishing house edition"@en .
+    
+    bdr:TTB828EF8F2C38909B
+        a                   :TitlePageTitle ;
+        rdfs:label          "the me gling g.yul 'khrug version of the tibetan gesar epic"@en .
+    
+    bdr:TTC7B5A550A03AEADD
+        a                   :Title ;
+        rdfs:label          "me gling g.yul 'khrug"@bo-x-ewts .
+}

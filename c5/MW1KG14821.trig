@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14821 {
+    bda:LG19631EABDBAB2D49
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-09-06T10:17:16.924Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14821  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14821 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c5/MW1KG14821.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14821 ;
+        adm:logEntry        bda:LG19631EABDBAB2D49 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR729FEBCF657F356E
+        a                   :AgentAsCreator ;
+        :agent              bdr:P264 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV1DDDDECBCAE61027
+        a                   :PublishedEvent ;
+        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDEBD0E80AADA5F6C0
+        a                   bdr:HollisId ;
+        rdf:value           "014256248" .
+    
+    bdr:MW1KG14821  a       :Instance ;
+        skos:altLabel       "rinchen terzod - the precious collection of hidden treasures"@en ;
+        skos:prefLabel      "rin chen gter mdzod kyi dkar chag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEBD0E80AADA5F6C0 ;
+        :creator            bdr:CR729FEBCF657F356E ;
+        :extentStatement    "120 p." ;
+        :hasSourcePrintery  bdr:G3JT12497 ;
+        :hasTitle           bdr:TTA1AD98DF94A55D43 , bdr:TTF577EF287BE84A67 ;
+        :instanceEvent      bdr:EV1DDDDECBCAE61027 ;
+        :instanceHasReproduction  bdr:W1KG14821 ;
+        :instanceOf         bdr:WA1KG14821 ;
+        :note               bdr:NT260DD2CA53FEA36A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "sikkim research institute of tibetology"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT260DD2CA53FEA36A
+        a                   :Note ;
+        :noteText           "in tibetan; introduction in english"@en .
+    
+    bdr:TTA1AD98DF94A55D43
+        a                   :OtherTitle ;
+        rdfs:label          "rinchen terzod - the precious collection of hidden treasures"@en .
+    
+    bdr:TTF577EF287BE84A67
+        a                   :Title ;
+        rdfs:label          "rin chen gter mdzod kyi dkar chag"@bo-x-ewts .
+}

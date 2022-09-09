@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23704 {
+    bda:LG92A813AC4B9B8FB9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF6259B491DFA4054
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-24T16:45:32.082Z"^^xsd:dateTime ;
+        adm:logMessage      "aded print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23704  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23704 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "67/MW23704.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23704 ;
+        adm:logEntry        bda:LG92A813AC4B9B8FB9 , bda:LGF6259B491DFA4054 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDB25A178A1C7AC60
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3E438FF4B0BA50B6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902207" .
+    
+    bdr:IDF58E495BDD62683F
+        a                   bdr:HollisId ;
+        rdf:value           "014259050" .
+    
+    bdr:MW23704  a          :Instance ;
+        skos:altLabel       "tibetan legal materials : a collection of texts on the legal and administrative structure of tibet"@en ;
+        skos:prefLabel      "bod khrims yig skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3E438FF4B0BA50B6 , bdr:IDF58E495BDD62683F ;
+        :biblioNote         "reproduced from a manuscript deb-ther preserved in the library of tibetan works and archives"@en ;
+        :dimensionsStatement  "12 x 38 cm." ;
+        :extentStatement    "136 p." ;
+        :hasTitle           bdr:TT4E01119B700B265E , bdr:TT58090D2ABC8C3C5E ;
+        :instanceEvent      bdr:EVDB25A178A1C7AC60 ;
+        :instanceHasReproduction  bdr:W23704 ;
+        :instanceOf         bdr:WA23704 ;
+        :note               bdr:NTFD4B784C2804E975 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works & archives"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NTFD4B784C2804E975
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 2476"@en .
+    
+    bdr:TT4E01119B700B265E
+        a                   :TitlePageTitle ;
+        rdfs:label          "tibetan legal materials : a collection of texts on the legal and administrative structure of tibet"@en .
+    
+    bdr:TT58090D2ABC8C3C5E
+        a                   :Title ;
+        rdfs:label          "bod khrims yig skor/"@bo-x-ewts .
+}

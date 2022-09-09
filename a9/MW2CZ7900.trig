@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2CZ7900 {
+    bda:LG320335A0EAB0C4A2
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-09-09T11:36:09.104Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG5504789280305B9B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-12-15T11:39:02.977Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGECC62CE772D40EAB
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-15T14:00:10.983Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2CZ7900  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW2CZ7900 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "a9/MW2CZ7900.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ7900 ;
+        adm:logEntry        bda:LG320335A0EAB0C4A2 , bda:LG5504789280305B9B , bda:LGECC62CE772D40EAB , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE063DACF8CE1DF9E
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDA4EF761A991B0722
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83901056" .
+    
+    bdr:IDD5E72F3B62483F8C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4385 .B78 1983" .
+    
+    bdr:IDD6BAD5377B1F0B58
+        a                   bdr:HollisId ;
+        rdf:value           "014260234" .
+    
+    bdr:MW2CZ7900  a        :Instance ;
+        skos:prefLabel      "phar phyin spyi don/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA4EF761A991B0722 , bdr:IDD5E72F3B62483F8C , bdr:IDD6BAD5377B1F0B58 ;
+        :extentStatement    "764 p." ;
+        :hasSourcePrintery  bdr:G2CN10853 ;
+        :hasTitle           bdr:TT21A77A5B8D127358 , bdr:TT3897F28602022FEF ;
+        :instanceEvent      bdr:EVE063DACF8CE1DF9E ;
+        :instanceHasReproduction  bdr:W2CZ7900 ;
+        :instanceOf         bdr:WA2CZ7900 ;
+        :note               bdr:NTB9E3E103DF01D072 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "mongolian lama gurudeva on behalf of geshe lobsang tharchin"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTB9E3E103DF01D072
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TT21A77A5B8D127358
+        a                   :TitlePageTitle ;
+        rdfs:label          "bstan bcos mngon par rtogs pa'i rgyan rtsa 'grel spyi don rnam bshad snying po rgyan gyi snang ba/"@bo-x-ewts .
+    
+    bdr:TT3897F28602022FEF
+        a                   :Title ;
+        rdfs:label          "phar phyin spyi don/"@bo-x-ewts .
+}

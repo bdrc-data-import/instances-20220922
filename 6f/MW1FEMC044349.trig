@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044349 {
+    bda:LGA0D214A78C75B06D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044349"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044349
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044349 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "6f/MW1FEMC044349.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044349 ;
+        adm:logEntry        bda:LGA0D214A78C75B06D , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8F5E606FD854F52A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "005-B.11.12.02.III.5" .
+    
+    bdr:MF279275B755454A58
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "201" .
+    
+    bdr:MW1FEMC044349
+        a                   :Instance ;
+        skos:prefLabel      "សូពារសិយ្មា, ច័ន្ទកូម្មា (៥១-៨៦, ជ-ឈោ)"@km , "sūbārsiyām, cand kūmmā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8F5E606FD854F52A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT39F5EEE344CD4433 , bdr:TT842154F43B4DBECE ;
+        :instanceHasReproduction  bdr:W1FEMC034349 , bdr:W1FEMC044349 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF279275B755454A58 ;
+        :note               bdr:NT2BFC9B1ACFE958E9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2BFC9B1ACFE958E9
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT39F5EEE344CD4433
+        a                   :Title ;
+        rdfs:label          "sūbārsiyām, cand kūmmā"@km-x-twktt .
+    
+    bdr:TT842154F43B4DBECE
+        a                   :Title ;
+        rdfs:label          "សូពារសិយ្មា, ច័ន្ទកូម្មា (៥១-៨៦, ជ-ឈោ)"@km .
+}

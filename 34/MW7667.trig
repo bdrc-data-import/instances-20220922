@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW7667 {
+    bda:LG934CFD84F060A70D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW7667  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW7667 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "34/MW7667.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7667 ;
+        adm:logEntry        bda:LG934CFD84F060A70D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV05B1DF5BC087EEE1
+        a                   :PublishedEvent ;
+        :eventWhen          "1992"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7B32EF8D3DA637EA
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542100858" .
+    
+    bdr:ID80B80BFEBDB8F447
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ286 .S86 1992" .
+    
+    bdr:ID8C229F9887480F68
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915979" .
+    
+    bdr:IDB069041C29EE5D75
+        a                   bdr:HollisId ;
+        rdf:value           "014261053" .
+    
+    bdr:MW7667  a           :Instance ;
+        skos:altLabel       "sung pa fo chiao shih"@zh-latn-wadegile ;
+        skos:prefLabel      "chos 'byung dpag bsam ljon bzang /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7B32EF8D3DA637EA , bdr:ID80B80BFEBDB8F447 , bdr:ID8C229F9887480F68 , bdr:IDB069041C29EE5D75 ;
+        :authorshipStatement  "sum pa ye shes dpal 'byor gyis mdzad/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "7. 4, 1021 p." ;
+        :hasTitle           bdr:TT71FF471255DF1C21 , bdr:TT83A78B5C1D3C08E7 , bdr:TTEEEB4E8C7C9C5060 ;
+        :instanceEvent      bdr:EV05B1DF5BC087EEE1 ;
+        :instanceHasReproduction  bdr:W7667 ;
+        :instanceOf         bdr:WA7667 ;
+        :note               bdr:NT4D0FCCF1EE75B9BC ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan chou"@en ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT4D0FCCF1EE75B9BC
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans for preservation purposes; not for distribution\n4278\n\ntbrc also holds a digitally scanned edition from the original blocks in the collection of dr. lokesh chandra\nv. 1, 417 ff.\nin w29227"@en .
+    
+    bdr:TT71FF471255DF1C21
+        a                   :Title ;
+        rdfs:label          "chos 'byung dpag bsam ljon bzang /"@bo-x-ewts .
+    
+    bdr:TT83A78B5C1D3C08E7
+        a                   :ColophonTitle ;
+        rdfs:label          "sung pa fo chiao shih"@zh-latn-wadegile .
+    
+    bdr:TTEEEB4E8C7C9C5060
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags yul rgya nag chen po bod dang sog yul du dam pa'i chos 'byung tshul dpag bsam ljon bzang /"@bo-x-ewts .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30142 {
+    bda:LGC0AFE7A1D666EDB9
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-02T16:23:46.687Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGD8CC2CDB04EBD958
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-04-16T15:51:30.542Z"^^xsd:dateTime ;
+        adm:logMessage      "added bibliographical title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF6D37465DC2E66CB
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30142  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30142 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a8/MW30142.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30142 ;
+        adm:logEntry        bda:LGC0AFE7A1D666EDB9 , bda:LGD8CC2CDB04EBD958 , bda:LGF6D37465DC2E66CB , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV628F0D42EFD35F94
+        a                   :PublishedEvent ;
+        :eventWhen          "1986"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDB88750C48C328A09
+        a                   bdr:HollisId ;
+        rdf:value           "014260651" .
+    
+    bdr:MW30142  a          :Instance , :SerialInstance ;
+        skos:altLabel       "three tibetan instructions on acupuncture and moxibustion"@en ;
+        skos:prefLabel      "sna tshogs man ngag nyer lnga brgya rtsa 'chi med bdud rtsi shel dkar phreng ba sogs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB88750C48C328A09 ;
+        :biblioNote         "reproduced from rare manuscripts from the library of bkra-sis-sgan by o-rgyan-rnam-rgyal"@en ;
+        :extentStatement    "211 p." ;
+        :hasTitle           bdr:TT151A2BE3A00AAFBC , bdr:TT1812482F9DF6104B ;
+        :instanceEvent      bdr:EV628F0D42EFD35F94 ;
+        :instanceHasReproduction  bdr:W30142 ;
+        :instanceOf         bdr:WA30142 ;
+        :note               bdr:NTAADE7F979BCEB64C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "t. sonam and d.l. tashigang"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 143" .
+    
+    bdr:NTAADE7F979BCEB64C
+        a                   :Note ;
+        :noteText           "contents: sna tshogs man ngag nyer lnga brgya rtsa 'chi med bdud rtsi shel dkar phreng ba zhes bya ba mkhas mang yongs kyi mgul rgyan.--dpyad chog gtar ga'i gdams pa nyes 'khrugs rnyog drungs 'byin byed kar+ka ta.--me btsa'i gdams pa rgyas par spros pa gsal bar ston pa zin bris rab dwangs shel dkar me long."@en .
+    
+    bdr:TT151A2BE3A00AAFBC
+        a                   :TitlePageTitle ;
+        rdfs:label          "three tibetan instructions on acupuncture and moxibustion"@en .
+    
+    bdr:TT1812482F9DF6104B
+        a                   :Title ;
+        rdfs:label          "sna tshogs man ngag nyer lnga brgya rtsa 'chi med bdud rtsi shel dkar phreng ba sogs/"@bo-x-ewts .
+}

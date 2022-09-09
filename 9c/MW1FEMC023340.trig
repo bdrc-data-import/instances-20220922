@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023340 {
+    bda:LGBD746AB5B96B26CC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023340"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023340
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023340 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "9c/MW1FEMC023340.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023340 ;
+        adm:logEntry        bda:LGBD746AB5B96B26CC , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8B668AFA268EAC5E
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.429.VII" .
+    
+    bdr:MW1FEMC023340
+        a                   :Instance ;
+        skos:prefLabel      "ភិក្ខុប្បាដិមោក្ខ (ក្រាំង)"@pi-khmr , "bhikkhuppāṭimokkha"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8B668AFA268EAC5E ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT9EC3E9E3BFFE5046 , bdr:TTAB0E0F76C6C4301F ;
+        :instanceHasReproduction  bdr:W1FEMC023340 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :note               bdr:NT2631BAD3CF8F33AC , bdr:NT9221998D483FB9B0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2631BAD3CF8F33AC
+        a                   :Note ;
+        :noteText           "should we write (ក្រាំង) ?"@en .
+    
+    bdr:NT9221998D483FB9B0
+        a                   :Note ;
+        :contentLocationStatement  "pg. 575" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT9EC3E9E3BFFE5046
+        a                   :Title ;
+        rdfs:label          "bhikkhuppāṭimokkha"@pi-x-twktt .
+    
+    bdr:TTAB0E0F76C6C4301F
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ (ក្រាំង)"@pi-khmr .
+}

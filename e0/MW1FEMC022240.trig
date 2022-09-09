@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022240 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022240
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022240 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e0/MW1FEMC022240.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022240 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA7233C5FC6DE9304
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.318.V.1" .
+    
+    bdr:MF28CDB9AE863E4D54
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "141" ;
+        :microfilmStrip     "235" .
+    
+    bdr:MW1FEMC022240
+        a                   :Instance ;
+        skos:prefLabel      "ត្រៃភូមិ"@km , "trai bhūmi"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA7233C5FC6DE9304 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-10" ;
+        :hasTitle           bdr:TT387D88B44140FB99 , bdr:TT3A9762566F1F5BD9 , bdr:TT681597FB4E004ECD , bdr:TTF1EC16F4406BAA88 ;
+        :instanceHasReproduction  bdr:W1FEMC022240 ;
+        :instanceOf         bdr:WA1FEMC022240 , bdr:WA1FEMC070020 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF28CDB9AE863E4D54 ;
+        :note               bdr:NTAADEDCCF637999D6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "825" .
+    
+    bdr:NTAADEDCCF637999D6
+        a                   :Note ;
+        :contentLocationStatement  "pg. 399" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT387D88B44140FB99
+        a                   :Title ;
+        rdfs:label          "ត្រៃភូមិ"@km ;
+        :femcConversionOf   bdr:TT681597FB4E004ECD .
+    
+    bdr:TT3A9762566F1F5BD9
+        a                   :Title ;
+        rdfs:label          "trai bhūmi"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF1EC16F4406BAA88 .
+    
+    bdr:TT681597FB4E004ECD
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រ័័យភូមិ (ត្រៃភូមិ ១០​ ខ្សែ)"@km .
+    
+    bdr:TTF1EC16F4406BAA88
+        a                   :CoverTitle ;
+        rdfs:label          "trăy bhūmi"@km-x-twktt .
+}

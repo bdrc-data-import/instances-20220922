@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD156563 {
+    bda:LG9CD9546A3CF6CDDF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-02-22T15:34:30.678Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD156563  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD156563 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d2/MW1PD156563.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD156563 ;
+        adm:logEntry        bda:LG9CD9546A3CF6CDDF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV60AEDBE324061E0C
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC43370F4CECCDC8B
+        a                   bdr:HollisId ;
+        rdf:value           "014257723" .
+    
+    bdr:MW1PD156563  a      :Instance ;
+        skos:prefLabel      "藏事论文集"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC43370F4CECCDC8B ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "第1版"@zh-hans ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT54B1BC4F3C85DF74 , bdr:TTB81FADDD7B24A96B ;
+        :instanceEvent      bdr:EV60AEDBE324061E0C ;
+        :instanceHasReproduction  bdr:W1PD156563 ;
+        :instanceOf         bdr:WA1PD156563 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "拉萨"@zh-hans ;
+        :publisherName      "西藏人民出版社"@zh-hans ;
+        :script             bdr:ScriptHani .
+    
+    bdr:TT54B1BC4F3C85DF74
+        a                   :Title ;
+        rdfs:label          "藏事论文集"@zh-hans .
+    
+    bdr:TTB81FADDD7B24A96B
+        a                   :OtherTitle ;
+        rdfs:label          "zang shi lun wen ji"@zh-latn-pinyin-x-ndia .
+}

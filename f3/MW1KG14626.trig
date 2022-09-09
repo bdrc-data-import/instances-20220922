@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14626 {
+    bda:LG78C2B238A8E6ACDB
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-01-08T15:27:16.604Z"^^xsd:dateTime ;
+        adm:logMessage      "added copyright titles"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCD19BA6CBD386FEC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-10-24T14:33:19.536Z"^^xsd:dateTime ;
+        adm:logMessage      "released for scan request to india"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14626  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14626 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f3/MW1KG14626.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14626 ;
+        adm:logEntry        bda:LG78C2B238A8E6ACDB , bda:LGCD19BA6CBD386FEC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6C1A4E16F68410B6
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0AB0056FF212150C
+        a                   bdr:HollisId ;
+        rdf:value           "014256188" .
+    
+    bdr:IDC740181314154312
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105097111" .
+    
+    bdr:MW1KG14626  a       :Instance , :SerialInstance ;
+        skos:altLabel       "宇妥医卷《四部医典》研究"@zh-hans ;
+        skos:prefLabel      "g.yu thog pa'i shog dril/ rgyud bzhi'i mtha' dpyod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0AB0056FF212150C , bdr:IDC740181314154312 ;
+        :authorshipStatement  "g.yu thog gsar ma yon tan mgon po/ sog po lung rigs bstan dar/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 3, 4, 2, 289 p." ;
+        :hasTitle           bdr:TT0101929A13146D62 , bdr:TT8222E47BD30F7940 , bdr:TTA27CA917AC8A7EED ;
+        :instanceEvent      bdr:EV6C1A4E16F68410B6 ;
+        :instanceHasReproduction  bdr:W1KG14626 ;
+        :instanceOf         bdr:WA1KG14626 ;
+        :note               bdr:NTE9660D0DE957F0DB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC418 ;
+        :seriesNumber       "79" .
+    
+    bdr:NTE9660D0DE957F0DB
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT0101929A13146D62
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "宇妥医卷《四部医典》研究"@zh-hans .
+    
+    bdr:TT8222E47BD30F7940
+        a                   :Title ;
+        rdfs:label          "g.yu thog pa'i shog dril/ rgyud bzhi'i mtha' dpyod/"@bo-x-ewts .
+    
+    bdr:TTA27CA917AC8A7EED
+        a                   :Title ;
+        rdfs:label          "yu tuo yi juan <<si bu yi dian>> yan jiu"@zh-latn-pinyin-x-ndia .
+}

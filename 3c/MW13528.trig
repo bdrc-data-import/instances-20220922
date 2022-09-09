@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW13528 {
+    bda:LG052BE52CD41ACFD7
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-27T15:59:19.694Z"^^xsd:dateTime ;
+        adm:logMessage      "addded print type and source printrey"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG3C964EA2F13C8F74
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW13528  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW13528 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3c/MW13528.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW13528 ;
+        adm:logEntry        bda:LG052BE52CD41ACFD7 , bda:LG3C964EA2F13C8F74 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF0B9A147694FF437
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3D9214C03D9F3BF8
+        a                   bdr:HollisId ;
+        rdf:value           "014254683" .
+    
+    bdr:ID7961624EBDAA40E4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .R66 1975" .
+    
+    bdr:ID9A50FC78B2136BC9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75908631" .
+    
+    bdr:MW13528  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of blo-bzan-dam-chos-rgya-mtsho, ron-tha che-tshan sprul-sku"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_blo bzang dam chos rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3D9214C03D9F3BF8 , bdr:ID7961624EBDAA40E4 , bdr:ID9A50FC78B2136BC9 ;
+        :biblioNote         "reproduced from tracings from the exact set of prints from the ron-tha blocks by ngawang sopa"@en ;
+        :extentStatement    "6 v." ;
+        :hasSourcePrintery  bdr:G3JT12553 ;
+        :hasTitle           bdr:TTB729D9C461A64CEE , bdr:TTE45301414FDFCA7D ;
+        :instanceEvent      bdr:EVF0B9A147694FF437 ;
+        :instanceHasReproduction  bdr:W13528 ;
+        :instanceOf         bdr:WA13528 ;
+        :note               bdr:NT5F7DFAE21AAE404C ;
+        :numberOfVolumes    6 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "n. sopa"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT5F7DFAE21AAE404C
+        a                   :Note ;
+        :noteText           "-3104"@en .
+    
+    bdr:TTB729D9C461A64CEE
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of blo-bzan-dam-chos-rgya-mtsho, ron-tha che-tshan sprul-sku"@en-x-mixed .
+    
+    bdr:TTE45301414FDFCA7D
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang dam chos rgya mtsho/"@bo-x-ewts .
+}

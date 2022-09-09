@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020113 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020113
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020113 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "a3/MW1FEMC020113.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020113 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD95FA7CC75677106
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.6.III.5" .
+    
+    bdr:MF28CF7CFFA3013821
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "30" ;
+        :microfilmStrip     "51" .
+    
+    bdr:MW1FEMC020113
+        a                   :Instance ;
+        skos:prefLabel      "ចន្ចកុមារជាតក"@km , "cand kumār jātak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD95FA7CC75677106 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT172775ECCF3B9CD9 , bdr:TT453D51E86FA94A49 , bdr:TT7775961B6E3455A7 , bdr:TT88294B1C6B6B73BB , bdr:TTED98085369A8B10A , bdr:TTEDD23635F2E6D255 ;
+        :instanceHasReproduction  bdr:W1FEMC020113 ;
+        :instanceOf         bdr:WA1FEMC020113 , bdr:WA1FEMC050004 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF28CF7CFFA3013821 ;
+        :note               bdr:NTCF9DA2D8EE1A2AD2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "520" .
+    
+    bdr:NTCF9DA2D8EE1A2AD2
+        a                   :Note ;
+        :contentLocationStatement  "pg. 23" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT172775ECCF3B9CD9
+        a                   :Title ;
+        rdfs:label          "cand kumār jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT88294B1C6B6B73BB .
+    
+    bdr:TT453D51E86FA94A49
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT7775961B6E3455A7
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT88294B1C6B6B73BB
+        a                   :CoverTitle ;
+        rdfs:label          "cand kumār"@km-x-twktt .
+    
+    bdr:TTED98085369A8B10A
+        a                   :Title ;
+        rdfs:label          "ចន្ចកុមារជាតក"@km ;
+        :femcConversionOf   bdr:TTEDD23635F2E6D255 .
+    
+    bdr:TTEDD23635F2E6D255
+        a                   :CoverTitle ;
+        rdfs:label          "ចន្ចកុមារ"@km .
+}

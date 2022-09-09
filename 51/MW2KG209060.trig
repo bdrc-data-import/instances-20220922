@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2KG209060 {
+    bda:LG801BB2D00197F895
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-23T15:33:24.358Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB8538F47066257CD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-25T17:02:56.637Z"^^xsd:dateTime ;
+        adm:logMessage      "added editors and translator"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW2KG209060  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW2KG209060 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "51/MW2KG209060.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2KG209060 ;
+        adm:logEntry        bda:LG801BB2D00197F895 , bda:LGB8538F47066257CD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR44535B8F362A47D1
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG229015 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR9F68010048BF8123
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2KG229014 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV065761EE9E0A9776
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1390A6EAB3168853
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105140923" .
+    
+    bdr:MW2KG209060  a      :Instance ;
+        skos:altLabel       "刑法学"@zh-hans ;
+        skos:prefLabel      "nyes khrims rig pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1390A6EAB3168853 ;
+        :authorshipStatement  "ka'o ming zhon dang ma kho khrang gis gtso sgrig byas/ stag lhas bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR44535B8F362A47D1 , bdr:CR9F68010048BF8123 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT1DE6BD61C53129E9 , bdr:TT5FEC7EBE127BE663 , bdr:TT8C5315977ED073DF ;
+        :instanceEvent      bdr:EV065761EE9E0A9776 ;
+        :instanceHasReproduction  bdr:W2KG209060 ;
+        :instanceOf         bdr:WA2KG209060 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1DE6BD61C53129E9
+        a                   :Title ;
+        rdfs:label          "nyes khrims rig pa/"@bo-x-ewts .
+    
+    bdr:TT5FEC7EBE127BE663
+        a                   :OtherTitle ;
+        rdfs:label          "刑法学"@zh-hans .
+    
+    bdr:TT8C5315977ED073DF
+        a                   :TitlePageTitle ;
+        rdfs:label          "mtho rim slob grwa'i bod rgya skad gnyis bca' khrims rig pa'i slob deb phreng bstar ma/ nyes khrims rig pa/"@bo-x-ewts .
+}

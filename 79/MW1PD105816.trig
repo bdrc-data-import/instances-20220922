@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD105816 {
+    bda:LG8125A5420E777F84
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-10-19T15:36:03.921Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD105816  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD105816 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "79/MW1PD105816.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD105816 ;
+        adm:logEntry        bda:LG8125A5420E777F84 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFC133D3B807A7DD2
+        a                   :PublishedEvent ;
+        :eventWhen          "2009,2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2406D116F47B01DD
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2010309066" .
+    
+    bdr:ID4C6676A02B703BAF
+        a                   bdr:HollisId ;
+        rdf:value           "014257671" .
+    
+    bdr:ID7F3BAF236E3E6105
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSC 2011/00003 (P) PL3748.P347" .
+    
+    bdr:IDEF483ED361BC09F3
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542014214" .
+    
+    bdr:MW1PD105816  a      :Instance , :SerialInstance ;
+        skos:altLabel       "诱惑"@zh-hans ;
+        skos:prefLabel      "bslu brid/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2406D116F47B01DD , bdr:ID4C6676A02B703BAF , bdr:ID7F3BAF236E3E6105 , bdr:IDEF483ED361BC09F3 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 2, 374 p." ;
+        :hasTitle           bdr:TT458725AC4C5EA64D , bdr:TTAB3230A0D0E3626D , bdr:TTCE36B0A5F9AB75AC ;
+        :illustrations      "ill. ( 1 photo)" ;
+        :instanceEvent      bdr:EVFC133D3B807A7DD2 ;
+        :instanceHasReproduction  bdr:IE1PD105816 , bdr:W1PD105816 ;
+        :instanceOf         bdr:WA1PD105816 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG14512 ;
+        :seriesNumber       "(khag dang po/)" .
+    
+    bdr:TT458725AC4C5EA64D
+        a                   :Title ;
+        rdfs:label          "bslu brid/"@bo-x-ewts .
+    
+    bdr:TTAB3230A0D0E3626D
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "诱惑"@zh-hans .
+    
+    bdr:TTCE36B0A5F9AB75AC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "you huo"@zh-latn-pinyin-x-ndia .
+}

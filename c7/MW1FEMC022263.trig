@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022263 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022263
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022263 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c7/MW1FEMC022263.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022263 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID3F0DCB1CCD1FAA48
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.341.III.1" .
+    
+    bdr:MF2AFDD394EDA5D803
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "142" ;
+        :microfilmStrip     "236" .
+    
+    bdr:MW1FEMC022263
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3F0DCB1CCD1FAA48 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-8" ;
+        :hasTitle           bdr:TT14E3C3465A6E91EE , bdr:TT4BF360D6FCA72A97 , bdr:TT63BEAA8E760380ED , bdr:TTA31C6460BF69CD6F , bdr:TTA3F65D6EEA050E35 , bdr:TTFF2E953E44A16B91 ;
+        :instanceHasReproduction  bdr:W1FEMC022263 ;
+        :instanceOf         bdr:WA1FEMC010059 , bdr:WA1FEMC022263 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2AFDD394EDA5D803 ;
+        :note               bdr:NT0E596B6495567059 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "932" .
+    
+    bdr:NT0E596B6495567059
+        a                   :Note ;
+        :contentLocationStatement  "pg. 404" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT14E3C3465A6E91EE
+        a                   :CoverTitle ;
+        rdfs:label          "satti mahā paṭṭhān"@km-x-twktt .
+    
+    bdr:TT4BF360D6FCA72A97
+        a                   :CoverTitle ;
+        rdfs:label          "sati mahā paṭṭhān"@km-x-twktt ;
+        :femcConversionOf   bdr:TT14E3C3465A6E91EE .
+    
+    bdr:TT63BEAA8E760380ED
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 5"@km-x-twktt .
+    
+    bdr:TTA31C6460BF69CD6F
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៥"@km .
+    
+    bdr:TTA3F65D6EEA050E35
+        a                   :CoverTitle ;
+        rdfs:label          "សតិ្តមហាបដ្ឋាន"@km .
+    
+    bdr:TTFF2E953E44A16B91
+        a                   :CoverTitle ;
+        rdfs:label          "សតិមហាបដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TTA3F65D6EEA050E35 .
+}

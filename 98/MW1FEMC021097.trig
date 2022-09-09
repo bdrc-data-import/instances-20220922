@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021097 {
+    bda:LG626E57D4D539F622
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021097"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021097
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021097 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "98/MW1FEMC021097.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021097 ;
+        adm:logEntry        bda:LG626E57D4D539F622 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID7E76CF35C252AEE4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "C.37.VII" .
+    
+    bdr:MF54B24B595D93B7F9
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XV" ;
+        :microfilmStrip     "40" .
+    
+    bdr:MW1FEMC021097
+        a                   :Instance ;
+        skos:prefLabel      "លីនត្ថបកា​សនាដីកាសំយុត្តនិកាយគាថាវគ្គ"@km , "līnatthapakāsanā ṭīkā saṃyuttanikāya gāthāvagga"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7E76CF35C252AEE4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2, 4, 10, 11" ;
+        :hasTitle           bdr:TT4513C1396F9E0735 , bdr:TT6FC80515E81BF30C , bdr:TTE26009AB9FEDCE99 , bdr:TTF2A9F91215924AA0 ;
+        :instanceHasReproduction  bdr:W1FEMC021097 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF54B24B595D93B7F9 ;
+        :note               bdr:NT3A0E6D836B2CFABF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "316" .
+    
+    bdr:NT3A0E6D836B2CFABF
+        a                   :Note ;
+        :contentLocationStatement  "pg. 197" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4513C1396F9E0735
+        a                   :Title ;
+        rdfs:label          "līnatthapakāsanā ṭīkā saṃyuttanikāya gāthāvagga"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE26009AB9FEDCE99 .
+    
+    bdr:TT6FC80515E81BF30C
+        a                   :Title ;
+        rdfs:label          "លីនត្ថបកា​សនាដីកាសំយុត្តនិកាយគាថាវគ្គ"@km ;
+        :femcConversionOf   bdr:TTF2A9F91215924AA0 .
+    
+    bdr:TTE26009AB9FEDCE99
+        a                   :CoverTitle ;
+        rdfs:label          "pakāsanā ṭikā saṃyuttanikāya gāthāvagga"@km-x-twktt .
+    
+    bdr:TTF2A9F91215924AA0
+        a                   :CoverTitle ;
+        rdfs:label          "លិនាត្ថបកាសនាដិកាសំយុត្តនិកាយគាថាវគ្គ"@km .
+}

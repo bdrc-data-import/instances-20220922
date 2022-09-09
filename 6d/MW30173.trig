@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30173 {
+    bda:LG4505159371D03785
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGAE4729D752DDEE0A
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-09-12T16:38:53.577Z"^^xsd:dateTime ;
+        adm:logMessage      "changed scan request"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC7FB42F43B944DB6
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-20T15:32:01.801Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30173  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30173 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "6d/MW30173.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30173 ;
+        adm:logEntry        bda:LG4505159371D03785 , bda:LGAE4729D752DDEE0A , bda:LGC7FB42F43B944DB6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBC0AD3408B612E10
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID22208F5A98F09750
+        a                   bdr:HollisId ;
+        rdf:value           "014260680" .
+    
+    bdr:ID8E5053BB6F4D8E99
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4140 .R65 1983" .
+    
+    bdr:IDA54DA6A3C52361BD
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83902082" .
+    
+    bdr:MW30173  a          :Instance ;
+        skos:prefLabel      "grub mtha' thub bstan lhun po'i mdzes rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID22208F5A98F09750 , bdr:ID8E5053BB6F4D8E99 , bdr:IDA54DA6A3C52361BD ;
+        :authorshipStatement  "by the second lcan-skya rol-pa'i-rdo-rje"@en ;
+        :biblioNote         "reproduced from a set of clear impressions from the se-ra smad grwa-tshan blocks"@en ;
+        :extentStatement    "599 p." ;
+        :hasSourcePrintery  bdr:G2CN10853 ;
+        :hasTitle           bdr:TT1E46AE57A47D1EAF , bdr:TT2190C635408610A4 ;
+        :instanceEvent      bdr:EVBC0AD3408B612E10 ;
+        :instanceHasReproduction  bdr:W30173 ;
+        :instanceOf         bdr:WA1NLM947 , bdr:WA30173 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "rnam-rgya grwa-tshan"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1E46AE57A47D1EAF
+        a                   :Title ;
+        rdfs:label          "grub mtha' thub bstan lhun po'i mdzes rgyan/"@bo-x-ewts .
+    
+    bdr:TT2190C635408610A4
+        a                   :TitlePageTitle ;
+        rdfs:label          "grub pa'i mtha'i rnam par bzhag pa gsal bar bshad pa thub bstan lhun po'i mdzes rgyan/"@bo-x-ewts .
+}

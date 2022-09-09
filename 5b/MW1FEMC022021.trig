@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022021 {
+    bda:LG9F9C22ECA539DD5F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022021"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022021
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022021 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5b/MW1FEMC022021.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022021 ;
+        adm:logEntry        bda:LG9F9C22ECA539DD5F , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDCC3A01FC940707E9
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.803.VI.6" .
+    
+    bdr:MW1FEMC022021
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាមើលពេលាខ្នើត រនោច (វាន)"@km , "tamrā möl belā khnöt ranoc"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCC3A01FC940707E9 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT0BE99A710327CA55 , bdr:TTD771E0D00C2A9EC1 ;
+        :instanceHasReproduction  bdr:W1FEMC022021 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT9DBF05866FAE240F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9DBF05866FAE240F
+        a                   :Note ;
+        :contentLocationStatement  "pg. 357" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0BE99A710327CA55
+        a                   :Title ;
+        rdfs:label          "តម្រាមើលពេលាខ្នើត រនោច (វាន)"@km .
+    
+    bdr:TTD771E0D00C2A9EC1
+        a                   :Title ;
+        rdfs:label          "tamrā möl belā khnöt ranoc"@km-x-twktt .
+}

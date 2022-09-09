@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1970 {
+    bda:LG78AD6BDD62F3EA2A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG9377004D479544AA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-06T13:26:41.546Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGC08BE61AFF1FADC4
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1970  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1970 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "2e/MW1NLM1970.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1970 ;
+        adm:logEntry        bda:LG78AD6BDD62F3EA2A , bda:LG9377004D479544AA , bda:LGC08BE61AFF1FADC4 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1970  a       :Instance ;
+        skos:prefLabel      "sman bla bsdus pa'i kha skong sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "18.5x7" ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TT11F9B8C25FF1FCD9 ;
+        :instanceHasReproduction  bdr:W1NLM1970 ;
+        :instanceOf         bdr:WA1NLM1970 ;
+        :note               bdr:NT6044E675FB2A8BBC , bdr:NT6E4FF49FC5E53940 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT6044E675FB2A8BBC
+        a                   :Note ;
+        :noteText           "missingPages: M0059888-004 [Missing page from 4A-4B] Image 51, 52"@en .
+    
+    bdr:NT6E4FF49FC5E53940
+        a                   :Note ;
+        :noteText           "nlmId: M0059888"@en .
+    
+    bdr:TT11F9B8C25FF1FCD9
+        a                   :Title ;
+        rdfs:label          "sman bla bsdus pa'i kha skong sogs/"@bo-x-ewts .
+}

@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG9788 {
+    bda:LG312B4B638BCDD43B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-09-23T12:23:06.381Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG9788  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG9788 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "31/MW1KG9788.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG9788 ;
+        adm:logEntry        bda:LG312B4B638BCDD43B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV01394F04CB912F94
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID11DA42AABF7B6ED2
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84901664" .
+    
+    bdr:ID15D51EA4359AB416
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "Z6621.A953 I53 1984" .
+    
+    bdr:ID72F258586D7CE132
+        a                   bdr:HollisId ;
+        rdf:value           "014257629" .
+    
+    bdr:MW1KG9788  a        :Instance ;
+        skos:prefLabel      "catalogue of indian manuscripts at leningrad"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID11DA42AABF7B6ED2 , bdr:ID15D51EA4359AB416 , bdr:ID72F258586D7CE132 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "360 p." ;
+        :hasTitle           bdr:TTC4A383EAB33C4520 , bdr:TTE39D32AFDB603F24 ;
+        :instanceEvent      bdr:EV01394F04CB912F94 ;
+        :instanceHasReproduction  bdr:W1KG9788 ;
+        :instanceOf         bdr:WA1KG9788 ;
+        :note               bdr:NT08ECA4D72DCEE0D9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "sharada rani"@en .
+    
+    bdr:NT08ECA4D72DCEE0D9
+        a                   :Note ;
+        :noteText           "in sanskrit and russian"@en .
+    
+    bdr:TTC4A383EAB33C4520
+        a                   :Title ;
+        rdfs:label          "catalogue of indian manuscripts at leningrad"@en .
+    
+    bdr:TTE39D32AFDB603F24
+        a                   :TitlePageTitle ;
+        rdfs:label          "catalogus codicum manu scriptorum indicorum"@en .
+}

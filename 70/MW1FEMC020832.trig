@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020832 {
+    bda:LGCE19AFEF9AB651DC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-27"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020832"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020832
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020832 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "70/MW1FEMC020832.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020832 ;
+        adm:logEntry        bda:LGCE19AFEF9AB651DC , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDEE48248E82A8286D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.496.VI.6 (ក្រាំង)" .
+    
+    bdr:MF6FE5DF38BFFFB2ED
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "108" ;
+        :microfilmStrip     "202" .
+    
+    bdr:MW1FEMC020832
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាទាយពីជម្ងឺតម្កាត់ តាមខែឆ្នាំកំណើត"@km , "tamrā dāy bī jamṅḹ tamkāt' tām khè chnāṃ kaṃnöt"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEE48248E82A8286D ;
+        :biblioNote         "This manuscript was digitized from a film negative (Kodak Technical Pan, 35mm) produced during an earlier manuscript documentation project carried out by the Fonds pour l’Edition des Manuscripts du Cambodge of the École française d'Extrême-Orient (EFEO-FEMC). The digitization was carried out by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imaging Services and the FEMC, with the permission of the EFEO. We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT5B9AD4EA1B812A60 , bdr:TTDDCE625B3EC360A9 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6FE5DF38BFFFB2ED ;
+        :note               bdr:NT0FE438FAF16637AF , bdr:NTB55C4C5768CB4A4E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT0FE438FAF16637AF
+        a                   :Note ;
+        :contentLocationStatement  "pg. 147" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NTB55C4C5768CB4A4E
+        a                   :Note ;
+        :noteText           "Should we write​ (ក្រាំង)​ ?"@en .
+    
+    bdr:TT5B9AD4EA1B812A60
+        a                   :Title ;
+        rdfs:label          "តម្រាទាយពីជម្ងឺតម្កាត់ តាមខែឆ្នាំកំណើត"@km .
+    
+    bdr:TTDDCE625B3EC360A9
+        a                   :Title ;
+        rdfs:label          "tamrā dāy bī jamṅḹ tamkāt' tām khè chnāṃ kaṃnöt"@km-x-twktt .
+}

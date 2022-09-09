@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011264 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011264
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011264 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "66/MW1FEMC011264.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011264 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDDB9C1F4DF41F73C6
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "032-A.07.01.05.VI.6" .
+    
+    bdr:MF80D0DE2402162276
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "25" ;
+        :microfilmStrip     "28" .
+    
+    bdr:MW1FEMC011264
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាថ្នាំបម្រុងគភ៌កូនក្នុងផ្ទៃ"@km , "tamrā thnāṃ paṃruṅ gaṛbh kūn knuṅ phdai"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDB9C1F4DF41F73C6 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1FA671C7A687665E , bdr:TT4685967F77C378E4 ;
+        :instanceHasReproduction  bdr:W1FEMC011264 ;
+        :instanceOf         bdr:WA1FEMC011264 , bdr:WA1FEMC090023 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF80D0DE2402162276 ;
+        :note               bdr:NT3F96A40363738953 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3F96A40363738953
+        a                   :Note ;
+        :contentLocationStatement  "pg. 298" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1FA671C7A687665E
+        a                   :Title ;
+        rdfs:label          "tamrā thnāṃ paṃruṅ gaṛbh kūn knuṅ phdai"@km-x-twktt .
+    
+    bdr:TT4685967F77C378E4
+        a                   :Title ;
+        rdfs:label          "តម្រាថ្នាំបម្រុងគភ៌កូនក្នុងផ្ទៃ"@km .
+}

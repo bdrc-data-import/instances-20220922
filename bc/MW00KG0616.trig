@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG0616 {
+    bda:LG582A41BBF9BD4E12
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-03-21T14:38:18.722Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE8F064EA8F18EB64
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-03-27T10:43:14.403Z"^^xsd:dateTime ;
+        adm:logMessage      "first published"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW00KG0616  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG0616 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bc/MW00KG0616.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG0616 ;
+        adm:logEntry        bda:LG582A41BBF9BD4E12 , bda:LGE8F064EA8F18EB64 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV76D757F36E253208
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID274D2F512248A5F0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624506388" .
+    
+    bdr:MW00KG0616  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "rgyud bla'i 'grel ba legs bshad nyi ma'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID274D2F512248A5F0 ;
+        :authorshipStatement  "kun mkhyen jo nang pas mdzad/"@bo-x-ewts ;
+        :extentStatement    "5, 216 p." ;
+        :hasTitle           bdr:TT1AA42ECA5F061982 , bdr:TT4B513EA0C95DBDA6 ;
+        :illustrations      "ill. (col.)" ;
+        :instanceEvent      bdr:EV76D757F36E253208 ;
+        :instanceOf         bdr:WA00KG0616 ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG0616 ;
+        :seriesNumber       "6" .
+    
+    bdr:TT1AA42ECA5F061982
+        a                   :Title ;
+        rdfs:label          "rgyud bla'i 'grel ba legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
+    
+    bdr:TT4B513EA0C95DBDA6
+        a                   :OtherTitle ;
+        rdfs:label          "theg pa chen po rgyud bla ma'i bstan bcos 'grel pa legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
+}

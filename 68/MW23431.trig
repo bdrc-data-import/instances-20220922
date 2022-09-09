@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23431 {
+    bda:LG5145113CACE8F1F2
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-02-01T12:42:42.646Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG8BA2BA34F874C53A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBB74FDE9D97CE1B7
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-23T10:16:46.982Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23431  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23431 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "68/MW23431.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23431 ;
+        adm:logEntry        bda:LG5145113CACE8F1F2 , bda:LG8BA2BA34F874C53A , bda:LGBB74FDE9D97CE1B7 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D9ADC96BF8FB1C9
+        a                   :PublishedEvent ;
+        :eventWhen          "1965"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0CF142ACD9DF5A48
+        a                   bdr:HollisId ;
+        rdf:value           "014258907" .
+    
+    bdr:ID1EB4FBAFC2FBFEDF
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007352412-3" .
+    
+    bdr:MW23431  a          :Instance ;
+        skos:altLabel       "ʾDus pa rin po cheʾi rgyud Gzer mig bźug swo."@en-x-mixed ;
+        skos:prefLabel      "mdo gzer mig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0CF142ACD9DF5A48 , bdr:ID1EB4FBAFC2FBFEDF ;
+        :extentStatement    "2 v. (1166 p.)" ;
+        :hasTitle           bdr:TT7A9751409DF7772B , bdr:TTD102963D4D4003AD , bdr:TTE5D89A9C7EB950EB ;
+        :instanceEvent      bdr:EV2D9ADC96BF8FB1C9 ;
+        :instanceHasReproduction  bdr:W23431 ;
+        :instanceOf         bdr:WA20576 , bdr:WA23431 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "tenzin namdak"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT7A9751409DF7772B
+        a                   :CoverTitle ;
+        rdfs:label          "ʾDus pa rin po cheʾi rgyud Gzer mig bźug swo."@en-x-mixed .
+    
+    bdr:TTD102963D4D4003AD
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dus pa rin po che'i rgyud gzer mig"@bo-x-ewts .
+    
+    bdr:TTE5D89A9C7EB950EB
+        a                   :Title ;
+        rdfs:label          "mdo gzer mig"@bo-x-ewts .
+}

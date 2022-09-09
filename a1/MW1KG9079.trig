@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG9079 {
+    bda:LG080C70F80E4F5725
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-25T10:00:30.895Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG8710D2816C786130
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-08-04T16:41:37.854Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG90C2340D6ECD0BE6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-03-18T11:08:25.459Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG9079  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG9079 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a1/MW1KG9079.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG9079 ;
+        adm:logEntry        bda:LG080C70F80E4F5725 , bda:LG8710D2816C786130 , bda:LG90C2340D6ECD0BE6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA4241191546EE4C4
+        a                   :PublishedEvent ;
+        :eventWhen          "1979/1980"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID007C68775C6B9CBA
+        a                   bdr:HollisId ;
+        rdf:value           "014257499" .
+    
+    bdr:MW1KG9079  a        :Instance ;
+        skos:prefLabel      "'dul ba'i sdom tshig (ser byes par ma)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID007C68775C6B9CBA ;
+        :biblioNote         "impressions from blocks newly carved preserved at se ra byes monastery in bylakuppe"@en ;
+        :extentStatement    "1 v." ;
+        :hasSourcePrintery  bdr:G3JT12547 ;
+        :hasTitle           bdr:TT8C176C6A2EE033A6 , bdr:TTC95B01CA079A5A50 ;
+        :instanceEvent      bdr:EVA4241191546EE4C4 ;
+        :instanceHasReproduction  bdr:W1KG9079 ;
+        :instanceOf         bdr:WA1KG9079 ;
+        :note               bdr:NTECD455E3C4BCD32C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "bylakuppe, karnataka"@en ;
+        :publisherName      "se ra byes/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTECD455E3C4BCD32C
+        a                   :Note ;
+        :noteText           "divided into four sections:\n1. rab byung gzhi'i skor 46 ff.\n2. pha'i rnam 'byed kyi skor 33 ff.\n3. ma'i rnam 'byed spyir bstan dang bcas pa'i skor 33 ff.\n4. gzhi smad kyi skor 42 ff."@en .
+    
+    bdr:TT8C176C6A2EE033A6
+        a                   :Title ;
+        rdfs:label          "'dul ba'i sdom tshig (ser byes par ma)"@bo-x-ewts .
+    
+    bdr:TTC95B01CA079A5A50
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dul ba'i sdom tshig gnad bsdus snying po tshig don brjed byang /"@bo-x-ewts .
+}

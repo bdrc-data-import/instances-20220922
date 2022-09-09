@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043398 {
+    bda:LG764B835665F8A5CD
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043398"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043398
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043398 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "34/MW1FEMC043398.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043398 ;
+        adm:logEntry        bda:LG764B835665F8A5CD , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDEAA90A6242ECBFED
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "017-B.11.15.01.III.1" .
+    
+    bdr:MFED942A0DC5B3371F
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "154" .
+    
+    bdr:MW1FEMC043398
+        a                   :Instance ;
+        skos:prefLabel      "សង្រួមព្រះសិរិក្កធាតុ (២-២១, ១-១៩)"@km , "Sańroum braḥ Sirikk dhātu"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEAA90A6242ECBFED ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3, 4" ;
+        :hasTitle           bdr:TT19FD598CB7D6BA46 , bdr:TTF564F4431FE387B7 ;
+        :instanceHasReproduction  bdr:W1FEMC033398 , bdr:W1FEMC043398 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFED942A0DC5B3371F ;
+        :note               bdr:NT729FB59F0E6BC79B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT729FB59F0E6BC79B
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT19FD598CB7D6BA46
+        a                   :Title ;
+        rdfs:label          "សង្រួមព្រះសិរិក្កធាតុ (២-២១, ១-១៩)"@km .
+    
+    bdr:TTF564F4431FE387B7
+        a                   :Title ;
+        rdfs:label          "Sańroum braḥ Sirikk dhātu"@km-x-twktt .
+}

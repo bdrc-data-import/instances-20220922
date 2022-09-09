@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25803 {
+    bda:LG2B06BC50F48233C1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-25T16:23:37.291Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG25803  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25803 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "39/MW1KG25803.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25803 ;
+        adm:logEntry        bda:LG2B06BC50F48233C1 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDE6E197F44523B6B
+        a                   :PublishedEvent ;
+        :eventWhen          "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8EB443F5A10E19BC
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105125456" .
+    
+    bdr:IDA1FFF9B93F2531FE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2013377725" .
+    
+    bdr:IDB688474A3677C5F6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ1257 .X85 2013" .
+    
+    bdr:MW1KG25803  a       :Instance ;
+        skos:prefLabel      "'phang thang dkar chag la dpyad pa/"@bo-x-ewts , "藏文《旁唐目錄》研究"@zh-hant ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8EB443F5A10E19BC , bdr:IDA1FFF9B93F2531FE , bdr:IDB688474A3677C5F6 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "第 1 版"@zh-hans ;
+        :extentStatement    "4, 3, 239 p." ;
+        :hasTitle           bdr:TT86E78412D859B9CC , bdr:TTE2B128BC07DA013F , bdr:TTE7EFE32E8F829A10 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVDE6E197F44523B6B ;
+        :instanceHasReproduction  bdr:W1KG25803 ;
+        :instanceOf         bdr:WA1KG25803 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "北京市"@zh-hans ;
+        :publisherName      "民族出版社"@zh-hans ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG25803 .
+    
+    bdr:TT86E78412D859B9CC
+        a                   :TitlePageTitle ;
+        rdfs:label          "藏文《旁唐目錄》研究"@zh-hant .
+    
+    bdr:TTE2B128BC07DA013F
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang wen <<pang tang mu lu>> yan jiu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTE7EFE32E8F829A10
+        a                   :Title ;
+        rdfs:label          "'phang thang dkar chag la dpyad pa/"@bo-x-ewts .
+}

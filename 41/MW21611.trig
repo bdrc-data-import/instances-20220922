@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21611 {
+    bda:LG18D7B5E632AB6BED
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG5BCEDDCBD7741980
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-04-06T09:48:26.434Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected extend no."@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21611  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21611 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "41/MW21611.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21611 ;
+        adm:logEntry        bda:LG18D7B5E632AB6BED , bda:LG5BCEDDCBD7741980 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB84CAB0EA908F0F2
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6E2B6B20369698EB
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890250" .
+    
+    bdr:ID7ABD2196570ACED6
+        a                   bdr:HollisId ;
+        rdf:value           "014258357" .
+    
+    bdr:IDA705663FF7C58521
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6348 .K34 1999" .
+    
+    bdr:IDED3FCDF0525C10AD
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99949070" .
+    
+    bdr:MW21611  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "dbus gtsang gi gnas yig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6E2B6B20369698EB , bdr:ID7ABD2196570ACED6 , bdr:IDA705663FF7C58521 , bdr:IDED3FCDF0525C10AD ;
+        :authorshipStatement  "si tu chos kyi rgya mtshos brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "9, 11, 392 p." ;
+        :hasTitle           bdr:TT3F108DF9014E3715 , bdr:TT7238E9FEF429C9D3 , bdr:TT84D85E0EE257DD72 , bdr:TTF67EF208402A3521 ;
+        :instanceEvent      bdr:EVB84CAB0EA908F0F2 ;
+        :instanceHasReproduction  bdr:W21611 ;
+        :instanceOf         bdr:WA21611 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09682 ;
+        :seriesNumber       "33" .
+    
+    bdr:TT3F108DF9014E3715
+        a                   :OtherTitle ;
+        rdfs:label          "dbus gtsang gnas yig"@bo-x-ewts .
+    
+    bdr:TT7238E9FEF429C9D3
+        a                   :Title ;
+        rdfs:label          "dbus gtsang gi gnas yig"@bo-x-ewts .
+    
+    bdr:TT84D85E0EE257DD72
+        a                   :CoverTitle ;
+        rdfs:label          "kaH thog si tu'i dbus gtsang gnas yig"@bo-x-ewts .
+    
+    bdr:TTF67EF208402A3521
+        a                   :TitlePageTitle ;
+        rdfs:label          "si tu pa chos kyi rgya mtsho'i gangs ljongs dbus gtsang gnas bskor lam yig nor bu zla shel gyi se mo do/"@bo-x-ewts .
+}

@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1565 {
+    bda:LG1E9DBD352FAAA941
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:10:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGC5762629A115AE63
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-08-20T11:22:19.716Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF5640C40122DBA9A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1565  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1565 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "fc/MW1NLM1565.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1565 ;
+        adm:logEntry        bda:LG1E9DBD352FAAA941 , bda:LGC5762629A115AE63 , bda:LGF5640C40122DBA9A , bda:LGIMA07EBF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1565  a       :Instance ;
+        skos:prefLabel      "'phags pa thar pa chen po phyogs su rgyas pa 'gyod tshangs kyis sdig sbyangs te/_sangs rgyas su 'grub pa rnam par bkod pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts ;
+        :dimensionsStatement  "19.5x6" ;
+        :extentStatement    "269 ff." ;
+        :hasTitle           bdr:TT339756C6F0AB9981 ;
+        :instanceHasReproduction  bdr:W1NLM1565 ;
+        :instanceOf         bdr:WA1NLM1565 ;
+        :note               bdr:NTC1D7AFE1C602449C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTC1D7AFE1C602449C
+        a                   :Note ;
+        :noteText           "nlmId: M0059483"@en .
+    
+    bdr:TT339756C6F0AB9981
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa thar pa chen po phyogs su rgyas pa 'gyod tshangs kyis sdig sbyangs te/_sangs rgyas su 'grub pa rnam par bkod pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
+}

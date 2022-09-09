@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20110 {
+    bda:LGDB1070EEC445090E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:MW20110  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20110 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3f/MW20110.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20110 ;
+        adm:logEntry        bda:LGDB1070EEC445090E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:CRAE0DE00E749CD52D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6445 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRD7BB870379BE382A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6444 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV1ABD865B1045AF58
+        a                   :PublishedEvent ;
+        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1B8C7A34977CDB4D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98904286" .
+    
+    bdr:ID206B4017008FC7C7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542006347" .
+    
+    bdr:ID8C9D2EAE3F4BA326
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3735 .G95 1997" .
+    
+    bdr:MW20110  a          :Instance ;
+        skos:prefLabel      "la gzhas mthun pa drug skor/"@bo-x-ewts , "la i chi"@zh-latn-wadegile ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1B8C7A34977CDB4D , bdr:ID206B4017008FC7C7 , bdr:ID8C9D2EAE3F4BA326 ;
+        :authorshipStatement  "bkra shis rgyal mtshan dang ra rdza dkon mchog gnyis kyis bsdus te bsgrigs/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :creator            bdr:CRAE0DE00E749CD52D , bdr:CRD7BB870379BE382A ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 320 p." ;
+        :hasTitle           bdr:TT08E33B1F97BCD0AB , bdr:TT8A0D6B2CAE6BFC5A ;
+        :instanceEvent      bdr:EV1ABD865B1045AF58 ;
+        :instanceOf         bdr:WA20110 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptLatn ;
+        :serialInstanceOf   bdr:WAS20109 .
+    
+    bdr:TT08E33B1F97BCD0AB
+        a                   :ColophonTitle ;
+        rdfs:label          "la i chi"@zh-latn-wadegile .
+    
+    bdr:TT8A0D6B2CAE6BFC5A
+        a                   :Title ;
+        rdfs:label          "la gzhas mthun pa drug skor/"@bo-x-ewts .
+}

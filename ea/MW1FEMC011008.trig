@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011008 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011008
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011008 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ea/MW1FEMC011008.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011008 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE7B4E27D9CBA108A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "018-A.04.07.01.III.2" .
+    
+    bdr:MFA3F1A71B1F7E5940
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "37" ;
+        :microfilmStrip     "79" .
+    
+    bdr:MW1FEMC011008
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលទាំង៣៨ប្រការ"@km , "maṅgal dāṃṅ 38 prakār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE7B4E27D9CBA108A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT3867690F671AF40B , bdr:TTB99C4444982FB178 , bdr:TTBCEE7FCAC98336A7 , bdr:TTD13DF9E85ECBAE10 ;
+        :instanceHasReproduction  bdr:W1FEMC011008 ;
+        :instanceOf         bdr:WA1FEMC011008 , bdr:WA1FEMC020002 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA3F1A71B1F7E5940 ;
+        :note               bdr:NT872E72F0DBB82CAB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT872E72F0DBB82CAB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 250" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT3867690F671AF40B
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgal sūtr"@km-x-twktt .
+    
+    bdr:TTB99C4444982FB178
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលសូត្រ"@km .
+    
+    bdr:TTBCEE7FCAC98336A7
+        a                   :Title ;
+        rdfs:label          "មង្គលទាំង៣៨ប្រការ"@km .
+    
+    bdr:TTD13DF9E85ECBAE10
+        a                   :Title ;
+        rdfs:label          "maṅgal dāṃṅ 38 prakār"@km-x-twktt .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022778 {
+    bda:LG7F5F094A2FB79539
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-22"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022778"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022778
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022778 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "57/MW1FEMC022778.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022778 ;
+        adm:logEntry        bda:LG7F5F094A2FB79539 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID49F4764908419E32
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.254.VII" .
+    
+    bdr:MF1F1EA31D2E05F745
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "L" ;
+        :microfilmStrip     "75" .
+    
+    bdr:MW1FEMC022778
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធជនវិលាសិនីអដ្ឋកថាអបទានបុព្វភាគ"@km , "visuddhajanavilāsinī aṭṭhakathā apadāna pubbabhāga"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID49F4764908419E32 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-16" ;
+        :hasTitle           bdr:TT132DF9FD6ECFA0F1 , bdr:TT4EAB7D8F5DB418C4 , bdr:TT5822EBDB28360774 , bdr:TT8BC0E6A7D94FB954 ;
+        :instanceHasReproduction  bdr:W1FEMC022778 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1F1EA31D2E05F745 ;
+        :note               bdr:NTD25465230EDCBFAB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "94" .
+    
+    bdr:NTD25465230EDCBFAB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 498" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT132DF9FD6ECFA0F1
+        a                   :CoverTitle ;
+        rdfs:label          "វិសុទ្ធិជនវិលាសិនីអដ្ឋកថាអបទានបុព្វភាគ"@km .
+    
+    bdr:TT4EAB7D8F5DB418C4
+        a                   :Title ;
+        rdfs:label          "visuddhajanavilāsinī aṭṭhakathā apadāna pubbabhāga"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5822EBDB28360774 .
+    
+    bdr:TT5822EBDB28360774
+        a                   :CoverTitle ;
+        rdfs:label          "visuddhijanavilāsinī aṭṭhakathā apadāna pubbabhāga"@km-x-twktt .
+    
+    bdr:TT8BC0E6A7D94FB954
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធជនវិលាសិនីអដ្ឋកថាអបទានបុព្វភាគ"@km ;
+        :femcConversionOf   bdr:TT132DF9FD6ECFA0F1 .
+}

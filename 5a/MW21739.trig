@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21739 {
+    bda:LGB4098DD9E210EB11
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGDD13D852906D63C7
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-11T11:45:00.741Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21739  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21739 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "5a/MW21739.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21739 ;
+        adm:logEntry        bda:LGB4098DD9E210EB11 , bda:LGDD13D852906D63C7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDCA68E43E7E0E7E1
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID25F45A03267AE339
+        a                   bdr:HollisId ;
+        rdf:value           "014258421" .
+    
+    bdr:ID367C3BA141BB1A95
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2579" .
+    
+    bdr:IDDE7150C284FDEF99
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85901459" .
+    
+    bdr:IDE8897A4F614DBA18
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .R257 1984" .
+    
+    bdr:MW21739  a          :Instance , :SerialInstance ;
+        skos:altLabel       "dpal mgon ma nin nag po dan ma mo snags kyi srun ma : two cycles rituals for the propitiation protective deities"@en-x-mixed ;
+        skos:prefLabel      "dpal mgon ma ning nag po dang ma mo sngags kyi srung ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID25F45A03267AE339 , bdr:ID367C3BA141BB1A95 , bdr:IDDE7150C284FDEF99 , bdr:IDE8897A4F614DBA18 ;
+        :authorshipStatement  "recovered from their place of concealment by gter-chen ratna-glin-pa"@en ;
+        :biblioNote         "reproduced from manuscripts representing the dpal-yul tradition of redaction from rmug-san"@en ;
+        :extentStatement    "502 p." ;
+        :hasTitle           bdr:TT99A8BB2174B4A190 , bdr:TTBA5FDF547B36FE79 ;
+        :instanceEvent      bdr:EVDCA68E43E7E0E7E1 ;
+        :instanceHasReproduction  bdr:W21739 ;
+        :instanceOf         bdr:WA21739 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bylakuppe, mysore, india"@en ;
+        :publisherName      "pema norbu rinpoche"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :serialInstanceOf   bdr:WAS21731 ;
+        :seriesNumber       "pod 17" .
+    
+    bdr:TT99A8BB2174B4A190
+        a                   :Title ;
+        rdfs:label          "dpal mgon ma ning nag po dang ma mo sngags kyi srung ma/"@bo-x-ewts .
+    
+    bdr:TTBA5FDF547B36FE79
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal mgon ma nin nag po dan ma mo snags kyi srun ma : two cycles rituals for the propitiation protective deities"@en-x-mixed .
+}

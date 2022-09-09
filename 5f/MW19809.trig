@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW19809 {
+    bda:LG5886951CA4464B0E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGB8A02868ABF374E1
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-04-12T12:13:08.277Z"^^xsd:dateTime ;
+        adm:logMessage      "added full title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC550F4B0E2AA75ED
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-07T14:53:52.423Z"^^xsd:dateTime ;
+        adm:logMessage      "added printe type and source trintery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGEC7E650FC5BD9500
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-10-01T13:55:12.67Z"^^xsd:dateTime ;
+        adm:logMessage      "add more info"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW19809  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW19809 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "5f/MW19809.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19809 ;
+        adm:logEntry        bda:LG5886951CA4464B0E , bda:LGB8A02868ABF374E1 , bda:LGC550F4B0E2AA75ED , bda:LGEC7E650FC5BD9500 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE0D068077E39848A
+        a                   :PublishedEvent ;
+        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6A7ED6F4FC781D7A
+        a                   bdr:HollisId ;
+        rdf:value           "014254895" .
+    
+    bdr:ID77EB9A1981E36801
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ400.B52 B7" .
+    
+    bdr:IDF04C6087171D6F77
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "unk83048674" .
+    
+    bdr:MW19809  a          :Instance ;
+        skos:prefLabel      "lho 'brug chos 'byung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6A7ED6F4FC781D7A , bdr:ID77EB9A1981E36801 , bdr:IDF04C6087171D6F77 ;
+        :biblioNote         "impression from blocks carved and preserved at nges don zung 'jug grub pa'i dga' tshal in bhutan"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "384 p." ;
+        :hasSourcePrintery  bdr:G3JT12513 ;
+        :hasTitle           bdr:TT10B73AE28CE46AEC , bdr:TTBF2B77FD4459CD67 ;
+        :instanceEvent      bdr:EVE0D068077E39848A ;
+        :instanceHasReproduction  bdr:W19809 ;
+        :instanceOf         bdr:WA19809 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "bhutan"@en ;
+        :publisherName      "nges don zung 'jug grub pa'i dga' tshal/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT10B73AE28CE46AEC
+        a                   :Title ;
+        rdfs:label          "lho 'brug chos 'byung /"@bo-x-ewts .
+    
+    bdr:TTBF2B77FD4459CD67
+        a                   :FullTitle ;
+        rdfs:label          "dpal ldan 'brug pa'i gdul zhing lho phyogs nags mo'i ljongs kyi chos 'byung blo gsar rna ba'i rgyan/"@bo-x-ewts .
+}

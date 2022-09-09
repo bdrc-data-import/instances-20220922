@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20241 {
+    bda:LG35776805CCFD3E44
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-10-28T04:56:10.354Z"^^xsd:dateTime ;
+        adm:logMessage      "updated catalog info"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LGAC05542B4F230AF4
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-02-27T14:46:22.902Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE72C33C499999705
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20241  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20241 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "4f/MW20241.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20241 ;
+        adm:logEntry        bda:LG35776805CCFD3E44 , bda:LGAC05542B4F230AF4 , bda:LGE72C33C499999705 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE5CA2D10838C56FB
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2AF8C4DFA234CF6A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001417004" .
+    
+    bdr:ID54CBDE790A6301E7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223010630" .
+    
+    bdr:ID7B88765228F990B5
+        a                   bdr:HollisId ;
+        rdf:value           "014258103" .
+    
+    bdr:IDE136158644DD93A6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "Z3107.T48 B63 2000 DS786" .
+    
+    bdr:MW20241  a          :Instance ;
+        skos:prefLabel      "bod kyi lo rgyus dpe tho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2AF8C4DFA234CF6A , bdr:ID54CBDE790A6301E7 , bdr:ID7B88765228F990B5 , bdr:IDE136158644DD93A6 ;
+        :authorshipStatement  "bsod nams don grub kyis bsgrigs/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :dimensionsStatement  "3, 7, 525 p." ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TT48AE29FA40842EF4 , bdr:TTB40B9CFE5133F085 ;
+        :instanceEvent      bdr:EVE5CA2D10838C56FB ;
+        :instanceHasReproduction  bdr:W20241 ;
+        :instanceOf         bdr:WA20241 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT48AE29FA40842EF4
+        a                   :Title ;
+        rdfs:label          "bod kyi lo rgyus dpe tho/"@bo-x-ewts .
+    
+    bdr:TTB40B9CFE5133F085
+        a                   :HalfTitle ;
+        rdfs:label          "gangs can bod kyi lo rgyus rig pa'i dpe tsho blo gsal dga' ston/"@bo-x-ewts .
+}

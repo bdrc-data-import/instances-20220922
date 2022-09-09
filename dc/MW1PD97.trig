@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD97 {
+    bda:LG4EFA5D80522B24A1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-02-23T16:27:48.635Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD97  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD97 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "dc/MW1PD97.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD97 ;
+        adm:logEntry        bda:LG4EFA5D80522B24A1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV403D51859F29A387
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID48D5816A9E0E0AB5
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542010166" .
+    
+    bdr:IDE570BCBE6B9EF6F0
+        a                   bdr:HollisId ;
+        rdf:value           "014257988" .
+    
+    bdr:MW1PD97  a          :Instance ;
+        skos:prefLabel      "chab shog phyogs bsgrig"@bo-x-ewts , "ge deng luo sang wen ji"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID48D5816A9E0E0AB5 , bdr:IDE570BCBE6B9EF6F0 ;
+        :authorshipStatement  "yongs 'dzin blo bzang dpal ldan gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :extentStatement    "2, 225 p." ;
+        :hasTitle           bdr:TT55AA53EDB52EC713 , bdr:TT7F628BEC4D6A6A66 , bdr:TT9112B9C3F8569521 ;
+        :instanceEvent      bdr:EV403D51859F29A387 ;
+        :instanceHasReproduction  bdr:W1PD97 ;
+        :instanceOf         bdr:WA1PD97 ;
+        :note               bdr:NTCD9E1109677F907D ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrung khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTCD9E1109677F907D
+        a                   :Note ;
+        :noteText           "tbrc holds inkprint copy and digitally scanned images, tiffs and pdf files;"@en .
+    
+    bdr:TT55AA53EDB52EC713
+        a                   :ColophonTitle ;
+        rdfs:label          "ge deng luo sang wen ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT7F628BEC4D6A6A66
+        a                   :Title ;
+        rdfs:label          "chab shog phyogs bsgrig"@bo-x-ewts .
+    
+    bdr:TT9112B9C3F8569521
+        a                   :TitlePageTitle ;
+        rdfs:label          "rmad du byung ba'i snyan ngag gi tshig rgyan phun sum tshogs pa'i chab shog phyogs bsgrigs/"@bo-x-ewts .
+}

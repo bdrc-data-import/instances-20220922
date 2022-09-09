@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022900 {
+    bda:LG6D014CE4EE506930
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022900"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022900
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022900 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "95/MW1FEMC022900.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022900 ;
+        adm:logEntry        bda:LG6D014CE4EE506930 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5A03AAB85B1EA36E
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.376.VII" .
+    
+    bdr:MF3791583846778125
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LVIII" ;
+        :microfilmStrip     "83" .
+    
+    bdr:MW1FEMC022900
+        a                   :Instance ;
+        skos:prefLabel      "អាដានាដិយសូត្រ"@km , "āṭānāṭiyasūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5A03AAB85B1EA36E ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT028EC198CF77B550 , bdr:TT187A32633D6E4273 , bdr:TT61E5C85795E19AC9 , bdr:TTC7AFE732B60AF33C ;
+        :instanceHasReproduction  bdr:W1FEMC022900 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF3791583846778125 ;
+        :note               bdr:NT8368504429B98B9D , bdr:NTCDFA8339C0D20A42 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "187" .
+    
+    bdr:NT8368504429B98B9D
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:NTCDFA8339C0D20A42
+        a                   :Note ;
+        :contentLocationStatement  "pg. 522" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT028EC198CF77B550
+        a                   :CoverTitle ;
+        rdfs:label          "អាដានាដិយសុត្ត (វាន)"@km .
+    
+    bdr:TT187A32633D6E4273
+        a                   :CoverTitle ;
+        rdfs:label          "āṭānāṭiyasutta"@km-x-twktt .
+    
+    bdr:TT61E5C85795E19AC9
+        a                   :Title ;
+        rdfs:label          "អាដានាដិយសូត្រ"@km .
+    
+    bdr:TTC7AFE732B60AF33C
+        a                   :Title ;
+        rdfs:label          "āṭānāṭiyasūtra"@km-x-twktt .
+}

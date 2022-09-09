@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046148 {
+    bda:LGC1F5D30FFD291ACC
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046148"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046148
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046148 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7e/MW1FEMC046148.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046148 ;
+        adm:logEntry        bda:LGC1F5D30FFD291ACC , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID73ADA009F3DE3F70
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-B.04.10.02.VII" .
+    
+    bdr:MF6D5B4CFD3896D030
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "53" .
+    
+    bdr:MW1FEMC046148
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះធម្មបទ្ទដ្ឋកថាកម្វជ្ជក្សរន្វាតប្ន័្នត្ន័"@pi-khmr , "dhammapaddaṭṭhakathākambajjakasarachvātapantan"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID73ADA009F3DE3F70 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-11, 13-20" ;
+        :hasTitle           bdr:TT108C744AA6FA7FE4 , bdr:TTB7D76898C1E5F64D ;
+        :instanceHasReproduction  bdr:W1FEMC036148 , bdr:W1FEMC046148 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6D5B4CFD3896D030 ;
+        :note               bdr:NT509ADC41E1A2F1A7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT509ADC41E1A2F1A7
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT108C744AA6FA7FE4
+        a                   :Title ;
+        rdfs:label          "ព្រះធម្មបទ្ទដ្ឋកថាកម្វជ្ជក្សរន្វាតប្ន័្នត្ន័"@pi-khmr .
+    
+    bdr:TTB7D76898C1E5F64D
+        a                   :Title ;
+        rdfs:label          "dhammapaddaṭṭhakathākambajjakasarachvātapantan"@pi-x-twktt .
+}

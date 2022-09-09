@@ -1,0 +1,59 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM3104 {
+    bda:LGFFF31C77566047F8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-01T11:55:55.59Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, author, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIM63F77742  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM3104  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM3104 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "5a/MW1NLM3104.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM3104 ;
+        adm:logEntry        bda:LGFFF31C77566047F8 , bda:LGIM63F77742 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM3104  a       :Instance ;
+        skos:prefLabel      "sgrol ma'i mchod chog sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "18.5x5" ;
+        :extentStatement    "16 ff., 6 ff., 4 ff., 12 ff., 16 ff.end folio missing, 3 ff., 27 ff., 3 ff., 7 ff., 8 ff., 4 ff., 9 ff. end folio missing, 6 ff." ;
+        :hasTitle           bdr:TTED433DD9FC6C9280 ;
+        :instanceHasReproduction  bdr:W1NLM3104 ;
+        :instanceOf         bdr:WA1NLM3104 ;
+        :note               bdr:NT5131FE5DCD38A1CF , bdr:NTB327902307DEABD9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT5131FE5DCD38A1CF
+        a                   :Note ;
+        :noteText           "missingPages: M0061022-005 [Final pages are missing 17A] Image 109 M0061022-012 [Final pages are missing 10A] Image 232"@en .
+    
+    bdr:NTB327902307DEABD9
+        a                   :Note ;
+        :noteText           "nlmId: M0061022"@en .
+    
+    bdr:TTED433DD9FC6C9280
+        a                   :Title ;
+        rdfs:label          "sgrol ma'i mchod chog sogs/"@bo-x-ewts .
+}

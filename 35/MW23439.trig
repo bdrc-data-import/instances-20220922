@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23439 {
+    bda:LG4463B074A91C58AE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23439  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23439 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "35/MW23439.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23439 ;
+        adm:logEntry        bda:LG4463B074A91C58AE , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC6C0C35F9A73DB9E
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID39D137AC790448A9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001291452" .
+    
+    bdr:IDC8B72276F7EA2AB5
+        a                   bdr:HollisId ;
+        rdf:value           "014258915" .
+    
+    bdr:IDCD59CBC1AD54DE84
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .S5 2000" .
+    
+    bdr:MW23439  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_sgam po pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID39D137AC790448A9 , bdr:IDC8B72276F7EA2AB5 , bdr:IDCD59CBC1AD54DE84 ;
+        :extentStatement    "4 v." ;
+        :hasTitle           bdr:TT1DE2C68C3F1856EA , bdr:TT63E5BD2C43406CA6 , bdr:TT87D37F6D66D7316B , bdr:TTEACFFE32CEDBBD92 ;
+        :instanceEvent      bdr:EVC6C0C35F9A73DB9E ;
+        :instanceHasReproduction  bdr:W23439 ;
+        :instanceOf         bdr:WA22393 , bdr:WA23439 ;
+        :note               bdr:NT7AAE528D89AE42B4 ;
+        :numberOfVolumes    4 ;
+        :publisherLocation  "kathmandu"@en ;
+        :publisherName      "khenpo s. tenzin & lama t. namgyal"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT7AAE528D89AE42B4
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume number 1747-1750."@en .
+    
+    bdr:TT1DE2C68C3F1856EA
+        a                   :TitlePageTitle ;
+        rdfs:label          "khams gsum chos kyi rgyal po mnyam med sgam po pa 'gro mgon bsod nams rin chen mchog gi gsung 'bum yid bzhin nor bu/"@bo-x-ewts .
+    
+    bdr:TT63E5BD2C43406CA6
+        a                   :OtherTitle ;
+        rdfs:label          "gsung 'bum/_bsod nams rin chen/"@bo-x-ewts .
+    
+    bdr:TT87D37F6D66D7316B
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_sgam po pa/"@bo-x-ewts .
+    
+    bdr:TTEACFFE32CEDBBD92
+        a                   :RunningTitle ;
+        rdfs:label          "dwags po'i bka' 'bum/"@bo-x-ewts .
+}

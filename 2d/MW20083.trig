@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20083 {
+    bda:LG7B3F30D29473A067
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-06T13:02:15.372Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info, print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBEBD8C5F2CB60788
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20083  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20083 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "2d/MW20083.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20083 ;
+        adm:logEntry        bda:LG7B3F30D29473A067 , bda:LGBEBD8C5F2CB60788 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRA30B5565A813A06D
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7438 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV4B0B82A75B28075A
+        a                   :PublishedEvent ;
+        :eventWhen          "1998"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDB99366F5D65AE025
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223009292" .
+    
+    bdr:IDD6A6BE241E901C52
+        a                   bdr:HollisId ;
+        rdf:value           "014258030" .
+    
+    bdr:MW20083  a          :Instance ;
+        skos:prefLabel      "glang ri gser rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB99366F5D65AE025 , bdr:IDD6A6BE241E901C52 ;
+        :authorshipStatement  "bod ljongs spyi tshogs tshan rig khang gi blo bstan gyis lag bris ma gzhir bzung phyogs bsgrigs pa/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRA30B5565A813A06D ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "317 p." ;
+        :hasTitle           bdr:TT5A29323A1BC93592 , bdr:TTDCB7EF5DC48D7A8B ;
+        :instanceEvent      bdr:EV4B0B82A75B28075A ;
+        :instanceHasReproduction  bdr:W20083 ;
+        :instanceOf         bdr:WA20083 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT5A29323A1BC93592
+        a                   :Title ;
+        rdfs:label          "glang ri gser rdzong /"@bo-x-ewts .
+    
+    bdr:TTDCB7EF5DC48D7A8B
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling ge sar rgyal po'i sgrung glang ri gser rdzong /"@bo-x-ewts .
+}

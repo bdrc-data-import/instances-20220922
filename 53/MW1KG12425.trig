@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG12425 {
+    bda:LG208EAC59238AB5CF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-05-18T15:42:31.401Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGD181A486FDAEE55D
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-27T14:10:00.391Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG12425  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG12425 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "53/MW1KG12425.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG12425 ;
+        adm:logEntry        bda:LG208EAC59238AB5CF , bda:LGD181A486FDAEE55D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR37DBC48AC53391B1
+        a                   :AgentAsCreator ;
+        :agent              bdr:P9710 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVA2CCCDEB676718E6
+        a                   :PublishedEvent ;
+        :eventWhen          "1937"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1467C67452AF907A
+        a                   bdr:HollisId ;
+        rdf:value           "014255873" .
+    
+    bdr:MW1KG12425  a       :Instance ;
+        skos:prefLabel      "bod rgya kun btus tshig mdzod/"@bo-x-ewts , "撤漢集論辭彙"@zh-hant ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1467C67452AF907A ;
+        :authorshipStatement  "西陲文化院印行"@zh-hans ;
+        :biblioNote         "hand written manuscripts in tibetan and chinese"@en ;
+        :creator            bdr:CR37DBC48AC53391B1 ;
+        :extentStatement    "329 p." ;
+        :hasTitle           bdr:TT0DD249201E088A58 , bdr:TT2E1B6AF2076405DA , bdr:TTDC229F6F0851FBE1 ;
+        :instanceEvent      bdr:EVA2CCCDEB676718E6 ;
+        :instanceHasReproduction  bdr:W1KG12425 ;
+        :instanceOf         bdr:WA1KG12425 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "四川成都"@zh-hans ;
+        :publisherName      "西陲文化院"@zh-hans ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT0DD249201E088A58
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "撤漢集論辭彙"@zh-hant .
+    
+    bdr:TT2E1B6AF2076405DA
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang han ji lun ci dian"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTDC229F6F0851FBE1
+        a                   :Title ;
+        rdfs:label          "bod rgya kun btus tshig mdzod/"@bo-x-ewts .
+}

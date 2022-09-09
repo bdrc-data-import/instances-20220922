@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022400 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022400
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022400 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "28/MW1FEMC022400.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022400 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID10D0F59188BBAC91
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.887.III.6" .
+    
+    bdr:MFD0A11304178F482B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "145" ;
+        :microfilmStrip     "239" .
+    
+    bdr:MW1FEMC022400
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សឳ្យទានភ្លើងស្ដេចមហាកប្បិន"@km , "ānisaṅs Aoy° dān bhlöṅ stec mahā kappin"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID10D0F59188BBAC91 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT28AE8CC30A53C9EB , bdr:TT450483ACB841DF3E , bdr:TT72B01AC45E7C9148 , bdr:TTD3C917ED10589FE6 ;
+        :instanceHasReproduction  bdr:W1FEMC022400 ;
+        :instanceOf         bdr:WA1FEMC022400 , bdr:WA1FEMC060042 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD0A11304178F482B ;
+        :note               bdr:NTD8A52D3B4CF5DC78 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD8A52D3B4CF5DC78
+        a                   :Note ;
+        :contentLocationStatement  "pg. 429" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT28AE8CC30A53C9EB
+        a                   :CoverTitle ;
+        rdfs:label          "ឳ្យទានភ្លើងរឿងស្ដេចមហាកបិន"@km .
+    
+    bdr:TT450483ACB841DF3E
+        a                   :Title ;
+        rdfs:label          "អានិសង្សឳ្យទានភ្លើងស្ដេចមហាកប្បិន"@km ;
+        :femcConversionOf   bdr:TT28AE8CC30A53C9EB .
+    
+    bdr:TT72B01AC45E7C9148
+        a                   :Title ;
+        rdfs:label          "ānisaṅs Aoy° dān bhlöṅ stec mahā kappin"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD3C917ED10589FE6 .
+    
+    bdr:TTD3C917ED10589FE6
+        a                   :CoverTitle ;
+        rdfs:label          "Aoy° dān bhlöṅ rīöṅ stec mahā kapin"@km-x-twktt .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047287 {
+    bda:LG79233BC1B4EA50AB
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047287"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047287
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047287 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e9/MW1FEMC047287.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047287 ;
+        adm:logEntry        bda:LG79233BC1B4EA50AB , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA030C0767E59CB89
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "Coll part.26.11.2001.VI.6" .
+    
+    bdr:MF90DCE68980F82E9E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "133" ;
+        :microfilmStrip     "227" .
+    
+    bdr:MW1FEMC047287
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនចំង្រ្កំម"@km , "kpuon caṃṅkraṃm"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA030C0767E59CB89 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TTBF886B38270933D1 , bdr:TTD982BAC15A2260FF ;
+        :instanceHasReproduction  bdr:W1FEMC037285 , bdr:W1FEMC037287 , bdr:W1FEMC047287 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF90DCE68980F82E9E ;
+        :note               bdr:NT1159A8D550AC212B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1159A8D550AC212B
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTBF886B38270933D1
+        a                   :Title ;
+        rdfs:label          "kpuon caṃṅkraṃm"@km-x-twktt .
+    
+    bdr:TTD982BAC15A2260FF
+        a                   :Title ;
+        rdfs:label          "ក្បួនចំង្រ្កំម"@km .
+}

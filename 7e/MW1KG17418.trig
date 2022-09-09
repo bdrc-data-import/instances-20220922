@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17418 {
+    bda:LG1D847FA997151C3C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-05-08T12:21:49.33Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17418  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17418 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "7e/MW1KG17418.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17418 ;
+        adm:logEntry        bda:LG1D847FA997151C3C , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC828B2D38324DECC
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6B9B56B317EE4538
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748 .G42 1983F" .
+    
+    bdr:ID963EB6C07234D0C8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83905927" .
+    
+    bdr:IDF014BCF4900C8554
+        a                   bdr:HollisId ;
+        rdf:value           "014256495" .
+    
+    bdr:MW1KG17418  a       :Instance ;
+        skos:altLabel       "the hor gling g.yul 'gyed version of the tibetan gesar epic"@en ;
+        skos:prefLabel      "hor gling g.yul 'gyed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6B9B56B317EE4538 , bdr:ID963EB6C07234D0C8 , bdr:IDF014BCF4900C8554 ;
+        :biblioNote         "reproduced photographically from the kokonor movable print edition of 1980"@en ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "1st Indian ed."@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TTD54E46851691DCEB , bdr:TTDB0AEDB2A5E8BF31 , bdr:TTFD7E13F099E4CD9A ;
+        :instanceEvent      bdr:EVC828B2D38324DECC ;
+        :instanceHasReproduction  bdr:W1KG17418 ;
+        :instanceOf         bdr:WA1KG17418 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "sherab gyaltsen"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTD54E46851691DCEB
+        a                   :Title ;
+        rdfs:label          "hor gling g.yul 'gyed/"@bo-x-ewts .
+    
+    bdr:TTDB0AEDB2A5E8BF31
+        a                   :OtherTitle ;
+        rdfs:label          "the hor gling g.yul 'gyed version of the tibetan gesar epic"@en .
+    
+    bdr:TTFD7E13F099E4CD9A
+        a                   :TitlePageTitle ;
+        rdfs:label          "hor gling g.yul 'gyed/ 'dzam gling ge sar rgyal po'i sgrung /"@bo-x-ewts .
+}

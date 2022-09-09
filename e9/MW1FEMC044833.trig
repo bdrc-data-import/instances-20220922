@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044833 {
+    bda:LGBC5F5A3F657D9CD2
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044833"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044833
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044833 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e9/MW1FEMC044833.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044833 ;
+        adm:logEntry        bda:LGBC5F5A3F657D9CD2 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID05EE32782B723903
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-B.06.08.01" .
+    
+    bdr:MFD68EC7F8C3DAD07E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "243" .
+    
+    bdr:MW1FEMC044833
+        a                   :Instance ;
+        skos:prefLabel      "ភាណវារកន្លះខែ (១-៦០)"@pi-khmr ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID05EE32782B723903 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTA3120C3C573A9A4C ;
+        :instanceHasReproduction  bdr:W1FEMC044833 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD68EC7F8C3DAD07E ;
+        :note               bdr:NT6B7DAC362FF8C113 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT6B7DAC362FF8C113
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTA3120C3C573A9A4C
+        a                   :Title ;
+        rdfs:label          "ភាណវារកន្លះខែ (១-៦០)"@pi-khmr .
+}

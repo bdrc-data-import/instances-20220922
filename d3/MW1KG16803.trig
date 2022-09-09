@@ -1,0 +1,112 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16803 {
+    bda:LGAC507F38CECB6525
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-03-20T11:13:56.513Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG16803  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG16803 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "d3/MW1KG16803.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16803 ;
+        adm:logEntry        bda:LGAC507F38CECB6525 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR7FD464A17246CD2C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6438 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR8F54B8014FFB56BC
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8373 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRA0F18292AA3E98CA
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7389 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB5669D4F9DA91E79
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID385C525FE08AAB34
+        a                   bdr:HollisId ;
+        rdf:value           "014256422" .
+    
+    bdr:IDACB41CBC93AAA281
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105058587" .
+    
+    bdr:MW1KG16803  a       :Instance , :SerialInstance ;
+        skos:altLabel       "杂日药宗"@zh-hans ;
+        skos:prefLabel      "tsa ri sman rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID385C525FE08AAB34 , bdr:IDACB41CBC93AAA281 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR7FD464A17246CD2C , bdr:CR8F54B8014FFB56BC , bdr:CRA0F18292AA3E98CA ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 6, 573 p." ;
+        :hasTitle           bdr:TT8316CE3E2987A615 , bdr:TTA70664628EB818FA , bdr:TTCE850E5D09A0E4FD ;
+        :illustrations      "ill. (col. plates)" ;
+        :instanceEvent      bdr:EVB5669D4F9DA91E79 ;
+        :instanceHasReproduction  bdr:W1KG16803 ;
+        :instanceOf         bdr:WA1KG16803 ;
+        :note               bdr:NT604B7051EB89D93E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC410 ;
+        :seriesNumber       "14" .
+    
+    bdr:NT604B7051EB89D93E
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT8316CE3E2987A615
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "za ri yao zong"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTA70664628EB818FA
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "杂日药宗"@zh-hans .
+    
+    bdr:TTCE850E5D09A0E4FD
+        a                   :Title ;
+        rdfs:label          "tsa ri sman rdzong /"@bo-x-ewts .
+}

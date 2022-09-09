@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG866 {
+    bda:LG3765EA5EC73B7B7D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-10-24T17:01:32.611Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGD87F31B97F5CE520
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-03-04T11:29:21.477Z"^^xsd:dateTime ;
+        adm:logMessage      "qc"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG866  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG866 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "03/MW1KG866.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG866 ;
+        adm:logEntry        bda:LG3765EA5EC73B7B7D , bda:LGD87F31B97F5CE520 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8C6CBCDDAE111F2B
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6A8C55F6334B2855
+        a                   bdr:HollisId ;
+        rdf:value           "014257423" .
+    
+    bdr:ID945EFD9A765032DD
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7508505913" .
+    
+    bdr:MW1KG866  a         :Instance ;
+        skos:altLabel       "xi zang li shi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bod ljongs kyi lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6A8C55F6334B2855 , bdr:ID945EFD9A765032DD ;
+        :authorshipStatement  "khren chin dbyin gyis brtsams/ mgu ru zla ba tshe ring gis bsgyur/ nor bu dbang ldan gyis dag bsgrigs bgyis/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "300 p." ;
+        :hasTitle           bdr:TT991F9A90CC3387B4 , bdr:TTB4D6DDF17B400618 ;
+        :illustrations      "ill. (col.)" ;
+        :instanceEvent      bdr:EV8C6CBCDDAE111F2B ;
+        :instanceHasReproduction  bdr:W1KG866 ;
+        :instanceOf         bdr:WA1KG866 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "beijing"@en ;
+        :publisherName      "gling lnga khyab spel dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG857 .
+    
+    bdr:TT991F9A90CC3387B4
+        a                   :Title ;
+        rdfs:label          "bod ljongs kyi lo rgyus/"@bo-x-ewts .
+    
+    bdr:TTB4D6DDF17B400618
+        a                   :ColophonTitle ;
+        rdfs:label          "xi zang li shi"@zh-latn-pinyin-x-ndia .
+}

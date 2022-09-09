@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW19228 {
+    bda:LGE0B7A42AAE38C979
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW19228  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW19228 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b1/MW19228.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19228 ;
+        adm:logEntry        bda:LGE0B7A42AAE38C979 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:CR061E10537E79AD89
+        a                   :AgentAsCreator ;
+        :agent              bdr:P736 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE324D62E2831F198
+        a                   :PublishedEvent ;
+        :eventWhen          "1969/1971"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID779D1EE9AC65C04B
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001345773-X" .
+    
+    bdr:IDC5094C5F8F1D6F6C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ8662 .B55 1969" .
+    
+    bdr:IDDB1E39BD940A84ED
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "71908710" .
+    
+    bdr:MW19228  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "bka' ma/"@bo-x-ewts , "bka' ma : the redaction rdzogs chen rgyal sras gzhan phan mtha' yas, considerably enlarged and expanded"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID779D1EE9AC65C04B , bdr:IDC5094C5F8F1D6F6C , bdr:IDDB1E39BD940A84ED ;
+        :biblioNote         "reproduced from dudjom rimpoche's original tibetan manuscript collection by sonam t. kazi"@en ;
+        :creator            bdr:CR061E10537E79AD89 ;
+        :extentStatement    "14 v." ;
+        :hasTitle           bdr:TTC6B8880FE4BE18A8 , bdr:TTD60BB2B88AF36E4B , bdr:TTE0A8CAB5B3D4C4A2 , bdr:TTF20E14F22EB14323 ;
+        :instanceEvent      bdr:EVE324D62E2831F198 ;
+        :instanceOf         bdr:WA19228 ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "sonam t. kazi"@en ;
+        :script             bdr:ScriptLatn ;
+        :serialInstanceOf   bdr:WAS9090 ;
+        :seriesNumber       "v. 7-20" .
+    
+    bdr:TTC6B8880FE4BE18A8
+        a                   :CoverTitle ;
+        rdfs:label          "Bkaʼ ma;the redaction of Rdzogs-chen Rgyal-sras Gzhan-phan mthaʼ-yas, considerably enlarged and expanded.Reproduced from Dudjom Rimpocheʼs original Tibetan manuscript collection by Sonam T. Kazi."@en-x-mixed .
+    
+    bdr:TTD60BB2B88AF36E4B
+        a                   :Title ;
+        rdfs:label          "bka' ma/"@bo-x-ewts .
+    
+    bdr:TTE0A8CAB5B3D4C4A2
+        a                   :SpineTitle ;
+        rdfs:label          "sung kama"@en .
+    
+    bdr:TTF20E14F22EB14323
+        a                   :TitlePageTitle ;
+        rdfs:label          "bka' ma : the redaction rdzogs chen rgyal sras gzhan phan mtha' yas, considerably enlarged and expanded"@en .
+}

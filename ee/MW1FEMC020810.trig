@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020810 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020810
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020810 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ee/MW1FEMC020810.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020810 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID7294704A3DBEF4C3
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.481.III.1" .
+    
+    bdr:MW1FEMC020810
+        a                   :Instance ;
+        skos:prefLabel      "ប្រែពិស្តារ, តិរោកុឌ្ឌសូត្រ, សប្តប្រករណ៍"@km , "prè bistār, tirokuḍḍasūtr, sapt prakaraṇ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7294704A3DBEF4C3 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT0C0CD518392556AC , bdr:TT4DAD79F7C748D715 , bdr:TT8C060AD4CF13E7B6 , bdr:TT8DDA18504C03D360 ;
+        :instanceHasReproduction  bdr:W1FEMC020810 ;
+        :instanceOf         bdr:WA1FEMC010116 , bdr:WA1FEMC020810 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT7FF1C8F21B795170 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT7FF1C8F21B795170
+        a                   :Note ;
+        :contentLocationStatement  "pg. 145" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0C0CD518392556AC
+        a                   :Title ;
+        rdfs:label          "prè bistār, tirokuḍḍasūtr, sapt prakaraṇ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4DAD79F7C748D715 .
+    
+    bdr:TT4DAD79F7C748D715
+        a                   :CoverTitle ;
+        rdfs:label          "prè bistā, tirok, sabbaka"@km-x-twktt .
+    
+    bdr:TT8C060AD4CF13E7B6
+        a                   :Title ;
+        rdfs:label          "ប្រែពិស្តារ, តិរោកុឌ្ឌសូត្រ, សប្តប្រករណ៍"@km ;
+        :femcConversionOf   bdr:TT8DDA18504C03D360 .
+    
+    bdr:TT8DDA18504C03D360
+        a                   :CoverTitle ;
+        rdfs:label          "ប្រែពិស្ដា, តិរោក, សព្វក"@km .
+}

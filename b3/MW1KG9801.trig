@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG9801 {
+    bda:LGD97B1299F577002E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-06-06T11:01:47.524Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG9801  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG9801 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b3/MW1KG9801.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG9801 ;
+        adm:logEntry        bda:LGD97B1299F577002E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV720E9FC4CA523EF3
+        a                   :PublishedEvent ;
+        :eventWhen          "1974"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDF6555F739A03580E
+        a                   bdr:HollisId ;
+        rdf:value           "014257633" .
+    
+    bdr:MW1KG9801  a        :Instance ;
+        skos:prefLabel      "chos kyi brjed byang /"@bo-x-ewts , "a thesaurus of religious terms and categories"@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF6555F739A03580E ;
+        :biblioNote         "reproduced from a manuscript ledger (deb-ther) preserved in the library of ri-bo-che rje drung by tseten dorji"@en ;
+        :extentStatement    "592 columns" ;
+        :hasTitle           bdr:TT117E12AEDB5AE528 , bdr:TTA20C11A369DB0400 , bdr:TTD6B430E2FE4C661B , bdr:TTE2FA0DC90EE55BDD , bdr:TTFD7787A80BB2818A ;
+        :instanceEvent      bdr:EV720E9FC4CA523EF3 ;
+        :instanceHasReproduction  bdr:W1KG9801 ;
+        :instanceOf         bdr:WA1KG9801 ;
+        :note               bdr:NT5D36EDB06DA5E99B ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "tezu, arunachal"@en ;
+        :publisherName      "tibetan nyingmapa monastery"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT5D36EDB06DA5E99B
+        a                   :Note ;
+        :noteText           "in tibetan; preface in english"@en .
+    
+    bdr:TT117E12AEDB5AE528
+        a                   :OtherTitle ;
+        rdfs:label          "chos kyi rnam grangs/"@bo-x-ewts .
+    
+    bdr:TTA20C11A369DB0400
+        a                   :Title ;
+        rdfs:label          "chos kyi brjed byang /"@bo-x-ewts .
+    
+    bdr:TTD6B430E2FE4C661B
+        a                   :OtherTitle ;
+        rdfs:label          "chos thams cad kyi spyir btang dka' ba'i gnas kyi brjed byang gsal bar ston pa rnam grangs rgya mtsho'i gter/"@bo-x-ewts .
+    
+    bdr:TTE2FA0DC90EE55BDD
+        a                   :Subtitle ;
+        rdfs:label          "a thesaurus of religious terms and categories"@en-x-mixed .
+    
+    bdr:TTFD7787A80BB2818A
+        a                   :TitlePageTitle ;
+        rdfs:label          "chos thams cad kyi spyir brtags dka' gnas kyi brjed byang gsal bar ston pa rnam grangs rgya mtsh'i gter/"@bo-x-ewts .
+}

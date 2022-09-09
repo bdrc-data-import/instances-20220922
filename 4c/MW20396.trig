@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20396 {
+    bda:LG46339F8A7FF349CF
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20396  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20396 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "4c/MW20396.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20396 ;
+        adm:logEntry        bda:LG46339F8A7FF349CF , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9BC92A38D1645A02
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0BADEDB0C0756CE1
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.9.A2 J37 1996" .
+    
+    bdr:ID8871818E45221926
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540916591" .
+    
+    bdr:IDF2DE964C69A152DA
+        a                   bdr:HollisId ;
+        rdf:value           "014258123" .
+    
+    bdr:IDF6712B09E127DDA4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98900913" .
+    
+    bdr:MW20396  a          :Instance ;
+        skos:altLabel       "ka t'o ssu shih"@zh-latn-wadegile ;
+        skos:prefLabel      "kaH thog pa'i lo rgyus mdor bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0BADEDB0C0756CE1 , bdr:ID8871818E45221926 , bdr:IDF2DE964C69A152DA , bdr:IDF6712B09E127DDA4 ;
+        :authorshipStatement  "'jam dbyangs rgyal mtshan gyis mdzad/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "ti 1 pan."@bo-x-ewts ;
+        :extentStatement    "11, 9, 240 p." ;
+        :hasTitle           bdr:TT86E4F3929F228739 , bdr:TT9824C7BCD7F950AD , bdr:TTE406174805E552B4 , bdr:TTE66D0B0CD83020B9 ;
+        :instanceEvent      bdr:EV9BC92A38D1645A02 ;
+        :instanceHasReproduction  bdr:W20396 ;
+        :instanceOf         bdr:WA20396 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT86E4F3929F228739
+        a                   :ColophonTitle ;
+        rdfs:label          "ka t'o ssu shih"@zh-latn-wadegile .
+    
+    bdr:TT9824C7BCD7F950AD
+        a                   :CoverTitle ;
+        rdfs:label          "rgyal ba kaH thog pa'i lo rgyus mdor bsdus/"@bo-x-ewts .
+    
+    bdr:TTE406174805E552B4
+        a                   :Title ;
+        rdfs:label          "kaH thog pa'i lo rgyus mdor bsdus/"@bo-x-ewts .
+    
+    bdr:TTE66D0B0CD83020B9
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsang chen bstan pa'i chu 'go rgyal ba kaH thog pa'i lo rgyus mdor bsdus brjod pa 'chi med lha'i rnga sgra ngo mtshar rna ba'i dga' ston/"@bo-x-ewts .
+}

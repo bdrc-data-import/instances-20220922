@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2CZ9092 {
+    bda:LG138D844602375E3B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-26T09:43:36.043Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGEDF33328E3537D26
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-02-05T14:28:46.164Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2CZ9092  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW2CZ9092 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "bc/MW2CZ9092.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ9092 ;
+        adm:logEntry        bda:LG138D844602375E3B , bda:LGEDF33328E3537D26 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1247F8A54B7019A5
+        a                   :PublishedEvent ;
+        :eventWhen          "1958"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE131FFC80739E4C0
+        a                   bdr:HollisId ;
+        rdf:value           "014260370" .
+    
+    bdr:MW2CZ9092  a        :Instance ;
+        skos:prefLabel      "rnam 'phyang zhes pa sa pho khyi lo'i lo tho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE131FFC80739E4C0 ;
+        :extentStatement    "124 p. ; ill." ;
+        :hasTitle           bdr:TT505FE9479159A314 , bdr:TT94F01878654A8613 ;
+        :instanceEvent      bdr:EV1247F8A54B7019A5 ;
+        :instanceHasReproduction  bdr:W2CZ9092 ;
+        :instanceOf         bdr:WA2CZ9092 ;
+        :note               bdr:NT5543070A804DAE03 , bdr:NTFF2431B111663BA8 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT5543070A804DAE03
+        a                   :Note ;
+        :noteText           "Text says published at Tibetan Astrological Department, Tibetan Medical Institute in Dharmsala but this is not possible as was not established at that time. Possibly published by Kunu Lama, Sonam Dukgye."@en .
+    
+    bdr:NTFF2431B111663BA8
+        a                   :Note ;
+        :noteText           "copy made available from the tibetan medical institutes at dharamsala"@en .
+    
+    bdr:TT505FE9479159A314
+        a                   :TitlePageTitle ;
+        rdfs:label          "sa pho khyi lo'i lo tho dpyid kyi glu dbyangs/"@bo-x-ewts .
+    
+    bdr:TT94F01878654A8613
+        a                   :Title ;
+        rdfs:label          "rnam 'phyang zhes pa sa pho khyi lo'i lo tho/"@bo-x-ewts .
+}

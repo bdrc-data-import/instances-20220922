@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046302 {
+    bda:LG104FC6A9A39960F0
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046302"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046302
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046302 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "91/MW1FEMC046302.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046302 ;
+        adm:logEntry        bda:LG104FC6A9A39960F0 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5D96CFE7A7CEBC8D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "040-B.04.03.04.V.1" .
+    
+    bdr:MF961825CC46CAC08A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "169" .
+    
+    bdr:MW1FEMC046302
+        a                   :Instance ;
+        skos:prefLabel      "អនន្ទគុន"@km , "annada gun"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5D96CFE7A7CEBC8D ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2-6, 8, 9" ;
+        :hasTitle           bdr:TT75638E7EC7C6E36D , bdr:TT7ACB28A0DF7B326D ;
+        :instanceHasReproduction  bdr:W1FEMC036302 , bdr:W1FEMC046302 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF961825CC46CAC08A ;
+        :note               bdr:NT611B6F818ECC3F92 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT611B6F818ECC3F92
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT75638E7EC7C6E36D
+        a                   :Title ;
+        rdfs:label          "អនន្ទគុន"@km .
+    
+    bdr:TT7ACB28A0DF7B326D
+        a                   :Title ;
+        rdfs:label          "annada gun"@km-x-twktt .
+}

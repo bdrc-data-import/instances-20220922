@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21911 {
+    bda:LG64517E697F6E46F5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21911  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21911 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d8/MW21911.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21911 ;
+        adm:logEntry        bda:LG64517E697F6E46F5 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1AFDE9EE4CDFC42F
+        a                   :PublishedEvent ;
+        :eventWhen          "1990"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID9F0242E12739EED8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542002384" .
+    
+    bdr:IDC3438C6DEA0F395A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95903229" .
+    
+    bdr:IDF29890AE8CC31FD8
+        a                   bdr:HollisId ;
+        rdf:value           "014258496" .
+    
+    bdr:MW21911  a          :Instance ;
+        skos:altLabel       "hsia ma erh ken tun tan tseng chia t'so chuan"@zh-latn-wadegile ;
+        skos:prefLabel      "rje zhwa dmar dge 'dun bstan 'dzin rgya mtsho'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9F0242E12739EED8 , bdr:IDC3438C6DEA0F395A , bdr:IDF29890AE8CC31FD8 ;
+        :authorshipStatement  "dge bshes grags pa rgya mtshos brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 904 p." ;
+        :hasTitle           bdr:TT02C119EB76F50A2B , bdr:TTA802EA4F232EAE58 , bdr:TTAE1033668FE8F84A , bdr:TTF1146BE5FE7109F6 ;
+        :instanceEvent      bdr:EV1AFDE9EE4CDFC42F ;
+        :instanceHasReproduction  bdr:IE21911 , bdr:W21911 ;
+        :instanceOf         bdr:WA21911 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT02C119EB76F50A2B
+        a                   :ColophonTitle ;
+        rdfs:label          "hsia ma erh ken tun tan tseng chia t'so chuan"@zh-latn-wadegile .
+    
+    bdr:TTA802EA4F232EAE58
+        a                   :TitlePageTitle ;
+        rdfs:label          "snyigs dus kyi thams cad mkhyen pa yongs 'dzin chos kyi rgyal po bka' drin mnyam med rje btsun dge 'dun bstan 'dzin rgya mtsho dpal bzang po'i rnam par thar ba mdo tsam sgro skur spangs te brjod pa dzambu chu bo'i gser gyi phreng ba dad ldan mgrin pa'i md/"@bo-x-ewts .
+    
+    bdr:TTAE1033668FE8F84A
+        a                   :SpineTitle ;
+        rdfs:label          "hsia ma erh chuan"@zh-latn-wadegile .
+    
+    bdr:TTF1146BE5FE7109F6
+        a                   :Title ;
+        rdfs:label          "rje zhwa dmar dge 'dun bstan 'dzin rgya mtsho'i rnam thar/"@bo-x-ewts .
+}

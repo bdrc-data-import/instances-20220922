@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046453 {
+    bda:LG5CA868812200F1BE
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046453"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046453
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046453 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e4/MW1FEMC046453.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046453 ;
+        adm:logEntry        bda:LG5CA868812200F1BE , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID270BEB4F6AB486E0
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "015-B.04.03.04.VII" .
+    
+    bdr:MFC10CB63ED66BF56C
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "48" .
+    
+    bdr:MW1FEMC046453
+        a                   :Instance ;
+        skos:prefLabel      "ចុលសុទ្ធន្តបរិវាសំ (១-១៧)"@pi-khmr , "Culasuddha parīvāsaṃ"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID270BEB4F6AB486E0 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT0F9B66CE86514E46 , bdr:TTF229C50EAA954136 ;
+        :instanceHasReproduction  bdr:W1FEMC036453 , bdr:W1FEMC046453 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC10CB63ED66BF56C ;
+        :note               bdr:NTF2572001BD01BCCF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF2572001BD01BCCF
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0F9B66CE86514E46
+        a                   :Title ;
+        rdfs:label          "ចុលសុទ្ធន្តបរិវាសំ (១-១៧)"@pi-khmr .
+    
+    bdr:TTF229C50EAA954136
+        a                   :Title ;
+        rdfs:label          "Culasuddha parīvāsaṃ"@pi-x-twktt .
+}

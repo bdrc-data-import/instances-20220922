@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010524 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010524
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010524 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "09/MW1FEMC010524.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010524 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC9B6979E8C544E31
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "009-A.02.09.01.V.1" .
+    
+    bdr:MFEE10F2E388FF11EB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "14" ;
+        :microfilmStrip     "57" .
+    
+    bdr:MW1FEMC010524
+        a                   :Instance ;
+        skos:prefLabel      "មូលព្រះធម្មត្រៃ"@km , "mūl braḥ dhamm trai (type B)"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC9B6979E8C544E31 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT51D4557029E0B864 , bdr:TTE7286B20E7593D9E ;
+        :instanceHasReproduction  bdr:W1FEMC010524 ;
+        :instanceOf         bdr:WA1FEMC010524 , bdr:WA1FEMC070010 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFEE10F2E388FF11EB ;
+        :note               bdr:NT20DA6A053A6A1915 , bdr:NT220D4D66F2EB0761 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT20DA6A053A6A1915
+        a                   :Note ;
+        :noteText           "Should we write (Type B) ?"@en .
+    
+    bdr:NT220D4D66F2EB0761
+        a                   :Note ;
+        :contentLocationStatement  "pg. 157" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT51D4557029E0B864
+        a                   :Title ;
+        rdfs:label          "មូលព្រះធម្មត្រៃ"@km .
+    
+    bdr:TTE7286B20E7593D9E
+        a                   :Title ;
+        rdfs:label          "mūl braḥ dhamm trai (type B)"@km-x-twktt .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043629 {
+    bda:LG5AA2C336516431BB
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043629"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043629
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043629 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "73/MW1FEMC043629.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043629 ;
+        adm:logEntry        bda:LG5AA2C336516431BB , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID01E43BC3AF696C8E
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "046-B.11.11.05.II.1" .
+    
+    bdr:MF99CC141059DFE8B6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "186" .
+    
+    bdr:MW1FEMC043629
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះសុធន"@km , "braẖ sudhana"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID01E43BC3AF696C8E ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2, 3" ;
+        :hasTitle           bdr:TT62D2365380F9C39B , bdr:TTC6FD2B42C287EC8D ;
+        :instanceHasReproduction  bdr:W1FEMC033629 , bdr:W1FEMC043629 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF99CC141059DFE8B6 ;
+        :note               bdr:NTFA7AAFBACB03C0DD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTFA7AAFBACB03C0DD
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT62D2365380F9C39B
+        a                   :Title ;
+        rdfs:label          "ព្រះសុធន"@km .
+    
+    bdr:TTC6FD2B42C287EC8D
+        a                   :Title ;
+        rdfs:label          "braẖ sudhana"@km-x-twktt .
+}

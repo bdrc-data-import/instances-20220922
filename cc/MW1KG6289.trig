@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG6289 {
+    bda:LGB6EDD6F5D36B0FDB
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-12-15T09:57:57.013Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDFD0EBFAB8EA98A0
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-06-26T12:42:39.887Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG6289  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG6289 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "cc/MW1KG6289.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG6289 ;
+        adm:logEntry        bda:LGB6EDD6F5D36B0FDB , bda:LGDFD0EBFAB8EA98A0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV251D0AF8E3AF12DC
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDAB786413B75F1BE6
+        a                   bdr:HollisId ;
+        rdf:value           "014257350" .
+    
+    bdr:IDE1C83FBD6D3BB9CF
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789937834018" .
+    
+    bdr:MW1KG6289  a        :Instance ;
+        skos:prefLabel      "dpag bsam dbang po'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAB786413B75F1BE6 , bdr:IDE1C83FBD6D3BB9CF ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :extentStatement    "5, 615 p." ;
+        :hasTitle           bdr:TT1F03BEEAF905E530 , bdr:TT89111041A4D8A7D8 , bdr:TTE70B8F2623DD87A2 ;
+        :instanceEvent      bdr:EV251D0AF8E3AF12DC ;
+        :instanceHasReproduction  bdr:IE1KG6289 , bdr:W1KG6289 ;
+        :instanceOf         bdr:WA1KG6289 ;
+        :note               bdr:NTFA31C7919C0D0FDF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "kathmandu"@en ;
+        :publisherName      "shri gau tam bud+d+ha bi ha ra/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTFA31C7919C0D0FDF
+        a                   :Note ;
+        :noteSource         bdr:MW23429 ;
+        :noteText           "another version"@en .
+    
+    bdr:TT1F03BEEAF905E530
+        a                   :Title ;
+        rdfs:label          "dpag bsam dbang po'i rnam thar/"@bo-x-ewts .
+    
+    bdr:TT89111041A4D8A7D8
+        a                   :CoverTitle ;
+        rdfs:label          "rgyal dbang thams cad mkhyen pa dpag bsam dbang po thub bstan yongs 'du'i dpal gyi sde'i rnam par thar pa skal bzang kun tu dga' ba'i zlos gar/"@bo-x-ewts .
+    
+    bdr:TTE70B8F2623DD87A2
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal 'brug pa rin po che rgyal dbang thams cad mkhyen pa dpag bsam dbang po thub bstan yongs 'du'i dpal gyi sde'i rnam par thar pa skal bzang kun tu dga' ba'i zlos gar/"@bo-x-ewts .
+}

@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23927 {
+    bda:LG895D42FDA2381921
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T10:22:41.703Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGCE169DE25548D247
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23927  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23927 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ea/MW23927.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23927 ;
+        adm:logEntry        bda:LG895D42FDA2381921 , bda:LGCE169DE25548D247 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD475399A0BF15170
+        a                   :PublishedEvent ;
+        :eventWhen          "1974"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5A954F8D6957C9EB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ8939 .D56 1979" .
+    
+    bdr:ID5CF67B4981F55EF8
+        a                   bdr:HollisId ;
+        rdf:value           "014259236" .
+    
+    bdr:IDC70C951CD05568D4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "80902094" .
+    
+    bdr:MW23927  a          :Instance ;
+        skos:altLabel       "selected writings on vajrayana buddhist practice"@en-x-mixed ;
+        skos:prefLabel      "gsung thor bu/_dkon mchog yan lag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5A954F8D6957C9EB , bdr:ID5CF67B4981F55EF8 , bdr:IDC70C951CD05568D4 ;
+        :authorshipStatement  "by the fifth zwa-dmar dkon-mchog-'bans"@en ;
+        :biblioNote         "reproduced from rare texts from the library of zwa-dmar rin-po-che"@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT257485F6438A5512 , bdr:TT353F476943120772 ;
+        :instanceEvent      bdr:EVD475399A0BF15170 ;
+        :instanceHasReproduction  bdr:W23927 ;
+        :instanceOf         bdr:WA23927 ;
+        :note               bdr:NT64B245B193510DBA ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "dzongsar chhentse labrang"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT64B245B193510DBA
+        a                   :Note ;
+        :noteText           "-3573"@en .
+    
+    bdr:TT257485F6438A5512
+        a                   :TitlePageTitle ;
+        rdfs:label          "selected writings on vajrayana buddhist practice"@en-x-mixed .
+    
+    bdr:TT353F476943120772
+        a                   :Title ;
+        rdfs:label          "gsung thor bu/_dkon mchog yan lag"@bo-x-ewts .
+}

@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1569 {
+    bda:LG1ACEBB354EC2C258
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:10:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG65DA1BA9659B6871
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGDA3D899BCDEF5F8F
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-15T16:04:13.434Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1569  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1569 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ef/MW1NLM1569.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1569 ;
+        adm:logEntry        bda:LG1ACEBB354EC2C258 , bda:LG65DA1BA9659B6871 , bda:LGDA3D899BCDEF5F8F , bda:LGIMA07EBF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1569  a       :Instance ;
+        skos:prefLabel      "sham+bha la'i smon lam sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "12x4.5" ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TT24F7865C6614D022 ;
+        :instanceHasReproduction  bdr:W1NLM1569 ;
+        :instanceOf         bdr:WA1NLM1569 ;
+        :note               bdr:NT4C7D557C73B5785C , bdr:NTCBE4EC52A5A73C36 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT4C7D557C73B5785C
+        a                   :Note ;
+        :noteText           "nlmId: M0059487"@en .
+    
+    bdr:NTCBE4EC52A5A73C36
+        a                   :Note ;
+        :noteText           "missingPages: M0059487-042 [Missing page from 3A,3B] Image 441-442"@en .
+    
+    bdr:TT24F7865C6614D022
+        a                   :Title ;
+        rdfs:label          "sham+bha la'i smon lam sogs/"@bo-x-ewts .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW7668 {
+    bda:LG95905A31C65C4571
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGDDC382F4B4F9EE43
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA1F3FB78EA
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-23T19:16:52.743Z"^^xsd:dateTime ;
+        adm:logMessage      "added ALA-LC title variant from Hollis spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW7668  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW7668 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "b4/MW7668.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7668 ;
+        adm:logEntry        bda:LG95905A31C65C4571 , bda:LGDDC382F4B4F9EE43 , bda:LGIMA1F3FB78EA , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV130D98BD015DBF32
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID14C65C93D35E9A8E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75904281" .
+    
+    bdr:ID29625CC43FB423D2
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "006701430-5" .
+    
+    bdr:ID6F727495FBCE58A8
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7564 .S94 1975" .
+    
+    bdr:MW7668  a           :Instance , :SerialInstance ;
+        skos:prefLabel      "yi ge'i rnam gzhag dang mchan 'grel/"@bo-x-ewts , "Collected works of Sum-pa-Mkhan-po."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID14C65C93D35E9A8E , bdr:ID29625CC43FB423D2 , bdr:ID6F727495FBCE58A8 ;
+        :biblioNote         "in the collected works of sum pa mkhan po; cataloging based on the 1975 international academy of indian culture edition; reproduced by lokesh chandra from the original xylographs of raghu vira"@en ;
+        :extentStatement    "v. 2, 14 ff." ;
+        :hasTitle           bdr:TT0B373F5AD72FC0DD , bdr:TT6C863542C4D53CFD , bdr:TTBEAAE73C97ED82EA ;
+        :instanceEvent      bdr:EV130D98BD015DBF32 ;
+        :instanceOf         bdr:WA7668 ;
+        :note               bdr:NTAA75961137BDE323 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "international academy of indian culture"@en ;
+        :script             bdr:ScriptLatn ;
+        :serialInstanceOf   bdr:WAS00KG09211 ;
+        :seriesNumber       "v. 214-222" .
+    
+    bdr:NTAA75961137BDE323
+        a                   :Note ;
+        :noteText           "in w29227\nscanned at 600 dpi from the original blockprints with lokesh chandra"@en .
+    
+    bdr:TT0B373F5AD72FC0DD
+        a                   :TitlePageTitle ;
+        rdfs:label          "yi ge'i rnam gzhag rab gsal me long gi rtsa ba dang de'i mchan 'grel rab gsal me long /"@bo-x-ewts .
+    
+    bdr:TT6C863542C4D53CFD
+        a                   :CoverTitle ;
+        rdfs:label          "Collected works of Sum-pa-Mkhan-po."@en-x-mixed .
+    
+    bdr:TTBEAAE73C97ED82EA
+        a                   :Title ;
+        rdfs:label          "yi ge'i rnam gzhag dang mchan 'grel/"@bo-x-ewts .
+}

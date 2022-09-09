@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2CZ8009 {
+    bda:LG10EA508D8401AC1C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-13T16:34:20.033Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed isbn"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGF7A49512EEC1090E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-11-13T10:06:20.676Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW2CZ8009  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW2CZ8009 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "cf/MW2CZ8009.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ8009 ;
+        adm:logEntry        bda:LG10EA508D8401AC1C , bda:LGF7A49512EEC1090E , bda:LGIM3B24E310 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV204E15B33B2374C6
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7B137FE011CFE410
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "978818647076X" .
+    
+    bdr:IDADF29E3ECD507B7D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2009306909" .
+    
+    bdr:IDC440A73C1F17E256
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R603.T5 T72 2008" .
+    
+    bdr:MW2CZ8009  a        :Instance ;
+        skos:prefLabel      "tshab yig phyogs bsdus dpyad bsgrigs ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7B137FE011CFE410 , bdr:IDADF29E3ECD507B7D , bdr:IDC440A73C1F17E256 ;
+        :extentStatement    "xxxvi, 290 p. ; 25 cm." ;
+        :hasTitle           bdr:TT1C325FDAA797EAAE ;
+        :instanceEvent      bdr:EV204E15B33B2374C6 ;
+        :instanceOf         bdr:WA2CZ8009 ;
+        :note               bdr:NT77355BFFD60FE431 ;
+        :publisherLocation  "dharamsala"@en ;
+        :publisherName      "library of tibetan work and archive"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT77355BFFD60FE431
+        a                   :Note ;
+        :noteText           "tbrc hods digitally scanned images, tiffs and pdf files;"@en .
+    
+    bdr:TT1C325FDAA797EAAE
+        a                   :Title ;
+        rdfs:label          "tshab yig phyogs bsdus dpyad bsgrigs ma/"@bo-x-ewts .
+}

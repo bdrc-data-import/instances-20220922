@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30096 {
+    bda:LG7CE9052154956315
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-06-12T11:24:00.484Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG921BA079C842B9B2
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGD8839F3FC91499A0
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-02T09:58:34.599Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30096  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30096 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "cc/MW30096.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30096 ;
+        adm:logEntry        bda:LG7CE9052154956315 , bda:LG921BA079C842B9B2 , bda:LGD8839F3FC91499A0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8D1354A46D0A87F7
+        a                   :PublishedEvent ;
+        :eventWhen          "1972"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7B71E878488B6312
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77900837" .
+    
+    bdr:IDC520E347BF372B06
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .B3" .
+    
+    bdr:IDEFDA3A94C87277DC
+        a                   bdr:HollisId ;
+        rdf:value           "014260612" .
+    
+    bdr:MW30096  a          :Instance ;
+        skos:altLabel       "collected texts of the bde-chen-'bar-ba'i-rdo-rje tradition"@en ;
+        skos:prefLabel      "gter chen 'bar ba'i rdo rje'i chos skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7B71E878488B6312 , bdr:IDC520E347BF372B06 , bdr:IDEFDA3A94C87277DC ;
+        :biblioNote         "reproduced from a collection of mss. from the library of rgya ston em chi"@en ;
+        :extentStatement    "524 p." ;
+        :hasTitle           bdr:TT73DC478F99A34CAA , bdr:TTAC5B1ABEA93CF65A ;
+        :instanceEvent      bdr:EV8D1354A46D0A87F7 ;
+        :instanceHasReproduction  bdr:W30096 ;
+        :instanceOf         bdr:WA30096 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "pema lodoe"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT73DC478F99A34CAA
+        a                   :Title ;
+        rdfs:label          "gter chen 'bar ba'i rdo rje'i chos skor/"@bo-x-ewts .
+    
+    bdr:TTAC5B1ABEA93CF65A
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected texts of the bde-chen-'bar-ba'i-rdo-rje tradition"@en .
+}

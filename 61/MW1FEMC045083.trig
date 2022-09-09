@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC045083 {
+    bda:LG6F2F8C8968846AC3
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC045083"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC045083
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC045083 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "61/MW1FEMC045083.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC045083 ;
+        adm:logEntry        bda:LG6F2F8C8968846AC3 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA0A2F966039ECE82
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "051-B.01.03.01.I.3" .
+    
+    bdr:MFE4D9BDD5FB04B926
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "240" .
+    
+    bdr:MW1FEMC045083
+        a                   :Instance ;
+        skos:prefLabel      "ល្បើកមេទ្រី្យ (...២-៤១)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA0A2F966039ECE82 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT87DA1C3B09593A77 ;
+        :instanceHasReproduction  bdr:W1FEMC035083 , bdr:W1FEMC045083 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE4D9BDD5FB04B926 ;
+        :note               bdr:NT31C2F82D60E08C4B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT31C2F82D60E08C4B
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT87DA1C3B09593A77
+        a                   :Title ;
+        rdfs:label          "ល្បើកមេទ្រី្យ (...២-៤១)"@km .
+}

@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20842 {
+    bda:LG09C1A028DAAC88F4
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-02T16:08:00.286Z"^^xsd:dateTime ;
+        adm:logMessage      "added subjects"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGAE22ADED1F8DB62D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20842  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20842 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3d/MW20842.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20842 ;
+        adm:logEntry        bda:LG09C1A028DAAC88F4 , bda:LGAE22ADED1F8DB62D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV565375B66E77D7D6
+        a                   :PublishedEvent ;
+        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4FEAFDFF53B34FB0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542006533" .
+    
+    bdr:ID70EE54D6BD5251CF
+        a                   bdr:HollisId ;
+        rdf:value           "014258247" .
+    
+    bdr:MW20842  a          :Instance ;
+        skos:altLabel       "du lan shi jian shi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "gter lam dgon dga' ldan gsang sngags yar 'phel gling gi dkar chag mdor bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4FEAFDFF53B34FB0 , bdr:ID70EE54D6BD5251CF ;
+        :biblioNote         "the text is written in Chinese, Tibetan, and Mongolian language"@en ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "2, 41, 2, 86, 97 p." ;
+        :hasTitle           bdr:TT4216F2F47A42923C , bdr:TTF9C44198571EE0E7 ;
+        :instanceEvent      bdr:EV565375B66E77D7D6 ;
+        :instanceHasReproduction  bdr:W20842 ;
+        :instanceOf         bdr:WA20842 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT4216F2F47A42923C
+        a                   :Title ;
+        rdfs:label          "gter lam dgon dga' ldan gsang sngags yar 'phel gling gi dkar chag mdor bsdus/"@bo-x-ewts .
+    
+    bdr:TTF9C44198571EE0E7
+        a                   :OtherTitle ;
+        rdfs:label          "du lan shi jian shi"@zh-latn-pinyin-x-ndia .
+}

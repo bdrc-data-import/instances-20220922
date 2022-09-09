@@ -1,0 +1,69 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043355 {
+    bda:LG998BF485F8A9680A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043355"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043355
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043355 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "07/MW1FEMC043355.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043355 ;
+        adm:logEntry        bda:LG998BF485F8A9680A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID99DD72C3FAADCD0C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "007-B.11.11.06.III.4" .
+    
+    bdr:MFBC28895A2209B928
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "183" .
+    
+    bdr:MW1FEMC043355
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៩បរិច្ឆេទ"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID99DD72C3FAADCD0C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 4-8" ;
+        :hasTitle           bdr:TT67E59459229F07F6 ;
+        :instanceHasReproduction  bdr:W1FEMC033355 , bdr:W1FEMC043355 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBC28895A2209B928 ;
+        :note               bdr:NTBB3824EF6B7718FB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTBB3824EF6B7718FB
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT67E59459229F07F6
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km .
+}

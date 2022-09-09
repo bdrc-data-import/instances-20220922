@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1171 {
+    bda:LG146827E8EADC1909
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG4CD5CB2715926805
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG6EBC4C9D777E967C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-06T09:33:33.639Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1171  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1171 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0c/MW1NLM1171.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1171 ;
+        adm:logEntry        bda:LG146827E8EADC1909 , bda:LG4CD5CB2715926805 , bda:LG6EBC4C9D777E967C , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1171  a       :Instance ;
+        skos:prefLabel      "dbu ma 'jug pa'i mtha' dpyod lung rigs gter mdzod zab don kun gsal skal bzang 'jug ngogs/"@bo-x-ewts ;
+        :dimensionsStatement  "46.5x6.5" ;
+        :extentStatement    "442 ff." ;
+        :hasTitle           bdr:TTE5636C281E6D82FA ;
+        :instanceHasReproduction  bdr:W1NLM1171 ;
+        :instanceOf         bdr:WA1NLM1171 ;
+        :note               bdr:NT3FE6B13B3B9C3446 , bdr:NT639E7FA1E5869AFF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT3FE6B13B3B9C3446
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:NT639E7FA1E5869AFF
+        a                   :Note ;
+        :noteText           "nlmId: M0059084"@en .
+    
+    bdr:TTE5636C281E6D82FA
+        a                   :TitlePageTitle ;
+        rdfs:label          "dbu ma 'jug pa'i mtha' dpyod lung rigs gter mdzod zab don kun gsal skal bzang 'jug ngogs/"@bo-x-ewts .
+}

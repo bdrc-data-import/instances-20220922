@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021913 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021913
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021913 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ff/MW1FEMC021913.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021913 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5D0DB1E7A9454477
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.695.III.2" .
+    
+    bdr:MW1FEMC021913
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលសូត្រចោទឆ្លើយ"@km , "maṅgal sūtr cod chlöy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5D0DB1E7A9454477 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT504534CC897CFD39 , bdr:TT7C495E782ADF31EF , bdr:TT9A79413C8E743F0D , bdr:TTDE8368BD7C19403E ;
+        :instanceHasReproduction  bdr:W1FEMC021913 ;
+        :instanceOf         bdr:WA1FEMC020042 , bdr:WA1FEMC021913 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT4FF0A745E7C4A5BE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT4FF0A745E7C4A5BE
+        a                   :Note ;
+        :contentLocationStatement  "pg. 341" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT504534CC897CFD39
+        a                   :Title ;
+        rdfs:label          "មង្គលសូត្រចោទឆ្លើយ"@km ;
+        :femcConversionOf   bdr:TT9A79413C8E743F0D .
+    
+    bdr:TT7C495E782ADF31EF
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgal sūtr kāndh pucchā cot"@km-x-twktt .
+    
+    bdr:TT9A79413C8E743F0D
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលសូត្រកាន្ធបុច្ឆាចោត"@km .
+    
+    bdr:TTDE8368BD7C19403E
+        a                   :Title ;
+        rdfs:label          "maṅgal sūtr cod chlöy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7C495E782ADF31EF .
+}

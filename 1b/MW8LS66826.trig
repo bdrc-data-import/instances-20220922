@@ -1,0 +1,69 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8LS66826 {
+    bda:LG1D15BD200142E9E9
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-06T11:45:31.15Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG218D4E2AF211A9A8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-10-10T10:25:01.008Z"^^xsd:dateTime ;
+        adm:logMessage      "created new work record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:MW8LS66826  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW8LS66826 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "1b/MW8LS66826.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8LS66826 ;
+        adm:logEntry        bda:LG1D15BD200142E9E9 , bda:LG218D4E2AF211A9A8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV79DC5FA0E12E9E26
+        a                   :PublishedEvent ;
+        :eventWhen          "2018"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE17FBA57D0BCC73C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223058339" .
+    
+    bdr:MW8LS66826  a       :Instance ;
+        skos:prefLabel      "rtsis kyi bstan bcos mkhas pa dga' byed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE17FBA57D0BCC73C ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "23, 318 p." ;
+        :hasTitle           bdr:TT04DEC182B73540CB , bdr:TT45FEB82C4608226B ;
+        :instanceEvent      bdr:EV79DC5FA0E12E9E26 ;
+        :instanceHasReproduction  bdr:W8LS66826 ;
+        :instanceOf         bdr:WA1KG21838 , bdr:WA8LS66826 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT04DEC182B73540CB
+        a                   :Title ;
+        rdfs:label          "rtsis kyi bstan bcos mkhas pa dga' byed/"@bo-x-ewts .
+    
+    bdr:TT45FEB82C4608226B
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal dus kyi 'khor lo'i rtsis kyi bstan bcos mkhas pa rnams dga' bar byed pa/"@bo-x-ewts .
+}

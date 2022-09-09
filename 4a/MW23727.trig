@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23727 {
+    bda:LG7D3C48F534EE457C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-08T11:02:15.6Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG8F08CE23D07BB811
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23727  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23727 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "4a/MW23727.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23727 ;
+        adm:logEntry        bda:LG7D3C48F534EE457C , bda:LG8F08CE23D07BB811 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2689D6907A59D492
+        a                   :PublishedEvent ;
+        :eventWhen          "1984-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3ED4E4A6442AAEDF
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85901572" .
+    
+    bdr:ID3EDD7D35D02F8E6A
+        a                   bdr:HollisId ;
+        rdf:value           "014259070" .
+    
+    bdr:ID5F4AB76725074969
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .S46 1984" .
+    
+    bdr:MW23727  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of kun-mkhyen dol-po-pa ses-rab-rgyal-mtshan (1292-1361)"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_shes rab rgyal mtshan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3ED4E4A6442AAEDF , bdr:ID3EDD7D35D02F8E6A , bdr:ID5F4AB76725074969 ;
+        :biblioNote         "reproduced from eye copies of prints from the rgyal-rtse rdzon blocks preserved at the kyichu monastery in the paro valley, bhutan"@en ;
+        :extentStatement    "v. <1- >" ;
+        :hasTitle           bdr:TT6111B0292254CA83 , bdr:TTB0542D801F2021C7 , bdr:TTBE1AE5253D34013C ;
+        :instanceEvent      bdr:EV2689D6907A59D492 ;
+        :instanceHasReproduction  bdr:W23727 ;
+        :instanceOf         bdr:WA1AC374 , bdr:WA23727 ;
+        :note               bdr:NTB9A53C9F77263D7D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "paro, bhutan"@en ;
+        :publisherName      "lama ngodrup and sherab drimay"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTB9A53C9F77263D7D
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 2527"@en .
+    
+    bdr:TT6111B0292254CA83
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of kun-mkhyen dol-po-pa ses-rab-rgyal-mtshan (1292-1361)"@en-x-mixed .
+    
+    bdr:TTB0542D801F2021C7
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_shes rab rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:TTBE1AE5253D34013C
+        a                   :CoverTitle ;
+        rdfs:label          "kun mkhyen dol po'i gsun 'bum"@bo-alalc97 .
+}

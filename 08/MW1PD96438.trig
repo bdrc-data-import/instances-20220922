@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD96438 {
+    bda:LG49F55E4098783970
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-06T15:04:58.451Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD96438  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD96438 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "08/MW1PD96438.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD96438 ;
+        adm:logEntry        bda:LG49F55E4098783970 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCB4EC8393E228D01
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDD4DB2869CBE45F88
+        a                   bdr:HollisId ;
+        rdf:value           "014257982" .
+    
+    bdr:IDDD8F62DE0C607A48
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789624501667" .
+    
+    bdr:MW1PD96438  a       :Instance ;
+        skos:altLabel       "the collected works of dungse thinley norbu rinpoche"@en , "称来诺布文集"@zh-hans ;
+        skos:prefLabel      "gsung 'bum/_phrin las nor bu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD4DB2869CBE45F88 , bdr:IDDD8F62DE0C607A48 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT278F72FF511C2EBA , bdr:TT50320366A05C4A2C , bdr:TT66E70C39258BF426 , bdr:TT692C2C8D8507423A , bdr:TTA18B32CE75C591CF ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVCB4EC8393E228D01 ;
+        :instanceHasReproduction  bdr:W1PD96438 ;
+        :instanceOf         bdr:WA1PD96438 ;
+        :note               bdr:NT6061E7ADC13FDEFE ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "hongkong"@en ;
+        :publisherName      "hong kong gyi ling dpe skrun tshad yod kung si/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT6061E7ADC13FDEFE
+        a                   :Note ;
+        :noteText           "isbn: \n9789624501667 (v.1);\n9789624501711 (v.2);\n9789624501728 (v.3)"@en .
+    
+    bdr:TT278F72FF511C2EBA
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_phrin las nor bu/"@bo-x-ewts .
+    
+    bdr:TT50320366A05C4A2C
+        a                   :TitlePageTitle ;
+        rdfs:label          "gdung sras phrin las nor bu'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TT66E70C39258BF426
+        a                   :ColophonTitle ;
+        rdfs:label          "称来诺布文集"@zh-hans .
+    
+    bdr:TT692C2C8D8507423A
+        a                   :ColophonTitle ;
+        rdfs:label          "chen lai nuo bu wen ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTA18B32CE75C591CF
+        a                   :OtherTitle ;
+        rdfs:label          "the collected works of dungse thinley norbu rinpoche"@en .
+}

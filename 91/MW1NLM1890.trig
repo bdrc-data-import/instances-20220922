@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1890 {
+    bda:LG29653A56070DE06C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-10-28T15:12:13.112Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGC57E36B0E59A8DEC
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGD9A437FBD16366D0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1890  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1890 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "91/MW1NLM1890.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1890 ;
+        adm:logEntry        bda:LG29653A56070DE06C , bda:LGC57E36B0E59A8DEC , bda:LGD9A437FBD16366D0 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1890  a       :Instance ;
+        skos:prefLabel      "mdo sde brgyad brgya pa/"@bo-x-ewts ;
+        :dimensionsStatement  "18.5x6" ;
+        :extentStatement    "76 ff." ;
+        :hasTitle           bdr:TT3E1A354ABE22C312 , bdr:TTB17EE8423687B709 ;
+        :instanceHasReproduction  bdr:W1NLM1890 ;
+        :instanceOf         bdr:WA1NLM1890 , bdr:WA8LS17232 ;
+        :note               bdr:NT8A4D7DF67558D547 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT8A4D7DF67558D547
+        a                   :Note ;
+        :noteText           "nlmId: M0059808"@en .
+    
+    bdr:TT3E1A354ABE22C312
+        a                   :Title ;
+        rdfs:label          "mdo sde brgyad brgya pa/"@bo-x-ewts .
+    
+    bdr:TTB17EE8423687B709
+        a                   :FullTitle ;
+        rdfs:label          "de bzhin gshegs pa bdun gyi sngon gyi smon lam gyi khyad par rgyas pa zhes bya theg pa chen po'i mdo/"@bo-x-ewts .
+}

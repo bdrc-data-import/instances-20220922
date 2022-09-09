@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043830 {
+    bda:LG81FB5713EF1141D6
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043830"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043830
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043830 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8b/MW1FEMC043830.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043830 ;
+        adm:logEntry        bda:LG81FB5713EF1141D6 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDBA58BF41CB1BE34D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "017-B.11.11.04.VII" .
+    
+    bdr:MFE0DF50A5DD2FEFDE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "54" .
+    
+    bdr:MW1FEMC043830
+        a                   :Instance ;
+        skos:prefLabel      "សំវរ សុត្តសិល (ក-យ)"@pi-khmr , "saṃ vara suttarῑla"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBA58BF41CB1BE34D ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT6EA7754422D7B570 , bdr:TT83A1030CC8A990D4 ;
+        :instanceHasReproduction  bdr:W1FEMC033830 , bdr:W1FEMC043830 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE0DF50A5DD2FEFDE ;
+        :note               bdr:NT665132EEC91CCDF0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT665132EEC91CCDF0
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6EA7754422D7B570
+        a                   :Title ;
+        rdfs:label          "saṃ vara suttarῑla"@pi-x-twktt .
+    
+    bdr:TT83A1030CC8A990D4
+        a                   :Title ;
+        rdfs:label          "សំវរ សុត្តសិល (ក-យ)"@pi-khmr .
+}

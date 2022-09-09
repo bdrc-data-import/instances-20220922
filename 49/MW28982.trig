@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW28982 {
+    bda:LG0E715617AB4EA7AA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-03T15:56:42.248Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat , pub info and changed topics"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG4B86A56F9AD3635C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW28982  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW28982 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "49/MW28982.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28982 ;
+        adm:logEntry        bda:LG0E715617AB4EA7AA , bda:LG4B86A56F9AD3635C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA430E4F1AD07C1E0
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID534CFD0CD96EFDD6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7800576248" .
+    
+    bdr:ID6DDA5CDF0EBC2EDE
+        a                   bdr:HollisId ;
+        rdf:value           "014259868" .
+    
+    bdr:MW28982  a          :Instance ;
+        skos:prefLabel      "gangs ri'i pang gi lang tsho'i rol mo/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID534CFD0CD96EFDD6 , bdr:ID6DDA5CDF0EBC2EDE ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 3, 146 p." ;
+        :hasTitle           bdr:TTB5CC0D2380862E53 , bdr:TTF07436ECD2EFEACF ;
+        :instanceEvent      bdr:EVA430E4F1AD07C1E0 ;
+        :instanceHasReproduction  bdr:W28982 ;
+        :instanceOf         bdr:WA28982 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin"@en ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTB5CC0D2380862E53
+        a                   :Title ;
+        rdfs:label          "gangs ri'i pang gi lang tsho'i rol mo/"@bo-x-ewts .
+    
+    bdr:TTF07436ECD2EFEACF
+        a                   :Subtitle ;
+        rdfs:label          "gser tshang phun tshogs bkra shis kyis bod ljongs su las don bsgrubs shing 'tsho gnas byas pa'i rang gi lo rgyus mdor bsdus/"@bo-x-ewts .
+}

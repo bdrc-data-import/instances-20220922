@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW17210 {
+    bda:LG60E91D2D5F26D4BA
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-06-30T12:53:36.671Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6DC539A8CB4066B6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBE4A78C31B6EFD1D
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-04-17T07:49:22.729Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized catalog info"@en ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW17210  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW17210 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d5/MW17210.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW17210 ;
+        adm:logEntry        bda:LG60E91D2D5F26D4BA , bda:LG6DC539A8CB4066B6 , bda:LGBE4A78C31B6EFD1D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A3EF9A36B23AAC8
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID292206A95F813243
+        a                   bdr:HollisId ;
+        rdf:value           "014254783" .
+    
+    bdr:MW17210  a          :Instance ;
+        skos:prefLabel      "klu sgrub dgongs rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID292206A95F813243 ;
+        :biblioNote         "printed from typesetting /"@bo-x-ewts ;
+        :extentStatement    "5, 133 p." ;
+        :hasTitle           bdr:TT0365FCC642F1075C , bdr:TT5C96DD15F772EA73 , bdr:TTB5582AFA60902341 ;
+        :instanceEvent      bdr:EV6A3EF9A36B23AAC8 ;
+        :instanceHasReproduction  bdr:W17210 ;
+        :instanceOf         bdr:WA17210 ;
+        :note               bdr:NTBE3589F6C56DE8D6 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "delhi/"@bo-x-ewts ;
+        :publisherName      "shes rab rgyal mtshan/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTBE3589F6C56DE8D6
+        a                   :Note ;
+        :noteText           "this work is said to have been based on the explanations of dge 'dun chos 'phel himself."@en .
+    
+    bdr:TT0365FCC642F1075C
+        a                   :TitlePageTitle ;
+        rdfs:label          "dbu ma'i zab gnad snying por dril ba'i legs bshad klu sgrub dgongs rgyan/"@bo-x-ewts .
+    
+    bdr:TT5C96DD15F772EA73
+        a                   :CoverTitle ;
+        rdfs:label          "dbu ma klu sgrub dgongs rgyan/"@bo-x-ewts .
+    
+    bdr:TTB5582AFA60902341
+        a                   :Title ;
+        rdfs:label          "klu sgrub dgongs rgyan/"@bo-x-ewts .
+}

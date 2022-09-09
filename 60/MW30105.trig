@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30105 {
+    bda:LG1B451668CFA9FBC5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG2CCD641FB6BB5595
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-02T16:23:34.396Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30105  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30105 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "60/MW30105.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30105 ;
+        adm:logEntry        bda:LG1B451668CFA9FBC5 , bda:LG2CCD641FB6BB5595 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6177ABFD087C04D8
+        a                   :PublishedEvent ;
+        :eventWhen          "0200/?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1FA2C19DA63303B1
+        a                   bdr:HollisId ;
+        rdf:value           "014260620" .
+    
+    bdr:MW30105  a          :Instance ;
+        skos:prefLabel      "gter 'bum/_rig 'dzin nyi ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1FA2C19DA63303B1 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "21 v," ;
+        :hasTitle           bdr:TTC6C4BB89F3F92346 , bdr:TTDA54271642820D44 ;
+        :instanceEvent      bdr:EV6177ABFD087C04D8 ;
+        :instanceHasReproduction  bdr:W30105 ;
+        :instanceOf         bdr:WA30105 ;
+        :note               bdr:NT8F2A1147A9C960EE ;
+        :numberOfVolumes    21 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "[ser tha?]"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT8F2A1147A9C960EE
+        a                   :Note ;
+        :noteText           "revelations of a modern visionary from ser tha; scanned from the set belonging to sarah jacoby\n\ntbrc holds digitally scanned images, tiffs and pdf files\n5972-5993"@en .
+    
+    bdr:TTC6C4BB89F3F92346
+        a                   :Title ;
+        rdfs:label          "gter 'bum/_rig 'dzin nyi ma/"@bo-x-ewts .
+    
+    bdr:TTDA54271642820D44
+        a                   :CoverTitle ;
+        rdfs:label          "gter 'bum mthong ba rang grol/"@bo-x-ewts .
+}

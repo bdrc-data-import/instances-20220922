@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW25251 {
+    bda:LG2B2578692AAEFE91
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG5F7588BFBD7B150B
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-04-08T13:02:32.973Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW25251  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW25251 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "0e/MW25251.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW25251 ;
+        adm:logEntry        bda:LG2B2578692AAEFE91 , bda:LG5F7588BFBD7B150B , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV143C2BFA789201D2
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID00106B9F46246D89
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003333325" .
+    
+    bdr:IDD08B80988DF548FD
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7800575365" .
+    
+    bdr:IDFBAB1082CDFA2B5A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R603.T5 B784 2002" .
+    
+    bdr:MW25251  a          :Instance ;
+        skos:altLabel       "藏医史概论"@zh-hans ;
+        skos:prefLabel      "gso ba rig pa'i byung ba brjod pa dpyod ldan gsar bu'i mgul rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID00106B9F46246D89 , bdr:IDD08B80988DF548FD , bdr:IDFBAB1082CDFA2B5A ;
+        :authorshipStatement  "bsam gtan gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 178 p." ;
+        :hasTitle           bdr:TT3052384D65242A00 , bdr:TT448AEA8211595186 , bdr:TT515B478B44501F90 , bdr:TTF2238BEA860BE355 ;
+        :instanceEvent      bdr:EV143C2BFA789201D2 ;
+        :instanceHasReproduction  bdr:W25251 ;
+        :instanceOf         bdr:WA25251 ;
+        :note               bdr:NT72AA5A361DB2F852 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT72AA5A361DB2F852
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 7925"@en .
+    
+    bdr:TT3052384D65242A00
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang yi shi gai lun"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT448AEA8211595186
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏医史概论"@zh-hans .
+    
+    bdr:TT515B478B44501F90
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod kyi gso ba rig pa'i byung ba brjod pa dpyod ldan gsar bu'i mgul rgyan/"@bo-x-ewts .
+    
+    bdr:TTF2238BEA860BE355
+        a                   :Title ;
+        rdfs:label          "gso ba rig pa'i byung ba brjod pa dpyod ldan gsar bu'i mgul rgyan/"@bo-x-ewts .
+}

@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29036 {
+    bda:LGF3F9D1F1685EF242
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29036  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29036 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "3e/MW29036.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29036 ;
+        adm:logEntry        bda:LGF3F9D1F1685EF242 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV828253D3AAB9FA03
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4A914CDA205D15D0
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005317810" .
+    
+    bdr:ID4D2E540F17B33343
+        a                   bdr:HollisId ;
+        rdf:value           "014259888" .
+    
+    bdr:IDD19C0049C5E1F2CD
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .N3125 2004" .
+    
+    bdr:MW29036  a          :Instance ;
+        skos:altLabel       "the collected works of dzatrul ngawang tendzin norbu"@en ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang bstan 'dzin nor bu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4A914CDA205D15D0 , bdr:ID4D2E540F17B33343 , bdr:IDD19C0049C5E1F2CD ;
+        :extentStatement    "9 v." ;
+        :hasTitle           bdr:TT06DED9D90D89605E , bdr:TT10382764AA794862 , bdr:TTD52668AB34798A08 ;
+        :instanceEvent      bdr:EV828253D3AAB9FA03 ;
+        :instanceHasReproduction  bdr:W29036 ;
+        :instanceOf         bdr:WA29036 ;
+        :note               bdr:NT949A898F9D3DC7D0 ;
+        :numberOfVolumes    9 ;
+        :publisherLocation  "kathmandu"@en ;
+        :publisherName      "ngagyur dongak choling monastery"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT949A898F9D3DC7D0
+        a                   :Note ;
+        :noteText           "-5030"@en .
+    
+    bdr:TT06DED9D90D89605E
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works of dzatrul ngawang tendzin norbu"@en .
+    
+    bdr:TT10382764AA794862
+        a                   :TitlePageTitle ;
+        rdfs:label          "rdza sprul ngag dbang bstan 'dzin nor bu'i bka' 'bum/"@bo-x-ewts .
+    
+    bdr:TTD52668AB34798A08
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang bstan 'dzin nor bu/"@bo-x-ewts .
+}

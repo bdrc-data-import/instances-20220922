@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046141 {
+    bda:LGB1C56ED2B4F3EF75
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046141"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046141
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046141 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ff/MW1FEMC046141.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046141 ;
+        adm:logEntry        bda:LGB1C56ED2B4F3EF75 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID4F1A863AF014A75B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "002-B.04.03.03.VII" .
+    
+    bdr:MFBCC7AC6056C7CA31
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "53" .
+    
+    bdr:MW1FEMC046141
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះសារសង្គហ (ក-ខះ)(ព-ភះ)"@pi-khmr , "braḥ Sāra Sańgaha"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4F1A863AF014A75B ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 12" ;
+        :hasTitle           bdr:TT1976E3AB59F0F219 , bdr:TTC56CEA9299B2CDA6 ;
+        :instanceHasReproduction  bdr:W1FEMC036141 , bdr:W1FEMC046141 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBCC7AC6056C7CA31 ;
+        :note               bdr:NT3D7638ABC067594F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3D7638ABC067594F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1976E3AB59F0F219
+        a                   :Title ;
+        rdfs:label          "ព្រះសារសង្គហ (ក-ខះ)(ព-ភះ)"@pi-khmr .
+    
+    bdr:TTC56CEA9299B2CDA6
+        a                   :Title ;
+        rdfs:label          "braḥ Sāra Sańgaha"@pi-x-twktt .
+}

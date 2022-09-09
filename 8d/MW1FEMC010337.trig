@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010337 {
+    bda:LG959260E967A9AB6A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010337"@en ;
+        adm:logWho          bdu:U00091 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010337
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010337 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "8d/MW1FEMC010337.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010337 ;
+        adm:logEntry        bda:LG959260E967A9AB6A , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC031132 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:IDBCD1A6BE44F3EEE8
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "061-PP.03.03.03.III.1" .
+    
+    bdr:MFB471DFF73971A5AB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "16" ;
+        :microfilmStrip     "64" .
+    
+    bdr:MW1FEMC010337
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè3"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBCD1A6BE44F3EEE8 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT0A0E8C7EFAF534EB , bdr:TT1BD7723C656DFA1C , bdr:TTA298017628B0E0BE , bdr:TTC0F65CEC83EC5E4E , bdr:TTDC8C7E1FDD40DFFC , bdr:TTEB926B7E7982C51F ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFB471DFF73971A5AB ;
+        :note               bdr:NT9BF77DADDA4F7CEE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9BF77DADDA4F7CEE
+        a                   :Note ;
+        :contentLocationStatement  "pg. 119" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT0A0E8C7EFAF534EB
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មអានន្ទឆ្ថើយ"@km ;
+        :femcConversionOf   bdr:TTA298017628B0E0BE .
+    
+    bdr:TT1BD7723C656DFA1C
+        a                   :CoverTitle ;
+        rdfs:label          "abhidhamm ānand chlöy"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDC8C7E1FDD40DFFC .
+    
+    bdr:TTA298017628B0E0BE
+        a                   :CoverTitle ;
+        rdfs:label          "អប្ភីធមអនន្ឬឆ្ឍើ"@km .
+    
+    bdr:TTC0F65CEC83EC5E4E
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè3"@km-x-twktt .
+    
+    bdr:TTDC8C7E1FDD40DFFC
+        a                   :CoverTitle ;
+        rdfs:label          "abbhīdham anand chlöy"@km-x-twktt .
+    
+    bdr:TTEB926B7E7982C51F
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+}

@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30040 {
+    bda:LGA185925DE7DD105E
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-02-27T15:41:42.307Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGF4FFFF9FA7C848A0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30040  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30040 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "5e/MW30040.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30040 ;
+        adm:logEntry        bda:LGA185925DE7DD105E , bda:LGF4FFFF9FA7C848A0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBA5CFEE38369B688
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7FEBF07C4DC8D475
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624507597" .
+    
+    bdr:IDDDBA7F836C08CC9F
+        a                   bdr:HollisId ;
+        rdf:value           "014260584" .
+    
+    bdr:MW30040  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "chags med ri chos/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7FEBF07C4DC8D475 , bdr:IDDDBA7F836C08CC9F ;
+        :authorshipStatement  "mkhas grub rA ga a syas brtsams ; mkhan po rdo rjes bsgrigs/"@bo-x-ewts ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 4, 447 p." ;
+        :hasTitle           bdr:TT21070F5B97894454 , bdr:TT992FAB4B0BFD1CEC ;
+        :instanceEvent      bdr:EVBA5CFEE38369B688 ;
+        :instanceHasReproduction  bdr:IE30040 , bdr:W30040 ;
+        :instanceOf         bdr:WA30040 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zhang kang /"@bo-x-ewts ;
+        :publisherName      "zhang kang then mA dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG18038 ;
+        :seriesNumber       "v. 7" .
+    
+    bdr:TT21070F5B97894454
+        a                   :TitlePageTitle ;
+        rdfs:label          "ri chos zhal gdams/"@bo-x-ewts .
+    
+    bdr:TT992FAB4B0BFD1CEC
+        a                   :Title ;
+        rdfs:label          "chags med ri chos/"@bo-x-ewts .
+}

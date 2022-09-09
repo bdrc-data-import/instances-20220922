@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044718 {
+    bda:LG4B7BFEDF74A482CB
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044718"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044718
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044718 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4f/MW1FEMC044718.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044718 ;
+        adm:logEntry        bda:LG4B7BFEDF74A482CB , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF62CD03029C356AF
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "041-B.06.06.04.III.6" .
+    
+    bdr:MF7C9F125D877B5EFF
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "153" .
+    
+    bdr:MW1FEMC044718
+        a                   :Instance ;
+        skos:prefLabel      "អនីសង្ឃព្រះវិហារ"@km , "anīsaṅgh braḥ vihār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF62CD03029C356AF ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTB6AA38E3DB34F05E , bdr:TTFF3F8BCA82CD7C86 ;
+        :instanceHasReproduction  bdr:W1FEMC034718 , bdr:W1FEMC044718 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF7C9F125D877B5EFF ;
+        :note               bdr:NT3C35A6133218FAEA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3C35A6133218FAEA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTB6AA38E3DB34F05E
+        a                   :Title ;
+        rdfs:label          "anīsaṅgh braḥ vihār"@km-x-twktt .
+    
+    bdr:TTFF3F8BCA82CD7C86
+        a                   :Title ;
+        rdfs:label          "អនីសង្ឃព្រះវិហារ"@km .
+}

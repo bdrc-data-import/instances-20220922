@@ -1,0 +1,105 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20130 {
+    bda:LG0305FAA3EAB77F97
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-09-05T13:45:39.047Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG31919A90DCAFED8D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20130  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20130 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "9f/MW20130.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20130 ;
+        adm:logEntry        bda:LG0305FAA3EAB77F97 , bda:LG31919A90DCAFED8D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR79893936F82378FF
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6456 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV1BC79D44F2FC2538
+        a                   :PublishedEvent ;
+        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID152D2DD7717AD4D1
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542003917,9787542003911" .
+    
+    bdr:IDA3D3CB4D051F68EE
+        a                   bdr:HollisId ;
+        rdf:value           "014258060" .
+    
+    bdr:MW20130  a          :Instance , :SerialInstance ;
+        skos:altLabel       "雪魂"@zh-hans ;
+        skos:prefLabel      "kha ba'i rnam shes/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID152D2DD7717AD4D1 , bdr:IDA3D3CB4D051F68EE ;
+        :authorshipStatement  "'gyur med kyis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR79893936F82378FF ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :hasTitle           bdr:TT2D4865C58A77426E , bdr:TTC5BC334A85B28D73 , bdr:TTE7586DE89C665606 ;
+        :instanceEvent      bdr:EV1BC79D44F2FC2538 ;
+        :instanceHasReproduction  bdr:W20130 ;
+        :instanceOf         bdr:WA20130 ;
+        :note               bdr:NTD05572F2E7A8B8E5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG14508 ;
+        :seriesNumber       "6" .
+    
+    bdr:NTD05572F2E7A8B8E5
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT2D4865C58A77426E
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xue hun"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTC5BC334A85B28D73
+        a                   :Title ;
+        rdfs:label          "kha ba'i rnam shes/"@bo-x-ewts .
+    
+    bdr:TTE7586DE89C665606
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "雪魂"@zh-hans .
+}

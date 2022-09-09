@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8LS18568 {
+    bda:LG77CBF9BFD10FA2C1
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-23T14:54:26.882Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor, isbn, edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGA3170485D9F4477F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-11T08:45:39.656Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info, topic and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:MW8LS18568  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW8LS18568 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "2d/MW8LS18568.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8LS18568 ;
+        adm:logEntry        bda:LG77CBF9BFD10FA2C1 , bda:LGA3170485D9F4477F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRF1D5EE735C1E4D71
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75225 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV881E0CA81F661B15
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID04137E38C844E64C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105141722" .
+    
+    bdr:MW8LS18568  a       :Instance ;
+        skos:prefLabel      "dma' rim grangs kyi rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID04137E38C844E64C ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRF1D5EE735C1E4D71 ;
+        :editionStatement   "2016 par gzhi dang po/ 2016 par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "214 p." ;
+        :hasTitle           bdr:TT9654F043BD7B0BB2 ;
+        :instanceEvent      bdr:EV881E0CA81F661B15 ;
+        :instanceHasReproduction  bdr:W8LS18568 ;
+        :instanceOf         bdr:WA8LS18568 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT9654F043BD7B0BB2
+        a                   :TitlePageTitle ;
+        rdfs:label          "dma' rim grangs kyi rnam bshad/"@bo-x-ewts .
+}

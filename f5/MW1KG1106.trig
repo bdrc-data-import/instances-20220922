@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1106 {
+    bda:LG177E590AFD54BF72
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-12-05T14:28:49.156Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC72D40D1E0E53D71
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-05-19T09:48:33.042Z"^^xsd:dateTime ;
+        adm:logMessage      "republished"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1106  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1106 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "f5/MW1KG1106.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1106 ;
+        adm:logEntry        bda:LG177E590AFD54BF72 , bda:LGC72D40D1E0E53D71 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV25F0F0348C941B27
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID9DCD42272636A288
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105092338" .
+    
+    bdr:IDF079DE220235CBC2
+        a                   bdr:HollisId ;
+        rdf:value           "014255699" .
+    
+    bdr:MW1KG1106  a        :Instance , :SerialInstance ;
+        skos:altLabel       "<<si bu yi dian>> yi nan zhu shi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rgyud bzhi'i rtsa ba'i 'grel pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9DCD42272636A288 , bdr:IDF079DE220235CBC2 ;
+        :contentLocationStatement  "TBRC Library: Editor's Room" ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "2, 3, 4, 4, 254 p." ;
+        :hasTitle           bdr:TT7FA5C9FDF90EB3CD , bdr:TTACC65BEE43F06F8E , bdr:TTCEFDC5FD8009F9D8 ;
+        :instanceEvent      bdr:EV25F0F0348C941B27 ;
+        :instanceHasReproduction  bdr:IE1KG1106 , bdr:W1KG1106 ;
+        :instanceOf         bdr:WA1KG1106 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC418 ;
+        :seriesNumber       "074" .
+    
+    bdr:TT7FA5C9FDF90EB3CD
+        a                   :ColophonTitle ;
+        rdfs:label          "<<si bu yi dian>> yi nan zhu shi"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTACC65BEE43F06F8E
+        a                   :Title ;
+        rdfs:label          "yongs gtad rgyud kyi 'grel chen/"@bo-x-ewts .
+    
+    bdr:TTCEFDC5FD8009F9D8
+        a                   :Title ;
+        rdfs:label          "rgyud bzhi'i rtsa ba'i 'grel pa/"@bo-x-ewts .
+}

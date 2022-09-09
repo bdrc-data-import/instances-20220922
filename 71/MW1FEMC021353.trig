@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021353 {
+    bda:LG79AF2F92EF756A88
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021353"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021353
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021353 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "71/MW1FEMC021353.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021353 ;
+        adm:logEntry        bda:LG79AF2F92EF756A88 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6F8FB7178AC3C561
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.167.VII" .
+    
+    bdr:MW1FEMC021353
+        a                   :Instance ;
+        skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭhamasambodhi"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6F8FB7178AC3C561 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "12" ;
+        :hasTitle           bdr:TT1A08CA532EE2F271 , bdr:TT332A3519C6F7E03F , bdr:TT3B49A6C5F7AE6C40 , bdr:TT5D84FA466BE5E4E0 , bdr:TT8E17CAFE729090BE , bdr:TTEE728EC8C4A3C435 ;
+        :instanceHasReproduction  bdr:W1FEMC021353 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT3BCCDF4D22A96A5B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3BCCDF4D22A96A5B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 247" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1A08CA532EE2F271
+        a                   :CoverTitle ;
+        rdfs:label          "pañcaksatrasakyarājapabbajjāparivatta"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5D84FA466BE5E4E0 .
+    
+    bdr:TT332A3519C6F7E03F
+        a                   :Title ;
+        rdfs:label          "បឋមសម្ពោធិ"@km .
+    
+    bdr:TT3B49A6C5F7AE6C40
+        a                   :CoverTitle ;
+        rdfs:label          "បញ្ចក្សត្រសក្យរាជបព្វជ្ជាបរិវត្ត"@km ;
+        :femcConversionOf   bdr:TT8E17CAFE729090BE .
+    
+    bdr:TT5D84FA466BE5E4E0
+        a                   :CoverTitle ;
+        rdfs:label          "pañcasatakyarājapabbajāparivatta"@km-x-twktt .
+    
+    bdr:TT8E17CAFE729090BE
+        a                   :CoverTitle ;
+        rdfs:label          "បញ្ចសតក្យរាជបព្វជាបរិវត្ត"@km .
+    
+    bdr:TTEE728EC8C4A3C435
+        a                   :Title ;
+        rdfs:label          "paṭhamasambodhi"@km-x-twktt .
+}

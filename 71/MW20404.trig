@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20404 {
+    bda:LG08B6061F7D5D85AC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGEEE98975727C1EBD
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-08-22T13:20:07.641Z"^^xsd:dateTime ;
+        adm:logMessage      "added colophon title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20404  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20404 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "71/MW20404.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20404 ;
+        adm:logEntry        bda:LG08B6061F7D5D85AC , bda:LGEEE98975727C1EBD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6C90B5E585DC4003
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID109C0F9654611B61
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542104845" .
+    
+    bdr:IDCC56E34E3063C2F4
+        a                   bdr:HollisId ;
+        rdf:value           "014258129" .
+    
+    bdr:MW20404  a          :Instance ;
+        skos:altLabel       "藏传因明逻辑学概论"@zh-hans ;
+        skos:prefLabel      "tshad ma'i bstan bcos rigs pa'i rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID109C0F9654611B61 , bdr:IDCC56E34E3063C2F4 ;
+        :authorshipStatement  "rje dge 'dun grub kyis brtsams ; chu skyes bsam gtan gyis zhu dag byas/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "6, 3, 487 p." ;
+        :hasTitle           bdr:TT140B24D33EA58BC3 , bdr:TT29CBA57B362EF362 ;
+        :instanceEvent      bdr:EV6C90B5E585DC4003 ;
+        :instanceHasReproduction  bdr:W20404 ;
+        :instanceOf         bdr:WA20404 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT140B24D33EA58BC3
+        a                   :ColophonTitle ;
+        rdfs:label          "藏传因明逻辑学概论"@zh-hans .
+    
+    bdr:TT29CBA57B362EF362
+        a                   :Title ;
+        rdfs:label          "tshad ma'i bstan bcos rigs pa'i rgyan/"@bo-x-ewts .
+}

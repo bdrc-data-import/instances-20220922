@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046357 {
+    bda:LGB7FA696283AAFF40
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046357"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046357
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046357 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a5/MW1FEMC046357.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046357 ;
+        adm:logEntry        bda:LGB7FA696283AAFF40 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID92F555E7BA33F740
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "093-B.04.03.04.III.1" .
+    
+    bdr:MF17B29975B8257CCA
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "170" .
+    
+    bdr:MW1FEMC046357
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះត្រៃលក្ខណ៍ (១-៨)"@km , "braḥ trai lakkhaṇa"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID92F555E7BA33F740 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT3C38612A95FF2E2C , bdr:TT94013A01FCD5795F ;
+        :instanceHasReproduction  bdr:W1FEMC036357 , bdr:W1FEMC046357 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF17B29975B8257CCA ;
+        :note               bdr:NTADF6B4203BFDED94 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTADF6B4203BFDED94
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3C38612A95FF2E2C
+        a                   :Title ;
+        rdfs:label          "ព្រះត្រៃលក្ខណ៍ (១-៨)"@km .
+    
+    bdr:TT94013A01FCD5795F
+        a                   :Title ;
+        rdfs:label          "braḥ trai lakkhaṇa"@km-x-twktt .
+}

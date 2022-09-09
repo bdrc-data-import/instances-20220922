@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022089 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022089
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022089 ;
+        adm:contentProvider  bda:CP044 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "15/MW1FEMC022089.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022089 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6483C4791947C717
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "038.V.1" .
+    
+    bdr:MF18C166A87F56278E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "7" ;
+        :microfilmStrip     "28" .
+    
+    bdr:MW1FEMC022089
+        a                   :Instance ;
+        skos:prefLabel      "សត្តពោជ្ឈង្គ"@km , "satt bojjhaṅg"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6483C4791947C717 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "7" ;
+        :hasTitle           bdr:TT06A92A82A1B3D1EB , bdr:TT1CCA18624EDBD595 , bdr:TT4E45A795133C8260 , bdr:TT54C68221A66DFB42 , bdr:TT81E4C91D8891DF51 , bdr:TT98520732A7ACB95C ;
+        :instanceHasReproduction  bdr:W1FEMC022089 ;
+        :instanceOf         bdr:WA1FEMC010063 , bdr:WA1FEMC022089 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF18C166A87F56278E ;
+        :note               bdr:NT90B9C8BEB87AFA0F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT90B9C8BEB87AFA0F
+        a                   :Note ;
+        :contentLocationStatement  "pg. 370" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT06A92A82A1B3D1EB
+        a                   :CoverTitle ;
+        rdfs:label          "ឧយក្ខាសម្វោជ្ឈង"@km .
+    
+    bdr:TT1CCA18624EDBD595
+        a                   :CoverTitle ;
+        rdfs:label          "Upekkhā sambojjhaṅg"@km-x-twktt ;
+        :femcConversionOf   bdr:TT54C68221A66DFB42 .
+    
+    bdr:TT4E45A795133C8260
+        a                   :Title ;
+        rdfs:label          "សត្តពោជ្ឈង្គ"@km .
+    
+    bdr:TT54C68221A66DFB42
+        a                   :CoverTitle ;
+        rdfs:label          "Uyakkhā sambojjhaṅ"@km-x-twktt .
+    
+    bdr:TT81E4C91D8891DF51
+        a                   :CoverTitle ;
+        rdfs:label          "ឧបេក្ខាសម្ពោជ្ឈង្គ"@km ;
+        :femcConversionOf   bdr:TT06A92A82A1B3D1EB .
+    
+    bdr:TT98520732A7ACB95C
+        a                   :Title ;
+        rdfs:label          "satt bojjhaṅg"@km-x-twktt .
+}

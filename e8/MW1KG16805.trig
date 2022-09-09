@@ -1,0 +1,107 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16805 {
+    bda:LGC82193FB91007C46
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-03-21T13:42:56.528Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG16805  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG16805 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "e8/MW1KG16805.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16805 ;
+        adm:logEntry        bda:LGC82193FB91007C46 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR13D6AAADE3B31C08
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG16807 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR16D62A90238DC87C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7389 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV8EFF5660D71B8D64
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID27B6AC9B262459E7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105070722" .
+    
+    bdr:ID29CB60F9D980196F
+        a                   bdr:HollisId ;
+        rdf:value           "014256424" .
+    
+    bdr:MW1KG16805  a       :Instance , :SerialInstance ;
+        skos:altLabel       "阿里金宗"@zh-hans ;
+        skos:prefLabel      "mnga' ris gser rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID27B6AC9B262459E7 , bdr:ID29CB60F9D980196F ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR13D6AAADE3B31C08 , bdr:CR16D62A90238DC87C ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "20, 4, 570 p." ;
+        :hasTitle           bdr:TT84E291679F601A37 , bdr:TTBE245E35473E6D97 , bdr:TTFE67640955DD3D2C ;
+        :illustrations      "ill. (col. plates)" ;
+        :instanceEvent      bdr:EV8EFF5660D71B8D64 ;
+        :instanceHasReproduction  bdr:W1KG16805 ;
+        :instanceOf         bdr:WA1KG16805 ;
+        :note               bdr:NT98F0015AE3D83842 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC410 ;
+        :seriesNumber       "17" .
+    
+    bdr:NT98F0015AE3D83842
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT84E291679F601A37
+        a                   :Title ;
+        rdfs:label          "mnga' ris gser rdzong /"@bo-x-ewts .
+    
+    bdr:TTBE245E35473E6D97
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "阿里金宗"@zh-hans .
+    
+    bdr:TTFE67640955DD3D2C
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "a li jin zong"@zh-latn-pinyin-x-ndia .
+}

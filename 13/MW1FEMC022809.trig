@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022809 {
+    bda:LG32968FE6ECA5BA09
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022809"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022809
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022809 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "13/MW1FEMC022809.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022809 ;
+        adm:logEntry        bda:LG32968FE6ECA5BA09 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID4EEBB6153C310E74
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.285.VII" .
+    
+    bdr:MW1FEMC022809
+        a                   :Instance ;
+        skos:prefLabel      "សត្តប្បករណាភិធម្ម"@km , "sattappakaraṇābhidhamma"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4EEBB6153C310E74 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-7" ;
+        :hasTitle           bdr:TT0AE3EC6697C7D0F6 , bdr:TT730D986B4F0F978A , bdr:TTAFE87BDF7A206C8A , bdr:TTFC4669F1A0583208 ;
+        :instanceHasReproduction  bdr:W1FEMC022809 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT291976CB2AC949CA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "124" .
+    
+    bdr:NT291976CB2AC949CA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 504" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0AE3EC6697C7D0F6
+        a                   :Title ;
+        rdfs:label          "sattappakaraṇābhidhamma"@km-x-twktt ;
+        :femcConversionOf   bdr:TTAFE87BDF7A206C8A .
+    
+    bdr:TT730D986B4F0F978A
+        a                   :Title ;
+        rdfs:label          "សត្តប្បករណាភិធម្ម"@km ;
+        :femcConversionOf   bdr:TTFC4669F1A0583208 .
+    
+    bdr:TTAFE87BDF7A206C8A
+        a                   :CoverTitle ;
+        rdfs:label          "sattapakaraṇābhidhamma"@km-x-twktt .
+    
+    bdr:TTFC4669F1A0583208
+        a                   :CoverTitle ;
+        rdfs:label          "សត្តបករណាភិធម្ម"@km .
+}

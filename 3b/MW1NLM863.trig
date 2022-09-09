@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM863 {
+    bda:LG037D607D1D48FE3C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGB1224C894F1D7E5E
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-12T12:06:02.993Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGED54605559DCA039
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-13T17:15:42.794Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM863  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM863 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3b/MW1NLM863.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM863 ;
+        adm:logEntry        bda:LG037D607D1D48FE3C , bda:LGB1224C894F1D7E5E , bda:LGED54605559DCA039 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM863  a        :Instance ;
+        skos:prefLabel      "legs bshad mkhas pa'i mgul rgyan/"@bo-x-ewts ;
+        :dimensionsStatement  "48x7" ;
+        :extentStatement    "1 v. (chapter 2-8)" ;
+        :hasTitle           bdr:TTD4DD4E7AAC73C8F9 , bdr:TTEDF7EBF9FDF87471 ;
+        :instanceHasReproduction  bdr:W1NLM863 ;
+        :instanceOf         bdr:WA1NLM863 ;
+        :note               bdr:NT31C38239A1CEB7D2 , bdr:NTFA4B3E44A6D1E69C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT31C38239A1CEB7D2
+        a                   :Note ;
+        :noteText           "coverType: paper cover"@en .
+    
+    bdr:NTFA4B3E44A6D1E69C
+        a                   :Note ;
+        :noteText           "nlmId: M0058776"@en .
+    
+    bdr:TTD4DD4E7AAC73C8F9
+        a                   :TitlePageTitle ;
+        rdfs:label          "legs bshad mkhas pa'i mgul rgyan zhes bya ba las skabs gnyis pa'i mtha' dpyod sogs/"@bo-x-ewts .
+    
+    bdr:TTEDF7EBF9FDF87471
+        a                   :Title ;
+        rdfs:label          "legs bshad mkhas pa'i mgul rgyan/"@bo-x-ewts .
+}

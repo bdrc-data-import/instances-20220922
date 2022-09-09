@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046403 {
+    bda:LGE1D24F811D94DE5A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046403"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046403
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046403 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "90/MW1FEMC046403.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046403 ;
+        adm:logEntry        bda:LGE1D24F811D94DE5A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID628AA9A23186A084
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "139-B.04.03.04.III.6" .
+    
+    bdr:MF765F97A69BE085BD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "170" .
+    
+    bdr:MW1FEMC046403
+        a                   :Instance ;
+        skos:prefLabel      "វិហារទានានិសង្ស (១-២០)"@km , "vihās dānānisaṅs"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID628AA9A23186A084 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT8E0363DD0E2BC90F , bdr:TTF4EC9C5EEE484CF1 ;
+        :instanceHasReproduction  bdr:W1FEMC036403 , bdr:W1FEMC046403 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF765F97A69BE085BD ;
+        :note               bdr:NTF4C37BCCF9F6EF6C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF4C37BCCF9F6EF6C
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT8E0363DD0E2BC90F
+        a                   :Title ;
+        rdfs:label          "vihās dānānisaṅs"@km-x-twktt .
+    
+    bdr:TTF4EC9C5EEE484CF1
+        a                   :Title ;
+        rdfs:label          "វិហារទានានិសង្ស (១-២០)"@km .
+}

@@ -1,0 +1,74 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG23846 {
+    bda:LGCB37C36FFCD5EF62
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2016-06-23T16:43:29.889Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG23846  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG23846 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7a/MW1KG23846.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG23846 ;
+        adm:logEntry        bda:LGCB37C36FFCD5EF62 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD70B2453571F4F11
+        a                   :PublishedEvent ;
+        :eventWhen          "0197/?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1821D9B6976411FD
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "86902180" .
+    
+    bdr:ID6E70B5B6816D616E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7800 .S46 1970Z" .
+    
+    bdr:IDD8322D8949BB4C12
+        a                   bdr:PL480 ;
+        rdf:value           "I Tib 1204" .
+    
+    bdr:MW1KG23846  a       :Instance ;
+        skos:prefLabel      "sgom chen tshul khrims dang / rdza tsig gnyis kyi rtsod gtam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1821D9B6976411FD , bdr:ID6E70B5B6816D616E , bdr:IDD8322D8949BB4C12 ;
+        :extentStatement    "42 p." ;
+        :hasTitle           bdr:TTB5519F8CC859D40E ;
+        :instanceEvent      bdr:EVD70B2453571F4F11 ;
+        :instanceHasReproduction  bdr:W1KG23846 ;
+        :instanceOf         bdr:WA1KG23846 ;
+        :note               bdr:NT2078EF73278292DE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT2078EF73278292DE
+        a                   :Note ;
+        :noteText           "scan made available from the library of tibetan works and archives; ltwa acc. no. 2015"@en .
+    
+    bdr:TTB5519F8CC859D40E
+        a                   :Title ;
+        rdfs:label          "sgom chen tshul khrims dang / rdza tsig gnyis kyi rtsod gtam/"@bo-x-ewts .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043339 {
+    bda:LGAE1FC3F21440E283
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043339"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043339
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043339 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "16/MW1FEMC043339.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043339 ;
+        adm:logEntry        bda:LGAE1FC3F21440E283 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID29817AEFF7C14DB7
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "014-B.11.02.01.II.1" .
+    
+    bdr:MF53EDF448EAC1D734
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "193" .
+    
+    bdr:MW1FEMC043339
+        a                   :Instance ;
+        skos:prefLabel      "មរណមាតា (១-៣០)"@km , "maraṇa mātā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID29817AEFF7C14DB7 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "5" ;
+        :hasTitle           bdr:TT863E0C37FB8649FC , bdr:TTDE5DE9C5B96F87C6 ;
+        :instanceHasReproduction  bdr:W1FEMC033339 , bdr:W1FEMC043339 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF53EDF448EAC1D734 ;
+        :note               bdr:NTDD90D0B696FD3BCA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTDD90D0B696FD3BCA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT863E0C37FB8649FC
+        a                   :Title ;
+        rdfs:label          "មរណមាតា (១-៣០)"@km .
+    
+    bdr:TTDE5DE9C5B96F87C6
+        a                   :Title ;
+        rdfs:label          "maraṇa mātā"@km-x-twktt .
+}

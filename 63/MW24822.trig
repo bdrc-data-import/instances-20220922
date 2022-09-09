@@ -1,0 +1,103 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW24822 {
+    bda:LG6AD16714921D4710
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8DF624D79E02C8A1
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-09-02T10:58:43.94Z"^^xsd:dateTime ;
+        adm:logMessage      "changed topic selection"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG986C7F43D15CA72B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-04T15:18:56.118Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, author, editor,add biblio title, pub info, and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW24822  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW24822 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "63/MW24822.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24822 ;
+        adm:logEntry        bda:LG6AD16714921D4710 , bda:LG8DF624D79E02C8A1 , bda:LG986C7F43D15CA72B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR9CD99792C9B6B09E
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6598 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVF978066BDDC50150
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE07ADE91B5C6A242
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223014241" .
+    
+    bdr:IDE7CE1614199F0901
+        a                   bdr:HollisId ;
+        rdf:value           "014259358" .
+    
+    bdr:MW24822  a          :Instance ;
+        skos:altLabel       "shen shan sheng hu zhi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "gangs ti se dang ma pham g.yu mtsho'i gnas yig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE07ADE91B5C6A242 , bdr:IDE7CE1614199F0901 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR9CD99792C9B6B09E ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "203 p." ;
+        :hasTitle           bdr:TT12C44E4D058EA2AA , bdr:TT755B6A663CFBEC3C , bdr:TTECFB12EFDE90DF8A ;
+        :instanceEvent      bdr:EVF978066BDDC50150 ;
+        :instanceHasReproduction  bdr:W24822 ;
+        :instanceOf         bdr:WA24822 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT12C44E4D058EA2AA
+        a                   :Title ;
+        rdfs:label          "gangs ti se dang ma pham g.yu mtsho'i gnas yig"@bo-x-ewts .
+    
+    bdr:TT755B6A663CFBEC3C
+        a                   :TitlePageTitle ;
+        rdfs:label          "gangs dkar ti se dang ma pham g.yu mtsho'i gnas yig bstod glu'i mgrin dbyangs/"@bo-x-ewts .
+    
+    bdr:TTECFB12EFDE90DF8A
+        a                   :ColophonTitle ;
+        rdfs:label          "shen shan sheng hu zhi"@zh-latn-pinyin-x-ndia .
+}

@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046623 {
+    bda:LG0864FC43C8923580
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046623"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046623
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046623 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ff/MW1FEMC046623.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046623 ;
+        adm:logEntry        bda:LG0864FC43C8923580 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB5CF79157E6D8B4D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "019-B.11.13.03.III.3" .
+    
+    bdr:MF4A493D7E85BF75B6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "197" .
+    
+    bdr:MW1FEMC046623
+        a                   :Instance ;
+        skos:prefLabel      "អ្នកមស្សការនិងអាគារវីន័យ"@km , "anak massakār nīṅ āgāravīnãy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB5CF79157E6D8B4D ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT330CF222D240ABD0 , bdr:TT7C30AB1DF8C0F965 ;
+        :instanceHasReproduction  bdr:W1FEMC036623 , bdr:W1FEMC046623 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF4A493D7E85BF75B6 ;
+        :note               bdr:NT14579047D2C3B6E4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT14579047D2C3B6E4
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT330CF222D240ABD0
+        a                   :Title ;
+        rdfs:label          "anak massakār nīṅ āgāravīnãy"@km-x-twktt .
+    
+    bdr:TT7C30AB1DF8C0F965
+        a                   :Title ;
+        rdfs:label          "អ្នកមស្សការនិងអាគារវីន័យ"@km .
+}

@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21958 {
+    bda:LGA78EF528506A4BB7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW21958  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21958 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "cb/MW21958.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21958 ;
+        adm:logEntry        bda:LGA78EF528506A4BB7 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVBB93A223781698EE
+        a                   :PublishedEvent ;
+        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2C7429DAAED3591D
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007412869-8" .
+    
+    bdr:IDA01A941A98E68256
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "94904563" .
+    
+    bdr:IDC1C244012F3DF578
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .P318 1993" .
+    
+    bdr:MW21958  a          :Instance ;
+        skos:prefLabel      "pad+ma bdud 'dul rdo rje'i chos skor/"@bo-x-ewts , "the collected works of pad ma bdud 'dul rdo rje'i chos skor"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2C7429DAAED3591D , bdr:IDA01A941A98E68256 , bdr:IDC1C244012F3DF578 ;
+        :editionStatement   "i tib 3155"@bo-x-ewts ;
+        :extentStatement    "1-5 v. (v. 2, 3, 4)" ;
+        :hasTitle           bdr:TT2385909955DD6370 , bdr:TTC2B125B395AEFA60 , bdr:TTCD532FFB6A3BF5C8 ;
+        :instanceEvent      bdr:EVBB93A223781698EE ;
+        :instanceOf         bdr:WA21958 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "pal-lden sa-kya'i sung-rab book publication"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:TT2385909955DD6370
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works of pad ma bdud 'dul rdo rje'i chos skor"@en .
+    
+    bdr:TTC2B125B395AEFA60
+        a                   :CoverTitle ;
+        rdfs:label          "The collected works of Pad-ma-bdud-ʾdul-rdo-rjeʾi chos skor."@en-x-mixed .
+    
+    bdr:TTCD532FFB6A3BF5C8
+        a                   :Title ;
+        rdfs:label          "pad+ma bdud 'dul rdo rje'i chos skor/"@bo-x-ewts .
+}

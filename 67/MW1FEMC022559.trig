@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022559 {
+    bda:LG4EF474D3674DDD3F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-22"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022559"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022559
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022559 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "67/MW1FEMC022559.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022559 ;
+        adm:logEntry        bda:LG4EF474D3674DDD3F , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6671318EAD5AFD6A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "C.151.VII" .
+    
+    bdr:MW1FEMC022559
+        a                   :Instance ;
+        skos:prefLabel      "និទានវគ្គបឋមបដិច្ចសមុប្បាទសូត្រ"@km , "nidānavagga paṭhamapaṭiccasamuppādasūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6671318EAD5AFD6A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-10" ;
+        :hasTitle           bdr:TT4299E8EB4157E092 , bdr:TT71E0F13B4D15E796 , bdr:TT74FDA50CB0035429 , bdr:TTC287CE559D8B83EE ;
+        :instanceHasReproduction  bdr:W1FEMC022559 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTBFEB05D146FD4629 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "243" .
+    
+    bdr:NTBFEB05D146FD4629
+        a                   :Note ;
+        :contentLocationStatement  "pg. 456" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4299E8EB4157E092
+        a                   :CoverTitle ;
+        rdfs:label          "និទានវគ្គបថមបដិច្ចសមុប្បាទសូត្រ"@km .
+    
+    bdr:TT71E0F13B4D15E796
+        a                   :Title ;
+        rdfs:label          "និទានវគ្គបឋមបដិច្ចសមុប្បាទសូត្រ"@km ;
+        :femcConversionOf   bdr:TT4299E8EB4157E092 .
+    
+    bdr:TT74FDA50CB0035429
+        a                   :Title ;
+        rdfs:label          "nidānavagga paṭhamapaṭiccasamuppādasūtra"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC287CE559D8B83EE .
+    
+    bdr:TTC287CE559D8B83EE
+        a                   :CoverTitle ;
+        rdfs:label          "nidānavaggapathamapa ṭiccasamuppādasūtra"@km-x-twktt .
+}

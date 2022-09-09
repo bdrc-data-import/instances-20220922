@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW4884 {
+    bda:LGFD5112D0138F5D16
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFFD84DB0B9DC8073
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA1F3FB78EA
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-23T19:16:52.743Z"^^xsd:dateTime ;
+        adm:logMessage      "added ALA-LC title variant from Hollis spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW4884  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW4884 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "26/MW4884.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW4884 ;
+        adm:logEntry        bda:LGFD5112D0138F5D16 , bda:LGFFD84DB0B9DC8073 , bda:LGIMA1F3FB78EA , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVFE8B7B451B8E881F
+        a                   :PublishedEvent ;
+        :eventWhen          "1984/1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID05E88D8FE6F5098E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ 7550 .M5 1985" .
+    
+    bdr:ID7B9F32977763679B
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007412751-9" .
+    
+    bdr:IDDFAD2F2D77E3D0C9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85904270" .
+    
+    bdr:MW4884  a           :Instance ;
+        skos:prefLabel      "rgyal po lugs kyi bstan bcos sa gzhi skyong ba'i rgyan/"@bo-x-ewts , "The Sde-dge Dgon-chen prints of the writings of ʾJam-mgon ʾJu Mi-pham-rgya-mtsho."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID05E88D8FE6F5098E , bdr:ID7B9F32977763679B , bdr:IDDFAD2F2D77E3D0C9 ;
+        :authorshipStatement  "written at the behest of the ruler of sde dge ngag dbang 'jam dpal rin chen at sde dge in a wood sheep year"@en ;
+        :biblioNote         "in the paro edition of the gsung 'bum of mi pham rgya mtsho; reconstructed and reproduced from the surviving prints at the order of h.h. dilgo chhentse rimpoche"@en ;
+        :extentStatement    "v. 1, 79 ff. (pp. 1-157)" ;
+        :hasTitle           bdr:TTBB950E674412CFB6 , bdr:TTC2052AAC3EB8960E ;
+        :instanceEvent      bdr:EVFE8B7B451B8E881F ;
+        :language           bdr:LangBo ;
+        :note               bdr:NT3C02E911904257A8 ;
+        :publisherLocation  "paro, bhutan"@en ;
+        :publisherName      "lama ngodrup and sherab drimey"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:NT3C02E911904257A8
+        a                   :Note ;
+        :noteText           "pp.  of vol. 1 (oM) of the sde dge printing sequence of the collected works \nmhtl 3182\n2004\n0003-0159"@en .
+    
+    bdr:TTBB950E674412CFB6
+        a                   :CoverTitle ;
+        rdfs:label          "The Sde-dge Dgon-chen prints of the writings of ʾJam-mgon ʾJu Mi-pham-rgya-mtsho."@en-x-mixed .
+    
+    bdr:TTC2052AAC3EB8960E
+        a                   :Title ;
+        rdfs:label          "rgyal po lugs kyi bstan bcos sa gzhi skyong ba'i rgyan/"@bo-x-ewts .
+}

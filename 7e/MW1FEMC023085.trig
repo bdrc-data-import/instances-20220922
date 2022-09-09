@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023085 {
+    bda:LGE8147E023706B18A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023085"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023085
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023085 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7e/MW1FEMC023085.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023085 ;
+        adm:logEntry        bda:LGE8147E023706B18A , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID444308CD3780F26A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.949.VI.6" .
+    
+    bdr:MW1FEMC023085
+        a                   :Instance ;
+        skos:prefLabel      "មូលព្រះកម្មដ្ឋាន"@km , "mūl braḥ kammaṭṭhān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID444308CD3780F26A ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT3EBE66F5971B3F84 , bdr:TTB8721EAE52479EB9 ;
+        :instanceHasReproduction  bdr:W1FEMC023085 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :note               bdr:NT92E4A71166360F08 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "UB059" .
+    
+    bdr:NT92E4A71166360F08
+        a                   :Note ;
+        :contentLocationStatement  "pg. 551" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT3EBE66F5971B3F84
+        a                   :Title ;
+        rdfs:label          "mūl braḥ kammaṭṭhān"@km-x-twktt .
+    
+    bdr:TTB8721EAE52479EB9
+        a                   :Title ;
+        rdfs:label          "មូលព្រះកម្មដ្ឋាន"@km .
+}

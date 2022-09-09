@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG580 {
+    bda:LGB0EBF94019B48985
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-01-24T10:49:28.573Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG580  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG580 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "47/MW1KG580.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG580 ;
+        adm:logEntry        bda:LGB0EBF94019B48985 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6AAD1746641230F9
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID03A19D98C4D9E9CE
+        a                   bdr:HollisId ;
+        rdf:value           "014257198" .
+    
+    bdr:MW1KG580  a         :Instance ;
+        skos:altLabel       "a collection of texts of the imperial pillars' inscriptions and their deposited versions"@en ;
+        skos:prefLabel      "bka' gtsigs dang rdo ring gi yi ge"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID03A19D98C4D9E9CE ;
+        :biblioNote         "reproduced in facsimile from documents in the libraries of the 'bras spungs gnas bcu lha khang in tibet and the late rai bahadur t. d. densapa of sikkim"@en ;
+        :extentStatement    "72 p." ;
+        :hasTitle           bdr:TT086F55A17FE14DE2 , bdr:TT19636DB834C2BE8F ;
+        :instanceEvent      bdr:EV6AAD1746641230F9 ;
+        :instanceHasReproduction  bdr:W1KG580 ;
+        :instanceOf         bdr:WA1KG580 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "a myes rma chen bod kyi rig gzhung zhib 'jug khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT086F55A17FE14DE2
+        a                   :Title ;
+        rdfs:label          "bka' gtsigs dang rdo ring gi yi ge"@bo-x-ewts .
+    
+    bdr:TT19636DB834C2BE8F
+        a                   :OtherTitle ;
+        rdfs:label          "a collection of texts of the imperial pillars' inscriptions and their deposited versions"@en .
+}

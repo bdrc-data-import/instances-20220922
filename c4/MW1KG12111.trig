@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG12111 {
+    bda:LG16906EE4022E3D35
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-04-02T16:10:42.445Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA944034A2C30D355
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-15T16:33:17.525Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG12111  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG12111 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c4/MW1KG12111.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG12111 ;
+        adm:logEntry        bda:LG16906EE4022E3D35 , bda:LGA944034A2C30D355 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV28ADF622AFE1B299
+        a                   :PublishedEvent ;
+        :eventWhen          "199X"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDDF1143811FAFA1F5
+        a                   bdr:HollisId ;
+        rdf:value           "014255794" .
+    
+    bdr:MW1KG12111  a       :Instance ;
+        skos:prefLabel      "sras ngag dbang bkra shis kyis mdzad pa'i bsdus grwa/ (bkra shis 'khyil par ma/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDF1143811FAFA1F5 ;
+        :biblioNote         "impressions from blocks carved and preserved at Labrang Tashi Kyil monastery"@en ;
+        :extentStatement    "157 ff." ;
+        :hasSourcePrintery  bdr:G1PD129183 ;
+        :hasTitle           bdr:TT2A8935E98ACEBECA , bdr:TT45F1BA3202A5B77E , bdr:TT6A557FFA5B03E40B ;
+        :instanceEvent      bdr:EV28ADF622AFE1B299 ;
+        :instanceHasReproduction  bdr:W1KG12111 ;
+        :instanceOf         bdr:WA1KG12111 ;
+        :note               bdr:NT15FFD747D427A286 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "bla brang /"@bo-x-ewts ;
+        :publisherName      "bla brang bkra shis 'khyil/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT15FFD747D427A286
+        a                   :Note ;
+        :noteText           "some pages are not clear in original text"@en .
+    
+    bdr:TT2A8935E98ACEBECA
+        a                   :RunningTitle ;
+        rdfs:label          "bsdus grwa/"@bo-x-ewts .
+    
+    bdr:TT45F1BA3202A5B77E
+        a                   :Title ;
+        rdfs:label          "sras ngag dbang bkra shis kyis mdzad pa'i bsdus grwa/ (bkra shis 'khyil par ma/)"@bo-x-ewts .
+    
+    bdr:TT6A557FFA5B03E40B
+        a                   :FullTitle ;
+        rdfs:label          "tshad ma'i dgongs 'grel gyi bstan bcos chen po rnam 'grel gyi don gcig tu dril ba blo rab 'bring tha gsum du ston pa legs bshad chen po mkhas pa'i mgul rgyan skal bzang re ba kun skong /"@bo-x-ewts .
+}

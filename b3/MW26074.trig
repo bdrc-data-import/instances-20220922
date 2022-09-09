@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW26074 {
+    bda:LG3F781DDE4D877408
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBAEED675B2A7812D
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T16:41:29.388Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW26074  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW26074 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "b3/MW26074.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW26074 ;
+        adm:logEntry        bda:LG3F781DDE4D877408 , bda:LGBAEED675B2A7812D , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRCD7013F8BC3418E3
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7800 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV47F20C3EFEED0A44
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5D58EA53EBA49252
+        a                   bdr:HollisId ;
+        rdf:value           "014259509" .
+    
+    bdr:ID6A4CFD59517D0082
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PK2200.J329 K3" .
+    
+    bdr:ID8D7FCDFAC4EB90D7
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "78907320" .
+    
+    bdr:MW26074  a          :Instance ;
+        skos:prefLabel      "'dul ba me tog phreng brgyud kyi sa bcad dang tshig le'ur byad pa'i de'i 'grel pa legs bshad rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5D58EA53EBA49252 , bdr:ID6A4CFD59517D0082 , bdr:ID8D7FCDFAC4EB90D7 ;
+        :authorshipStatement  "snar-than mkhan-po ses-rab-sen-ge ; zu-dag byed pa po slob-dpon padma-la/"@bo-x-ewts ;
+        :creator            bdr:CRCD7013F8BC3418E3 ;
+        :extentStatement    "417 p." ;
+        :hasTitle           bdr:TTB51A01F85E906D42 , bdr:TTD566BBB79DEF6161 ;
+        :instanceEvent      bdr:EV47F20C3EFEED0A44 ;
+        :instanceHasReproduction  bdr:W26074 ;
+        :instanceOf         bdr:WA26074 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thim-phu"@en ;
+        :publisherName      "kunsang topgyel and mani dorji"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TTB51A01F85E906D42
+        a                   :CoverTitle ;
+        rdfs:label          "'dul ba me tog 'phreng ba'i 'grel pa/"@bo-x-ewts .
+    
+    bdr:TTD566BBB79DEF6161
+        a                   :Title ;
+        rdfs:label          "'dul ba me tog phreng brgyud kyi sa bcad dang tshig le'ur byad pa'i de'i 'grel pa legs bshad rgya mtsho/"@bo-x-ewts .
+}

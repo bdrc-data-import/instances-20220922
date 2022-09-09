@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043406 {
+    bda:LGFB59B3E1D890BF2C
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043406"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043406
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043406 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "89/MW1FEMC043406.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043406 ;
+        adm:logEntry        bda:LGFB59B3E1D890BF2C , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID528DB7A8F4E316AD
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "025-B.11.15.01.II.1" .
+    
+    bdr:MFD6C9686EF4D530C0
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "154" .
+    
+    bdr:MW1FEMC043406
+        a                   :Instance ;
+        skos:prefLabel      "ក្សត្រាទេវុង្ស (១-៥០, ៥១-៩៤, ក-គិ, ឃ-ច្ច, ឆ-ជួ)"@km , "Kastrā devuńs"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID528DB7A8F4E316AD ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2, 3, 4, 5" ;
+        :hasTitle           bdr:TT3A884CDACADBCD5B , bdr:TTB34EBD9FF4B48C60 ;
+        :instanceHasReproduction  bdr:W1FEMC033406 , bdr:W1FEMC043406 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD6C9686EF4D530C0 ;
+        :note               bdr:NTE78EFD5809AD041D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTE78EFD5809AD041D
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3A884CDACADBCD5B
+        a                   :Title ;
+        rdfs:label          "Kastrā devuńs"@km-x-twktt .
+    
+    bdr:TTB34EBD9FF4B48C60
+        a                   :Title ;
+        rdfs:label          "ក្សត្រាទេវុង្ស (១-៥០, ៥១-៩៤, ក-គិ, ឃ-ច្ច, ឆ-ជួ)"@km .
+}

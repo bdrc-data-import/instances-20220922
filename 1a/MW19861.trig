@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW19861 {
+    bda:LG78FF902C5B7998FC
+        a                   adm:UpdateData ;
+        adm:logDate         "2006-11-30T05:21:49.906Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging revised for scanning request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA6D0EEC68F42BB2D
+        a                   adm:UpdateData ;
+        adm:logDate         "2006-11-30T18:31:14.156Z"^^xsd:dateTime ;
+        adm:logMessage      "publication failure; republication"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGB74F7B70658F4ED8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:MW19861  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW19861 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "1a/MW19861.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19861 ;
+        adm:logEntry        bda:LG78FF902C5B7998FC , bda:LGA6D0EEC68F42BB2D , bda:LGB74F7B70658F4ED8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EV3C382AD470D6ED4E
+        a                   :PublishedEvent ;
+        :eventWhen          "lo1,ang1(1981)/"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID33E698EB5F204F9D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786.G79" .
+    
+    bdr:IDD3948665CB88D6E3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "86913011" .
+    
+    bdr:MW19861  a          :Instance ;
+        skos:prefLabel      "gtam tshogs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID33E698EB5F204F9D , bdr:IDD3948665CB88D6E3 ;
+        :hasTitle           bdr:TT3997B2F03E4CF7AA , bdr:TTCA985182DB639FD7 ;
+        :instanceEvent      bdr:EV3C382AD470D6ED4E ;
+        :instanceOf         bdr:WA19861 , bdr:WA1PD177852 ;
+        :note               bdr:NT9B51E54A0278F1D7 , bdr:NTCE4B924D6197D2E3 ;
+        :publisherLocation  "dha ram sa la"@en ;
+        :publisherName      "bod kyi dpe mdzod khang /"@bo-x-ewts ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:NT9B51E54A0278F1D7
+        a                   :Note ;
+        :noteText           "only numbers issued: 1981(1-1)-1991(11-1) and 2005(25-1)-2006 (26-2);\nnumbers from 1991(11-2) through 2004 (24-2) never published"@en .
+    
+    bdr:NTCE4B924D6197D2E3
+        a                   :Note ;
+        :noteText           "journal of tibetan culture"@en .
+    
+    bdr:TT3997B2F03E4CF7AA
+        a                   :TitlePageTitle ;
+        rdfs:label          "gtam tshogs : bod 'brel shes yon go rtogs gong spel ched du/"@bo-x-ewts .
+    
+    bdr:TTCA985182DB639FD7
+        a                   :Title ;
+        rdfs:label          "gtam tshogs/"@bo-x-ewts .
+}

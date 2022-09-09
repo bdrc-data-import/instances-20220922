@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29221 {
+    bda:LG5CA314753784B80D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG65C25D80C430EB12
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-15T10:33:39.467Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29221  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29221 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b7/MW29221.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29221 ;
+        adm:logEntry        bda:LG5CA314753784B80D , bda:LG65C25D80C430EB12 , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV45729C57DED1FB9F
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3F051D6DF711DCC5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "NA1510.8.B47 C36 2004" .
+    
+    bdr:ID61AD8CEEC0D067F0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9993660418" .
+    
+    bdr:IDC23E9F4D6D8773C8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004314739" .
+    
+    bdr:IDED5DDB7278CB45A9
+        a                   bdr:HollisId ;
+        rdf:value           "014259942" .
+    
+    bdr:MW29221  a          :Instance ;
+        skos:prefLabel      "'brug gi khyim bzo'i rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3F051D6DF711DCC5 , bdr:ID61AD8CEEC0D067F0 , bdr:IDC23E9F4D6D8773C8 , bdr:IDED5DDB7278CB45A9 ;
+        :authorshipStatement  "cang rdo rje/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "9, 332 p." ;
+        :hasTitle           bdr:TT6DFC7FDF477BA76C , bdr:TTBAA4FF3F9962FE6A ;
+        :illustrations      "col. ill." ;
+        :instanceEvent      bdr:EV45729C57DED1FB9F ;
+        :instanceHasReproduction  bdr:W29221 ;
+        :instanceOf         bdr:WA29221 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "phun tshogs gling /"@bo-x-ewts ;
+        :publisherName      "ke em kri par skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT6DFC7FDF477BA76C
+        a                   :Title ;
+        rdfs:label          "'brug gi khyim bzo'i rnam bshad/"@bo-x-ewts .
+    
+    bdr:TTBAA4FF3F9962FE6A
+        a                   :TitlePageTitle ;
+        rdfs:label          "'brug gi khyim bzo'i rnam bshad kun phan snang ba/"@bo-x-ewts .
+}

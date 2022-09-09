@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25910 {
+    bda:LG4F0A260BAC36F0E8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2016-12-20T11:57:35.331Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG25910  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25910 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "10/MW1KG25910.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25910 ;
+        adm:logEntry        bda:LG4F0A260BAC36F0E8 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD9B4394EC3BC6331
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC081136FD1405768
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2016331893" .
+    
+    bdr:IDDED801C335600C3C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ994.A437 B35 2016" .
+    
+    bdr:IDFEC8A6EF096641D6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789383441921" .
+    
+    bdr:MW1KG25910  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "bai ro'i rnam thar 'dra 'bag chen mo/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC081136FD1405768 , bdr:IDDED801C335600C3C , bdr:IDFEC8A6EF096641D6 ;
+        :authorshipStatement  "g.yu sgra snying po sogs kyis bsgrigs/"@bo-x-ewts ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "xiv, 242 p." ;
+        :hasTitle           bdr:TT2BF32F670ECCD843 , bdr:TT8C33448E3AF2AEAE ;
+        :instanceEvent      bdr:EVD9B4394EC3BC6331 ;
+        :instanceHasReproduction  bdr:W1KG25910 ;
+        :instanceOf         bdr:WA1KG25910 ;
+        :note               bdr:NT7543C1B02BA589A2 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.p,"@en ;
+        :publisherName      "bod kyi dpe mdzod khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG14132 ;
+        :seriesNumber       "10" .
+    
+    bdr:NT7543C1B02BA589A2
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. D35389"@en .
+    
+    bdr:TT2BF32F670ECCD843
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje btsun thams cad mkhyen pa bai ro tsa na'i rnam thar 'dra 'bag chen mo/"@bo-x-ewts .
+    
+    bdr:TT8C33448E3AF2AEAE
+        a                   :Title ;
+        rdfs:label          "bai ro'i rnam thar 'dra 'bag chen mo/"@bo-x-ewts .
+}

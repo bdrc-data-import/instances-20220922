@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG5926 {
+    bda:LG09A448490ACF0D11
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-09-01T17:08:07.897Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6865EA05A53058B6
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-08-04T15:50:03.002Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG5926  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG5926 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "9c/MW1KG5926.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5926 ;
+        adm:logEntry        bda:LG09A448490ACF0D11 , bda:LG6865EA05A53058B6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2ED39DC1325F6CCF
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6A116FF3A2EF7C98
+        a                   bdr:HollisId ;
+        rdf:value           "014257230" .
+    
+    bdr:MW1KG5926  a        :Instance ;
+        skos:prefLabel      "tun hong nas thon pa'i bod kyi lo rgyus yig cha/"@bo-x-ewts , "dun huang gu zang wen li shi wen shu"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6A116FF3A2EF7C98 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "82, 69 p." ;
+        :hasTitle           bdr:TTCD130ED2A233EC4D , bdr:TTD034FCCAA25F35C9 ;
+        :instanceEvent      bdr:EV2ED39DC1325F6CCF ;
+        :instanceHasReproduction  bdr:W1KG5926 ;
+        :instanceOf         bdr:WA1KG5905 , bdr:WA1KG5926 ;
+        :note               bdr:NTAA587ED0CA8C5721 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:NTAA587ED0CA8C5721
+        a                   :Note ;
+        :noteText           "in tibetan and translation into chinese"@en .
+    
+    bdr:TTCD130ED2A233EC4D
+        a                   :OtherTitle ;
+        rdfs:label          "dun huang gu zang wen li shi wen shu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTD034FCCAA25F35C9
+        a                   :Title ;
+        rdfs:label          "tun hong nas thon pa'i bod kyi lo rgyus yig cha/"@bo-x-ewts .
+}

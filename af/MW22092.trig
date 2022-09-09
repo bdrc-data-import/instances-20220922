@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22092 {
+    bda:LG9ACB0D1992B14F37
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-06-01T12:29:47.755Z"^^xsd:dateTime ;
+        adm:logMessage      "completed"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE57DDA657724FB7A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22092  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22092 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "af/MW22092.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22092 ;
+        adm:logEntry        bda:LG9ACB0D1992B14F37 , bda:LGE57DDA657724FB7A , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV56DCBA4A9DB026C8
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID145FE740E3B35343
+        a                   bdr:HollisId ;
+        rdf:value           "014258617" .
+    
+    bdr:IDDF856C60B91B1A8B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75900090" .
+    
+    bdr:IDFE2119028C6326AE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "JQ543 1968 .S5" .
+    
+    bdr:MW22092  a          :Instance ;
+        skos:altLabel       "spar kha'i gto brgyad dang gto thabs skor : a collection of various gto and related rites of the tibetan lamaist tradition"@en-x-mixed ;
+        skos:prefLabel      "spar kha'i gto brgyad dang gto thabs skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID145FE740E3B35343 , bdr:IDDF856C60B91B1A8B , bdr:IDFE2119028C6326AE ;
+        :biblioNote         "reproduced from manuscripts and blockprints from various private libraries"@en ;
+        :extentStatement    "528 columns" ;
+        :hasTitle           bdr:TT97DEF6B67CBDEF54 , bdr:TTBD15EA9E9A8C5013 ;
+        :instanceEvent      bdr:EV56DCBA4A9DB026C8 ;
+        :instanceHasReproduction  bdr:W22092 ;
+        :instanceOf         bdr:WA22092 ;
+        :note               bdr:NT352056920A2783F8 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "sangye namgyal"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT352056920A2783F8
+        a                   :Note ;
+        :noteText           "in tibetan; preface in english"@en .
+    
+    bdr:TT97DEF6B67CBDEF54
+        a                   :Title ;
+        rdfs:label          "spar kha'i gto brgyad dang gto thabs skor/"@bo-x-ewts .
+    
+    bdr:TTBD15EA9E9A8C5013
+        a                   :TitlePageTitle ;
+        rdfs:label          "spar kha'i gto brgyad dang gto thabs skor : a collection of various gto and related rites of the tibetan lamaist tradition"@en-x-mixed .
+}

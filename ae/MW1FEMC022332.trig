@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022332 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022332
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022332 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ae/MW1FEMC022332.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022332 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA3B455FFE12E552A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.819.I.1" .
+    
+    bdr:MFDB6BA3674A1B180E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "143" ;
+        :microfilmStrip     "237" .
+    
+    bdr:MW1FEMC022332
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ត្រីនេតិ"@km , "cpāp' trī neti"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA3B455FFE12E552A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT061EF5DFC98772AA , bdr:TT8C2159C6DBA619B0 , bdr:TTA4E6F3541851CFFD , bdr:TTA7FFF134CEFC921B , bdr:TTBAF4D0165925EE6B , bdr:TTEFF7C22460DC9598 ;
+        :instanceHasReproduction  bdr:W1FEMC022332 ;
+        :instanceOf         bdr:WA1FEMC022332 , bdr:WA1FEMC100080 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFDB6BA3674A1B180E ;
+        :note               bdr:NTA025B0E8197A9F80 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA025B0E8197A9F80
+        a                   :Note ;
+        :contentLocationStatement  "pg. 417" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT061EF5DFC98772AA
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ត្រីនេតិ"@km .
+    
+    bdr:TT8C2159C6DBA619B0
+        a                   :Title ;
+        rdfs:label          "cpāp' trī neti"@km-x-twktt .
+    
+    bdr:TTA4E6F3541851CFFD
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់បពិតមហារាជ"@km .
+    
+    bdr:TTA7FFF134CEFC921B
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' mahā rāj"@km-x-twktt ;
+        :femcConversionOf   bdr:TTEFF7C22460DC9598 .
+    
+    bdr:TTBAF4D0165925EE6B
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់មហារាជ"@km ;
+        :femcConversionOf   bdr:TTA4E6F3541851CFFD .
+    
+    bdr:TTEFF7C22460DC9598
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' pabit mahā rāj"@km-x-twktt .
+}

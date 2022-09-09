@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW7555 {
+    bda:LG7124CB9AB4F33B54
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBFE58E1262947023
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-08-22T16:48:46.754Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW7555  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW7555 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "84/MW7555.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7555 ;
+        adm:logEntry        bda:LG7124CB9AB4F33B54 , bda:LGBFE58E1262947023 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV91CF3086A93AC261
+        a                   :PublishedEvent ;
+        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID324E8BE003BB69CC
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542004271" .
+    
+    bdr:ID4D86B0C1D247C9BD
+        a                   bdr:HollisId ;
+        rdf:value           "014261050" .
+    
+    bdr:MW7555  a           :Instance ;
+        skos:altLabel       "郑宛达哇的故事"@zh-hans ;
+        skos:prefLabel      "bya mgrin sngon zla ba'i rtogs brjod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID324E8BE003BB69CC , bdr:ID4D86B0C1D247C9BD ;
+        :authorshipStatement  "rje stag phu bas brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :extentStatement    "283 p." ;
+        :hasTitle           bdr:TT1A54D066913CC4B4 , bdr:TT264B12E8E980C39C , bdr:TT5C3FAC78273C2797 , bdr:TTDC938AC89905980E ;
+        :instanceEvent      bdr:EV91CF3086A93AC261 ;
+        :instanceHasReproduction  bdr:W7555 ;
+        :instanceOf         bdr:WA1KG1251 , bdr:WA7555 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1A54D066913CC4B4
+        a                   :ColophonTitle ;
+        rdfs:label          "郑宛达哇的故事"@zh-hans .
+    
+    bdr:TT264B12E8E980C39C
+        a                   :OtherTitle ;
+        rdfs:label          "byang chub kyi sems mnga' ba'i bya mgrin sngon zla ba'i rtogs pa brjod pa 'khor ba mtha' dag la snying po med par mthong ba rnams kyi rna rgyan/"@bo-x-ewts .
+    
+    bdr:TT5C3FAC78273C2797
+        a                   :TitlePageTitle ;
+        rdfs:label          "byang chub kyi sems mnga' ba'i bya mgrin sngon zla ba'i rtogs pa brjod pa/"@bo-x-ewts .
+    
+    bdr:TTDC938AC89905980E
+        a                   :Title ;
+        rdfs:label          "bya mgrin sngon zla ba'i rtogs brjod/"@bo-x-ewts .
+}

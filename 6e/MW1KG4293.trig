@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG4293 {
+    bda:LGF147F2EE2FE7DB58
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-02-26T15:05:56.662Z"^^xsd:dateTime ;
+        adm:logMessage      "published"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG4293  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG4293 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "6e/MW1KG4293.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG4293 ;
+        adm:logEntry        bda:LGF147F2EE2FE7DB58 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0DE777FBFB622069
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID079DD96CC86C3D24
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789937900485;9789937818803" .
+    
+    bdr:IDB3BEA66633D088EE
+        a                   bdr:HollisId ;
+        rdf:value           "014256895" .
+    
+    bdr:MW1KG4293  a        :Instance , :SerialInstance ;
+        skos:prefLabel      "mdo sde rgyan gyi rnam bshad bdud rtsi'i dga' ston/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID079DD96CC86C3D24 , bdr:IDB3BEA66633D088EE ;
+        :biblioNote         "computerized printed text"@en ;
+        :editionStatement   "1st ed."@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TTCD9C4BB98E4EB4EF , bdr:TTF4033293C68AD9ED ;
+        :instanceEvent      bdr:EV0DE777FBFB622069 ;
+        :instanceHasReproduction  bdr:W1KG4293 ;
+        :instanceOf         bdr:WA1KG4293 ;
+        :numberOfVolumes    2 ;
+        :publisherLocation  "kathmandu"@en ;
+        :publisherName      "rigpe dorje publications"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG4222 ;
+        :seriesNumber       "deb phreng 11" .
+    
+    bdr:TTCD9C4BB98E4EB4EF
+        a                   :TitlePageTitle ;
+        rdfs:label          "theg pa chen po mdo sde'i rgyan gyi dgongs don rnam par bshad pa theg mchog bdud rtsi'i dga' ston/"@bo-x-ewts .
+    
+    bdr:TTF4033293C68AD9ED
+        a                   :Title ;
+        rdfs:label          "mdo sde rgyan gyi rnam bshad bdud rtsi'i dga' ston/"@bo-x-ewts .
+}

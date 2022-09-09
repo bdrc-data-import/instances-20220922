@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022920 {
+    bda:LG8D11CA91FBBF2016
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022920"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022920
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022920 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "9d/MW1FEMC022920.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022920 ;
+        adm:logEntry        bda:LG8D11CA91FBBF2016 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID631B30C266DADA02
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.396.VII" .
+    
+    bdr:MF1CB66DD4E67165DE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022920
+        a                   :Instance ;
+        skos:prefLabel      "មហាសមយសូត្រ"@km , "mahāsamayasūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID631B30C266DADA02 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT125DBDBDEE617BA8 , bdr:TT4F608B557216B492 , bdr:TT9B740D9029FB764B , bdr:TTD1413DE7ADA8B3BA ;
+        :instanceHasReproduction  bdr:W1FEMC022920 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1CB66DD4E67165DE ;
+        :note               bdr:NTD5251483F2714DA9 , bdr:NTD87AF5D7DA97063F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "188" .
+    
+    bdr:NTD5251483F2714DA9
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:NTD87AF5D7DA97063F
+        a                   :Note ;
+        :contentLocationStatement  "pg. 526" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT125DBDBDEE617BA8
+        a                   :Title ;
+        rdfs:label          "មហាសមយសូត្រ"@km .
+    
+    bdr:TT4F608B557216B492
+        a                   :CoverTitle ;
+        rdfs:label          "mahāsayasutta"@km-x-twktt .
+    
+    bdr:TT9B740D9029FB764B
+        a                   :CoverTitle ;
+        rdfs:label          "មហាសមយសុត្ត (វាន)"@km .
+    
+    bdr:TTD1413DE7ADA8B3BA
+        a                   :Title ;
+        rdfs:label          "mahāsamayasūtra"@km-x-twktt .
+}

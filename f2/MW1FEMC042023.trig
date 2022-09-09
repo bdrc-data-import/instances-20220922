@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042023 {
+    bda:LG3D44A9EA3884B1E5
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042023"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042023
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC042023 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f2/MW1FEMC042023.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042023 ;
+        adm:logEntry        bda:LG3D44A9EA3884B1E5 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID04A7150FA4B1D180
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "162-B.01.03.03.VI.6" .
+    
+    bdr:MF9B05073570EED573
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "222" .
+    
+    bdr:MW1FEMC042023
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនមើលពីលារ សងផ្ទះ កាហ៍ (១-៣០) (វាន)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID04A7150FA4B1D180 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT4DD64091308B11EC ;
+        :instanceHasReproduction  bdr:W1FEMC032023 , bdr:W1FEMC042023 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF9B05073570EED573 ;
+        :note               bdr:NTDEBEF69CA1B827D3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTDEBEF69CA1B827D3
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT4DD64091308B11EC
+        a                   :Title ;
+        rdfs:label          "ក្បួនមើលពីលារ សងផ្ទះ កាហ៍ (១-៣០) (វាន)"@km .
+}

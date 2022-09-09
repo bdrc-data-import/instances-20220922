@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22063 {
+    bda:LG374561D8BCF53CCD
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-06-23T10:29:36.947Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG64D3DC93EB2557F5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22063  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22063 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "cf/MW22063.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22063 ;
+        adm:logEntry        bda:LG374561D8BCF53CCD , bda:LG64D3DC93EB2557F5 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAA90C90514D51C0C
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID00645704620E8803
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97915772" .
+    
+    bdr:ID23B7DDCDA2A869C9
+        a                   bdr:HollisId ;
+        rdf:value           "014258595" .
+    
+    bdr:ID92649CADD33F8F89
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 S865 1982" .
+    
+    bdr:MW22063  a          :Instance ;
+        skos:altLabel       "格萨尔王传 --松岭之战"@zh-hans ;
+        skos:prefLabel      "sum gling g.yul 'gyed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID00645704620E8803 , bdr:ID23B7DDCDA2A869C9 , bdr:ID92649CADD33F8F89 ;
+        :authorshipStatement  "bod ljongs dge 'os slob grwa'i ge sar sgrung gi gzhung las khang gis bsgrigs pa/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "7, 4, 204 p." ;
+        :hasTitle           bdr:TT305A94B461E07F85 , bdr:TT3B8DD1B6678DF5D0 , bdr:TT9EA3ABD97BD650EE , bdr:TT9F4B4FFB3FC6322B , bdr:TTD09FF79B713F4120 ;
+        :instanceEvent      bdr:EVAA90C90514D51C0C ;
+        :instanceHasReproduction  bdr:W22063 ;
+        :instanceOf         bdr:WA22062 , bdr:WA22063 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT305A94B461E07F85
+        a                   :TitlePortion ;
+        rdfs:label          "ge sa er wang zhuan-- song ling zhi zhan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT3B8DD1B6678DF5D0
+        a                   :Title ;
+        rdfs:label          "sum gling g.yul 'gyed/"@bo-x-ewts .
+    
+    bdr:TT9EA3ABD97BD650EE
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "格萨尔王传 --松岭之战"@zh-hans .
+    
+    bdr:TT9F4B4FFB3FC6322B
+        a                   :OtherTitle ;
+        rdfs:label          "sum pa mdzo rdzong /"@bo-x-ewts .
+    
+    bdr:TTD09FF79B713F4120
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling ge sar rgyal po'i sgrung sum gling g.yul 'gyed sum pa mdzo rdzong /"@bo-x-ewts .
+}

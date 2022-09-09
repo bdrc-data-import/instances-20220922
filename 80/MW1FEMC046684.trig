@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046684 {
+    bda:LG48EB768386D8FC4A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046684"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046684
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046684 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "80/MW1FEMC046684.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046684 ;
+        adm:logEntry        bda:LG48EB768386D8FC4A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID758036EF9BA61E48
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "002-B.11.14.02.VII" .
+    
+    bdr:MF8B7C6748E2F1C5DE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "56" .
+    
+    bdr:MW1FEMC046684
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលត្ថទិបនីអដ្ឋកថាមង្គលសូត្រ"@pi-khmr , "mańgaltthadīpanīaṭṭhakathā mańgala Sūtra"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID758036EF9BA61E48 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "27" ;
+        :hasTitle           bdr:TT8F71D0822BD3B498 , bdr:TTF03EAF053F7329F1 ;
+        :instanceHasReproduction  bdr:W1FEMC036684 , bdr:W1FEMC046684 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8B7C6748E2F1C5DE ;
+        :note               bdr:NTDEFBA13527D38367 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTDEFBA13527D38367
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT8F71D0822BD3B498
+        a                   :Title ;
+        rdfs:label          "mańgaltthadīpanīaṭṭhakathā mańgala Sūtra"@pi-x-twktt .
+    
+    bdr:TTF03EAF053F7329F1
+        a                   :Title ;
+        rdfs:label          "មង្គលត្ថទិបនីអដ្ឋកថាមង្គលសូត្រ"@pi-khmr .
+}

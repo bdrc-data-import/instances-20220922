@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020859 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020859
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020859 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "66/MW1FEMC020859.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020859 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6053635E12768DB3
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.502.VI.6" .
+    
+    bdr:MFAFD5741333B2C00E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "134" ;
+        :microfilmStrip     "228" .
+    
+    bdr:MW1FEMC020859
+        a                   :Instance ;
+        skos:prefLabel      "នគរកាយ"@km , "nagar kāy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6053635E12768DB3 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT25A82A93FE62A9A7 , bdr:TT591201981485C38E , bdr:TTCC5A515EA578E43B , bdr:TTF8F1F7E4AEE8F39F ;
+        :instanceHasReproduction  bdr:W1FEMC020859 ;
+        :instanceOf         bdr:WA1FEMC020859 , bdr:WA1FEMC070013 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFAFD5741333B2C00E ;
+        :note               bdr:NT2E6A12FF47DEF633 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2E6A12FF47DEF633
+        a                   :Note ;
+        :contentLocationStatement  "pg. 151" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT25A82A93FE62A9A7
+        a                   :CoverTitle ;
+        rdfs:label          "កាយនគរ,លក្សណវង្ស"@km .
+    
+    bdr:TT591201981485C38E
+        a                   :CoverTitle ;
+        rdfs:label          "kāy nagar, laksaṇavaṅs"@km-x-twktt .
+    
+    bdr:TTCC5A515EA578E43B
+        a                   :Title ;
+        rdfs:label          "នគរកាយ"@km .
+    
+    bdr:TTF8F1F7E4AEE8F39F
+        a                   :Title ;
+        rdfs:label          "nagar kāy"@km-x-twktt .
+}

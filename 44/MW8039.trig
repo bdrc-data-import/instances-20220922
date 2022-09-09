@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8039 {
+    bda:LG6363337DE3C61695
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBCE3E77D784C9E48
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-09-13T09:31:30.224Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00020 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW8039  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW8039 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "44/MW8039.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8039 ;
+        adm:logEntry        bda:LG6363337DE3C61695 , bda:LGBCE3E77D784C9E48 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7816A4E06819276B
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC4DBABA8120CCA8B
+        a                   bdr:HollisId ;
+        rdf:value           "014261062" .
+    
+    bdr:MW8039  a           :Instance ;
+        skos:prefLabel      "gsung 'bum/_mi bskyod rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC4DBABA8120CCA8B ;
+        :authorshipStatement  "edited by karma bde legs/"@bo-x-ewts ;
+        :biblioNote         "in the 26 v. (2004) collected works of karma pa 08 mi bskyod rdo rje; texts sought out with the support of the bodhi foundation and published through the support of the tsadra foundation"@en ;
+        :extentStatement    "26 v." ;
+        :hasTitle           bdr:TTB28CA8DD431DD49D , bdr:TTF634C02425F1DB3D ;
+        :instanceEvent      bdr:EV7816A4E06819276B ;
+        :instanceHasReproduction  bdr:W8039 ;
+        :instanceOf         bdr:WA8039 ;
+        :note               bdr:NT9DCD120C0263968D ;
+        :numberOfVolumes    26 ;
+        :publisherLocation  "[lha sa]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT9DCD120C0263968D
+        a                   :Note ;
+        :noteText           "tbrc holds a number of writings of mi bskyod rdo rje including this edition\nthere exists a gsung 'bum in 14 manuscript vols in the beijing mi rigs dpe mdzod khang. these manuscripts are marked: ga, nga, ca, nya, ta, tha, da, pha, ma, zha, za, ha, and two unmarked volumes"@en .
+    
+    bdr:TTB28CA8DD431DD49D
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_mi bskyod rdo rje/"@bo-x-ewts .
+    
+    bdr:TTF634C02425F1DB3D
+        a                   :CoverTitle ;
+        rdfs:label          "dpal rgyal ba karma pa sku 'phreng brgyad pa mi bskyod rdo rje'i gsung 'bum/"@bo-x-ewts .
+}

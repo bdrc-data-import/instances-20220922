@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1952 {
+    bda:LG28089E0445932DE2
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:10:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGC07B5028550DBAD4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-04T11:54:48.549Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGFB313F95E61702C9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1952  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1952 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "63/MW1NLM1952.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1952 ;
+        adm:logEntry        bda:LG28089E0445932DE2 , bda:LGC07B5028550DBAD4 , bda:LGFB313F95E61702C9 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1952  a       :Instance ;
+        skos:altLabel       "arya-astasahasrikaprajnaparamita"@sa-x-ndia ;
+        skos:prefLabel      "brgyad stong pa/"@bo-x-ewts ;
+        :dimensionsStatement  "24x7.5" ;
+        :extentStatement    "341 ff." ;
+        :hasTitle           bdr:TT4D714AEA7BAC10B5 , bdr:TT5CD03079F5C57501 , bdr:TTAF4FF44A5AE36CFB ;
+        :instanceHasReproduction  bdr:W1NLM1952 ;
+        :instanceOf         bdr:WA1KG15578 , bdr:WA1NLM1952 ;
+        :note               bdr:NT2394FA2E0D34B142 , bdr:NT821088B6F3CFF6F9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT2394FA2E0D34B142
+        a                   :Note ;
+        :noteText           "missingPages: M0059870-001 [182, 183th pages printed on the same page] Image 363-364"@en .
+    
+    bdr:NT821088B6F3CFF6F9
+        a                   :Note ;
+        :noteText           "nlmId: M0059870"@en .
+    
+    bdr:TT4D714AEA7BAC10B5
+        a                   :OtherTitle ;
+        rdfs:label          "arya-astasahasrikaprajnaparamita"@sa-x-ndia .
+    
+    bdr:TT5CD03079F5C57501
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa shes rab kyi pha rol tu phyin pa brgyad stong pa/"@bo-x-ewts .
+    
+    bdr:TTAF4FF44A5AE36CFB
+        a                   :Title ;
+        rdfs:label          "brgyad stong pa/"@bo-x-ewts .
+}

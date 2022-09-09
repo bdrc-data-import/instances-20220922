@@ -1,0 +1,110 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20044 {
+    bda:LG8387AAC2258EC151
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-08-17T16:07:07.616Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFD2C9F8E681C89E6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20044  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20044 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "13/MW20044.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20044 ;
+        adm:logEntry        bda:LG8387AAC2258EC151 , bda:LGFD2C9F8E681C89E6 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA5B26221AD084D1C
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID109748C5B9A4751D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001292295" .
+    
+    bdr:IDB7F0747571B93551
+        a                   bdr:HollisId ;
+        rdf:value           "014258018" .
+    
+    bdr:IDC8837AFDEDE75CF0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754210635X" .
+    
+    bdr:IDE86796E79B7F8BFE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCMA 2002/01035 PK2408" .
+    
+    bdr:MW20044  a          :Instance , :SerialInstance ;
+        skos:altLabel       "pu ti dao ci shi nan, wen shu yan jiao"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "lam khrid 'jam dpal zhal lung dang bde lam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID109748C5B9A4751D , bdr:IDB7F0747571B93551 , bdr:IDC8837AFDEDE75CF0 , bdr:IDE86796E79B7F8BFE ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "1, 290 p." ;
+        :hasTitle           bdr:TT032C174650052B5A , bdr:TT7ADE3BD78FBABCCC , bdr:TT83BBBC2E6F4D2F58 ;
+        :instanceEvent      bdr:EVA5B26221AD084D1C ;
+        :instanceHasReproduction  bdr:W20044 ;
+        :instanceOf         bdr:WA20044 ;
+        :note               bdr:NTCB6A8F1B0E5080EC ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS148 ;
+        :seriesNumber       "[not available]" .
+    
+    bdr:NTCB6A8F1B0E5080EC
+        a                   :Note ;
+        :noteText           "contents: byang chub lam gyi rim pa'i khrid yig 'jam pa'i dbyangs kyi zhal lung / rgyal dbang lnga ba ngag dbang blo bzang rgya mtsho.--byang chub lam gyi rim pa'i dmar khrid thams cad mkhyen par bgrod pa'i bde lam / paN chen blo bzang chos kyi rgyal mtshan."@en .
+    
+    bdr:TT032C174650052B5A
+        a                   :TitlePageTitle ;
+        rdfs:label          "byang chub lam gyi rim pa'i khrid yig 'jam dpal zhal lung dang paN chen bde lam/"@bo-x-ewts .
+    
+    bdr:TT7ADE3BD78FBABCCC
+        a                   :Title ;
+        rdfs:label          "lam khrid 'jam dpal zhal lung dang bde lam/"@bo-x-ewts .
+    
+    bdr:TT83BBBC2E6F4D2F58
+        a                   :ColophonTitle ;
+        rdfs:label          "pu ti dao ci shi nan, wen shu yan jiao"@zh-latn-pinyin-x-ndia .
+}

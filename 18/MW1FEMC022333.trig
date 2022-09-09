@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022333 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022333
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022333 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "18/MW1FEMC022333.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022333 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC34B0BE34CC695EE
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.820.I.1" .
+    
+    bdr:MF89C5C44A0C7BF2B4
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "143" ;
+        :microfilmStrip     "237" .
+    
+    bdr:MW1FEMC022333
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ត្រីនេតិ"@km , "cpāp' trī neti"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC34B0BE34CC695EE ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT02FD0D1BD0B0B4E7 , bdr:TT2B5AFAD7D42A3186 , bdr:TT49611E819D8D3126 , bdr:TT858AE90689D3ED7C , bdr:TTDB117BD15DE00832 , bdr:TTE9021FF43A242E98 ;
+        :instanceHasReproduction  bdr:W1FEMC022333 ;
+        :instanceOf         bdr:WA1FEMC022333 , bdr:WA1FEMC100080 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF89C5C44A0C7BF2B4 ;
+        :note               bdr:NTD7EB83745B398F40 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD7EB83745B398F40
+        a                   :Note ;
+        :contentLocationStatement  "pg. 417" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT02FD0D1BD0B0B4E7
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់មហារាជ, ច្បាប់ពាក្យចាស់, ល្បើកកាមរាគា"@km ;
+        :femcConversionOf   bdr:TT2B5AFAD7D42A3186 .
+    
+    bdr:TT2B5AFAD7D42A3186
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់់បូពិតមហាររាជ"@km .
+    
+    bdr:TT49611E819D8D3126
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' pūbit mahār rāj"@km-x-twktt .
+    
+    bdr:TT858AE90689D3ED7C
+        a                   :Title ;
+        rdfs:label          "cpāp' trī neti"@km-x-twktt .
+    
+    bdr:TTDB117BD15DE00832
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' mahā rāj, cpāp' bāky cās', lpök kām rāgā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT49611E819D8D3126 .
+    
+    bdr:TTE9021FF43A242E98
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ត្រីនេតិ"@km .
+}

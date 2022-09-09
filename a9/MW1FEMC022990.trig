@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022990 {
+    bda:LG172838A62B72623E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022990"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022990
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022990 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "a9/MW1FEMC022990.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022990 ;
+        adm:logEntry        bda:LG172838A62B72623E , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID3DBC87D2A417EF7C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.466.VII" .
+    
+    bdr:MF2FE53AF874F7DB2E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022990
+        a                   :Instance ;
+        skos:prefLabel      "សូត្រញត្តិ, សូត្រនាគ, សូត្រកឋិន, សូត្រសីមា"@km , "sūtra ñatti, sūtra nāga, sūtra kaṭhina, sūtra sīmā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3DBC87D2A417EF7C ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT457CE3663801A174 , bdr:TT69BACB24E1B4DAC8 , bdr:TT6D462C9BE3A479EF , bdr:TTFF594457BB55111C ;
+        :instanceHasReproduction  bdr:W1FEMC022990 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2FE53AF874F7DB2E ;
+        :note               bdr:NT56E73B945F8BDB0E , bdr:NTB9672ADE2DB3DFDF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "191" .
+    
+    bdr:NT56E73B945F8BDB0E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 541" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NTB9672ADE2DB3DFDF
+        a                   :Note ;
+        :noteText           "(not sure about Khmer vowel)"@en .
+    
+    bdr:TT457CE3663801A174
+        a                   :Title ;
+        rdfs:label          "sūtra ñatti, sūtra nāga, sūtra kaṭhina, sūtra sīmā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT69BACB24E1B4DAC8 .
+    
+    bdr:TT69BACB24E1B4DAC8
+        a                   :CoverTitle ;
+        rdfs:label          "sütrañatti, nāga, kathina, simā"@km-x-twktt .
+    
+    bdr:TT6D462C9BE3A479EF
+        a                   :Title ;
+        rdfs:label          "សូត្រញត្តិ, សូត្រនាគ, សូត្រកឋិន, សូត្រសីមា"@km ;
+        :femcConversionOf   bdr:TTFF594457BB55111C .
+    
+    bdr:TTFF594457BB55111C
+        a                   :CoverTitle ;
+        rdfs:label          "សូត្រញត្តិ, នាគ, កថិន, សិមា (វាន)"@km .
+}

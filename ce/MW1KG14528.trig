@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14528 {
+    bda:LG2072E5473E82C897
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-11-06T11:18:12.326Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14528  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14528 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ce/MW1KG14528.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14528 ;
+        adm:logEntry        bda:LG2072E5473E82C897 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV53552F2102CFA3B1
+        a                   :PublishedEvent ;
+        :eventWhen          "1998"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID62CB7870700B4D04
+        a                   bdr:HollisId ;
+        rdf:value           "014256157" .
+    
+    bdr:IDCB19836431093C7F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105029854,9787105029853" .
+    
+    bdr:MW1KG14528  a       :Instance ;
+        skos:altLabel       "易卜生和他的戏剧"@zh-hans ;
+        skos:prefLabel      "ib sen dang khong gi zlos gar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID62CB7870700B4D04 , bdr:IDCB19836431093C7F ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "293 p." ;
+        :hasTitle           bdr:TT5AC4431A7C5ADE42 , bdr:TTB1F55CEDE14299DA , bdr:TTD7BDFE672E026D18 ;
+        :instanceEvent      bdr:EV53552F2102CFA3B1 ;
+        :instanceHasReproduction  bdr:W1KG14528 ;
+        :instanceOf         bdr:WA1KG14528 ;
+        :note               bdr:NT710B89FC62E53FF7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT710B89FC62E53FF7
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT5AC4431A7C5ADE42
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "易卜生和他的戏剧"@zh-hans .
+    
+    bdr:TTB1F55CEDE14299DA
+        a                   :Title ;
+        rdfs:label          "ib sen dang khong gi zlos gar/"@bo-x-ewts .
+    
+    bdr:TTD7BDFE672E026D18
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "yi bu sheng he ta de xi ju"@zh-latn-pinyin-x-ndia .
+}

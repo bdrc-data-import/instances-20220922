@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21889 {
+    bda:LG59D53E6D89BEE30F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA448F16CA4590863
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-04-04T15:48:39.978Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW21889  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21889 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b3/MW21889.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21889 ;
+        adm:logEntry        bda:LG59D53E6D89BEE30F , bda:LGA448F16CA4590863 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2E1A2DE0CD0E4469
+        a                   :PublishedEvent ;
+        :eventWhen          "1977"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDCA240389C65B765A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "79902968" .
+    
+    bdr:IDDC95CC11641F5F25
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "GR337 .R55" .
+    
+    bdr:MW21889  a          :Instance ;
+        skos:prefLabel      "bod kyi gna' bo'i shod sgrung /"@bo-x-ewts , "tibetan folk tales"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCA240389C65B765A , bdr:IDDC95CC11641F5F25 ;
+        :authorshipStatement  "by acharya ringu tulku"@en ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "v. 1 only (60 p.)" ;
+        :hasTitle           bdr:TTAF7C97A90B613B23 , bdr:TTE02155263E8A6CC7 ;
+        :instanceEvent      bdr:EV2E1A2DE0CD0E4469 ;
+        :instanceHasReproduction  bdr:W21889 ;
+        :instanceOf         bdr:WA21889 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala"@en ;
+        :publisherName      "library of tibetan works & archives"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTAF7C97A90B613B23
+        a                   :Title ;
+        rdfs:label          "bod kyi gna' bo'i shod sgrung /"@bo-x-ewts .
+    
+    bdr:TTE02155263E8A6CC7
+        a                   :OtherTitle ;
+        rdfs:label          "tibetan folk tales"@en .
+}

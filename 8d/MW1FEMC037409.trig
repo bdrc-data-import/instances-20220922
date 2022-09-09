@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC037409 {
+    bda:LG5A2529E7B1DC24CC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC037409"@en ;
+        adm:logWhoStr       "Team" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC037409
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC037409 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8d/MW1FEMC037409.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC037409 ;
+        adm:logEntry        bda:LG5A2529E7B1DC24CC , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB1CAEF319A3DB1B1
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "B4-Copied leporello" .
+    
+    bdr:MW1FEMC037409
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះគាថាតម្កល់ដួងចិត្ត, នមស្សការតួអក្សរ; អារាធនាព្រះកម្មដ្ឋាន (បែបថៃ), មូលព្រះកម្មដ្ឋាន, ពុទ្ធមង្គល"@pi-khmr ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB1CAEF319A3DB1B1 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT74713039DD899AAF ;
+        :instanceHasReproduction  bdr:W1FEMC037409 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT8F1E104AC577DF18 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT8F1E104AC577DF18
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT74713039DD899AAF
+        a                   :Title ;
+        rdfs:label          "ព្រះគាថាតម្កល់ដួងចិត្ត, នមស្សការតួអក្សរ; អារាធនាព្រះកម្មដ្ឋាន (បែបថៃ), មូលព្រះកម្មដ្ឋាន, ពុទ្ធមង្គល"@pi-khmr .
+}

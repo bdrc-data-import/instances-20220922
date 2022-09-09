@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW15724 {
+    bda:LGD4A6D75D423C4BC0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW15724  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW15724 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "99/MW15724.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW15724 ;
+        adm:logEntry        bda:LGD4A6D75D423C4BC0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV061BB06B033AB70A
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID05F9ECD4BCD5FC28
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99949017" .
+    
+    bdr:ID25CF0584A0B4A9A9
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "710503566" .
+    
+    bdr:ID3805174AFD75AC7C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R128.7 .B78 1999" .
+    
+    bdr:IDF483CA9C77279AF6
+        a                   bdr:HollisId ;
+        rdf:value           "014254747" .
+    
+    bdr:MW15724  a          :Instance ;
+        skos:altLabel       "zhigong zang yi wen ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "'bri gung gso rig gces bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID05F9ECD4BCD5FC28 , bdr:ID25CF0584A0B4A9A9 , bdr:ID3805174AFD75AC7C , bdr:IDF483CA9C77279AF6 ;
+        :authorshipStatement  "'bri gung chos grags sogs kyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 8, 522 p." ;
+        :hasTitle           bdr:TTA9D0AE33BF5FC16C , bdr:TTF260CFCD3BB5FB71 ;
+        :instanceEvent      bdr:EV061BB06B033AB70A ;
+        :instanceHasReproduction  bdr:W15724 ;
+        :instanceOf         bdr:WA15724 , bdr:WA1KG14674 ;
+        :note               bdr:NTAF009B4CCD79238A ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTAF009B4CCD79238A
+        a                   :Note ;
+        :noteText           "a related text is found in:\nv. 2, pp. 553-667,  of:\n'Bri-gun-pa texts : miscellaneous writings by eminent masters of the Drigung Kargyudpa tradition. -- Reproduced from xylographic prints and manuscripts from the library of Tokden Rinpoche of Gangon. -- Leh : S.W. Tashigangpa, 1972.   2 v. (Smanrtsis Shesrig Spendzod ; v. 28-29)\nManuscript in 58 folia.\n\ntbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution\n4766"@en .
+    
+    bdr:TTA9D0AE33BF5FC16C
+        a                   :Title ;
+        rdfs:label          "'bri gung gso rig gces bsdus/"@bo-x-ewts .
+    
+    bdr:TTF260CFCD3BB5FB71
+        a                   :ColophonTitle ;
+        rdfs:label          "zhigong zang yi wen ji"@zh-latn-pinyin-x-ndia .
+}

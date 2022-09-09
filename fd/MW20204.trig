@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20204 {
+    bda:LGC8F0B0083B16278C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20204  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20204 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "fd/MW20204.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20204 ;
+        adm:logEntry        bda:LGC8F0B0083B16278C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFBC68B3640E5F5CE
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID50BB6E573FAFC19C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003323374" .
+    
+    bdr:ID8A6DFEDC0FF123C4
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754092280x" .
+    
+    bdr:IDB05E72EB44CDE007
+        a                   bdr:HollisId ;
+        rdf:value           "014258087" .
+    
+    bdr:IDE9FF14D0C43001CE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ950.G47 T74 1999" .
+    
+    bdr:MW20204  a          :Instance ;
+        skos:altLabel       "gengdunqunpei ping zhuan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "dge 'dun chos 'phel/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID50BB6E573FAFC19C , bdr:ID8A6DFEDC0FF123C4 , bdr:IDB05E72EB44CDE007 , bdr:IDE9FF14D0C43001CE ;
+        :authorshipStatement  "tshe ring dbang rgyal dang lcang zhabs pa 'gyur med tshe dbang gis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "2, 10, 129 p." ;
+        :hasTitle           bdr:TT49A54E8EB9C64A7B , bdr:TTA5EF672FA3DDF070 , bdr:TTF17AE864B43D294D ;
+        :instanceEvent      bdr:EVFBC68B3640E5F5CE ;
+        :instanceHasReproduction  bdr:W20204 ;
+        :instanceOf         bdr:WA20204 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT49A54E8EB9C64A7B
+        a                   :Title ;
+        rdfs:label          "dge 'dun chos 'phel/"@bo-x-ewts .
+    
+    bdr:TTA5EF672FA3DDF070
+        a                   :ColophonTitle ;
+        rdfs:label          "gengdunqunpei ping zhuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTF17AE864B43D294D
+        a                   :ColophonTitle ;
+        rdfs:label          "mkhas dbang dge 'dun chos 'phel skor la dpyad pa tshangs pa'i drang thig"@bo-x-ewts .
+}

@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25870 {
+    bda:LG8E6DC9ED76B5977E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-06-01T16:32:24.753Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCBAEB407355270A6
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-08T16:16:11.833Z"^^xsd:dateTime ;
+        adm:logMessage      "added author and translators"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW1KG25870  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25870 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d1/MW1KG25870.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25870 ;
+        adm:logEntry        bda:LG8E6DC9ED76B5977E , bda:LGCBAEB407355270A6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13D0A4D41E4CFCB2
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8DB36CE0F9F2FAA6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787540962272" .
+    
+    bdr:MW1KG25870  a       :Instance ;
+        skos:prefLabel      "rgyal khab gsum gyi gtam rgyud/"@bo-x-ewts , "san guo yan yi"@en-x-mixed , "三国演义"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8DB36CE0F9F2FAA6 ;
+        :authorshipStatement  "lo'u kon krung gis brtsams/ thung ying rig gnas khang gis sgrig bzo byas/ bsod nams dbang mo dang tshe ring mgon pos bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "241 p." ;
+        :hasTitle           bdr:TT623337DFA5E62434 , bdr:TT65ABC8949A9C6B29 , bdr:TT70A7F222855A4B93 ;
+        :instanceEvent      bdr:EV13D0A4D41E4CFCB2 ;
+        :instanceHasReproduction  bdr:W1KG25870 ;
+        :instanceOf         bdr:WA1KG25870 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        :publisherName      "si khron dus deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG25867 .
+    
+    bdr:TT623337DFA5E62434
+        a                   :Title ;
+        rdfs:label          "rgyal khab gsum gyi gtam rgyud/"@bo-x-ewts .
+    
+    bdr:TT65ABC8949A9C6B29
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "san guo yan yi"@en-x-mixed .
+    
+    bdr:TT70A7F222855A4B93
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "三国演义"@zh-hans .
+}

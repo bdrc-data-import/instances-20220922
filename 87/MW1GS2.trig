@@ -1,0 +1,105 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1GS2 {
+    bda:LG412C25D8001DCAB1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-02-15T11:46:34.048Z"^^xsd:dateTime ;
+        adm:logMessage      "initial cataloging of medical series"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG4FF3F905E1134CBF
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-02-22T17:30:49.674Z"^^xsd:dateTime ;
+        adm:logMessage      "first published"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG53A984F84AF3C9A5
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-01-24T14:27:53.308Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LG5821271FD0D147DD
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-01-24T14:25:36.705Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1GS2  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW1GS2 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "87/MW1GS2.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS2 ;
+        adm:logEntry        bda:LG412C25D8001DCAB1 , bda:LG4FF3F905E1134CBF , bda:LG53A984F84AF3C9A5 , bda:LG5821271FD0D147DD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV72382E0E330AE40B
+        a                   :PublishedEvent ;
+        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2556BACF488F3D8F
+        a                   bdr:HollisId ;
+        rdf:value           "014255451" .
+    
+    bdr:ID6EA701B027967517
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105073772" .
+    
+    bdr:MW1GS2  a           :Instance , :SerialInstance ;
+        skos:altLabel       "lun shu bu zhu shi can lan bao ku"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "gser mchan rnam bkra gan mdzod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2556BACF488F3D8F , bdr:ID6EA701B027967517 ;
+        :authorshipStatement  "dar mo sman rams pa blo bzang chos grags/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 3,3, 1082 p." ;
+        :hasTitle           bdr:TT8C7706394DEA77B8 , bdr:TTEEA0EA5240670049 ;
+        :instanceEvent      bdr:EV72382E0E330AE40B ;
+        :instanceHasReproduction  bdr:W1GS2 ;
+        :instanceOf         bdr:WA1GS2 ;
+        :note               bdr:NT72802271A2FF1090 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC418 ;
+        :seriesNumber       "035" .
+    
+    bdr:NT72802271A2FF1090
+        a                   :Note ;
+        :noteText           "tbrc holds inkprint copy and digitally scanned images, tiffs and pdf files;"@en .
+    
+    bdr:TT8C7706394DEA77B8
+        a                   :ColophonTitle ;
+        rdfs:label          "lun shu bu zhu shi can lan bao ku"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTEEA0EA5240670049
+        a                   :Title ;
+        rdfs:label          "gser mchan rnam bkra gan mdzod/"@bo-x-ewts .
+}

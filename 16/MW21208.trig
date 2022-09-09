@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21208 {
+    bda:LG899E89C84407586E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG9742914CCE056BBF
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-27T09:01:54.098Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21208  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21208 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "16/MW21208.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21208 ;
+        adm:logEntry        bda:LG899E89C84407586E , bda:LG9742914CCE056BBF , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV636B0E2405DF6BD1
+        a                   :PublishedEvent ;
+        :eventWhen          "0199/?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID181C80933215BAFF
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007386115-4" .
+    
+    bdr:ID8B037F10AD79D766
+        a                   bdr:HollisId ;
+        rdf:value           "014258294" .
+    
+    bdr:MW21208  a          :Instance ;
+        skos:altLabel       "The ʾDzam-thang edition of the collected works (gsung-ʾbum) of Kun-mkhyen Dol-po-pa Shes-rab-rgyal-mtshan /collected and presented by Matthew Kapstein."@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_shes rab rgyal mtshan ('dzam thang)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID181C80933215BAFF , bdr:ID8B037F10AD79D766 ;
+        :biblioNote         "lithographic prints from recent blockprints"@en ;
+        :extentStatement    "8 v." ;
+        :hasSourcePrintery  bdr:G3JT12512 ;
+        :hasTitle           bdr:TT00A57198C0025818 , bdr:TTDC4D049A8E7F9328 ;
+        :instanceEvent      bdr:EV636B0E2405DF6BD1 ;
+        :instanceHasReproduction  bdr:W21208 ;
+        :instanceOf         bdr:WA1AC374 , bdr:WA21208 ;
+        :note               bdr:NT3CB0AEBA77FE72D8 ;
+        :numberOfVolumes    8 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "['dzam thang]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT3CB0AEBA77FE72D8
+        a                   :Note ;
+        :noteText           "blockprint recently received from 'dzam thang, sichuan province, prc\ntbrc holds digitally scanned images, tiffs and pdf files: 3492-3499\nscanned under with the patronage of chester y. dee in memory of his root guru the third jamgon kongtrul rinpoche"@en .
+    
+    bdr:TT00A57198C0025818
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_shes rab rgyal mtshan ('dzam thang)"@bo-x-ewts .
+    
+    bdr:TTDC4D049A8E7F9328
+        a                   :CoverTitle ;
+        rdfs:label          "The ʾDzam-thang edition of the collected works (gsung-ʾbum) of Kun-mkhyen Dol-po-pa Shes-rab-rgyal-mtshan /collected and presented by Matthew Kapstein."@en-x-mixed .
+}

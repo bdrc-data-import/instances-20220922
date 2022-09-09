@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00EGS1016789 {
+    bda:LGB3EF1F28EC547ED0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2006-12-06T08:22:12.812Z"^^xsd:dateTime ;
+        adm:logMessage      "published for creation of scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00EGS1016789
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW00EGS1016789 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "2f/MW00EGS1016789.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00EGS1016789 ;
+        adm:logEntry        bda:LGB3EF1F28EC547ED0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRC118CC47CD581088
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7322 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV8D1D451516409DA9
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID28269F5117328DEB
+        a                   bdr:HollisId ;
+        rdf:value           "014253892" .
+    
+    bdr:ID9F0045348EC9977D
+        a                   bdr:PL480 ;
+        rdf:value           "i tib 2907" .
+    
+    bdr:IDB53F94CD64DF12B2
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "86901576" .
+    
+    bdr:IDE361DC954F1FAD4F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 D79 1985" .
+    
+    bdr:MW00EGS1016789
+        a                   :Instance ;
+        skos:altLabel       "supplement containing the missing pages needed to complet the dru gu go rdzon smad cha version of the gesar epic"@en-x-mixed ;
+        skos:prefLabel      "dru gu go rdzong smad cha : supplement/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID28269F5117328DEB , bdr:ID9F0045348EC9977D , bdr:IDB53F94CD64DF12B2 , bdr:IDE361DC954F1FAD4F ;
+        :biblioNote         "reproduced from the manuscript made from an original owned by nag-dban-rten-'byun of bkra-sis-ljons, and edited to complete...earlier publication by tashi tsering."@en ;
+        :creator            bdr:CRC118CC47CD581088 ;
+        :extentStatement    "58 ff." ;
+        :hasTitle           bdr:TTBAA21B69AAA9FB38 , bdr:TTCB63F389E4E5EB25 ;
+        :instanceEvent      bdr:EV8D1D451516409DA9 ;
+        :instanceHasReproduction  bdr:W00EGS1016789 ;
+        :instanceOf         bdr:WA00EGS1016789 ;
+        :note               bdr:NTB391D6A1E04554D3 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTB391D6A1E04554D3
+        a                   :Note ;
+        :noteText           "\"these pages are intended to be inserted at the end of [the earlier work]\"--pref."@en .
+    
+    bdr:TTBAA21B69AAA9FB38
+        a                   :TitlePageTitle ;
+        rdfs:label          "supplement containing the missing pages needed to complet the dru gu go rdzon smad cha version of the gesar epic"@en-x-mixed .
+    
+    bdr:TTCB63F389E4E5EB25
+        a                   :Title ;
+        rdfs:label          "dru gu go rdzong smad cha : supplement/"@bo-x-ewts .
+}

@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC045034 {
+    bda:LGBFCBC491F489114B
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC045034"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC045034
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC045034 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "3d/MW1FEMC045034.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC045034 ;
+        adm:logEntry        bda:LGBFCBC491F489114B , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE7CCFEEEC4D08097
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "002-B.01.03.01.I.1" .
+    
+    bdr:MF609EEDC77FCC76D3
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "240" .
+    
+    bdr:MW1FEMC045034
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ស្រី (ស្រ១-ស្រ១៣)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE7CCFEEEC4D08097 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT517C59120884EC32 ;
+        :instanceHasReproduction  bdr:W1FEMC035034 , bdr:W1FEMC045034 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF609EEDC77FCC76D3 ;
+        :note               bdr:NT774E3BB5F6D3FA3C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT774E3BB5F6D3FA3C
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT517C59120884EC32
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ស្រី (ស្រ១-ស្រ១៣)"@km .
+}

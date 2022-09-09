@@ -1,0 +1,105 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20751 {
+    bda:LG30DA9B8CA2EC20AB
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-04-02T08:02:16.988Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized catalog info"@en ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LG4BC2748EC503A7B2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-03T11:17:57.41Z"^^xsd:dateTime ;
+        adm:logMessage      "added lccn 2002294264"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGC962EFA92044C897
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20751  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20751 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "41/MW20751.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20751 ;
+        adm:logEntry        bda:LG30DA9B8CA2EC20AB , bda:LG4BC2748EC503A7B2 , bda:LGC962EFA92044C897 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFE78894DE27819D5
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0356FF5FF8DFB6C7
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2002294264" .
+    
+    bdr:ID7D17046AE447FA3E
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "009719428-X" .
+    
+    bdr:ID958EBE0CB156AFC5
+        a                   bdr:HollisId ;
+        rdf:value           "014258221" .
+    
+    bdr:MW20751  a          :Instance ;
+        skos:altLabel       "Sa-skya bkaʾ ʾbum ma phyi gsar rñed phyogs bsgrigs."@en-x-mixed ;
+        skos:prefLabel      "sa skya bka' 'bum ma phyi gsar rnyed phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0356FF5FF8DFB6C7 , bdr:ID7D17046AE447FA3E , bdr:ID958EBE0CB156AFC5 ;
+        :biblioNote         "produced from computer output in lha sa/"@bo-x-ewts ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT61C5095F72E3D2F1 , bdr:TTA7CB2EE372857434 ;
+        :instanceEvent      bdr:EVFE78894DE27819D5 ;
+        :instanceHasReproduction  bdr:W20751 ;
+        :instanceOf         bdr:WA20751 ;
+        :note               bdr:NT470CFFCBB61C808E ;
+        :numberOfVolumes    3 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT470CFFCBB61C808E
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1720-1722"@en .
+    
+    bdr:TT61C5095F72E3D2F1
+        a                   :Title ;
+        rdfs:label          "sa skya bka' 'bum ma phyi gsar rnyed phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TTA7CB2EE372857434
+        a                   :CoverTitle ;
+        rdfs:label          "Sa-skya bkaʾ ʾbum ma phyi gsar rñed phyogs bsgrigs."@en-x-mixed .
+}

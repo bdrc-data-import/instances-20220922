@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046722 {
+    bda:LG479150D3609EA35D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046722"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046722
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046722 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "98/MW1FEMC046722.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046722 ;
+        adm:logEntry        bda:LG479150D3609EA35D , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID1440884E5CC37F00
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "035-B.11.05.01.VIII" .
+    
+    bdr:MF0E093C82A712544A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "55" .
+    
+    bdr:MW1FEMC046722
+        a                   :Instance ;
+        skos:prefLabel      "ពុទ្ធាភិសេក, ក្បួនទស្សទាយ"@km , "buddhā bhisek, kpoun dass dāy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1440884E5CC37F00 ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT1407DDD61A9EC8EA , bdr:TTDCE60435B4E492F0 ;
+        :instanceHasReproduction  bdr:W1FEMC046722 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF0E093C82A712544A ;
+        :note               bdr:NT65F230F052919CF5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT65F230F052919CF5
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1407DDD61A9EC8EA
+        a                   :Title ;
+        rdfs:label          "ពុទ្ធាភិសេក, ក្បួនទស្សទាយ"@km .
+    
+    bdr:TTDCE60435B4E492F0
+        a                   :Title ;
+        rdfs:label          "buddhā bhisek, kpoun dass dāy"@km-x-twktt .
+}

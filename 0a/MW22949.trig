@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22949 {
+    bda:LG2A507DA205F86220
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-04T11:32:08.956Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG51A3A282DBA818F8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22949  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22949 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0a/MW22949.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22949 ;
+        adm:logEntry        bda:LG2A507DA205F86220 , bda:LG51A3A282DBA818F8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCD453767C1645880
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID317269C2FF0E3AFD
+        a                   bdr:HollisId ;
+        rdf:value           "014258793" .
+    
+    bdr:ID64C8BAAAE1898D24
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .B5627 1979" .
+    
+    bdr:IDE9E712A6319C0A02
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "79905001" .
+    
+    bdr:MW22949  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of dkyil-khan mkhan-zur blo-bzan-sbyin pa of bkra-sis-lhun-po"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_blo bzang sbyin pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID317269C2FF0E3AFD , bdr:ID64C8BAAAE1898D24 , bdr:IDE9E712A6319C0A02 ;
+        :biblioNote         "reproduced from tracings of a set of prints from the bkra-sis-lhun-po dpal-'byor-lhun-po blocks from the library of bka'-chen bzod-pa."@en ;
+        :extentStatement    "4 v." ;
+        :hasSourcePrintery  bdr:G2CN10915 ;
+        :hasTitle           bdr:TT7B7919FBED65051B , bdr:TTA5A5E7354E4D9D9A ;
+        :instanceEvent      bdr:EVCD453767C1645880 ;
+        :instanceHasReproduction  bdr:W22949 ;
+        :instanceOf         bdr:WA22949 ;
+        :note               bdr:NT70870FF17927F19C ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "chophel legden"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT70870FF17927F19C
+        a                   :Note ;
+        :noteText           "-5849"@en .
+    
+    bdr:TT7B7919FBED65051B
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of dkyil-khan mkhan-zur blo-bzan-sbyin pa of bkra-sis-lhun-po"@en-x-mixed .
+    
+    bdr:TTA5A5E7354E4D9D9A
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang sbyin pa/"@bo-x-ewts .
+}

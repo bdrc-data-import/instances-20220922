@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13798 {
+    bda:LG14F515C689FDEA6D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-05T12:36:20.335Z"^^xsd:dateTime ;
+        adm:logMessage      "accessioned"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG2C4688DEADCEC8A5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T17:15:05.149Z"^^xsd:dateTime ;
+        adm:logMessage      "added artist"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG470627805BE798EB
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-10-11T15:32:00.338Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13798  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13798 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "21/MW1KG13798.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13798 ;
+        adm:logEntry        bda:LG14F515C689FDEA6D , bda:LG2C4688DEADCEC8A5 , bda:LG470627805BE798EB , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV63039D823A78674A
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID09EE028F2C1D90A0
+        a                   bdr:HollisId ;
+        rdf:value           "014256059" .
+    
+    bdr:MW1KG13798  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "bod kyi gna' deng gi ri mo'i dpe deb gsar pa/"@bo-x-ewts , "new tibetan book on classical and modern art"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID09EE028F2C1D90A0 ;
+        :authorshipStatement  "'phags yul kirti'i byes pa grwa tshang nas 'grems spel byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "211 p." ;
+        :hasTitle           bdr:TT1632CFAFE5786F6D , bdr:TTEAD7366343682F87 ;
+        :illustrations      "ill. (col. plate and drawings)" ;
+        :instanceEvent      bdr:EV63039D823A78674A ;
+        :instanceHasReproduction  bdr:W1KG13798 ;
+        :instanceOf         bdr:WA1KG13798 ;
+        :note               bdr:NT8771252B62217CE7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "kirti jepa datsang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG13798 ;
+        :seriesNumber       "v. 1" .
+    
+    bdr:NT8771252B62217CE7
+        a                   :Note ;
+        :noteText           "'phags yul kirti'i byes pa grwa tshang gi deb spyi'i 'don thengs nga bzhi pa/"@en .
+    
+    bdr:TT1632CFAFE5786F6D
+        a                   :Title ;
+        rdfs:label          "bod kyi gna' deng gi ri mo'i dpe deb gsar pa/"@bo-x-ewts .
+    
+    bdr:TTEAD7366343682F87
+        a                   :OtherTitle ;
+        rdfs:label          "new tibetan book on classical and modern art"@en .
+}

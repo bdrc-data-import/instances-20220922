@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043726 {
+    bda:LG2B5460D66DAB82DF
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043726"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043726
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043726 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "97/MW1FEMC043726.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043726 ;
+        adm:logEntry        bda:LG2B5460D66DAB82DF , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5984A39F247B6310
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "017-B.11.05.03.III.1" .
+    
+    bdr:MFC162A39EA49B343B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "187" .
+    
+    bdr:MW1FEMC043726
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មត្រាះ (១-២២)"@km , "dhamm trāḥ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5984A39F247B6310 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "5" ;
+        :hasTitle           bdr:TT5DBEA26B5BF3C1E7 , bdr:TT7FE23C29EF68634C ;
+        :instanceHasReproduction  bdr:W1FEMC033726 , bdr:W1FEMC043726 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC162A39EA49B343B ;
+        :note               bdr:NTBF473A8C0C0D85DD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTBF473A8C0C0D85DD
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5DBEA26B5BF3C1E7
+        a                   :Title ;
+        rdfs:label          "dhamm trāḥ"@km-x-twktt .
+    
+    bdr:TT7FE23C29EF68634C
+        a                   :Title ;
+        rdfs:label          "ធម្មត្រាះ (១-២២)"@km .
+}

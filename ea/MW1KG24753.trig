@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG24753 {
+    bda:LGC09BD2B6E2F0F995
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-03T16:35:23.259Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG24753  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG24753 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ea/MW1KG24753.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG24753 ;
+        adm:logEntry        bda:LGC09BD2B6E2F0F995 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA417DA7C401C29D2
+        a                   :PublishedEvent ;
+        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID09DDA804797D7B3F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2016325551" .
+    
+    bdr:ID1515B4DC99CE22FC
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G43 D93 2015" .
+    
+    bdr:ID5CCC9941C3C26974
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105141920" .
+    
+    bdr:MW1KG24753  a       :Instance ;
+        skos:prefLabel      "'dzam gling seng chen rgyal po'i sku tshe'i smad kyi rnam thar bsdus pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID09DDA804797D7B3F , bdr:ID1515B4DC99CE22FC , bdr:ID5CCC9941C3C26974 ;
+        :authorshipStatement  "si khron zhing chen ge sar las don 'go khrid tsho chung gzhung las khang /"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 5, 345 p." ;
+        :hasTitle           bdr:TT58A857DEEC1A7145 , bdr:TT64E19D998A94F130 ;
+        :instanceEvent      bdr:EVA417DA7C401C29D2 ;
+        :instanceHasReproduction  bdr:W1KG24753 ;
+        :instanceOf         bdr:WA1KG24753 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT58A857DEEC1A7145
+        a                   :Title ;
+        rdfs:label          "'dzam gling seng chen rgyal po'i sku tshe'i smad kyi rnam thar bsdus pa/"@bo-x-ewts .
+    
+    bdr:TT64E19D998A94F130
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dzam gling seng chen rgyal po'i sku tshe'i smad kyi rnam thar bsdus pa khams gsum 'gug pa'i lcags kyu/"@bo-x-ewts .
+}

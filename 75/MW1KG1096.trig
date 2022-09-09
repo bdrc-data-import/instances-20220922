@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1096 {
+    bda:LG4C7F185B3915C188
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-11T14:26:41.41Z"^^xsd:dateTime ;
+        adm:logMessage      "released from accessioned"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG5FD95FB6D5674E35
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-12-05T14:27:21.974Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1096  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1096 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "75/MW1KG1096.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1096 ;
+        adm:logEntry        bda:LG4C7F185B3915C188 , bda:LG5FD95FB6D5674E35 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C4C9C193B205B60
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7287F08071586111
+        a                   bdr:HollisId ;
+        rdf:value           "014255696" .
+    
+    bdr:ID8B228DB94C791176
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105090426" .
+    
+    bdr:MW1KG1096  a        :Instance , :SerialInstance ;
+        skos:altLabel       "zhi gong yi suan ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "'bri gung sman rtsis phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7287F08071586111 , bdr:ID8B228DB94C791176 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 3, 4, 13, 4, 885 p." ;
+        :hasTitle           bdr:TT374416C598218F56 , bdr:TTB91AC7B395E74BDA ;
+        :instanceEvent      bdr:EV3C4C9C193B205B60 ;
+        :instanceHasReproduction  bdr:IE1KG1096 , bdr:W1KG1096 ;
+        :instanceOf         bdr:WA1KG1096 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC418 ;
+        :seriesNumber       "060" .
+    
+    bdr:TT374416C598218F56
+        a                   :ColophonTitle ;
+        rdfs:label          "zhi gong yi suan ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTB91AC7B395E74BDA
+        a                   :Title ;
+        rdfs:label          "'bri gung sman rtsis phyogs bsgrigs/"@bo-x-ewts .
+}

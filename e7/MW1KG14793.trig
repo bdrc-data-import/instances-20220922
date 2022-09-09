@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14793 {
+    bda:LGCA2C1C5C9663AE42
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-07-02T16:28:32.232Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14793  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14793 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "e7/MW1KG14793.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14793 ;
+        adm:logEntry        bda:LGCA2C1C5C9663AE42 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06EE0FA56440BD95
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4457DA9209175538
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542115218" .
+    
+    bdr:ID66AB67CD58EAC46F
+        a                   bdr:HollisId ;
+        rdf:value           "014256238" .
+    
+    bdr:MW1KG14793  a       :Instance ;
+        skos:altLabel       "合作寺志"@zh-hans ;
+        skos:prefLabel      "gtsos dga' ldan chos gling gi gdan rabs legs bshad nor bu'i phreng ba mdzes pa'i rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4457DA9209175538 , bdr:ID66AB67CD58EAC46F ;
+        :authorshipStatement  "bse tshang blo bzang dpal ldan chos kyi rdo rje nas mdzad/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "6, 325 p." ;
+        :hasTitle           bdr:TT4F7B335E55E50654 , bdr:TT6299E9FC27A72D94 , bdr:TT697B54E04A4D3256 ;
+        :illustrations      "ill. (col.)" ;
+        :instanceEvent      bdr:EV06EE0FA56440BD95 ;
+        :instanceHasReproduction  bdr:W1KG14793 ;
+        :instanceOf         bdr:WA1KG14793 ;
+        :note               bdr:NTEBE7F23CE4CA4420 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTEBE7F23CE4CA4420
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT4F7B335E55E50654
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "he zuo si zhi"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT6299E9FC27A72D94
+        a                   :Title ;
+        rdfs:label          "gtsos dga' ldan chos gling gi gdan rabs legs bshad nor bu'i phreng ba mdzes pa'i rgyan/"@bo-x-ewts .
+    
+    bdr:TT697B54E04A4D3256
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "合作寺志"@zh-hans .
+}

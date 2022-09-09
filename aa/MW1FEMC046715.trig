@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046715 {
+    bda:LG2EB8F9120EC10914
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046715"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046715
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046715 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "aa/MW1FEMC046715.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046715 ;
+        adm:logEntry        bda:LG2EB8F9120EC10914 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0B8761CEB0C1E01B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "028-B.11.05.01.III.1" .
+    
+    bdr:MF59B6C5915FB93674
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "190" .
+    
+    bdr:MW1FEMC046715
+        a                   :Instance ;
+        skos:prefLabel      "សង្រូមព្រះសិរិក្កធាត"@km , "Sańroum braḥsirikkdhāt"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0B8761CEB0C1E01B ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT5F4E7CD78370F607 , bdr:TT83E93767726BE606 ;
+        :instanceHasReproduction  bdr:W1FEMC036715 , bdr:W1FEMC046715 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF59B6C5915FB93674 ;
+        :note               bdr:NT02AA18B84A3C559E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT02AA18B84A3C559E
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5F4E7CD78370F607
+        a                   :Title ;
+        rdfs:label          "Sańroum braḥsirikkdhāt"@km-x-twktt .
+    
+    bdr:TT83E93767726BE606
+        a                   :Title ;
+        rdfs:label          "សង្រូមព្រះសិរិក្កធាត"@km .
+}

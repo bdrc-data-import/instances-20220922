@@ -1,0 +1,46 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8CTX21 {
+    bda:LG53CB4F54036669A2
+        a                   adm:WithdrawData ;
+        adm:logDate         "2021-06-15T12:14:14.092Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn used for testing"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6EA09423EA86528E
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2020-06-03T11:11:49.259Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW8CTX21  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW8CTX21 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "ec/MW8CTX21.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8CTX21 ;
+        adm:logEntry        bda:LG53CB4F54036669A2 , bda:LG6EA09423EA86528E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:MW8CTX21  a         :Instance ;
+        skos:prefLabel      "Yet Another Test of scanr 002"@en ;
+        :hasTitle           bdr:TT44D38BF3A343EB9A ;
+        :instanceHasReproduction  bdr:W8CTX21 ;
+        :numberOfVolumes    1 .
+    
+    bdr:TT44D38BF3A343EB9A
+        a                   :Title ;
+        rdfs:label          "Yet Another Test of scanr 002"@en .
+}

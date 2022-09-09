@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM508 {
+    bda:LG22BEBD7E4016DCD9
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-11-04T10:37:21.386Z"^^xsd:dateTime ;
+        adm:logMessage      "complete catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG3B8CB3875AA7B913
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-12T08:31:06.698Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB8028DF51718CFE8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM508  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM508 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "43/MW1NLM508.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM508 ;
+        adm:logEntry        bda:LG22BEBD7E4016DCD9 , bda:LG3B8CB3875AA7B913 , bda:LGB8028DF51718CFE8 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM508  a        :Instance ;
+        skos:prefLabel      "'dul ba'i bslab bya chen mo/"@bo-x-ewts ;
+        :dimensionsStatement  "46x6" ;
+        :extentStatement    "198 ff." ;
+        :hasTitle           bdr:TT3E94BC3D4D0DB8A6 , bdr:TT8AF79C509536F7D8 ;
+        :instanceHasReproduction  bdr:W1NLM508 ;
+        :instanceOf         bdr:WA1NLM1350 , bdr:WA1NLM508 ;
+        :note               bdr:NT1E1658E896147FA6 , bdr:NTDB56EB73AFE42601 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherName      "dge zur bsam gtan dang rtsis dpon bdza+ra/"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT1E1658E896147FA6
+        a                   :Note ;
+        :noteText           "missingPages: M0058421-001 [Missing page from 75A-86B] Image 149-172, [Missing page from 161A-161B] Image 316-317, [118,119th pages are printed on the same paper sheet] Image 235-236, [128, 129th pages are printed on the same paper sheet] Image 253-254, [153A was separated and lost from the page, because it was printed on the composite paper.] Image 301"@en .
+    
+    bdr:NTDB56EB73AFE42601
+        a                   :Note ;
+        :noteText           "nlmId: M0058421"@en .
+    
+    bdr:TT3E94BC3D4D0DB8A6
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje 'dul ba 'dzin pas mdzad pa'i 'dul ba'i bslab bya chen mo/"@bo-x-ewts .
+    
+    bdr:TT8AF79C509536F7D8
+        a                   :Title ;
+        rdfs:label          "'dul ba'i bslab bya chen mo/"@bo-x-ewts .
+}

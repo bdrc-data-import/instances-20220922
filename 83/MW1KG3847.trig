@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG3847 {
+    bda:LGF3C1C6042FEBB049
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-11-09T14:56:55.071Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG3847  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG3847 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "83/MW1KG3847.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG3847 ;
+        adm:logEntry        bda:LGF3C1C6042FEBB049 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV578C079B4AE48513
+        a                   :PublishedEvent ;
+        :eventWhen          "1990"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1507F5D8942A3EAF
+        a                   bdr:HollisId ;
+        rdf:value           "014256757" .
+    
+    bdr:MW1KG3847  a        :Instance ;
+        skos:altLabel       "tibetan index to the pentaglot dictionary"@en ;
+        skos:prefLabel      "tha snyad zur bkol/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1507F5D8942A3EAF ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "195 p." ;
+        :hasTitle           bdr:TTC011E34040F8A2FA , bdr:TTEC0051EDB419AF71 ;
+        :instanceEvent      bdr:EV578C079B4AE48513 ;
+        :instanceHasReproduction  bdr:W1KG3847 ;
+        :instanceOf         bdr:WA1KG3847 ;
+        :note               bdr:NTEAACDA904A8EF276 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[kyoto, japan]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTEAACDA904A8EF276
+        a                   :Note ;
+        :noteSource         bdr:MW1PD95739 ;
+        :noteText           "Tibetan index of"@en .
+    
+    bdr:TTC011E34040F8A2FA
+        a                   :TitlePageTitle ;
+        rdfs:label          "tibetan index to the pentaglot dictionary"@en .
+    
+    bdr:TTEC0051EDB419AF71
+        a                   :Title ;
+        rdfs:label          "tha snyad zur bkol/"@bo-x-ewts .
+}

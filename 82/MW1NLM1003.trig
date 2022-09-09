@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1003 {
+    bda:LG0556C6A386A7EAA8
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-16T10:15:20.91Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG0CE3E1C3A2349F40
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-29T16:51:53.916Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFBFCBFF051FCC2F9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1003  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1003 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "82/MW1NLM1003.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1003 ;
+        adm:logEntry        bda:LG0556C6A386A7EAA8 , bda:LG0CE3E1C3A2349F40 , bda:LGFBFCBFF051FCC2F9 , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1003  a       :Instance ;
+        skos:prefLabel      "kun mkhyen 'jam dbyangs bzhad pa'i 'dul ba'i spyi don/"@bo-x-ewts ;
+        :dimensionsStatement  "48x6" ;
+        :extentStatement    "289 ff. end folio missing," ;
+        :hasTitle           bdr:TTA39A64A2AB21056C , bdr:TTC0FEB2D3B258969C , bdr:TTD537AFD846E66219 ;
+        :instanceHasReproduction  bdr:W1NLM1003 ;
+        :instanceOf         bdr:WA1NLM1003 , bdr:WA1NLM1262 ;
+        :note               bdr:NT6C09770B29C10B77 , bdr:NTA3A30A3A7C7A124E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT6C09770B29C10B77
+        a                   :Note ;
+        :noteText           "missingPages: M0058916-001 [Missing page from 223A-223B] Image 445-446, M0058916-001 [Page 233 was double numbered] Image 465-468, M0058916 [Final pages are missing 290A] Image ......"@en .
+    
+    bdr:NTA3A30A3A7C7A124E
+        a                   :Note ;
+        :noteText           "nlmId: M0058916"@en .
+    
+    bdr:TTA39A64A2AB21056C
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dul ba'i dka' gnas rnam par dpyad pa 'khrul spong blo gsal mgul rgyan tsin+da ma Ni'i phreng mdzes skal bzang re ba kun skong /"@bo-x-ewts .
+    
+    bdr:TTC0FEB2D3B258969C
+        a                   :OtherTitle ;
+        rdfs:label          "'dul ba'i dka' gnas rnam par dpyad pa 'khrul spong blo gsal mgul rgyan tsin+da ma Ni'i phreng mdzes bskal bzang re ba kun skong /"@bo-x-ewts .
+    
+    bdr:TTD537AFD846E66219
+        a                   :Title ;
+        rdfs:label          "kun mkhyen 'jam dbyangs bzhad pa'i 'dul ba'i spyi don/"@bo-x-ewts .
+}

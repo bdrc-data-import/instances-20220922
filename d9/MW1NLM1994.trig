@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1994 {
+    bda:LG1DC00104F10CB093
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:10:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG99BEC8BD1C92A5B3
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-21T17:27:06.888Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBCF9EB8143FE7F75
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1994  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1994 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d9/MW1NLM1994.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1994 ;
+        adm:logEntry        bda:LG1DC00104F10CB093 , bda:LG99BEC8BD1C92A5B3 , bda:LGBCF9EB8143FE7F75 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1994  a       :Instance ;
+        skos:prefLabel      "theg pa chen po rgyud bla ma'i bstan bcos sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "17.5x4.5" ;
+        :extentStatement    "75 ff., 11 ff., 14 ff., 20 ff.," ;
+        :hasTitle           bdr:TT49967DEFA81179B4 ;
+        :instanceHasReproduction  bdr:W1NLM1994 ;
+        :instanceOf         bdr:WA1NLM1994 ;
+        :note               bdr:NT2B4E43572A7AC470 , bdr:NT5A8AC9D1CE8E96ED ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT2B4E43572A7AC470
+        a                   :Note ;
+        :noteText           "Contents:\n1. theg pa chen po rgyud bla ma'i bstan bcos/ 1A-75A\n2. grub dbang klong rdol bla ma rin po che nas mdzad pa'i sman mdo shin tu bsdud pa/ 1A-7A\n3. 'phags pa klu sgrub kyi smon lam/ 7B-11A\n4. chos dang chos nyid rnam par 'byed pa'i tshig le'ur byas pa/ 1A-14A\n5. dbus dang mtha' rnam 'byed/ 1A-20A"@en .
+    
+    bdr:NT5A8AC9D1CE8E96ED
+        a                   :Note ;
+        :noteText           "nlmId: M0059912"@en .
+    
+    bdr:TT49967DEFA81179B4
+        a                   :Title ;
+        rdfs:label          "theg pa chen po rgyud bla ma'i bstan bcos sogs/"@bo-x-ewts .
+}

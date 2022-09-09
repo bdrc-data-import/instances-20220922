@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046447 {
+    bda:LGD1348D2B8348C306
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046447"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046447
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046447 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "51/MW1FEMC046447.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046447 ;
+        adm:logEntry        bda:LGD1348D2B8348C306 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA417B275F1C7917F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "011[2]-B.04.03.04.VII" .
+    
+    bdr:MF16B2F992AC279E44
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "48" .
+    
+    bdr:MW1FEMC046447
+        a                   :Instance ;
+        skos:prefLabel      "បវារណាទ្វេថ្ងៃខែ (១-១១)"@pi-khmr , "pavār ṇā dve thṅai khē"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA417B275F1C7917F ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT72147E3382DE16D5 , bdr:TTB1547C4F9838E2A8 ;
+        :instanceHasReproduction  bdr:W1FEMC036447 , bdr:W1FEMC046447 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF16B2F992AC279E44 ;
+        :note               bdr:NT49ACC48C3ECF11EB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT49ACC48C3ECF11EB
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT72147E3382DE16D5
+        a                   :Title ;
+        rdfs:label          "pavār ṇā dve thṅai khē"@pi-x-twktt .
+    
+    bdr:TTB1547C4F9838E2A8
+        a                   :Title ;
+        rdfs:label          "បវារណាទ្វេថ្ងៃខែ (១-១១)"@pi-khmr .
+}

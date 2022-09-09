@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13821 {
+    bda:LGAFD43E9FF1A5F4C2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-05T12:40:46.044Z"^^xsd:dateTime ;
+        adm:logMessage      "accessioned"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFBA2D0916BC025A1
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-03-09T15:55:36.358Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW1KG13821  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13821 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "73/MW1KG13821.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13821 ;
+        adm:logEntry        bda:LGAFD43E9FF1A5F4C2 , bda:LGFBA2D0916BC025A1 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRB991E081B23902BB
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7209 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV997DB34FBE6E1436
+        a                   :PublishedEvent ;
+        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDBFCF34698A90BA8D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS793.A45 A43 2006" .
+    
+    bdr:IDFDCFDD066AFFFAE4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2009345975" .
+    
+    bdr:MW1KG13821  a       :Instance ;
+        skos:prefLabel      "a mdo mgon po'i mi tshe'i lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBFCF34698A90BA8D , bdr:IDFDCFDD066AFFFAE4 ;
+        :authorshipStatement  "bla brag skal bzang gis rtsom bsgrigs byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRB991E081B23902BB ;
+        :extentStatement    "180 p." ;
+        :hasTitle           bdr:TT347D5A74D72A98C0 , bdr:TT38FF78C49A86686B ;
+        :instanceEvent      bdr:EV997DB34FBE6E1436 ;
+        :instanceHasReproduction  bdr:W1KG13821 ;
+        :instanceOf         bdr:WA1KG13821 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dehradun, uttarakhand"@en ;
+        :publisherName      "amdo gompo tsering"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT347D5A74D72A98C0
+        a                   :TitlePageTitle ;
+        rdfs:label          "a mdo'i mgon po'i mi tshe dang 'brel ba'i lo rgyus du ku la'i gos bzang /"@bo-x-ewts .
+    
+    bdr:TT38FF78C49A86686B
+        a                   :Title ;
+        rdfs:label          "a mdo mgon po'i mi tshe'i lo rgyus/"@bo-x-ewts .
+}

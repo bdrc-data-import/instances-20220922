@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042194 {
+    bda:LG9E4D85DFB2CA1B2E
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042194"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042194
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC042194 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "c5/MW1FEMC042194.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042194 ;
+        adm:logEntry        bda:LG9E4D85DFB2CA1B2E , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID07D8A49D4B36292C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "049-B.11.08.02.VI.2" .
+    
+    bdr:MF8C7CBC6AD4F96AA7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "196" .
+    
+    bdr:MW1FEMC042194
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនថ្នាំ"@km , "kpoun thnāṃ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID07D8A49D4B36292C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT0F806EDD8E5CCD53 , bdr:TTB6909751D3896632 ;
+        :instanceHasReproduction  bdr:W1FEMC032194 , bdr:W1FEMC042194 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8C7CBC6AD4F96AA7 ;
+        :note               bdr:NT45A2A3213728FF92 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT45A2A3213728FF92
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0F806EDD8E5CCD53
+        a                   :Title ;
+        rdfs:label          "ក្បួនថ្នាំ"@km .
+    
+    bdr:TTB6909751D3896632
+        a                   :Title ;
+        rdfs:label          "kpoun thnāṃ"@km-x-twktt .
+}

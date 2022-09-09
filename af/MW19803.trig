@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW19803 {
+    bda:LG5B7C219A8A6CC555
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-03T15:56:37.599Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat , pub info and changed topics"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG8943064C81BD353D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW19803  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW19803 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "af/MW19803.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19803 ;
+        adm:logEntry        bda:LG5B7C219A8A6CC555 , bda:LG8943064C81BD353D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE5B5CF72CCC3F970
+        a                   :PublishedEvent ;
+        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2F7CE16E513C763E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785 .G22 1992" .
+    
+    bdr:ID730A9BAF35D19A9F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223005661" .
+    
+    bdr:ID88C232849E4E60FE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97926071" .
+    
+    bdr:ID89956B4B5B55F56C
+        a                   bdr:HollisId ;
+        rdf:value           "014254893" .
+    
+    bdr:MW19803  a          :Instance ;
+        skos:prefLabel      "mi sna/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2F7CE16E513C763E , bdr:ID730A9BAF35D19A9F , bdr:ID88C232849E4E60FE , bdr:ID89956B4B5B55F56C ;
+        :authorshipStatement  "don rdor dang bstan 'dzin chos grags kyis bsdu sgrig byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "7, 1024 p." ;
+        :hasTitle           bdr:TT6D992D142961D6D3 , bdr:TT7DBEC9AEB2BF09B1 ;
+        :instanceEvent      bdr:EVE5B5CF72CCC3F970 ;
+        :instanceHasReproduction  bdr:W19803 ;
+        :instanceOf         bdr:WA19803 ;
+        :note               bdr:NT1687B67E88C615F5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT1687B67E88C615F5
+        a                   :Note ;
+        :noteText           "preservation scanning for tbrc\nnot to be distributed for copyright considerations\n4201"@en .
+    
+    bdr:TT6D992D142961D6D3
+        a                   :Title ;
+        rdfs:label          "mi sna/"@bo-x-ewts .
+    
+    bdr:TT7DBEC9AEB2BF09B1
+        a                   :TitlePageTitle ;
+        rdfs:label          "gangs ljongs lo rgyus thog gi grags can mi sna/"@bo-x-ewts .
+}

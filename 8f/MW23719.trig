@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23719 {
+    bda:LG20B159F06DF42D9C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8090476C45C4E403
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-12T16:31:31.387Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23719  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23719 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "8f/MW23719.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23719 ;
+        adm:logEntry        bda:LG20B159F06DF42D9C , bda:LG8090476C45C4E403 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCF32874CB54EE127
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDF59B1E4EAC76ED1F
+        a                   bdr:HollisId ;
+        rdf:value           "014259064" .
+    
+    bdr:MW23719  a          :Instance ;
+        skos:prefLabel      "lam rim bdud rtsi snying po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF59B1E4EAC76ED1F ;
+        :extentStatement    "138 p." ;
+        :hasTitle           bdr:TT10A96B52BFCD7F1B , bdr:TT12E16A6EA8E2394D ;
+        :instanceEvent      bdr:EVCF32874CB54EE127 ;
+        :instanceHasReproduction  bdr:W23719 ;
+        :instanceOf         bdr:WA1KG25144 , bdr:WA23719 ;
+        :note               bdr:NTF229CD84FDA2D4B6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTF229CD84FDA2D4B6
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tif files, tbrc volume number 2486.\n\nPrint copy generously provided for scanning by Dr Martijn van Beek of Aarhus University, Moesgaard, Denmark."@en .
+    
+    bdr:TT10A96B52BFCD7F1B
+        a                   :TitlePageTitle ;
+        rdfs:label          "byang chub lam gyi rim pa'i gdams pa zab mo rnams tshigs su bcad pa'i sgo nas nyams su len tshul dam chos bdud rtsi'i snying po/"@bo-x-ewts .
+    
+    bdr:TT12E16A6EA8E2394D
+        a                   :Title ;
+        rdfs:label          "lam rim bdud rtsi snying po/"@bo-x-ewts .
+}

@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020014 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020014
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020014 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "9a/MW1FEMC020014.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020014 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB1632FCC5A54D05A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "a.14.I.1" .
+    
+    bdr:MF30895981DB1BD46D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "18" ;
+        :microfilmStrip     "4" .
+    
+    bdr:MW1FEMC020014
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់បណ្ដាំបិតា, ច្បាប់ពាក្យចាស់"@km , "cpāp' paṇtāṃ pitā, cpāp' bāky cās'"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB1632FCC5A54D05A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TTB3BEF7D9FA4095CF , bdr:TTB9A587985A4663C7 , bdr:TTC359E8C0459AB879 , bdr:TTD173DA8B0AF108C8 , bdr:TTDA91AB5A6967AF6D , bdr:TTF7B3DB451E2BC16F ;
+        :instanceHasReproduction  bdr:W1FEMC020014 ;
+        :instanceOf         bdr:WA1FEMC020014 , bdr:WA1FEMC100064 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF30895981DB1BD46D ;
+        :note               bdr:NTBD4A823419FC97C0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1389" .
+    
+    bdr:NTBD4A823419FC97C0
+        a                   :Note ;
+        :contentLocationStatement  "pg. 3" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TTB3BEF7D9FA4095CF
+        a                   :Title ;
+        rdfs:label          "ច្បាប់បណ្ដាំបិតា, ច្បាប់ពាក្យចាស់"@km .
+    
+    bdr:TTB9A587985A4663C7
+        a                   :Title ;
+        rdfs:label          "cpāp' paṇtāṃ pitā, cpāp' bāky cās'"@km-x-twktt .
+    
+    bdr:TTC359E8C0459AB879
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់់ច្បាះ"@km .
+    
+    bdr:TTD173DA8B0AF108C8
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' cpās'"@km-x-twktt ;
+        :femcConversionOf   bdr:TTDA91AB5A6967AF6D .
+    
+    bdr:TTDA91AB5A6967AF6D
+        a                   :CoverTitle ;
+        rdfs:label          "cpāp' cpāḥ"@km-x-twktt .
+    
+    bdr:TTF7B3DB451E2BC16F
+        a                   :CoverTitle ;
+        rdfs:label          "ច្បាប់់ច្បាស់"@km ;
+        :femcConversionOf   bdr:TTC359E8C0459AB879 .
+}

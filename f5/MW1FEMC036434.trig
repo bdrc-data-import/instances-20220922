@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036434 {
+    bda:LG9D9CD4D0BFBB15FA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036434"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036434
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC036434 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "f5/MW1FEMC036434.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036434 ;
+        adm:logEntry        bda:LG9D9CD4D0BFBB15FA , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC046434 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:IDA3A95C8A6BB1829C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "169-B.04.03.04.VI.6" .
+    
+    bdr:MF32BA819FF2A3DA47
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "227" .
+    
+    bdr:MW1FEMC036434
+        a                   :Instance ;
+        skos:prefLabel      "ជៃ្យទុំម មង្គលចក្រវាល សោឡសមង្គល នមាមីពុទ្ធំ ព្រះពុទ្ធសក្រាដ្ឋ (១-១២-១-៣-ក-កុ)"@km , "jaiẙ duṃm maṅgalacakravāl solaramaṅgal namāmībo braḥ buddh sakrāṭṭh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA3A95C8A6BB1829C ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT19BF39E68333CC1B , bdr:TTBD121304934A8CEA ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF32BA819FF2A3DA47 ;
+        :note               bdr:NT1FB4DDD644B81F62 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1FB4DDD644B81F62
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT19BF39E68333CC1B
+        a                   :Title ;
+        rdfs:label          "ជៃ្យទុំម មង្គលចក្រវាល សោឡសមង្គល នមាមីពុទ្ធំ ព្រះពុទ្ធសក្រាដ្ឋ (១-១២-១-៣-ក-កុ)"@km .
+    
+    bdr:TTBD121304934A8CEA
+        a                   :Title ;
+        rdfs:label          "jaiẙ duṃm maṅgalacakravāl solaramaṅgal namāmībo braḥ buddh sakrāṭṭh"@km-x-twktt .
+}

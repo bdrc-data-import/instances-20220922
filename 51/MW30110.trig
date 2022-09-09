@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30110 {
+    bda:LG3599EDAE381A68C3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG4F0A7B3B60496A8D
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-19T13:45:16.156Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG8D13DC929F0A2D18
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-11-11T14:46:30.485Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30110  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30110 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "51/MW30110.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30110 ;
+        adm:logEntry        bda:LG3599EDAE381A68C3 , bda:LG4F0A7B3B60496A8D , bda:LG8D13DC929F0A2D18 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9C2FCC250CC40274
+        a                   :PublishedEvent ;
+        :eventWhen          "1977"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID35BE4D42540324F6
+        a                   bdr:HollisId ;
+        rdf:value           "014260624" .
+    
+    bdr:IDBCA0E07F6B170BB4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7695 .B54 1977" .
+    
+    bdr:IDD3D48B2AC4B14FD8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77903283" .
+    
+    bdr:MW30110  a          :Instance ;
+        skos:altLabel       "a collection of the rituals of bkra-sis-lhun-po monastery and affiliates"@en-x-mixed ;
+        skos:prefLabel      "bkra shis lhun po'i chos spyod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID35BE4D42540324F6 , bdr:IDBCA0E07F6B170BB4 , bdr:IDD3D48B2AC4B14FD8 ;
+        :biblioNote         "reproduced from a print from the bkra-shis-lhun-po blocks"@en ;
+        :extentStatement    "515 p." ;
+        :hasSourcePrintery  bdr:G2CN10913 ;
+        :hasTitle           bdr:TT1299228F3AF1A203 , bdr:TT712E900D33BBBDE1 , bdr:TTB3BE646A220D486D ;
+        :instanceEvent      bdr:EV9C2FCC250CC40274 ;
+        :instanceHasReproduction  bdr:W30110 ;
+        :instanceOf         bdr:WA1KG11817 , bdr:WA30110 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sumra, h.p."@en ;
+        :publisherName      "urgyan dorje"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1299228F3AF1A203
+        a                   :Title ;
+        rdfs:label          "bkra shis lhun po'i chos spyod/"@bo-x-ewts .
+    
+    bdr:TT712E900D33BBBDE1
+        a                   :Subtitle ;
+        rdfs:label          "a collection of the rituals of bkra-sis-lhun-po monastery and affiliates"@en-x-mixed .
+    
+    bdr:TTB3BE646A220D486D
+        a                   :TitlePageTitle ;
+        rdfs:label          "chos grwa chen po bkra shis lhun po'i 'phags mchog 'dus sde rin po che'i zhal 'don chos spyod rab gsal/"@bo-x-ewts .
+}

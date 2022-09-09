@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC040143 {
+    bda:LGF346B685CD2498D8
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC040143"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC040143
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC040143 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "1d/MW1FEMC040143.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC040143 ;
+        adm:logEntry        bda:LGF346B685CD2498D8 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID49F9DC14B46C582A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "0143-B.01.06.01.III.3" .
+    
+    bdr:MF1E162FD87664F2DD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "112" ;
+        :microfilmStrip     "206" .
+    
+    bdr:MW1FEMC040143
+        a                   :Instance ;
+        skos:prefLabel      "ឧបោសថ"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID49F9DC14B46C582A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-6" ;
+        :hasTitle           bdr:TTAC23F4802136476C ;
+        :instanceHasReproduction  bdr:W1FEMC030143 , bdr:W1FEMC040143 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1E162FD87664F2DD ;
+        :note               bdr:NT76B6DBC6AA963ABF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT76B6DBC6AA963ABF
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTAC23F4802136476C
+        a                   :Title ;
+        rdfs:label          "ឧបោសថ"@km .
+}

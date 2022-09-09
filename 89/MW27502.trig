@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW27502 {
+    bda:LG74BA10656288BEB1
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-11T11:36:46.023Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG91A9573A4DAC212F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW27502  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW27502 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "89/MW27502.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27502 ;
+        adm:logEntry        bda:LG74BA10656288BEB1 , bda:LG91A9573A4DAC212F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD3ADB95FFACF326B
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID51094D753D7144B4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75906362" .
+    
+    bdr:IDC5CCE09124FDF7AD
+        a                   bdr:HollisId ;
+        rdf:value           "014259664" .
+    
+    bdr:IDFE22591F25292E41
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ978.A337 Y47 1975" .
+    
+    bdr:MW27502  a          :Instance ;
+        skos:altLabel       "the biography, with a selection of the songs, of nagla padma-bdud-'dul"@en-x-mixed ;
+        skos:prefLabel      "nyag bla pad+ma bdud 'dul rnam thar dang mgur 'bum/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID51094D753D7144B4 , bdr:IDC5CCE09124FDF7AD , bdr:IDFE22591F25292E41 ;
+        :authorshipStatement  "written an arranged by nag-ron-pa ye-ses-rdo-rje/"@bo-x-ewts ;
+        :biblioNote         "reproduced from prints of blocks preserved at nor-gling chos-grwa in nag-ron"@en ;
+        :extentStatement    "489 p." ;
+        :hasSourcePrintery  bdr:G3JT12577 ;
+        :hasTitle           bdr:TT1D671287D3FD0D4C , bdr:TT7CF8F6FD53C607FE , bdr:TT8438AFFF48AE9494 , bdr:TTFE4398AC81ECF5D3 ;
+        :instanceEvent      bdr:EVD3ADB95FFACF326B ;
+        :instanceHasReproduction  bdr:W27502 ;
+        :instanceOf         bdr:WA27502 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dehra dun"@en ;
+        :publisherName      "d.g. khochhen trulku"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1D671287D3FD0D4C
+        a                   :Title ;
+        rdfs:label          "nyag bla pad+ma bdud 'dul rnam thar dang mgur 'bum/"@bo-x-ewts .
+    
+    bdr:TT7CF8F6FD53C607FE
+        a                   :TitlePageTitle ;
+        rdfs:label          "the biography, with a selection of the songs, of nagla padma-bdud-'dul"@en-x-mixed .
+    
+    bdr:TT8438AFFF48AE9494
+        a                   :OtherTitle ;
+        rdfs:label          "rje bla ma 'khrul zhig byang chub gling pa'i rnam thar skal bdang dga' ba'i bdud rtsi'i sprin tshogs/"@bo-x-ewts .
+    
+    bdr:TTFE4398AC81ECF5D3
+        a                   :OtherTitle ;
+        rdfs:label          "grub chen nyi zla kun mdzes kyi gsung 'bum las nyams mgur skor skal bzang thar lam 'god pa'i phrin las/"@bo-x-ewts .
+}

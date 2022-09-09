@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020180 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020180
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020180 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "65/MW1FEMC020180.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020180 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID830936B3557D6C1B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.73.III.1" .
+    
+    bdr:MF185DC9BAC84A48D7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "32" ;
+        :microfilmStrip     "58" .
+    
+    bdr:MW1FEMC020180
+        a                   :Instance ;
+        skos:prefLabel      "មិលិន្ទប្បញ្ហា"@km , "milindappañhā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID830936B3557D6C1B ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "6" ;
+        :hasTitle           bdr:TT1450905E5DA9591C , bdr:TT4DDFD32435C8ADBE , bdr:TTA36AACDC033A8A27 , bdr:TTC105487741F5C780 , bdr:TTE8E68C2C0F5631B9 , bdr:TTEA65C2D96C61FF04 ;
+        :instanceHasReproduction  bdr:W1FEMC020180 ;
+        :instanceOf         bdr:WA1FEMC010044 , bdr:WA1FEMC020180 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF185DC9BAC84A48D7 ;
+        :note               bdr:NTFAABB0D966F130DD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "818" .
+    
+    bdr:NTFAABB0D966F130DD
+        a                   :Note ;
+        :contentLocationStatement  "pg. 37" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1450905E5DA9591C
+        a                   :CoverTitle ;
+        rdfs:label          "kruṅ mālin braḥ nāgasen"@km-x-twktt .
+    
+    bdr:TT4DDFD32435C8ADBE
+        a                   :CoverTitle ;
+        rdfs:label          "kruṅ milind braḥ nāgasen"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1450905E5DA9591C .
+    
+    bdr:TTA36AACDC033A8A27
+        a                   :CoverTitle ;
+        rdfs:label          "ក្រុងមិលិន្ទ ព្រះនាគសេន"@km ;
+        :femcConversionOf   bdr:TTEA65C2D96C61FF04 .
+    
+    bdr:TTC105487741F5C780
+        a                   :Title ;
+        rdfs:label          "មិលិន្ទប្បញ្ហា"@km .
+    
+    bdr:TTE8E68C2C0F5631B9
+        a                   :Title ;
+        rdfs:label          "milindappañhā"@km-x-twktt .
+    
+    bdr:TTEA65C2D96C61FF04
+        a                   :CoverTitle ;
+        rdfs:label          "ក្រុងមាលិន​ ព្រះនាគសេន"@km .
+}

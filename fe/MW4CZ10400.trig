@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW4CZ10400 {
+    bda:LG1F831F302DE2368F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-21T16:20:32.592Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG4A4837780AEBE092
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-12-02T12:53:33.653Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW4CZ10400  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW4CZ10400 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "fe/MW4CZ10400.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW4CZ10400 ;
+        adm:logEntry        bda:LG1F831F302DE2368F , bda:LG4A4837780AEBE092 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV42E6E6F08AEBF929
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID06617B61299D0691
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ2275 .B77 1983" .
+    
+    bdr:ID9276B00B89CEC288
+        a                   bdr:HollisId ;
+        rdf:value           "014260885" .
+    
+    bdr:IDC35F3542FEF27FB4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83901015" .
+    
+    bdr:MW4CZ10400  a       :Instance ;
+        skos:prefLabel      "'dul ba'i spyi don/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID06617B61299D0691 , bdr:ID9276B00B89CEC288 , bdr:IDC35F3542FEF27FB4 ;
+        :biblioNote         "reproduced from prints from blocks belonging to library of se ra smad grwa tshang"@en ;
+        :extentStatement    "722 p. ; 10 x 50 cm." ;
+        :hasSourcePrintery  bdr:G2CN10853 ;
+        :hasTitle           bdr:TTAF8AD1F06F16ED7B , bdr:TTFA6A14F27A194757 ;
+        :instanceEvent      bdr:EV42E6E6F08AEBF929 ;
+        :instanceOf         bdr:WA4CZ10400 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "mongolian lama gurudeva on behalf of geshe lobsang tharchin"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTAF8AD1F06F16ED7B
+        a                   :TitlePageTitle ;
+        rdfs:label          "bstan bcos 'dul ba mdo rtsa ba'i spyi don TIk chen rin chen phreng ba'i dgongs rgyan/"@bo-x-ewts .
+    
+    bdr:TTFA6A14F27A194757
+        a                   :Title ;
+        rdfs:label          "'dul ba'i spyi don/"@bo-x-ewts .
+}

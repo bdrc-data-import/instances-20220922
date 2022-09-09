@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW25265 {
+    bda:LGC4AEA59D427F2533
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE80A5ABBC0ECEF60
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-01-08T12:23:07.623Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW25265  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW25265 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "6c/MW25265.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW25265 ;
+        adm:logEntry        bda:LGC4AEA59D427F2533 , bda:LGE80A5ABBC0ECEF60 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVED154F2F4A604382
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8672B9393F16D956
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542009699" .
+    
+    bdr:IDBECCC164006EB3C3
+        a                   bdr:HollisId ;
+        rdf:value           "014259447" .
+    
+    bdr:MW25265  a          :Instance ;
+        skos:altLabel       "zang wen wen fa wen da"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "sum cu pa dang rtags kyi 'jug pa'i dka' gnas las bton pa'i dris lan gzhon nu dga' byed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8672B9393F16D956 , bdr:IDBECCC164006EB3C3 ;
+        :authorshipStatement  "lcags thar rgyal gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :extentStatement    "120 p." ;
+        :hasTitle           bdr:TT420CCE299048FF33 , bdr:TTE11BB98ACC579EC9 ;
+        :instanceEvent      bdr:EVED154F2F4A604382 ;
+        :instanceHasReproduction  bdr:W25265 ;
+        :instanceOf         bdr:WA25265 ;
+        :note               bdr:NTD5977F12F3570474 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTD5977F12F3570474
+        a                   :Note ;
+        :noteText           "on traditional tibetan grammar"@en .
+    
+    bdr:TT420CCE299048FF33
+        a                   :Title ;
+        rdfs:label          "sum cu pa dang rtags kyi 'jug pa'i dka' gnas las bton pa'i dris lan gzhon nu dga' byed/"@bo-x-ewts .
+    
+    bdr:TTE11BB98ACC579EC9
+        a                   :ColophonTitle ;
+        rdfs:label          "zang wen wen fa wen da"@zh-latn-pinyin-x-ndia .
+}

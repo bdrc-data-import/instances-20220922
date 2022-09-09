@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046128 {
+    bda:LG6B9285401EFAFA45
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046128"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046128
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046128 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f5/MW1FEMC046128.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046128 ;
+        adm:logEntry        bda:LG6B9285401EFAFA45 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID58886E0DDC3C3800
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "086-B.04.03.03.III.1" .
+    
+    bdr:MFDE8A1DF0833464F5
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC046128
+        a                   :Instance ;
+        skos:prefLabel      "ទេសនាគ្រែ៣ (ង-ចោ) (គ-គះ)"@km , "desanā grē3"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID58886E0DDC3C3800 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT59D0F2C3826EAB49 , bdr:TT72BD9F2B17C27292 ;
+        :instanceHasReproduction  bdr:W1FEMC036128 , bdr:W1FEMC046128 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFDE8A1DF0833464F5 ;
+        :note               bdr:NTBE88F2BC60B83A3F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTBE88F2BC60B83A3F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT59D0F2C3826EAB49
+        a                   :Title ;
+        rdfs:label          "desanā grē3"@km-x-twktt .
+    
+    bdr:TT72BD9F2B17C27292
+        a                   :Title ;
+        rdfs:label          "ទេសនាគ្រែ៣ (ង-ចោ) (គ-គះ)"@km .
+}

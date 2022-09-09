@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD105852 {
+    bda:LG7273A849B2038FF6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-10-19T15:36:05.422Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD105852  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD105852 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "fa/MW1PD105852.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD105852 ;
+        adm:logEntry        bda:LG7273A849B2038FF6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRB9F12E5F1F41261A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P00KG07601 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV8E490D92A4DDFCB0
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDAD5B75E1F1CB4A0D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542114778" .
+    
+    bdr:IDCAD3353BDF7903C2
+        a                   bdr:HollisId ;
+        rdf:value           "014257683" .
+    
+    bdr:MW1PD105852  a      :Instance ;
+        skos:altLabel       "直击中考－上线必读本"@zh-hans ;
+        skos:prefLabel      "kun 'dus me long /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAD5B75E1F1CB4A0D , bdr:IDCAD3353BDF7903C2 ;
+        :authorshipStatement  "tshe ring don grub bcas kyis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRB9F12E5F1F41261A ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "5, 220 p." ;
+        :hasTitle           bdr:TT160BDEF1658B1148 , bdr:TT7D81F3AD28D4F5ED , bdr:TTCD3A7D5FAC597D42 , bdr:TTCD64D6863914C62F ;
+        :instanceEvent      bdr:EV8E490D92A4DDFCB0 ;
+        :instanceHasReproduction  bdr:IE1PD105852 , bdr:W1PD105852 ;
+        :instanceOf         bdr:WA1PD105852 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT160BDEF1658B1148
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zhi ji zhong kao - shang xian bi du ben"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT7D81F3AD28D4F5ED
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "直击中考－上线必读本"@zh-hans .
+    
+    bdr:TTCD3A7D5FAC597D42
+        a                   :TitlePageTitle ;
+        rdfs:label          "'bring rim skad yig gi gshar sbyang kun 'dus me long /"@bo-x-ewts .
+    
+    bdr:TTCD64D6863914C62F
+        a                   :Title ;
+        rdfs:label          "kun 'dus me long /"@bo-x-ewts .
+}

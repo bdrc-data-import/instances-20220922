@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046991 {
+    bda:LGF659C193B5FE8CE4
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046991"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046991
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046991 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7b/MW1FEMC046991.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046991 ;
+        adm:logEntry        bda:LGF659C193B5FE8CE4 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDDC245CCC2B1B99C7
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "034-R.05.06.01" .
+    
+    bdr:MW1FEMC046991
+        a                   :Instance ;
+        skos:prefLabel      "កូនចោវកុំព្រារ (១ឆ-៩ឆ)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDC245CCC2B1B99C7 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT9031EFDB98A50393 ;
+        :instanceHasReproduction  bdr:W1FEMC046991 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT694F31A248DB9E07 , bdr:NT8F5AD336CFA7674A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT694F31A248DB9E07
+        a                   :Note ;
+        :noteText           "Canister150_Strip244"@en .
+    
+    bdr:NT8F5AD336CFA7674A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT9031EFDB98A50393
+        a                   :Title ;
+        rdfs:label          "កូនចោវកុំព្រារ (១ឆ-៩ឆ)"@km .
+}

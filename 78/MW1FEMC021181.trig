@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021181 {
+    bda:LG28F226EDA0703091
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021181"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021181
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021181 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "78/MW1FEMC021181.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021181 ;
+        adm:logEntry        bda:LG28F226EDA0703091 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID4A971865991C0936
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "C*.118.VII" .
+    
+    bdr:MF373D6C7A791D3F7D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "IX" ;
+        :microfilmStrip     "34" .
+    
+    bdr:MW1FEMC021181
+        a                   :Instance ;
+        skos:prefLabel      "ដីកាសទ្ទសារត្ថជាលិនី"@km , "ṭīkā saddasāratthajālinī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4A971865991C0936 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-4" ;
+        :hasTitle           bdr:TT08A589FD16A7ECC8 , bdr:TT1A6F4B09BBDEADC0 , bdr:TT558CA627A0D70861 , bdr:TTE465D3909384A9E2 ;
+        :instanceHasReproduction  bdr:W1FEMC021181 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF373D6C7A791D3F7D ;
+        :note               bdr:NTD0DCFC51D572464C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "396" .
+    
+    bdr:NTD0DCFC51D572464C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 214" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT08A589FD16A7ECC8
+        a                   :Title ;
+        rdfs:label          "ដីកាសទ្ទសារត្ថជាលិនី"@km ;
+        :femcConversionOf   bdr:TT558CA627A0D70861 .
+    
+    bdr:TT1A6F4B09BBDEADC0
+        a                   :CoverTitle ;
+        rdfs:label          "ṭikā saddhasāratthajālīnī"@km-x-twktt .
+    
+    bdr:TT558CA627A0D70861
+        a                   :CoverTitle ;
+        rdfs:label          "ដិកាសទ្ធសារត្ថជាលីនី"@km .
+    
+    bdr:TTE465D3909384A9E2
+        a                   :Title ;
+        rdfs:label          "ṭīkā saddasāratthajālinī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1A6F4B09BBDEADC0 .
+}

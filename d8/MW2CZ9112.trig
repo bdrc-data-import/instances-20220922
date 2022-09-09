@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2CZ9112 {
+    bda:LG4AE61AA5EEC1189F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-02-01T09:49:11.964Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2CZ9112  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW2CZ9112 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d8/MW2CZ9112.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ9112 ;
+        adm:logEntry        bda:LG4AE61AA5EEC1189F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE9ED2052A70D816C
+        a                   :PublishedEvent ;
+        :eventWhen          "1974"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0F82FC8A42186501
+        a                   bdr:HollisId ;
+        rdf:value           "014260388" .
+    
+    bdr:MW2CZ9112  a        :Instance ;
+        skos:prefLabel      "kun dga' zhes pa shing pho stag lo'i lo tho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0F82FC8A42186501 ;
+        :extentStatement    "133 p. ; ill." ;
+        :hasTitle           bdr:TT13C1B06B17A5606B , bdr:TTE0585FC692CFCAB4 , bdr:TTE7D3D45C27EDD6A8 ;
+        :instanceEvent      bdr:EVE9ED2052A70D816C ;
+        :instanceHasReproduction  bdr:W2CZ9112 ;
+        :instanceOf         bdr:WA2CZ9112 ;
+        :note               bdr:NTD5E45979B1D9628B ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[dharamsala, india]"@en ;
+        :publisherName      "[astrological department, tibetan medical institute]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTD5E45979B1D9628B
+        a                   :Note ;
+        :noteText           "copy made available from the tibetan medical institutes at dharamsala"@en .
+    
+    bdr:TT13C1B06B17A5606B
+        a                   :TitlePageTitle ;
+        rdfs:label          "kun dga' zhes pa 'byung ba gsum ldan shing pho stag lo'i lo tho byed grub zung 'brel dge legs 'dod dgu'i char 'bebs/"@bo-x-ewts .
+    
+    bdr:TTE0585FC692CFCAB4
+        a                   :Title ;
+        rdfs:label          "kun dga' zhes pa shing pho stag lo'i lo tho/"@bo-x-ewts .
+    
+    bdr:TTE7D3D45C27EDD6A8
+        a                   :CoverTitle ;
+        rdfs:label          "rab rgyal shing stag lo tho/"@bo-x-ewts .
+}

@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG8585 {
+    bda:LG1DEAD8CCA43DDD9E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-02-04T11:21:37.88Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA872971402CA0065
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-06-27T16:16:41.313Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFC195A9570146AF1
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-13T15:24:58.16Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized series number"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG8585  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG8585 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "29/MW1KG8585.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG8585 ;
+        adm:logEntry        bda:LG1DEAD8CCA43DDD9E , bda:LGA872971402CA0065 , bda:LGFC195A9570146AF1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBFA9E02636663C27
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID53B15D2ACB9A3C49
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223022613" .
+    
+    bdr:IDF396FA87D0B64975
+        a                   bdr:HollisId ;
+        rdf:value           "014257419" .
+    
+    bdr:MW1KG8585  a        :Instance , :SerialInstance ;
+        skos:prefLabel      "gsung 'bum/_bstan dar lha rams pa/ (bod ljongs mi dmangs dpe skrun khang /)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID53B15D2ACB9A3C49 , bdr:IDF396FA87D0B64975 ;
+        :authorshipStatement  "ser gtsug nang bstan dpe rnying 'tshol bsdu phyogs sgrig khang gis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 3, 882 p." ;
+        :hasTitle           bdr:TT979C89D2F29F29BE , bdr:TTCC592B37E1417C13 ;
+        :instanceEvent      bdr:EVBFA9E02636663C27 ;
+        :instanceHasReproduction  bdr:W1KG8585 ;
+        :instanceOf         bdr:WA1KG8585 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS140 ;
+        :seriesNumber       "99" .
+    
+    bdr:TT979C89D2F29F29BE
+        a                   :TitlePageTitle ;
+        rdfs:label          "bstan dar lha rams pa'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TTCC592B37E1417C13
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_bstan dar lha rams pa/ (bod ljongs mi dmangs dpe skrun khang /)"@bo-x-ewts .
+}

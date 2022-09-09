@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09699 {
+    bda:LG3F92752237F17B3B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-06-05T11:22:07.067Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09699  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09699 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8e/MW00KG09699.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09699 ;
+        adm:logEntry        bda:LG3F92752237F17B3B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4CE9E142A42BAB6F
+        a                   :PublishedEvent ;
+        :eventWhen          "1973"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5C3046D4B7756107
+        a                   bdr:HollisId ;
+        rdf:value           "014254547" .
+    
+    bdr:MW00KG09699  a      :Instance ;
+        skos:altLabel       "autobiography of khetsun sangpo"@en ;
+        skos:prefLabel      "mkhas btsun gyi rtogs brjod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5C3046D4B7756107 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "122 p." ;
+        :hasTitle           bdr:TT601CF626386FD328 , bdr:TTB4F5526B497CA99D , bdr:TTB81644B78C0D9047 ;
+        :instanceEvent      bdr:EV4CE9E142A42BAB6F ;
+        :instanceHasReproduction  bdr:W00KG09699 ;
+        :instanceOf         bdr:WA00KG09699 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "the library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT601CF626386FD328
+        a                   :TitlePageTitle ;
+        rdfs:label          "rang gi rtogs pa brjod pa gzu bo'i rna rgyan mdzes pa'i rat+na/"@bo-x-ewts .
+    
+    bdr:TTB4F5526B497CA99D
+        a                   :Title ;
+        rdfs:label          "mkhas btsun gyi rtogs brjod/"@bo-x-ewts .
+    
+    bdr:TTB81644B78C0D9047
+        a                   :OtherTitle ;
+        rdfs:label          "autobiography of khetsun sangpo"@en .
+}

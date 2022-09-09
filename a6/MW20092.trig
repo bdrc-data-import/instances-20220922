@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20092 {
+    bda:LG6E4B17F8E4DE74E4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG798A0CB6F1AFE02A
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-16T15:42:21.11Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20092  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20092 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a6/MW20092.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20092 ;
+        adm:logEntry        bda:LG6E4B17F8E4DE74E4 , bda:LG798A0CB6F1AFE02A , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4BC0D51ED14E2F72
+        a                   :PublishedEvent ;
+        :eventWhen          "1982,1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDF752BF992D0E9344
+        a                   bdr:HollisId ;
+        rdf:value           "014258038" .
+    
+    bdr:MW20092  a          :Instance ;
+        skos:altLabel       "格萨尔传奇--门岭之战"@zh-hans ;
+        skos:prefLabel      "mon gling g.yul 'gyed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF752BF992D0E9344 ;
+        :authorshipStatement  "mtsho sngon zhing chen dmangs khrod rig rtsal zhib 'jug tshogs pas 'tshol bsdu byas pa/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "2, 353 p." ;
+        :hasTitle           bdr:TT2CEBAB9FFE40FAB6 , bdr:TT4793B4B9B542D65A , bdr:TT5DDB5D2F49EC4A35 , bdr:TTEF2EBDA20D181A2F ;
+        :instanceEvent      bdr:EV4BC0D51ED14E2F72 ;
+        :instanceHasReproduction  bdr:W20092 ;
+        :instanceOf         bdr:WA1KG16797 , bdr:WA20092 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT2CEBAB9FFE40FAB6
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ge sha er chuan qi --men ling zhi zhan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT4793B4B9B542D65A
+        a                   :Title ;
+        rdfs:label          "mon gling g.yul 'gyed/"@bo-x-ewts .
+    
+    bdr:TT5DDB5D2F49EC4A35
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "格萨尔传奇--门岭之战"@zh-hans .
+    
+    bdr:TTEF2EBDA20D181A2F
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dzam gling ge sar rgyal po'i sgrung mon gling g.yul 'gyed/"@bo-x-ewts .
+}

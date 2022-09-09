@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22035 {
+    bda:LG16996B9617E94AF8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGEFC6447C1FCE6E07
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-06-25T16:36:37.751Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22035  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22035 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "0c/MW22035.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22035 ;
+        adm:logEntry        bda:LG16996B9617E94AF8 , bda:LGEFC6447C1FCE6E07 , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2004B22C41ECD1B7
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID44DE58518A23C092
+        a                   bdr:HollisId ;
+        rdf:value           "014258574" .
+    
+    bdr:IDF5299A6539EA27C3
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 T74 1982" .
+    
+    bdr:IDF63FACB71D8B8F15
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "91114199" .
+    
+    bdr:MW22035  a          :Instance ;
+        skos:altLabel       "格萨尔王传 --察瓦箭宗"@zh-hans ;
+        skos:prefLabel      "tsha ba mda' rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID44DE58518A23C092 , bdr:IDF5299A6539EA27C3 , bdr:IDF63FACB71D8B8F15 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "213 p." ;
+        :hasTitle           bdr:TT73EDE426929A2074 , bdr:TT78DCF1AEC6551327 , bdr:TTCFC8F6E0E4ABF794 , bdr:TTD59692CDCA045D5D ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV2004B22C41ECD1B7 ;
+        :instanceHasReproduction  bdr:W22035 ;
+        :instanceOf         bdr:WA22035 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT73EDE426929A2074
+        a                   :ColophonTitle ;
+        rdfs:label          "ge sa er wang zhuan-- cha wa jian zong"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT78DCF1AEC6551327
+        a                   :Title ;
+        rdfs:label          "tsha ba mda' rdzong /"@bo-x-ewts .
+    
+    bdr:TTCFC8F6E0E4ABF794
+        a                   :ColophonTitle ;
+        rdfs:label          "格萨尔王传 --察瓦箭宗"@zh-hans .
+    
+    bdr:TTD59692CDCA045D5D
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling rje ge sar rgyal po'i sgrung tsha ba mda' rdzong /"@bo-x-ewts .
+}

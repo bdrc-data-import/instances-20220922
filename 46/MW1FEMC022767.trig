@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022767 {
+    bda:LG8DFB70348B3DD746
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022767"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022767
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022767 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "46/MW1FEMC022767.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022767 ;
+        adm:logEntry        bda:LG8DFB70348B3DD746 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB96CB3F76647D146
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.243.VII" .
+    
+    bdr:MF526453C2CF01B572
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XLVIII" ;
+        :microfilmStrip     "73" .
+    
+    bdr:MW1FEMC022767
+        a                   :Instance ;
+        skos:prefLabel      "ទីឃនិកាយសីលក្ខន្ធវគ្គ"@km , "dīghanikāya sīlakkhandhavagga"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB96CB3F76647D146 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2-6, 8-10" ;
+        :hasTitle           bdr:TT38578D6801A3B22E , bdr:TT5842197900544EED , bdr:TTAF55FAC4A1DA3259 , bdr:TTE0DCD647B4EA70A0 ;
+        :instanceHasReproduction  bdr:W1FEMC022767 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF526453C2CF01B572 ;
+        :note               bdr:NTC658B7C8E3A1A494 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "83" .
+    
+    bdr:NTC658B7C8E3A1A494
+        a                   :Note ;
+        :contentLocationStatement  "pg. 496" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT38578D6801A3B22E
+        a                   :CoverTitle ;
+        rdfs:label          "ទីឃនិកាយសីលក្ខន្ធ"@km .
+    
+    bdr:TT5842197900544EED
+        a                   :Title ;
+        rdfs:label          "dīghanikāya sīlakkhandhavagga"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE0DCD647B4EA70A0 .
+    
+    bdr:TTAF55FAC4A1DA3259
+        a                   :Title ;
+        rdfs:label          "ទីឃនិកាយសីលក្ខន្ធវគ្គ"@km ;
+        :femcConversionOf   bdr:TT38578D6801A3B22E .
+    
+    bdr:TTE0DCD647B4EA70A0
+        a                   :CoverTitle ;
+        rdfs:label          "dīghanikāya sīlakkhandha"@km-x-twktt .
+}

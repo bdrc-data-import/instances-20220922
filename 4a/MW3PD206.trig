@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3PD206 {
+    bda:LGCF7195C006C97069
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-11-03T16:17:17.51Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGFE4917AE97BB3763
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-30T16:46:09.741Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:MW3PD206  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW3PD206 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "4a/MW3PD206.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3PD206 ;
+        adm:logEntry        bda:LGCF7195C006C97069 , bda:LGFE4917AE97BB3763 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C23802AB24CFE65
+        a                   :PublishedEvent ;
+        :eventWhen          "2011"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDBC0CBE591A80FD65
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787802533530" .
+    
+    bdr:MW3PD206  a         :Instance ;
+        skos:prefLabel      "中国藏学年鉴 2009"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBC0CBE591A80FD65 ;
+        :authorshipStatement  "《中国藏学年鉴》编辑委员会 编"@zh-hans ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "第1版"@zh-hans ;
+        :extentStatement    "3，10，443 p." ;
+        :hasTitle           bdr:TT1BA8CC2660254C6F , bdr:TT44FC9C496FA54165 ;
+        :illustrations      "col. ill." ;
+        :instanceEvent      bdr:EV0C23802AB24CFE65 ;
+        :instanceHasReproduction  bdr:W3PD206 ;
+        :instanceOf         bdr:WA3PD206 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "北京"@zh-hans ;
+        :publisherName      "中国藏学出版社"@zh-hans ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:TT1BA8CC2660254C6F
+        a                   :Title ;
+        rdfs:label          "中国藏学年鉴 2009"@zh-hans .
+    
+    bdr:TT44FC9C496FA54165
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zhong guo zang xue nian jian 2009"@zh-latn-pinyin .
+}

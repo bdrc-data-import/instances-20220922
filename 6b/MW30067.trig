@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30067 {
+    bda:LG5863E31E8AC14646
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30067  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30067 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "6b/MW30067.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30067 ;
+        adm:logEntry        bda:LG5863E31E8AC14646 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV78EB97627B537A81
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDB06B05D0775A157D
+        a                   bdr:HollisId ;
+        rdf:value           "014260594" .
+    
+    bdr:MW30067  a          :Instance ;
+        skos:prefLabel      "rgyal gyi shrI'am rtsib ri'i gnas bshad dad gsum 'dren pa'i zhing sa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB06B05D0775A157D ;
+        :authorshipStatement  "la stod lho pha drug na rdzing dge ming thub bstan shes rab kyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "381 p." ;
+        :hasTitle           bdr:TT09308828EE5D14C2 , bdr:TT5927C8C61843C196 ;
+        :illustrations      "col. ill., map" ;
+        :instanceEvent      bdr:EV78EB97627B537A81 ;
+        :instanceHasReproduction  bdr:W30067 ;
+        :instanceOf         bdr:WA30067 ;
+        :note               bdr:NT70E569EB75398DDD ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[ka Tha ma N+Du]"@en ;
+        :publisherName      "thub bstan shes rab/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT70E569EB75398DDD
+        a                   :Note ;
+        :noteText           "comprehensive guide to the places of pilgrimage in the rtsib ri area in western nepal"@en .
+    
+    bdr:TT09308828EE5D14C2
+        a                   :Title ;
+        rdfs:label          "rtsib ri'i gnas bshad/"@bo-x-ewts .
+    
+    bdr:TT5927C8C61843C196
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyal gyi shrI'am rtsib ri'i gnas bshad dad gsum 'dren pa'i zhing sa/"@bo-x-ewts .
+}

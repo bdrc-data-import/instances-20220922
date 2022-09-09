@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021024 {
+    bda:LGC8C7425615ABD35D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021024"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021024
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021024 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "31/MW1FEMC021024.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021024 ;
+        adm:logEntry        bda:LGC8C7425615ABD35D , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE91CB9AD8196B5FE
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "B.21.VII" .
+    
+    bdr:MF243C998BA2B0DFFD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XI" ;
+        :microfilmStrip     "36" .
+    
+    bdr:MW1FEMC021024
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km , "maṅgalatthadīpanī aṭṭhakathā maṅgalasūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE91CB9AD8196B5FE ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "4, 7, 11, 14, 16, 22, 25" ;
+        :hasTitle           bdr:TT2AFC08E7A58AE6BC , bdr:TT71608971A73E83CE , bdr:TTBDAE1D40023EF91F , bdr:TTD438E4B39F852E87 ;
+        :instanceHasReproduction  bdr:W1FEMC021024 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF243C998BA2B0DFFD ;
+        :note               bdr:NT498AC296C778F6AC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "454" .
+    
+    bdr:NT498AC296C778F6AC
+        a                   :Note ;
+        :contentLocationStatement  "pg. 182" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2AFC08E7A58AE6BC
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលត្ថទិបនិអដ្ឋកថាមង្គលសូត្រ"@km .
+    
+    bdr:TT71608971A73E83CE
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgalatthadipani aṭṭhakathā maṅgalasūtra"@km-x-twktt .
+    
+    bdr:TTBDAE1D40023EF91F
+        a                   :Title ;
+        rdfs:label          "maṅgalatthadīpanī aṭṭhakathā maṅgalasūtra"@km-x-twktt ;
+        :femcConversionOf   bdr:TT71608971A73E83CE .
+    
+    bdr:TTD438E4B39F852E87
+        a                   :Title ;
+        rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@km ;
+        :femcConversionOf   bdr:TT2AFC08E7A58AE6BC .
+}

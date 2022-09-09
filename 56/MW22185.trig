@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22185 {
+    bda:LG676C548196F33E9F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG77C4A8B8EA3299B2
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-28T09:52:33.43Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22185  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22185 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "56/MW22185.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22185 ;
+        adm:logEntry        bda:LG676C548196F33E9F , bda:LG77C4A8B8EA3299B2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A840126F40A80AE
+        a                   :PublishedEvent ;
+        :eventWhen          "199-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID42EA43D63DA062CA
+        a                   bdr:HollisId ;
+        rdf:value           "014258687" .
+    
+    bdr:MW22185  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_dkon mchog bstan pa'i sgron me (bla brang par ma)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID42EA43D63DA062CA ;
+        :biblioNote         "impressions from the blocks carved and preserved at bla brang bkra shis 'khyil; printed on traditional paper and laminated; the bka' rgya ma texts are missing"@en ;
+        :extentStatement    "11 v." ;
+        :hasSourcePrintery  bdr:G1PD129183 ;
+        :hasTitle           bdr:TT55217D72CBD51035 ;
+        :instanceEvent      bdr:EV6A840126F40A80AE ;
+        :instanceHasReproduction  bdr:W22185 ;
+        :instanceOf         bdr:WA1KG15906 , bdr:WA22185 ;
+        :note               bdr:NTBD09CD8495C1C45D ;
+        :numberOfVolumes    11 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[bla brang bkra shis 'khyil]"@en ;
+        :publisherName      "[bla brang dgon pa]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTBD09CD8495C1C45D
+        a                   :Note ;
+        :noteText           "-5182"@en .
+    
+    bdr:TT55217D72CBD51035
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dkon mchog bstan pa'i sgron me (bla brang par ma)"@bo-x-ewts .
+}

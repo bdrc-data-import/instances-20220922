@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022998 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022998
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022998 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4b/MW1FEMC022998.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022998 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8DA5D2D9D6199DA4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.472.I.3" .
+    
+    bdr:MF1DC14CF8836E3D48
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022998
+        a                   :Instance ;
+        skos:prefLabel      "សរសើរព្រះបាទឆ្វេងស្តាំនូវព្រះចង្កូមកែវ"@km , "sar-sör braḥ pād chveṅ stāṃ nov braḥ caṅkūm kèv"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8DA5D2D9D6199DA4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT30BD165860DFB300 , bdr:TTB3AE9C7050DB8FFF , bdr:TTBCA9C4E1CE1EF86B , bdr:TTCF0C60DB11DC4525 ;
+        :instanceHasReproduction  bdr:W1FEMC022998 ;
+        :instanceOf         bdr:WA1FEMC022998 , bdr:WA1FEMC110045 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1DC14CF8836E3D48 ;
+        :note               bdr:NT9EC1FA8901BA452A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "191" .
+    
+    bdr:NT9EC1FA8901BA452A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 543" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT30BD165860DFB300
+        a                   :Title ;
+        rdfs:label          "សរសើរព្រះបាទឆ្វេងស្តាំនូវព្រះចង្កូមកែវ"@km ;
+        :femcConversionOf   bdr:TTCF0C60DB11DC4525 .
+    
+    bdr:TTB3AE9C7050DB8FFF
+        a                   :Title ;
+        rdfs:label          "sar-sör braḥ pād chveṅ stāṃ nov braḥ caṅkūm kèv"@km-x-twktt ;
+        :femcConversionOf   bdr:TTBCA9C4E1CE1EF86B .
+    
+    bdr:TTBCA9C4E1CE1EF86B
+        a                   :CoverTitle ;
+        rdfs:label          "sasör braḥ pād chveṅ sḍām nau braḥ caṅkūm kèv"@km-x-twktt .
+    
+    bdr:TTCF0C60DB11DC4525
+        a                   :CoverTitle ;
+        rdfs:label          "សសើរព្រះបាទឆ្វេងស្ឌាមនៅព្រះចង្កូមកែវ (វានសំរាយ)"@km .
+}

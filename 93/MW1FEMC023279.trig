@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023279 {
+    bda:LG2743AFA814338BBE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023279"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023279
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023279 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "93/MW1FEMC023279.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023279 ;
+        adm:logEntry        bda:LG2743AFA814338BBE , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDCCA925C96390723D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.990.VI.6" .
+    
+    bdr:MW1FEMC023279
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនគាថាទាំងអស់ ៥៩ រឿង"@km , "kpuon gāthā dāṃṅ as' 59 rīöṅ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCCA925C96390723D ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT134AA20CEA4BC4E0 , bdr:TT1624480B0DCF1670 , bdr:TT37C02428326A1765 , bdr:TT556FB0785CAC1DFA ;
+        :instanceHasReproduction  bdr:W1FEMC023279 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT5D8261D849ACC3C2 , bdr:NT73C1E4FDCEDF6B12 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT5D8261D849ACC3C2
+        a                   :Note ;
+        :contentLocationStatement  "pg. 569" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NT73C1E4FDCEDF6B12
+        a                   :Note ;
+        :noteText           "should we write (វាន) ?"@en .
+    
+    bdr:TT134AA20CEA4BC4E0
+        a                   :Title ;
+        rdfs:label          "ក្បួនគាថាទាំងអស់ ៥៩ រឿង"@km ;
+        :femcConversionOf   bdr:TT1624480B0DCF1670 .
+    
+    bdr:TT1624480B0DCF1670
+        a                   :CoverTitle ;
+        rdfs:label          "ក្បួនគាថ្ថាទាំង្ងអស្ស ៥៩ រេិង (វាន)"@km .
+    
+    bdr:TT37C02428326A1765
+        a                   :CoverTitle ;
+        rdfs:label          "kpuon gāththā dāṃṅṅ° ass 59 röṅ"@km-x-twktt .
+    
+    bdr:TT556FB0785CAC1DFA
+        a                   :Title ;
+        rdfs:label          "kpuon gāthā dāṃṅ as' 59 rīöṅ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT37C02428326A1765 .
+}

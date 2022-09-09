@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010646 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010646
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010646 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "f7/MW1FEMC010646.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010646 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8C9E58DFEE4BEB27
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "027-038-A.02.12.04.III.1" .
+    
+    bdr:MF285DF8E76A788508
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "26" ;
+        :microfilmStrip     "34" .
+    
+    bdr:MW1FEMC010646
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធិមគ្គវិនិច្ឆ័យ"@km , "visuddhimagg vinicchăy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8C9E58DFEE4BEB27 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2, 4, 5, 6, 8-11, 13, 18, 19+1" ;
+        :hasTitle           bdr:TT1065EFDA2CEFB443 , bdr:TT208D963B76E0E438 , bdr:TTC5F87FD2DC2D214D , bdr:TTF8FCC6799102BF96 ;
+        :instanceHasReproduction  bdr:W1FEMC010646 ;
+        :instanceOf         bdr:WA1FEMC010078 , bdr:WA1FEMC010646 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF285DF8E76A788508 ;
+        :note               bdr:NT17FEC4D92A282AC1 , bdr:NTD183F0B97C7457DD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT17FEC4D92A282AC1
+        a                   :Note ;
+        :contentLocationStatement  "pg. 180" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:NTD183F0B97C7457DD
+        a                   :Note ;
+        :noteText           "Should we write 1 liasse incomplète ?"@en .
+    
+    bdr:TT1065EFDA2CEFB443
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គវិនិច្ឆ័យ"@km ;
+        :femcConversionOf   bdr:TTF8FCC6799102BF96 .
+    
+    bdr:TT208D963B76E0E438
+        a                   :Title ;
+        rdfs:label          "visuddhimagg vinicchăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC5F87FD2DC2D214D .
+    
+    bdr:TTC5F87FD2DC2D214D
+        a                   :CoverTitle ;
+        rdfs:label          "vīsuddhīmagg"@km-x-twktt .
+    
+    bdr:TTF8FCC6799102BF96
+        a                   :CoverTitle ;
+        rdfs:label          "វីសុទ្ធីមគ្គ"@km .
+}

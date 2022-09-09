@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC034930 {
+    bda:LG9E003E679E0E4371
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-07-16"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC034930"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC034930
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC034930 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "c6/MW1FEMC034930.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC034930 ;
+        adm:logEntry        bda:LG9E003E679E0E4371 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC5F9CF1F1AFA0C9C
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "053-B.09.10.03" .
+    
+    bdr:MW1FEMC034930
+        a                   :Instance ;
+        skos:prefLabel      "ញ្ញត្តិសីមា, ញ្ញត្តិកថិន (១-២៤)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC5F9CF1F1AFA0C9C ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTB30FFB737B26F4C9 ;
+        :instanceHasReproduction  bdr:W1FEMC034930 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT10B6F8F3216E1290 , bdr:NT3204A627F9D4DF2E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT10B6F8F3216E1290
+        a                   :Note ;
+        :noteText           "Missing some pages"@en .
+    
+    bdr:NT3204A627F9D4DF2E
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTB30FFB737B26F4C9
+        a                   :Title ;
+        rdfs:label          "ញ្ញត្តិសីមា, ញ្ញត្តិកថិន (១-២៤)"@km .
+}

@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17444 {
+    bda:LGB9C136B943F354F8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-06-23T12:30:19.492Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17444  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17444 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "eb/MW1KG17444.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17444 ;
+        adm:logEntry        bda:LGB9C136B943F354F8 , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D1C5366AE247C43
+        a                   :PublishedEvent ;
+        :eventWhen          "1974"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1A52FBEFE86B5983
+        a                   bdr:HollisId ;
+        rdf:value           "014256500" .
+    
+    bdr:ID2B26DD2EA27DE14F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7810 .L35 1974" .
+    
+    bdr:IDE7A56DE331DFCC7B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76900477" .
+    
+    bdr:IDEC4AA3497445DE8F
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-1317" .
+    
+    bdr:IDFD523D7339E56082
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "011223301" .
+    
+    bdr:MW1KG17444  a       :Instance ;
+        skos:prefLabel      "na rag dong sprugs rnal 'byor gyi spyi khrus sogs chos tshan khag cig"@bo-x-ewts , "lamaist devotional manuscripts from lahul"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1A52FBEFE86B5983 , bdr:ID2B26DD2EA27DE14F , bdr:IDE7A56DE331DFCC7B , bdr:IDEC4AA3497445DE8F , bdr:IDFD523D7339E56082 ;
+        :biblioNote         "Reproduced from original manuscripts from the Gemur Monastery"@en ;
+        :extentStatement    "452 p." ;
+        :hasTitle           bdr:TT4FA18B7C722ECD12 , bdr:TT6D65EC2CDC87598C ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV1D1C5366AE247C43 ;
+        :instanceHasReproduction  bdr:W1KG17444 ;
+        :instanceOf         bdr:WA1KG17444 ;
+        :note               bdr:NT1E77781E1A3992A8 , bdr:NT2D0859BAAD667377 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "topden tshering"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT1E77781E1A3992A8
+        a                   :Note ;
+        :noteText           "1. na rag dong sprugs rnal 'byor gyi spyi khrus/\n2. na rag ngan song dong nas sprug pa'i cho ga bshags 'bum rin chen spungs pa/\n3. 'phags pa rdo rje gcod pa lam rtsis dang bcas pa/"@en .
+    
+    bdr:NT2D0859BAAD667377
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 70"@en .
+    
+    bdr:TT4FA18B7C722ECD12
+        a                   :TitlePageTitle ;
+        rdfs:label          "lamaist devotional manuscripts from lahul"@en .
+    
+    bdr:TT6D65EC2CDC87598C
+        a                   :Title ;
+        rdfs:label          "na rag dong sprugs rnal 'byor gyi spyi khrus sogs chos tshan khag cig"@bo-x-ewts .
+}

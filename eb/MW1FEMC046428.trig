@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046428 {
+    bda:LGE75A0E8BFBC6897F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046428"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046428
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046428 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "eb/MW1FEMC046428.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046428 ;
+        adm:logEntry        bda:LGE75A0E8BFBC6897F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID28559FAF0D6E44AD
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "163-B.04.03.04.VI.6" .
+    
+    bdr:MF62B959539D4974D5
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "171" .
+    
+    bdr:MW1FEMC046428
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាខែ ឆ្នាំ"@km , "tamrā khē, chnāṃ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID28559FAF0D6E44AD ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT19C142B88AF0AE2D , bdr:TTFED8D7A8DA284E55 ;
+        :instanceHasReproduction  bdr:W1FEMC036428 , bdr:W1FEMC046428 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF62B959539D4974D5 ;
+        :note               bdr:NTB1D482C7D23327EA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB1D482C7D23327EA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT19C142B88AF0AE2D
+        a                   :Title ;
+        rdfs:label          "តម្រាខែ ឆ្នាំ"@km .
+    
+    bdr:TTFED8D7A8DA284E55
+        a                   :Title ;
+        rdfs:label          "tamrā khē, chnāṃ"@km-x-twktt .
+}

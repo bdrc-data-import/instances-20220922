@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20016 {
+    bda:LG361760E0C2854A7F
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-30T10:47:39.851Z"^^xsd:dateTime ;
+        adm:logMessage      "added note and callnumber"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGCB2CEA8E9EC70564
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20016  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20016 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b9/MW20016.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20016 ;
+        adm:logEntry        bda:LG361760E0C2854A7F , bda:LGCB2CEA8E9EC70564 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBC7F3E9A84E62128
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID370035735AB7317F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSA 2000/03747 (R)" .
+    
+    bdr:ID608A823687E803A5
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542104616" .
+    
+    bdr:IDCF80151EDB2D995A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98907522" .
+    
+    bdr:IDFB4CDB354A633192
+        a                   bdr:HollisId ;
+        rdf:value           "014258002" .
+    
+    bdr:MW20016  a          :Instance ;
+        skos:altLabel       "shang han lun"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "grang ba'i nad kyi rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID370035735AB7317F , bdr:ID608A823687E803A5 , bdr:IDCF80151EDB2D995A , bdr:IDFB4CDB354A633192 ;
+        :authorshipStatement  "rdo rje rgyal dang brgyad cu don grub kyis bsgyur/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 2, 201 p." ;
+        :hasTitle           bdr:TT1CD37D079326CD8F , bdr:TTFE275983389335FE ;
+        :instanceEvent      bdr:EVBC7F3E9A84E62128 ;
+        :instanceHasReproduction  bdr:W20016 ;
+        :instanceOf         bdr:WA20016 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1CD37D079326CD8F
+        a                   :Title ;
+        rdfs:label          "grang ba'i nad kyi rnam bshad/"@bo-x-ewts .
+    
+    bdr:TTFE275983389335FE
+        a                   :ColophonTitle ;
+        rdfs:label          "shang han lun"@zh-latn-pinyin-x-ndia .
+}

@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020125 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020125
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020125 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b5/MW1FEMC020125.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020125 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB3DD12EB676F82EC
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.18.I.3" .
+    
+    bdr:MF00EEDAD157924C12
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "30" ;
+        :microfilmStrip     "51" .
+    
+    bdr:MW1FEMC020125
+        a                   :Instance ;
+        skos:prefLabel      "ល្បើកបរិយាយ"@km , "lpök pariyāy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB3DD12EB676F82EC ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1867933021DA6060 , bdr:TT19813D3BF094A982 , bdr:TT20F0E300D10DA780 , bdr:TT2A164D0D880BEEE2 , bdr:TTE0110FADEA54F1D2 , bdr:TTFBC8A72B2D3C0DF7 ;
+        :instanceHasReproduction  bdr:W1FEMC020125 ;
+        :instanceOf         bdr:WA1FEMC020125 , bdr:WA1FEMC110030 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF00EEDAD157924C12 ;
+        :note               bdr:NTBA231F2C3DF47BCA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "619" .
+    
+    bdr:NTBA231F2C3DF47BCA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 26" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1867933021DA6060
+        a                   :CoverTitle ;
+        rdfs:label          "lpök hai mahā jan"@km-x-twktt ;
+        :femcConversionOf   bdr:TTFBC8A72B2D3C0DF7 .
+    
+    bdr:TT19813D3BF094A982
+        a                   :Title ;
+        rdfs:label          "lpök pariyāy"@km-x-twktt .
+    
+    bdr:TT20F0E300D10DA780
+        a                   :CoverTitle ;
+        rdfs:label          "ល្បើកហៃមហាជន"@km ;
+        :femcConversionOf   bdr:TT2A164D0D880BEEE2 .
+    
+    bdr:TT2A164D0D880BEEE2
+        a                   :CoverTitle ;
+        rdfs:label          "ហៃមហាជន"@km .
+    
+    bdr:TTE0110FADEA54F1D2
+        a                   :Title ;
+        rdfs:label          "ល្បើកបរិយាយ"@km .
+    
+    bdr:TTFBC8A72B2D3C0DF7
+        a                   :CoverTitle ;
+        rdfs:label          "hai mahā jan"@km-x-twktt .
+}

@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020706 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020706
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020706 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "bc/MW1FEMC020706.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020706 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDAC55B80C103FEFAF
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.339.III.6" .
+    
+    bdr:MW1FEMC020706
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សសព្វសូត្រ"@km , "ānisaṅs sabb sūtr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAC55B80C103FEFAF ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "7" ;
+        :hasTitle           bdr:TT4CE4D39210CD14A0 , bdr:TT6636D8412DEB0A1E , bdr:TTC744040E8FB1A1BD , bdr:TTD2D70D8A226A8FE1 ;
+        :instanceHasReproduction  bdr:W1FEMC020706 ;
+        :instanceOf         bdr:WA1FEMC020706 , bdr:WA1FEMC060002 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT9E4444044EF60B7D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9E4444044EF60B7D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 129" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4CE4D39210CD14A0
+        a                   :Title ;
+        rdfs:label          "ānisaṅs sabb sūtr"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC744040E8FB1A1BD .
+    
+    bdr:TT6636D8412DEB0A1E
+        a                   :CoverTitle ;
+        rdfs:label          "សព្វសូតអដ្ឋកថា"@km .
+    
+    bdr:TTC744040E8FB1A1BD
+        a                   :CoverTitle ;
+        rdfs:label          "sabb sūt aṭṭhakathā"@km-x-twktt .
+    
+    bdr:TTD2D70D8A226A8FE1
+        a                   :Title ;
+        rdfs:label          "អានិសង្សសព្វសូត្រ"@km ;
+        :femcConversionOf   bdr:TT6636D8412DEB0A1E .
+}

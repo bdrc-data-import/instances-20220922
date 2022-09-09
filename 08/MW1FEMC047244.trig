@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047244 {
+    bda:LG8EE7A39AF964EA37
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047244"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047244
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047244 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "08/MW1FEMC047244.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047244 ;
+        adm:logEntry        bda:LG8EE7A39AF964EA37 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDFDF87E3D13A87488
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "Coll part.08.01.2003.V.3" .
+    
+    bdr:MF8C77744F21E25AB9
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "145" ;
+        :microfilmStrip     "239" .
+    
+    bdr:MW1FEMC047244
+        a                   :Instance ;
+        skos:prefLabel      "អារាធនាព្រះកម្មដ្ឋាន"@km , "ārādhnā braḥ kammaṭṭhān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFDF87E3D13A87488 ;
+        :biblioNote         "This manuscript was digitized from a microfilm copy with the generous support of The Khmer Buddhist Temple Foundation and was made available by L'Ecole française d'Extrême-Orient (EFEO)."@en ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT1762756D7448EF4F , bdr:TT65EE64E79677BEA1 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8C77744F21E25AB9 ;
+        :note               bdr:NTF90765E959B09AAC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF90765E959B09AAC
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1762756D7448EF4F
+        a                   :Title ;
+        rdfs:label          "អារាធនាព្រះកម្មដ្ឋាន"@km .
+    
+    bdr:TT65EE64E79677BEA1
+        a                   :Title ;
+        rdfs:label          "ārādhnā braḥ kammaṭṭhān"@km-x-twktt .
+}

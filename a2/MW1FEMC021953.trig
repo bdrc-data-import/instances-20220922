@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021953 {
+    bda:LGC3E4F886C912AC99
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021953"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021953
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021953 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a2/MW1FEMC021953.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021953 ;
+        adm:logEntry        bda:LGC3E4F886C912AC99 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB225D445FFC50D7A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.735.III.6" .
+    
+    bdr:MW1FEMC021953
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សអភិធម្មកម្មដ្ឋានមហាវិបាក"@km , "ānisaṅs abhidhamm kammaṭṭhān mahā vipāk"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB225D445FFC50D7A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT4676B8B92494A5C8 , bdr:TT6242C22B20E6252B , bdr:TT6C58C63AC219B575 , bdr:TT8FE8AC59F75EC3B8 ;
+        :instanceHasReproduction  bdr:W1FEMC021953 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTBDAE915AC3BA7DC8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTBDAE915AC3BA7DC8
+        a                   :Note ;
+        :contentLocationStatement  "pg. 347" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4676B8B92494A5C8
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មកម្មដ្ឋានមហាវិបាក"@km .
+    
+    bdr:TT6242C22B20E6252B
+        a                   :Title ;
+        rdfs:label          "ānisaṅs abhidhamm kammaṭṭhān mahā vipāk"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8FE8AC59F75EC3B8 .
+    
+    bdr:TT6C58C63AC219B575
+        a                   :Title ;
+        rdfs:label          "អានិសង្សអភិធម្មកម្មដ្ឋានមហាវិបាក"@km ;
+        :femcConversionOf   bdr:TT4676B8B92494A5C8 .
+    
+    bdr:TT8FE8AC59F75EC3B8
+        a                   :CoverTitle ;
+        rdfs:label          "abhidhamm kammaṭṭhān mahā vipāk"@km-x-twktt .
+}

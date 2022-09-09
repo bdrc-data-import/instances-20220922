@@ -1,0 +1,64 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2EE3 {
+    bda:LGCD2B9C061C3753C8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-05-22T12:04:08.698Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW2EE3  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW2EE3 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "38/MW2EE3.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2EE3 ;
+        adm:logEntry        bda:LGCD2B9C061C3753C8 , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8B149B82C0EFB8E3
+        a                   :PublishedEvent ;
+        :eventWhen          "1728"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW2EE3  a           :Instance ;
+        skos:prefLabel      "thar ba chen po'i mdo/（sog yig）"@bo-x-ewts , "qutug-tu degedu yekete tonilgagci ner-e-tu sudur orusiba"@mn-alalc97 ;
+        :biblioNote         "blockprint in mongolian language"@en ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TT8EDDF9D0693B45F8 , bdr:TTBC80FE4DA3B8A5CC ;
+        :instanceEvent      bdr:EV8B149B82C0EFB8E3 ;
+        :instanceHasReproduction  bdr:W2EE3 ;
+        :instanceOf         bdr:WA2EE3 ;
+        :note               bdr:NT5521CF215BF04428 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptMong .
+    
+    bdr:NT5521CF215BF04428
+        a                   :Note ;
+        :noteText           "photographed from dr. lokesh chandra's collection"@en .
+    
+    bdr:TT8EDDF9D0693B45F8
+        a                   :TitlePageTitle ;
+        rdfs:label          "qutug-tu degedu yekete tonilgagci ner-e-tu sudur orusiba"@mn-alalc97 .
+    
+    bdr:TTBC80FE4DA3B8A5CC
+        a                   :Title ;
+        rdfs:label          "thar ba chen po'i mdo/（sog yig）"@bo-x-ewts .
+}

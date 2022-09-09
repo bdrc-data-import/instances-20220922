@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21914 {
+    bda:LGAFCAAD04F41C2BAD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21914  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21914 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c9/MW21914.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21914 ;
+        adm:logEntry        bda:LGAFCAAD04F41C2BAD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFC6A98397759EC9E
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1832CFF9FDFD1BCC
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97916080" .
+    
+    bdr:ID329762780766C94F
+        a                   bdr:HollisId ;
+        rdf:value           "014258499" .
+    
+    bdr:IDD3F6679C1B7C87B6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754200512X" .
+    
+    bdr:IDD4BB01FDC856D7EB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ3143 .T5 1995" .
+    
+    bdr:MW21914  a          :Instance ;
+        skos:altLabel       "ju hsing lun pen chu"@zh-latn-wadegile ;
+        skos:prefLabel      "spyod 'jug rtsa 'grel/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1832CFF9FDFD1BCC , bdr:ID329762780766C94F , bdr:IDD3F6679C1B7C87B6 , bdr:IDD4BB01FDC856D7EB ;
+        :authorshipStatement  "rtsa ba zhi ba lha dang 'grel ba dar ma rin chen gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :extentStatement    "454 p." ;
+        :hasTitle           bdr:TTC5C2C3DAE79F72A6 , bdr:TTFEFD455C4C65B3BF ;
+        :instanceEvent      bdr:EVFC6A98397759EC9E ;
+        :instanceHasReproduction  bdr:W21914 ;
+        :instanceOf         bdr:WA21914 ;
+        :note               bdr:NT797E44AC61DB9A87 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT797E44AC61DB9A87
+        a                   :Note ;
+        :noteText           "scanned for preservation purposes only\n5068"@en .
+    
+    bdr:TTC5C2C3DAE79F72A6
+        a                   :ColophonTitle ;
+        rdfs:label          "ju hsing lun pen chu"@zh-latn-wadegile .
+    
+    bdr:TTFEFD455C4C65B3BF
+        a                   :Title ;
+        rdfs:label          "spyod 'jug rtsa 'grel/"@bo-x-ewts .
+}

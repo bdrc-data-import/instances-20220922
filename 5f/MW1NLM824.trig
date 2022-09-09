@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM824 {
+    bda:LG1E66CE756D197469
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-11T10:01:50.008Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG9A6192605F127A08
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGD0618AE2DF4FBBA2
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-02-27T12:39:30.837Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM824  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM824 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "5f/MW1NLM824.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM824 ;
+        adm:logEntry        bda:LG1E66CE756D197469 , bda:LG9A6192605F127A08 , bda:LGD0618AE2DF4FBBA2 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM824  a        :Instance ;
+        skos:prefLabel      "chos srung sgrub skor/"@bo-x-ewts ;
+        :dimensionsStatement  "28.5x7" ;
+        :extentStatement    "10 ff., 11 ff., 3 ff., 11 ff., 7 ff., 3 ff., 3 ff., 12 ff., 2 ff., 4 ff., 4 ff., 4 ff., 4 ff., 14 ff." ;
+        :hasTitle           bdr:TTB295DF19DE40C29F , bdr:TTE0E2B44C12089C76 ;
+        :instanceHasReproduction  bdr:W1NLM824 ;
+        :instanceOf         bdr:WA1NLM824 ;
+        :note               bdr:NTC8FEE88600F10964 , bdr:NTE56924EEA6E6F1E9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherName      "[sn.]"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTC8FEE88600F10964
+        a                   :Note ;
+        :noteText           "missingPages: M0058737-015 [page number 2B extentions] Image 153"@en .
+    
+    bdr:NTE56924EEA6E6F1E9
+        a                   :Note ;
+        :noteText           "nlmId: M0058737"@en .
+    
+    bdr:TTB295DF19DE40C29F
+        a                   :Title ;
+        rdfs:label          "chos srung sgrub skor/"@bo-x-ewts .
+    
+    bdr:TTE0E2B44C12089C76
+        a                   :TitlePageTitle ;
+        rdfs:label          "mi nag mgo gsum gyi gto bcos thabs sogs/"@bo-x-ewts .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046284 {
+    bda:LG20533940DC3E067A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046284"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046284
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046284 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "6e/MW1FEMC046284.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046284 ;
+        adm:logEntry        bda:LG20533940DC3E067A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6511C594FFED3FE2
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "023-B.04.03.04.III.4" .
+    
+    bdr:MFF4CBE1EB53408D56
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "169" .
+    
+    bdr:MW1FEMC046284
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៩បរិច្ឆេទ្ទ (ក-ឈឿ)"@km , "abhidhamma 9 paricchedd"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6511C594FFED3FE2 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-9" ;
+        :hasTitle           bdr:TT6CED9067B607B1BF , bdr:TTAA1FB17A10D58404 ;
+        :instanceHasReproduction  bdr:W1FEMC036284 , bdr:W1FEMC046284 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF4CBE1EB53408D56 ;
+        :note               bdr:NT27390793AE9FCD71 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT27390793AE9FCD71
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6CED9067B607B1BF
+        a                   :Title ;
+        rdfs:label          "abhidhamma 9 paricchedd"@km-x-twktt .
+    
+    bdr:TTAA1FB17A10D58404
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ្ទ (ក-ឈឿ)"@km .
+}

@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN6621 {
+    bda:LG2F5D30AA62AF4468
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-10-21T10:11:30.579Z"^^xsd:dateTime ;
+        adm:logMessage      "added editer"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG40282C35E26B02D9
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-03-24T15:19:49.933Z"^^xsd:dateTime ;
+        adm:logMessage      "released, it is a different text"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW3CN6621  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN6621 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "6e/MW3CN6621.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN6621 ;
+        adm:logEntry        bda:LG2F5D30AA62AF4468 , bda:LG40282C35E26B02D9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR15693CDB3C2C84D4
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8081 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV7D3427C4AFE74802
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID023C19575EBBAEDA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2017323678" .
+    
+    bdr:ID265A37CB5E6C2705
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCMA 2017/50140 (P)" .
+    
+    bdr:IDAFC1E8E8B2A3B375
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223050487" .
+    
+    bdr:MW3CN6621  a        :Instance ;
+        skos:altLabel       "中国民间歌谣集成"@zh-hans ;
+        skos:prefLabel      "bod rang skyong ljongs kyi dmangs gzhas legs bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID023C19575EBBAEDA , bdr:ID265A37CB5E6C2705 , bdr:IDAFC1E8E8B2A3B375 ;
+        :authorshipStatement  "gtso sgrog pa/ bde smon bde chen sgrol dkar/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR15693CDB3C2C84D4 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "8, 20, 1310 p." ;
+        :hasTitle           bdr:TT385AD8A519DFDA3B , bdr:TTA9BC6093DC323F16 , bdr:TTADF2B9593B075F9C ;
+        :illustrations      "ill. (col.), 1 map (folded)" ;
+        :instanceEvent      bdr:EV7D3427C4AFE74802 ;
+        :instanceHasReproduction  bdr:W3CN6621 ;
+        :instanceOf         bdr:WA3CN6621 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT385AD8A519DFDA3B
+        a                   :OtherTitle ;
+        rdfs:label          "zhong guo min jian ge yao ji cheng"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTA9BC6093DC323F16
+        a                   :Title ;
+        rdfs:label          "bod rang skyong ljongs kyi dmangs gzhas legs bsdus/"@bo-x-ewts .
+    
+    bdr:TTADF2B9593B075F9C
+        a                   :OtherTitle ;
+        rdfs:label          "中国民间歌谣集成"@zh-hans .
+}

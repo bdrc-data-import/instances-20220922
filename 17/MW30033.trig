@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30033 {
+    bda:LG36C09A88AF97CA89
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-12-01T12:58:45.589Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG93648DDE2AC4418B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFD089A8120A31AE7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-19T14:37:30.424Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW30033  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30033 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "17/MW30033.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30033 ;
+        adm:logEntry        bda:LG36C09A88AF97CA89 , bda:LG93648DDE2AC4418B , bda:LGFD089A8120A31AE7 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRD36637A5C0516566
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2CZ9127 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVED920BE3420B8861
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2B7D48E71DBC0FA1
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSA 2002/02998 PL3739" .
+    
+    bdr:IDC1293A339F36DE76
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2002293244" .
+    
+    bdr:IDC27732CA764EB482
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542008692" .
+    
+    bdr:MW30033  a          :Instance ;
+        skos:altLabel       "散文卷"@zh-hans ;
+        skos:prefLabel      "lhug rtsom pad+ma'i ze'u 'bru/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2B7D48E71DBC0FA1 , bdr:IDC1293A339F36DE76 , bdr:IDC27732CA764EB482 ;
+        :biblioNote         "sbrang char rtsom sgrig khang gis bsgrigs/"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRD36637A5C0516566 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "23, 8, 547 p." ;
+        :hasTitle           bdr:TT471967454DAD3DBD , bdr:TT9D28B6E4EE53124E , bdr:TTB1400A2EC14A41E9 ;
+        :instanceEvent      bdr:EVED920BE3420B8861 ;
+        :instanceHasReproduction  bdr:W30033 ;
+        :instanceOf         bdr:WA30033 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS28829 .
+    
+    bdr:TT471967454DAD3DBD
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "san wen juan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT9D28B6E4EE53124E
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "散文卷"@zh-hans .
+    
+    bdr:TTB1400A2EC14A41E9
+        a                   :Title ;
+        rdfs:label          "lhug rtsom pad+ma'i ze'u 'bru/"@bo-x-ewts .
+}

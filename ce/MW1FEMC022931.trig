@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022931 {
+    bda:LGCA475BD177B16B95
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022931"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022931
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022931 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ce/MW1FEMC022931.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022931 ;
+        adm:logEntry        bda:LGCA475BD177B16B95 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID35C173593B4959BA
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.407.VII" .
+    
+    bdr:MFBE09ED339E2D9625
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022931
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មចក្កប្បវត្តនសូត្រ"@km , "dhammacakkappavattanasūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID35C173593B4959BA ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1C021FE8F45A3D1B , bdr:TT46182ED0C1F0E70B , bdr:TT658618BEC90D4C8E , bdr:TTB0CCD686E6B51FEE ;
+        :instanceHasReproduction  bdr:W1FEMC022931 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBE09ED339E2D9625 ;
+        :note               bdr:NTC59FC9D2A77ED391 , bdr:NTF32FAC90E2695928 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "188" .
+    
+    bdr:NTC59FC9D2A77ED391
+        a                   :Note ;
+        :contentLocationStatement  "pg. 528" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NTF32FAC90E2695928
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:TT1C021FE8F45A3D1B
+        a                   :CoverTitle ;
+        rdfs:label          "dhammacakkappavattanasutta"@km-x-twktt .
+    
+    bdr:TT46182ED0C1F0E70B
+        a                   :Title ;
+        rdfs:label          "dhammacakkappavattanasūtra"@km-x-twktt .
+    
+    bdr:TT658618BEC90D4C8E
+        a                   :Title ;
+        rdfs:label          "ធម្មចក្កប្បវត្តនសូត្រ"@km .
+    
+    bdr:TTB0CCD686E6B51FEE
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មចក្កប្បវត្តនសុត្ត (វាន)"@km .
+}

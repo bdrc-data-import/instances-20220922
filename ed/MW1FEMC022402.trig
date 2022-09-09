@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022402 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022402
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022402 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ed/MW1FEMC022402.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022402 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDAF6FA33C74280C3D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.889.IV.2" .
+    
+    bdr:MF251F7A7A6BE4A72F
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "145" ;
+        :microfilmStrip     "239" .
+    
+    bdr:MW1FEMC022402
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះរាជពង្សាវតារព្រះមហាក្សត្រ"@km , "braḥ rāj baṅsāvatār braḥ mahāksatr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAF6FA33C74280C3D ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT1876EFC6E39873BB , bdr:TT1C03D6B4DD46E987 , bdr:TT56ED1F13636682E6 , bdr:TT7ABE233C8EB0788B , bdr:TT9EB5D81003229D2F , bdr:TTD290F77AF780A44F ;
+        :instanceHasReproduction  bdr:W1FEMC022402 ;
+        :instanceOf         bdr:WA1FEMC022402 , bdr:WA1FEMC140001 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF251F7A7A6BE4A72F ;
+        :note               bdr:NT7B73C4FB323359D6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT7B73C4FB323359D6
+        a                   :Note ;
+        :contentLocationStatement  "pg. 430" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1876EFC6E39873BB
+        a                   :CoverTitle ;
+        rdfs:label          "baṅ-sāvaṭā stec khmèr"@km-x-twktt .
+    
+    bdr:TT1C03D6B4DD46E987
+        a                   :CoverTitle ;
+        rdfs:label          "ពងសាវដាស្ដេចខ្មែរ"@km .
+    
+    bdr:TT56ED1F13636682E6
+        a                   :Title ;
+        rdfs:label          "braḥ rāj baṅsāvatār braḥ mahāksatr"@km-x-twktt .
+    
+    bdr:TT7ABE233C8EB0788B
+        a                   :CoverTitle ;
+        rdfs:label          "baṅsāvatār stec khmèr"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1876EFC6E39873BB .
+    
+    bdr:TT9EB5D81003229D2F
+        a                   :CoverTitle ;
+        rdfs:label          "ពង្សា​វតារស្ដេចខ្មែរ"@km ;
+        :femcConversionOf   bdr:TT1C03D6B4DD46E987 .
+    
+    bdr:TTD290F77AF780A44F
+        a                   :Title ;
+        rdfs:label          "ព្រះរាជពង្សាវតារព្រះមហាក្សត្រ"@km .
+}

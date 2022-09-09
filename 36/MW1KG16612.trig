@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16612 {
+    bda:LGC7B453258E915642
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-01-31T15:25:36.397Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG16612  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG16612 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "36/MW1KG16612.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16612 ;
+        adm:logEntry        bda:LGC7B453258E915642 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA53406E7FC61BEBB
+        a                   :PublishedEvent ;
+        :eventWhen          "1998"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID69F1F2AAAD210A4B
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105030240" .
+    
+    bdr:IDE8025D98C492E54C
+        a                   bdr:HollisId ;
+        rdf:value           "014256380" .
+    
+    bdr:MW1KG16612  a       :Instance , :SerialInstance ;
+        skos:altLabel       "经庄严论文本"@zh-hans ;
+        skos:prefLabel      "gangs can rig brgya'i sgo 'byed lde mig (deb nyer bdun pa/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID69F1F2AAAD210A4B , bdr:IDE8025D98C492E54C ;
+        :authorshipStatement  "krung go bod brgyud mtho rim nang bstan slob gling gi slob gzhi rtsom sgrig tsho chung gis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "1, 4, 520, 4 p." ;
+        :hasTitle           bdr:TT1A3CFCCC511B91FE , bdr:TT740B84154A99C429 , bdr:TTBCD14C8841EF6CBE , bdr:TTFF730A8BF1B5360C ;
+        :instanceEvent      bdr:EVA53406E7FC61BEBB ;
+        :instanceHasReproduction  bdr:W1KG16612 ;
+        :instanceOf         bdr:WA1KG16612 ;
+        :note               bdr:NT09BDC1E4A590BA26 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG11702 ;
+        :seriesNumber       "deb 27" .
+    
+    bdr:NT09BDC1E4A590BA26
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT1A3CFCCC511B91FE
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "经庄严论文本"@zh-hans .
+    
+    bdr:TT740B84154A99C429
+        a                   :TitlePageTitle ;
+        rdfs:label          "theg pa chen po mdo sde'i rgyan dang rgyud bla rtsa 'grel/"@bo-x-ewts .
+    
+    bdr:TTBCD14C8841EF6CBE
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "jing zhuang yan lun wen ben"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTFF730A8BF1B5360C
+        a                   :Title ;
+        rdfs:label          "gangs can rig brgya'i sgo 'byed lde mig (deb nyer bdun pa/)"@bo-x-ewts .
+}

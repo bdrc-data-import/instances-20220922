@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG24998 {
+    bda:LG33687E3CD0C5D6DD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-12T10:45:21.719Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG374C0BB1F40DA66B
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-06-11T22:46:30.052Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed isbn"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW1KG24998  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG24998 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "35/MW1KG24998.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG24998 ;
+        adm:logEntry        bda:LG33687E3CD0C5D6DD , bda:LG374C0BB1F40DA66B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4EB116F22EE9EA14
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID43A6DC6AEDE7D3E0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105113200" .
+    
+    bdr:MW1KG24998  a       :Instance ;
+        skos:prefLabel      "grong mi'i u yon lhan khang skor gyi bca' khrims gnad don/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID43A6DC6AEDE7D3E0 ;
+        :authorshipStatement  "kra'o ching gis gtso sgrig byas/ bu mo chog gis bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "13, 315 p." ;
+        :hasTitle           bdr:TTB35412513FB2F54A ;
+        :instanceEvent      bdr:EV4EB116F22EE9EA14 ;
+        :instanceHasReproduction  bdr:W1KG24998 ;
+        :instanceOf         bdr:WA1KG24998 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTB35412513FB2F54A
+        a                   :Title ;
+        rdfs:label          "grong mi'i u yon lhan khang skor gyi bca' khrims gnad don/"@bo-x-ewts .
+}

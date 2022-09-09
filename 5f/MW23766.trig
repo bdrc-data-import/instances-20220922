@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23766 {
+    bda:LG16347ABFA9AA9875
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFAF0F528B94901D3
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T10:03:59.464Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23766  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23766 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "5f/MW23766.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23766 ;
+        adm:logEntry        bda:LG16347ABFA9AA9875 , bda:LGFAF0F528B94901D3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV98D429B83ECC5003
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC12F113F2E2C142E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85904376" .
+    
+    bdr:IDC53B35A69520C94E
+        a                   bdr:HollisId ;
+        rdf:value           "014259107" .
+    
+    bdr:IDC869FEDB802F15C6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7549 .K372 1985" .
+    
+    bdr:MW23766  a          :Instance ;
+        skos:altLabel       "mkhas-grub karma-chags-med kyi gsun thor bu : a collection of writings of the famed tibetan scholar, karma-chags-med, recently received from tibet"@en-x-mixed ;
+        skos:prefLabel      "mkhas grub karma chags med kyi gsung thor bu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC12F113F2E2C142E , bdr:IDC53B35A69520C94E , bdr:IDC869FEDB802F15C6 ;
+        :biblioNote         "reproduced from a manuscript from gru-gu dgon-pa in nan-chen"@en ;
+        :extentStatement    "649 p." ;
+        :hasTitle           bdr:TT144E1B59B98809B8 , bdr:TTBFC48ADC40A38A82 ;
+        :instanceEvent      bdr:EV98D429B83ECC5003 ;
+        :instanceHasReproduction  bdr:W23766 ;
+        :instanceOf         bdr:WA23766 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tashijong, palampur, dt. kangra, h.p."@en ;
+        :publisherName      "tibetan craft community,"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT144E1B59B98809B8
+        a                   :Title ;
+        rdfs:label          "mkhas grub karma chags med kyi gsung thor bu/"@bo-x-ewts .
+    
+    bdr:TTBFC48ADC40A38A82
+        a                   :TitlePageTitle ;
+        rdfs:label          "mkhas-grub karma-chags-med kyi gsun thor bu : a collection of writings of the famed tibetan scholar, karma-chags-med, recently received from tibet"@en-x-mixed .
+}

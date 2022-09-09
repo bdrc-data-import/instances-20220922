@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW6205 {
+    bda:LG1A287B55F88CEB3C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-22T16:45:42.246Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG1D026FC07448294B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW6205  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW6205 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b9/MW6205.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW6205 ;
+        adm:logEntry        bda:LG1A287B55F88CEB3C , bda:LG1D026FC07448294B , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD0E62F19E1068069
+        a                   :PublishedEvent ;
+        :eventWhen          "1990?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID01EBB1F2C01B375E
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008391169-3" .
+    
+    bdr:ID07767BA56CEC97FA
+        a                   bdr:HollisId ;
+        rdf:value           "014260999" .
+    
+    bdr:MW6205  a           :Instance ;
+        skos:altLabel       "Paṇ chen thams cad mkhyen pa Blo bzaṅ dpal ldan Bstan paʾi ñi ma phyogs las rnam rgyal dpal bzaṅ poʾi gsuṅ ʾbum."@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_bstan pa'i nyi ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID01EBB1F2C01B375E , bdr:ID07767BA56CEC97FA ;
+        :biblioNote         "photomechanical reprint made from a set of clear impressions from the bkra shis lhun po blocks"@en ;
+        :extentStatement    "9 v." ;
+        :hasSourcePrintery  bdr:G2CN10913 ;
+        :hasTitle           bdr:TT5557FD197CF3E74C , bdr:TTA863B3EF90ADB3F5 ;
+        :instanceEvent      bdr:EVD0E62F19E1068069 ;
+        :instanceHasReproduction  bdr:W6205 ;
+        :instanceOf         bdr:WA1KG15909 , bdr:WA6205 ;
+        :note               bdr:NTA70F897840F7DE75 ;
+        :numberOfVolumes    9 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "bkra shis lhun po?"@en ;
+        :publisherName      "bkras lhun chos sde tshogs pa/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTA70F897840F7DE75
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1795-1803"@en .
+    
+    bdr:TT5557FD197CF3E74C
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:TTA863B3EF90ADB3F5
+        a                   :CoverTitle ;
+        rdfs:label          "Paṇ chen thams cad mkhyen pa Blo bzaṅ dpal ldan Bstan paʾi ñi ma phyogs las rnam rgyal dpal bzaṅ poʾi gsuṅ ʾbum."@en-x-mixed .
+}

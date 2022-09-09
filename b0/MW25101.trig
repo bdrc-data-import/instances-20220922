@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW25101 {
+    bda:LG64BB3DFAE73E7AD2
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6EB1D71180BC6DFF
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T12:13:13.001Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGE1B711A8ACFF0765
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-06-24T10:32:27.423Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW25101  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW25101 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b0/MW25101.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW25101 ;
+        adm:logEntry        bda:LG64BB3DFAE73E7AD2 , bda:LG6EB1D71180BC6DFF , bda:LGE1B711A8ACFF0765 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDF0C1627249DAB5E
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0F6AAE9D275EC03B
+        a                   bdr:HollisId ;
+        rdf:value           "014259392" .
+    
+    bdr:ID8DFA3AC95DD6F4E8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83905560" .
+    
+    bdr:IDF7C42303367DA7A0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.5 .B77 1983" .
+    
+    bdr:MW25101  a          :Instance ;
+        skos:prefLabel      "'brong rtse'i be'u bum dkar po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0F6AAE9D275EC03B , bdr:ID8DFA3AC95DD6F4E8 , bdr:IDF7C42303367DA7A0 ;
+        :biblioNote         "reproduced from a manuscript preserved in the library of tibetan works and archives, dharamsala, h.p"@en ;
+        :extentStatement    "355 p." ;
+        :hasTitle           bdr:TT0D7E23C3C1BA276A , bdr:TTB2906367FF2DD126 ;
+        :instanceEvent      bdr:EVDF0C1627249DAB5E ;
+        :instanceHasReproduction  bdr:W25101 ;
+        :instanceOf         bdr:WA25101 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "[delhi?]"@en ;
+        :publisherName      "damchoe sangpo"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT0D7E23C3C1BA276A
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje 'brong rtse lha sras rgya mtsho'i mdzad pa'i be'u bum dkar po/"@bo-x-ewts .
+    
+    bdr:TTB2906367FF2DD126
+        a                   :Title ;
+        rdfs:label          "'brong rtse'i be'u bum dkar po/"@bo-x-ewts .
+}

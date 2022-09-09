@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14955 {
+    bda:LGD4FDC960FAC76657
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-08-22T14:53:55.887Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF88E66590B81DA92
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-10-31T11:31:06.697Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14955  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14955 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "6d/MW1KG14955.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14955 ;
+        adm:logEntry        bda:LGD4FDC960FAC76657 , bda:LGF88E66590B81DA92 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR787AECF2174D1717
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8033 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV6EEF5DB94350F915
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDAF17944F52BBDCD0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105113279" .
+    
+    bdr:IDCE6DFEC28ADC4F4B
+        a                   bdr:HollisId ;
+        rdf:value           "014256250" .
+    
+    bdr:MW1KG14955  a       :Instance ;
+        skos:altLabel       "藏区名寺古籍目录"@zh-hans ;
+        skos:prefLabel      "bod khul gyi chos sde grags can khag gi dpe rnying dkar chag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAF17944F52BBDCD0 , bdr:IDCE6DFEC28ADC4F4B ;
+        :authorshipStatement  "gtso 'gan rtsom sgrig pa ska ba shes rab bzang po/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR787AECF2174D1717 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "1, 2, 2, 603, 2 p." ;
+        :hasTitle           bdr:TT359C56ED02C1432E , bdr:TT3C4C695BEFAE338E , bdr:TTB35A61A00A2B3684 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV6EEF5DB94350F915 ;
+        :instanceHasReproduction  bdr:W1KG14955 ;
+        :instanceOf         bdr:WA1KG14955 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT359C56ED02C1432E
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏区名寺古籍目录"@zh-hans .
+    
+    bdr:TT3C4C695BEFAE338E
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "Zang qu ming si gu ji mu lu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTB35A61A00A2B3684
+        a                   :Title ;
+        rdfs:label          "bod khul gyi chos sde grags can khag gi dpe rnying dkar chag"@bo-x-ewts .
+}

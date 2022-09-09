@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21916 {
+    bda:LGCAA5CBCC30634CA5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21916  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21916 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "bb/MW21916.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21916 ;
+        adm:logEntry        bda:LGCAA5CBCC30634CA5 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7FDD57600734BB29
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID00C22F510331C3AF
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542106805" .
+    
+    bdr:ID79E26B7F13F97FA9
+        a                   bdr:HollisId ;
+        rdf:value           "014258500" .
+    
+    bdr:MW21916  a          :Instance ;
+        skos:prefLabel      "rig gnas bcu'i dris lan blo gsal nyer mkho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID00C22F510331C3AF , bdr:ID79E26B7F13F97FA9 ;
+        :authorshipStatement  "cha ris skal bzang thogs med/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "192 p." ;
+        :hasTitle           bdr:TT2122D27D22AE6C93 , bdr:TTA83EDBA23D493E52 ;
+        :instanceEvent      bdr:EV7FDD57600734BB29 ;
+        :instanceHasReproduction  bdr:W21916 ;
+        :instanceOf         bdr:WA21916 ;
+        :note               bdr:NTF379DFA33344C608 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS21916 .
+    
+    bdr:NTF379DFA33344C608
+        a                   :Note ;
+        :noteText           "tbrc hold digitally scanned images, tiffs and pdf files;"@en .
+    
+    bdr:TT2122D27D22AE6C93
+        a                   :Title ;
+        rdfs:label          "rig gnas bcu'i dris lan blo gsal nyer mkho/"@bo-x-ewts .
+    
+    bdr:TTA83EDBA23D493E52
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod kyi rig gnas bcu'i rnam gzhag las bton pa'i dris lan blo gsal nyer mkho legs bshad sgo brgya 'byed pa'i 'phrul gyi lde mig"@bo-x-ewts .
+}

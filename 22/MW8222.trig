@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8222 {
+    bda:LG6C246E978CFC03A6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW8222  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW8222 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "22/MW8222.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8222 ;
+        adm:logEntry        bda:LG6C246E978CFC03A6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV00170D3446370F37
+        a                   :PublishedEvent ;
+        :eventWhen          "1989"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2533664382327CBC
+        a                   bdr:HollisId ;
+        rdf:value           "014261067" .
+    
+    bdr:ID5D01C944EA1DA23A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7935.T757 S26 1989" .
+    
+    bdr:ID8558A66A50FEA0E2
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "90148229" .
+    
+    bdr:IDFF257E082982429E
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223001909" .
+    
+    bdr:MW8222  a           :Instance ;
+        skos:altLabel       "liu shi dalai zhuan"@zh-latn-wadegile ;
+        skos:prefLabel      "tshangs dbyangs rgya mtsho'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2533664382327CBC , bdr:ID5D01C944EA1DA23A , bdr:ID8558A66A50FEA0E2 , bdr:IDFF257E082982429E ;
+        :authorshipStatement  "sde srid sangs rgyas rgya mtshos mdzad/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "17, 6, 882 p." ;
+        :hasTitle           bdr:TT1F10B663AFD9AF9B , bdr:TT5785E9CBB82E7A4E , bdr:TT90E8AD4390A22B37 , bdr:TTD7B13E4A52BA8AFD ;
+        :instanceEvent      bdr:EV00170D3446370F37 ;
+        :instanceHasReproduction  bdr:W8222 ;
+        :instanceOf         bdr:WA1KG9087 , bdr:WA8222 ;
+        :note               bdr:NT1FC40F1FC55EC3FD ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT1FC40F1FC55EC3FD
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans for preservation purposes; not for distribution\n\nanother biblographic reference\na khu dpe tho mhtl 11039: tshangs dbyangs pa'i rnam thar rab gsal gser gyi snye ma 514.\n514 ff. in v. 11 of the 14 vol. printed  gsung 'bum in the potala collection.\nonly one volume seems ever to have been written."@en .
+    
+    bdr:TT1F10B663AFD9AF9B
+        a                   :ColophonTitle ;
+        rdfs:label          "liu shi dalai zhuan"@zh-latn-wadegile .
+    
+    bdr:TT5785E9CBB82E7A4E
+        a                   :TitlePageTitle ;
+        rdfs:label          "thams cad mkhyen pa drug pa blo bzang rin chen tshangs dbyangs rgya mtsho'i thun mong phyi'i rnam par thar pa du kU la'i 'phro 'thud rab gsal gser gyi snye ma glegs bam dang po/"@bo-x-ewts .
+    
+    bdr:TT90E8AD4390A22B37
+        a                   :CoverTitle ;
+        rdfs:label          "rab gsal gser gyi snye ma/"@bo-x-ewts .
+    
+    bdr:TTD7B13E4A52BA8AFD
+        a                   :Title ;
+        rdfs:label          "tshangs dbyangs rgya mtsho'i rnam thar/"@bo-x-ewts .
+}

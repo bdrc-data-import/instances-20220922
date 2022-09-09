@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW27602 {
+    bda:LG260B95CD628FEC1D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGDCB7D22E2147252E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-30T12:55:39.151Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW27602  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW27602 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "45/MW27602.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27602 ;
+        adm:logEntry        bda:LG260B95CD628FEC1D , bda:LGDCB7D22E2147252E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD7DFE8C18016F1BA
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0C215AE27DEF0743
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84900516" .
+    
+    bdr:IDAD8FFF9EC5DFA0D6
+        a                   bdr:HollisId ;
+        rdf:value           "014259700" .
+    
+    bdr:IDE873EB02F86F2064
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4890.V3393 T553 1984" .
+    
+    bdr:MW27602  a          :Instance ;
+        skos:altLabel       "a cycle of rnin ma pa practice focussing upon vajravarahi"@en-x-mixed ;
+        skos:prefLabel      "rdo rje phag mo'i zab khrid kyi chos skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0C215AE27DEF0743 , bdr:IDAD8FFF9EC5DFA0D6 , bdr:IDE873EB02F86F2064 ;
+        :authorshipStatement  "revealed from its place of concealment at ri-bo dpal-'bar by bstan-gnis-glin-pa"@en ;
+        :biblioNote         "reproduced from a manuscript from the library of yol-mo bla-ma rgyal-mtshan of helambu"@en ;
+        :extentStatement    "522 p." ;
+        :hasTitle           bdr:TT0528C476F4DAF6C1 , bdr:TT764C55C8D96FC839 ;
+        :instanceEvent      bdr:EVD7DFE8C18016F1BA ;
+        :instanceHasReproduction  bdr:W27602 ;
+        :instanceOf         bdr:WA1CZ1878 , bdr:WA27602 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "lama dawa and sherab gyaltsen"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT0528C476F4DAF6C1
+        a                   :Title ;
+        rdfs:label          "rdo rje phag mo'i zab khrid kyi chos skor/"@bo-x-ewts .
+    
+    bdr:TT764C55C8D96FC839
+        a                   :Subtitle ;
+        rdfs:label          "a cycle of rnin ma pa practice focussing upon vajravarahi"@en-x-mixed .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047279 {
+    bda:LG02732EDA9F4B16A8
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047279"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047279
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047279 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "74/MW1FEMC047279.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047279 ;
+        adm:logEntry        bda:LG02732EDA9F4B16A8 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6EACD3B2715E301A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "Coll part.03.05.2000.1.VI.1" .
+    
+    bdr:MF5EFFC98915EFC8A2
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "128" ;
+        :microfilmStrip     "222" .
+    
+    bdr:MW1FEMC047279
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាហោរាសាស្រ្ត"@km , "tamrā horāsāstr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6EACD3B2715E301A ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT23A4509728D09DC2 , bdr:TT37F8F4C0D830F46F ;
+        :instanceHasReproduction  bdr:W1FEMC037279 , bdr:W1FEMC047279 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5EFFC98915EFC8A2 ;
+        :note               bdr:NTD3F57631B08D7BB4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD3F57631B08D7BB4
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT23A4509728D09DC2
+        a                   :Title ;
+        rdfs:label          "តម្រាហោរាសាស្រ្ត"@km .
+    
+    bdr:TT37F8F4C0D830F46F
+        a                   :Title ;
+        rdfs:label          "tamrā horāsāstr"@km-x-twktt .
+}

@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020512 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020512
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020512 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0d/MW1FEMC020512.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020512 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD5E6A8CBCE4280D6
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.145.III.6" .
+    
+    bdr:MFA245897793AB70A9
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "69" ;
+        :microfilmStrip     "163" .
+    
+    bdr:MW1FEMC020512
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្ស​កឋិនខន្ធ"@km , "ānisaṅs kaṭhin khandh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD5E6A8CBCE4280D6 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT3EC4EFBA87A7D15D , bdr:TT7E4C5CF0C4BF01B7 , bdr:TT95CCAF281BFD9D0E , bdr:TTBB730D1EE9EE5C99 , bdr:TTCC35396FDBF7D0B3 , bdr:TTDDE01E906D237469 ;
+        :instanceHasReproduction  bdr:W1FEMC020512 ;
+        :instanceOf         bdr:WA1FEMC020512 , bdr:WA1FEMC060046 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA245897793AB70A9 ;
+        :note               bdr:NT83C771118D209674 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT83C771118D209674
+        a                   :Note ;
+        :contentLocationStatement  "pg. 99" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT3EC4EFBA87A7D15D
+        a                   :Title ;
+        rdfs:label          "អានិសង្ស​កឋិនខន្ធ"@km .
+    
+    bdr:TT7E4C5CF0C4BF01B7
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs jhmoḥ sāmantapāsādi gāthā"@km-x-twktt .
+    
+    bdr:TT95CCAF281BFD9D0E
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs jhmoḥ samantapāsādik kathā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7E4C5CF0C4BF01B7 .
+    
+    bdr:TTBB730D1EE9EE5C99
+        a                   :Title ;
+        rdfs:label          "ānisaṅs kaṭhin khandh"@km-x-twktt .
+    
+    bdr:TTCC35396FDBF7D0B3
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្ឃឈ្មោះសាមន្តបាសាទិគាថា"@km .
+    
+    bdr:TTDDE01E906D237469
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សឈ្មោះសមន្តបាសាទិកកថា"@km ;
+        :femcConversionOf   bdr:TTCC35396FDBF7D0B3 .
+}

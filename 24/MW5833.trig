@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW5833 {
+    bda:LG21BEAEA0FFCDF97A
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-09-09T11:37:52.788Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected folio number"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG2883594A9813B814
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG4B67D8FA4AD7496F
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-12-15T09:26:52.375Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG988F5D78995267EE
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-22T14:06:18.159Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW5833  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW5833 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "24/MW5833.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW5833 ;
+        adm:logEntry        bda:LG21BEAEA0FFCDF97A , bda:LG2883594A9813B814 , bda:LG4B67D8FA4AD7496F , bda:LG988F5D78995267EE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV73330EE89CF968EE
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2C9CEA98EC689C88
+        a                   bdr:HollisId ;
+        rdf:value           "014260978" .
+    
+    bdr:MW5833  a           :Instance ;
+        skos:prefLabel      "lam rim chung ngu'i zin bris/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2C9CEA98EC689C88 ;
+        :authorshipStatement  "dga' ldan the bo sprul skur 'bod pa ye shes thub bstan rgya mtsho zhes bgyi bas/"@bo-x-ewts ;
+        :biblioNote         "impressions from blocks preserved at sku 'bum byams pa gling"@en ;
+        :extentStatement    "277 ff." ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TT20FDFAC2E1F418CE , bdr:TT3212C00D392CA237 ;
+        :instanceEvent      bdr:EV73330EE89CF968EE ;
+        :instanceHasReproduction  bdr:W5833 ;
+        :instanceOf         bdr:WA1KG6256 , bdr:WA5833 ;
+        :note               bdr:NT2D8B6160FA236A09 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sku 'bum byams pa gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "sku 'bum byams pa gling /"@bo-x-ewts .
+    
+    bdr:NT2D8B6160FA236A09
+        a                   :Note ;
+        :noteText           "191 ff. in the 1 vol. printed gsung 'bum in the Potala collection."@en .
+    
+    bdr:TT20FDFAC2E1F418CE
+        a                   :Title ;
+        rdfs:label          "lam rim chung ngu'i zin bris/"@bo-x-ewts .
+    
+    bdr:TT3212C00D392CA237
+        a                   :TitlePageTitle ;
+        rdfs:label          "byang chub lam gyi rim pa chung ngu'i zin bris blo gsal rgya mtsho'i 'jug ngogs/"@bo-x-ewts .
+}

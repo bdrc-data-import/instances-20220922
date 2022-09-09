@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1798 {
+    bda:LG19218BADE12F5A73
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-11T12:13:07.522Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6EFA139DE978CCDB
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGFD35DB03BCFDB44F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1798  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1798 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "60/MW1NLM1798.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1798 ;
+        adm:logEntry        bda:LG19218BADE12F5A73 , bda:LG6EFA139DE978CCDB , bda:LGFD35DB03BCFDB44F , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1798  a       :Instance ;
+        skos:prefLabel      "skyabs 'gro bsdus pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "13.5x5" ;
+        :extentStatement    "8 ff., 7 ff., 3 ff., 6 ff., 6 ff. 4 ff., 4 ff., 10 ff., 3 ff., 8 ff., 8 ff., 7 ff., 2 ff., 3 ff., 6 ff., 3 ff., 6 ff., 6 ff., 1 ff., 3 ff., 3 ff., 4 ff., 3 ff., 2 ff. end folio missing" ;
+        :hasTitle           bdr:TT4FBAEAB3877CA7C2 ;
+        :instanceHasReproduction  bdr:W1NLM1798 ;
+        :instanceOf         bdr:WA1NLM1798 ;
+        :note               bdr:NT027F4CC219D7A59D , bdr:NT0E2FFBF69EB1F5A0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT027F4CC219D7A59D
+        a                   :Note ;
+        :noteText           "nlmId: M0059716"@en .
+    
+    bdr:NT0E2FFBF69EB1F5A0
+        a                   :Note ;
+        :noteText           "missingPages: M0059716-025 [Final pages are missing 3A] Image 233"@en .
+    
+    bdr:TT4FBAEAB3877CA7C2
+        a                   :Title ;
+        rdfs:label          "skyabs 'gro bsdus pa sogs/"@bo-x-ewts .
+}

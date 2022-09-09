@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW27311 {
+    bda:LG09E7E10A134DE307
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW27311  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW27311 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "38/MW27311.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW27311 ;
+        adm:logEntry        bda:LG09E7E10A134DE307 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5A9673DF604E362F
+        a                   :PublishedEvent ;
+        :eventWhen          "1981,1983printing"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1134EC64184D689B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786 .B548 1981" .
+    
+    bdr:ID5955DA332E24954D
+        a                   bdr:HollisId ;
+        rdf:value           "014259608" .
+    
+    bdr:IDF8501D38A54C95B8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85906565" .
+    
+    bdr:MW27311  a          :Instance ;
+        skos:altLabel       "lun hsi-tsang cheng chiao ho i chih tu"@zh-latn-wadegile ;
+        skos:prefLabel      "bod kyi chos srid zung 'brel skor bshad pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1134EC64184D689B , bdr:ID5955DA332E24954D , bdr:IDF8501D38A54C95B8 ;
+        :authorshipStatement  "dung dkar blo bzang 'phrin las kyis brtsams pa/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi 2."@bo-x-ewts ;
+        :extentStatement    "3. 3, 149 p." ;
+        :hasTitle           bdr:TTA2B4BB8DEFCFFAA8 , bdr:TTC506B62D10A0B495 ;
+        :instanceEvent      bdr:EV5A9673DF604E362F ;
+        :instanceHasReproduction  bdr:W27311 ;
+        :instanceOf         bdr:WA21783 , bdr:WA27311 ;
+        :note               bdr:NTE206047A8354F330 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTE206047A8354F330
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans for preservation purposes; not for distribution\n4312"@en .
+    
+    bdr:TTA2B4BB8DEFCFFAA8
+        a                   :ColophonTitle ;
+        rdfs:label          "lun hsi-tsang cheng chiao ho i chih tu"@zh-latn-wadegile .
+    
+    bdr:TTC506B62D10A0B495
+        a                   :Title ;
+        rdfs:label          "bod kyi chos srid zung 'brel skor bshad pa/"@bo-x-ewts .
+}

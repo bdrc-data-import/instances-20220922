@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW12334 {
+    bda:LGFB3646311280B68C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW12334  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW12334 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "65/MW12334.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW12334 ;
+        adm:logEntry        bda:LGFB3646311280B68C , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVA5A8A3DDD8C40F26
+        a                   :PublishedEvent ;
+        :eventWhen          "1982/1987"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0305AEAB54D0C482
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007386007-7" .
+    
+    bdr:ID4D54C9F86970E5E8
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7674 .T36 1982" .
+    
+    bdr:IDE752DDC8A8C1CC58
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83904360" .
+    
+    bdr:MW12334  a          :Instance ;
+        skos:prefLabel      "'jigs byed sgrub thabs rdo rje 'bar ba/"@bo-x-ewts , "The collected works of Jo-naṅ Rje-btsun Tāranātha."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0305AEAB54D0C482 , bdr:ID4D54C9F86970E5E8 , bdr:IDE752DDC8A8C1CC58 ;
+        :authorshipStatement  "rje btsun 'jam pa'i rdo rje khro bo rdo rje...zhes bya ba 'di ni kun dga' snying po tA ra nA thas rang lo nyer gnyis pa la sgrub gnas bsam gtan sdings su sbyar ba'o"@bo-x-ewts ;
+        :biblioNote         "in the 17 volume set of the collected works of ta ra na tha printed from a set of prints from the rtag-brtan phun-tshogs-glin blocks preserved in the library of the stog palace in ladakh"@en ;
+        :extentStatement    "v. 10, 25 ff." ;
+        :hasTitle           bdr:TT13405F8C70F1B898 , bdr:TT86C8DCBB68682F02 , bdr:TT94A9CB0036BE48B2 ;
+        :instanceEvent      bdr:EVA5A8A3DDD8C40F26 ;
+        :instanceOf         bdr:WA00KG03548 , bdr:WA12334 ;
+        :note               bdr:NT4CFC06BA0CEB8CD7 ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "c. namgyal & tsewang taru"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:NT4CFC06BA0CEB8CD7
+        a                   :Note ;
+        :noteText           "25 ff. in vol. 10 of the 17 vol. gsung 'bum printed from blocks preserved at Rtag-brtan-phun-tshogs-gling.\nTOH 475: Rgyud don thams cad kyi dri lan gsal ston sgrub thabs rdo rje 'bar ba.\nWritten at Bsam-gtan-sdings."@en .
+    
+    bdr:TT13405F8C70F1B898
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyud don thams cad dril nas nyams len tshul/_/gsal bar ston pa'i sgrub thabs rdo rje 'bar/_/rje btsun rdo rje 'jigs byed mnyes byed 'di/_/bris tshe cho 'phrul rnam 'gyur ci yang byung /"@bo-x-ewts .
+    
+    bdr:TT86C8DCBB68682F02
+        a                   :CoverTitle ;
+        rdfs:label          "The collected works of Jo-naṅ Rje-btsun Tāranātha."@en-x-mixed .
+    
+    bdr:TT94A9CB0036BE48B2
+        a                   :Title ;
+        rdfs:label          "'jigs byed sgrub thabs rdo rje 'bar ba/"@bo-x-ewts .
+}

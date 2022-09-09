@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046135 {
+    bda:LG26ADB7858B55CB3C
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046135"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046135
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046135 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "41/MW1FEMC046135.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046135 ;
+        adm:logEntry        bda:LG26ADB7858B55CB3C , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID567B7AF68817F8F8
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "093-B.04.03.03.III.1" .
+    
+    bdr:MFA1C8A1013E6C295C
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC046135
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនព្រះពុទុំនា្យ (១-៣០)"@km , "Kpoun braḥ buduṃnāy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID567B7AF68817F8F8 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT231329CAB1D3C648 , bdr:TTD2F73E7D8529F9D2 ;
+        :instanceHasReproduction  bdr:W1FEMC036135 , bdr:W1FEMC046135 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA1C8A1013E6C295C ;
+        :note               bdr:NT69CBD63128DF830D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT69CBD63128DF830D
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT231329CAB1D3C648
+        a                   :Title ;
+        rdfs:label          "Kpoun braḥ buduṃnāy"@km-x-twktt .
+    
+    bdr:TTD2F73E7D8529F9D2
+        a                   :Title ;
+        rdfs:label          "ក្បួនព្រះពុទុំនា្យ (១-៣០)"@km .
+}

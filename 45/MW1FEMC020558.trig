@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020558 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020558
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020558 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "45/MW1FEMC020558.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020558 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID11B8BAC615AE2703
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d'.191.III.1" .
+    
+    bdr:MFF8EC901C5A3CCE90
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "134" ;
+        :microfilmStrip     "228" .
+    
+    bdr:MW1FEMC020558
+        a                   :Instance ;
+        skos:prefLabel      "បឋមសម្ពោធិសង្ខេបសេចក្ដី"@km , "paṭham sambodhi saṅkhep sec-ktī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID11B8BAC615AE2703 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT3A0E32B8741EF7F7 , bdr:TT993F8C130C651D2B , bdr:TTAD2DD1E8544A4D4E , bdr:TTC2ABA373CFBB2B98 , bdr:TTD9A6E5BE3126FE93 , bdr:TTDF3CE8089D601A4D ;
+        :instanceHasReproduction  bdr:W1FEMC020558 ;
+        :instanceOf         bdr:WA1FEMC010114 , bdr:WA1FEMC020558 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF8EC901C5A3CCE90 ;
+        :note               bdr:NT1E186032385A0582 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1E186032385A0582
+        a                   :Note ;
+        :contentLocationStatement  "pg. 107" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT3A0E32B8741EF7F7
+        a                   :CoverTitle ;
+        rdfs:label          "បថមសម្ពោធិយ៉ខ្លី"@km .
+    
+    bdr:TT993F8C130C651D2B
+        a                   :Title ;
+        rdfs:label          "បឋមសម្ពោធិសង្ខេបសេចក្ដី"@km .
+    
+    bdr:TTAD2DD1E8544A4D4E
+        a                   :CoverTitle ;
+        rdfs:label          "បឋមសម្ពោធិយ៉ាងខ្លី"@km ;
+        :femcConversionOf   bdr:TT3A0E32B8741EF7F7 .
+    
+    bdr:TTC2ABA373CFBB2B98
+        a                   :CoverTitle ;
+        rdfs:label          "patham sambodhi y''a khlī"@km-x-twktt .
+    
+    bdr:TTD9A6E5BE3126FE93
+        a                   :Title ;
+        rdfs:label          "paṭham sambodhi saṅkhep sec-ktī"@km-x-twktt .
+    
+    bdr:TTDF3CE8089D601A4D
+        a                   :CoverTitle ;
+        rdfs:label          "paṭham sambodhi y''āṅ khlī"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC2ABA373CFBB2B98 .
+}

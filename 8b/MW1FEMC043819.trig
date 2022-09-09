@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043819 {
+    bda:LG82C01121F4EF8C42
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043819"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043819
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043819 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8b/MW1FEMC043819.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043819 ;
+        adm:logEntry        bda:LG82C01121F4EF8C42 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC616C48542955249
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "006-B.11.11.04.VII" .
+    
+    bdr:MF227194C03EDC54AC
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "54" .
+    
+    bdr:MW1FEMC043819
+        a                   :Instance ;
+        skos:prefLabel      "ធាតុអាខ្យាត, ធាតុក្រិត, ធាតុឧណាថ្ថ"@pi-khmr , "dhātuākhyāt,dhākrῑt,dhātu Uṇāthth"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC616C48542955249 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2, 1, 2, 1, 2" ;
+        :hasTitle           bdr:TT154D3CA43802FA78 , bdr:TTB91329B993D21DE9 ;
+        :instanceHasReproduction  bdr:W1FEMC033819 , bdr:W1FEMC043819 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF227194C03EDC54AC ;
+        :note               bdr:NTAA94EC273D6BF9C2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTAA94EC273D6BF9C2
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT154D3CA43802FA78
+        a                   :Title ;
+        rdfs:label          "ធាតុអាខ្យាត, ធាតុក្រិត, ធាតុឧណាថ្ថ"@pi-khmr .
+    
+    bdr:TTB91329B993D21DE9
+        a                   :Title ;
+        rdfs:label          "dhātuākhyāt,dhākrῑt,dhātu Uṇāthth"@pi-x-twktt .
+}

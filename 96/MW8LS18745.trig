@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8LS18745 {
+    bda:LG1A862732FA55DB0E
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-19T10:47:05.609Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, series name and number"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG64BFC8FCB489E591
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-14T12:35:08.609Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info, topic and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF674B5F8F88350E6
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-10T09:48:17.331Z"^^xsd:dateTime ;
+        adm:logMessage      "edited isbn and added edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:MW8LS18745  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW8LS18745 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "96/MW8LS18745.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8LS18745 ;
+        adm:logEntry        bda:LG1A862732FA55DB0E , bda:LG64BFC8FCB489E591 , bda:LGF674B5F8F88350E6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAACB297D017048CD
+        a                   :PublishedEvent ;
+        :eventWhen          "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0F9EDA117381E922
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105092253" .
+    
+    bdr:MW8LS18745  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "gzhis rtse sa khul gyi gnas yig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0F9EDA117381E922 ;
+        :authorshipStatement  "chos 'phel gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "2008 par gzhi dang po/ 2014 par thengs bzhi pa/"@bo-x-ewts ;
+        :extentStatement    "6, 213 p." ;
+        :hasTitle           bdr:TTD1552B28534F1193 , bdr:TTD2B3ABA56154FE1D ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVAACB297D017048CD ;
+        :instanceHasReproduction  bdr:W8LS18745 ;
+        :instanceOf         bdr:WA8LS18745 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS8LS18745 ;
+        :seriesNumber       "3" .
+    
+    bdr:TTD1552B28534F1193
+        a                   :Title ;
+        rdfs:label          "gzhis rtse sa khul gyi gnas yig"@bo-x-ewts .
+    
+    bdr:TTD2B3ABA56154FE1D
+        a                   :TitlePageTitle ;
+        rdfs:label          "gangs can bod kyi gnas bshad lam yig gsar ma/ gzhis rtse sa khul gyi gnas yig"@bo-x-ewts .
+}

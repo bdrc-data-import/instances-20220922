@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14599 {
+    bda:LGA821100A2982D82D
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-04-27T16:22:52.724Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE88FF840B5387B88
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-11-05T09:21:26.892Z"^^xsd:dateTime ;
+        adm:logMessage      "temp released for scan request to india"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG14599  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14599 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4c/MW1KG14599.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14599 ;
+        adm:logEntry        bda:LGA821100A2982D82D , bda:LGE88FF840B5387B88 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV885F60FBEAE2475F
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID135A95F562085ED9
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ950.G38 M45 2010" .
+    
+    bdr:ID7366C1130367B9B6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2011352163" .
+    
+    bdr:IDC85CBE5F8BDD3DAE
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542117045" .
+    
+    bdr:MW1KG14599  a       :Instance ;
+        skos:altLabel       "话说更敦群培"@zh-hans ;
+        skos:prefLabel      "dge chos rgyang mjal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID135A95F562085ED9 , bdr:ID7366C1130367B9B6 , bdr:IDC85CBE5F8BDD3DAE ;
+        :authorshipStatement  "me lces brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 2, 312 p." ;
+        :hasTitle           bdr:TT1A2902806DDE3DD1 , bdr:TT87C37AEACC7BDFBA ;
+        :instanceEvent      bdr:EV885F60FBEAE2475F ;
+        :instanceHasReproduction  bdr:W1KG14599 ;
+        :instanceOf         bdr:WA1KG14599 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG14599 .
+    
+    bdr:TT1A2902806DDE3DD1
+        a                   :TitlePageTitle ;
+        rdfs:label          "dge chos rgyang mjal/"@bo-x-ewts .
+    
+    bdr:TT87C37AEACC7BDFBA
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "话说更敦群培"@zh-hans .
+}

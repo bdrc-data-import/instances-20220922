@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046958 {
+    bda:LGB260C4A8D9FB409F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046958"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046958
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046958 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a5/MW1FEMC046958.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046958 ;
+        adm:logEntry        bda:LGB260C4A8D9FB409F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID093A1A3C0AB05080
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-R.05.06.01" .
+    
+    bdr:MW1FEMC046958
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ក្រំមទ្ធំម (ក១-កេ១០)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID093A1A3C0AB05080 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT6935A53A2E77415C ;
+        :instanceHasReproduction  bdr:W1FEMC046958 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTA830E862A830FF51 , bdr:NTEAA1323B6FE51114 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA830E862A830FF51
+        a                   :Note ;
+        :noteText           "Canister150_Strip244"@en .
+    
+    bdr:NTEAA1323B6FE51114
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6935A53A2E77415C
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ក្រំមទ្ធំម (ក១-កេ១០)"@km .
+}

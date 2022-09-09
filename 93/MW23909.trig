@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23909 {
+    bda:LG3B4DFF513FEA12E4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGC815B95E0F6C2055
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-09-13T10:30:31.791Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed archiveInfo volume"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23909  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23909 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "93/MW23909.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23909 ;
+        adm:logEntry        bda:LG3B4DFF513FEA12E4 , bda:LGC815B95E0F6C2055 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE360E3800AF9A497
+        a                   :PublishedEvent ;
+        :eventWhen          "1973/<1985>"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID254FDDF8132BB699
+        a                   bdr:HollisId ;
+        rdf:value           "014259219" .
+    
+    bdr:ID949D098AE22218F3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84901677" .
+    
+    bdr:IDC2EEE84CFEC579DF
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7697 .D59 1983" .
+    
+    bdr:IDDC80B3FD4EFBB629
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2431" .
+    
+    bdr:MW23909  a          :Instance , :SerialInstance ;
+        skos:altLabel       "a collection of mandalavidhi, initiations, and instructions"@en-x-mixed ;
+        skos:prefLabel      "dkyil 'khor brgya rtsa nor bu phreng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID254FDDF8132BB699 , bdr:ID949D098AE22218F3 , bdr:IDC2EEE84CFEC579DF , bdr:IDDC80B3FD4EFBB629 ;
+        :authorshipStatement  "compiled by 'jam-dbyans-'phrin-las under the inspiration of his guru ye-ses-don-grub-bstan-pa'i-rgyal-mtshan"@en ;
+        :biblioNote         "reproduced from a set of central tibetan prints"@en ;
+        :extentStatement    "v. 1-<4>" ;
+        :hasTitle           bdr:TTC2DA88620169F96B , bdr:TTEF5CDF84DAB69D2B ;
+        :instanceEvent      bdr:EVE360E3800AF9A497 ;
+        :instanceHasReproduction  bdr:W23909 ;
+        :instanceOf         bdr:WA23909 ;
+        :note               bdr:NT2F043ECB1F8C0B2D ;
+        :numberOfVolumes    4 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "ngawang gelek demo"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS11818 ;
+        :seriesNumber       "140-<143>" .
+    
+    bdr:NT2F043ECB1F8C0B2D
+        a                   :Note ;
+        :noteText           "5529-5532\ntbrc only three volumes which have been scanned; acquisition is underway for the 4th volume"@en .
+    
+    bdr:TTC2DA88620169F96B
+        a                   :Title ;
+        rdfs:label          "dkyil 'khor brgya rtsa nor bu phreng ba/"@bo-x-ewts .
+    
+    bdr:TTEF5CDF84DAB69D2B
+        a                   :Subtitle ;
+        rdfs:label          "a collection of mandalavidhi, initiations, and instructions"@en-x-mixed .
+}

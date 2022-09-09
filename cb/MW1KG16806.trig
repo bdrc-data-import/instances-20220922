@@ -1,0 +1,106 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16806 {
+    bda:LG6F2514145EFF9837
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-03-26T14:36:21.855Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG16806  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG16806 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "cb/MW1KG16806.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16806 ;
+        adm:logEntry        bda:LG6F2514145EFF9837 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR43CF8F3ADC8E2337
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7389 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CREA7F3192CDDA46FE
+        a                   :AgentAsCreator ;
+        :agent              bdr:P10072 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB72DB6A2F56A97BF
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID07BD5A1331F6291A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105071788" .
+    
+    bdr:IDD948F5783AFF1E83
+        a                   bdr:HollisId ;
+        rdf:value           "014256425" .
+    
+    bdr:MW1KG16806  a       :Instance , :SerialInstance ;
+        skos:altLabel       "甲岭之战"@zh-hans ;
+        skos:prefLabel      "'jar gling g.yul 'gyed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID07BD5A1331F6291A , bdr:IDD948F5783AFF1E83 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR43CF8F3ADC8E2337 , bdr:CREA7F3192CDDA46FE ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "6, 4, 588 p." ;
+        :hasTitle           bdr:TT04F663065F623C91 , bdr:TT216069A2EB88E4C8 , bdr:TTF5154BB2E8EC59AA ;
+        :illustrations      "ill. (col. plates)" ;
+        :instanceEvent      bdr:EVB72DB6A2F56A97BF ;
+        :instanceHasReproduction  bdr:W1KG16806 ;
+        :instanceOf         bdr:WA1KG16806 ;
+        :note               bdr:NTCA6D62CE55F379D0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC410 ;
+        :seriesNumber       "26" .
+    
+    bdr:NTCA6D62CE55F379D0
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT04F663065F623C91
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "甲岭之战"@zh-hans .
+    
+    bdr:TT216069A2EB88E4C8
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "jia ling zhi zhan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTF5154BB2E8EC59AA
+        a                   :Title ;
+        rdfs:label          "'jar gling g.yul 'gyed/"@bo-x-ewts .
+}

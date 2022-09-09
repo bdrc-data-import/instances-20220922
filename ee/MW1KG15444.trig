@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG15444 {
+    bda:LGEADD44E816CBBA87
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-10-08T11:53:48.016Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG15444  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG15444 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ee/MW1KG15444.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG15444 ;
+        adm:logEntry        bda:LGEADD44E816CBBA87 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV264391BB8303514F
+        a                   :PublishedEvent ;
+        :eventWhen          "1939"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5FCED6F4676F6817
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "74191711" .
+    
+    bdr:IDF4ED4A1A3303697A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "Z6621.P22 T615" .
+    
+    bdr:IDFF3424A4648DEA7E
+        a                   bdr:HollisId ;
+        rdf:value           "014256284" .
+    
+    bdr:MW1KG15444  a       :Instance ;
+        skos:prefLabel      "inventaire des manuscrits tibetains de touen-houang, conserves a la bibliotheque nationale"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5FCED6F4676F6817 , bdr:IDF4ED4A1A3303697A , bdr:IDFF3424A4648DEA7E ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT53443E5C7F403ADB , bdr:TTE3D4AE08FC919BFD ;
+        :instanceEvent      bdr:EV264391BB8303514F ;
+        :instanceHasReproduction  bdr:W1KG15444 ;
+        :instanceOf         bdr:WA1KG15444 ;
+        :note               bdr:NT7F425BEE9B77EFA7 ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "paris"@en ;
+        :publisherName      "librarie d'amerique et d'orient"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:NT7F425BEE9B77EFA7
+        a                   :Note ;
+        :noteText           "in french"@en .
+    
+    bdr:TT53443E5C7F403ADB
+        a                   :Title ;
+        rdfs:label          "inventaire des manuscrits tibetains de touen-houang, conserves a la bibliotheque nationale"@en .
+    
+    bdr:TTE3D4AE08FC919BFD
+        a                   :TitlePageTitle ;
+        rdfs:label          "inventaire des manuscrits tibetains de touen-houang, conserves a la bibliotheque nationale (fonds pelliot-tibetain, nos 1-849)"@en .
+}

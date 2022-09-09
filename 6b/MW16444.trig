@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW16444 {
+    bda:LG7458D289E3CD0C73
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW16444  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW16444 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "6b/MW16444.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW16444 ;
+        adm:logEntry        bda:LG7458D289E3CD0C73 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVB65A9E3D1ED23030
+        a                   :PublishedEvent ;
+        :eventWhen          "1971"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0A4921C0BA25AFF0
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001570424-6" .
+    
+    bdr:ID3F579854A44B6992
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76924556" .
+    
+    bdr:ID5B6A6972D5660F3A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7679" .
+    
+    bdr:MW16444  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "gtsang pa smyon pa'i rnam thar dad pa'i spu slong /"@bo-x-ewts , "Bde mchog mkhaʾ ʾgro snyan rgyud =Ras chung snyan rgyud : two manuscript collections of texts from the yig cha of Gtsang-smyon He-ru-ka."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0A4921C0BA25AFF0 , bdr:ID3F579854A44B6992 , bdr:ID5B6A6972D5660F3A ;
+        :biblioNote         "in the two volume ras chung snyan brgyud collection; \"reproduced from 16th and 17th century manuscripts belonging to the venerable dookpa thoosay rimpoche.\""@en ;
+        :extentStatement    "v. 1" ;
+        :hasTitle           bdr:TT17B46D0519904BDD , bdr:TT443A83AA60203CCA , bdr:TT463CB073F7FAA2DC ;
+        :instanceEvent      bdr:EVB65A9E3D1ED23030 ;
+        :instanceOf         bdr:WA16444 ;
+        :note               bdr:NTD238F26DCC365305 ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "s.w. tashigangpa"@en ;
+        :script             bdr:ScriptLatn ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 11-12" .
+    
+    bdr:NTD238F26DCC365305
+        a                   :Note ;
+        :noteText           "1543 blockprint in 65 folia from the library of Tibet House\nMargin marked ka"@en .
+    
+    bdr:TT17B46D0519904BDD
+        a                   :TitlePageTitle ;
+        rdfs:label          "grub thob gtsang pa smyon pa'i rnam thar dad pa'i spu slong g.yo ba/"@bo-x-ewts .
+    
+    bdr:TT443A83AA60203CCA
+        a                   :Title ;
+        rdfs:label          "gtsang pa smyon pa'i rnam thar dad pa'i spu slong /"@bo-x-ewts .
+    
+    bdr:TT463CB073F7FAA2DC
+        a                   :CoverTitle ;
+        rdfs:label          "Bde mchog mkhaʾ ʾgro snyan rgyud =Ras chung snyan rgyud : two manuscript collections of texts from the yig cha of Gtsang-smyon He-ru-ka."@en-x-mixed .
+}

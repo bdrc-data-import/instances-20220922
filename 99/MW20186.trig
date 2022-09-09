@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20186 {
+    bda:LGC897F36B93D70D92
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20186  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20186 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "99/MW20186.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20186 ;
+        adm:logEntry        bda:LGC897F36B93D70D92 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV347500BE1ABBF4B7
+        a                   :PublishedEvent ;
+        :eventWhen          "1994"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID095AC4021F3FA850
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3735 .B76 1994" .
+    
+    bdr:ID505EAD268B735277
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "722300701x" .
+    
+    bdr:IDEFCFF2F76552AF4E
+        a                   bdr:HollisId ;
+        rdf:value           "014258083" .
+    
+    bdr:IDF33B9D5F373CE146
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "97916077" .
+    
+    bdr:MW20186  a          :Instance ;
+        skos:altLabel       "hsiao lin ch'un shih"@zh-latn-wadegile ;
+        skos:prefLabel      "bzhad gad dpyid kyi pho nya/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID095AC4021F3FA850 , bdr:ID505EAD268B735277 , bdr:IDEFCFF2F76552AF4E , bdr:IDF33B9D5F373CE146 ;
+        :authorshipStatement  "bsod tshes brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par thengs 1"@bo-x-ewts ;
+        :extentStatement    "vi, 6, 282 p." ;
+        :hasTitle           bdr:TT59A2C6D1E008644E , bdr:TT96690E043460A91C , bdr:TTE1163AF2D46ACA49 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV347500BE1ABBF4B7 ;
+        :instanceHasReproduction  bdr:W20186 ;
+        :instanceOf         bdr:WA20186 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT59A2C6D1E008644E
+        a                   :Title ;
+        rdfs:label          "bzhad gad dpyid kyi pho nya/"@bo-x-ewts .
+    
+    bdr:TT96690E043460A91C
+        a                   :ColophonTitle ;
+        rdfs:label          "hsiao lin ch'un shih"@zh-latn-wadegile .
+    
+    bdr:TTE1163AF2D46ACA49
+        a                   :ColophonTitle ;
+        rdfs:label          "xiao lin chun shi"@zh-latn-pinyin-x-ndia .
+}

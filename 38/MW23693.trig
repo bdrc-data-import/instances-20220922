@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23693 {
+    bda:LG0E48F8825533D7FB
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-06T09:54:44.294Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGDE49EB504FBFF773
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23693  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23693 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "38/MW23693.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23693 ;
+        adm:logEntry        bda:LG0E48F8825533D7FB , bda:LGDE49EB504FBFF773 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV46ED5F90E0CFFB0E
+        a                   :PublishedEvent ;
+        :eventWhen          "0199/?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDECC43ADF02AE4735
+        a                   bdr:HollisId ;
+        rdf:value           "014259039" .
+    
+    bdr:MW23693  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_mkhas grub rje (sku 'bum par ma)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDECC43ADF02AE4735 ;
+        :extentStatement    "16 v." ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TT88BEA4AB8DF0A544 ;
+        :instanceEvent      bdr:EV46ED5F90E0CFFB0E ;
+        :instanceHasReproduction  bdr:W23693 ;
+        :instanceOf         bdr:WA1KG10279 , bdr:WA23693 ;
+        :note               bdr:NTBEDBC5FCFE1EB0F8 ;
+        :numberOfVolumes    16 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sku 'bum monastery"@en ;
+        :publisherName      "sku 'bum byams pa gling par khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTBEDBC5FCFE1EB0F8
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 0692-0707"@en .
+    
+    bdr:TT88BEA4AB8DF0A544
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_mkhas grub rje (sku 'bum par ma)"@bo-x-ewts .
+}

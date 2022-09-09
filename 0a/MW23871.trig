@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23871 {
+    bda:LGA2032B13FDAD4138
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF62710F6D96F60A4
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T16:53:46.436Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23871  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23871 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "0a/MW23871.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23871 ;
+        adm:logEntry        bda:LGA2032B13FDAD4138 , bda:LGF62710F6D96F60A4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV35D4DF187B2B3077
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7B3B332F1D479F95
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683.4 .B34 1984" .
+    
+    bdr:ID81420FE21BDE1A81
+        a                   bdr:HollisId ;
+        rdf:value           "014259191" .
+    
+    bdr:IDB01F4F7B38D008A4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84901128" .
+    
+    bdr:IDB64AB58F8FFB1593
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2510" .
+    
+    bdr:MW23871  a          :Instance ;
+        skos:altLabel       "sgrub pa nams su blan ba'i lag len dgos 'dod 'byun ba'i gter mdzod : instructions on the practice of sadhana"@en-x-mixed ;
+        skos:prefLabel      "sgrub pa nyams su blang ba'i lag len dgos 'dod 'byung ba'i gter mdzod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7B3B332F1D479F95 , bdr:ID81420FE21BDE1A81 , bdr:IDB01F4F7B38D008A4 , bdr:IDB64AB58F8FFB1593 ;
+        :authorshipStatement  "by 'ba'-ra-ba rgyal-mtshan-dpal-bzan-po (1310-1391)"@en ;
+        :biblioNote         "reproduced from a rare manuscript from sle-mi wa-tse rin-chen-glin"@en ;
+        :extentStatement    "597 p." ;
+        :hasTitle           bdr:TT5D3004BC740AFE52 , bdr:TT8E2EF8BF8C0ECBA1 ;
+        :instanceEvent      bdr:EV35D4DF187B2B3077 ;
+        :instanceHasReproduction  bdr:W23871 ;
+        :instanceOf         bdr:WA23871 ;
+        :note               bdr:NT3558A2A17A28D5BB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, distt. kangra, h.p."@en ;
+        :publisherName      "bir tibetan society"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT3558A2A17A28D5BB
+        a                   :Note ;
+        :noteText           "in dbu med script\n3608"@en .
+    
+    bdr:TT5D3004BC740AFE52
+        a                   :TitlePageTitle ;
+        rdfs:label          "sgrub pa nams su blan ba'i lag len dgos 'dod 'byun ba'i gter mdzod : instructions on the practice of sadhana"@en-x-mixed .
+    
+    bdr:TT8E2EF8BF8C0ECBA1
+        a                   :Title ;
+        rdfs:label          "sgrub pa nyams su blang ba'i lag len dgos 'dod 'byung ba'i gter mdzod/"@bo-x-ewts .
+}

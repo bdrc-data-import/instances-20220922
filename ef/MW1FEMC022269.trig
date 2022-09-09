@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022269 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022269
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022269 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ef/MW1FEMC022269.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022269 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID39B5DB1A0289B600
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.347.III.6" .
+    
+    bdr:MF001E6DE26B68F3AA
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "143" ;
+        :microfilmStrip     "237" .
+    
+    bdr:MW1FEMC022269
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សព្រះ"@km , "ānisaṅs braḥ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID39B5DB1A0289B600 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT09DBF3B6EBDD7494 , bdr:TT4132CA83722F5132 , bdr:TT57257886B17879A4 , bdr:TT800D53D1EE690A3B , bdr:TTB9644D13B3F17011 , bdr:TTD68CD6D69943B888 ;
+        :instanceHasReproduction  bdr:W1FEMC022269 ;
+        :instanceOf         bdr:WA1FEMC022269 , bdr:WA1FEMC060005 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF001E6DE26B68F3AA ;
+        :note               bdr:NT4CD47BB54B78AB4F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1004" .
+    
+    bdr:NT4CD47BB54B78AB4F
+        a                   :Note ;
+        :contentLocationStatement  "pg. 405" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT09DBF3B6EBDD7494
+        a                   :CoverTitle ;
+        rdfs:label          "អន្នីសំឃ៊ព្រះពុទ្ធរូប"@km .
+    
+    bdr:TT4132CA83722F5132
+        a                   :CoverTitle ;
+        rdfs:label          "annīsaṃgh braḥ buddh rūp"@km-x-twktt .
+    
+    bdr:TT57257886B17879A4
+        a                   :Title ;
+        rdfs:label          "អានិសង្សព្រះ"@km .
+    
+    bdr:TT800D53D1EE690A3B
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សព្រះពុទ្ធរូប"@km ;
+        :femcConversionOf   bdr:TT09DBF3B6EBDD7494 .
+    
+    bdr:TTB9644D13B3F17011
+        a                   :Title ;
+        rdfs:label          "ānisaṅs braḥ"@km-x-twktt .
+    
+    bdr:TTD68CD6D69943B888
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs braḥ buddh rūp"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4132CA83722F5132 .
+}

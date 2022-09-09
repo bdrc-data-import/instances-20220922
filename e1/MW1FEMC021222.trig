@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021222 {
+    bda:LG8A355F05A1252479
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021222"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021222
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021222 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e1/MW1FEMC021222.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021222 ;
+        adm:logEntry        bda:LG8A355F05A1252479 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID579742862A1D8EF3
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.40.VII" .
+    
+    bdr:MF0FB4222DD7F5730E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XXII" ;
+        :microfilmStrip     "47" .
+    
+    bdr:MW1FEMC021222
+        a                   :Instance ;
+        skos:prefLabel      "បរមត្ថមញ្ជុសារអនុដីកាសង្គហ"@km , "paramatthamañjusā anuṭīkā saṅgaha"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID579742862A1D8EF3 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2, 3, 5" ;
+        :hasTitle           bdr:TT5389946415A25A98 , bdr:TT5F03844100F8166C , bdr:TT6AAF041CB6BC4FB7 , bdr:TTFA05BBED7D84F4D5 ;
+        :instanceHasReproduction  bdr:W1FEMC021222 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF0FB4222DD7F5730E ;
+        :note               bdr:NT8DF0894B852C0DE7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT8DF0894B852C0DE7
+        a                   :Note ;
+        :contentLocationStatement  "pg. 223" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT5389946415A25A98
+        a                   :CoverTitle ;
+        rdfs:label          "បរមត្ថសារមញ្ជុសារអនុដិកាសង្គហ"@km .
+    
+    bdr:TT5F03844100F8166C
+        a                   :CoverTitle ;
+        rdfs:label          "paramatthasāramañjusāra anuṭikā saṅgaha"@km-x-twktt .
+    
+    bdr:TT6AAF041CB6BC4FB7
+        a                   :Title ;
+        rdfs:label          "បរមត្ថមញ្ជុសារអនុដីកាសង្គហ"@km ;
+        :femcConversionOf   bdr:TT5389946415A25A98 .
+    
+    bdr:TTFA05BBED7D84F4D5
+        a                   :Title ;
+        rdfs:label          "paramatthamañjusā anuṭīkā saṅgaha"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5F03844100F8166C .
+}

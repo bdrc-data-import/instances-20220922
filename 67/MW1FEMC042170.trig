@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042170 {
+    bda:LGB68E9FFA2C6EB96E
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042170"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042170
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC042170 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "67/MW1FEMC042170.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042170 ;
+        adm:logEntry        bda:LGB68E9FFA2C6EB96E , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID55BE1597D3D05051
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "025-B.11.08.02.III.6" .
+    
+    bdr:MF105D351F6B215A36
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "195" .
+    
+    bdr:MW1FEMC042170
+        a                   :Instance ;
+        skos:prefLabel      "សព្វទាន"@km , "Sabbadān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID55BE1597D3D05051 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-4, 6-16" ;
+        :hasTitle           bdr:TT11D14B0F2E4F545E , bdr:TTDEDFEB5BFB8EC9AC ;
+        :instanceHasReproduction  bdr:W1FEMC032170 , bdr:W1FEMC042170 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF105D351F6B215A36 ;
+        :note               bdr:NT9BD354EF67B5530F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9BD354EF67B5530F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT11D14B0F2E4F545E
+        a                   :Title ;
+        rdfs:label          "សព្វទាន"@km .
+    
+    bdr:TTDEDFEB5BFB8EC9AC
+        a                   :Title ;
+        rdfs:label          "Sabbadān"@km-x-twktt .
+}

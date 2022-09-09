@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043811 {
+    bda:LG567B29A0289B8AF2
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043811"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043811
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043811 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8c/MW1FEMC043811.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043811 ;
+        adm:logEntry        bda:LG567B29A0289B8AF2 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC4FF95124075E568
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "049-B.11.11.04.VI.6" .
+    
+    bdr:MFE1E8DBA658B47B0D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "180" .
+    
+    bdr:MW1FEMC043811
+        a                   :Instance ;
+        skos:prefLabel      "អព្ភិសែក្ខព្រះឆាកមហាប្ងាំស្កូលថ្វា្យចង្ហានសឃ (១-២៥)"@km , "abbhi sēkkh braḤ chākmahāpāṃń skūl thvāy cańhān sagh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC4FF95124075E568 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT0064127E8E419523 , bdr:TTB097422C08538B65 ;
+        :instanceHasReproduction  bdr:W1FEMC033811 , bdr:W1FEMC043811 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE1E8DBA658B47B0D ;
+        :note               bdr:NT7DA014F4642CE67B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT7DA014F4642CE67B
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0064127E8E419523
+        a                   :Title ;
+        rdfs:label          "abbhi sēkkh braḤ chākmahāpāṃń skūl thvāy cańhān sagh"@km-x-twktt .
+    
+    bdr:TTB097422C08538B65
+        a                   :Title ;
+        rdfs:label          "អព្ភិសែក្ខព្រះឆាកមហាប្ងាំស្កូលថ្វា្យចង្ហានសឃ (១-២៥)"@km .
+}

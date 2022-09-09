@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046113 {
+    bda:LG1C7FA673755F80FD
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046113"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046113
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046113 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "16/MW1FEMC046113.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046113 ;
+        adm:logEntry        bda:LG1C7FA673755F80FD , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID214173B6036835E4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "072-B.04.03.03.III.1" .
+    
+    bdr:MFF3302866E8300310
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC046113
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះមហាវិបាកកម្ម (១-៣០)"@km , "braḥ mahā Vipāk kamma"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID214173B6036835E4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT05D91527F25879F5 , bdr:TTBD8B39B9571CB034 ;
+        :instanceHasReproduction  bdr:W1FEMC036113 , bdr:W1FEMC046113 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF3302866E8300310 ;
+        :note               bdr:NTE14B865EF822CD06 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTE14B865EF822CD06
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT05D91527F25879F5
+        a                   :Title ;
+        rdfs:label          "braḥ mahā Vipāk kamma"@km-x-twktt .
+    
+    bdr:TTBD8B39B9571CB034
+        a                   :Title ;
+        rdfs:label          "ព្រះមហាវិបាកកម្ម (១-៣០)"@km .
+}

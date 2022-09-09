@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046457 {
+    bda:LG700A1654B6E3AC5D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046457"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046457
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046457 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "04/MW1FEMC046457.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046457 ;
+        adm:logEntry        bda:LG700A1654B6E3AC5D , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF8737EA844D543F5
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "019-B.04.03.04.VII" .
+    
+    bdr:MF3F2A6CAD3B361D94
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "48" .
+    
+    bdr:MW1FEMC046457
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះមហាសតិបដ្ឋានសូត្រ (១-៥៦)"@pi-khmr , "braḥ mahāsatīpaṭṭān Sūtr"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF8737EA844D543F5 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT499F52FA99EB8BE4 , bdr:TT8A44D813C9723132 ;
+        :instanceHasReproduction  bdr:W1FEMC036457 , bdr:W1FEMC046457 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF3F2A6CAD3B361D94 ;
+        :note               bdr:NT0EFC8A34BE48813F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT0EFC8A34BE48813F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT499F52FA99EB8BE4
+        a                   :Title ;
+        rdfs:label          "ព្រះមហាសតិបដ្ឋានសូត្រ (១-៥៦)"@pi-khmr .
+    
+    bdr:TT8A44D813C9723132
+        a                   :Title ;
+        rdfs:label          "braḥ mahāsatīpaṭṭān Sūtr"@pi-x-twktt .
+}

@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046395 {
+    bda:LGB4491E8FAA22430C
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046395"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046395
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046395 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "c1/MW1FEMC046395.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046395 ;
+        adm:logEntry        bda:LGB4491E8FAA22430C , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID24D8EA73CA4494E2
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "131-B.04.03.04.III.6" .
+    
+    bdr:MFE1E51C72AF391416
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "170" .
+    
+    bdr:MW1FEMC046395
+        a                   :Instance ;
+        skos:prefLabel      "ចំម្លងបុន (ក-កោ)"@km , "caṃm laṅ pun"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID24D8EA73CA4494E2 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT566CEB9BAD9E15CF , bdr:TT84A0BFD6401A9020 ;
+        :instanceHasReproduction  bdr:W1FEMC036395 , bdr:W1FEMC046395 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE1E51C72AF391416 ;
+        :note               bdr:NTA8C00C6009248A6F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA8C00C6009248A6F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT566CEB9BAD9E15CF
+        a                   :Title ;
+        rdfs:label          "caṃm laṅ pun"@km-x-twktt .
+    
+    bdr:TT84A0BFD6401A9020
+        a                   :Title ;
+        rdfs:label          "ចំម្លងបុន (ក-កោ)"@km .
+}

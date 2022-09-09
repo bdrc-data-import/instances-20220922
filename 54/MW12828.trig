@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW12828 {
+    bda:LG4296CDB588B0AF96
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6855050B290F0A3D
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-12T13:51:02.558Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW12828  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW12828 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "54/MW12828.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW12828 ;
+        adm:logEntry        bda:LG4296CDB588B0AF96 , bda:LG6855050B290F0A3D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD1889E14AC028CEC
+        a                   :PublishedEvent ;
+        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2CDDDBDF7D086642
+        a                   bdr:HollisId ;
+        rdf:value           "014254677" .
+    
+    bdr:IDA5906FD0817FF4AE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ286 .K56 1976" .
+    
+    bdr:IDE18FF518D93BADDE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76901310" .
+    
+    bdr:MW12828  a          :Instance ;
+        skos:altLabel       "a detailed history of buddhist dharma in india and tibet"@en ;
+        skos:prefLabel      "chos 'byung rin po che'i gter mdzod bstan pa gsal bar byed pa'i nyi 'od/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2CDDDBDF7D086642 , bdr:IDA5906FD0817FF4AE , bdr:IDE18FF518D93BADDE ;
+        :authorshipStatement  "by klon-chen-pa dri-med-'od-zer"@en ;
+        :biblioNote         "reproduced from a unique manuscript from the library of kanjur rinpoche"@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT5C3F772A59402720 , bdr:TT9751FFFF12009EF2 , bdr:TTB7815D5E17F698E7 ;
+        :instanceEvent      bdr:EVD1889E14AC028CEC ;
+        :instanceHasReproduction  bdr:W12828 ;
+        :instanceOf         bdr:WA12828 ;
+        :note               bdr:NTF364D81D487CD615 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "dodrup sangyey lama"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NTF364D81D487CD615
+        a                   :Note ;
+        :noteText           "-4450\n\nthe attribution of this text to klong chen pa is dubious."@en .
+    
+    bdr:TT5C3F772A59402720
+        a                   :Title ;
+        rdfs:label          "chos 'byung rin po che'i gter mdzod bstan pa gsal bar byed pa'i nyi 'od/"@bo-x-ewts .
+    
+    bdr:TT9751FFFF12009EF2
+        a                   :TitlePageTitle ;
+        rdfs:label          "chos 'byun rin po che'i gter mdzod thub bstan gsal bar byed pa'i nyi 'od/"@bo-x-ewts .
+    
+    bdr:TTB7815D5E17F698E7
+        a                   :Subtitle ;
+        rdfs:label          "a detailed history of buddhist dharma in india and tibet"@en .
+}

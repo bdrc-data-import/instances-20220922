@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010283 {
+    bda:LGA2E483E9D966B29F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010283"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010283
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010283 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "40/MW1FEMC010283.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010283 ;
+        adm:logEntry        bda:LGA2E483E9D966B29F , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC039564 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:ID0769B80BB18BABA1
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "054-PP.02.08.01.III.1" .
+    
+    bdr:MF88AAA8EA4898E698
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "13" ;
+        :microfilmStrip     "52" .
+    
+    bdr:MW1FEMC010283
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāynā grè 3"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0769B80BB18BABA1 ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT0887C9E89165B295 , bdr:TT1F21A72BC3DC6C16 , bdr:TT4B7E608A480D2FBE , bdr:TT57017DC901F6D1C7 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF88AAA8EA4898E698 ;
+        :note               bdr:NT0880242AC56BEBD6 , bdr:NT91CF4C764D221B10 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT0880242AC56BEBD6
+        a                   :Note ;
+        :noteText           "Should we write [1 volume] ?"@en .
+    
+    bdr:NT91CF4C764D221B10
+        a                   :Note ;
+        :contentLocationStatement  "pg. 108" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT0887C9E89165B295
+        a                   :CoverTitle ;
+        rdfs:label          "vinăy abbhidamm braḥ sutr"@km-x-twktt .
+    
+    bdr:TT1F21A72BC3DC6C16
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TT4B7E608A480D2FBE
+        a                   :Title ;
+        rdfs:label          "saṅgāynā grè 3"@km-x-twktt .
+    
+    bdr:TT57017DC901F6D1C7
+        a                   :CoverTitle ;
+        rdfs:label          "វិន័យ​ អភិធម្ម ព្រះសូត្រ (ក្រាំង)"@km .
+}

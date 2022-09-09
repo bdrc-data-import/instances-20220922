@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW4CZ346626 {
+    bda:LG12468C5EDE89F67D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-01T10:53:23.311Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGD20FE166DBD7882F
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-07-01T11:59:19.164Z"^^xsd:dateTime ;
+        adm:logMessage      "added more info"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:MW4CZ346626  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW4CZ346626 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "3a/MW4CZ346626.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW4CZ346626 ;
+        adm:logEntry        bda:LG12468C5EDE89F67D , bda:LGD20FE166DBD7882F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD90EC7EE74F0AA01
+        a                   :PublishedEvent ;
+        :eventWhen          "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID83F30FA7FB288433
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9380362168" .
+    
+    bdr:MW4CZ346626  a      :Instance , :SerialInstance ;
+        skos:prefLabel      "smyon pa'i snying gi ri mo/"@bo-x-ewts , "my crazy tale"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID83F30FA7FB288433 ;
+        :authorshipStatement  "lja phan bod kyi shes rig bslab sbyang gi tshogs pa che ba/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "5 v.  (at the moment tbrc holds 1st volume only)" ;
+        :hasTitle           bdr:TT64A2CE66C0AEFBE1 , bdr:TTD6525227487B12C7 ;
+        :illustrations      "Illustrted" ;
+        :instanceEvent      bdr:EVD90EC7EE74F0AA01 ;
+        :instanceHasReproduction  bdr:W4CZ346626 ;
+        :instanceOf         bdr:WA4CZ346626 ;
+        :numberOfVolumes    5 ;
+        :publisherLocation  "hariyana, india"@en ;
+        :publisherName      "drukpa publication"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS4CZ346626 ;
+        :seriesNumber       "part1" .
+    
+    bdr:TT64A2CE66C0AEFBE1
+        a                   :OtherTitle ;
+        rdfs:label          "my crazy tale"@en .
+    
+    bdr:TTD6525227487B12C7
+        a                   :Title ;
+        rdfs:label          "smyon pa'i snying gi ri mo/"@bo-x-ewts .
+}

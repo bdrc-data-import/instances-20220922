@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046565 {
+    bda:LG37B1685A719AC8DF
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046565"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046565
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046565 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "de/MW1FEMC046565.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046565 ;
+        adm:logEntry        bda:LG37B1685A719AC8DF , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC8B3E98014F5D127
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "037-B.11.04.01.III.1" .
+    
+    bdr:MFFF20E9275F8138D3
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "182" .
+    
+    bdr:MW1FEMC046565
+        a                   :Instance ;
+        skos:prefLabel      "អានន្ទឆ្លើ្យព្រះអព្ភីធម្ម"@km , "ānand chlȍy braḥ abbhidhamma"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC8B3E98014F5D127 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "4" ;
+        :hasTitle           bdr:TTB1DB19F0462B671E , bdr:TTCB9415079625F629 ;
+        :instanceHasReproduction  bdr:W1FEMC036565 , bdr:W1FEMC046565 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFFF20E9275F8138D3 ;
+        :note               bdr:NTFB864D7153577790 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTFB864D7153577790
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTB1DB19F0462B671E
+        a                   :Title ;
+        rdfs:label          "អានន្ទឆ្លើ្យព្រះអព្ភីធម្ម"@km .
+    
+    bdr:TTCB9415079625F629
+        a                   :Title ;
+        rdfs:label          "ānand chlȍy braḥ abbhidhamma"@km-x-twktt .
+}

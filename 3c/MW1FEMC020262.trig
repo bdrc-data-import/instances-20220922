@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020262 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020262
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020262 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3c/MW1FEMC020262.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020262 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDBD618CB564F9E14F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.155.III.1" .
+    
+    bdr:MF38188EE5DB0B553E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "62" ;
+        :microfilmStrip     "156" .
+    
+    bdr:MW1FEMC020262
+        a                   :Instance ;
+        skos:prefLabel      "បឋមសង្គាយនាព្រះធម្មចក្ក (បឋមសង្គាយនាសម្រាប់ទេសនា១អង្គឯង)"@km , "paṭham saṅgāyanā braḥ dhammacakk"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBD618CB564F9E14F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT18CBFC5CE9FE6ECE , bdr:TT5CACDBA6E7A32090 , bdr:TT99289154A75C0007 , bdr:TTD39447E7BA65B98C ;
+        :instanceHasReproduction  bdr:W1FEMC020262 ;
+        :instanceOf         bdr:WA1FEMC010115 , bdr:WA1FEMC020262 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF38188EE5DB0B553E ;
+        :note               bdr:NT5DB5DD1B0FB579FF , bdr:NT9AEBB038F46D1FBE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1149" .
+    
+    bdr:NT5DB5DD1B0FB579FF
+        a                   :Note ;
+        :noteText           "(saṅgāyanā ā1 secue prêcheur) what is it?and where can I write it?"@en .
+    
+    bdr:NT9AEBB038F46D1FBE
+        a                   :Note ;
+        :contentLocationStatement  "pg. 52" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT18CBFC5CE9FE6ECE
+        a                   :Title ;
+        rdfs:label          "paṭham saṅgāyanā braḥ dhammacakk"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD39447E7BA65B98C .
+    
+    bdr:TT5CACDBA6E7A32090
+        a                   :Title ;
+        rdfs:label          "បឋមសង្គាយនាព្រះធម្មចក្ក (បឋមសង្គាយនាសម្រាប់ទេសនា១អង្គឯង)"@km ;
+        :femcConversionOf   bdr:TT99289154A75C0007 .
+    
+    bdr:TT99289154A75C0007
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មសំឃ៊ាយនារព្រះធម្មចក្ខ"@km .
+    
+    bdr:TTD39447E7BA65B98C
+        a                   :CoverTitle ;
+        rdfs:label          "dhamm saṃghāyanār braḥ dhammacakkh"@km-x-twktt .
+}

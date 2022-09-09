@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25371 {
+    bda:LG03F2CABFC5BBBFE9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-13T10:45:21.124Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor and edition"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG9880D3764BE8E9A7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-11T15:08:43.719Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG25371  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25371 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "1f/MW1KG25371.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25371 ;
+        adm:logEntry        bda:LG03F2CABFC5BBBFE9 , bda:LG9880D3764BE8E9A7 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR0008D3F63A12B5F9
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75566 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB48A72686D5B9509
+        a                   :PublishedEvent ;
+        :eventWhen          "2010,2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID37E4172FA5B7834D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542015464" .
+    
+    bdr:ID6B91F7EBE8E3AD0E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "HN49.C6 D72 2010" .
+    
+    bdr:IDD01C6424FF49F90A
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2012350231" .
+    
+    bdr:MW1KG25371  a       :Instance ;
+        skos:prefLabel      "dpal 'byor rig pa'i gzhig stangs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID37E4172FA5B7834D , bdr:ID6B91F7EBE8E3AD0E , bdr:IDD01C6424FF49F90A ;
+        :authorshipStatement  "dge gnyen gyis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR0008D3F63A12B5F9 ;
+        :editionStatement   "par gzhi dang po/ par thengs gnyis pa/"@bo-x-ewts ;
+        :extentStatement    "2, 5, 371 p." ;
+        :hasTitle           bdr:TT698DE1EE79BAFBBA ;
+        :instanceEvent      bdr:EVB48A72686D5B9509 ;
+        :instanceHasReproduction  bdr:W1KG25371 ;
+        :instanceOf         bdr:WA1KG25371 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG25371 .
+    
+    bdr:TT698DE1EE79BAFBBA
+        a                   :Title ;
+        rdfs:label          "dpal 'byor rig pa'i gzhig stangs/"@bo-x-ewts .
+}

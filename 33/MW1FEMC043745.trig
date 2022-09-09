@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043745 {
+    bda:LGD8B2724F6B4B620B
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043745"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043745
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043745 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "33/MW1FEMC043745.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043745 ;
+        adm:logEntry        bda:LGD8B2724F6B4B620B , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5512789A3FF4AE67
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "036-B.11.05.03.III.4" .
+    
+    bdr:MFBA362D92AF631307
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "188" .
+    
+    bdr:MW1FEMC043745
+        a                   :Instance ;
+        skos:prefLabel      "វិសុជ្ជនាចោត្តឆ្លើយអភិធម្ម (ក-៧)"@km , "visujjanācottachlőy abhidhamm"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5512789A3FF4AE67 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT8674D0502F0D1553 , bdr:TTEFB7519A56721D6A ;
+        :instanceHasReproduction  bdr:W1FEMC033745 , bdr:W1FEMC043745 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBA362D92AF631307 ;
+        :note               bdr:NTC92E88ECE39CE47D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTC92E88ECE39CE47D
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT8674D0502F0D1553
+        a                   :Title ;
+        rdfs:label          "វិសុជ្ជនាចោត្តឆ្លើយអភិធម្ម (ក-៧)"@km .
+    
+    bdr:TTEFB7519A56721D6A
+        a                   :Title ;
+        rdfs:label          "visujjanācottachlőy abhidhamm"@km-x-twktt .
+}

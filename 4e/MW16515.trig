@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW16515 {
+    bda:LG1F933CAAB20FE3AC
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-06T12:28:43.734Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and soyrce printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG3B666F7BC937AA2F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW16515  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW16515 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "4e/MW16515.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW16515 ;
+        adm:logEntry        bda:LG1F933CAAB20FE3AC , bda:LG3B666F7BC937AA2F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC9F266F4672CD7E3
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID126F1F67E771FD88
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .B558 1984" .
+    
+    bdr:ID66263811CB55BB96
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84900513" .
+    
+    bdr:IDFBD967B9ABE1DFAA
+        a                   bdr:HollisId ;
+        rdf:value           "014254765" .
+    
+    bdr:MW16515  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of ke'u-tshan sprul-sku blo-bzan-'jam-dbyans-smon-lam"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_blo bzang 'jam dbyangs smon lam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID126F1F67E771FD88 , bdr:ID66263811CB55BB96 , bdr:IDFBD967B9ABE1DFAA ;
+        :biblioNote         "reproduced from prints from the se-ra smad ke'u-tshan bla-bran blocks"@en ;
+        :extentStatement    "2 v." ;
+        :hasSourcePrintery  bdr:G2CN10855 ;
+        :hasTitle           bdr:TT99EFC9433E5D8A5E , bdr:TTB9CC5ADBE638E302 ;
+        :instanceEvent      bdr:EVC9F266F4672CD7E3 ;
+        :instanceHasReproduction  bdr:W16515 ;
+        :instanceOf         bdr:WA16515 ;
+        :note               bdr:NT2AAC616F152E2737 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works & archives"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT2AAC616F152E2737
+        a                   :Note ;
+        :noteText           "-3892\n\nNo. 10 in series one of the Bod brgyud nang bstan dpyad gzhi yig rigs = Historical materials of Tibetan Buddhism, published by the Krung go'i Then cin Dpe rnying Dpar skrun Khang. Number of volumes of this gsung 'bum in these 80 volumes unknown."@en .
+    
+    bdr:TT99EFC9433E5D8A5E
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang 'jam dbyangs smon lam/"@bo-x-ewts .
+    
+    bdr:TTB9CC5ADBE638E302
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of ke'u-tshan sprul-sku blo-bzan-'jam-dbyans-smon-lam"@en-x-mixed .
+}

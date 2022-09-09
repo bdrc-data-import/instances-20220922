@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043851 {
+    bda:LGA57992C5A265F29A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043851"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043851
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043851 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fb/MW1FEMC043851.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043851 ;
+        adm:logEntry        bda:LGA57992C5A265F29A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC1768C615F4123AB
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "018-B.06.07.02.III.1" .
+    
+    bdr:MF84BEA98833C29496
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "223" .
+    
+    bdr:MW1FEMC043851
+        a                   :Instance ;
+        skos:prefLabel      "ត្រ្យៃសរណគំម្មហើ្យនិងព្រះក្មាំថ្ថាន (១-៣១)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC1768C615F4123AB ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT3D689EF19408B6D7 ;
+        :instanceHasReproduction  bdr:W1FEMC033851 , bdr:W1FEMC043851 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF84BEA98833C29496 ;
+        :note               bdr:NT97537BCF759E2631 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT97537BCF759E2631
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3D689EF19408B6D7
+        a                   :Title ;
+        rdfs:label          "ត្រ្យៃសរណគំម្មហើ្យនិងព្រះក្មាំថ្ថាន (១-៣១)"@km .
+}

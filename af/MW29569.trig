@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29569 {
+    bda:LG2EC3391106E60D42
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29569  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29569 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "af/MW29569.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29569 ;
+        adm:logEntry        bda:LG2EC3391106E60D42 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5A94F246D1D58708
+        a                   :PublishedEvent ;
+        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID743C6C05E3D2D816
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BF1714.T53 S54 1976" .
+    
+    bdr:IDC17F851D03846B28
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77900725" .
+    
+    bdr:IDD41C27F7830AD7B4
+        a                   bdr:HollisId ;
+        rdf:value           "014260033" .
+    
+    bdr:MW29569  a          :Instance , :SerialInstance ;
+        skos:altLabel       "a verse treatise on the principles of tibetan astrology"@en ;
+        skos:prefLabel      "'byung rtsis man ngag zla ba'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID743C6C05E3D2D816 , bdr:IDC17F851D03846B28 , bdr:IDD41C27F7830AD7B4 ;
+        :authorshipStatement  "by smin-glin lo-chen dharma-sri"@en ;
+        :biblioNote         "reproduced from prints from the 1927 lhasa blocks"@en ;
+        :extentStatement    "69 p." ;
+        :hasTitle           bdr:TT608DE744BD62E076 , bdr:TT693D1979B93C5D88 , bdr:TTCACD65B6267F2BFF ;
+        :instanceEvent      bdr:EV5A94F246D1D58708 ;
+        :instanceHasReproduction  bdr:W29569 ;
+        :instanceOf         bdr:WA29569 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "dondup tashi"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 82" .
+    
+    bdr:TT608DE744BD62E076
+        a                   :Subtitle ;
+        rdfs:label          "a verse treatise on the principles of tibetan astrology"@en .
+    
+    bdr:TT693D1979B93C5D88
+        a                   :Title ;
+        rdfs:label          "'byung rtsis man ngag zla ba'i 'od zer/"@bo-x-ewts .
+    
+    bdr:TTCACD65B6267F2BFF
+        a                   :TitlePageTitle ;
+        rdfs:label          "'byun rtsis man nag zla ba'i 'od zer"@bo-alalc97 .
+}

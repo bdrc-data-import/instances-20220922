@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8835 {
+    bda:LGE69D693E9580F72E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFB189D1678497B4E
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-06T14:37:49.26Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW8835  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW8835 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "1c/MW8835.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8835 ;
+        adm:logEntry        bda:LGE69D693E9580F72E , bda:LGFB189D1678497B4E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEDAEC7FED90CFA12
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID52FC69CB76CFA7BA
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "010908482" .
+    
+    bdr:IDA2D89E1FD0BDC106
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .B54 1983" .
+    
+    bdr:IDE51CDD10218099B7
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83904338" .
+    
+    bdr:MW8835  a           :Instance ;
+        skos:altLabel       "an instruction on the practice of bodhicitta according to the rnying-ma-pa tradition"@en ;
+        skos:prefLabel      "byang sems kyi don bsgom pa'i yi ge"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID52FC69CB76CFA7BA , bdr:IDA2D89E1FD0BDC106 , bdr:IDE51CDD10218099B7 ;
+        :biblioNote         "Reproduced from a manuscript from the library of Dzong Sar Khentse Labrang."@en ;
+        :extentStatement    "43 p." ;
+        :hasTitle           bdr:TT0B1F660A1E0EA139 , bdr:TT52423361FFB10B6E , bdr:TT917A4328E242A518 ;
+        :instanceEvent      bdr:EVEDAEC7FED90CFA12 ;
+        :instanceHasReproduction  bdr:W8835 ;
+        :instanceOf         bdr:WA8835 ;
+        :note               bdr:NTFD68055FB7090E22 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "sherab gyaltsen lama"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NTFD68055FB7090E22
+        a                   :Note ;
+        :noteText           "Listed in the 4 ff. gsung 'bum gyi tho byang from Bdud-'joms Rin-po-che's library. Text not yet found."@en .
+    
+    bdr:TT0B1F660A1E0EA139
+        a                   :OtherTitle ;
+        rdfs:label          "an instruction on the practice of bodhicitta according to the rnying-ma-pa tradition"@en .
+    
+    bdr:TT52423361FFB10B6E
+        a                   :TitlePageTitle ;
+        rdfs:label          "byang chub kyi sems kyi don bsgom pa'i yi ge gzhi lam 'bras bu'i don gsal ba zhes bya ba lta sgom spyod pa'i man ngag"@bo-x-ewts .
+    
+    bdr:TT917A4328E242A518
+        a                   :Title ;
+        rdfs:label          "byang sems kyi don bsgom pa'i yi ge"@bo-x-ewts .
+}

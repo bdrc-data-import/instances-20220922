@@ -1,0 +1,118 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20816 {
+    bda:LG5F566F343657979A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG99EC147B69D63996
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-25T15:02:27.89Z"^^xsd:dateTime ;
+        adm:logMessage      "changed from onhold to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE8EC99963A5DD54B
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-05-03T10:04:51.943Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20816  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20816 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "47/MW20816.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20816 ;
+        adm:logEntry        bda:LG5F566F343657979A , bda:LG99EC147B69D63996 , bda:LGE8EC99963A5DD54B , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC70F07CF32F9ABA2
+        a                   :PublishedEvent ;
+        :eventWhen          "1988-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3FAF37DEA325EA6C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "10064516" .
+    
+    bdr:ID8DB9535B165046C8
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3701 .S62" .
+    
+    bdr:IDB419EF677DA6F7C6
+        a                   bdr:HollisId ;
+        rdf:value           "014258226" .
+    
+    bdr:IDE3CB63224F17396B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98903110" .
+    
+    bdr:MW20816  a          :Instance ;
+        skos:altLabel       "violet : tibetan traditional literature"@en , "bang jin mei duo"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "spang rgyan me tog (dus deb/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3FAF37DEA325EA6C , bdr:ID8DB9535B165046C8 , bdr:IDB419EF677DA6F7C6 , bdr:IDE3CB63224F17396B ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :hasTitle           bdr:TT1D23E1919AAD02C9 , bdr:TT1D63D5C7745F5D2A , bdr:TTA93965C51DC7EFAC , bdr:TTEA5E89E743491DFD ;
+        :instanceEvent      bdr:EVC70F07CF32F9ABA2 ;
+        :instanceHasReproduction  bdr:W20816 ;
+        :instanceOf         bdr:WA20409 , bdr:WA20816 ;
+        :note               bdr:NTA38E5B91F5ACA4C0 ;
+        :numberOfVolumes    160 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs rig rtsal lhan tshogs/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTA38E5B91F5ACA4C0
+        a                   :Note ;
+        :noteText           "tbrc holdings:\n1988-2-4\n1989-1-4 (3 and 4 are in one volume)\n1990-1-4 (60-63)\n1991-1-4 (64-67)\n1992-1-4 (68-71)\n1993-1-4 (72-75)\n1994-1-3 (76-78)\n1995-1-4 (79-82)\n1996-1-4 (83-86)\n1997-3 (90)\n1998-3-4 (94-95)\n1999-1-4 (96-99)\n2000-1-4 (100-103)\n2001-1-4 (104-107)\n2002-1-4 (108-111)\n2003-1-(112)\n2010-1-(140)\n2016-1-3-(164-166)\n2018-1-(172) \n2019-2-(177)"@en .
+    
+    bdr:TT1D23E1919AAD02C9
+        a                   :Title ;
+        rdfs:label          "spang rgyan me tog (dus deb/)"@bo-x-ewts .
+    
+    bdr:TT1D63D5C7745F5D2A
+        a                   :OtherTitle ;
+        rdfs:label          "bang jin mei duo"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTA93965C51DC7EFAC
+        a                   :Subtitle ;
+        rdfs:label          "bod kyi dmangs khrod rtsom rig dus deb/"@bo-x-ewts .
+    
+    bdr:TTEA5E89E743491DFD
+        a                   :OtherTitle ;
+        rdfs:label          "violet : tibetan traditional literature"@en .
+}

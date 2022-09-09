@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30076 {
+    bda:LG3D462D0577DEA102
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30076  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30076 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d4/MW30076.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30076 ;
+        adm:logEntry        bda:LG3D462D0577DEA102 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5FC44C0C89108ECB
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE089ADBA52F9B63D
+        a                   bdr:HollisId ;
+        rdf:value           "014260603" .
+    
+    bdr:IDFC5611CBE8849031
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "71950540" .
+    
+    bdr:MW30076  a          :Instance ;
+        skos:prefLabel      "g.yung drung bon gyi zhal 'don nyung bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE089ADBA52F9B63D , bdr:IDFC5611CBE8849031 ;
+        :authorshipStatement  "kun gsal snying pos brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "116 p." ;
+        :hasTitle           bdr:TT537504034C5A4AE9 ;
+        :illustrations      "col. ill." ;
+        :instanceEvent      bdr:EV5FC44C0C89108ECB ;
+        :instanceHasReproduction  bdr:W30076 ;
+        :instanceOf         bdr:WA30076 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT537504034C5A4AE9
+        a                   :Title ;
+        rdfs:label          "g.yung drung bon gyi zhal 'don nyung bsdus/"@bo-x-ewts .
+}

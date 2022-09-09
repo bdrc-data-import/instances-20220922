@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21886 {
+    bda:LG2A32B746D3BA3FB0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE49940366F72B4A3
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-06-11T13:02:20.994Z"^^xsd:dateTime ;
+        adm:logMessage      "added ISBN"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGF97F678298771BB4
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-04-06T10:25:36.094Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW21886  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21886 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "18/MW21886.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21886 ;
+        adm:logEntry        bda:LG2A32B746D3BA3FB0 , bda:LGE49940366F72B4A3 , bda:LGF97F678298771BB4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0CF8F14A5861DA3C
+        a                   :PublishedEvent ;
+        :eventWhen          "1981"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID51E91F198E987754
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7565 .T74 1981" .
+    
+    bdr:IDC0BB60A4854DB19C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105076496" .
+    
+    bdr:IDEC7759A1481E7385
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85906596" .
+    
+    bdr:MW21886  a          :Instance ;
+        skos:altLabel       "五明概论"@zh-hans ;
+        skos:prefLabel      "bod kyi rig gnas lnga'i rnam gzhag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID51E91F198E987754 , bdr:IDC0BB60A4854DB19C , bdr:IDEC7759A1481E7385 ;
+        :authorshipStatement  "tshul khrims rin chen gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 85 p." ;
+        :hasTitle           bdr:TT471E7D27487F5415 , bdr:TT9C96CB340E804367 , bdr:TTA287C14A01AC3099 ;
+        :instanceEvent      bdr:EV0CF8F14A5861DA3C ;
+        :instanceHasReproduction  bdr:W21886 ;
+        :instanceOf         bdr:WA21886 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT471E7D27487F5415
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "五明概论"@zh-hans .
+    
+    bdr:TT9C96CB340E804367
+        a                   :Title ;
+        rdfs:label          "bod kyi rig gnas lnga'i rnam gzhag"@bo-x-ewts .
+    
+    bdr:TTA287C14A01AC3099
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "wu ming gai lun"@zh-latn-pinyin-x-ndia .
+}

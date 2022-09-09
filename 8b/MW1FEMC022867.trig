@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022867 {
+    bda:LGA8C629233059AEDD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022867"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022867
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022867 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "8b/MW1FEMC022867.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022867 ;
+        adm:logEntry        bda:LGA8C629233059AEDD , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID7A24AF4FE99F2A48
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.343.VII" .
+    
+    bdr:MF33614CB0E69BAAC7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LVI" ;
+        :microfilmStrip     "81" .
+    
+    bdr:MW1FEMC022867
+        a                   :Instance ;
+        skos:prefLabel      "យោជនាដីកាអភិធម្មត្ថសង្គហតតិយ"@km , "yojanā ṭīkā abhidhammatthasaṅgahatatiya"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7A24AF4FE99F2A48 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-16" ;
+        :hasTitle           bdr:TT09501EB71E9F2DA8 , bdr:TT213F7611776D6C6A , bdr:TT6B2BFAA4E4CEC479 , bdr:TTAC7F06D9D1232F13 ;
+        :instanceHasReproduction  bdr:W1FEMC022867 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF33614CB0E69BAAC7 ;
+        :note               bdr:NT2294BF2E2EE1ABC2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "171" .
+    
+    bdr:NT2294BF2E2EE1ABC2
+        a                   :Note ;
+        :contentLocationStatement  "pg. 515" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT09501EB71E9F2DA8
+        a                   :CoverTitle ;
+        rdfs:label          "យោជនាដីកាអភិធម្មសង្គហតតិយ"@km .
+    
+    bdr:TT213F7611776D6C6A
+        a                   :Title ;
+        rdfs:label          "យោជនាដីកាអភិធម្មត្ថសង្គហតតិយ"@km ;
+        :femcConversionOf   bdr:TT09501EB71E9F2DA8 .
+    
+    bdr:TT6B2BFAA4E4CEC479
+        a                   :CoverTitle ;
+        rdfs:label          "yojanā ṭīkā abhidhammasaṅgahatatiya"@km-x-twktt .
+    
+    bdr:TTAC7F06D9D1232F13
+        a                   :Title ;
+        rdfs:label          "yojanā ṭīkā abhidhammatthasaṅgahatatiya"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6B2BFAA4E4CEC479 .
+}

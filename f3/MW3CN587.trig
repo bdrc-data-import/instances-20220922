@@ -1,0 +1,46 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN587 {
+    bda:LG23DDBE2AEB68729A
+        a                   adm:WithdrawData ;
+        adm:logDate         "2014-11-22T09:39:07.569Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn works - they were for testing only"@en ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LG54DE560B14EA6E7D
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2014-11-12T08:50:21.533Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:MW3CN587  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN587 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "f3/MW3CN587.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN587 ;
+        adm:logEntry        bda:LG23DDBE2AEB68729A , bda:LG54DE560B14EA6E7D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:MW3CN587  a         :Instance ;
+        skos:prefLabel      "test/"@bo-x-ewts ;
+        :hasTitle           bdr:TT1EBF4AB90FF1DE58 ;
+        :instanceHasReproduction  bdr:W3CN587 ;
+        :numberOfVolumes    1 .
+    
+    bdr:TT1EBF4AB90FF1DE58
+        a                   :Title ;
+        rdfs:label          "test/"@bo-x-ewts .
+}

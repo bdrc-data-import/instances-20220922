@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043813 {
+    bda:LG0E3547AFE83B6996
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043813"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043813
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043813 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "52/MW1FEMC043813.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043813 ;
+        adm:logEntry        bda:LG0E3547AFE83B6996 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDCA61527B35699B2B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "051-B.11.11.04.V.3" .
+    
+    bdr:MF0F8F738D94B485EF
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "180" .
+    
+    bdr:MW1FEMC043813
+        a                   :Instance ;
+        skos:prefLabel      "កម្មដ្ឋាន (ក-យ)"@km , "kammaṭṭhan"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCA61527B35699B2B ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT5FBC4841EAC516A9 , bdr:TT7713C407947A8C18 ;
+        :instanceHasReproduction  bdr:W1FEMC033813 , bdr:W1FEMC043813 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF0F8F738D94B485EF ;
+        :note               bdr:NT4EA4CCFD9405D07A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1964" .
+    
+    bdr:NT4EA4CCFD9405D07A
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5FBC4841EAC516A9
+        a                   :Title ;
+        rdfs:label          "កម្មដ្ឋាន (ក-យ)"@km .
+    
+    bdr:TT7713C407947A8C18
+        a                   :Title ;
+        rdfs:label          "kammaṭṭhan"@km-x-twktt .
+}

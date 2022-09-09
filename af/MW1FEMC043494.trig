@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043494 {
+    bda:LGD63F725F4AC446FA
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043494"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043494
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043494 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "af/MW1FEMC043494.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043494 ;
+        adm:logEntry        bda:LGD63F725F4AC446FA , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID266219FF87BA0037
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "082-B.06.06.01.VIII.1" .
+    
+    bdr:MFF7D1C8342B3531BC
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "244" .
+    
+    bdr:MW1FEMC043494
+        a                   :Instance ;
+        skos:prefLabel      "យាមខុនរុង (១-១១)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID266219FF87BA0037 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTCE68208431835840 ;
+        :instanceHasReproduction  bdr:W1FEMC043494 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF7D1C8342B3531BC ;
+        :note               bdr:NT676C4172B775156F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT676C4172B775156F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTCE68208431835840
+        a                   :Title ;
+        rdfs:label          "យាមខុនរុង (១-១១)"@km .
+}

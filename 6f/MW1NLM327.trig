@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM327 {
+    bda:LG35CB67D9472D016F
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-08-26T15:23:01.013Z"^^xsd:dateTime ;
+        adm:logMessage      "FULL CATALOGED"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG65710E9E97C2D454
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGB3A32DE7D2DE62DA
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-09T11:43:56.39Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM327  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM327 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "6f/MW1NLM327.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM327 ;
+        adm:logEntry        bda:LG35CB67D9472D016F , bda:LG65710E9E97C2D454 , bda:LGB3A32DE7D2DE62DA , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV62AA7A5CFE2CB72C
+        a                   :PublishedEvent ;
+        :eventWhen          "l."^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW1NLM327  a        :Instance ;
+        skos:prefLabel      "tog gzungs/"@bo-x-ewts ;
+        :dimensionsStatement  "59x7.5" ;
+        :extentStatement    "140 ff." ;
+        :hasTitle           bdr:TT7CD4E1D31485A24A , bdr:TTB8023C2C34816318 ;
+        :instanceEvent      bdr:EV62AA7A5CFE2CB72C ;
+        :instanceHasReproduction  bdr:W1NLM327 ;
+        :instanceOf         bdr:WA1NLM178 , bdr:WA1NLM327 ;
+        :note               bdr:NT541A012F40AB96C3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT541A012F40AB96C3
+        a                   :Note ;
+        :noteText           "nlmId: M0058240"@en .
+    
+    bdr:TT7CD4E1D31485A24A
+        a                   :Title ;
+        rdfs:label          "tog gzungs/"@bo-x-ewts .
+    
+    bdr:TTB8023C2C34816318
+        a                   :TitlePageTitle ;
+        rdfs:label          "'phags pa 'dus pa rin po che tog gi gzungs/"@bo-x-ewts .
+}

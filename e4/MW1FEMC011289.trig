@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011289 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011289
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011289 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e4/MW1FEMC011289.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011289 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5DA595A7590DB5F6
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "010-A.07.03.02.III.1" .
+    
+    bdr:MFB13F80F554847216
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "44" ;
+        :microfilmStrip     "103" .
+    
+    bdr:MW1FEMC011289
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មរតនវណ្ណនា"@km , "dhamm ratan vaṇṇanā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5DA595A7590DB5F6 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT01463C2A61233404 , bdr:TT01F0C2A3049E8C2C , bdr:TT0324C30081C60E4F , bdr:TTE64D1ED4AF6B6472 ;
+        :instanceHasReproduction  bdr:W1FEMC011289 ;
+        :instanceOf         bdr:WA1FEMC010027 , bdr:WA1FEMC011289 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFB13F80F554847216 ;
+        :note               bdr:NT1BF05C0A8202B0AD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1BF05C0A8202B0AD
+        a                   :Note ;
+        :contentLocationStatement  "pg. 303" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT01463C2A61233404
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មរតនកថា"@km .
+    
+    bdr:TT01F0C2A3049E8C2C
+        a                   :Title ;
+        rdfs:label          "dhamm ratan vaṇṇanā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0324C30081C60E4F .
+    
+    bdr:TT0324C30081C60E4F
+        a                   :CoverTitle ;
+        rdfs:label          "dhamm ratan kathā"@km-x-twktt .
+    
+    bdr:TTE64D1ED4AF6B6472
+        a                   :Title ;
+        rdfs:label          "ធម្មរតនវណ្ណនា"@km ;
+        :femcConversionOf   bdr:TT01463C2A61233404 .
+}

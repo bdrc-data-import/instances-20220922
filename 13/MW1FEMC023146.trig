@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023146 {
+    bda:LG7911E561D13594B4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023146"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023146
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023146 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "13/MW1FEMC023146.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023146 ;
+        adm:logEntry        bda:LG7911E561D13594B4 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID2E390A4D65135A4F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.954.VI.6" .
+    
+    bdr:MW1FEMC023146
+        a                   :Instance ;
+        skos:prefLabel      "រូបគំនូរស្អាងភ្នំខ្សាច់ឈ្មោះតោះបន្ទុក"@km , "rūp gaṃnūr sa-āṅ bhnaṃ khsāc' jhmoḥ toḥ panduk"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2E390A4D65135A4F ;
+        :biblioNote         "This manuscript was digitized by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imagining Services, and Fonds pour l’Edition des Manuscripts du Cambodge (FEMC), under the auspices of The Ministry of Culture and Fine Arts, Cambodia (ក្រសួងវប្បធម៌ និងវិចិត្រសិល្បៈ). We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT1DACD6F268C26466 , bdr:TT56EE27C1985C8BCB ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :note               bdr:NT153383A4A24B5B7A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "UB070" .
+    
+    bdr:NT153383A4A24B5B7A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 556" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1DACD6F268C26466
+        a                   :Title ;
+        rdfs:label          "រូបគំនូរស្អាងភ្នំខ្សាច់ឈ្មោះតោះបន្ទុក"@km .
+    
+    bdr:TT56EE27C1985C8BCB
+        a                   :Title ;
+        rdfs:label          "rūp gaṃnūr sa-āṅ bhnaṃ khsāc' jhmoḥ toḥ panduk"@km-x-twktt .
+}

@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25455 {
+    bda:LG65739FA8E9A01A5A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-15T12:58:08.993Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF2ED346C97125A80
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-14T16:48:21.033Z"^^xsd:dateTime ;
+        adm:logMessage      "added translator"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW1KG25455  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25455 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "34/MW1KG25455.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25455 ;
+        adm:logEntry        bda:LG65739FA8E9A01A5A , bda:LGF2ED346C97125A80 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB92076BF95975C26
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDBAF26E317BD39943
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542018649" .
+    
+    bdr:MW1KG25455  a       :Instance ;
+        skos:altLabel       "世界童话故事精选"@zh-hans ;
+        skos:prefLabel      "'dzam gling byis pa'i gtam rgyud gces bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBAF26E317BD39943 ;
+        :authorshipStatement  "dpal ldan gyis bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 3, 2, 197 p." ;
+        :hasTitle           bdr:TT362E410998D48DEB , bdr:TT4D823D6521A31F49 , bdr:TT6C91948C45FC7C4B , bdr:TT976DA6CB335DE4B5 ;
+        :instanceEvent      bdr:EVB92076BF95975C26 ;
+        :instanceHasReproduction  bdr:W1KG25455 ;
+        :instanceOf         bdr:WA1KG25455 ;
+        :note               bdr:NTFB78DA0FCCDECF9E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS2PD19112 .
+    
+    bdr:NTFB78DA0FCCDECF9E
+        a                   :Note ;
+        :noteText           "same book of W2PD19091"@en .
+    
+    bdr:TT362E410998D48DEB
+        a                   :TitlePageTitle ;
+        rdfs:label          "'dzam gling byis sgrung grags can gces bsdus/"@bo-x-ewts .
+    
+    bdr:TT4D823D6521A31F49
+        a                   :Title ;
+        rdfs:label          "'dzam gling byis pa'i gtam rgyud gces bsdus/"@bo-x-ewts .
+    
+    bdr:TT6C91948C45FC7C4B
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "世界童话故事精选"@zh-hans .
+    
+    bdr:TT976DA6CB335DE4B5
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "shi jie tong hua gu shi jing xuan"@zh-latn-pinyin-x-ndia .
+}

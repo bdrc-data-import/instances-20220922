@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29212 {
+    bda:LG429961D6B50B7677
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW29212  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29212 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "13/MW29212.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29212 ;
+        adm:logEntry        bda:LG429961D6B50B7677 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVD1EA00F5E0E29D4A
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1A2FD99AB2E24D91
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785 .Y572 2001" .
+    
+    bdr:ID34685C5F37CF2F63
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "009884096-7" .
+    
+    bdr:ID8F818A3E4B542D65
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003323366" .
+    
+    bdr:MW29212  a          :Instance ;
+        skos:prefLabel      "skyid shod sde pa'i skor/"@bo-x-ewts , "Skyid-śod-sde-paʾi skor /Yon-tan-rgya-mtsho."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1A2FD99AB2E24D91 , bdr:ID34685C5F37CF2F63 , bdr:ID8F818A3E4B542D65 ;
+        :authorshipStatement  "rtsom pa po, yon tan rgya mtsho/"@bo-x-ewts ;
+        :extentStatement    "63 p." ;
+        :hasTitle           bdr:TT2FD850FEECA26F62 , bdr:TTEBDEE523FDF53B6B ;
+        :illustrations      "geneal. tables" ;
+        :instanceEvent      bdr:EVD1EA00F5E0E29D4A ;
+        :instanceOf         bdr:WA29212 ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "printed at the kmt press"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:TT2FD850FEECA26F62
+        a                   :CoverTitle ;
+        rdfs:label          "Skyid-śod-sde-paʾi skor /Yon-tan-rgya-mtsho."@en-x-mixed .
+    
+    bdr:TTEBDEE523FDF53B6B
+        a                   :Title ;
+        rdfs:label          "skyid shod sde pa'i skor/"@bo-x-ewts .
+}

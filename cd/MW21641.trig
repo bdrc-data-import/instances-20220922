@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21641 {
+    bda:LG31D11846D4C83C3E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW21641  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21641 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "cd/MW21641.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21641 ;
+        adm:logEntry        bda:LG31D11846D4C83C3E , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EV8A00E52FD96C93A5
+        a                   :PublishedEvent ;
+        :eventWhen          "1985,1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID108213F991BE844D
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008327133-3" .
+    
+    bdr:IDC9C0EECB60578506
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542006436" .
+    
+    bdr:MW21641  a          :Instance ;
+        skos:prefLabel      "lam rim che ba/"@bo-x-ewts , "Mñam med Tsoṅ-kha-pa chen pos mdzad paʾi Byaṅ chub Lam rim che ba bźugs so."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID108213F991BE844D , bdr:IDC9C0EECB60578506 ;
+        :authorshipStatement  "rje tsong kha pas brtsams/"@bo-x-ewts ;
+        :biblioNote         "based upon the sku 'bum byams pa gling edition"@en ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "813 p." ;
+        :hasTitle           bdr:TT286FBD153B03D66E , bdr:TT4EB8218BB07124DC , bdr:TTF125FA7C6EE3D6D2 ;
+        :instanceEvent      bdr:EV8A00E52FD96C93A5 ;
+        :instanceOf         bdr:WA21641 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:TT286FBD153B03D66E
+        a                   :CoverTitle ;
+        rdfs:label          "Mñam med Tsoṅ-kha-pa chen pos mdzad paʾi Byaṅ chub Lam rim che ba bźugs so."@en-x-mixed .
+    
+    bdr:TT4EB8218BB07124DC
+        a                   :TitlePageTitle ;
+        rdfs:label          "mnyam med tsong kha pa chen pos mdzad pa'i byang chub lam rim che ba/"@bo-x-ewts .
+    
+    bdr:TTF125FA7C6EE3D6D2
+        a                   :Title ;
+        rdfs:label          "lam rim che ba/"@bo-x-ewts .
+}

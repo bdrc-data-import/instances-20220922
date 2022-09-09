@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023258 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023258
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023258 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "42/MW1FEMC023258.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023258 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID769A673A0044B1B1
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.972.V.1" .
+    
+    bdr:MW1FEMC023258
+        a                   :Instance ;
+        skos:prefLabel      "អរិយបុគ្គល"@km , "ariy puggal "@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID769A673A0044B1B1 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT04389CD1CD5161AC , bdr:TT2721A90721937533 , bdr:TT31A19C6ABC19591D , bdr:TT41421AABBCF159BB , bdr:TT6D209056724701A7 , bdr:TTBE51FD51EB5024A9 ;
+        :instanceHasReproduction  bdr:W1FEMC023258 ;
+        :instanceOf         bdr:WA1FEMC023258 , bdr:WA1FEMC070001 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTF865967331A79C42 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF865967331A79C42
+        a                   :Note ;
+        :contentLocationStatement  "pg. 566" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT04389CD1CD5161AC
+        a                   :Title ;
+        rdfs:label          "ariy puggal "@km-x-twktt .
+    
+    bdr:TT2721A90721937533
+        a                   :Title ;
+        rdfs:label          "អរិយបុគ្គល"@km .
+    
+    bdr:TT31A19C6ABC19591D
+        a                   :CoverTitle ;
+        rdfs:label          "ānisaṅs khmoc nāṅ khemā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6D209056724701A7 .
+    
+    bdr:TT41421AABBCF159BB
+        a                   :CoverTitle ;
+        rdfs:label          "អានិសង្សខ្មោចនាងខេមា"@km ;
+        :femcConversionOf   bdr:TTBE51FD51EB5024A9 .
+    
+    bdr:TT6D209056724701A7
+        a                   :CoverTitle ;
+        rdfs:label          "anisaṅs khmoc nāṅ khèmmāh"@km-x-twktt .
+    
+    bdr:TTBE51FD51EB5024A9
+        a                   :CoverTitle ;
+        rdfs:label          "អនិសង្សខ្មោចនាងខែម្មាហ៏"@km .
+}

@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046255 {
+    bda:LG4554D0B996813FF7
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046255"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046255
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046255 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "01/MW1FEMC046255.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046255 ;
+        adm:logEntry        bda:LG4554D0B996813FF7 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE1E451CD381BFAFF
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "002-B.04.11.03.VII" .
+    
+    bdr:MW1FEMC046255
+        a                   :Instance ;
+        skos:prefLabel      "ភិក្ខុព្រះបាតិមោក្ខ"@pi-khmr , "bhikkhu braḥ pātimokkha"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE1E451CD381BFAFF ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT58D8482086A8D345 , bdr:TTEEB6EBD32A9A82FD ;
+        :instanceHasReproduction  bdr:W1FEMC036255 , bdr:W1FEMC046255 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTA6411497DFF9078A , bdr:NTA954D8C0CF148A50 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA6411497DFF9078A
+        a                   :Note ;
+        :noteText           "Canister178_Strip049"@en .
+    
+    bdr:NTA954D8C0CF148A50
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT58D8482086A8D345
+        a                   :Title ;
+        rdfs:label          "bhikkhu braḥ pātimokkha"@pi-x-twktt .
+    
+    bdr:TTEEB6EBD32A9A82FD
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុព្រះបាតិមោក្ខ"@pi-khmr .
+}

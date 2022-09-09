@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21825 {
+    bda:LG9AA934A75E7B1FAE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA15395C3ABF55479
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-11T11:45:08.2Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21825  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21825 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "eb/MW21825.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21825 ;
+        adm:logEntry        bda:LG9AA934A75E7B1FAE , bda:LGA15395C3ABF55479 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV887A6F03BB3143BF
+        a                   :PublishedEvent ;
+        :eventWhen          "1983/1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID661C511398FF3989
+        a                   bdr:HollisId ;
+        rdf:value           "014258459" .
+    
+    bdr:ID7EE98AA4F4452AED
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84905063" .
+    
+    bdr:IDF9757B01DC1C8A3A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .T47 1983" .
+    
+    bdr:MW21825  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_thub bstan chos kyi glang po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID661C511398FF3989 , bdr:ID7EE98AA4F4452AED , bdr:IDF9757B01DC1C8A3A ;
+        :biblioNote         "reproduced from a rare set of manuscripts from dpal-yul manastery"@en ;
+        :extentStatement    "6 v." ;
+        :hasTitle           bdr:TT1482560B31ACE0C5 , bdr:TT3F594CD3F6B86D5B , bdr:TT53F5F4F45D86861D , bdr:TTEAE3E4990C430641 ;
+        :instanceEvent      bdr:EV887A6F03BB3143BF ;
+        :instanceHasReproduction  bdr:IE21825 , bdr:W21825 ;
+        :instanceOf         bdr:WA21825 ;
+        :note               bdr:NT2CC4B0F60B102D14 ;
+        :numberOfVolumes    6 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bylakuppe"@en ;
+        :publisherName      "nyingmapa monastery"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT2CC4B0F60B102D14
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume numbers 2116-2121\nscanned through the support of christine tomlinson, austin, tx."@en .
+    
+    bdr:TT1482560B31ACE0C5
+        a                   :OtherTitle ;
+        rdfs:label          "dpal yul pad nor thub bstan chos kyi glang po'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TT3F594CD3F6B86D5B
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of the second pad-nor rin-po-che of dpal-yul thub-bstan-chos-kyi-glan-po 'jam-dpal-grub-pa'i-blo-gros"@bo-alalc97 .
+    
+    bdr:TT53F5F4F45D86861D
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_thub bstan chos kyi glang po/"@bo-x-ewts .
+    
+    bdr:TTEAE3E4990C430641
+        a                   :CoverTitle ;
+        rdfs:label          "dpal yul pad nor thub bstan chos kyi glang po'i bka' 'bum/"@bo-x-ewts .
+}

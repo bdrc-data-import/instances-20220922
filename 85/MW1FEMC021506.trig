@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021506 {
+    bda:LGC6868284810C4D6D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021506"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021506
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021506 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "85/MW1FEMC021506.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021506 ;
+        adm:logEntry        bda:LGC6868284810C4D6D , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID2DD05EF2333B1A0A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "E.18.VII" .
+    
+    bdr:MF316816A33FE400C6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XX" ;
+        :microfilmStrip     "45" .
+    
+    bdr:MW1FEMC021506
+        a                   :Instance ;
+        skos:prefLabel      "មូលកច្ចាយន"@km , "mūlakaccayana"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2DD05EF2333B1A0A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT0A54E5D7CEF7D2A1 , bdr:TT38BD355786A65545 , bdr:TT48CED13663A86789 , bdr:TT5A130DFB0003AE23 , bdr:TT812E413654934039 , bdr:TTCDACCCF69DAF3E48 ;
+        :instanceHasReproduction  bdr:W1FEMC021506 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF316816A33FE400C6 ;
+        :note               bdr:NT2EABB86B68B431C0 , bdr:NT3EA3914186171A7C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2EABB86B68B431C0
+        a                   :Note ;
+        :noteText           "what is [liasse sans n° , bilingue] refer to ?"@en .
+    
+    bdr:NT3EA3914186171A7C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 271" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0A54E5D7CEF7D2A1
+        a                   :CoverTitle ;
+        rdfs:label          "ធាតុអាខ្យាត"@km ;
+        :femcConversionOf   bdr:TT812E413654934039 .
+    
+    bdr:TT38BD355786A65545
+        a                   :Title ;
+        rdfs:label          "មូលកច្ចាយន"@km .
+    
+    bdr:TT48CED13663A86789
+        a                   :CoverTitle ;
+        rdfs:label          "dhātu ākhyāta"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCDACCCF69DAF3E48 .
+    
+    bdr:TT5A130DFB0003AE23
+        a                   :Title ;
+        rdfs:label          "mūlakaccayana"@km-x-twktt .
+    
+    bdr:TT812E413654934039
+        a                   :CoverTitle ;
+        rdfs:label          "ធាតុអាខ្យាតបករណ"@km .
+    
+    bdr:TTCDACCCF69DAF3E48
+        a                   :CoverTitle ;
+        rdfs:label          "dhātu ākhyātapakaraṇa"@km-x-twktt .
+}

@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW10315 {
+    bda:LG4DA5D9A3277A466E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-04T15:59:07.059Z"^^xsd:dateTime ;
+        adm:logMessage      "added Print type and sourcePrintery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG59DC8C2CA956ACBB
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW10315  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW10315 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "8d/MW10315.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW10315 ;
+        adm:logEntry        bda:LG4DA5D9A3277A466E , bda:LG59DC8C2CA956ACBB , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF38FA6A826607B3B
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4E16716F21FE765D
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2769" .
+    
+    bdr:ID57D3463714F1D80F
+        a                   bdr:HollisId ;
+        rdf:value           "014254616" .
+    
+    bdr:IDCE12E2BA50244997
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ2155 .N33 1985" .
+    
+    bdr:IDE7B65F12E955C4D4
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903446" .
+    
+    bdr:MW10315  a          :Instance ;
+        skos:prefLabel      "gsang 'dus sgrub thabs kyi rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4E16716F21FE765D , bdr:ID57D3463714F1D80F , bdr:IDCE12E2BA50244997 , bdr:IDE7B65F12E955C4D4 ;
+        :biblioNote         "reproduced from a block print from the sde-dge dgon-chen blocks"@en ;
+        :extentStatement    "162 ff." ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TT9CC0A2F048D011D7 , bdr:TTF4EE9C5E1892FD34 ;
+        :instanceEvent      bdr:EVF38FA6A826607B3B ;
+        :instanceHasReproduction  bdr:W10315 ;
+        :instanceOf         bdr:WA10315 ;
+        :note               bdr:NT0340523FA92F5144 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "dehradun, u.p."@en ;
+        :publisherName      "sakya centre"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT0340523FA92F5144
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1678\n\nxylograph. 000498. Dpal gsang ba 'dus pa'i dkyil 'khor 'khor lo sgrub pa'i thabs rnam par bshad pa nges don 'phrin las rgya mtsho'i 'byung gnas. 162 ff. in the Sde-dge redaction. Margin: tsha.\n\nissued in india with the gsang 'dus chos 'byung\n\nlc call no. bq2155 .n33 1985"@en .
+    
+    bdr:TT9CC0A2F048D011D7
+        a                   :Title ;
+        rdfs:label          "gsang 'dus sgrub thabs kyi rnam bshad/"@bo-x-ewts .
+    
+    bdr:TTF4EE9C5E1892FD34
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsang ba 'dus pa'i sgrub thabs kyi rnam bshad nges don phrin las rgya mtsho'i 'byung gnas/"@bo-x-ewts .
+}

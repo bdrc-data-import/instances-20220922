@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW28882 {
+    bda:LG55BEDFC6FB78F36A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW28882  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW28882 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ba/MW28882.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28882 ;
+        adm:logEntry        bda:LG55BEDFC6FB78F36A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8191EF065A53B9A5
+        a                   :PublishedEvent ;
+        :eventWhen          "1992"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID15D2922266DDF8AA
+        a                   bdr:HollisId ;
+        rdf:value           "014259818" .
+    
+    bdr:ID9F4521B5D6633E02
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95903960" .
+    
+    bdr:IDCEDDD3C7E5F24007
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7950.N347 R56 1992" .
+    
+    bdr:IDE91ABECDEC269190
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542003186" .
+    
+    bdr:MW28882  a          :Instance ;
+        skos:altLabel       "te lo pa ho na jo pa chuan lueh"@zh-latn-wadegile ;
+        skos:prefLabel      "rje btsun ti lo pa'i rnam mgur dang dpal nA ro pa'i rnam thar bsdus pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID15D2922266DDF8AA , bdr:ID9F4521B5D6633E02 , bdr:IDCEDDD3C7E5F24007 , bdr:IDE91ABECDEC269190 ;
+        :authorshipStatement  "rin chen rnam rgyal dang gu ru dho tstsha gnyis kyis brtams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "5, 151 p." ;
+        :hasTitle           bdr:TT5DCDE0B8B4D1B3BC , bdr:TT6E8FD6073E66B412 ;
+        :instanceEvent      bdr:EV8191EF065A53B9A5 ;
+        :instanceHasReproduction  bdr:W28882 ;
+        :instanceOf         bdr:WA28882 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS20443 .
+    
+    bdr:TT5DCDE0B8B4D1B3BC
+        a                   :Title ;
+        rdfs:label          "rje btsun ti lo pa'i rnam mgur dang dpal nA ro pa'i rnam thar bsdus pa/"@bo-x-ewts .
+    
+    bdr:TT6E8FD6073E66B412
+        a                   :ColophonTitle ;
+        rdfs:label          "te lo pa ho na jo pa chuan lueh"@zh-latn-wadegile .
+}

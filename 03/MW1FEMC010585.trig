@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010585 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010585
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010585 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "03/MW1FEMC010585.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010585 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID65A7CD2933CA9900
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "085-A.02.10.01.III.1" .
+    
+    bdr:MFCAEDD1F218098F15
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "17" ;
+        :microfilmStrip     "73" .
+    
+    bdr:MW1FEMC010585
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៥"@km , "saṅgāyanā grè 5"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID65A7CD2933CA9900 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT22414CD02641E9E1 , bdr:TT83D052BB2294BD1F , bdr:TTBEC2BF94BB2FB109 , bdr:TTCD9F6EDE2D252BE9 , bdr:TTE516F11A1BD129D8 , bdr:TTF468A4A7553E02CC ;
+        :instanceHasReproduction  bdr:W1FEMC010585 ;
+        :instanceOf         bdr:WA1FEMC010059 , bdr:WA1FEMC010585 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFCAEDD1F218098F15 ;
+        :note               bdr:NT883B08E0326B7C23 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT883B08E0326B7C23
+        a                   :Note ;
+        :contentLocationStatement  "pg. 168" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT22414CD02641E9E1
+        a                   :CoverTitle ;
+        rdfs:label          "kassap cod braḥ ānand chlöy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT83D052BB2294BD1F .
+    
+    bdr:TT83D052BB2294BD1F
+        a                   :CoverTitle ;
+        rdfs:label          "kāsabb cod braḥ ānaṇd chlöy "@km-x-twktt .
+    
+    bdr:TTBEC2BF94BB2FB109
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 5"@km-x-twktt .
+    
+    bdr:TTCD9F6EDE2D252BE9
+        a                   :CoverTitle ;
+        rdfs:label          "កាសព្វចោទព្រះអានណ្ទឆ្លើយ"@km .
+    
+    bdr:TTE516F11A1BD129D8
+        a                   :CoverTitle ;
+        rdfs:label          "កស្សបចោទ​ ព្រះអានន្ទឆ្លើយ"@km ;
+        :femcConversionOf   bdr:TTCD9F6EDE2D252BE9 .
+    
+    bdr:TTF468A4A7553E02CC
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៥"@km .
+}

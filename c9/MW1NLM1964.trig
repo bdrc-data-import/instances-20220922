@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1964 {
+    bda:LGB924A8490D7003F7
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGCC4766A1E8428BF9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGD5C214FEDCC54B3C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-05T14:12:45.511Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1964  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1964 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "c9/MW1NLM1964.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1964 ;
+        adm:logEntry        bda:LGB924A8490D7003F7 , bda:LGCC4766A1E8428BF9 , bda:LGD5C214FEDCC54B3C , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1964  a       :Instance ;
+        skos:prefLabel      "dngos grub bkra shis char 'bebs bsangs sogs/"@bo-x-ewts ;
+        :biblioNote         "པོད་འདི་ཡིག་གཟུགས་ཞན་པ་དང་ཆད་ལྷགས་ཧ་ཅང་མང་།"@bo ;
+        :dimensionsStatement  "16x6.5" ;
+        :extentStatement    "21 ff., 4 ff., 29 ff. end folio missing, 10 ff. end folio missing, 8 ff. end folio missing, 4 ff., 4 ff., 4 ff., 9 ff., 12 ff." ;
+        :hasTitle           bdr:TT151AF040C0363F1D ;
+        :instanceHasReproduction  bdr:W1NLM1964 ;
+        :instanceOf         bdr:WA1NLM1964 ;
+        :note               bdr:NT06E2622BA160A661 , bdr:NT847DDD4BF48025EA , bdr:NTE746CE496AAE73D2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT06E2622BA160A661
+        a                   :Note ;
+        :noteText           "nlmId: M0059882"@en .
+    
+    bdr:NT847DDD4BF48025EA
+        a                   :Note ;
+        :noteText           "missingPages: M0059882-003 [Missing page from 10A-10B, 20A-20B] Image 69-70, 89-90M0059882-004 [Final pages are missing 30A] Image 109 M0059882-005 Final pages are missing 11A] Image 130 M0059882-006 [Final page sare missing 9 A] Image 147"@en .
+    
+    bdr:NTE746CE496AAE73D2
+        a                   :Note ;
+        :noteText           "01)  dngos grub bkra shis char 'bebs bsangs / 21 ff.\n02)  bde mchog bsdus pa/  (le'u dang po only) 4 ff.\n03)  khros nag ma'i bskang bshags/   ff. 1-29 (missing pages)\n04)  tshogs kyi skabs bdud rtsi 'bul ba/  10 ff.\n05)  gdugs dkar bzlog bsgyur/    8  ff.\n06)  myur mdzad mgon po'i 'chi glud/   4 ff.\n07)  tshogs kyi bdag po'i rnga mong gi gzungs/  4 ff.\n08)  rnam rgyal ma'i bstod pa/   4 ff.\n09)  tshangs pa chen po'i mngon rtogs bskang bshags/ 9 ff. \n10)  tshe mdo/ 12 ff."@en .
+    
+    bdr:TT151AF040C0363F1D
+        a                   :Title ;
+        rdfs:label          "dngos grub bkra shis char 'bebs bsangs sogs/"@bo-x-ewts .
+}

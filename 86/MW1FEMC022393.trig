@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022393 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022393
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022393 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "86/MW1FEMC022393.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022393 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID2D8867E67333663D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.880.II.1" .
+    
+    bdr:MW1FEMC022393
+        a                   :Instance ;
+        skos:prefLabel      "ពោធិវង្ស"@km , "bodhivaṅs"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2D8867E67333663D ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "4" ;
+        :hasTitle           bdr:TT85F257289499FAC1 , bdr:TTB67DA35D4158B190 , bdr:TTBCCE93BED2A4908E , bdr:TTCD6814822C45FC56 ;
+        :instanceHasReproduction  bdr:W1FEMC022393 ;
+        :instanceOf         bdr:WA1FEMC022393 , bdr:WA1FEMC120054 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTE91478AB222A34ED ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTE91478AB222A34ED
+        a                   :Note ;
+        :contentLocationStatement  "pg. 428" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT85F257289499FAC1
+        a                   :Title ;
+        rdfs:label          "ពោធិវង្ស"@km ;
+        :femcConversionOf   bdr:TTB67DA35D4158B190 .
+    
+    bdr:TTB67DA35D4158B190
+        a                   :CoverTitle ;
+        rdfs:label          "ពោធីវង្ស"@km .
+    
+    bdr:TTBCCE93BED2A4908E
+        a                   :Title ;
+        rdfs:label          "bodhivaṅs"@km-x-twktt ;
+        :femcConversionOf   bdr:TTCD6814822C45FC56 .
+    
+    bdr:TTCD6814822C45FC56
+        a                   :CoverTitle ;
+        rdfs:label          "bodhīvaṅs"@km-x-twktt .
+}

@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13122 {
+    bda:LGF3CA77BF9E08C8CF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-11-28T14:43:12.667Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13122  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13122 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "48/MW1KG13122.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13122 ;
+        adm:logEntry        bda:LGF3CA77BF9E08C8CF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA0F7F78734370CBC
+        a                   :PublishedEvent ;
+        :eventWhen          "2010,2011"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC20BEAE6DAE305EA
+        a                   bdr:HollisId ;
+        rdf:value           "014256022" .
+    
+    bdr:IDD7EB38950DB96B35
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542014658,9787542015334" .
+    
+    bdr:MW1KG13122  a       :Instance ;
+        skos:altLabel       "藏族史记集成目录"@zh-hans ;
+        skos:prefLabel      "bod kyi lo rgyus rnam thar phyogs bsgrigs kyi dkar chag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC20BEAE6DAE305EA , bdr:IDD7EB38950DB96B35 ;
+        :authorshipStatement  "dpal brtsegs bod yig dpe rnying zhib 'jug khang nas bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT0C557C5987008215 , bdr:TT6570DB4BB339A475 , bdr:TTFC563A68569021F3 ;
+        :instanceEvent      bdr:EVA0F7F78734370CBC ;
+        :instanceHasReproduction  bdr:W1KG13122 ;
+        :instanceOf         bdr:WA1KG13122 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0C557C5987008215
+        a                   :Title ;
+        rdfs:label          "bod kyi lo rgyus rnam thar phyogs bsgrigs kyi dkar chag"@bo-x-ewts .
+    
+    bdr:TT6570DB4BB339A475
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏族史记集成目录"@zh-hans .
+    
+    bdr:TTFC563A68569021F3
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang zu shi ji ji cheng mu lu"@zh-latn-pinyin-x-ndia .
+}

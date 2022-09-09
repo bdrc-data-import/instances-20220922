@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020710 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020710
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020710 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "01/MW1FEMC020710.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020710 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID96FC3DF7652431A3
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.343.I.3" .
+    
+    bdr:MW1FEMC020710
+        a                   :Instance ;
+        skos:prefLabel      "ល្បើកព្រះពុទ្ធបាទ"@km , "lpök braḥ buddh pād"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID96FC3DF7652431A3 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT07B24769E873AD2B , bdr:TT84EF401E6EDBCF52 , bdr:TT926CFE718B40E953 , bdr:TTC93F73D157B23F8F , bdr:TTCD10E4E3CFF35C08 , bdr:TTEBD38D5CC73F3197 ;
+        :instanceHasReproduction  bdr:W1FEMC020710 ;
+        :instanceOf         bdr:WA1FEMC020710 , bdr:WA1FEMC110011 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTD885D3890398DCB3 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD885D3890398DCB3
+        a                   :Note ;
+        :contentLocationStatement  "pg. 130" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT07B24769E873AD2B
+        a                   :CoverTitle ;
+        rdfs:label          "buddh duṃnāy°"@km-x-twktt .
+    
+    bdr:TT84EF401E6EDBCF52
+        a                   :CoverTitle ;
+        rdfs:label          "lpök buddh daṃnāy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT07B24769E873AD2B .
+    
+    bdr:TT926CFE718B40E953
+        a                   :CoverTitle ;
+        rdfs:label          "ពុទ្ធទុំនា្យ"@km .
+    
+    bdr:TTC93F73D157B23F8F
+        a                   :CoverTitle ;
+        rdfs:label          "ល្បើកពុទ្ធទំនាយ"@km ;
+        :femcConversionOf   bdr:TT926CFE718B40E953 .
+    
+    bdr:TTCD10E4E3CFF35C08
+        a                   :Title ;
+        rdfs:label          "ល្បើកព្រះពុទ្ធបាទ"@km .
+    
+    bdr:TTEBD38D5CC73F3197
+        a                   :Title ;
+        rdfs:label          "lpök braḥ buddh pād"@km-x-twktt .
+}

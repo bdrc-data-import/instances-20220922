@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1234 {
+    bda:LG1DD0EB5659F4FC2C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG73E21B3EC3CE18AC
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-11-03T18:16:15.856Z"^^xsd:dateTime ;
+        adm:logMessage      "changed status to withdrawn"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LG83C86CC3438A57E5
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-11-03T18:15:49.652Z"^^xsd:dateTime ;
+        adm:logMessage      "changed status to restrictedByQuality"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LGDC45B04277482D38
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:MW1234  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW1234 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "66/MW1234.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1234 ;
+        adm:logEntry        bda:LG1DD0EB5659F4FC2C , bda:LG73E21B3EC3CE18AC , bda:LG83C86CC3438A57E5 , bda:LGDC45B04277482D38 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVA894E38D511360A2
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4640AA4F8594A574
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7697 ,J36 2001" .
+    
+    bdr:ID913F875574631021
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2002228743" .
+    
+    bdr:MW1234  a           :Instance ;
+        skos:prefLabel      "ma hA mA ya lha lnga'i zhi ba'i sbyin sreg"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4640AA4F8594A574 , bdr:ID913F875574631021 ;
+        :biblioNote         "in gsung 'bum / 'jam dpal rgya mtsho reproduction from a lhasa zhol edition preserved by the library of the private office of his holiness the dalai lama"@en ;
+        :extentStatement    "pp. 143-172" ;
+        :hasTitle           bdr:TT31F58316579081BA , bdr:TT4D138877AA88007D , bdr:TT87CEB29EC182C7C0 ;
+        :instanceEvent      bdr:EVA894E38D511360A2 ;
+        :language           bdr:LangBo ;
+        :note               bdr:NT4A59CA0881D38097 ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works & archives"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:NT4A59CA0881D38097
+        a                   :Note ;
+        :noteText           "ca. 15 ff. in the 1 vol. printed gsung 'bum in the Potala collection."@en .
+    
+    bdr:TT31F58316579081BA
+        a                   :Title ;
+        rdfs:label          "ma hA mA ya lha lnga'i zhi ba'i sbyin sreg"@bo-x-ewts .
+    
+    bdr:TT4D138877AA88007D
+        a                   :TitlePageTitle ;
+        rdfs:label          "bcom ldan 'das dpal ma hA mA ya lnga lnga'i zhi ba'i sbyin bsregs kyi cho ga dngos grub rgya mtsho'i 'phra tshom/"@bo-x-ewts .
+    
+    bdr:TT87CEB29EC182C7C0
+        a                   :OtherTitle ;
+        rdfs:label          "dpal ma hA mA ya lha lnga'i zhi ba'i sbyin sreg gi cho ga dngos grub rgya mtsho'i phra tshom/"@bo-x-ewts .
+}

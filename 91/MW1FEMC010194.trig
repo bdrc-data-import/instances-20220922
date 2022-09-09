@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010194 {
+    bda:LGB1F6FE8AAAA1E5E9
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010194"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010194
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010194 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "91/MW1FEMC010194.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010194 ;
+        adm:logEntry        bda:LGB1F6FE8AAAA1E5E9 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC031399 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:IDF70477723CF0B1C3
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "042-PP.02.01.01.VII" .
+    
+    bdr:MFF5F89C3161ED5654
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "8" ;
+        :microfilmStrip     "32" .
+    
+    bdr:MW1FEMC010194
+        a                   :Instance ;
+        skos:prefLabel      "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@pi-khmr , "maṅgalatthadīpanī aṭṭhakathāmaṅgalasūtra"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF70477723CF0B1C3 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "19" ;
+        :hasTitle           bdr:TT1974DF03B71BCF16 , bdr:TT497D4F8D213DE31D , bdr:TTA44035E6E4C4E6B6 , bdr:TTC63D2C29850AAC0F ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF5F89C3161ED5654 ;
+        :note               bdr:NT041B7F63E820B4E1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "B 457" .
+    
+    bdr:NT041B7F63E820B4E1
+        a                   :Note ;
+        :contentLocationStatement  "pg. 91" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1974DF03B71BCF16
+        a                   :CoverTitle ;
+        rdfs:label          "maṅgaladipanī"@pi-x-twktt .
+    
+    bdr:TT497D4F8D213DE31D
+        a                   :Title ;
+        rdfs:label          "maṅgalatthadīpanī aṭṭhakathāmaṅgalasūtra"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT1974DF03B71BCF16 .
+    
+    bdr:TTA44035E6E4C4E6B6
+        a                   :CoverTitle ;
+        rdfs:label          "មង្គលទិបនី"@pi-khmr .
+    
+    bdr:TTC63D2C29850AAC0F
+        a                   :Title ;
+        rdfs:label          "មង្គលត្ថទីបនីអដ្ឋកថាមង្គលសូត្រ"@pi-khmr ;
+        :femcConversionOf   bdr:TTA44035E6E4C4E6B6 .
+}

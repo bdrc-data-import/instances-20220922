@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010255 {
+    bda:LG2AD85230F85605E6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010255"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010255
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010255 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "04/MW1FEMC010255.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010255 ;
+        adm:logEntry        bda:LG2AD85230F85605E6 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0557E57A122EB495
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "012-PP.02.06.02.VII" .
+    
+    bdr:MF5AB8E708E9F4D01B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "9" ;
+        :microfilmStrip     "34" .
+    
+    bdr:MW1FEMC010255
+        a                   :Instance ;
+        skos:prefLabel      "យោជនាអដ្ផកថាព្រះមហាវគ្គ"@pi-khmr , "yojanā aṭṭhakathā braḥ mahāvagga "@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0557E57A122EB495 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT524609C991C4E741 , bdr:TT68E276B177C033F6 , bdr:TTC00E735220A86501 , bdr:TTCC27B1BE19875179 ;
+        :instanceHasReproduction  bdr:W1FEMC010255 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5AB8E708E9F4D01B ;
+        :note               bdr:NTCF47CF870489EE88 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "C 232" .
+    
+    bdr:NTCF47CF870489EE88
+        a                   :Note ;
+        :contentLocationStatement  "pg. 103" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT524609C991C4E741
+        a                   :Title ;
+        rdfs:label          "yojanā aṭṭhakathā braḥ mahāvagga "@pi-x-twktt ;
+        :femcConversionOf   bdr:TT68E276B177C033F6 .
+    
+    bdr:TT68E276B177C033F6
+        a                   :CoverTitle ;
+        rdfs:label          "yojanā atthakathā bra mahāvagga"@pi-x-twktt .
+    
+    bdr:TTC00E735220A86501
+        a                   :CoverTitle ;
+        rdfs:label          "យោជនាអត្ថកថាព្រមមហាវគ្គ"@pi-khmr .
+    
+    bdr:TTCC27B1BE19875179
+        a                   :Title ;
+        rdfs:label          "យោជនាអដ្ផកថាព្រះមហាវគ្គ"@pi-khmr ;
+        :femcConversionOf   bdr:TTC00E735220A86501 .
+}

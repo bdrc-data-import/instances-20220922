@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG6008 {
+    bda:LGAF84C95B12AB5C09
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-09-17T15:30:00.683Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG6008  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG6008 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "1c/MW1KG6008.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG6008 ;
+        adm:logEntry        bda:LGAF84C95B12AB5C09 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA44E17444F6D4E2C
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDCA58F53DD23060A6
+        a                   bdr:HollisId ;
+        rdf:value           "014257256" .
+    
+    bdr:IDCC03646E6732DCA1
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105105281" .
+    
+    bdr:MW1KG6008  a        :Instance ;
+        skos:prefLabel      "rje btsun dam pa shes rab rgya mtsho'i rnam thar/"@bo-x-ewts , "xi rao jia cuo da shi shi tu zhuan"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCA58F53DD23060A6 , bdr:IDCC03646E6732DCA1 ;
+        :authorshipStatement  "lha rams pa skal bzang rgya mtshos brtsams/ bkra shis tshe brtan gyis bsgyur/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "1, 2, 12, 1, 145, 2, 2 p." ;
+        :hasTitle           bdr:TT37281EF2A8C05DE2 , bdr:TTD985D15F3572D0AF , bdr:TTE72E9DF6195FC3BA ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVA44E17444F6D4E2C ;
+        :instanceHasReproduction  bdr:IE1KG6008 , bdr:W1KG6008 ;
+        :instanceOf         bdr:WA1KG6008 ;
+        :note               bdr:NTFBEB1C6D8DEF775B ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:NTFBEB1C6D8DEF775B
+        a                   :Note ;
+        :noteText           "in tibetan; translated into chinese"@en .
+    
+    bdr:TT37281EF2A8C05DE2
+        a                   :Title ;
+        rdfs:label          "rje btsun dam pa shes rab rgya mtsho'i rnam thar/"@bo-x-ewts .
+    
+    bdr:TTD985D15F3572D0AF
+        a                   :ColophonTitle ;
+        rdfs:label          "xi rao jia cuo da shi shi tu zhuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTE72E9DF6195FC3BA
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje btsun dam pa shes rab rgya mtsho'i rnam par thar ba phun tshogs legs lam gyi rtse mo/"@bo-x-ewts .
+}

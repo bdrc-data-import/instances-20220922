@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG535 {
+    bda:LG6795F1FC2579A245
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-06-23T10:04:15.597Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC360FB8DCC02A96C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-09-09T16:13:41.707Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG535  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG535 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "46/MW1KG535.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG535 ;
+        adm:logEntry        bda:LG6795F1FC2579A245 , bda:LGC360FB8DCC02A96C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC79A41E00D443F23
+        a                   :PublishedEvent ;
+        :eventWhen          "2007?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1F9650FFC90501B6
+        a                   bdr:HollisId ;
+        rdf:value           "014257121" .
+    
+    bdr:IDD5FAA0CAA1AF028D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "1056633(invalidnumber)" .
+    
+    bdr:MW1KG535  a         :Instance ;
+        skos:altLabel       "list of missing"@en ;
+        skos:prefLabel      "dran pa'i zin tho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1F9650FFC90501B6 , bdr:IDD5FAA0CAA1AF028D ;
+        :authorshipStatement  "dgon gsar chos 'dzin rgya mtshos brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "96 p." ;
+        :hasTitle           bdr:TT79E6A4A195F4A115 , bdr:TTECC65BDC7B3C2BA4 ;
+        :instanceEvent      bdr:EVC79A41E00D443F23 ;
+        :instanceHasReproduction  bdr:IE1KG535 , bdr:W1KG535 ;
+        :instanceOf         bdr:WA1KG535 ;
+        :note               bdr:NTA6098D593BF3338D ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTA6098D593BF3338D
+        a                   :Note ;
+        :noteText           "there are three different isbn on the back cover: isb71056535, 9787105066391, isb71056633"@en .
+    
+    bdr:TT79E6A4A195F4A115
+        a                   :OtherTitle ;
+        rdfs:label          "list of missing"@en .
+    
+    bdr:TTECC65BDC7B3C2BA4
+        a                   :Title ;
+        rdfs:label          "dran pa'i zin tho/"@bo-x-ewts .
+}

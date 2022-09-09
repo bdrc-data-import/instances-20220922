@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046034 {
+    bda:LG1AFDD2C3570C7177
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046034"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046034
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046034 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "82/MW1FEMC046034.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046034 ;
+        adm:logEntry        bda:LG1AFDD2C3570C7177 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDC03CC41377AC660D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "016-B.04.11.02.III.6" .
+    
+    bdr:MF8613252F50355CC6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "172" .
+    
+    bdr:MW1FEMC046034
+        a                   :Instance ;
+        skos:prefLabel      "អនិសង្ឃទៀន (១-១៧)"@km , "ani siṅgh dien"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC03CC41377AC660D ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT00B4B158EB3698D4 , bdr:TT8BFCB77B19421D87 ;
+        :instanceHasReproduction  bdr:W1FEMC036034 , bdr:W1FEMC046034 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8613252F50355CC6 ;
+        :note               bdr:NT3623455FB2556855 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3623455FB2556855
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT00B4B158EB3698D4
+        a                   :Title ;
+        rdfs:label          "អនិសង្ឃទៀន (១-១៧)"@km .
+    
+    bdr:TT8BFCB77B19421D87
+        a                   :Title ;
+        rdfs:label          "ani siṅgh dien"@km-x-twktt .
+}

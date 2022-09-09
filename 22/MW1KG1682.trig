@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1682 {
+    bda:LGF2E96851ADFD1138
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-03-05T12:40:40.826Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1682  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1682 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "22/MW1KG1682.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1682 ;
+        adm:logEntry        bda:LGF2E96851ADFD1138 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVED6C9883D7FB5CC7
+        a                   :PublishedEvent ;
+        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID01037C3A25FA67FA
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542112392" .
+    
+    bdr:ID8B59DA6BB1330235
+        a                   bdr:HollisId ;
+        rdf:value           "014256426" .
+    
+    bdr:MW1KG1682  a        :Instance ;
+        skos:altLabel       "xi rao jia cuo wen ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "nga tsho sad ran/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID01037C3A25FA67FA , bdr:ID8B59DA6BB1330235 ;
+        :authorshipStatement  "shes rab rgya mtshos brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "377 p." ;
+        :hasTitle           bdr:TT1B311046F32E0298 , bdr:TT7E87D5B4D5B2951F ;
+        :instanceEvent      bdr:EVED6C9883D7FB5CC7 ;
+        :instanceHasReproduction  bdr:W1KG1682 ;
+        :instanceOf         bdr:WA1KG1682 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1B311046F32E0298
+        a                   :Title ;
+        rdfs:label          "nga tsho sad ran/"@bo-x-ewts .
+    
+    bdr:TT7E87D5B4D5B2951F
+        a                   :ColophonTitle ;
+        rdfs:label          "xi rao jia cuo wen ji"@zh-latn-pinyin-x-ndia .
+}

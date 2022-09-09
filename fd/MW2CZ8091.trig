@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2CZ8091 {
+    bda:LG8AD00C27CA3EC341
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-21T15:42:59.751Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW2CZ8091  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW2CZ8091 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "fd/MW2CZ8091.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2CZ8091 ;
+        adm:logEntry        bda:LG8AD00C27CA3EC341 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV986E47057A6F4C08
+        a                   :PublishedEvent ;
+        :eventWhen          "1992"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2094D1837948E87C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ130 .S26 1992" .
+    
+    bdr:ID2C033A4BD6C0E42D
+        a                   bdr:HollisId ;
+        rdf:value           "014260348" .
+    
+    bdr:ID7F521E1F452FAF3F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754200298" .
+    
+    bdr:IDC763081A058D75DA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "96915727" .
+    
+    bdr:MW2CZ8091  a        :Instance ;
+        skos:altLabel       "佛学词典"@zh-hans ;
+        skos:prefLabel      "sangs rgyas chos gzhung gi tshig mdzod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2094D1837948E87C , bdr:ID2C033A4BD6C0E42D , bdr:ID7F521E1F452FAF3F , bdr:IDC763081A058D75DA ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "3, 915 p. ; 28 cm." ;
+        :hasTitle           bdr:TT346863E6E68687C4 , bdr:TT358F0DF031A8B85E ;
+        :instanceEvent      bdr:EV986E47057A6F4C08 ;
+        :instanceHasReproduction  bdr:W2CZ8091 ;
+        :instanceOf         bdr:WA2CZ8091 ;
+        :note               bdr:NT03625A2666692183 , bdr:NTCE106B912C3DC9C6 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT03625A2666692183
+        a                   :Note ;
+        :noteText           "Tibetan and Chinese"@en .
+    
+    bdr:NTCE106B912C3DC9C6
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TT346863E6E68687C4
+        a                   :OtherTitle ;
+        rdfs:label          "佛学词典"@zh-hans .
+    
+    bdr:TT358F0DF031A8B85E
+        a                   :Title ;
+        rdfs:label          "sangs rgyas chos gzhung gi tshig mdzod/"@bo-x-ewts .
+}

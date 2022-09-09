@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW7477 {
+    bda:LG2863F66D4654B884
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-25T11:57:29.922Z"^^xsd:dateTime ;
+        adm:logMessage      "addded print type and source printrey"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG83A8C5DC21130C80
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW7477  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW7477 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c2/MW7477.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7477 ;
+        adm:logEntry        bda:LG2863F66D4654B884 , bda:LG83A8C5DC21130C80 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC48C385E91A6ECBE
+        a                   :PublishedEvent ;
+        :eventWhen          "1999?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6EDFA0EC0E37D2A6
+        a                   bdr:HollisId ;
+        rdf:value           "014261038" .
+    
+    bdr:ID7FD2C36382821038
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902220(other ed.)" .
+    
+    bdr:MW7477  a           :Instance ;
+        skos:prefLabel      "gsung 'bum/_'jigs med gling pa (a 'dzom par ma/ 'brug spa gro la bskyar par brgyab pa/)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6EDFA0EC0E37D2A6 , bdr:ID7FD2C36382821038 ;
+        :biblioNote         "in the a 'dzom redaction of the gsung 'bum of 'jigs med gling pa; this printing is based upon the 14 vol. a 'dzom 'brug pa chos sgar"@en ;
+        :editionStatement   "bq8662 .j54 1985 (other ed.)"@bo-x-ewts ;
+        :extentStatement    "14 v." ;
+        :hasSourcePrintery  bdr:G3JT12503 ;
+        :hasTitle           bdr:TT562E53D98C0FF3FB , bdr:TT6D99C47AD0CFBFFE ;
+        :instanceEvent      bdr:EVC48C385E91A6ECBE ;
+        :instanceHasReproduction  bdr:W7477 ;
+        :instanceOf         bdr:WA1KG10193 , bdr:WA7477 ;
+        :note               bdr:NTB7A5037DA4663AE6 ;
+        :numberOfVolumes    14 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[khreng tu'u?]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTB7A5037DA4663AE6
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans of the reprint of the a 'dzom chos sgar edition in 14 v., tiffs and pdf scans.\n0659-0672.\n\ntbrc also holds inkprint copies of prints from the a 'dzom blocks in 14 v.\n\ntbrc also holds prints from another edition  issued at the order of dil mgo mkhyen brtse rin po che from paro."@en .
+    
+    bdr:TT562E53D98C0FF3FB
+        a                   :CoverTitle ;
+        rdfs:label          "'jigs med gling pa'i bka' 'bum/"@bo-x-ewts .
+    
+    bdr:TT6D99C47AD0CFBFFE
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_'jigs med gling pa (a 'dzom par ma/ 'brug spa gro la bskyar par brgyab pa/)"@bo-x-ewts .
+}

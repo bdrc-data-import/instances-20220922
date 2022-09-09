@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30482 {
+    bda:LG6920CF3C4C8DB675
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8ABE90706375B12C
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-03-06T11:21:04.542Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30482  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30482 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "e1/MW30482.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30482 ;
+        adm:logEntry        bda:LG6920CF3C4C8DB675 , bda:LG8ABE90706375B12C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08A6B6A46AF41C9D
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID090BCABD1A93AF54
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890382" .
+    
+    bdr:IDF480674362E64807
+        a                   bdr:HollisId ;
+        rdf:value           "014260817" .
+    
+    bdr:MW30482  a          :Instance , :SerialInstance ;
+        skos:altLabel       "阿吉食品宗"@zh-hans ;
+        skos:prefLabel      "a skyid zas rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID090BCABD1A93AF54 , bdr:IDF480674362E64807 ;
+        :authorshipStatement  "krung go spyi tshogs tshan rig khang grangs nyung mi rigs rtsom rig so'o dang bod rang skyong ljongs spyi tshogs tshan rig khang gis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "227 p." ;
+        :hasTitle           bdr:TT291E5CA3776F0921 , bdr:TT505005944D88BEEB , bdr:TT7273563AD3AD3EA8 , bdr:TT9B8BCE206A0121FF ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV08A6B6A46AF41C9D ;
+        :instanceHasReproduction  bdr:W30482 ;
+        :instanceOf         bdr:WA30482 ;
+        :note               bdr:NT76AF986CCD1FCCFB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG16786 ;
+        :seriesNumber       "18" .
+    
+    bdr:NT76AF986CCD1FCCFB
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT291E5CA3776F0921
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "阿吉食品宗"@zh-hans .
+    
+    bdr:TT505005944D88BEEB
+        a                   :TitlePageTitle ;
+        rdfs:label          "sgrung mkhan bsam grub kyis phab pa'i gling rje ge sar rgyal po'i sgrung / a skyid zas rdzong /"@bo-x-ewts .
+    
+    bdr:TT7273563AD3AD3EA8
+        a                   :Title ;
+        rdfs:label          "a skyid zas rdzong /"@bo-x-ewts .
+    
+    bdr:TT9B8BCE206A0121FF
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "a ji shi pin zong"@zh-latn-pinyin-x-ndia .
+}

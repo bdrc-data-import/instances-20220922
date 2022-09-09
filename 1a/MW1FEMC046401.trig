@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046401 {
+    bda:LGF361423073C18776
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046401"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046401
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046401 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1a/MW1FEMC046401.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046401 ;
+        adm:logEntry        bda:LGF361423073C18776 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID2ACBB68BCAA877E0
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "137-B.04.03.04.III.6" .
+    
+    bdr:MFE70B1457F7692CEE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "170" .
+    
+    bdr:MW1FEMC046401
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះអានិសង្ស ព្រះមហាកស្សប្បត្ថេរ ចោទ ឆ្លើយ (ន-អ) (អា-ឯ)"@km , "braḥ ānisaṅs braḥ mahā kassappa tther cod chlöy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2ACBB68BCAA877E0 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT4AAD98C749F200BA , bdr:TTCA0E880D22834382 ;
+        :instanceHasReproduction  bdr:W1FEMC036401 , bdr:W1FEMC046401 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE70B1457F7692CEE ;
+        :note               bdr:NTB1EF25D917CD7C08 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB1EF25D917CD7C08
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT4AAD98C749F200BA
+        a                   :Title ;
+        rdfs:label          "ព្រះអានិសង្ស ព្រះមហាកស្សប្បត្ថេរ ចោទ ឆ្លើយ (ន-អ) (អា-ឯ)"@km .
+    
+    bdr:TTCA0E880D22834382
+        a                   :Title ;
+        rdfs:label          "braḥ ānisaṅs braḥ mahā kassappa tther cod chlöy"@km-x-twktt .
+}

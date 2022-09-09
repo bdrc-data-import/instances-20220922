@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020901 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020901
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020901 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "29/MW1FEMC020901.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020901 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6DBB00D9512CE597
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "e.25.III.3" .
+    
+    bdr:MFFBF186C41BDDD01A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "135" ;
+        :microfilmStrip     "229" .
+    
+    bdr:MW1FEMC020901
+        a                   :Instance ;
+        skos:prefLabel      "វិនិច្ឆ័័យកឋិនភេទ"@km , "vinicchăy kaṭhin bhed"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6DBB00D9512CE597 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2" ;
+        :hasTitle           bdr:TT1603A1BB80A8DA00 , bdr:TT1B9842A181F59715 , bdr:TT1F18671AD3BC241A , bdr:TTE2E0B955DF8C217A ;
+        :instanceHasReproduction  bdr:W1FEMC020901 ;
+        :instanceOf         bdr:WA1FEMC020901 , bdr:WA1FEMC030065 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFFBF186C41BDDD01A ;
+        :note               bdr:NT4D2B2C22BE8CAB61 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT4D2B2C22BE8CAB61
+        a                   :Note ;
+        :contentLocationStatement  "pg. 158" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1603A1BB80A8DA00
+        a                   :Title ;
+        rdfs:label          "vinicchăy kaṭhin bhed"@km-x-twktt ;
+        :femcConversionOf   bdr:TT1B9842A181F59715 .
+    
+    bdr:TT1B9842A181F59715
+        a                   :CoverTitle ;
+        rdfs:label          "vinicchăyy° kathi bhedd"@km-x-twktt .
+    
+    bdr:TT1F18671AD3BC241A
+        a                   :CoverTitle ;
+        rdfs:label          "វិនិច្ឆ័យ្យកថិភេទ្ទ"@km .
+    
+    bdr:TTE2E0B955DF8C217A
+        a                   :Title ;
+        rdfs:label          "វិនិច្ឆ័័យកឋិនភេទ"@km ;
+        :femcConversionOf   bdr:TT1F18671AD3BC241A .
+}

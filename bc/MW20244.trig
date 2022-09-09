@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20244 {
+    bda:LG1BC351B5F5C739C7
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-05-31T16:21:18.216Z"^^xsd:dateTime ;
+        adm:logMessage      "changed onhold to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDD0CCC839EA0292E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20244  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20244 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "bc/MW20244.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20244 ;
+        adm:logEntry        bda:LG1BC351B5F5C739C7 , bda:LGDD0CCC839EA0292E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR6C8D996E8F3BBC5B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6931 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV98105C96B03052A9
+        a                   :PublishedEvent ;
+        :eventWhen          "1987"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2B9BBF09D36339C9
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542000217" .
+    
+    bdr:ID6F550B2B7186B2F8
+        a                   bdr:HollisId ;
+        rdf:value           "014258105" .
+    
+    bdr:MW20244  a          :Instance ;
+        skos:prefLabel      "gso byed thabs/ cha byad dpyad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2B9BBF09D36339C9 , bdr:ID6F550B2B7186B2F8 ;
+        :authorshipStatement  "bsam gtan gyis rtsom sgrig byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR6C8D996E8F3BBC5B ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 2, 129 p." ;
+        :hasTitle           bdr:TT66B75E02993FE2D1 , bdr:TT7C6FFF5C566F5169 ;
+        :instanceEvent      bdr:EV98105C96B03052A9 ;
+        :instanceHasReproduction  bdr:W20244 ;
+        :instanceOf         bdr:WA20244 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT66B75E02993FE2D1
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyal yongs bod lugs gso rig 'bring rim slob grwa'i tshod blta'i slob deb/ gso byed thabs/ cha byad dpyad/"@bo-x-ewts .
+    
+    bdr:TT7C6FFF5C566F5169
+        a                   :Title ;
+        rdfs:label          "gso byed thabs/ cha byad dpyad/"@bo-x-ewts .
+}

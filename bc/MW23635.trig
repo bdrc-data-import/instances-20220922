@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23635 {
+    bda:LG324C5B11F0638B76
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-25T14:21:28.074Z"^^xsd:dateTime ;
+        adm:logMessage      "added volume maps"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG3BB46601FEB42CF5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23635  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23635 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "bc/MW23635.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23635 ;
+        adm:logEntry        bda:LG324C5B11F0638B76 , bda:LG3BB46601FEB42CF5 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD44AAD818FE60198
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID62D5477BBE09ABF1
+        a                   bdr:HollisId ;
+        rdf:value           "014259003" .
+    
+    bdr:IDA5CDDDDD5F297D28
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99956350" .
+    
+    bdr:IDCDB4C98C48E2BA0B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .S285 1999" .
+    
+    bdr:MW23635  a          :Instance ;
+        skos:altLabel       "the collection works of the ancient sa-skya-pa scholars"@en ;
+        skos:prefLabel      "sa skya pa'i mkhas pa rnams kyi gsung skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID62D5477BBE09ABF1 , bdr:IDA5CDDDDD5F297D28 , bdr:IDCDB4C98C48E2BA0B ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :extentStatement    "1-4, 7-9 v. (vol. 5, 6 are not available)" ;
+        :hasTitle           bdr:TT10BD41AB6D49FF9E , bdr:TT53687C56DD1DC7CD , bdr:TTF7C082DFF98769FC ;
+        :instanceEvent      bdr:EVD44AAD818FE60198 ;
+        :instanceHasReproduction  bdr:W23635 ;
+        :instanceOf         bdr:WA23635 ;
+        :numberOfVolumes    9 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "rajpur,dist. dehra dun, u.p."@en ;
+        :publisherName      "sakya college"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT10BD41AB6D49FF9E
+        a                   :TitlePageTitle ;
+        rdfs:label          "sa-skya-pa'i mkhas pa rnams kyi gsun skor"@en .
+    
+    bdr:TT53687C56DD1DC7CD
+        a                   :Title ;
+        rdfs:label          "sa skya pa'i mkhas pa rnams kyi gsung skor/"@bo-x-ewts .
+    
+    bdr:TTF7C082DFF98769FC
+        a                   :CoverTitle ;
+        rdfs:label          "the collection works of the ancient sa-skya-pa scholars"@en .
+}

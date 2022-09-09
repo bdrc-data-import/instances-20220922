@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021004 {
+    bda:LG0AD8C85EB55B932B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021004"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021004
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021004 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "47/MW1FEMC021004.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021004 ;
+        adm:logEntry        bda:LG0AD8C85EB55B932B , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID9C657F082C047A16
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "B.1.VII" .
+    
+    bdr:MFD23D178546DF1009
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "X" ;
+        :microfilmStrip     "35" .
+    
+    bdr:MW1FEMC021004
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មបទដ្ឋកថាប៉េនតន"@km , "dhammapadaṭṭhakathā p''en tan"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9C657F082C047A16 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "20" ;
+        :hasTitle           bdr:TT83449A9AF8BAF0A1 , bdr:TTA951ED0C0E9C188D , bdr:TTB1F9B68158EFF8AB , bdr:TTCD3722D2D2E6AA1B ;
+        :instanceHasReproduction  bdr:W1FEMC021004 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD23D178546DF1009 ;
+        :note               bdr:NT9006025DDEDF917B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "404" .
+    
+    bdr:NT9006025DDEDF917B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 178" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT83449A9AF8BAF0A1
+        a                   :CoverTitle ;
+        rdfs:label          "ធម្មបទ្ទដ្ឋកថាប្ន័ត្ន័"@km .
+    
+    bdr:TTA951ED0C0E9C188D
+        a                   :CoverTitle ;
+        rdfs:label          "dhammapaddaṭṭhakathā păn° tăn°"@km-x-twktt .
+    
+    bdr:TTB1F9B68158EFF8AB
+        a                   :Title ;
+        rdfs:label          "dhammapadaṭṭhakathā p''en tan"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA951ED0C0E9C188D .
+    
+    bdr:TTCD3722D2D2E6AA1B
+        a                   :Title ;
+        rdfs:label          "ធម្មបទដ្ឋកថាប៉េនតន"@km ;
+        :femcConversionOf   bdr:TT83449A9AF8BAF0A1 .
+}

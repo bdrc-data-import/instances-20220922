@@ -1,0 +1,69 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042641 {
+    bda:LG1CBE944C013B0690
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042641"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042641
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC042641 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "21/MW1FEMC042641.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042641 ;
+        adm:logEntry        bda:LG1CBE944C013B0690 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID45D94990C8263F81
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "031-B.01.07.03.III.1" .
+    
+    bdr:MF7329D2B1C489177E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "221" .
+    
+    bdr:MW1FEMC042641
+        a                   :Instance ;
+        skos:prefLabel      "ពុទ្ធទុំនាយ ព្រះបាទធម្មិករដ្យ៍ និងបឋមសង្គាយនាគ្រែ៥"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID45D94990C8263F81 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-9" ;
+        :hasTitle           bdr:TTE777AF33DCCA2241 ;
+        :instanceHasReproduction  bdr:W1FEMC032641 , bdr:W1FEMC042641 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF7329D2B1C489177E ;
+        :note               bdr:NT826C7BC6B80364DD ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT826C7BC6B80364DD
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTE777AF33DCCA2241
+        a                   :Title ;
+        rdfs:label          "ពុទ្ធទុំនាយ ព្រះបាទធម្មិករដ្យ៍ និងបឋមសង្គាយនាគ្រែ៥"@km .
+}

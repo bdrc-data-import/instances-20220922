@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23790 {
+    bda:LG3B16AB89CBAB0A8C
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBD85D35D1E6B1409
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T11:08:37.271Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23790  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23790 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "04/MW23790.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23790 ;
+        adm:logEntry        bda:LG3B16AB89CBAB0A8C , bda:LGBD85D35D1E6B1409 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF3002EB234F8E8B0
+        a                   :PublishedEvent ;
+        :eventWhen          "1973-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0D95B0C4627020B0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683 .Y36 1973" .
+    
+    bdr:ID3EB028AB3AAD4993
+        a                   bdr:HollisId ;
+        rdf:value           "014259129" .
+    
+    bdr:IDB1915B79AD619FAC
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73900531" .
+    
+    bdr:MW23790  a          :Instance ;
+        skos:altLabel       "the collected works (gsun-'bum) of yan-dgon-pa rgyal-mtshan-dpal"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_rgyal mtshan dpal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0D95B0C4627020B0 , bdr:ID3EB028AB3AAD4993 , bdr:IDB1915B79AD619FAC ;
+        :biblioNote         "reproduced from rare manuscripts and prints belonging to various lamas and notables in india"@en ;
+        :extentStatement    "v." ;
+        :hasTitle           bdr:TTBBACA19F9CFE6719 , bdr:TTD5D462BC59FD9196 , bdr:TTDB5FFE83C56D421C , bdr:TTEF1689109F6F5F2A ;
+        :instanceEvent      bdr:EVF3002EB234F8E8B0 ;
+        :instanceHasReproduction  bdr:W23790 ;
+        :instanceOf         bdr:WA1KG17449 , bdr:WA23790 ;
+        :note               bdr:NT136E7E1CCA9460B4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "darjeeling"@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT136E7E1CCA9460B4
+        a                   :Note ;
+        :noteText           "tbrc holds scans for volume 1, tbrc volume number 0855"@en .
+    
+    bdr:TTBBACA19F9CFE6719
+        a                   :CoverTitle ;
+        rdfs:label          "gsun -'bum of yan-dgon-pa"@en-x-mixed .
+    
+    bdr:TTD5D462BC59FD9196
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_rgyal mtshan dpal/"@bo-x-ewts .
+    
+    bdr:TTDB5FFE83C56D421C
+        a                   :Title ;
+        rdfs:label          "rje rgyal ba yang dgon pa'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TTEF1689109F6F5F2A
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun-'bum) of yan-dgon-pa rgyal-mtshan-dpal"@en-x-mixed .
+}

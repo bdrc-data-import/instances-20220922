@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14137 {
+    bda:LG00DAC4C9DEFD3AC6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-29T15:05:33.593Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14137  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14137 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b8/MW1KG14137.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14137 ;
+        adm:logEntry        bda:LG00DAC4C9DEFD3AC6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A6468CCA5C53B6A
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID19FCB02EED3B7467
+        a                   bdr:HollisId ;
+        rdf:value           "014256106" .
+    
+    bdr:ID4810A030B1369335
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789380359694" .
+    
+    bdr:MW1KG14137  a       :Instance , :SerialInstance ;
+        skos:altLabel       "treasury of proverbs and idioms"@en ;
+        skos:prefLabel      "gtam mdzod mes po'i zhal rgyun/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID19FCB02EED3B7467 , bdr:ID4810A030B1369335 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "vi, 374 p." ;
+        :hasTitle           bdr:TT0A278ABB71F6A547 , bdr:TT2CE00F5FED1F9A4B ;
+        :instanceEvent      bdr:EV1A6468CCA5C53B6A ;
+        :instanceHasReproduction  bdr:W1KG14137 ;
+        :instanceOf         bdr:WA18122 , bdr:WA1KG14137 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG13995 ;
+        :seriesNumber       "8" .
+    
+    bdr:TT0A278ABB71F6A547
+        a                   :OtherTitle ;
+        rdfs:label          "treasury of proverbs and idioms"@en .
+    
+    bdr:TT2CE00F5FED1F9A4B
+        a                   :Title ;
+        rdfs:label          "gtam mdzod mes po'i zhal rgyun/"@bo-x-ewts .
+}

@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046416 {
+    bda:LGAEF1B9031AAADAD7
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046416"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046416
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046416 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "01/MW1FEMC046416.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046416 ;
+        adm:logEntry        bda:LGAEF1B9031AAADAD7 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID06F4E0C3EC3A932B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "151-B.04.03.04.VI.6.IV.1" .
+    
+    bdr:MFABC47C1575E0CB5E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "171" .
+    
+    bdr:MW1FEMC046416
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនធ្វើព្រះពុទ្ធរូប (២-១៩)"@km , "kpuon dhvö braḥ buddh rūp"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID06F4E0C3EC3A932B ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT199D327F960CEA45 , bdr:TT3670C2CD695D45AE ;
+        :instanceHasReproduction  bdr:W1FEMC046416 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFABC47C1575E0CB5E ;
+        :note               bdr:NT7B2B3EA65A541A57 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT7B2B3EA65A541A57
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT199D327F960CEA45
+        a                   :Title ;
+        rdfs:label          "kpuon dhvö braḥ buddh rūp"@km-x-twktt .
+    
+    bdr:TT3670C2CD695D45AE
+        a                   :Title ;
+        rdfs:label          "ក្បួនធ្វើព្រះពុទ្ធរូប (២-១៩)"@km .
+}

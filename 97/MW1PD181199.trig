@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD181199 {
+    bda:LG2CBD837ECB30904E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-05T12:03:42.371Z"^^xsd:dateTime ;
+        adm:logMessage      "added copyright title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG9E6E20E700F63993
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-13T16:34:19.242Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed isbn"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGD580DADA6ECB61E1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-02-18T12:12:03.888Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD181199  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD181199 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "97/MW1PD181199.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD181199 ;
+        adm:logEntry        bda:LG2CBD837ECB30904E , bda:LG9E6E20E700F63993 , bda:LGD580DADA6ECB61E1 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR2F41F9A3ABD44D08
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6438 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVED43103CCF5589C3
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5D5C9249602C53F2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542005359" .
+    
+    bdr:IDE8E196DDAC9134DB
+        a                   bdr:HollisId ;
+        rdf:value           "014257785" .
+    
+    bdr:MW1PD181199  a      :Instance ;
+        skos:altLabel       "<<格萨尔王>>论文集"@zh-hans ;
+        skos:prefLabel      "gling sgrung dpyad rtsom bdams bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5D5C9249602C53F2 , bdr:IDE8E196DDAC9134DB ;
+        :authorshipStatement  "gcod pa don grub dang dbang grags gnyis kyis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR2F41F9A3ABD44D08 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 7, 254 p." ;
+        :hasTitle           bdr:TT2472BAA6EAB38D73 , bdr:TT5770A5E12EC6CB2E , bdr:TTC7F1C44500BF29B4 ;
+        :instanceEvent      bdr:EVED43103CCF5589C3 ;
+        :instanceHasReproduction  bdr:W1PD181199 ;
+        :instanceOf         bdr:WA1PD181199 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT2472BAA6EAB38D73
+        a                   :Title ;
+        rdfs:label          "gling sgrung dpyad rtsom bdams bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT5770A5E12EC6CB2E
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "<<格萨尔王>>论文集"@zh-hans .
+    
+    bdr:TTC7F1C44500BF29B4
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "<< ge sa er wang >> lun wen ji"@zh-latn-pinyin-x-ndia .
+}

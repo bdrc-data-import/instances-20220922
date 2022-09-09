@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022775 {
+    bda:LGEABF7C241A235EB8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-22"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022775"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022775
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022775 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e0/MW1FEMC022775.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022775 ;
+        adm:logEntry        bda:LGEABF7C241A235EB8 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID379D93906C9FD27A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.251.VII" .
+    
+    bdr:MF19E5CD09ED4E5A3D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XLIX" ;
+        :microfilmStrip     "74" .
+    
+    bdr:MW1FEMC022775
+        a                   :Instance ;
+        skos:prefLabel      "បទ្យបទោរុវំសវណ្ណនបកាសនាដីកាអដ្ឋកថាមហាវំស"@km , "padyapadoruvaṃsavaṇṇanapakāsanāṭīkā aṭṭhakathā mahāvaṃsa"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID379D93906C9FD27A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-21" ;
+        :hasTitle           bdr:TT45DE90591CD4B03C , bdr:TT560D4338973FE3A5 , bdr:TT7494098A83D6E445 , bdr:TTC893E3BE8848B066 ;
+        :instanceHasReproduction  bdr:W1FEMC022775 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF19E5CD09ED4E5A3D ;
+        :note               bdr:NT9E3E57B95D29B67B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "91" .
+    
+    bdr:NT9E3E57B95D29B67B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 498" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT45DE90591CD4B03C
+        a                   :CoverTitle ;
+        rdfs:label          "pa dyapadorravaṃsavaṇṇanapakāsanāṭīkā aṭṭhakathā mahāvaṃsa"@km-x-twktt .
+    
+    bdr:TT560D4338973FE3A5
+        a                   :Title ;
+        rdfs:label          "បទ្យបទោរុវំសវណ្ណនបកាសនាដីកាអដ្ឋកថាមហាវំស"@km ;
+        :femcConversionOf   bdr:TTC893E3BE8848B066 .
+    
+    bdr:TT7494098A83D6E445
+        a                   :Title ;
+        rdfs:label          "padyapadoruvaṃsavaṇṇanapakāsanāṭīkā aṭṭhakathā mahāvaṃsa"@km-x-twktt ;
+        :femcConversionOf   bdr:TT45DE90591CD4B03C .
+    
+    bdr:TTC893E3BE8848B066
+        a                   :CoverTitle ;
+        rdfs:label          "បទ្យបទោរ្រវំសវណ្ណនបកាសនាដីកាអដ្ឋកថាមហាវំស"@km .
+}

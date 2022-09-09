@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022939 {
+    bda:LG4EA955A064F562EA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022939"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022939
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022939 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "d6/MW1FEMC022939.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022939 ;
+        adm:logEntry        bda:LG4EA955A064F562EA , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8583929BF26CEF86
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.415.VII" .
+    
+    bdr:MF00AB7D1C68929796
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022939
+        a                   :Instance ;
+        skos:prefLabel      "បឋមភាណរារ"@km , "paṭhamabhāṇavāra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8583929BF26CEF86 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT0B125DEFC3B4B054 , bdr:TT6051B37D49EC538D , bdr:TT79BEE1D7E13A7C7F , bdr:TT7AE7E69A5B89E285 ;
+        :instanceHasReproduction  bdr:W1FEMC022939 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF00AB7D1C68929796 ;
+        :note               bdr:NT4A7D9CC247D9045F , bdr:NT567B85856C3E9E86 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "189" .
+    
+    bdr:NT4A7D9CC247D9045F
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:NT567B85856C3E9E86
+        a                   :Note ;
+        :contentLocationStatement  "pg. 530" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0B125DEFC3B4B054
+        a                   :CoverTitle ;
+        rdfs:label          "បថមភាណវារំ (វាន)"@km .
+    
+    bdr:TT6051B37D49EC538D
+        a                   :CoverTitle ;
+        rdfs:label          "pathamabhāṇavāraṃ"@km-x-twktt .
+    
+    bdr:TT79BEE1D7E13A7C7F
+        a                   :Title ;
+        rdfs:label          "paṭhamabhāṇavāra"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6051B37D49EC538D .
+    
+    bdr:TT7AE7E69A5B89E285
+        a                   :Title ;
+        rdfs:label          "បឋមភាណរារ"@km ;
+        :femcConversionOf   bdr:TT0B125DEFC3B4B054 .
+}

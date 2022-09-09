@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1GS57624 {
+    bda:LG715A3AD650C39604
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-04T07:08:28.546Z"^^xsd:dateTime ;
+        adm:logMessage      "record created"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1GS57624  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1GS57624 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8c/MW1GS57624.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS57624 ;
+        adm:logEntry        bda:LG715A3AD650C39604 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV008800A846CF8998
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5E272F065EC11B74
+        a                   bdr:HollisId ;
+        rdf:value           "014255489" .
+    
+    bdr:ID9B6F5614821ED617
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "8189769030" .
+    
+    bdr:MW1GS57624  a       :Instance , :SerialInstance ;
+        skos:altLabel       "a collection of rare medical instructions of the tradition of bha ro phyag rdum"@en ;
+        skos:prefLabel      "sman dpyad rin chen 'dus pa a tsa ra'i man ngag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5E272F065EC11B74 , bdr:ID9B6F5614821ED617 ;
+        :authorshipStatement  "edited and arranged by tashi y. tashigang"@en ;
+        :biblioNote         "reproduced from a rare manuscript collection from the library of o rgyan rnam rgyal, delhi"@en ;
+        :extentStatement    "66 p., 2 plates" ;
+        :hasTitle           bdr:TT1F958763ACBC21E5 , bdr:TT40F0D44C6B9A4EC5 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV008800A846CF8998 ;
+        :instanceHasReproduction  bdr:W1GS57624 ;
+        :instanceOf         bdr:WA1GS57624 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "t. y. tashigang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 150" .
+    
+    bdr:TT1F958763ACBC21E5
+        a                   :Title ;
+        rdfs:label          "sman dpyad rin chen 'dus pa a tsa ra'i man ngag"@bo-x-ewts .
+    
+    bdr:TT40F0D44C6B9A4EC5
+        a                   :Subtitle ;
+        rdfs:label          "a collection of rare medical instructions of the tradition of bha ro phyag rdum"@en .
+}

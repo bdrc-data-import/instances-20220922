@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21505 {
+    bda:LG6A2416D4066BC54A
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-27T09:23:15.951Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGF8D328B0EDC65704
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21505  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21505 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f2/MW21505.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21505 ;
+        adm:logEntry        bda:LG6A2416D4066BC54A , bda:LGF8D328B0EDC65704 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV46742BF4BB206CA9
+        a                   :PublishedEvent ;
+        :eventWhen          "1998/1999?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6762590B7123FF39
+        a                   bdr:HollisId ;
+        rdf:value           "014258313" .
+    
+    bdr:MW21505  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_shes rab rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6762590B7123FF39 ;
+        :biblioNote         "impressions from the zhol new printery blocks"@en ;
+        :extentStatement    "7 v." ;
+        :hasSourcePrintery  bdr:G1PD129184 ;
+        :hasTitle           bdr:TT8762F2F9686C0B68 ;
+        :instanceEvent      bdr:EV46742BF4BB206CA9 ;
+        :instanceHasReproduction  bdr:W21505 ;
+        :instanceOf         bdr:WA21505 ;
+        :note               bdr:NT70D5481C698D7C52 ;
+        :numberOfVolumes    7 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[lha sa]"@en ;
+        :publisherName      "[zhol par khang]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT70D5481C698D7C52
+        a                   :Note ;
+        :noteText           "-2525"@en .
+    
+    bdr:TT8762F2F9686C0B68
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_shes rab rgya mtsho/"@bo-x-ewts .
+}

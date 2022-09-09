@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW739 {
+    bda:LG658C8B8AC169E2FA
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-11-14T10:43:03.299Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG86CC47C0B868AF80
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-25T11:51:28.666Z"^^xsd:dateTime ;
+        adm:logMessage      "addded print type and source printrey"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGF8F93C6782FD3571
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW739  a            adm:AdminData ;
+        adm:adminAbout      bdr:MW739 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "55/MW739.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW739 ;
+        adm:logEntry        bda:LG658C8B8AC169E2FA , bda:LG86CC47C0B868AF80 , bda:LGF8F93C6782FD3571 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD00F292742CC8D67
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDB8FB5AAAF431EE68
+        a                   bdr:HollisId ;
+        rdf:value           "014261034" .
+    
+    bdr:MW739  a            :Instance ;
+        skos:prefLabel      "tshad ma'i spyi don rigs rgyan chen mo/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB8FB5AAAF431EE68 ;
+        :authorshipStatement  "dge 'dun grub pa dpal bzang po/"@bo-x-ewts ;
+        :biblioNote         "impressions from blocks preserved at sku 'bum byams pa gling monastery"@en ;
+        :extentStatement    "261 ff." ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TT66A0177CCE708F73 , bdr:TTD01E83295D534ADF ;
+        :instanceEvent      bdr:EVD00F292742CC8D67 ;
+        :instanceHasReproduction  bdr:W739 ;
+        :instanceOf         bdr:WA739 ;
+        :note               bdr:NT11CEF10B9EEC985A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sku 'bum byams pa gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "sku 'bum/"@bo-x-ewts .
+    
+    bdr:NT11CEF10B9EEC985A
+        a                   :Note ;
+        :noteText           "other editions\n212 ff. in vol. 4 of the 5 vol. printed gsung 'bum in the Potala collection.\nIsMEO 94-1\nTOH 5528: 212 ff.\nThe IsMEO example has 211 ff.\nWritten at Theg-chen Pho-brang.\nTshad ma'i bstan bcos rigs pa'i rgyan zhes bya ba bzhugs so / Rje Dge 'dun grub kyis brtsans ; Chu skyes Bsam gtan gyis zhu dag byas. -- Lan kru'u : Kan su'u Mi rigs Dpe skrun Khang, 1996.  2, 3, 487 p. ISBN 7542104845."@en .
+    
+    bdr:TT66A0177CCE708F73
+        a                   :Title ;
+        rdfs:label          "tshad ma'i spyi don rigs rgyan chen mo/"@bo-x-ewts .
+    
+    bdr:TTD01E83295D534ADF
+        a                   :TitlePageTitle ;
+        rdfs:label          "tshad ma'i bstan bcos chen po rigs pa'i rgyan/"@bo-x-ewts .
+}

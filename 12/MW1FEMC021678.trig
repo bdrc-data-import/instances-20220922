@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021678 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021678
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021678 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "12/MW1FEMC021678.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021678 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB3CF9F9E888CADCB
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.584.V.2" .
+    
+    bdr:MF0F03F36B4A90954B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "133" ;
+        :microfilmStrip     "227" .
+    
+    bdr:MW1FEMC021678
+        a                   :Instance ;
+        skos:prefLabel      "សារថីក្រឹត្យ"@km , "sārathī krịty"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB3CF9F9E888CADCB ;
+        :biblioNote         "This manuscript was digitized from a film negative (Kodak Technical Pan, 35mm) produced during an earlier manuscript documentation project carried out by the Fonds pour l’Edition des Manuscripts du Cambodge of the École française d'Extrême-Orient (EFEO-FEMC). The digitization was carried out by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imaging Services and the FEMC, with the permission of the EFEO. We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT0FCBAEBC7A9218FE , bdr:TT40C874529B9B9803 , bdr:TTAA2DFB98ABE43E75 , bdr:TTEE201B6564D4524F ;
+        :instanceOf         bdr:WA1FEMC021678 , bdr:WA1FEMC140020 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF0F03F36B4A90954B ;
+        :note               bdr:NT60EDB06D31E6B84D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT60EDB06D31E6B84D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 302" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0FCBAEBC7A9218FE
+        a                   :Title ;
+        rdfs:label          "sārathī krịty"@km-x-twktt ;
+        :femcConversionOf   bdr:TT40C874529B9B9803 .
+    
+    bdr:TT40C874529B9B9803
+        a                   :CoverTitle ;
+        rdfs:label          "sārathī krit"@km-x-twktt .
+    
+    bdr:TTAA2DFB98ABE43E75
+        a                   :Title ;
+        rdfs:label          "សារថីក្រឹត្យ"@km ;
+        :femcConversionOf   bdr:TTEE201B6564D4524F .
+    
+    bdr:TTEE201B6564D4524F
+        a                   :CoverTitle ;
+        rdfs:label          "សារថីក្រិត"@km .
+}

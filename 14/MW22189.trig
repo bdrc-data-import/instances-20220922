@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22189 {
+    bda:LG59AFDC9286EA238F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF597670BCE4EF646
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-12T11:45:58.533Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22189  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22189 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "14/MW22189.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22189 ;
+        adm:logEntry        bda:LG59AFDC9286EA238F , bda:LGF597670BCE4EF646 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR0C5B882B1ABD62B9
+        a                   :AgentAsCreator ;
+        :agent              bdr:P579 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV43CAAE9FD4127D7A
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID635A48315A01C2CE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902818" .
+    
+    bdr:ID6F3DA4450EC0D845
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7930 .N34 1985" .
+    
+    bdr:IDA91C8447A5BAEA54
+        a                   bdr:HollisId ;
+        rdf:value           "014258690" .
+    
+    bdr:IDBD5CE8592C690A1A
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-458" .
+    
+    bdr:MW22189  a          :Instance ;
+        skos:prefLabel      "ngag dbang chos kyi rgya mtsho'i rang rnam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID635A48315A01C2CE , bdr:ID6F3DA4450EC0D845 , bdr:IDA91C8447A5BAEA54 , bdr:IDBD5CE8592C690A1A ;
+        :authorshipStatement  "the autobiography of nag-dban-chos-kyi-rgya-mtsho (1759-1812); edited by rje ses-rab-rgyal-mtshan, 25th rje mkhan po of bhutan (1772-1848)"@en ;
+        :biblioNote         "reproduced from an incomplete manuscript of the collected works of nag-dbang-chos-kyi-rgya-mtsho"@en ;
+        :creator            bdr:CR0C5B882B1ABD62B9 ;
+        :extentStatement    "430 p." ;
+        :hasTitle           bdr:TT0624F35D9E21C594 , bdr:TTDC03D15C45FA2173 ;
+        :instanceEvent      bdr:EV43CAAE9FD4127D7A ;
+        :instanceHasReproduction  bdr:W22189 ;
+        :instanceOf         bdr:WA22189 ;
+        :note               bdr:NT935DB2437BC0B842 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "national library of bhutan"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT935DB2437BC0B842
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1577"@en .
+    
+    bdr:TT0624F35D9E21C594
+        a                   :OtherTitle ;
+        rdfs:label          "rje btsun bdag nyid chen po ngag dbang chos kyi rgya mtsho'i rnam par thar pa byang chen spyod pa'i me long /"@bo-x-ewts .
+    
+    bdr:TTDC03D15C45FA2173
+        a                   :Title ;
+        rdfs:label          "ngag dbang chos kyi rgya mtsho'i rang rnam/"@bo-x-ewts .
+}

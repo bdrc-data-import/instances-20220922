@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022378 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022378
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022378 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "73/MW1FEMC022378.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022378 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID36C44BF5D59F98AB
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.865.II.2" .
+    
+    bdr:MF970BDF64DBFCD6F7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "143" ;
+        :microfilmStrip     "237" .
+    
+    bdr:MW1FEMC022378
+        a                   :Instance ;
+        skos:prefLabel      "ពពេចញីឈ្មោល"@km , "babec ñī jhmol"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID36C44BF5D59F98AB ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1FD7CBA6A3018EE3 , bdr:TT21BA3ED23A4D7A59 , bdr:TT85971DE2D703A2F8 , bdr:TT86D6261D141E83CC ;
+        :instanceHasReproduction  bdr:W1FEMC022378 ;
+        :instanceOf         bdr:WA1FEMC022378 , bdr:WA1FEMC130001 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF970BDF64DBFCD6F7 ;
+        :note               bdr:NTF08180FECFE70F4B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF08180FECFE70F4B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 425" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1FD7CBA6A3018EE3
+        a                   :Title ;
+        rdfs:label          "ពពេចញីឈ្មោល"@km .
+    
+    bdr:TT21BA3ED23A4D7A59
+        a                   :CoverTitle ;
+        rdfs:label          "ពពេច"@km .
+    
+    bdr:TT85971DE2D703A2F8
+        a                   :CoverTitle ;
+        rdfs:label          "babec"@km-x-twktt .
+    
+    bdr:TT86D6261D141E83CC
+        a                   :Title ;
+        rdfs:label          "babec ñī jhmol"@km-x-twktt .
+}

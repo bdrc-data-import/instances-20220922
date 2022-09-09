@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023237 {
+    bda:LG6DDD8F8C5E9E92F8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023237"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023237
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023237 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "22/MW1FEMC023237.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023237 ;
+        adm:logEntry        bda:LG6DDD8F8C5E9E92F8 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5064B80B90266697
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.964.VI.6" .
+    
+    bdr:MW1FEMC023237
+        a                   :Instance ;
+        skos:prefLabel      "ឥតិបិសោរតនមាលា"@km , "Itipisoratanamālā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5064B80B90266697 ;
+        :biblioNote         "This manuscript was digitized by the Buddhist Digital Resource Center in collaboration with Digital Divide Data, Brechin Imagining Services, and Fonds pour l’Edition des Manuscripts du Cambodge (FEMC), under the auspices of The Ministry of Culture and Fine Arts, Cambodia (ក្រសួងវប្បធម៌ និងវិចិត្រសិល្បៈ). We are grateful for the support of A Khmer Buddhist Foundation, whose generosity made this preservation project possible."@en ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT6ADE41E2373413AB , bdr:TTAF23E9A98FC3C53F ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :note               bdr:NTED15C5AF6558FC4C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTED15C5AF6558FC4C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 564" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT6ADE41E2373413AB
+        a                   :Title ;
+        rdfs:label          "ឥតិបិសោរតនមាលា"@km .
+    
+    bdr:TTAF23E9A98FC3C53F
+        a                   :Title ;
+        rdfs:label          "Itipisoratanamālā"@km-x-twktt .
+}

@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020650 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020650
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020650 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "e4/MW1FEMC020650.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020650 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID67F68D7B66C25D98
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d'.283.III.4" .
+    
+    bdr:MW1FEMC020650
+        a                   :Instance ;
+        skos:prefLabel      "អភិធម្ម៩បរិច្ឆេទ"@km , "abhidhamm 9 paricched"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID67F68D7B66C25D98 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT56988CE765689577 , bdr:TT5D15C4342EB27CCA , bdr:TT751AF7E155958534 , bdr:TT806E885138984D34 , bdr:TT85D5544EF420FC06 , bdr:TTD95AD3E3CE2E81E1 ;
+        :instanceHasReproduction  bdr:W1FEMC020650 ;
+        :instanceOf         bdr:WA1FEMC020650 , bdr:WA1FEMC040002 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTE3A999D97AE10DA6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTE3A999D97AE10DA6
+        a                   :Note ;
+        :contentLocationStatement  "pg. 121" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT56988CE765689577
+        a                   :CoverTitle ;
+        rdfs:label          "abhidhammat-thasaṅgroḥ"@km-x-twktt .
+    
+    bdr:TT5D15C4342EB27CCA
+        a                   :Title ;
+        rdfs:label          "អភិធម្ម៩បរិច្ឆេទ"@km .
+    
+    bdr:TT751AF7E155958534
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មត្ថសង្រ្គោះ"@km .
+    
+    bdr:TT806E885138984D34
+        a                   :CoverTitle ;
+        rdfs:label          "អភិធម្មសង្រ្គោះ"@km ;
+        :femcConversionOf   bdr:TT751AF7E155958534 .
+    
+    bdr:TT85D5544EF420FC06
+        a                   :Title ;
+        rdfs:label          "abhidhamm 9 paricched"@km-x-twktt .
+    
+    bdr:TTD95AD3E3CE2E81E1
+        a                   :CoverTitle ;
+        rdfs:label          "abhidhamm saṅgroḥ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT56988CE765689577 .
+}

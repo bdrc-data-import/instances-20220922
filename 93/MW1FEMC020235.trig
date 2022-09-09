@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020235 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020235
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020235 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "93/MW1FEMC020235.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020235 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDEE9ED6EA6D797470
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.128.II.1" .
+    
+    bdr:MFF5495C7137CE0CAE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "62" ;
+        :microfilmStrip     "156" .
+    
+    bdr:MW1FEMC020235
+        a                   :Instance ;
+        skos:prefLabel      "កុលិកបណ្ឌិត"@km , "kulik paṇḍit"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEE9ED6EA6D797470 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT63EA33CB5F02D19C , bdr:TTE1B3CEB02753500C ;
+        :instanceHasReproduction  bdr:W1FEMC020235 ;
+        :instanceOf         bdr:WA1FEMC020235 , bdr:WA1FEMC120073 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF5495C7137CE0CAE ;
+        :note               bdr:NT638EBBFEAE6D0EF8 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1018" .
+    
+    bdr:NT638EBBFEAE6D0EF8
+        a                   :Note ;
+        :contentLocationStatement  "pg. 47" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT63EA33CB5F02D19C
+        a                   :Title ;
+        rdfs:label          "kulik paṇḍit"@km-x-twktt .
+    
+    bdr:TTE1B3CEB02753500C
+        a                   :Title ;
+        rdfs:label          "កុលិកបណ្ឌិត"@km .
+}

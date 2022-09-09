@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046131 {
+    bda:LGEF65A6B8F705F18A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046131"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046131
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046131 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "89/MW1FEMC046131.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046131 ;
+        adm:logEntry        bda:LGEF65A6B8F705F18A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID183E695431B1611A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "089-B.04.03.03.VI.6" .
+    
+    bdr:MF091C4B19E97B7698
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC046131
+        a                   :Instance ;
+        skos:prefLabel      "ឆ័ក្ខយោគី្យ (១-១៩)"@km , "Chakkh yogīy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID183E695431B1611A ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT1C2483B6592256D5 , bdr:TT61DE6C7831C7EEB9 ;
+        :instanceHasReproduction  bdr:W1FEMC036131 , bdr:W1FEMC046131 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF091C4B19E97B7698 ;
+        :note               bdr:NTC39B7068FFC411A4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTC39B7068FFC411A4
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT1C2483B6592256D5
+        a                   :Title ;
+        rdfs:label          "Chakkh yogīy"@km-x-twktt .
+    
+    bdr:TT61DE6C7831C7EEB9
+        a                   :Title ;
+        rdfs:label          "ឆ័ក្ខយោគី្យ (១-១៩)"@km .
+}

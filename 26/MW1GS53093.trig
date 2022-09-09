@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1GS53093 {
+    bda:LGF2562F22210E55BB
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-07-12T10:03:02.144Z"^^xsd:dateTime ;
+        adm:logMessage      "first publication for scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1GS53093  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1GS53093 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "26/MW1GS53093.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS53093 ;
+        adm:logEntry        bda:LGF2562F22210E55BB , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV998A69B6CE4E4053
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2C1AF4E86FB6B3FA
+        a                   bdr:HollisId ;
+        rdf:value           "014255474" .
+    
+    bdr:MW1GS53093  a       :Instance ;
+        skos:altLabel       "a lamp illuminating the hitory of dargye monastery"@en ;
+        skos:prefLabel      "tre hor bkra shis dar rgyas dgon gyi byung rabs gsal bar ston pa'i snang byed sgron me/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2C1AF4E86FB6B3FA ;
+        :authorshipStatement  "ser byes tre hor lha rams dge bshes tshul dga'"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "8, 184 p." ;
+        :hasTitle           bdr:TTB11146A1F3393858 , bdr:TTB4E7632A70E5665D ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV998A69B6CE4E4053 ;
+        :instanceHasReproduction  bdr:W1GS53093 ;
+        :instanceOf         bdr:WA1GS53093 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "mundgod, north karnataka"@en ;
+        :publisherName      "geshe tsultrim chophel"@en ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "drepung loseling photo offset printers/"@bo-x-ewts .
+    
+    bdr:TTB11146A1F3393858
+        a                   :OtherTitle ;
+        rdfs:label          "a lamp illuminating the hitory of dargye monastery"@en .
+    
+    bdr:TTB4E7632A70E5665D
+        a                   :Title ;
+        rdfs:label          "tre hor bkra shis dar rgyas dgon gyi byung rabs gsal bar ston pa'i snang byed sgron me/"@bo-x-ewts .
+}

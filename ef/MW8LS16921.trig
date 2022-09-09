@@ -1,0 +1,58 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8LS16921 {
+    bda:LG7A355FD2FB7862C1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2015-12-04T14:11:36.217Z"^^xsd:dateTime ;
+        adm:logMessage      "created new work record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG94C9ACC3B8DB537C
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-02-21T12:55:36.252Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:MW8LS16921  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW8LS16921 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ef/MW8LS16921.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8LS16921 ;
+        adm:logEntry        bda:LG7A355FD2FB7862C1 , bda:LG94C9ACC3B8DB537C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW8LS16921  a       :Instance ;
+        skos:prefLabel      "mkha' 'gro gsang spyod/"@bo-x-ewts ;
+        :biblioNote         "reproduced from handwritten manuscript"@en , "text order in each volume needs to be validated"@en ;
+        :extentStatement    "2 v. (1430 p.)" ;
+        :hasTitle           bdr:TT3374325A60D3F50B , bdr:TTA3B2279CCA76C375 , bdr:TTB3717DF4C20F23BC ;
+        :instanceHasReproduction  bdr:W8LS16921 ;
+        :instanceOf         bdr:WA8LS16921 ;
+        :numberOfVolumes    2 ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT3374325A60D3F50B
+        a                   :OtherTitle ;
+        rdfs:label          "mkha' 'gro gsang gcod yid bzhin nor bu/"@bo-x-ewts .
+    
+    bdr:TTA3B2279CCA76C375
+        a                   :Title ;
+        rdfs:label          "mkha' 'gro gsang spyod/"@bo-x-ewts .
+    
+    bdr:TTB3717DF4C20F23BC
+        a                   :TitlePageTitle ;
+        rdfs:label          "mkha' 'gro gsang spyod yid bzhin nor bu/"@bo-x-ewts .
+}

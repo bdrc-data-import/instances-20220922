@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1862 {
+    bda:LG12A8AD1A2D8E1101
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LG16750BAA24FB7293
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-10-21T15:57:01.18Z"^^xsd:dateTime ;
+        adm:logMessage      "released for outline"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGEA4849EE604B86FB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1862  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1862 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "07/MW1NLM1862.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1862 ;
+        adm:logEntry        bda:LG12A8AD1A2D8E1101 , bda:LG16750BAA24FB7293 , bda:LGEA4849EE604B86FB , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1862  a       :Instance ;
+        skos:prefLabel      "tshe'i mthar nye bar phan pa'i man ngag 'khrul snang dbyings grol sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "18x5.5" ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TTA66BE7931D87069B , bdr:TTA7B9575DC58CA876 ;
+        :instanceHasReproduction  bdr:W1NLM1862 ;
+        :instanceOf         bdr:WA1NLM157 , bdr:WA1NLM1862 ;
+        :note               bdr:NTA7BF9AEBB033483D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTA7BF9AEBB033483D
+        a                   :Note ;
+        :noteText           "nlmId: M0059780"@en .
+    
+    bdr:TTA66BE7931D87069B
+        a                   :Title ;
+        rdfs:label          "tshe'i mthar nye bar phan pa'i man ngag 'khrul snang dbyings grol sogs/"@bo-x-ewts .
+    
+    bdr:TTA7B9575DC58CA876
+        a                   :OtherTitle ;
+        rdfs:label          "bka' thang bsdus pa/"@bo-x-ewts .
+}

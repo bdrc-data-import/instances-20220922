@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30300 {
+    bda:LGFDCCC3D4F717029F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW30300  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30300 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e7/MW30300.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30300 ;
+        adm:logEntry        bda:LGFDCCC3D4F717029F , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EV4B9D1E3D41690A8E
+        a                   :PublishedEvent ;
+        :eventWhen          "1971"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0A420EF5168E7EA4
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "002419380-1" .
+    
+    bdr:ID631456C59C0E0C09
+        a                   bdr:PL480 ;
+        rdf:value           "n-tib-1443" .
+    
+    bdr:IDC340F462B654159C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76928267" .
+    
+    bdr:MW30300  a          :Instance ;
+        skos:prefLabel      "gsol 'debs le'u bdun pa dang bsam pa lhun grub, rten bskyed dang bcas pa/"@bo-x-ewts , "Gsol ʼdebs leʼu bdun pa daṅ Bsam pa lhun grub, rten bskyed daṅ bcas pa bźugs so."@en-x-mixed ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0A420EF5168E7EA4 , bdr:ID631456C59C0E0C09 , bdr:IDC340F462B654159C ;
+        :biblioNote         "xylographic prints from blocks preserved at mugum dag, nepal includes fabricated sanskrit titles in lanca and tibetan scripts"@en ;
+        :extentStatement    "37, 3 [i.e. 73, 5] p." ;
+        :hasTitle           bdr:TTE385D3CD5AD05A4D , bdr:TTEA2A175A53D21EC6 ;
+        :instanceEvent      bdr:EV4B9D1E3D41690A8E ;
+        :instanceOf         bdr:WA30300 ;
+        :publisherLocation  "[nepal]"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:TTE385D3CD5AD05A4D
+        a                   :Title ;
+        rdfs:label          "gsol 'debs le'u bdun pa dang bsam pa lhun grub, rten bskyed dang bcas pa/"@bo-x-ewts .
+    
+    bdr:TTEA2A175A53D21EC6
+        a                   :CoverTitle ;
+        rdfs:label          "Gsol ʼdebs leʼu bdun pa daṅ Bsam pa lhun grub, rten bskyed daṅ bcas pa bźugs so."@en-x-mixed .
+}

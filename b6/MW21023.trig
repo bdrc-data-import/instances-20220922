@@ -1,0 +1,108 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21023 {
+    bda:LGAE47096D007BBE0D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGB01D84BAAB3E9B0B
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-05-17T10:04:43.899Z"^^xsd:dateTime ;
+        adm:logMessage      "completed"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE9FCB583A05F943F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-10T09:31:12.214Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21023  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21023 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "b6/MW21023.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21023 ;
+        adm:logEntry        bda:LGAE47096D007BBE0D , bda:LGB01D84BAAB3E9B0B , bda:LGE9FCB583A05F943F , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV346D417429D1B274
+        a                   :PublishedEvent ;
+        :eventWhen          "1977"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID14254608BFC01129
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77903288" .
+    
+    bdr:ID57D90592FF9B01F4
+        a                   bdr:HollisId ;
+        rdf:value           "014258286" .
+    
+    bdr:ID5B23F0C3E27390AB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .B74 1977" .
+    
+    bdr:MW21023  a          :Instance , :SerialInstance ;
+        skos:altLabel       "collected revelations (gter chos) and writings of brtul-zugs-glin-pa"@en-x-mixed ;
+        skos:prefLabel      "gter chos/_brtul zhugs gling pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID14254608BFC01129 , bdr:ID57D90592FF9B01F4 , bdr:ID5B23F0C3E27390AB ;
+        :biblioNote         "reproduced from a collection of manuscripts made by his disciple ngag dbang thub bstan of sre gling"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "605 columns" ;
+        :hasTitle           bdr:TT7EF3D7FB17242D16 , bdr:TT9BE8E8AFF73F0668 , bdr:TTD1C2BB66170E6058 ;
+        :instanceEvent      bdr:EV346D417429D1B274 ;
+        :instanceHasReproduction  bdr:W21023 ;
+        :instanceOf         bdr:WA21023 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "khasdub gyatsho shashin"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS1KG9713 ;
+        :seriesNumber       "v. 3" .
+    
+    bdr:TT7EF3D7FB17242D16
+        a                   :Title ;
+        rdfs:label          "gter chos/_brtul zhugs gling pa/"@bo-x-ewts .
+    
+    bdr:TT9BE8E8AFF73F0668
+        a                   :CoverTitle ;
+        rdfs:label          "collected revelations of brtul-zugs-glin-pa"@en-x-mixed .
+    
+    bdr:TTD1C2BB66170E6058
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected revelations (gter chos) and writings of brtul-zugs-glin-pa"@en-x-mixed .
+}

@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG5688 {
+    bda:LG67B7037C043441C1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-07-21T10:52:04.358Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and added volume"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF6184E1AC23BC046
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-10-22T12:02:55.652Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected pub location"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG5688  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG5688 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "cb/MW1KG5688.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5688 ;
+        adm:logEntry        bda:LG67B7037C043441C1 , bda:LGF6184E1AC23BC046 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6BB023553AD0424E
+        a                   :PublishedEvent ;
+        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC7E9FE32554306BE
+        a                   bdr:HollisId ;
+        rdf:value           "014257178" .
+    
+    bdr:MW1KG5688  a        :Instance , :SerialInstance ;
+        skos:prefLabel      "snga 'gyur smin gling rgyal ba phug khang pa'i zhal 'don phyogs sgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC7E9FE32554306BE ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "4, 462 p." ;
+        :hasTitle           bdr:TT50B5420960D52EFD ;
+        :instanceEvent      bdr:EV6BB023553AD0424E ;
+        :instanceHasReproduction  bdr:W1KG5688 ;
+        :instanceOf         bdr:WA1KG5688 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[khrin tu?]"@en ;
+        :publisherName      "si khron bod brgyud nang bstan rig gnas zhib 'jug khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG5688 ;
+        :seriesNumber       "1" .
+    
+    bdr:TT50B5420960D52EFD
+        a                   :Title ;
+        rdfs:label          "snga 'gyur smin gling rgyal ba phug khang pa'i zhal 'don phyogs sgrigs/"@bo-x-ewts .
+}

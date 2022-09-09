@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010063 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010063
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010063 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b7/MW1FEMC010063.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010063 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID73A2F04F3A1AD5CF
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "025-PP.01.08.01.III.5" .
+    
+    bdr:MF77831F95BC723FB4
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "22" ;
+        :microfilmStrip     "17" .
+    
+    bdr:MW1FEMC010063
+        a                   :Instance ;
+        skos:prefLabel      "ទសជាតកសង្ខេបសេចក្តី"@km , "das jātak saṅkhep sec-ktī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID73A2F04F3A1AD5CF ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT7F98AC28FA097459 , bdr:TT9716438751AE4D13 , bdr:TT9BDD87099F9F8F1C , bdr:TTDD1A18F99524A2D9 ;
+        :instanceHasReproduction  bdr:W1FEMC010063 ;
+        :instanceOf         bdr:WA1FEMC010063 , bdr:WA1FEMC050014 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF77831F95BC723FB4 ;
+        :note               bdr:NT1E12A21371A80D29 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1E12A21371A80D29
+        a                   :Note ;
+        :contentLocationStatement  "pg. 66" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT7F98AC28FA097459
+        a                   :Title ;
+        rdfs:label          "das jātak saṅkhep sec-ktī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT9716438751AE4D13 .
+    
+    bdr:TT9716438751AE4D13
+        a                   :CoverTitle ;
+        rdfs:label          "sorubbh das jātik gḹ jāṭak' dăṅ°10"@km-x-twktt .
+    
+    bdr:TT9BDD87099F9F8F1C
+        a                   :Title ;
+        rdfs:label          "ទសជាតកសង្ខេបសេចក្តី"@km ;
+        :femcConversionOf   bdr:TTDD1A18F99524A2D9 .
+    
+    bdr:TTDD1A18F99524A2D9
+        a                   :CoverTitle ;
+        rdfs:label          "សោរុព្ភទសជាតិក​ គឺជាដក់ទ្ង័១០"@km .
+}

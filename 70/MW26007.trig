@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW26007 {
+    bda:LG4037E8BAB95E2273
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-11T15:23:15.878Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG7AF10685E2D8E232
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF1D0A97813BE3790
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-09-12T14:29:40.472Z"^^xsd:dateTime ;
+        adm:logMessage      "removed old sr"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW26007  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW26007 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "70/MW26007.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW26007 ;
+        adm:logEntry        bda:LG4037E8BAB95E2273 , bda:LG7AF10685E2D8E232 , bda:LGF1D0A97813BE3790 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E772E96AF1D9B64
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID32EA5889A7FE3460
+        a                   bdr:HollisId ;
+        rdf:value           "014259492" .
+    
+    bdr:ID5BD0CF98D3F8B024
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223004614,9787223004619" .
+    
+    bdr:MW26007  a          :Instance ;
+        skos:altLabel       "格萨尔王传 --比热山羊宗"@zh-hans ;
+        skos:prefLabel      "bhe ra ra rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID32EA5889A7FE3460 , bdr:ID5BD0CF98D3F8B024 ;
+        :authorshipStatement  "bsod nams dge legs kyis lag bris ma gzhir bzung phyogs sgrig byas pa/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi gnyis pa/"@bo-x-ewts ;
+        :extentStatement    "427 p." ;
+        :hasTitle           bdr:TT79FA02B5A887E478 , bdr:TTA17DA5C0901860E7 , bdr:TTAF18CEEEE51EAC3D , bdr:TTF639F6963E203053 ;
+        :instanceEvent      bdr:EV3E772E96AF1D9B64 ;
+        :instanceHasReproduction  bdr:W26007 ;
+        :instanceOf         bdr:WA20087 , bdr:WA26007 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT79FA02B5A887E478
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ge sa er wang zhuan-- bi re shan yang zong"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTA17DA5C0901860E7
+        a                   :Title ;
+        rdfs:label          "bhe ra ra rdzong /"@bo-x-ewts .
+    
+    bdr:TTAF18CEEEE51EAC3D
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "格萨尔王传 --比热山羊宗"@zh-hans .
+    
+    bdr:TTF639F6963E203053
+        a                   :TitlePageTitle ;
+        rdfs:label          "ge sar rgyal po'i sgrung bhe ra ra rdzong /"@bo-x-ewts .
+}

@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020692 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020692
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020692 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9a/MW1FEMC020692.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020692 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID19B9BF5DFDEFACBC
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.325.V.1" .
+    
+    bdr:MW1FEMC020692
+        a                   :Instance ;
+        skos:prefLabel      "សតិមហាបដ្ឋាន"@km , "sati mahā paṭṭhān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID19B9BF5DFDEFACBC ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT24C7596CEFBF3CE5 , bdr:TT4A40318BA797F815 , bdr:TTA1265FB25DBA4A46 , bdr:TTBE810E06B868EB82 ;
+        :instanceHasReproduction  bdr:W1FEMC020692 ;
+        :instanceOf         bdr:WA1FEMC020692 , bdr:WA1FEMC070017 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTE6D81F6C3A882221 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTE6D81F6C3A882221
+        a                   :Note ;
+        :contentLocationStatement  "pg. 127" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT24C7596CEFBF3CE5
+        a                   :CoverTitle ;
+        rdfs:label          "mahā sati paṭṭhān"@km-x-twktt .
+    
+    bdr:TT4A40318BA797F815
+        a                   :Title ;
+        rdfs:label          "សតិមហាបដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TTBE810E06B868EB82 .
+    
+    bdr:TTA1265FB25DBA4A46
+        a                   :Title ;
+        rdfs:label          "sati mahā paṭṭhān"@km-x-twktt ;
+        :femcConversionOf   bdr:TT24C7596CEFBF3CE5 .
+    
+    bdr:TTBE810E06B868EB82
+        a                   :CoverTitle ;
+        rdfs:label          "មហាសតិបដ្ឋាន"@km .
+}

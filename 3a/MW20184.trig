@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20184 {
+    bda:LG14046F3E84670471
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20184  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20184 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3a/MW20184.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20184 ;
+        adm:logEntry        bda:LG14046F3E84670471 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8F85384B17C13046
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID20E3F5342939B835
+        a                   bdr:HollisId ;
+        rdf:value           "014258081" .
+    
+    bdr:ID7CB3F0CEA9199CEE
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542107488" .
+    
+    bdr:IDEF92D07C0D0ED2B3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003323502" .
+    
+    bdr:IDFE6FF131D9BA4E4A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "ML1751.T5 K47 2000" .
+    
+    bdr:MW20184  a          :Instance ;
+        skos:altLabel       "lun zang zu shen hua"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bod kyi lha sgrung skor gleng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID20E3F5342939B835 , bdr:ID7CB3F0CEA9199CEE , bdr:IDEF92D07C0D0ED2B3 , bdr:IDFE6FF131D9BA4E4A ;
+        :authorshipStatement  "'bal gzhung khyung thar rgyal gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 123 p." ;
+        :hasTitle           bdr:TTBBDD9D9E891DE886 , bdr:TTC93CBAF7F3F9BDDC , bdr:TTF816EDA8279F5F95 ;
+        :instanceEvent      bdr:EV8F85384B17C13046 ;
+        :instanceHasReproduction  bdr:W20184 ;
+        :instanceOf         bdr:WA20184 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTBBDD9D9E891DE886
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod kyi lha sgrung skor gleng ba'i gtam snang srid sems kyi me long /"@bo-x-ewts .
+    
+    bdr:TTC93CBAF7F3F9BDDC
+        a                   :Title ;
+        rdfs:label          "bod kyi lha sgrung skor gleng ba/"@bo-x-ewts .
+    
+    bdr:TTF816EDA8279F5F95
+        a                   :ColophonTitle ;
+        rdfs:label          "lun zang zu shen hua"@zh-latn-pinyin-x-ndia .
+}

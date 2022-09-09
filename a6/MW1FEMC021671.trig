@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021671 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021671
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021671 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a6/MW1FEMC021671.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021671 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDDE407FB0F6ECD702
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.580.III.6" .
+    
+    bdr:MW1FEMC021671
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សបិណ្ឌ"@km , "ānisaṅs piṇḍ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDDE407FB0F6ECD702 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT36B00D5EC13C3B5D , bdr:TT55C42CB1A9580629 , bdr:TTA4DCB0C40947D7D6 , bdr:TTFA84E2EA13C4C721 ;
+        :instanceHasReproduction  bdr:W1FEMC021671 ;
+        :instanceOf         bdr:WA1FEMC021671 , bdr:WA1FEMC060032 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTB3C7289DD8BB5D2C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB3C7289DD8BB5D2C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 301" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT36B00D5EC13C3B5D
+        a                   :Title ;
+        rdfs:label          "អានិសង្សបិណ្ឌ"@km ;
+        :femcConversionOf   bdr:TTA4DCB0C40947D7D6 .
+    
+    bdr:TT55C42CB1A9580629
+        a                   :CoverTitle ;
+        rdfs:label          "annisaṃgh pin"@km-x-twktt .
+    
+    bdr:TTA4DCB0C40947D7D6
+        a                   :CoverTitle ;
+        rdfs:label          "អន្និសំឃបិន"@km .
+    
+    bdr:TTFA84E2EA13C4C721
+        a                   :Title ;
+        rdfs:label          "ānisaṅs piṇḍ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT55C42CB1A9580629 .
+}

@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22044 {
+    bda:LG7770873565F53E37
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-07-18T11:13:16.512Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF2DD73F5967B5193
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22044  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22044 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "08/MW22044.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22044 ;
+        adm:logEntry        bda:LG7770873565F53E37 , bda:LGF2DD73F5967B5193 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA92851FF3E34E8EC
+        a                   :PublishedEvent ;
+        :eventWhen          "1984/1986,1989-1990"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1C3B23D13447F64F
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 G7 1984" .
+    
+    bdr:ID43BFD10B1E76FDC9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "91161743" .
+    
+    bdr:IDAF65D6091CA5E9A1
+        a                   bdr:HollisId ;
+        rdf:value           "014258583" .
+    
+    bdr:IDD9D89A349301988F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754210005x(v.1)" .
+    
+    bdr:MW22044  a          :Instance ;
+        skos:altLabel       "格萨尔王传 -- 突厥兵器国"@zh-hans ;
+        skos:prefLabel      "gru gu go rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1C3B23D13447F64F , bdr:ID43BFD10B1E76FDC9 , bdr:IDAF65D6091CA5E9A1 , bdr:IDD9D89A349301988F ;
+        :biblioNote         "v. 1. 754210005x v. 2. 7542100068 v. 3. 7542000076 v. 4. 7542000084 LC set seems to have only 2 volumes."@en ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4 v." ;
+        :hasTitle           bdr:TT0023D96820554A2B , bdr:TT1F19BF41784C8075 , bdr:TT883E94C5CE3E355A , bdr:TT9E8698570E75E67A , bdr:TTA42949E842D246A4 ;
+        :instanceEvent      bdr:EVA92851FF3E34E8EC ;
+        :instanceHasReproduction  bdr:W22044 ;
+        :instanceOf         bdr:WA1KG17182 , bdr:WA22044 ;
+        :numberOfVolumes    4 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0023D96820554A2B
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling ge sar rgyal po'i sgrung gru gu go rdzong /"@bo-x-ewts .
+    
+    bdr:TT1F19BF41784C8075
+        a                   :HalfTitle ;
+        rdfs:label          "gru gu'i go rdzong 'bebs tshul las/ stod sor dpa' bo'i dga' ston/"@bo-x-ewts .
+    
+    bdr:TT883E94C5CE3E355A
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "格萨尔王传 -- 突厥兵器国"@zh-hans .
+    
+    bdr:TT9E8698570E75E67A
+        a                   :Title ;
+        rdfs:label          "gru gu go rdzong /"@bo-x-ewts .
+    
+    bdr:TTA42949E842D246A4
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ge sa er wang zhuan-- tu jue bing qi guo"@zh-latn-pinyin-x-ndia .
+}

@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031357 {
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031357
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031357 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "38/MW1FEMC031357.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031357 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDFB36F2C025C71211
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "051-PP.02.01.01.III.1" .
+    
+    bdr:MW1FEMC031357
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធិមគ្គមញ្ញានិទ្ទេស"@km , "visuddhimagg paññāniddes"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFB36F2C025C71211 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT109DDBEEED4CFAAB , bdr:TT7A12C73C1F3D8322 , bdr:TT93BDA88FD3D39565 , bdr:TTF2B9A6AFAD90D2BB ;
+        :instanceHasReproduction  bdr:W1FEMC010182 , bdr:W1FEMC031357 ;
+        :instanceOf         bdr:WA1FEMC010075 , bdr:WA1FEMC031357 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT17CBB5D554D7E9AA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT17CBB5D554D7E9AA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT109DDBEEED4CFAAB
+        a                   :CoverTitle ;
+        rdfs:label          "វិសុទ្ធីមគ្គ"@km .
+    
+    bdr:TT7A12C73C1F3D8322
+        a                   :Title ;
+        rdfs:label          "visuddhimagg paññāniddes"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF2B9A6AFAD90D2BB .
+    
+    bdr:TT93BDA88FD3D39565
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គមញ្ញានិទ្ទេស"@km ;
+        :femcConversionOf   bdr:TT109DDBEEED4CFAAB .
+    
+    bdr:TTF2B9A6AFAD90D2BB
+        a                   :CoverTitle ;
+        rdfs:label          "visuddhīmagg"@km-x-twktt .
+}

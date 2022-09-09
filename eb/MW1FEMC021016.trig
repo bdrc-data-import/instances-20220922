@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021016 {
+    bda:LG0EE9D23FEEF644F5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021016"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021016
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021016 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "eb/MW1FEMC021016.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021016 ;
+        adm:logEntry        bda:LG0EE9D23FEEF644F5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDEC0D9E33E66579FD
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "B.13.VII" .
+    
+    bdr:MFA38230784C404D77
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XI" ;
+        :microfilmStrip     "36" .
+    
+    bdr:MW1FEMC021016
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធិមគ្គ"@km , "visuddhimagga"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEC0D9E33E66579FD ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT057781DDE6F41354 , bdr:TT2DAF7900B6D5B530 , bdr:TTBC57885274AC7045 , bdr:TTEEC606053FEE8F17 ;
+        :instanceHasReproduction  bdr:W1FEMC021016 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA38230784C404D77 ;
+        :note               bdr:NT3D9743BCD4D42766 , bdr:NT5A503D134D521115 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "433" .
+    
+    bdr:NT3D9743BCD4D42766
+        a                   :Note ;
+        :contentLocationStatement  "pg. 180" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NT5A503D134D521115
+        a                   :Note ;
+        :noteText           "should we write (សាស្រ្តាអ៊ុត)?"@en .
+    
+    bdr:TT057781DDE6F41354
+        a                   :Title ;
+        rdfs:label          "visuddhimagga"@km-x-twktt ;
+        :femcConversionOf   bdr:TT2DAF7900B6D5B530 .
+    
+    bdr:TT2DAF7900B6D5B530
+        a                   :CoverTitle ;
+        rdfs:label          "visuddhimaggaṃ"@km-x-twktt .
+    
+    bdr:TTBC57885274AC7045
+        a                   :CoverTitle ;
+        rdfs:label          "វិសុទ្ធិមគ្គំ​ (សាស្រ្តាអ៊ុត)"@km .
+    
+    bdr:TTEEC606053FEE8F17
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គ"@km ;
+        :femcConversionOf   bdr:TTBC57885274AC7045 .
+}

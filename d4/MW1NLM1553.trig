@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1553 {
+    bda:LG292142842B50724B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG34E2793532093723
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:10:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGEEC64803FA4F3F3E
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-08-05T14:44:24.727Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIMA07EBF90  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-04-08T21:50:39.192Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1553  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1553 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d4/MW1NLM1553.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1553 ;
+        adm:logEntry        bda:LG292142842B50724B , bda:LG34E2793532093723 , bda:LGEEC64803FA4F3F3E , bda:LGIMA07EBF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1553  a       :Instance ;
+        skos:prefLabel      "tshad ma rnam 'grel gyi tshig le'ur byas pa/"@bo-x-ewts ;
+        :dimensionsStatement  "16.5x6.5" ;
+        :extentStatement    "201 ff." ;
+        :hasTitle           bdr:TTEF56E2A6B04F0873 ;
+        :instanceHasReproduction  bdr:W1NLM1553 ;
+        :instanceOf         bdr:WA1NLM1553 , bdr:WA1NLM835 ;
+        :note               bdr:NT8335936D6D4A6D47 , bdr:NT863B0407C5D8F72E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT8335936D6D4A6D47
+        a                   :Note ;
+        :noteText           "missingPages: M0059471-001 [Page 105 double numbered] Image 209-212                                                                               M0059471-001 [163,164 th pages printed on the same page] Image 327"@en .
+    
+    bdr:NT863B0407C5D8F72E
+        a                   :Note ;
+        :noteText           "nlmId: M0059471"@en .
+    
+    bdr:TTEF56E2A6B04F0873
+        a                   :TitlePageTitle ;
+        rdfs:label          "tshad ma rnam 'grel gyi tshig le'ur byas pa/"@bo-x-ewts .
+}

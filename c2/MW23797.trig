@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23797 {
+    bda:LGFB131769CD6D4731
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23797  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23797 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c2/MW23797.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23797 ;
+        adm:logEntry        bda:LGFB131769CD6D4731 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5E06F8CC3611B79C
+        a                   :PublishedEvent ;
+        :eventWhen          "1973"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3CED64E0BC885BD6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ133 .B8" .
+    
+    bdr:ID636EB97628C6E0F3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73903241" .
+    
+    bdr:IDF8E48E911259E7B7
+        a                   bdr:HollisId ;
+        rdf:value           "014259136" .
+    
+    bdr:MW23797  a          :Instance ;
+        skos:altLabel       "buddhistische triglotte : a sanskrit-tibetan-mongolian glossary"@en ;
+        skos:prefLabel      "rgya bod sog gi brda yig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3CED64E0BC885BD6 , bdr:ID636EB97628C6E0F3 , bdr:IDF8E48E911259E7B7 ;
+        :biblioNote         "sanskrit (tibetan script), tibetan, and mongolian; foreword in german. a xylographic print from mongolia preserved in the baron schilling von canstadt collection, reproduced with a german foreword by ranz anton schiefner in 1859"@en ;
+        :extentStatement    "79 p." ;
+        :hasTitle           bdr:TT278B68F93B5BB931 , bdr:TTDB8EFE327F2A64BE ;
+        :instanceEvent      bdr:EV5E06F8CC3611B79C ;
+        :instanceHasReproduction  bdr:W23797 ;
+        :instanceOf         bdr:WA23797 ;
+        :note               bdr:NT8BF9935CC4C05361 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "ngawang topgay"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT8BF9935CC4C05361
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files."@en .
+    
+    bdr:TT278B68F93B5BB931
+        a                   :Title ;
+        rdfs:label          "rgya bod sog gi brda yig"@bo-x-ewts .
+    
+    bdr:TTDB8EFE327F2A64BE
+        a                   :TitlePageTitle ;
+        rdfs:label          "buddhistische triglotte : a sanskrit-tibetan-mongolian glossary"@en .
+}

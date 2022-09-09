@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010257 {
+    bda:LG0ADF276E1665452D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010257"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010257
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010257 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b7/MW1FEMC010257.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010257 ;
+        adm:logEntry        bda:LG0ADF276E1665452D , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID748997A81DC5D87B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "002'-PP.02.06.02.VII" .
+    
+    bdr:MF0389DF748439AEB5
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "13" ;
+        :microfilmStrip     "50" .
+    
+    bdr:MW1FEMC010257
+        a                   :Instance ;
+        skos:prefLabel      "គិរិមានន្ទសូត្រ"@pi-khmr , "bhikkhuppāṭimokkha"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID748997A81DC5D87B ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT1B2C7E53E720A5A9 , bdr:TT41BDA5A24F1C4B55 , bdr:TT65CB5D63BF030560 , bdr:TTF0213CA7EED68274 ;
+        :instanceHasReproduction  bdr:W1FEMC010257 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :microfilmItem      bdr:MF0389DF748439AEB5 ;
+        :note               bdr:NT1A410E0270EDC8A4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1A410E0270EDC8A4
+        a                   :Note ;
+        :contentLocationStatement  "pg. 103" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1B2C7E53E720A5A9
+        a                   :CoverTitle ;
+        rdfs:label          "គិរីមានន្ទ (ក្រាំង)"@pi-khmr .
+    
+    bdr:TT41BDA5A24F1C4B55
+        a                   :Title ;
+        rdfs:label          "គិរិមានន្ទសូត្រ"@pi-khmr ;
+        :femcConversionOf   bdr:TT1B2C7E53E720A5A9 .
+    
+    bdr:TT65CB5D63BF030560
+        a                   :Title ;
+        rdfs:label          "bhikkhuppāṭimokkha"@pi-x-twktt ;
+        :femcConversionOf   bdr:TTF0213CA7EED68274 .
+    
+    bdr:TTF0213CA7EED68274
+        a                   :CoverTitle ;
+        rdfs:label          "girīmānanda"@pi-x-twktt .
+}

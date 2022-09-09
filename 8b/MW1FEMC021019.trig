@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021019 {
+    bda:LG534D6B08F4A56254
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021019"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021019
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021019 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "8b/MW1FEMC021019.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021019 ;
+        adm:logEntry        bda:LG534D6B08F4A56254 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID09C516C3FD3B0803
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "B.16.VII" .
+    
+    bdr:MF42F64E5301F4E5B2
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XI" ;
+        :microfilmStrip     "36" .
+    
+    bdr:MW1FEMC021019
+        a                   :Instance ;
+        skos:prefLabel      "មនោរថបូរណីអដ្ឋកថាអង្គុត្តរនិកាយឯកនិបាត"@km , "manorathapūraṇī aṭṭhakathā aṅguttaranikāya Ekanipāta"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID09C516C3FD3B0803 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "5" ;
+        :hasTitle           bdr:TT01A0799201824604 , bdr:TT60CD20A37D53BE72 , bdr:TT6A112C5018450B65 , bdr:TT8690C0B15E4FC8F1 ;
+        :instanceHasReproduction  bdr:W1FEMC021019 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF42F64E5301F4E5B2 ;
+        :note               bdr:NTBB2A8E94C37C1A20 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "444" .
+    
+    bdr:NTBB2A8E94C37C1A20
+        a                   :Note ;
+        :contentLocationStatement  "pg. 181" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT01A0799201824604
+        a                   :CoverTitle ;
+        rdfs:label          "មនោរថបូរណីអត្ថកថាអង្គុត្តរឯកនិបាត"@km .
+    
+    bdr:TT60CD20A37D53BE72
+        a                   :CoverTitle ;
+        rdfs:label          "manorathapūraṇī atthakathā aṅguttara Ekanipāta"@km-x-twktt .
+    
+    bdr:TT6A112C5018450B65
+        a                   :Title ;
+        rdfs:label          "manorathapūraṇī aṭṭhakathā aṅguttaranikāya Ekanipāta"@km-x-twktt ;
+        :femcConversionOf   bdr:TT60CD20A37D53BE72 .
+    
+    bdr:TT8690C0B15E4FC8F1
+        a                   :Title ;
+        rdfs:label          "មនោរថបូរណីអដ្ឋកថាអង្គុត្តរនិកាយឯកនិបាត"@km ;
+        :femcConversionOf   bdr:TT01A0799201824604 .
+}

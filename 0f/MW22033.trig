@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22033 {
+    bda:LG3209B7BB99A9E4CA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGD646777ADA942FD1
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-07-15T09:21:32.119Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22033  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22033 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0f/MW22033.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22033 ;
+        adm:logEntry        bda:LG3209B7BB99A9E4CA , bda:LGD646777ADA942FD1 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV17B5611E77F02FDC
+        a                   :PublishedEvent ;
+        :eventWhen          "1981"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID84380A102CD9E548
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "90185944" .
+    
+    bdr:ID9C87344FDF6C9C94
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 J36 1981" .
+    
+    bdr:IDD88763B1172924B1
+        a                   bdr:HollisId ;
+        rdf:value           "014258572" .
+    
+    bdr:MW22033  a          :Instance ;
+        skos:altLabel       "格萨尔王传 --降岭之战"@zh-hans ;
+        skos:prefLabel      "'jang gling g.yul 'gyed/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID84380A102CD9E548 , bdr:ID9C87344FDF6C9C94 , bdr:IDD88763B1172924B1 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "537 p." ;
+        :hasTitle           bdr:TT0E84DC601A01E1A2 , bdr:TT50BCE4DEF05DE762 , bdr:TT5ECB7857F8D690A5 , bdr:TTDA7984315C82295D ;
+        :instanceEvent      bdr:EV17B5611E77F02FDC ;
+        :instanceHasReproduction  bdr:W22033 ;
+        :instanceOf         bdr:WA1KG16796 , bdr:WA22033 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0E84DC601A01E1A2
+        a                   :ColophonTitle ;
+        rdfs:label          "ge sa er wang zhuan-- jiang ling zhi zhan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT50BCE4DEF05DE762
+        a                   :Title ;
+        rdfs:label          "'jang gling g.yul 'gyed/"@bo-x-ewts .
+    
+    bdr:TT5ECB7857F8D690A5
+        a                   :ColophonTitle ;
+        rdfs:label          "格萨尔王传 --降岭之战"@zh-hans .
+    
+    bdr:TTDA7984315C82295D
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling ge sar rgyal po'i sgrung 'jang gling g.yul 'gyed/"@bo-x-ewts .
+}

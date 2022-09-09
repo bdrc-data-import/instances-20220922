@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021607 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021607
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021607 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "6b/MW1FEMC021607.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021607 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD5B8313E607E3482
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "c.17.II.1" .
+    
+    bdr:MW1FEMC021607
+        a                   :Instance ;
+        skos:prefLabel      "ជ័យទត្ត"@km , "jăy datt"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD5B8313E607E3482 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "8" ;
+        :hasTitle           bdr:TT03ED617B99346B0D , bdr:TT503FB271560C5FC6 , bdr:TTB412554FB50B5FF3 , bdr:TTF8876C0377E094A7 ;
+        :instanceHasReproduction  bdr:W1FEMC021607 ;
+        :instanceOf         bdr:WA1FEMC021607 , bdr:WA1FEMC120017 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTE7540D83A132DE26 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "556" .
+    
+    bdr:NTE7540D83A132DE26
+        a                   :Note ;
+        :contentLocationStatement  "pg. 290" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT03ED617B99346B0D
+        a                   :Title ;
+        rdfs:label          "jăy datt"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF8876C0377E094A7 .
+    
+    bdr:TT503FB271560C5FC6
+        a                   :Title ;
+        rdfs:label          "ជ័យទត្ត"@km ;
+        :femcConversionOf   bdr:TTB412554FB50B5FF3 .
+    
+    bdr:TTB412554FB50B5FF3
+        a                   :CoverTitle ;
+        rdfs:label          "ជ័យទាត់"@km .
+    
+    bdr:TTF8876C0377E094A7
+        a                   :CoverTitle ;
+        rdfs:label          "jăy dāt'"@km-x-twktt .
+}

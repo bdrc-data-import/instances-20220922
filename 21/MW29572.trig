@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29572 {
+    bda:LG63BD4D6EC260CD05
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGD8B514453B846B46
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-14T09:07:13.388Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29572  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29572 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "21/MW29572.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29572 ;
+        adm:logEntry        bda:LG63BD4D6EC260CD05 , bda:LGD8B514453B846B46 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2101942914016ACB
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID36B78447E381F749
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83907119" .
+    
+    bdr:ID388456A1458308FF
+        a                   bdr:HollisId ;
+        rdf:value           "014260036" .
+    
+    bdr:IDE9EA49F5D2B06699
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7460 .Z57 1982" .
+    
+    bdr:MW29572  a          :Instance , :SerialInstance ;
+        skos:altLabel       "a treatise reconciling various philosophical traditions on the basis of madhyamika dialectic based on the exegesis of a-mdo dge-'dun-chos-'phel"@en-x-mixed ;
+        skos:prefLabel      "klu sgrub dgongs rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID36B78447E381F749 , bdr:ID388456A1458308FF , bdr:IDE9EA49F5D2B06699 ;
+        :authorshipStatement  "by sar nag-pa zla-ba-bzang-po"@en ;
+        :biblioNote         "reproduced from a print from the blocks preserved at hor-khang house in lhasa"@en ;
+        :extentStatement    "142 p." ;
+        :hasSourcePrintery  bdr:G3JT12595 ;
+        :hasTitle           bdr:TT3BFE0FAF85F23636 , bdr:TT49ABE3790F2F9E8C , bdr:TTF1AACF2BBF8AC818 ;
+        :instanceEvent      bdr:EV2101942914016ACB ;
+        :instanceHasReproduction  bdr:W29572 ;
+        :instanceOf         bdr:WA29572 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "d. t. tashigang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 112" .
+    
+    bdr:TT3BFE0FAF85F23636
+        a                   :Title ;
+        rdfs:label          "klu sgrub dgongs rgyan/"@bo-x-ewts .
+    
+    bdr:TT49ABE3790F2F9E8C
+        a                   :TitlePageTitle ;
+        rdfs:label          "dbu ma'i zab gnad snying por dril ba'i legs bshad klu sgrub dgongs rgyan/"@bo-x-ewts .
+    
+    bdr:TTF1AACF2BBF8AC818
+        a                   :Subtitle ;
+        rdfs:label          "a treatise reconciling various philosophical traditions on the basis of madhyamika dialectic based on the exegesis of a-mdo dge-'dun-chos-'phel"@en-x-mixed .
+}

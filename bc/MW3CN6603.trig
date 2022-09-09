@@ -1,0 +1,66 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN6603 {
+    bda:LG2D28CA844E465219
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-13T12:28:47.345Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed isbn and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF2C0457644009EF8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-16T16:58:39.016Z"^^xsd:dateTime ;
+        adm:logMessage      "fully cataloged and released"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:MW3CN6603  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN6603 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "bc/MW3CN6603.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN6603 ;
+        adm:logEntry        bda:LG2D28CA844E465219 , bda:LGF2C0457644009EF8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV604575DF15354A3B
+        a                   :PublishedEvent ;
+        :eventWhen          "2000,2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDD37DC05BCC1D3E2E
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223004015" .
+    
+    bdr:MW3CN6603  a        :Instance ;
+        skos:prefLabel      "bya sprel gtam rgyud/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD37DC05BCC1D3E2E ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi gnyis pa/ par thengs bdun pa/"@bo-x-ewts ;
+        :extentStatement    "1, 48 p." ;
+        :hasTitle           bdr:TTCF951896DBA57EF2 ;
+        :instanceEvent      bdr:EV604575DF15354A3B ;
+        :instanceHasReproduction  bdr:W3CN6603 ;
+        :instanceOf         bdr:WA3CN6603 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTCF951896DBA57EF2
+        a                   :Title ;
+        rdfs:label          "bya sprel gtam rgyud/"@bo-x-ewts .
+}

@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW12837 {
+    bda:LG7151E3FBE973A3E4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGCB3752A2CEF0FBDF
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-05T12:06:57.572Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW12837  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW12837 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a6/MW12837.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW12837 ;
+        adm:logEntry        bda:LG7151E3FBE973A3E4 , bda:LGCB3752A2CEF0FBDF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2131143F15B83F7D
+        a                   :PublishedEvent ;
+        :eventWhen          "2000?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE213C1DB89C611D9
+        a                   bdr:HollisId ;
+        rdf:value           "014254679" .
+    
+    bdr:MW12837  a          :Instance ;
+        skos:prefLabel      "kun rig rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE213C1DB89C611D9 ;
+        :authorshipStatement  "'dul 'dzin pa'i 'dzin pa'i ming can grags pa rgyal mtshan/"@bo-x-ewts ;
+        :biblioNote         "print from the new zhol par khang blocks carved in 1944 at the order of stag brag paNDi ta"@en ;
+        :extentStatement    "177 ff." ;
+        :hasSourcePrintery  bdr:G1PD129184 ;
+        :hasTitle           bdr:TT2EF808565E7D13D9 , bdr:TT4232B0D62709A3BC , bdr:TT88893A9B3BC967A1 ;
+        :instanceEvent      bdr:EV2131143F15B83F7D ;
+        :instanceHasReproduction  bdr:W12837 ;
+        :instanceOf         bdr:WA12837 ;
+        :note               bdr:NTD7C9A976FF785C1F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[lha sa]"@en ;
+        :publisherName      "[zhol par khang]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTD7C9A976FF785C1F
+        a                   :Note ;
+        :noteText           "other instances noted:\n175 ff. in vol. 2 of the 2 vol. printed gsung 'bum in the potala collection;\n235 ff. print from kha-sgang o-bso bkra-shis-chos-rdzong in hwa-lung in qinghai. recent blocks carved ca. 1985.."@en .
+    
+    bdr:TT2EF808565E7D13D9
+        a                   :Title ;
+        rdfs:label          "kun rig rnam bshad/"@bo-x-ewts .
+    
+    bdr:TT4232B0D62709A3BC
+        a                   :TitlePageTitle ;
+        rdfs:label          "bcom ldan 'das thams cad rig pa'i rnam bshad/"@bo-x-ewts .
+    
+    bdr:TT88893A9B3BC967A1
+        a                   :OtherTitle ;
+        rdfs:label          "bcom ldan 'das thams cad rig pa'i rnam bshad/_kun rig gi cho ga'i 'grel chen/_bcom ldan 'das thams cad rig pa'i dkyil 'khor cho ga'i rnam bshad legs bshad snying po/"@bo-x-ewts .
+}

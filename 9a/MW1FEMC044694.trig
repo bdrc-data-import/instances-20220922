@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044694 {
+    bda:LG4CCE3DC886BFF3B9
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044694"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044694
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044694 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9a/MW1FEMC044694.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044694 ;
+        adm:logEntry        bda:LG4CCE3DC886BFF3B9 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDFD3D7228CAF46FF4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "017-B.06.06.04.III.2" .
+    
+    bdr:MF9FDAEC2C4831DAAE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "152" .
+    
+    bdr:MW1FEMC044694
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះនិពា្វន្នភោគ"@km , "braḥ nibbānn bhog"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFD3D7228CAF46FF4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT2E295F54C95F9600 , bdr:TTDC14BFC049E7BC95 ;
+        :instanceHasReproduction  bdr:W1FEMC034694 , bdr:W1FEMC044694 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF9FDAEC2C4831DAAE ;
+        :note               bdr:NTF8B44FD538E3D452 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF8B44FD538E3D452
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2E295F54C95F9600
+        a                   :Title ;
+        rdfs:label          "braḥ nibbānn bhog"@km-x-twktt .
+    
+    bdr:TTDC14BFC049E7BC95
+        a                   :Title ;
+        rdfs:label          "ព្រះនិពា្វន្នភោគ"@km .
+}

@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043310 {
+    bda:LG25E4D56D103B750B
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043310"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043310
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043310 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bf/MW1FEMC043310.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043310 ;
+        adm:logEntry        bda:LG25E4D56D103B750B , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDAC3AE981CF911856
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "091-B.01.01.01.VII" .
+    
+    bdr:MFF5F4395C3A5CFAB4
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "126" ;
+        :microfilmStrip     "220" .
+    
+    bdr:MW1FEMC043310
+        a                   :Instance ;
+        skos:prefLabel      "ថ្លេិមព្រះអព្ភីធម្ម៌, តំម្រានវរ៉ាទី្យគុន ឱង្ការព្រះ៥ព្រះអង"@pi-khmr ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAC3AE981CF911856 ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TTAEBB65BB770167B0 ;
+        :instanceHasReproduction  bdr:W1FEMC033310 , bdr:W1FEMC043310 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :microfilmItem      bdr:MFF5F4395C3A5CFAB4 ;
+        :note               bdr:NT2552783BA5E24CB7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT2552783BA5E24CB7
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTAEBB65BB770167B0
+        a                   :Title ;
+        rdfs:label          "ថ្លេិមព្រះអព្ភីធម្ម៌, តំម្រានវរ៉ាទី្យគុន ឱង្ការព្រះ៥ព្រះអង"@pi-khmr .
+}

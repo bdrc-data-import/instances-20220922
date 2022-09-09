@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW28950 {
+    bda:LG8354DE6D6E6A0F9A
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-07-07T12:33:46.732Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDBBCFC40645CFE54
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:MW28950  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW28950 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "24/MW28950.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28950 ;
+        adm:logEntry        bda:LG8354DE6D6E6A0F9A , bda:LGDBBCFC40645CFE54 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8D0490D21FA0C93D
+        a                   :PublishedEvent ;
+        :eventWhen          "1995"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID42E5EB48945BA49C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785 .R45 1995" .
+    
+    bdr:ID8212422465256303
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105023295" .
+    
+    bdr:ID89FD8D915BEFE335
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98905948" .
+    
+    bdr:MW28950  a          :Instance ;
+        skos:altLabel       "藏族简史"@zh-hans ;
+        skos:prefLabel      "bod kyi lo rgyus gleng ba'i gtam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID42E5EB48945BA49C , bdr:ID8212422465256303 , bdr:ID89FD8D915BEFE335 ;
+        :authorshipStatement  "rgyal mo 'brug pas brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 5, 470 p." ;
+        :hasTitle           bdr:TT7C1FB45443946058 , bdr:TT89A11E4B647A27A4 , bdr:TTAF3A09AFD02D29A7 ;
+        :instanceEvent      bdr:EV8D0490D21FA0C93D ;
+        :instanceHasReproduction  bdr:W28950 ;
+        :instanceOf         bdr:WA28950 ;
+        :note               bdr:NTB711A37E3E8C790D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTB711A37E3E8C790D
+        a                   :Note ;
+        :noteText           "scan made available from the library of tibetan works and archives; ltwa acc. no. 9245"@en .
+    
+    bdr:TT7C1FB45443946058
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang zu jian shi"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT89A11E4B647A27A4
+        a                   :Title ;
+        rdfs:label          "bod kyi lo rgyus gleng ba'i gtam/"@bo-x-ewts .
+    
+    bdr:TTAF3A09AFD02D29A7
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏族简史"@zh-hans .
+}

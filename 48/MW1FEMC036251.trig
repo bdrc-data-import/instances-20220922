@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036251 {
+    bda:LGE68A5A4EF2F7B1D3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036251"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036251
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC036251 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "48/MW1FEMC036251.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036251 ;
+        adm:logEntry        bda:LGE68A5A4EF2F7B1D3 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8E535907139C3788
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "009-B.04.11.03.VI.6" .
+    
+    bdr:MW1FEMC036251
+        a                   :Instance ;
+        skos:prefLabel      "កោវតា, អភិធម្ម សហស្សណៃយ ទស្សបារមីទ្ងាំ១០ ត្រ្យៃល័ក្ខញាន"@km , "kāvatā abhīdhamm sahassanaiy dassapāramī dāṃṅ 10 traiy lakkhañān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8E535907139C3788 ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT0AFC625B131D7F12 , bdr:TTBB60BD674F5AF6A5 ;
+        :instanceHasReproduction  bdr:W1FEMC036251 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :note               bdr:NTEB4439A9F3AFC1B4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTEB4439A9F3AFC1B4
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0AFC625B131D7F12
+        a                   :Title ;
+        rdfs:label          "kāvatā abhīdhamm sahassanaiy dassapāramī dāṃṅ 10 traiy lakkhañān"@km-x-twktt .
+    
+    bdr:TTBB60BD674F5AF6A5
+        a                   :Title ;
+        rdfs:label          "កោវតា, អភិធម្ម សហស្សណៃយ ទស្សបារមីទ្ងាំ១០ ត្រ្យៃល័ក្ខញាន"@km .
+}

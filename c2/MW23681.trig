@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23681 {
+    bda:LG2779ADA16A32331E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG9D9A0BBD061AD164
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-11-22T04:30:23.929Z"^^xsd:dateTime ;
+        adm:logMessage      "updated catalog info"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LGAA593EE90E4C131F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-06T09:39:21.103Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23681  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23681 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c2/MW23681.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23681 ;
+        adm:logEntry        bda:LG2779ADA16A32331E , bda:LG9D9A0BBD061AD164 , bda:LGAA593EE90E4C131F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR2302CCEDCA87C8CB
+        a                   :AgentAsCreator ;
+        :agent              bdr:P258 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CR933853E3D03CE846
+        a                   :AgentAsCreator ;
+        :agent              bdr:P560 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:IDA01D548ECAD6BB26
+        a                   bdr:HollisId ;
+        rdf:value           "014259031" .
+    
+    bdr:MW23681  a          :Instance ;
+        skos:altLabel       "a collection of sadhanas and related texts of the vajrayana traditions of tibet"@en ;
+        skos:prefLabel      "sgrub thabs kun btus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA01D548ECAD6BB26 ;
+        :biblioNote         "reproduced by photomechanical process from sde-ge xylograph edition of 1902"@en ;
+        :creator            bdr:CR2302CCEDCA87C8CB , bdr:CR933853E3D03CE846 ;
+        :extentStatement    "14 v." ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TTBCD12C6AABB4494C , bdr:TTE21C93CFBEF6D57E ;
+        :instanceHasReproduction  bdr:IE23681 , bdr:W23681 ;
+        :instanceOf         bdr:WA1KG17189 , bdr:WA23681 ;
+        :note               bdr:NTB998B2C264E8B00C ;
+        :numberOfVolumes    14 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "kangara, H.P."@en ;
+        :publisherName      "indo-tibetan buddhist literature Publisher, Dzongsar Inst. for advanced studies"@en ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "sherap gyaltsen at jayyed press, delhi/"@bo-x-ewts .
+    
+    bdr:NTB998B2C264E8B00C
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 2416-2428, 2475"@en .
+    
+    bdr:TTBCD12C6AABB4494C
+        a                   :Subtitle ;
+        rdfs:label          "a collection of sadhanas and related texts of the vajrayana traditions of tibet"@en .
+    
+    bdr:TTE21C93CFBEF6D57E
+        a                   :Title ;
+        rdfs:label          "sgrub thabs kun btus/"@bo-x-ewts .
+}

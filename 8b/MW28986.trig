@@ -1,0 +1,78 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW28986 {
+    bda:LG44300FF7CF915BE0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE6176AEDF5ACB396
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-07-15T14:15:22.164Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW28986  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW28986 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8b/MW28986.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28986 ;
+        adm:logEntry        bda:LG44300FF7CF915BE0 , bda:LGE6176AEDF5ACB396 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D48333946EB60FE
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDA75A372D5D4CFCA4
+        a                   bdr:HollisId ;
+        rdf:value           "014259870" .
+    
+    bdr:MW28986  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "phyag chen sgom rim zla ba'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA75A372D5D4CFCA4 ;
+        :authorshipStatement  "dwags po bkra shis rnam rgyal/"@bo-x-ewts ;
+        :extentStatement    "2, 530 p." ;
+        :hasTitle           bdr:TT51130EA240819594 , bdr:TT95C57245A4BBE459 , bdr:TTE9FCFF4F0D4A66C3 ;
+        :instanceEvent      bdr:EV2D48333946EB60FE ;
+        :instanceHasReproduction  bdr:W28986 ;
+        :instanceOf         bdr:WA28986 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "ser gtsug nang bstan dpe rnying 'tshol bsdu phyogs sgrig khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS140 ;
+        :seriesNumber       "157" .
+    
+    bdr:TT51130EA240819594
+        a                   :Title ;
+        rdfs:label          "phyag chen sgom rim zla ba'i 'od zer/"@bo-x-ewts .
+    
+    bdr:TT95C57245A4BBE459
+        a                   :CoverTitle ;
+        rdfs:label          "nges don phyag rgya chen po'i sgom rim gsal bar byed pa/"@bo-x-ewts .
+    
+    bdr:TTE9FCFF4F0D4A66C3
+        a                   :TitlePageTitle ;
+        rdfs:label          "nges don phyag rgya chen po'i sgom rim gsal bar byed pa'i legs bshad zla ba'i 'od zer/"@bo-x-ewts .
+}

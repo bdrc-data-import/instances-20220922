@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022058 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022058
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022058 ;
+        adm:contentProvider  bda:CP044 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "2b/MW1FEMC022058.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022058 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDCBACAAFD72040C7A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "007.V.1" .
+    
+    bdr:MF6FC2721C161097BB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "7" ;
+        :microfilmStrip     "26" .
+    
+    bdr:MW1FEMC022058
+        a                   :Instance ;
+        skos:prefLabel      "ត្រៃភូមិ(ត្រៃភូមិ១៣ខ្សែ)"@km , "trai bhūmi"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCBACAAFD72040C7A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT1999838044889AFA , bdr:TT227AE7B53C7A56D4 , bdr:TT56C9215FBC3C72B2 , bdr:TT74EBEBE9A4E5DD81 , bdr:TT872F6557BF2064FB , bdr:TTA1BC830800BE0FEA ;
+        :instanceHasReproduction  bdr:W1FEMC022058 ;
+        :instanceOf         bdr:WA1FEMC022058 , bdr:WA1FEMC070019 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6FC2721C161097BB ;
+        :note               bdr:NTA855F208844A1CAD , bdr:NTB409F84EC4377D69 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA855F208844A1CAD
+        a                   :Note ;
+        :noteText           "[liasse 2] writen in Roman Standardized title"@en .
+    
+    bdr:NTB409F84EC4377D69
+        a                   :Note ;
+        :contentLocationStatement  "pg. 364" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1999838044889AFA
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃភេត"@km .
+    
+    bdr:TT227AE7B53C7A56D4
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃភេទ"@km ;
+        :femcConversionOf   bdr:TT1999838044889AFA .
+    
+    bdr:TT56C9215FBC3C72B2
+        a                   :CoverTitle ;
+        rdfs:label          "trai bhet"@km-x-twktt .
+    
+    bdr:TT74EBEBE9A4E5DD81
+        a                   :Title ;
+        rdfs:label          "trai bhūmi"@km-x-twktt .
+    
+    bdr:TT872F6557BF2064FB
+        a                   :CoverTitle ;
+        rdfs:label          "trai bhed"@km-x-twktt ;
+        :femcConversionOf   bdr:TT56C9215FBC3C72B2 .
+    
+    bdr:TTA1BC830800BE0FEA
+        a                   :Title ;
+        rdfs:label          "ត្រៃភូមិ(ត្រៃភូមិ១៣ខ្សែ)"@km .
+}

@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW19610 {
+    bda:LG33CE10F47EB4A283
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-19T11:06:53.716Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGA29F153E95F4BEED
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW19610  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW19610 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "63/MW19610.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19610 ;
+        adm:logEntry        bda:LG33CE10F47EB4A283 , bda:LGA29F153E95F4BEED , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRAA272D4324196DF1
+        a                   :AgentAsCreator ;
+        :agent              bdr:P5790 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV77F3731E8F1E53A3
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID035F5EFADDD20D0F
+        a                   bdr:HollisId ;
+        rdf:value           "014254865" .
+    
+    bdr:ID0560555434277DD2
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "79906038" .
+    
+    bdr:IDFBEEC5C9DF42931D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6135.S23 R56 1979" .
+    
+    bdr:MW19610  a          :Instance ;
+        skos:prefLabel      "sdom gsum rab dbye'i 'grel pa chen po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID035F5EFADDD20D0F , bdr:ID0560555434277DD2 , bdr:IDFBEEC5C9DF42931D ;
+        :authorshipStatement  "spos-khan-pa rin-chen-rgyal-mtshan gyis mdzad pa ; zus dag byed pa po mkhan chen padma shes rab/"@bo-x-ewts ;
+        :creator            bdr:CRAA272D4324196DF1 ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT5D6EA31ACB32D55A ;
+        :instanceEvent      bdr:EV77F3731E8F1E53A3 ;
+        :instanceHasReproduction  bdr:W19610 ;
+        :instanceOf         bdr:WA19610 ;
+        :note               bdr:NT81E236B78DBFEDD5 ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thim-phu"@en ;
+        :publisherName      "kunsang topgyel and mani dorji"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT81E236B78DBFEDD5
+        a                   :Note ;
+        :noteText           ", 4340, and 4341\n\nnoted in dkar chag mthong bas yid 'phrog chos mdzod byed ba'i lde mig : a bibliography of sa skya pa literature/ prepared at the order of h.h.. the sakya tridzin, based on a compilation of the venerable khenpo appey and contributions by other sakyapa scholars. -- new delhi : ngawang topgyal, 1987."@en .
+    
+    bdr:TT5D6EA31ACB32D55A
+        a                   :Title ;
+        rdfs:label          "sdom gsum rab dbye'i 'grel pa chen po/"@bo-x-ewts .
+}

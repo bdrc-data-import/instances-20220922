@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG2820 {
+    bda:LGABCF3F11004780F6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-08-05T17:03:12.286Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG2820  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG2820 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "45/MW1KG2820.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG2820 ;
+        adm:logEntry        bda:LGABCF3F11004780F6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2BCFB2102E796FFD
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID68D1207F0986F8F7
+        a                   bdr:HollisId ;
+        rdf:value           "014256633" .
+    
+    bdr:MW1KG2820  a        :Instance ;
+        skos:prefLabel      "mngon rtogs rgyan gyi spyi don/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID68D1207F0986F8F7 ;
+        :biblioNote         "computerized output print"@en ;
+        :extentStatement    "327 ff. (654 p.)" ;
+        :hasTitle           bdr:TT1E08E02B970A397F , bdr:TT4DDC7F40EEFF5F83 ;
+        :instanceEvent      bdr:EV2BCFB2102E796FFD ;
+        :instanceHasReproduction  bdr:W1KG2820 ;
+        :instanceOf         bdr:WA1KG2820 , bdr:WA4CZ307778 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "bylakuppe, karnataka"@en ;
+        :publisherName      "ngagyur nyingma institute"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1E08E02B970A397F
+        a                   :Title ;
+        rdfs:label          "mngon rtogs rgyan gyi spyi don/"@bo-x-ewts .
+    
+    bdr:TT4DDC7F40EEFF5F83
+        a                   :TitlePageTitle ;
+        rdfs:label          "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan gyi spyi don/"@bo-x-ewts .
+}

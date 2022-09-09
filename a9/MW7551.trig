@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW7551 {
+    bda:LG78C70C1D8B30E26B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW7551  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW7551 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a9/MW7551.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7551 ;
+        adm:logEntry        bda:LG78C70C1D8B30E26B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV078C77264F87D24C
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1B59200C48A56C9E
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223012544" .
+    
+    bdr:IDAC738111C03760BE
+        a                   bdr:HollisId ;
+        rdf:value           "014261049" .
+    
+    bdr:MW7551  a           :Instance ;
+        skos:prefLabel      "tshangs dbyangs rgya mtsho'i gsang rnam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1B59200C48A56C9E , bdr:IDAC738111C03760BE ;
+        :authorshipStatement  "lha btsun ngag dbang rdo rje/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/, par thengs gnyis pa/"@bo-x-ewts ;
+        :extentStatement    "215 p." ;
+        :hasTitle           bdr:TT5EEE7EA8F4E46870 , bdr:TTAD169D1EA8344ACF ;
+        :instanceEvent      bdr:EV078C77264F87D24C ;
+        :instanceHasReproduction  bdr:W7551 ;
+        :instanceOf         bdr:WA3CN4841 , bdr:WA7551 ;
+        :note               bdr:NTFA09E291F05846D1 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTFA09E291F05846D1
+        a                   :Note ;
+        :noteText           "first edition:\ntshangs dbyangs rgya mtsho'i gsang rnam / [rtsom pa po, ngag dbang rdo rje]. -- par thengs 1. -- lha sa : bod ljongs mi dmangs dpe skrun khang, 1981\n196 p.\nchinese colophon title: liu shi ta lai ts'ang yang chia ts'o mi chuan\nbq7935.t757 n35 1981  95-905749\ncomposed from a central tibetan blockprint.\nwritten at a lag sha phan bde rgya mtsho'i gling\navailable at tbrc"@en .
+    
+    bdr:TT5EEE7EA8F4E46870
+        a                   :TitlePageTitle ;
+        rdfs:label          "dus gsum sangs rgyas thams cad kyi thugs rje ma lus pa gcig tu bsdus pa'i ngo bor gyur pa 'phags pa 'jig brten gyi dbang phyug mi'i gzugs kyi rnam par rol pa thams cad mkhyen pa ngag dbang chos grags rgya mtsho dpal bzang po'i rtogs pa brjod pa..."@bo-x-ewts .
+    
+    bdr:TTAD169D1EA8344ACF
+        a                   :Title ;
+        rdfs:label          "tshangs dbyangs rgya mtsho'i gsang rnam/"@bo-x-ewts .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047248 {
+    bda:LG2EBDA2E6B77030CD
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047248"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047248
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047248 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "6d/MW1FEMC047248.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047248 ;
+        adm:logEntry        bda:LG2EBDA2E6B77030CD , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0797A928DCCA2FCF
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "Coll part.1.I.3" .
+    
+    bdr:MF0855C7C746C13932
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XXX" ;
+        :microfilmStrip     "55" .
+    
+    bdr:MW1FEMC047248
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនធូតុង១៣"@pi-khmr , "kpuon dhūtuṅ 13"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0797A928DCCA2FCF ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT6BE0E0A4AE213ADD , bdr:TT907565D925224121 ;
+        :instanceHasReproduction  bdr:W1FEMC047248 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF0855C7C746C13932 ;
+        :note               bdr:NTC291C087E0AE2074 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTC291C087E0AE2074
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6BE0E0A4AE213ADD
+        a                   :Title ;
+        rdfs:label          "kpuon dhūtuṅ 13"@pi-x-twktt .
+    
+    bdr:TT907565D925224121
+        a                   :Title ;
+        rdfs:label          "ក្បួនធូតុង១៣"@pi-khmr .
+}

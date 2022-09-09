@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022934 {
+    bda:LGA93FD24CBF618DCF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022934"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022934
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022934 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "76/MW1FEMC022934.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022934 ;
+        adm:logEntry        bda:LGA93FD24CBF618DCF , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID973D7A07B67F4183
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.410.VII" .
+    
+    bdr:MF5B574D7F22F1C18A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022934
+        a                   :Instance ;
+        skos:prefLabel      "ឧបសម្បទាកម្ម, បច្ចវេក្ខណ៤, មង្គលចក្កវាឡ,​ សូត្រកថិន, សូត្រសីមា"@km , "Upasampadākamma, paccavekkhaṇa 4, maṅgalacakkavāḷa, sūtra kathina, sūtra sīmā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID973D7A07B67F4183 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1E36A8C4E7D91950 , bdr:TT7400E5466CE99948 , bdr:TTA63CD4E254C79165 , bdr:TTB057EF7650FD615E ;
+        :instanceHasReproduction  bdr:W1FEMC022934 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5B574D7F22F1C18A ;
+        :note               bdr:NT5EA0A1C960D0F39B , bdr:NT6E78B25FF5BEC17A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "188" .
+    
+    bdr:NT5EA0A1C960D0F39B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 529" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NT6E78B25FF5BEC17A
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:TT1E36A8C4E7D91950
+        a                   :Title ;
+        rdfs:label          "ឧបសម្បទាកម្ម, បច្ចវេក្ខណ៤, មង្គលចក្កវាឡ,​ សូត្រកថិន, សូត្រសីមា"@km ;
+        :femcConversionOf   bdr:TTA63CD4E254C79165 .
+    
+    bdr:TT7400E5466CE99948
+        a                   :CoverTitle ;
+        rdfs:label          "Upasampadakamma, paccavekkha, maṅgalacakkavāḷa, sūtakathina, sūtasemā"@km-x-twktt .
+    
+    bdr:TTA63CD4E254C79165
+        a                   :CoverTitle ;
+        rdfs:label          "ឧបសម្បទកម្ម, បច្ចវេក្ខ, មង្គលចក្កវាឡ, សូតកថិន, សូតសេមា (វាន)"@km .
+    
+    bdr:TTB057EF7650FD615E
+        a                   :Title ;
+        rdfs:label          "Upasampadākamma, paccavekkhaṇa 4, maṅgalacakkavāḷa, sūtra kathina, sūtra sīmā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7400E5466CE99948 .
+}

@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW24053 {
+    bda:LG01B81FA4D2A3B56B
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T09:36:57.415Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG801B7E4756F53C58
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW24053  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW24053 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "23/MW24053.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24053 ;
+        adm:logEntry        bda:LG01B81FA4D2A3B56B , bda:LG801B7E4756F53C58 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B6A051A3BE7B78F
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6C9E4FAA05DF7E25
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .L46 1985" .
+    
+    bdr:ID76104051616CAC4B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902630" .
+    
+    bdr:IDB7173F6F4E396DE9
+        a                   bdr:HollisId ;
+        rdf:value           "014259313" .
+    
+    bdr:IDE92ACFD2EBD2AC69
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-460" .
+    
+    bdr:MW24053  a          :Instance , :SerialInstance ;
+        skos:altLabel       "the collected works (gsun 'bum) of lho-brag grub-chen nam_mkha'-rgyal-mtshan (1326-1401)"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_nam mkha' rgyal mtshan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6C9E4FAA05DF7E25 , bdr:ID76104051616CAC4B , bdr:IDB7173F6F4E396DE9 , bdr:IDE92ACFD2EBD2AC69 ;
+        :biblioNote         "reproduced from a rare manuscript preserved at o-rgyan-chos-gling monastery in bum-than"@en ;
+        :extentStatement    "792 p." ;
+        :hasTitle           bdr:TT44D934E8FBB1C97F , bdr:TT8D2D18EB142B41C9 ;
+        :instanceEvent      bdr:EV0B6A051A3BE7B78F ;
+        :instanceHasReproduction  bdr:W24053 ;
+        :instanceOf         bdr:WA1KG9858 , bdr:WA24053 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "kunsang tobgeyl"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS23373 ;
+        :seriesNumber       "v. 7" .
+    
+    bdr:TT44D934E8FBB1C97F
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:TT8D2D18EB142B41C9
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of lho-brag grub-chen nam_mkha'-rgyal-mtshan (1326-1401)"@en-x-mixed .
+}

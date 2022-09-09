@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13022 {
+    bda:LGFFA3B7F90366D76B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-01-04T10:38:57.294Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13022  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13022 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "5f/MW1KG13022.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13022 ;
+        adm:logEntry        bda:LGFFA3B7F90366D76B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV482522723E18430C
+        a                   :PublishedEvent ;
+        :eventWhen          "1988"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDA6986D09D1368DBA
+        a                   bdr:HollisId ;
+        rdf:value           "014256003" .
+    
+    bdr:MW1KG13022  a       :Instance , :SerialInstance ;
+        skos:altLabel       "on the history of the buddhist doctrine in india written for modern laymen (the new blue annals)"@en , "インド仏教思想史"@zh-hans ;
+        skos:prefLabel      "deb sngon gsar ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA6986D09D1368DBA ;
+        :authorshipStatement  "khang dkar tshul khrims skal bzang gis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT0979731F2490C939 , bdr:TT3EC55BB94A75F588 , bdr:TT5E42AD8DE85F556C , bdr:TTE89AA6D2A9B4CFC9 ;
+        :illustrations      "maps and tables" ;
+        :instanceEvent      bdr:EV482522723E18430C ;
+        :instanceHasReproduction  bdr:W1KG13022 ;
+        :instanceOf         bdr:WA1KG13022 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "sakyo-ku, kyoto"@en ;
+        :publisherName      "gangs ljongs nang rig mthun tshogs/"@bo-x-ewts ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS1KG13022 ;
+        :seriesNumber       "v. 1-2" .
+    
+    bdr:TT0979731F2490C939
+        a                   :Title ;
+        rdfs:label          "deb sngon gsar ma/"@bo-x-ewts .
+    
+    bdr:TT3EC55BB94A75F588
+        a                   :OtherTitle ;
+        rdfs:label          "インド仏教思想史"@zh-hans .
+    
+    bdr:TT5E42AD8DE85F556C
+        a                   :TitlePageTitle ;
+        rdfs:label          "tshur mthong skye bor snang tshul ma bcos lhug par bkod pa'i rgya gar gyi nang pa'i lta grub chos 'byung legs bshad dka' gnad mdud 'grol/ (deb sngon gsar ma/)"@bo-x-ewts .
+    
+    bdr:TTE89AA6D2A9B4CFC9
+        a                   :OtherTitle ;
+        rdfs:label          "on the history of the buddhist doctrine in india written for modern laymen (the new blue annals)"@en .
+}

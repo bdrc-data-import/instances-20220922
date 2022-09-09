@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020918 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020918
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020918 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a1/MW1FEMC020918.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020918 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID02236DDFDA14493B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "e.42.III.1" .
+    
+    bdr:MW1FEMC020918
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣"@km , "saṅgāyanā grè 3"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID02236DDFDA14493B ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT33038A414EA7AFDF , bdr:TT401D64F06E8AD1CA , bdr:TT5CFA7BA622671AE2 , bdr:TT6659422599F566B4 , bdr:TT881EC7387F8B6309 , bdr:TT917E5AD1B5E381D1 ;
+        :instanceHasReproduction  bdr:W1FEMC020918 ;
+        :instanceOf         bdr:WA1FEMC010058 , bdr:WA1FEMC020918 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTCE855D4480CEB326 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTCE855D4480CEB326
+        a                   :Note ;
+        :contentLocationStatement  "pg. 161" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT33038A414EA7AFDF
+        a                   :CoverTitle ;
+        rdfs:label          "ទេសនាគ្រែ៣ ឧបាល្យី ឆ្ល្យើព្រះមហាកាសប"@km .
+    
+    bdr:TT401D64F06E8AD1CA
+        a                   :CoverTitle ;
+        rdfs:label          "desanā grè 3 Upālīy° chlöy° braḥ mahā kāsap"@km-x-twktt .
+    
+    bdr:TT5CFA7BA622671AE2
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TT6659422599F566B4
+        a                   :Title ;
+        rdfs:label          "saṅgāyanā grè 3"@km-x-twktt .
+    
+    bdr:TT881EC7387F8B6309
+        a                   :CoverTitle ;
+        rdfs:label          "ទេសនាគ្រែ៣ ឧបាលិ​ ឆ្លើយព្រះមហាកស្សប"@km ;
+        :femcConversionOf   bdr:TT33038A414EA7AFDF .
+    
+    bdr:TT917E5AD1B5E381D1
+        a                   :CoverTitle ;
+        rdfs:label          "desanā grè 3 Upāli chlöy braḥ mahā kassap"@km-x-twktt ;
+        :femcConversionOf   bdr:TT401D64F06E8AD1CA .
+}

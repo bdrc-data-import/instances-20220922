@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23471 {
+    bda:LG4F544DD0AE3B5A84
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-05T12:37:17.449Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG9E73CE842FC83B23
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23471  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23471 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "14/MW23471.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23471 ;
+        adm:logEntry        bda:LG4F544DD0AE3B5A84 , bda:LG9E73CE842FC83B23 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9BC29096F72F4E22
+        a                   :PublishedEvent ;
+        :eventWhen          "1996or1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDAE406A0D41B155F3
+        a                   bdr:HollisId ;
+        rdf:value           "014258941" .
+    
+    bdr:MW23471  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_blo bzang nor bu shes rab/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAE406A0D41B155F3 ;
+        :biblioNote         "reprint of the 18th or 19th century beijing print"@en ;
+        :extentStatement    "7 v." ;
+        :hasSourcePrintery  bdr:G3JT12534 ;
+        :hasTitle           bdr:TT2DB63B2975175F5A , bdr:TTC2A79FA8DCFDE6ED ;
+        :instanceEvent      bdr:EV9BC29096F72F4E22 ;
+        :instanceHasReproduction  bdr:W23471 ;
+        :instanceOf         bdr:WA23471 ;
+        :note               bdr:NTF57FE0425AD11678 ;
+        :numberOfVolumes    7 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[beijing]"@en ;
+        :publisherName      "[yellow pagoda]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTF57FE0425AD11678
+        a                   :Note ;
+        :noteText           "tiffs and pdf files. tbrc volume number 2087, 2088, 2089, 2090 2091,2092, 2093."@en .
+    
+    bdr:TT2DB63B2975175F5A
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang nor bu shes rab/"@bo-x-ewts .
+    
+    bdr:TTC2A79FA8DCFDE6ED
+        a                   :Title ;
+        rdfs:label          "chings su tsug thu no mon han blo bzang nor bu shes rab gyi gsung 'bum/"@bo-x-ewts .
+}

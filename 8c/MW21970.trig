@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21970 {
+    bda:LG3E9AC29924AB0361
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-02T16:41:46.615Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog,add  author, editor, cat info, print tyep and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGD9292E4EF80991F9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21970  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21970 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8c/MW21970.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21970 ;
+        adm:logEntry        bda:LG3E9AC29924AB0361 , bda:LGD9292E4EF80991F9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR3E48DFAE16E67222
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6656 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:CRD040CAE704697103
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7370 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE5581F3168BD8172
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC6741D526F2B8505
+        a                   bdr:HollisId ;
+        rdf:value           "014258528" .
+    
+    bdr:IDDEDEBC80FB30D735
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542107615" .
+    
+    bdr:MW21970  a          :Instance ;
+        skos:prefLabel      "nyer mkho'i rtsis kyi rnam bzhag pad dkar chun po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC6741D526F2B8505 , bdr:IDDEDEBC80FB30D735 ;
+        :authorshipStatement  "sha bo tshe ring dang bkra shis tshe brtan gyis rtsom sgrig byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR3E48DFAE16E67222 , bdr:CRD040CAE704697103 ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "5, 3, 329 p." ;
+        :hasTitle           bdr:TT6C48E62694DE272B ;
+        :instanceEvent      bdr:EVE5581F3168BD8172 ;
+        :instanceHasReproduction  bdr:W21970 ;
+        :instanceOf         bdr:WA21970 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT6C48E62694DE272B
+        a                   :Title ;
+        rdfs:label          "nyer mkho'i rtsis kyi rnam bzhag pad dkar chun po/"@bo-x-ewts .
+}

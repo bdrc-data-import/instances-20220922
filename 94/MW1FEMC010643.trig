@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010643 {
+    bda:LG5FCD3E38E867EEBF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-15"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010643"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010643
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010643 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "94/MW1FEMC010643.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010643 ;
+        adm:logEntry        bda:LG5FCD3E38E867EEBF , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA812A2623A732EDC
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "024-A.02.12.04.III.1" .
+    
+    bdr:MFA5A3D38ACEFCD22B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "26" ;
+        :microfilmStrip     "33" .
+    
+    bdr:MW1FEMC010643
+        a                   :Instance ;
+        skos:prefLabel      "សង្រួមព្រះសារីរិកធាតុ"@km , "saṅruom braḥ sārīrikadhātu"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA812A2623A732EDC ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "3" ;
+        :hasTitle           bdr:TT1BC9C24F6B922307 , bdr:TT355918858FDAD280 , bdr:TT51B836B203BD689E , bdr:TT697F826168D9FBDD ;
+        :instanceHasReproduction  bdr:W1FEMC010643 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA5A3D38ACEFCD22B ;
+        :note               bdr:NT19B34B58FA15D58E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT19B34B58FA15D58E
+        a                   :Note ;
+        :contentLocationStatement  "pg. 180" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1BC9C24F6B922307
+        a                   :CoverTitle ;
+        rdfs:label          "សង្រួមព្រះសរិក"@km .
+    
+    bdr:TT355918858FDAD280
+        a                   :CoverTitle ;
+        rdfs:label          "saṅruom braḥ sarit"@km-x-twktt .
+    
+    bdr:TT51B836B203BD689E
+        a                   :Title ;
+        rdfs:label          "saṅruom braḥ sārīrikadhātu"@km-x-twktt ;
+        :femcConversionOf   bdr:TT355918858FDAD280 .
+    
+    bdr:TT697F826168D9FBDD
+        a                   :Title ;
+        rdfs:label          "សង្រួមព្រះសារីរិកធាតុ"@km ;
+        :femcConversionOf   bdr:TT1BC9C24F6B922307 .
+}

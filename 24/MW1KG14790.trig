@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14790 {
+    bda:LGA820F2738AA3B19A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-07-02T15:33:52.236Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14790  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14790 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "24/MW1KG14790.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14790 ;
+        adm:logEntry        bda:LGA820F2738AA3B19A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAFB03FBD0B6A51DE
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2EC1E8470D310FAE
+        a                   bdr:HollisId ;
+        rdf:value           "014256236" .
+    
+    bdr:ID739730C8CC39E33F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9993617008" .
+    
+    bdr:MW1KG14790  a       :Instance ;
+        skos:altLabel       "pha 'brug sgom zhig po'i rnam thar/"@bo-x-ewts ;
+        skos:prefLabel      "the biography of pha 'brug-sgom zhig-po called the current of compassion"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2EC1E8470D310FAE , bdr:ID739730C8CC39E33F ;
+        :authorshipStatement  "translated by yonten dargye & P.K. Sorensen"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "xvi, 84 p." ;
+        :hasTitle           bdr:TT36162CA741C8CA8F , bdr:TT4B533297A698808C , bdr:TTC49DC56BCDC30C79 ;
+        :illustrations      "ill. (col.)" ;
+        :instanceEvent      bdr:EVAFB03FBD0B6A51DE ;
+        :instanceHasReproduction  bdr:W1KG14790 ;
+        :instanceOf         bdr:WA1KG14790 ;
+        :note               bdr:NT5C9A378BF4CA12EF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "national library"@en .
+    
+    bdr:NT5C9A378BF4CA12EF
+        a                   :Note ;
+        :noteText           "in english"@en .
+    
+    bdr:TT36162CA741C8CA8F
+        a                   :OtherTitle ;
+        rdfs:label          "pha 'brug sgom zhig po'i rnam thar thugs rje'i chu rgyun/"@bo-x-ewts .
+    
+    bdr:TT4B533297A698808C
+        a                   :TitlePageTitle ;
+        rdfs:label          "the biography of pha 'brug-sgom zhig-po called the current of compassion"@en .
+    
+    bdr:TTC49DC56BCDC30C79
+        a                   :Title ;
+        rdfs:label          "pha 'brug sgom zhig po'i rnam thar/"@bo-x-ewts .
+}

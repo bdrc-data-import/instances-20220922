@@ -1,0 +1,46 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW4JK98769 {
+    bda:LG581D61005453613F
+        a                   adm:WithdrawData ;
+        adm:logDate         "2021-06-15T12:13:16.429Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn used for testing"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC005705C706619BB
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2020-06-04T11:27:56.975Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00080 .
+    
+    bda:MW4JK98769  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW4JK98769 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "0a/MW4JK98769.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW4JK98769 ;
+        adm:logEntry        bda:LG581D61005453613F , bda:LGC005705C706619BB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:MW4JK98769  a       :Instance ;
+        skos:prefLabel      "unknown title/"@bo-x-ewts ;
+        :hasTitle           bdr:TTD6E5E08751CB9612 ;
+        :instanceHasReproduction  bdr:W4JK98769 ;
+        :numberOfVolumes    1 .
+    
+    bdr:TTD6E5E08751CB9612
+        a                   :Title ;
+        rdfs:label          "unknown title/"@bo-x-ewts .
+}

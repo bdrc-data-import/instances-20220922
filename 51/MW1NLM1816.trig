@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1816 {
+    bda:LG0BFD0DDB34395790
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGBF4CF363030AADC0
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-21T10:28:22.932Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFDF29C8E94F9E3DE
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1816  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1816 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "51/MW1NLM1816.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1816 ;
+        adm:logEntry        bda:LG0BFD0DDB34395790 , bda:LGBF4CF363030AADC0 , bda:LGFDF29C8E94F9E3DE , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1816  a       :Instance ;
+        skos:prefLabel      "dregs pa sde brgyad la gser skyems gtong ba'i cho ga bdud rtsi'i rlabs 'phreng sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "16.5x6" ;
+        :extentStatement    "23 ff., 11 ff., 5 ff., 4 ff., 4ff., 10 ff., 12 ff., 28ff., 8 ff." ;
+        :hasTitle           bdr:TT1D83A5DD481A4971 ;
+        :instanceHasReproduction  bdr:W1NLM1816 ;
+        :instanceOf         bdr:WA1NLM1816 ;
+        :note               bdr:NT23C209F4D71D1848 , bdr:NTBD23060A85B5A9F6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT23C209F4D71D1848
+        a                   :Note ;
+        :noteText           "missingPages: M0059734-003 [Missing page from 16A-16B] Image 31-32 M0059734-019 [Missing page from 2A-2B]Image 251-252"@en .
+    
+    bdr:NTBD23060A85B5A9F6
+        a                   :Note ;
+        :noteText           "nlmId: M0059734"@en .
+    
+    bdr:TT1D83A5DD481A4971
+        a                   :Title ;
+        rdfs:label          "dregs pa sde brgyad la gser skyems gtong ba'i cho ga bdud rtsi'i rlabs 'phreng sogs/"@bo-x-ewts .
+}

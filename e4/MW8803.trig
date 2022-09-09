@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8803 {
+    bda:LG7F06A7ABE116DED3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG9C919DF868CA08D8
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-06T14:37:49.212Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW8803  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW8803 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e4/MW8803.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8803 ;
+        adm:logEntry        bda:LG7F06A7ABE116DED3 , bda:LG9C919DF868CA08D8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV719850FBD7CA6B17
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID23550C9AB4D682FE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7699.H64 S63 1984" .
+    
+    bdr:ID8EED271FEBCBDD6F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84902249" .
+    
+    bdr:MW8803  a           :Instance ;
+        skos:prefLabel      "sbyin sreg gi rnam bzhag"@bo-x-ewts , "an exposition of the homa rituals of the tibetan buddhist tradition"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID23550C9AB4D682FE , bdr:ID8EED271FEBCBDD6F ;
+        :biblioNote         "edited from a rare manuscript from the national library of bhutan"@en ;
+        :extentStatement    "136 p." ;
+        :hasTitle           bdr:TT0C0BABD0380BF0DE , bdr:TTCD2B3AA240AE85A1 , bdr:TTE86C888D98016404 ;
+        :instanceEvent      bdr:EV719850FBD7CA6B17 ;
+        :instanceHasReproduction  bdr:W8803 ;
+        :instanceOf         bdr:WA8803 ;
+        :note               bdr:NTFFC5A63C5F9CA210 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "national library of bhutan"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTFFC5A63C5F9CA210
+        a                   :Note ;
+        :noteText           "Listed in the 4 ff. gsung 'bum gyi tho byang from Bdud-'joms Rin-po-che's library. Text not yet found."@en .
+    
+    bdr:TT0C0BABD0380BF0DE
+        a                   :Title ;
+        rdfs:label          "sbyin sreg gi rnam bzhag"@bo-x-ewts .
+    
+    bdr:TTCD2B3AA240AE85A1
+        a                   :OtherTitle ;
+        rdfs:label          "an exposition of the homa rituals of the tibetan buddhist tradition"@en .
+    
+    bdr:TTE86C888D98016404
+        a                   :TitlePageTitle ;
+        rdfs:label          "gsang sngags spyi'i sbyin bsregs kyi rnam bzhag rgyud lde'i dgongs don gsal ba/"@bo-x-ewts .
+}

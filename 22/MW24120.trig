@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW24120 {
+    bda:LG4D26F810689E0766
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T09:37:01.522Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG683ED9FF3E9D145B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW24120  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW24120 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "22/MW24120.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24120 ;
+        adm:logEntry        bda:LG4D26F810689E0766 , bda:LG683ED9FF3E9D145B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV32EB37F3262924A6
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID47CA20E9696145BC
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82902941" .
+    
+    bdr:IDA6C91D6214368FB6
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ960.T477 A34 1982" .
+    
+    bdr:IDFB3694A8FDC9614E
+        a                   bdr:HollisId ;
+        rdf:value           "014259318" .
+    
+    bdr:MW24120  a          :Instance ;
+        skos:altLabel       "the life of gter-bdag-glin-pa 'gyur-med-rdo-rje of smin-grol-glin : a collection of the relevant texts"@en-x-mixed ;
+        skos:prefLabel      "gter bdag gling pa'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID47CA20E9696145BC , bdr:IDA6C91D6214368FB6 , bdr:IDFB3694A8FDC9614E ;
+        :authorshipStatement  "by gter-bdag-glin-pa himself and his brother smin-glin lo-chen dharma-sri"@en ;
+        :biblioNote         "reproduced from an eastern bhutanese manuscript at the order of the ven. dil-mgo mkhyen-brtse rin-po-che"@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT00EA43FBF2DD3435 , bdr:TT4B1869E28D99BB37 ;
+        :instanceEvent      bdr:EV32EB37F3262924A6 ;
+        :instanceHasReproduction  bdr:W24120 ;
+        :instanceOf         bdr:WA24120 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "paro, bhutan"@en ;
+        :publisherName      "lama ngodrub and sherab drimey"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT00EA43FBF2DD3435
+        a                   :TitlePageTitle ;
+        rdfs:label          "the life of gter-bdag-glin-pa 'gyur-med-rdo-rje of smin-grol-glin : a collection of the relevant texts"@en-x-mixed .
+    
+    bdr:TT4B1869E28D99BB37
+        a                   :Title ;
+        rdfs:label          "gter bdag gling pa'i rnam thar/"@bo-x-ewts .
+}

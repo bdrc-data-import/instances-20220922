@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG872 {
+    bda:LGE4B02A8CEC9217B9
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-28T16:09:41.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added isbn"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE98FED55438B596E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-10-27T16:34:43.983Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG872  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG872 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "7f/MW1KG872.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG872 ;
+        adm:logEntry        bda:LGE4B02A8CEC9217B9 , bda:LGE98FED55438B596E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFFBE7EDA8A72DB58
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2839497B00DB5C51
+        a                   bdr:HollisId ;
+        rdf:value           "014257427" .
+    
+    bdr:ID73986EB17E94C949
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540932295,9787540932299" .
+    
+    bdr:MW1KG872  a         :Instance ;
+        skos:altLabel       "龙王与大比丘的问答"@zh-hans ;
+        skos:prefLabel      "klu rgyal 'jog po dang dge slong chen po'i zhus lan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2839497B00DB5C51 , bdr:ID73986EB17E94C949 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "6, 374 p." ;
+        :hasTitle           bdr:TT10CCF822E0F570A8 , bdr:TT4D5C3E704EC42ABC , bdr:TT6A45B9F5A50125D3 ;
+        :instanceEvent      bdr:EVFFBE7EDA8A72DB58 ;
+        :instanceHasReproduction  bdr:W1KG872 ;
+        :instanceOf         bdr:WA1KG872 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        :publisherName      "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG872 .
+    
+    bdr:TT10CCF822E0F570A8
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "long wang yu da bi qiu de wen da"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT4D5C3E704EC42ABC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "龙王与大比丘的问答"@zh-hans .
+    
+    bdr:TT6A45B9F5A50125D3
+        a                   :Title ;
+        rdfs:label          "klu rgyal 'jog po dang dge slong chen po'i zhus lan/"@bo-x-ewts .
+}

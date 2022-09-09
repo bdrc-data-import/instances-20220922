@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046218 {
+    bda:LG464B1D9B89226506
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046218"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046218
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046218 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "cc/MW1FEMC046218.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046218 ;
+        adm:logEntry        bda:LG464B1D9B89226506 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD3D52C475C6A088F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "042-B.04.10.01.VI.4" .
+    
+    bdr:MF8B4764A525017324
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "178" .
+    
+    bdr:MW1FEMC046218
+        a                   :Instance ;
+        skos:prefLabel      "ក្រាំងមន្តវិជ្ជា"@km , "Krāṃń mant vIjjā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD3D52C475C6A088F ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT2A6093CF725E4EB2 , bdr:TT9D38CF05819ED3AE ;
+        :instanceHasReproduction  bdr:W1FEMC036218 , bdr:W1FEMC046218 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF8B4764A525017324 ;
+        :note               bdr:NTDFFC308A1C692F49 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTDFFC308A1C692F49
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2A6093CF725E4EB2
+        a                   :Title ;
+        rdfs:label          "Krāṃń mant vIjjā"@km-x-twktt .
+    
+    bdr:TT9D38CF05819ED3AE
+        a                   :Title ;
+        rdfs:label          "ក្រាំងមន្តវិជ្ជា"@km .
+}

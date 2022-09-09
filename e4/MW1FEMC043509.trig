@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043509 {
+    bda:LG3C203036727F3B0D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043509"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043509
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043509 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e4/MW1FEMC043509.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043509 ;
+        adm:logEntry        bda:LG3C203036727F3B0D , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID505E741BCF0E35DC
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "097-B.06.06.01.VIII.1" .
+    
+    bdr:MFB6475D4B2A6B0F34
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "244" .
+    
+    bdr:MW1FEMC043509
+        a                   :Instance ;
+        skos:prefLabel      "អាការវតា, រតនមាលា"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID505E741BCF0E35DC ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT17192FA2CC1629FE ;
+        :instanceHasReproduction  bdr:W1FEMC043509 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFB6475D4B2A6B0F34 ;
+        :note               bdr:NT6887EA4F5E5D9131 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT6887EA4F5E5D9131
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT17192FA2CC1629FE
+        a                   :Title ;
+        rdfs:label          "អាការវតា, រតនមាលា"@km .
+}

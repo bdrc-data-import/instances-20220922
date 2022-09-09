@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30522 {
+    bda:LG821AE0635E7C9440
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-05-12T12:07:21.824Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF8C88BCB5DF8B2A1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW30522  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30522 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c5/MW30522.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30522 ;
+        adm:logEntry        bda:LG821AE0635E7C9440 , bda:LGF8C88BCB5DF8B2A1 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFD21C06450BAC378
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID93971BC735B2F4F4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.1 .T67 2001" .
+    
+    bdr:IDA4E329BE9F9F2F47
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2002293237" .
+    
+    bdr:IDB2B9800033DF6718
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542107550" .
+    
+    bdr:MW30522  a          :Instance ;
+        skos:altLabel       "四部医典论述本疏解明珠宝库"@zh-hans ;
+        skos:prefLabel      "bshad pa'i rgyud kyi rnam bshad nor bu phreng mdzes/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID93971BC735B2F4F4 , bdr:IDA4E329BE9F9F2F47 , bdr:IDB2B9800033DF6718 ;
+        :authorshipStatement  "tshul khrims rgya mtshos brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 330 p." ;
+        :hasTitle           bdr:TT3B00A70F5738CE3A , bdr:TT4090084518C57BEF , bdr:TTC4355D639ADDC0AE ;
+        :instanceEvent      bdr:EVFD21C06450BAC378 ;
+        :instanceHasReproduction  bdr:W30522 ;
+        :instanceOf         bdr:WA30522 ;
+        :note               bdr:NT9C6958AC655DE195 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT9C6958AC655DE195
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 10842"@en .
+    
+    bdr:TT3B00A70F5738CE3A
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "四部医典论述本疏解明珠宝库"@zh-hans .
+    
+    bdr:TT4090084518C57BEF
+        a                   :Title ;
+        rdfs:label          "bshad pa'i rgyud kyi rnam bshad nor bu phreng mdzes/"@bo-x-ewts .
+    
+    bdr:TTC4355D639ADDC0AE
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "si bu yi dian lun shu ben shu jie ming zhu bao ku"@zh-latn-pinyin-x-ndia .
+}

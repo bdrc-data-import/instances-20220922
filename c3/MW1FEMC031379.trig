@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC031379 {
+    bda:LG78A4155880F4D241
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC031379"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC031379
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC031379 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c3/MW1FEMC031379.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC031379 ;
+        adm:logEntry        bda:LG78A4155880F4D241 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID1A9DF90512014597
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "022-PP.02.01.01.VII" .
+    
+    bdr:MF99C0589AF7FAB72C
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "8" ;
+        :microfilmStrip     "31-32" .
+    
+    bdr:MW1FEMC031379
+        a                   :Instance ;
+        skos:prefLabel      "បឋមមន្តបាសាទិកាអដ្ឋកថាអាទិកម្ម"@pi-khmr , "paṭhama-samantapāsādikā aṭṭhakathā-ādikamma"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1A9DF90512014597 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, ​​ 2, 5-7, 9 11-13, 19, 22, 24-27" ;
+        :hasTitle           bdr:TT05066F944585A078 , bdr:TT2A1C770621DEBBAF , bdr:TT3857B1AAD24FDFF1 ;
+        :instanceHasReproduction  bdr:W1FEMC031379 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF99C0589AF7FAB72C ;
+        :note               bdr:NT1DB4CC745B02AA1D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1DB4CC745B02AA1D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 91" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT05066F944585A078
+        a                   :CoverTitle ;
+        rdfs:label          "បថមសាមន្តបាសាទិកអដ្ឋកថាអទិកម្ម"@pi-khmr .
+    
+    bdr:TT2A1C770621DEBBAF
+        a                   :Title ;
+        rdfs:label          "paṭhama-samantapāsādikā aṭṭhakathā-ādikamma"@pi-x-twktt .
+    
+    bdr:TT3857B1AAD24FDFF1
+        a                   :Title ;
+        rdfs:label          "បឋមមន្តបាសាទិកាអដ្ឋកថាអាទិកម្ម"@pi-khmr ;
+        :femcConversionOf   bdr:TT05066F944585A078 .
+}

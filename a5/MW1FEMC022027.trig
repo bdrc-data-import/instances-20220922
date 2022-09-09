@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022027 {
+    bda:LG5BB6ED2E06B84EBD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022027"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022027
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022027 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a5/MW1FEMC022027.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022027 ;
+        adm:logEntry        bda:LG5BB6ED2E06B84EBD , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF67CC55BDC519332
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.809.VI.6" .
+    
+    bdr:MW1FEMC022027
+        a                   :Instance ;
+        skos:prefLabel      "គាថាស្នេហ៍ (វាន)"@km , "gāthā sneh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF67CC55BDC519332 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT1A69FB3118D062C1 , bdr:TTA7AE0B646F0CB85E ;
+        :instanceHasReproduction  bdr:W1FEMC022027 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT1F847D2CB13ADFC0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1F847D2CB13ADFC0
+        a                   :Note ;
+        :contentLocationStatement  "pg. 358" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1A69FB3118D062C1
+        a                   :Title ;
+        rdfs:label          "គាថាស្នេហ៍ (វាន)"@km .
+    
+    bdr:TTA7AE0B646F0CB85E
+        a                   :Title ;
+        rdfs:label          "gāthā sneh"@km-x-twktt .
+}

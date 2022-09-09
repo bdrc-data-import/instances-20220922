@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023262 {
+    bda:LG2167CE8EAC36BC8F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023262"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023262
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023262 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "30/MW1FEMC023262.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023262 ;
+        adm:logEntry        bda:LG2167CE8EAC36BC8F , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0794A0F70B0BF9E4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.976.V.1" .
+    
+    bdr:MW1FEMC023262
+        a                   :Instance ;
+        skos:prefLabel      "ប្រដៅបុគ្គលឲ្យមានសេចក្ដី ទុក្ខំ អនិច្ចំ អនត្តា"@km , "praṭau puggal Aoy mān sec-ktī dukkhaṃ aniccaṃ anattā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0794A0F70B0BF9E4 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT010A73C0CD5B0AFA , bdr:TT058AB3402FEE140D , bdr:TT7A2F32044B42F14B , bdr:TT8352A3EC60A4A826 ;
+        :instanceHasReproduction  bdr:W1FEMC023262 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTDF1E301888983F72 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTDF1E301888983F72
+        a                   :Note ;
+        :contentLocationStatement  "pg. 566" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT010A73C0CD5B0AFA
+        a                   :CoverTitle ;
+        rdfs:label          "pratauv puggal' Aoy mān sec-ktīy dukkhaṃ aniccaṃ anatā"@km-x-twktt .
+    
+    bdr:TT058AB3402FEE140D
+        a                   :Title ;
+        rdfs:label          "ប្រដៅបុគ្គលឲ្យមានសេចក្ដី ទុក្ខំ អនិច្ចំ អនត្តា"@km ;
+        :femcConversionOf   bdr:TT7A2F32044B42F14B .
+    
+    bdr:TT7A2F32044B42F14B
+        a                   :CoverTitle ;
+        rdfs:label          "ប្រតៅវបុគ្គល់ឲ្យមានសេចក្ដីយ ទុក្ខំ​ អនិច្ចំ អនតា (វាន)"@km .
+    
+    bdr:TT8352A3EC60A4A826
+        a                   :Title ;
+        rdfs:label          "praṭau puggal Aoy mān sec-ktī dukkhaṃ aniccaṃ anattā"@km-x-twktt ;
+        :femcConversionOf   bdr:TT010A73C0CD5B0AFA .
+}

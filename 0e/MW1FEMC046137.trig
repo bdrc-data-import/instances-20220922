@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046137 {
+    bda:LG3B4C4AFD00443CE0
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046137"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046137
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046137 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0e/MW1FEMC046137.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046137 ;
+        adm:logEntry        bda:LG3B4C4AFD00443CE0 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE83D2562731C6D67
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "095-B.04.03.03.I.3" .
+    
+    bdr:MF086110C69E041C46
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC046137
+        a                   :Instance ;
+        skos:prefLabel      "វានសូតផ្ការ (ក-កៃ)"@km , "Vān Sūt phkār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE83D2562731C6D67 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TTA0D797C8F15CC92F , bdr:TTBD1D76E9208D8ED6 ;
+        :instanceHasReproduction  bdr:W1FEMC036137 , bdr:W1FEMC046137 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF086110C69E041C46 ;
+        :note               bdr:NTF8D16977C7B167CA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTF8D16977C7B167CA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTA0D797C8F15CC92F
+        a                   :Title ;
+        rdfs:label          "Vān Sūt phkār"@km-x-twktt .
+    
+    bdr:TTBD1D76E9208D8ED6
+        a                   :Title ;
+        rdfs:label          "វានសូតផ្ការ (ក-កៃ)"@km .
+}

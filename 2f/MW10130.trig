@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW10130 {
+    bda:LGA0F98570248C9DCA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW10130  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW10130 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "2f/MW10130.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW10130 ;
+        adm:logEntry        bda:LGA0F98570248C9DCA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6940872E96D9C065
+        a                   :PublishedEvent ;
+        :eventWhen          "1986,1987printing"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID97A70BB4D9AE01C7
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7576 .K86 1987" .
+    
+    bdr:ID9D242ADD7560D189
+        a                   bdr:HollisId ;
+        rdf:value           "014254595" .
+    
+    bdr:IDFCDC36B93A914EAB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "93927619" .
+    
+    bdr:MW10130  a          :Instance ;
+        skos:prefLabel      "ris med chos 'byung /（si khron mi rigs dpe skrun khang /）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID97A70BB4D9AE01C7 , bdr:ID9D242ADD7560D189 , bdr:IDFCDC36B93A914EAB ;
+        :authorshipStatement  "kun bzang rang grol gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "ti 1 pan/"@bo-x-ewts ;
+        :extentStatement    "5, 9, 193 p." ;
+        :hasTitle           bdr:TT5984939CCFE6E5B6 , bdr:TT9887B445870082CA ;
+        :instanceEvent      bdr:EV6940872E96D9C065 ;
+        :instanceHasReproduction  bdr:W10130 ;
+        :instanceOf         bdr:WA10130 ;
+        :note               bdr:NT925910ADF0C96529 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT925910ADF0C96529
+        a                   :Note ;
+        :noteText           "Rgyal bstan grub mtha' ris med kyi chos 'byun mdor bsdus / Kun bzan grol gyis brtsams. -- Ti 1 pan. -- Ch~eng tu : Si khron Mi rigs Dpe skrun Khan, 1986 [i .e. 1987].\n5, 9, 193 p.\nChinese colophon title: Chiao p`ai yuan liu tsung shu.\nBQ7586 .K86 1987  93-927619.\nCopy: TBRC.\n\nRgyal bstan grub mtha' ris med kyi chos 'byun mdor bsdus yid ches dad pa'i sin rta : a brief history of the various religious traditions of Tibet which have contributed to the making of the Ris med movement / by Rag-mgo Mchog-sprul Thub-bstan-bsad-sgrub-rgya-mtsho (1890-1973), alias Padma-kun-bzan-rang-grol. -- Reproduced from a clear print from the eastern Tibetan blocks. -- Sonada, Darjeeling, W.B.: Konchhog Lhadrepa, 1985.\n157 p.\nBQ7576 .T48 1985  85-903868.\nCopy: TBRC.\nAuthorship incorrectly identified with Kun-bzang-rang-grol, 1916-1984."@en .
+    
+    bdr:TT5984939CCFE6E5B6
+        a                   :Title ;
+        rdfs:label          "ris med chos 'byung /（si khron mi rigs dpe skrun khang /）"@bo-x-ewts .
+    
+    bdr:TT9887B445870082CA
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyal bstan grub mtha' ris med kyi chos 'byung mdor bsdus/"@bo-x-ewts .
+}

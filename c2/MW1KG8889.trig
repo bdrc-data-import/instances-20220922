@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG8889 {
+    bda:LG75B6B5E709088EE7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-03-07T11:08:11.703Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG908CE3598D5EFDAD
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-07-03T09:46:53.795Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG8889  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG8889 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c2/MW1KG8889.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG8889 ;
+        adm:logEntry        bda:LG75B6B5E709088EE7 , bda:LG908CE3598D5EFDAD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12DCFD44BDD6150F
+        a                   :PublishedEvent ;
+        :eventWhen          "199X"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5D302E7E308F1DA0
+        a                   bdr:HollisId ;
+        rdf:value           "014257458" .
+    
+    bdr:MW1KG8889  a        :Instance ;
+        skos:prefLabel      "dbu ma rigs tshigs drug"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5D302E7E308F1DA0 ;
+        :extentStatement    "65 ff." ;
+        :hasSourcePrintery  bdr:G1PD129182 ;
+        :hasTitle           bdr:TT388BC8D130DD5274 , bdr:TTA4AB12987C35B173 ;
+        :instanceEvent      bdr:EV12DCFD44BDD6150F ;
+        :instanceHasReproduction  bdr:W1KG8889 ;
+        :instanceOf         bdr:WA1KG8889 ;
+        :note               bdr:NTEBCB2320042FA50C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "sku 'bum/"@bo-x-ewts ;
+        :publisherName      "sku 'bum byams pa gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :sourceNote         "impressions from blocks preserved at sku 'bum byams pa gling monastery"@en .
+    
+    bdr:NTEBCB2320042FA50C
+        a                   :Note ;
+        :noteText           "contains: \n1. dbu ma rtsa ba'i tshig le'ur byas pa shes rab, ff. 1-25v;\n2. zhib mo rnam par 'thag pa, ff. 25v-26v;\n3. rtsod pa bzlog pa, ff. 26v-31v;\n4. stong nyid bdun cu pa, ff. 31v-36r;\n5. rigs pa drug cu pa, ff. 36r-39v;\n6. rgyal po la gtam bya ba rin po che'i phreng ba, ff. 39v-65v"@en .
+    
+    bdr:TT388BC8D130DD5274
+        a                   :TitlePageTitle ;
+        rdfs:label          "dbu ma rtsa ba'i tshig le'ur byas pa shes rab/"@bo-x-ewts .
+    
+    bdr:TTA4AB12987C35B173
+        a                   :Title ;
+        rdfs:label          "dbu ma rigs tshigs drug"@bo-x-ewts .
+}

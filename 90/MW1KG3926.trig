@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG3926 {
+    bda:LG5A0A173797F41A59
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-10-24T10:50:58.615Z"^^xsd:dateTime ;
+        adm:logMessage      "changed publisher name to wylie"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG7EB02AB6722FD09A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-01-24T14:27:31.837Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG3926  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG3926 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "90/MW1KG3926.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG3926 ;
+        adm:logEntry        bda:LG5A0A173797F41A59 , bda:LG7EB02AB6722FD09A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF2E211A6B7B388E1
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID5644112FB21B51E2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9788186227589" .
+    
+    bdr:ID81262812149DB93E
+        a                   bdr:HollisId ;
+        rdf:value           "014256768" .
+    
+    bdr:MW1KG3926  a        :Instance ;
+        skos:prefLabel      "chos 'byung mkhas pa'i yid 'phrog"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5644112FB21B51E2 , bdr:ID81262812149DB93E ;
+        :extentStatement    "86, 266 p." ;
+        :hasTitle           bdr:TTC17D663BA2B426F0 ;
+        :instanceEvent      bdr:EVF2E211A6B7B388E1 ;
+        :instanceHasReproduction  bdr:W1KG3926 ;
+        :instanceOf         bdr:WA1KG3926 , bdr:WA27628 ;
+        :note               bdr:NT7BF8A0B409FB8386 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "a myes rma chen bod kyi rig gzhung zhib 'jug khang /"@bo-x-ewts ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT7BF8A0B409FB8386
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TTC17D663BA2B426F0
+        a                   :Title ;
+        rdfs:label          "chos 'byung mkhas pa'i yid 'phrog"@bo-x-ewts .
+}

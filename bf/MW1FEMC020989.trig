@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020989 {
+    bda:LGE0BBDAA7CE37EB9C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020989"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020989
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020989 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "bf/MW1FEMC020989.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020989 ;
+        adm:logEntry        bda:LGE0BBDAA7CE37EB9C , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDCA9304C5D1EA5F87
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.64.VII" .
+    
+    bdr:MF03B3ECCB881C21FA
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "II" ;
+        :microfilmStrip     "10" .
+    
+    bdr:MW1FEMC020989
+        a                   :Instance ;
+        skos:prefLabel      "វិន័យ"@km , "vinăya (fragment non identifiè)"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCA9304C5D1EA5F87 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT6A78D001C5132E87 , bdr:TT8F6B29C37B83C4B3 ;
+        :instanceHasReproduction  bdr:W1FEMC020989 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF03B3ECCB881C21FA ;
+        :note               bdr:NTAF40BCA92A20A27E , bdr:NTE17436FFD90891F9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTAF40BCA92A20A27E
+        a                   :Note ;
+        :noteText           "( fragment non identifiè ) what does it refer to"@en .
+    
+    bdr:NTE17436FFD90891F9
+        a                   :Note ;
+        :contentLocationStatement  "pg. 175" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT6A78D001C5132E87
+        a                   :Title ;
+        rdfs:label          "vinăya (fragment non identifiè)"@km-x-twktt .
+    
+    bdr:TT8F6B29C37B83C4B3
+        a                   :Title ;
+        rdfs:label          "វិន័យ"@km .
+}

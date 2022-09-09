@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3PD220 {
+    bda:LG2920AA9701D443E8
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-05-22T21:20:20.896Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGA34D4C22A915A64B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-11-28T13:30:17.277Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGF4B8D16F9C143092
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-09T16:38:18.13Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed 13 digits ISBNno and info"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:MW3PD220  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW3PD220 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b1/MW3PD220.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3PD220 ;
+        adm:logEntry        bda:LG2920AA9701D443E8 , bda:LGA34D4C22A915A64B , bda:LGF4B8D16F9C143092 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV09E88781483294B6
+        a                   :PublishedEvent ;
+        :eventWhen          "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDBFB6FBD0DE2C3E51
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787540954680" .
+    
+    bdr:MW3PD220  a         :Instance ;
+        skos:altLabel       "藏文书法字帖"@zh-hans ;
+        skos:prefLabel      "bod kyi yig gzugs kyi rgyun mkho'i shes bya dang yig gzugs kyi sgyu rtsal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBFB6FBD0DE2C3E51 ;
+        :authorshipStatement  "tshe ring dbang rgyal gyis bris/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "125 p." ;
+        :hasTitle           bdr:TT4600CD10F7DDCC96 , bdr:TT7299437A02FEF8FC , bdr:TTA2B4E6911691DD96 ;
+        :instanceEvent      bdr:EV09E88781483294B6 ;
+        :instanceHasReproduction  bdr:W3PD220 ;
+        :instanceOf         bdr:WA3PD220 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        :publisherName      "si khron dus deb tshogs pa/_si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT4600CD10F7DDCC96
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang wen shu fa zi tie"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT7299437A02FEF8FC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏文书法字帖"@zh-hans .
+    
+    bdr:TTA2B4E6911691DD96
+        a                   :Title ;
+        rdfs:label          "bod kyi yig gzugs kyi rgyun mkho'i shes bya dang yig gzugs kyi sgyu rtsal/"@bo-x-ewts .
+}

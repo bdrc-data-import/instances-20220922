@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21674 {
+    bda:LG1B566D99544611F1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6A40083DEAB3205D
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-08-17T12:39:10.847Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21674  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21674 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ec/MW21674.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21674 ;
+        adm:logEntry        bda:LG1B566D99544611F1 , bda:LG6A40083DEAB3205D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRA4CD88438716E88A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6259 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV307F26C73E92F530
+        a                   :PublishedEvent ;
+        :eventWhen          "1980"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDD410272F163E23CE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95905751" .
+    
+    bdr:IDE351B7E4787CD8B4
+        a                   bdr:HollisId ;
+        rdf:value           "014258385" .
+    
+    bdr:IDE64994EA3A6DA0C9
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748 .Y47 1982" .
+    
+    bdr:MW21674  a          :Instance ;
+        skos:altLabel       "yixilamu he tiejiangduoji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "ye shes lha mo dang mgar ba stobs rgyal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD410272F163E23CE , bdr:IDE351B7E4787CD8B4 , bdr:IDE64994EA3A6DA0C9 ;
+        :authorshipStatement  "rdo rje rgyal pos rtsom sgrig byas pa/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :creator            bdr:CRA4CD88438716E88A ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "76 p." ;
+        :hasTitle           bdr:TT067AE3CA0AB3BB3E , bdr:TT7CEC3DAFE551963A , bdr:TTFC73D5BCBD73DB13 ;
+        :instanceEvent      bdr:EV307F26C73E92F530 ;
+        :instanceHasReproduction  bdr:W21674 ;
+        :instanceOf         bdr:WA21674 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT067AE3CA0AB3BB3E
+        a                   :OtherTitle ;
+        rdfs:label          "yixilamu he tiejiangduoji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT7CEC3DAFE551963A
+        a                   :TitlePageTitle ;
+        rdfs:label          "ye shes lha mo dang mgar ba stobs rgyal : dbus gtsang dmangs khrod kyi sgrung /"@bo-x-ewts .
+    
+    bdr:TTFC73D5BCBD73DB13
+        a                   :Title ;
+        rdfs:label          "ye shes lha mo dang mgar ba stobs rgyal/"@bo-x-ewts .
+}

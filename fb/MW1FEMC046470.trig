@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046470 {
+    bda:LG917FF1815A8E2323
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046470"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046470
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046470 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "fb/MW1FEMC046470.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046470 ;
+        adm:logEntry        bda:LG917FF1815A8E2323 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6E42E894173B99C5
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "032-B.04.03.04.VII" .
+    
+    bdr:MF72ED61E1CC900106
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "48" .
+    
+    bdr:MW1FEMC046470
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះមហាសមយសូត្ត (១-១២)"@pi-khmr , "braḥ mahā samaya sūtta"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6E42E894173B99C5 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TTD3DA089F9910191A , bdr:TTEC328EC19B9200C6 ;
+        :instanceHasReproduction  bdr:W1FEMC036470 , bdr:W1FEMC046470 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF72ED61E1CC900106 ;
+        :note               bdr:NT840992576A1B7AB5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT840992576A1B7AB5
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTD3DA089F9910191A
+        a                   :Title ;
+        rdfs:label          "braḥ mahā samaya sūtta"@pi-x-twktt .
+    
+    bdr:TTEC328EC19B9200C6
+        a                   :Title ;
+        rdfs:label          "ព្រះមហាសមយសូត្ត (១-១២)"@pi-khmr .
+}

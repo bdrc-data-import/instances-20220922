@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW14615 {
+    bda:LGBC8D70D70096A5B0
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-08T11:01:42.704Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGC95949AEA217731B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW14615  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW14615 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "40/MW14615.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW14615 ;
+        adm:logEntry        bda:LGBC8D70D70096A5B0 , bda:LGC95949AEA217731B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV45CE3C0CD47D7A68
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1383EC2ACC5551AF
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76900183" .
+    
+    bdr:ID793D07AFD4EF94C6
+        a                   bdr:HollisId ;
+        rdf:value           "014254720" .
+    
+    bdr:IDEB123897683ABEC1
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ968.H74 A33" .
+    
+    bdr:MW14615  a          :Instance ;
+        skos:prefLabel      "blo bzang ye shes bstan 'dzin rgya mtsho'i rang rnam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1383EC2ACC5551AF , bdr:ID793D07AFD4EF94C6 , bdr:IDEB123897683ABEC1 ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "557 p." ;
+        :hasTitle           bdr:TT9D44C234CC86C0DF , bdr:TTBEC9119F36D309FC ;
+        :instanceEvent      bdr:EV45CE3C0CD47D7A68 ;
+        :instanceHasReproduction  bdr:W14615 ;
+        :instanceOf         bdr:WA14615 ;
+        :note               bdr:NTE07700C513547F1A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "[india]"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTE07700C513547F1A
+        a                   :Note ;
+        :noteText           "another edition:\npp. 3-557, v. 4, The Collected works of the Venerable Khri-byang Rdo-rje-'chan Blo-bzan-ye-ses-bstan-'dzin-rgya-mtsho, junior tutor of His Holiness the Fourteenth Dalai Lama. -- New Delhi : Mongolian Lama Gurudeva, 1978-1985.\n8 v.\nBQ4075.K48 Tib   78-903310\nTBRC. This set lacks vols. 6-8."@en .
+    
+    bdr:TT9D44C234CC86C0DF
+        a                   :Title ;
+        rdfs:label          "blo bzang ye shes bstan 'dzin rgya mtsho'i rang rnam/"@bo-x-ewts .
+    
+    bdr:TTBEC9119F36D309FC
+        a                   :TitlePageTitle ;
+        rdfs:label          "dga' ldan khri chen byang chub chos 'phel gyi skye gral du rlom pa'i gyi na pa zhig gis rang gi ngang tshul ma bcos lhug par bkod pa 'khrul snang sgyu ma'i zlos gar/"@bo-x-ewts .
+}

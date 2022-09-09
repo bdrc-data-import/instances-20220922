@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30481 {
+    bda:LG660B71FBBBA37242
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-03-10T15:22:20.45Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGED24720001A74E9D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30481  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30481 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "f8/MW30481.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30481 ;
+        adm:logEntry        bda:LG660B71FBBBA37242 , bda:LGED24720001A74E9D , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV44247D5B1D26446F
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID579045BD9FFFE573
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890463" .
+    
+    bdr:IDE5F92DB8D47459B2
+        a                   bdr:HollisId ;
+        rdf:value           "014260816" .
+    
+    bdr:MW30481  a          :Instance , :SerialInstance ;
+        skos:altLabel       "其日珊瑚宗"@zh-hans ;
+        skos:prefLabel      "bye ri byur rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID579045BD9FFFE573 , bdr:IDE5F92DB8D47459B2 ;
+        :authorshipStatement  "krung go spyi tshogs tshan rig khang grangs nyung mi rigs rtsom rig so'o dang bod rang skyong ljongs spyi tshogs tshan rig khang gis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT1283894DCA78CDE6 , bdr:TT96A5C18B2202204C , bdr:TTBEB2C55BCDA2432A , bdr:TTF621ADC89DB132C5 ;
+        :instanceEvent      bdr:EV44247D5B1D26446F ;
+        :instanceHasReproduction  bdr:W30481 ;
+        :instanceOf         bdr:WA30481 ;
+        :note               bdr:NT2F4DBBFB1B9380D4 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG16786 ;
+        :seriesNumber       "26 (stod cha, smad cha)" .
+    
+    bdr:NT2F4DBBFB1B9380D4
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT1283894DCA78CDE6
+        a                   :TitlePageTitle ;
+        rdfs:label          "sgrung mkhan bsam grub kyis phab pa'i gling rje ge sar rgyal po'i sgrung / bye ri byur rdzong /"@bo-x-ewts .
+    
+    bdr:TT96A5C18B2202204C
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "其日珊瑚宗"@zh-hans .
+    
+    bdr:TTBEB2C55BCDA2432A
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "qi ri shan hu zong"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTF621ADC89DB132C5
+        a                   :Title ;
+        rdfs:label          "bye ri byur rdzong /"@bo-x-ewts .
+}

@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020907 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020907
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020907 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ac/MW1FEMC020907.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020907 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID1A59B3DCD7193736
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "e.31.III.5" .
+    
+    bdr:MW1FEMC020907
+        a                   :Instance ;
+        skos:prefLabel      "សុវណ្ណសាមជាតក"@km , "suvaṇṇ sām jātak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1A59B3DCD7193736 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT08F91AD27AFAEEB0 , bdr:TT2AE171307C864E46 , bdr:TT5E9E950856E44D4B , bdr:TT97402822985E7DA6 , bdr:TTA9ED39E32EEB4ADA , bdr:TTAD02A1D2B3D73CD2 ;
+        :instanceHasReproduction  bdr:W1FEMC020907 ;
+        :instanceOf         bdr:WA1FEMC020907 , bdr:WA1FEMC050010 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTE497DBE80C4BDA00 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTE497DBE80C4BDA00
+        a                   :Note ;
+        :contentLocationStatement  "pg. 159" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT08F91AD27AFAEEB0
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT2AE171307C864E46
+        a                   :Title ;
+        rdfs:label          "suvaṇṇ sām jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTA9ED39E32EEB4ADA .
+    
+    bdr:TT5E9E950856E44D4B
+        a                   :CoverTitle ;
+        rdfs:label          "សុពារ៌សីយាម្ម"@km .
+    
+    bdr:TT97402822985E7DA6
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTA9ED39E32EEB4ADA
+        a                   :CoverTitle ;
+        rdfs:label          "subāṛr sīyāmm"@km-x-twktt .
+    
+    bdr:TTAD02A1D2B3D73CD2
+        a                   :Title ;
+        rdfs:label          "សុវណ្ណសាមជាតក"@km ;
+        :femcConversionOf   bdr:TT5E9E950856E44D4B .
+}

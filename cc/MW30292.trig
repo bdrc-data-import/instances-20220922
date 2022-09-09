@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30292 {
+    bda:LG285FA8B60F4588C5
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-05T11:07:08.916Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG5CD66CA49CB6772A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30292  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30292 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "cc/MW30292.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30292 ;
+        adm:logEntry        bda:LG285FA8B60F4588C5 , bda:LG5CD66CA49CB6772A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV341A249BF3339F95
+        a                   :PublishedEvent ;
+        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID78342295D4906F01
+        a                   bdr:HollisId ;
+        rdf:value           "014260718" .
+    
+    bdr:MW30292  a          :Instance ;
+        skos:altLabel       "tshe ring mched lnga'i sgrub skor sogs"@en ;
+        skos:prefLabel      "bkra shis tshe ring ma'i sgrub skor sogs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID78342295D4906F01 ;
+        :biblioNote         "reproduced from a manuscript preserved at pha-jo-lding monastery in bhutan"@en ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TT9C649ED05A0C3CCB , bdr:TTDE8CF75037D71CA5 ;
+        :instanceEvent      bdr:EV341A249BF3339F95 ;
+        :instanceHasReproduction  bdr:W30292 ;
+        :instanceOf         bdr:WA30292 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "kunzang topgey"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT9C649ED05A0C3CCB
+        a                   :OtherTitle ;
+        rdfs:label          "tshe ring mched lnga'i sgrub skor sogs"@en .
+    
+    bdr:TTDE8CF75037D71CA5
+        a                   :Title ;
+        rdfs:label          "bkra shis tshe ring ma'i sgrub skor sogs/"@bo-x-ewts .
+}

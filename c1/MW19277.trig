@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW19277 {
+    bda:LG5D98E353CF6B9EC7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW19277  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW19277 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c1/MW19277.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19277 ;
+        adm:logEntry        bda:LG5D98E353CF6B9EC7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC94C6B7FD21E0741
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID26DE57D8CEA61EED
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542005472" .
+    
+    bdr:ID46D3F90FC68EF478
+        a                   bdr:HollisId ;
+        rdf:value           "014254842" .
+    
+    bdr:MW19277  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "gsung thor/_mdo sngags chos kyi rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID26DE57D8CEA61EED , bdr:ID46D3F90FC68EF478 ;
+        :authorshipStatement  "mgo log khul sgrig sgyur cus nas bsgrigs/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 2, 562 p." ;
+        :hasTitle           bdr:TT31A69AC4633F0424 , bdr:TT762B4BF06F986758 , bdr:TTE44C553B2F65E8D1 ;
+        :instanceEvent      bdr:EVC94C6B7FD21E0741 ;
+        :instanceHasReproduction  bdr:W19277 ;
+        :instanceOf         bdr:WA19277 ;
+        :note               bdr:NTF474F1A663335AC4 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS19277 ;
+        :seriesNumber       "deb 2" .
+    
+    bdr:NTF474F1A663335AC4
+        a                   :Note ;
+        :noteText           "mchog sprul smra ba'i seng chen blo bzang mdo sngags chos kyi rgya mtsho'i gsung rtsom gces bsgrigs legs bshad nor bu'i bang ba / mgo log khul Sgrig sgyur cus nas bsgrigs. -- zi ling : mtsho sngon mi rigs dpe skrun khang, 1996. 4, 2, 562 pp. -- (mgo log sa khul gyi gna' dpe tshogs ; deb 2). isbn 7-5420-0547-2. \ncover title: snyan dgon sprul sku gsung rab pa'i gsung rtsom gces bsgrigs.\ncopy: tbrc."@en .
+    
+    bdr:TT31A69AC4633F0424
+        a                   :CoverTitle ;
+        rdfs:label          "snyan dgon sprul sku gsung rab pa'i gsung rtsom gces bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT762B4BF06F986758
+        a                   :TitlePageTitle ;
+        rdfs:label          "mchog sprul smra ba'i seng chen blo bzang mdo sngags chos kyi rgya mtsho'i gsung rtsom gces bsgrigs legs bshad nor bu'i bang ba/"@bo-x-ewts .
+    
+    bdr:TTE44C553B2F65E8D1
+        a                   :Title ;
+        rdfs:label          "gsung thor/_mdo sngags chos kyi rgya mtsho/"@bo-x-ewts .
+}

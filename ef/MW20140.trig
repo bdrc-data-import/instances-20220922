@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20140 {
+    bda:LG368BCCA18AEBF793
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG73FFDAAC3722ADC9
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-01-06T10:06:39.778Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected place"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20140  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20140 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ef/MW20140.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20140 ;
+        adm:logEntry        bda:LG368BCCA18AEBF793 , bda:LG73FFDAAC3722ADC9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB01F99F7ED16BB71
+        a                   :PublishedEvent ;
+        :eventWhen          "1992"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID74DAFDDAE42F0F96
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542003100" .
+    
+    bdr:ID9349B6BD409C9AA4
+        a                   bdr:HollisId ;
+        rdf:value           "014258067" .
+    
+    bdr:MW20140  a          :Instance ;
+        skos:prefLabel      "mgo log lo rgyus deb ther/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID74DAFDDAE42F0F96 , bdr:ID9349B6BD409C9AA4 ;
+        :authorshipStatement  "don grub dbang rgyal dang nor sde yis brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 296 p." ;
+        :hasTitle           bdr:TT886BF355870A9D69 , bdr:TTC20B1BF258A0E95A ;
+        :instanceEvent      bdr:EVB01F99F7ED16BB71 ;
+        :instanceHasReproduction  bdr:W20140 ;
+        :instanceOf         bdr:WA20140 ;
+        :note               bdr:NT93A8D35C0970D56C ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT93A8D35C0970D56C
+        a                   :Note ;
+        :noteText           "tbrc holds digital scans for preservation purposes; not for distribution\n5764"@en .
+    
+    bdr:TT886BF355870A9D69
+        a                   :Title ;
+        rdfs:label          "mgo log lo rgyus deb ther/"@bo-x-ewts .
+    
+    bdr:TTC20B1BF258A0E95A
+        a                   :TitlePageTitle ;
+        rdfs:label          "yul mgo log gi lo rgyus deb ther pad+ma dkar po'i chun po/"@bo-x-ewts .
+}

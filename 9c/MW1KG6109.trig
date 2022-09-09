@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG6109 {
+    bda:LG111E16828463F822
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-11-18T16:18:51.787Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG9AC20E1B928EA194
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-01-27T12:34:26.067Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG6109  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG6109 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9c/MW1KG6109.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG6109 ;
+        adm:logEntry        bda:LG111E16828463F822 , bda:LG9AC20E1B928EA194 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC1DF139A95627737
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID762ADC3625CE3E42
+        a                   bdr:HollisId ;
+        rdf:value           "014257291" .
+    
+    bdr:IDC15CCDD0E8E8E5B1
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105098958" .
+    
+    bdr:MW1KG6109  a        :Instance ;
+        skos:altLabel       "西藏婚俗概论"@zh-hans ;
+        skos:prefLabel      "bod kyi gnyen srol rags gleng /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID762ADC3625CE3E42 , bdr:IDC15CCDD0E8E8E5B1 ;
+        :authorshipStatement  "rgyang 'khor tshe phun gyis brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 2, 196 p." ;
+        :hasTitle           bdr:TT075987AA1F23DE78 , bdr:TT4B152BE9B0A174E4 , bdr:TTB50B617BA54CC4E7 ;
+        :instanceEvent      bdr:EVC1DF139A95627737 ;
+        :instanceHasReproduction  bdr:IE1KG6109 , bdr:W1KG6109 ;
+        :instanceOf         bdr:WA1KG6109 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "ri rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT075987AA1F23DE78
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "西藏婚俗概论"@zh-hans .
+    
+    bdr:TT4B152BE9B0A174E4
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xi zang hun su gai lun"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTB50B617BA54CC4E7
+        a                   :Title ;
+        rdfs:label          "bod kyi gnyen srol rags gleng /"@bo-x-ewts .
+}

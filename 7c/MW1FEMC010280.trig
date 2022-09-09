@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010280 {
+    bda:LG2236B8DFF6A32FD0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010280"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010280
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010280 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "7c/MW1FEMC010280.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010280 ;
+        adm:logEntry        bda:LG2236B8DFF6A32FD0 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC039561 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:ID78DA6BD73BCCF96A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "051-PP.02.08.01.V.1" .
+    
+    bdr:MF41DB7BEB0050BC90
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "13" ;
+        :microfilmStrip     "52" .
+    
+    bdr:MW1FEMC010280
+        a                   :Instance ;
+        skos:prefLabel      "ពុទ្ធាភិសេក (ក្រាំង)"@km , "buddhāphisek [1 volume]"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID78DA6BD73BCCF96A ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasTitle           bdr:TT56890033044D87E6 , bdr:TTCD969A829B8042C5 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :microfilmItem      bdr:MF41DB7BEB0050BC90 ;
+        :note               bdr:NT248C165BF9B3C997 , bdr:NTBE2F15F05775B669 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT248C165BF9B3C997
+        a                   :Note ;
+        :noteText           "Should we write [1 volume] ?"@en .
+    
+    bdr:NTBE2F15F05775B669
+        a                   :Note ;
+        :contentLocationStatement  "pg. 108" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT56890033044D87E6
+        a                   :Title ;
+        rdfs:label          "ពុទ្ធាភិសេក (ក្រាំង)"@km .
+    
+    bdr:TTCD969A829B8042C5
+        a                   :Title ;
+        rdfs:label          "buddhāphisek [1 volume]"@km-x-twktt .
+}

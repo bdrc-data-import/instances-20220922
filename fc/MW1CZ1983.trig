@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1CZ1983 {
+    bda:LG39D972A3253F21FF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-25T09:49:53.506Z"^^xsd:dateTime ;
+        adm:logMessage      "new catalog from dummy"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGDDD9952F26ADBD24
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-06-29T12:52:24.067Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1CZ1983  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1CZ1983 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "fc/MW1CZ1983.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1CZ1983 ;
+        adm:logEntry        bda:LG39D972A3253F21FF , bda:LGDDD9952F26ADBD24 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID77DDD17C9AB7F28D
+        a                   bdr:HollisId ;
+        rdf:value           "014255280" .
+    
+    bdr:MW1CZ1983  a        :Instance ;
+        skos:prefLabel      "dus 'khor chos 'byung ngo mtshar rtogs brjod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID77DDD17C9AB7F28D ;
+        :extentStatement    "52 ff." ;
+        :hasTitle           bdr:TT554424919AF702C4 , bdr:TT8156D0F26BF0599A ;
+        :instanceHasReproduction  bdr:W1CZ1983 ;
+        :instanceOf         bdr:WA1CZ1983 ;
+        :note               bdr:NT3989E8B0F03D414F ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT3989E8B0F03D414F
+        a                   :Note ;
+        :noteText           "orginal manuscript is missing unknown number of folia at the end so no authorship is discernable"@en .
+    
+    bdr:TT554424919AF702C4
+        a                   :TitlePageTitle ;
+        rdfs:label          "bcom ldan 'das dpal dus kyi 'khor lo'i chos 'byung ngo mtshar rtogs brjod/"@bo-x-ewts .
+    
+    bdr:TT8156D0F26BF0599A
+        a                   :Title ;
+        rdfs:label          "dus 'khor chos 'byung ngo mtshar rtogs brjod/"@bo-x-ewts .
+}

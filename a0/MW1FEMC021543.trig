@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021543 {
+    bda:LGBE4B2FD837746E76
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021543"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021543
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021543 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "a0/MW1FEMC021543.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021543 ;
+        adm:logEntry        bda:LGBE4B2FD837746E76 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD5E9894A866E0413
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "E.55.VII" .
+    
+    bdr:MW1FEMC021543
+        a                   :Instance ;
+        skos:prefLabel      "ទ្វា​ទសបរិត្ត"@km , "dvādasaparitta"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD5E9894A866E0413 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT3895F606C792284E , bdr:TTBB847FBA00D97475 , bdr:TTF0538D6A5458D084 , bdr:TTF6A8819ED8F20C70 ;
+        :instanceHasReproduction  bdr:W1FEMC021543 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT578550852C71A26E , bdr:NTC178799FC79446BB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT578550852C71A26E
+        a                   :Note ;
+        :noteText           "What should we write for Khmer duplicated vowels?"@en .
+    
+    bdr:NTC178799FC79446BB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 277" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT3895F606C792284E
+        a                   :CoverTitle ;
+        rdfs:label          "plāy°sūta m'an°miyūlāy° yāṅ lee"@km-x-twktt .
+    
+    bdr:TTBB847FBA00D97475
+        a                   :CoverTitle ;
+        rdfs:label          "ប្លា្យសូតម្ន់មិយូលា្យយាងលេេ (វាន)"@km .
+    
+    bdr:TTF0538D6A5458D084
+        a                   :Title ;
+        rdfs:label          "dvādasaparitta"@km-x-twktt ;
+        :femcConversionOf   bdr:TT3895F606C792284E .
+    
+    bdr:TTF6A8819ED8F20C70
+        a                   :Title ;
+        rdfs:label          "ទ្វា​ទសបរិត្ត"@km ;
+        :femcConversionOf   bdr:TTBB847FBA00D97475 .
+}

@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG12433 {
+    bda:LG3F68CB921EFACD37
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-05-22T10:14:26.876Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG783BAD2EF8192BE4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-05-18T15:42:33.076Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC7BB3D12DBAE88D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-27T14:10:06.418Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG12433  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG12433 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "23/MW1KG12433.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG12433 ;
+        adm:logEntry        bda:LG3F68CB921EFACD37 , bda:LG783BAD2EF8192BE4 , bda:LGC7BB3D12DBAE88D2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR02B9F0E4618BC194
+        a                   :AgentAsCreator ;
+        :agent              bdr:P9710 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV0BABD6BF40C34405
+        a                   :PublishedEvent ;
+        :eventWhen          "1938"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDFC24B02481F8B829
+        a                   bdr:HollisId ;
+        rdf:value           "014255880" .
+    
+    bdr:MW1KG12433  a       :Instance ;
+        skos:prefLabel      "bod rgya brda sprod shan sbyar/"@bo-x-ewts , "藏汉语对勘"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFC24B02481F8B829 ;
+        :authorshipStatement  "著者 张煦"@zh-hant ;
+        :biblioNote         "hand written manuscripts in tibetan and chinese"@en ;
+        :creator            bdr:CR02B9F0E4618BC194 ;
+        :extentStatement    "50 p." ;
+        :hasTitle           bdr:TT7A4D62782E2FCE8C , bdr:TTA4F1ED778EB92357 , bdr:TTC3E2090CA743206D ;
+        :instanceEvent      bdr:EV0BABD6BF40C34405 ;
+        :instanceHasReproduction  bdr:W1KG12433 ;
+        :instanceOf         bdr:WA1KG12433 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "四川成都"@zh-hans ;
+        :publisherName      "西陲文化院"@zh-hans ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT7A4D62782E2FCE8C
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang han yu dui kan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTA4F1ED778EB92357
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏汉语对勘"@zh-hans .
+    
+    bdr:TTC3E2090CA743206D
+        a                   :Title ;
+        rdfs:label          "bod rgya brda sprod shan sbyar/"@bo-x-ewts .
+}

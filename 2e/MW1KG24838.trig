@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG24838 {
+    bda:LG248A6396CDBB7902
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T17:06:14.326Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG484F5AA2426596A2
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-08-31T05:21:43.395Z"^^xsd:dateTime ;
+        adm:logMessage      "made open access"@en ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LG67B0740A482C6836
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-06T12:52:41.289Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG24838  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG24838 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "2e/MW1KG24838.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG24838 ;
+        adm:logEntry        bda:LG248A6396CDBB7902 , bda:LG484F5AA2426596A2 , bda:LG67B0740A482C6836 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV036D61C5571127B5
+        a                   :PublishedEvent ;
+        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1AB62EFFFB3CD5F8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105137114" .
+    
+    bdr:IDE2B4C8D2CE3CC299
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2016333224" .
+    
+    bdr:IDF56301F034AA5C9E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7576 .B76 2015" .
+    
+    bdr:MW1KG24838  a       :Instance ;
+        skos:prefLabel      "bod kyi sangs rgyas chos lugs kyi byung 'phel lo rgyus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1AB62EFFFB3CD5F8 , bdr:IDE2B4C8D2CE3CC299 , bdr:IDF56301F034AA5C9E ;
+        :authorshipStatement  "bsod nams rgyal mtshan gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "8, 526 p." ;
+        :hasTitle           bdr:TT1B6C1CED2C510DC1 ;
+        :instanceEvent      bdr:EV036D61C5571127B5 ;
+        :instanceHasReproduction  bdr:W1KG24838 ;
+        :instanceOf         bdr:WA1KG24838 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT1B6C1CED2C510DC1
+        a                   :Title ;
+        rdfs:label          "bod kyi sangs rgyas chos lugs kyi byung 'phel lo rgyus/"@bo-x-ewts .
+}

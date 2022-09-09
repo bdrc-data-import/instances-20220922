@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010970 {
+    bda:LG3716EA75FC36875E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010970"@en ;
+        adm:logWho          bdu:U00090 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010970
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010970 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "6d/MW1FEMC010970.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010970 ;
+        adm:logEntry        bda:LG3716EA75FC36875E , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC037199 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:IDC8A68015381C03A0
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "005-A.04.05.01.II.1" .
+    
+    bdr:MF67DFE435DF3FFF64
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "42" ;
+        :microfilmStrip     "95" .
+    
+    bdr:MW1FEMC010970
+        a                   :Instance ;
+        skos:prefLabel      "ហង្សយន្ត"@km , "haṅs yant"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC8A68015381C03A0 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT5765406F82267A2A , bdr:TTE712EAA9A1C97784 , bdr:TTEF74AE31CD85D0D4 , bdr:TTF2B6E08A8FB427A0 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF67DFE435DF3FFF64 ;
+        :note               bdr:NT73EA509E27624730 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT73EA509E27624730
+        a                   :Note ;
+        :contentLocationStatement  "pg. 243" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT5765406F82267A2A
+        a                   :Title ;
+        rdfs:label          "haṅs yant"@km-x-twktt .
+    
+    bdr:TTE712EAA9A1C97784
+        a                   :Title ;
+        rdfs:label          "ហង្សយន្ត"@km .
+    
+    bdr:TTEF74AE31CD85D0D4
+        a                   :CoverTitle ;
+        rdfs:label          "សុវណ្ណកុមារ"@km .
+    
+    bdr:TTF2B6E08A8FB427A0
+        a                   :CoverTitle ;
+        rdfs:label          "suvaṇṇ kumār"@km-x-twktt .
+}

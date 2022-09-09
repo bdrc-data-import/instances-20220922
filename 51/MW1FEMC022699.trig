@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022699 {
+    bda:LG624AF2E9C1CA2481
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-22"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022699"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022699
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022699 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "51/MW1FEMC022699.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022699 ;
+        adm:logEntry        bda:LG624AF2E9C1CA2481 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID4F022737FE135A78
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.175.VII" .
+    
+    bdr:MFA7C12A747964272A
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XLIII" ;
+        :microfilmStrip     "68" .
+    
+    bdr:MW1FEMC022699
+        a                   :Instance ;
+        skos:prefLabel      "សារត្ថទីបនីបឋមសមន្ត"@km , "sāratthadīpanīpaṭhamasamanta"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4F022737FE135A78 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "8" ;
+        :hasTitle           bdr:TT4FA8C3F900A8BC08 , bdr:TT7834AC28F79AA359 , bdr:TTD1F553FF89836531 , bdr:TTE6D5265EBDEDD9CF ;
+        :instanceHasReproduction  bdr:W1FEMC022699 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA7C12A747964272A ;
+        :note               bdr:NT0E70530EB478E4B2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "44" .
+    
+    bdr:NT0E70530EB478E4B2
+        a                   :Note ;
+        :contentLocationStatement  "pg. 482" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4FA8C3F900A8BC08
+        a                   :CoverTitle ;
+        rdfs:label          "សារាត្ថទិបនិបឋមសាមន្ត"@km .
+    
+    bdr:TT7834AC28F79AA359
+        a                   :Title ;
+        rdfs:label          "សារត្ថទីបនីបឋមសមន្ត"@km ;
+        :femcConversionOf   bdr:TT4FA8C3F900A8BC08 .
+    
+    bdr:TTD1F553FF89836531
+        a                   :Title ;
+        rdfs:label          "sāratthadīpanīpaṭhamasamanta"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE6D5265EBDEDD9CF .
+    
+    bdr:TTE6D5265EBDEDD9CF
+        a                   :CoverTitle ;
+        rdfs:label          "sārātthadipanipaṭhamasāmanta"@km-x-twktt .
+}

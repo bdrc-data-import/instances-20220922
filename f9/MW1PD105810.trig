@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1PD105810 {
+    bda:LG7430EE1537D14E69
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-10-19T15:36:03.617Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFB710B89FFB3D375
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-05-10T00:07:44.658Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1PD105810  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW1PD105810 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f9/MW1PD105810.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1PD105810 ;
+        adm:logEntry        bda:LG7430EE1537D14E69 , bda:LGFB710B89FFB3D375 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRB8709EF9B2FE43A7
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6438 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVE44B8E77339B27EA
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID200EE837A6F7AF3D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542116277" .
+    
+    bdr:ID2B484ED25F57C94B
+        a                   bdr:HollisId ;
+        rdf:value           "014257669" .
+    
+    bdr:MW1PD105810  a      :Instance , :SerialInstance ;
+        skos:altLabel       "森达海螺宗"@zh-hans ;
+        skos:prefLabel      "seng stag dung dkar stag rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID200EE837A6F7AF3D , bdr:ID2B484ED25F57C94B ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRB8709EF9B2FE43A7 ;
+        :extentStatement    "3, 5, 512 p." ;
+        :hasTitle           bdr:TT17A3D601501C2CDF , bdr:TT652B651936D320D4 , bdr:TTF4A0671C2D165BCC ;
+        :instanceEvent      bdr:EVE44B8E77339B27EA ;
+        :instanceHasReproduction  bdr:W1PD105810 ;
+        :instanceOf         bdr:WA1PD105810 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1PD105807 ;
+        :seriesNumber       "3" .
+    
+    bdr:TT17A3D601501C2CDF
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "seng da hai luo zong"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT652B651936D320D4
+        a                   :Title ;
+        rdfs:label          "seng stag dung dkar stag rdzong /"@bo-x-ewts .
+    
+    bdr:TTF4A0671C2D165BCC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "森达海螺宗"@zh-hans .
+}

@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21952 {
+    bda:LG6E6FF6A8F0C3FDA9
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-11T11:45:25.339Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGAD4633FC84F565A2
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21952  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21952 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c4/MW21952.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21952 ;
+        adm:logEntry        bda:LG6E6FF6A8F0C3FDA9 , bda:LGAD4633FC84F565A2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF7901EA1CC8047A6
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3E2170BA2180189C
+        a                   bdr:HollisId ;
+        rdf:value           "014258514" .
+    
+    bdr:ID8DFB4B8305C60690
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .G774 1985" .
+    
+    bdr:ID9D52618156211750
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902140" .
+    
+    bdr:MW21952  a          :Instance ;
+        skos:altLabel       "bka' brgyad gsan ba yongs rdzogs kyi sgrub skor : a collection of texts from the famed revelations of gu-ru chos-kyi-dban-phyug as used in the great sgrub-chen in dpal-yul and affiliates"@en-x-mixed ;
+        skos:prefLabel      "bka' brgyad gsang ba yongs rdzogs yi sgrub skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3E2170BA2180189C , bdr:ID8DFB4B8305C60690 , bdr:ID9D52618156211750 ;
+        :biblioNote         "reproduced from the manuscript set from dar-than monastery in mgo-log"@en ;
+        :extentStatement    "2 v. (v. 2 only)" ;
+        :hasTitle           bdr:TTA69D325A56773A13 , bdr:TTF746C7FFEE51449A ;
+        :instanceEvent      bdr:EVF7901EA1CC8047A6 ;
+        :instanceHasReproduction  bdr:W21952 ;
+        :instanceOf         bdr:WA21952 ;
+        :note               bdr:NT52F090F018967A8D ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "byllakuppe"@en ;
+        :publisherName      "pema norbu rinpoche"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT52F090F018967A8D
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files, tbrc volume numbers 1981-1982"@en .
+    
+    bdr:TTA69D325A56773A13
+        a                   :Title ;
+        rdfs:label          "bka' brgyad gsang ba yongs rdzogs yi sgrub skor/"@bo-x-ewts .
+    
+    bdr:TTF746C7FFEE51449A
+        a                   :TitlePageTitle ;
+        rdfs:label          "bka' brgyad gsan ba yongs rdzogs kyi sgrub skor : a collection of texts from the famed revelations of gu-ru chos-kyi-dban-phyug as used in the great sgrub-chen in dpal-yul and affiliates"@en-x-mixed .
+}

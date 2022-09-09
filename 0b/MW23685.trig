@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23685 {
+    bda:LGD4366061EEF516E8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23685  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23685 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0b/MW23685.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23685 ;
+        adm:logEntry        bda:LGD4366061EEF516E8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRAF3AC5BA4098D09B
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7729 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV51E2AF5952511F85
+        a                   :PublishedEvent ;
+        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE4FC4274DAB61D7A
+        a                   bdr:HollisId ;
+        rdf:value           "014259034" .
+    
+    bdr:MW23685  a          :Instance ;
+        skos:prefLabel      "'don cha nyer mkho phan bde'i bum bzang /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE4FC4274DAB61D7A ;
+        :creator            bdr:CRAF3AC5BA4098D09B ;
+        :extentStatement    "6 v." ;
+        :hasTitle           bdr:TTCDC761CA79AE8C74 ;
+        :instanceEvent      bdr:EV51E2AF5952511F85 ;
+        :instanceHasReproduction  bdr:W23685 ;
+        :instanceOf         bdr:WA23685 ;
+        :note               bdr:NTF0F300249F322B42 ;
+        :numberOfVolumes    6 ;
+        :publisherLocation  "rdo rje gling /"@bo-x-ewts ;
+        :publisherName      "'brug sgar dpe mdzod khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTF0F300249F322B42
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 2464-2469"@en .
+    
+    bdr:TTCDC761CA79AE8C74
+        a                   :Title ;
+        rdfs:label          "'don cha nyer mkho phan bde'i bum bzang /"@bo-x-ewts .
+}

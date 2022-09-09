@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG11965 {
+    bda:LG1569B92E19498A48
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-03-06T12:23:16.992Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA7AC3BC1A24B02CD
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-15T16:10:41.901Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG11965  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG11965 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9e/MW1KG11965.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG11965 ;
+        adm:logEntry        bda:LG1569B92E19498A48 , bda:LGA7AC3BC1A24B02CD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV837E10BF1B7E1BF5
+        a                   :PublishedEvent ;
+        :eventWhen          "2010?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7481C57EC3C34F49
+        a                   bdr:HollisId ;
+        rdf:value           "014255772" .
+    
+    bdr:MW1KG11965  a       :Instance ;
+        skos:prefLabel      "rgyal gshen rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7481C57EC3C34F49 ;
+        :biblioNote         "impression from blocks carved at sde dge par khang"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "753 ff." ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TTDF5CADC30E200BC6 , bdr:TTE2BBE2D4BD83A1B2 ;
+        :instanceEvent      bdr:EV837E10BF1B7E1BF5 ;
+        :instanceHasReproduction  bdr:W1KG11965 ;
+        :instanceOf         bdr:WA1KG11965 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "lhun grub steng /"@bo-x-ewts ;
+        :publisherName      "sde dge par khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTDF5CADC30E200BC6
+        a                   :Title ;
+        rdfs:label          "rgyal gshen rnam thar/"@bo-x-ewts .
+    
+    bdr:TTE2BBE2D4BD83A1B2
+        a                   :FullTitle ;
+        rdfs:label          "ston pa sangs rgyas kyi skyes rabs pad+ma dkar po'i phreng ba/"@bo-x-ewts .
+}

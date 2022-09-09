@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020825 {
+    bda:LGC26408E5A28A7FC8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-27"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020825"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020825
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020825 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "26/MW1FEMC020825.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020825 ;
+        adm:logEntry        bda:LGC26408E5A28A7FC8 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID08667D3C6A7C2EA6
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.496.VI.6 (ក្រាំង)" .
+    
+    bdr:MFF0740FA0BC14727D
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "108" ;
+        :microfilmStrip     "202" .
+    
+    bdr:MW1FEMC020825
+        a                   :Instance ;
+        skos:prefLabel      "តម្រាព្រហ្មជាតិ"@km , "tamrā brahmajāti"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID08667D3C6A7C2EA6 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT65824DE855320FF9 , bdr:TTE1590233CD595CF3 ;
+        :instanceHasReproduction  bdr:W1FEMC020825 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF0740FA0BC14727D ;
+        :note               bdr:NT59BD5C4763AD6034 , bdr:NT6C9621FAD1E1B98D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT59BD5C4763AD6034
+        a                   :Note ;
+        :noteText           "Should we write​ (ក្រាំង)​ ?"@en .
+    
+    bdr:NT6C9621FAD1E1B98D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 147" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT65824DE855320FF9
+        a                   :Title ;
+        rdfs:label          "tamrā brahmajāti"@km-x-twktt .
+    
+    bdr:TTE1590233CD595CF3
+        a                   :Title ;
+        rdfs:label          "តម្រាព្រហ្មជាតិ"@km .
+}

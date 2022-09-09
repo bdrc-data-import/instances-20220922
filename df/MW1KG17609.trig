@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17609 {
+    bda:LG29DB921EAAECB712
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-04T19:28:45.987Z"^^xsd:dateTime ;
+        adm:logMessage      "added about person"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG37602C21B3455BD8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-06-25T08:50:59.009Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17609  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17609 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "df/MW1KG17609.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17609 ;
+        adm:logEntry        bda:LG29DB921EAAECB712 , bda:LG37602C21B3455BD8 , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8BA03118DFDCC869
+        a                   :PublishedEvent ;
+        :eventWhen          "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID94A5CC68B62D612C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9788186227633,9788186227640" .
+    
+    bdr:IDCFEFFD13BD6E324C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786 .B747 2013" .
+    
+    bdr:IDDCB323988470AA44
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2013407976" .
+    
+    bdr:IDF94B736F98272C78
+        a                   bdr:HollisId ;
+        rdf:value           "014256540" .
+    
+    bdr:MW1KG17609  a       :Instance , :SerialInstance ;
+        skos:altLabel       "jadur's vertical axis: a truthful autobiographical account"@en ;
+        skos:prefLabel      "rang gi mi tshe'i lo rgyus srong por brjod pa bya dur tshangs thig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID94A5CC68B62D612C , bdr:IDCFEFFD13BD6E324C , bdr:IDDCB323988470AA44 , bdr:IDF94B736F98272C78 ;
+        :authorshipStatement  "rtsom pa po/ bya dur bzang po/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT41BEB3C83C22B31C , bdr:TTCE0D3E9B037B9192 ;
+        :instanceEvent      bdr:EV8BA03118DFDCC869 ;
+        :instanceHasReproduction  bdr:W1KG17609 ;
+        :instanceOf         bdr:WA1KG17609 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamshala, h.p."@en ;
+        :publisherName      "amnye machen institute"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG17609 ;
+        :seriesNumber       "14" .
+    
+    bdr:TT41BEB3C83C22B31C
+        a                   :Title ;
+        rdfs:label          "rang gi mi tshe'i lo rgyus srong por brjod pa bya dur tshangs thig"@bo-x-ewts .
+    
+    bdr:TTCE0D3E9B037B9192
+        a                   :TitlePageTitle ;
+        rdfs:label          "jadur's vertical axis: a truthful autobiographical account"@en .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043351 {
+    bda:LG6253F6FB6F28701F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043351"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043351
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043351 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "16/MW1FEMC043351.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043351 ;
+        adm:logEntry        bda:LG6253F6FB6F28701F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8C5F636E3B7AF72A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-B.11.11.06.III.5" .
+    
+    bdr:MFD34D803D2DF0029E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "183" .
+    
+    bdr:MW1FEMC043351
+        a                   :Instance ;
+        skos:prefLabel      "ម្យេទ្រី្យបារ (ប្រ-ប្រែ)"@km , "mey trīy pār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8C5F636E3B7AF72A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "9" ;
+        :hasTitle           bdr:TTBD8E63535EA98124 , bdr:TTCD47BC098F84C7EB ;
+        :instanceHasReproduction  bdr:W1FEMC033351 , bdr:W1FEMC043351 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFD34D803D2DF0029E ;
+        :note               bdr:NT0E0349A5FCFF321E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT0E0349A5FCFF321E
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTBD8E63535EA98124
+        a                   :Title ;
+        rdfs:label          "mey trīy pār"@km-x-twktt .
+    
+    bdr:TTCD47BC098F84C7EB
+        a                   :Title ;
+        rdfs:label          "ម្យេទ្រី្យបារ (ប្រ-ប្រែ)"@km .
+}

@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM108 {
+    bda:LG16F1F18937AF320F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LG3240D8778AC7A301
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-24T08:29:56.492Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note of sponsor"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG8221CB5C957752BB
+        a                   adm:UpdateData ;
+        adm:logDate         "2018-11-29T11:13:47.215Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM108  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM108 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "62/MW1NLM108.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM108 ;
+        adm:logEntry        bda:LG16F1F18937AF320F , bda:LG3240D8778AC7A301 , bda:LG8221CB5C957752BB , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM108  a        :Instance ;
+        skos:prefLabel      "spyan 'dren khrus gsol sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "30x8.5" ;
+        :extentStatement    "10 ff., 9 ff., 18 ff. end folio missing, 8 ff., 6 ff., 4 ff., 4 ff., 2 ff., 8 ff., 9 ff.," ;
+        :hasTitle           bdr:TT42EAEC2BC5BD7E32 ;
+        :instanceHasReproduction  bdr:W1NLM108 ;
+        :instanceOf         bdr:WA1NLM108 , bdr:WA1NLM3149 ;
+        :note               bdr:NT0D2DB2B1C7933325 , bdr:NTB5402AE9DE796256 , bdr:NTDC325E4EF7B29733 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT0D2DB2B1C7933325
+        a                   :Note ;
+        :noteText           "nlmId: M0058021"@en .
+    
+    bdr:NTB5402AE9DE796256
+        a                   :Note ;
+        :noteText           "Contens:\n1\tbyang sems spyod 'jug smon lam/\n2\t bla ma mchod pa'i cho ga/\n3\trje btsun sgrol ma phyag 'tshal nyi shu rtsa gcig ma/\n4\tgsang 'dus smon lam/\n5\t'phags pa thugs rje chen po la bstod pa byin rlabs shin tu che ba/\n6\t'jam dpal gyi bstod pa ye shes yon tan bzang po/\n7\tgnas brtan phyag mchod/\n8\tbde smon zhing mchod sgo 'byed ma/"@en .
+    
+    bdr:NTDC325E4EF7B29733
+        a                   :Note ;
+        :noteText           "missingPages: M0058021-003 1A-18B [Final pages are missing 19A] Image 75"@en .
+    
+    bdr:TT42EAEC2BC5BD7E32
+        a                   :Title ;
+        rdfs:label          "spyan 'dren khrus gsol sogs/"@bo-x-ewts .
+}

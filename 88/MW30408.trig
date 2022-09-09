@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30408 {
+    bda:LGB4EF899A4410D4E7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-26T14:22:12.444Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGCFE2B4C3492F318B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30408  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30408 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "88/MW30408.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30408 ;
+        adm:logEntry        bda:LGB4EF899A4410D4E7 , bda:LGCFE2B4C3492F318B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR236C0ED21CCB748F
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75766 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV513EB80F5C6BF892
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6E892B4C8F5C90B1
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105071222" .
+    
+    bdr:ID9DC204DA196C07BC
+        a                   bdr:HollisId ;
+        rdf:value           "014260772" .
+    
+    bdr:MW30408  a          :Instance ;
+        skos:altLabel       "juenang si yuan jian jie"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "jo nang ba'i gdan rabs mdor bsdus drang srong rgan po'i zhal lung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6E892B4C8F5C90B1 , bdr:ID9DC204DA196C07BC ;
+        :biblioNote         "jo nang mdza' mthun lo rgyus phyogs bsgrig tsogs pas rtsom sgrig byas"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR236C0ED21CCB748F ;
+        :extentStatement    "4, 5, 204 p." ;
+        :hasTitle           bdr:TT2C0A04C7694CD150 , bdr:TTA2474619322EF827 ;
+        :illustrations      "[32} p. of col. ill." ;
+        :instanceEvent      bdr:EV513EB80F5C6BF892 ;
+        :instanceHasReproduction  bdr:W30408 ;
+        :instanceOf         bdr:WA30408 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT2C0A04C7694CD150
+        a                   :TitlePageTitle ;
+        rdfs:label          "jo nang ba'i gdan rabs mdor bsdus drang srong rgan po'i zhal lung /"@bo-x-ewts .
+    
+    bdr:TTA2474619322EF827
+        a                   :ColophonTitle ;
+        rdfs:label          "juenang si yuan jian jie"@zh-latn-pinyin-x-ndia .
+}

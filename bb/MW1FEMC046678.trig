@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046678 {
+    bda:LG30D9209D92DFC6BB
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046678"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046678
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046678 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "bb/MW1FEMC046678.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046678 ;
+        adm:logEntry        bda:LG30D9209D92DFC6BB , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID7A3960EC5FF2B295
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "011-B.11.14.02.V.1" .
+    
+    bdr:MFAEE74D6F57D9F881
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "197" .
+    
+    bdr:MW1FEMC046678
+        a                   :Instance ;
+        skos:prefLabel      "ប្រែព្រះពុទ្ធគុន ប្រែយោវោ"@km , "brē braḥ buddh gun prēyovo"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7A3960EC5FF2B295 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT5F5A087AEE91BF52 , bdr:TTC46382AD1A9DE988 ;
+        :instanceHasReproduction  bdr:W1FEMC036678 , bdr:W1FEMC046678 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFAEE74D6F57D9F881 ;
+        :note               bdr:NT7771C62BCEA53171 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT7771C62BCEA53171
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5F5A087AEE91BF52
+        a                   :Title ;
+        rdfs:label          "ប្រែព្រះពុទ្ធគុន ប្រែយោវោ"@km .
+    
+    bdr:TTC46382AD1A9DE988
+        a                   :Title ;
+        rdfs:label          "brē braḥ buddh gun prēyovo"@km-x-twktt .
+}

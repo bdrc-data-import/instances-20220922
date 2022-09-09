@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW19702 {
+    bda:LG0404D6B75AC8F3EA
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-01-12T11:36:33.857Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG25710782A409D518
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-19T14:24:14.203Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG451754FC2CA8F4E6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW19702  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW19702 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "68/MW19702.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW19702 ;
+        adm:logEntry        bda:LG0404D6B75AC8F3EA , bda:LG25710782A409D518 , bda:LG451754FC2CA8F4E6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9333300633EE18AF
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1471537F090E009C
+        a                   bdr:HollisId ;
+        rdf:value           "014254882" .
+    
+    bdr:ID5F80EDD121A65F48
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2640" .
+    
+    bdr:ID8C1B40B47A99ED10
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902880" .
+    
+    bdr:MW19702  a          :Instance ;
+        skos:prefLabel      "bskal bzang thar pa'i them skas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1471537F090E009C , bdr:ID5F80EDD121A65F48 , bdr:ID8C1B40B47A99ED10 ;
+        :authorshipStatement  "by 'khrul-zig o-rgyan-rnam-rgyal"@en ;
+        :biblioNote         "reproduced from a rare manuscript from limi in northwestern nepal"@en ;
+        :extentStatement    "270 p." ;
+        :hasTitle           bdr:TT1229C61F5F361C8C ;
+        :instanceEvent      bdr:EV9333300633EE18AF ;
+        :instanceHasReproduction  bdr:W19702 ;
+        :instanceOf         bdr:WA19702 ;
+        :note               bdr:NT218182ECE220B42F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, distt. kangra,"@en ;
+        :publisherName      "d. tsondu sengge"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT218182ECE220B42F
+        a                   :Note ;
+        :noteText           "tbrc holds digitally scaaned images, tiff and pdf files"@en .
+    
+    bdr:TT1229C61F5F361C8C
+        a                   :Title ;
+        rdfs:label          "bskal bzang thar pa'i them skas/"@bo-x-ewts .
+}

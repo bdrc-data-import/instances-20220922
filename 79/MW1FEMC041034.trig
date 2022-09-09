@@ -1,0 +1,69 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC041034 {
+    bda:LGBA8F75E1AF75C5DD
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC041034"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC041034
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC041034 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "79/MW1FEMC041034.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC041034 ;
+        adm:logEntry        bda:LGBA8F75E1AF75C5DD , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE36977EA0C5953C7
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "1026-B.01.06.01.III.6" .
+    
+    bdr:MF5DCDFE5978717DCD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "126" ;
+        :microfilmStrip     "220" .
+    
+    bdr:MW1FEMC041034
+        a                   :Instance ;
+        skos:prefLabel      "អានិសង្សនិច្ចសីលទាំង៥"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE36977EA0C5953C7 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT5ACE8E0FBFCB2E8B ;
+        :instanceHasReproduction  bdr:W1FEMC031034 , bdr:W1FEMC041034 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5DCDFE5978717DCD ;
+        :note               bdr:NTA6806D118BA5CE6D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA6806D118BA5CE6D
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5ACE8E0FBFCB2E8B
+        a                   :Title ;
+        rdfs:label          "អានិសង្សនិច្ចសីលទាំង៥"@km .
+}

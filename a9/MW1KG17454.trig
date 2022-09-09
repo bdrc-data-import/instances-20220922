@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17454 {
+    bda:LGF3686666B21ADCF0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-07-29T15:50:14.348Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG17454  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17454 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a9/MW1KG17454.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17454 ;
+        adm:logEntry        bda:LGF3686666B21ADCF0 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV76B1D9FA82BC9A1D
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1D0007869336CF27
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76900332" .
+    
+    bdr:ID62A50CFECF463910
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ2910.M367 B56 1975" .
+    
+    bdr:ID853F758FF26E122C
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "011204536" .
+    
+    bdr:MW1KG17454  a       :Instance ;
+        skos:prefLabel      "dbu ma la 'jug pa'i mchan 'grel dang tshad ma rigs gter gyi mchan 'grel/"@bo-x-ewts , "dbu ma la 'jug pa'i mchan 'grel and tshad ma rigs gter gyi mchan 'grel/"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1D0007869336CF27 , bdr:ID62A50CFECF463910 , bdr:ID853F758FF26E122C ;
+        :biblioNote         "reproduced from prints from sde-dge blocks"@en ;
+        :extentStatement    "328 columns" ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TT5FDF557E3604D07B , bdr:TTA20E689CDFFADB73 , bdr:TTDB6552A39D4BF6B0 ;
+        :instanceEvent      bdr:EV76B1D9FA82BC9A1D ;
+        :instanceHasReproduction  bdr:W1KG17454 ;
+        :instanceOf         bdr:WA1KG17454 ;
+        :note               bdr:NT8C8464541AC4A24E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "jamyang samten"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT8C8464541AC4A24E
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 371"@en .
+    
+    bdr:TT5FDF557E3604D07B
+        a                   :TitlePageTitle ;
+        rdfs:label          "dbu ma la 'jug pa'i mchan 'grel zla baʾi dgoṅs pa gsal baʾi sgron me and tshad ma rigs pa'i gter gyi mchan 'grel sde bdun gsal ba'i sgron me; two commentaries expanding the text of the Madhyamakāvatāra and the tshad ma rigs gter"@en .
+    
+    bdr:TTA20E689CDFFADB73
+        a                   :Title ;
+        rdfs:label          "dbu ma la 'jug pa'i mchan 'grel dang tshad ma rigs gter gyi mchan 'grel/"@bo-x-ewts .
+    
+    bdr:TTDB6552A39D4BF6B0
+        a                   :CoverTitle ;
+        rdfs:label          "dbu ma la 'jug pa'i mchan 'grel and tshad ma rigs gter gyi mchan 'grel/"@en .
+}

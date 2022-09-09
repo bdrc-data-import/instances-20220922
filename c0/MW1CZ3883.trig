@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1CZ3883 {
+    bda:LG23DD8B178F3A6830
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-04-16T10:04:15.1Z"^^xsd:dateTime ;
+        adm:logMessage      "done"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGF2FAA8EF7EF483D7
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-10-23T09:22:50.638Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized catalog info"@en ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1CZ3883  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1CZ3883 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c0/MW1CZ3883.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1CZ3883 ;
+        adm:logEntry        bda:LG23DD8B178F3A6830 , bda:LGF2FAA8EF7EF483D7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV505F597F0C8D2F3A
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID27C137F86BFB79FC
+        a                   bdr:HollisId ;
+        rdf:value           "014255396" .
+    
+    bdr:ID6C6698EFB880858C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7695 .P3 1983" .
+    
+    bdr:IDD2A9553B68936B81
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "83905558" .
+    
+    bdr:MW1CZ3883  a        :Instance ;
+        skos:prefLabel      "tshe sgrub rdo rje 'phreng ba'i rgyun khyer 'chi med thig le/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID27C137F86BFB79FC , bdr:ID6C6698EFB880858C , bdr:IDD2A9553B68936B81 ;
+        :editionStatement   "reproduced from manuscripts and dpal spungs blockprint"@en ;
+        :extentStatement    "120 p. ; 9 x 33 cm." ;
+        :hasTitle           bdr:TTAE4A2B54F425B8AF , bdr:TTF849B008278C294D ;
+        :instanceEvent      bdr:EV505F597F0C8D2F3A ;
+        :instanceHasReproduction  bdr:W1CZ3883 ;
+        :instanceOf         bdr:WA1CZ3883 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "sherab gyaltsen/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTAE4A2B54F425B8AF
+        a                   :OtherTitle ;
+        rdfs:label          "rnam sras dang tshe ring ma'i chog bsgrigs g.yang 'gug gi rim pa bltas chog tu bkod pa/"@bo-x-ewts .
+    
+    bdr:TTF849B008278C294D
+        a                   :Title ;
+        rdfs:label          "tshe sgrub rdo rje 'phreng ba'i rgyun khyer 'chi med thig le/"@bo-x-ewts .
+}

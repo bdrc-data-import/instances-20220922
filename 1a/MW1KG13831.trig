@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13831 {
+    bda:LG5191FB60080D8EC4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-12-03T15:46:36.283Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13831  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13831 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "1a/MW1KG13831.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13831 ;
+        adm:logEntry        bda:LG5191FB60080D8EC4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6BC8CEE3947D60A8
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0C50B23F61D81601
+        a                   bdr:HollisId ;
+        rdf:value           "014256081" .
+    
+    bdr:ID83F48098DA2F6A05
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "8174721274" .
+    
+    bdr:MW1KG13831  a       :Instance ;
+        skos:altLabel       "commentary on the rgyud brtag gnyis"@en ;
+        skos:prefLabel      "rgyud kyi rgyal po brtag pa gnyis pa'i tshig 'grel/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0C50B23F61D81601 , bdr:ID83F48098DA2F6A05 ;
+        :extentStatement    "657 p." ;
+        :hasSourcePrintery  bdr:G3JT12535 ;
+        :hasTitle           bdr:TT077A8B85D8A63133 , bdr:TTCE9D207C56F8B436 ;
+        :instanceEvent      bdr:EV6BC8CEE3947D60A8 ;
+        :instanceHasReproduction  bdr:W1KG13831 ;
+        :instanceOf         bdr:WA1KG13831 ;
+        :note               bdr:NT9061B57A8349E7B4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "inder puri, new delhi"@en ;
+        :publisherName      "shechen publications"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT9061B57A8349E7B4
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT077A8B85D8A63133
+        a                   :OtherTitle ;
+        rdfs:label          "commentary on the rgyud brtag gnyis"@en .
+    
+    bdr:TTCE9D207C56F8B436
+        a                   :Title ;
+        rdfs:label          "rgyud kyi rgyal po brtag pa gnyis pa'i tshig 'grel/"@bo-x-ewts .
+}

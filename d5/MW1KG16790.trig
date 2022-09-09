@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG16790 {
+    bda:LGB6A910805CB8FFC3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-03-05T10:23:50.05Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG16790  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG16790 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d5/MW1KG16790.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG16790 ;
+        adm:logEntry        bda:LGB6A910805CB8FFC3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0780734F91A2F226
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID25BEE06A6F638C67
+        a                   bdr:HollisId ;
+        rdf:value           "014256408" .
+    
+    bdr:IDB0694D1ECDA85417
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7805890285" .
+    
+    bdr:MW1KG16790  a       :Instance , :SerialInstance ;
+        skos:altLabel       "炯岭"@zh-hans ;
+        skos:prefLabel      "khyung gling /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID25BEE06A6F638C67 , bdr:IDB0694D1ECDA85417 ;
+        :authorshipStatement  "krung go spyi tshogs tshan rig khang grangs nyung mi rigs rtsom rig so'o dang bod rang skyong ljongs spyi tshogs tshan rig khang gis bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "390 p." ;
+        :hasTitle           bdr:TT058E547A49F55AA3 , bdr:TT2663C9A498FE143D , bdr:TT5289B5C69C990991 , bdr:TT5931060C226C0EB0 ;
+        :illustrations      "ill. (col. port.)" ;
+        :instanceEvent      bdr:EV0780734F91A2F226 ;
+        :instanceHasReproduction  bdr:W1KG16790 ;
+        :instanceOf         bdr:WA1KG16790 ;
+        :note               bdr:NT4AFFB4D4385CEA5D ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG16786 ;
+        :seriesNumber       "9" .
+    
+    bdr:NT4AFFB4D4385CEA5D
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT058E547A49F55AA3
+        a                   :TitlePageTitle ;
+        rdfs:label          "sgrung mkhan bsam grub kyis phab pa'i gling rje ge sar rgyal po'i sgrung / khyung gling /"@bo-x-ewts .
+    
+    bdr:TT2663C9A498FE143D
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "炯岭"@zh-hans .
+    
+    bdr:TT5289B5C69C990991
+        a                   :Title ;
+        rdfs:label          "khyung gling /"@bo-x-ewts .
+    
+    bdr:TT5931060C226C0EB0
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "jiong ling"@zh-latn-pinyin-x-ndia .
+}

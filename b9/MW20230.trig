@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20230 {
+    bda:LGBBBDA1509D27D232
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20230  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20230 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "b9/MW20230.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20230 ;
+        adm:logEntry        bda:LGBBBDA1509D27D232 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV78BCBA40E8981163
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID53C1997E5761EB5B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001291191" .
+    
+    bdr:IDA0FCF1098961E253
+        a                   bdr:HollisId ;
+        rdf:value           "014258098" .
+    
+    bdr:IDB18D0CE7B301AA79
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSA 2002/00596 PL3735" .
+    
+    bdr:IDF8DE8974B57F5BC0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542107232" .
+    
+    bdr:MW20230  a          :Instance ;
+        skos:altLabel       "anduolayi xuan ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bod kyi la gzhas gzhon nu 'gugs pa'i lcags kyu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID53C1997E5761EB5B , bdr:IDA0FCF1098961E253 , bdr:IDB18D0CE7B301AA79 , bdr:IDF8DE8974B57F5BC0 ;
+        :authorshipStatement  "kun dga' rgyal mtshan gyis bsdu sgrig byas/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "351 p." ;
+        :hasTitle           bdr:TT5EE7EBE9E4E19EF1 , bdr:TT8EF5B736FA30C236 , bdr:TTFCDC3C0A486EABA8 ;
+        :instanceEvent      bdr:EV78BCBA40E8981163 ;
+        :instanceHasReproduction  bdr:W20230 ;
+        :instanceOf         bdr:WA20230 ;
+        :note               bdr:NTFB43C82E9EB55C72 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTFB43C82E9EB55C72
+        a                   :Note ;
+        :noteText           "scanned for presentation purposes only; not for distribution\n4790"@en .
+    
+    bdr:TT5EE7EBE9E4E19EF1
+        a                   :Title ;
+        rdfs:label          "bod kyi la gzhas gzhon nu 'gugs pa'i lcags kyu/"@bo-x-ewts .
+    
+    bdr:TT8EF5B736FA30C236
+        a                   :ColophonTitle ;
+        rdfs:label          "an-to-la-i hsuan chi"@zh-latn-wadegile .
+    
+    bdr:TTFCDC3C0A486EABA8
+        a                   :ColophonTitle ;
+        rdfs:label          "anduolayi xuan ji"@zh-latn-pinyin-x-ndia .
+}

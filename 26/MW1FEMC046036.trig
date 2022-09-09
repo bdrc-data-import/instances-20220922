@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046036 {
+    bda:LG62CF64CB08AC259A
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046036"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046036
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046036 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "26/MW1FEMC046036.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046036 ;
+        adm:logEntry        bda:LG62CF64CB08AC259A , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID9FA155A63B13FF22
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "018-B.04.11.02.V.1" .
+    
+    bdr:MFAC01C324CE106B31
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "172" .
+    
+    bdr:MW1FEMC046036
+        a                   :Instance ;
+        skos:prefLabel      "អរីយ្យបុគ្គល (១-២៣)"@km , "arῑyya puggala"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9FA155A63B13FF22 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT36E50825D9202BF1 , bdr:TT86C785514C4AE67C ;
+        :instanceHasReproduction  bdr:W1FEMC036036 , bdr:W1FEMC046036 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFAC01C324CE106B31 ;
+        :note               bdr:NTEB2EE3081CF34794 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTEB2EE3081CF34794
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT36E50825D9202BF1
+        a                   :Title ;
+        rdfs:label          "arῑyya puggala"@km-x-twktt .
+    
+    bdr:TT86C785514C4AE67C
+        a                   :Title ;
+        rdfs:label          "អរីយ្យបុគ្គល (១-២៣)"@km .
+}

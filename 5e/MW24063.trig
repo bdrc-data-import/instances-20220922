@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW24063 {
+    bda:LGCA343E928FBF8E5E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFEB945370722DC00
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T09:36:59.255Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW24063  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW24063 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "5e/MW24063.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24063 ;
+        adm:logEntry        bda:LGCA343E928FBF8E5E , bda:LGFEB945370722DC00 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8FC552B8006072BA
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0EC67541570D4E53
+        a                   bdr:HollisId ;
+        rdf:value           "014259315" .
+    
+    bdr:ID25CE4696EBDDA48A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ984.G367 K37 1985" .
+    
+    bdr:IDB19433B1EEEBC057
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903290" .
+    
+    bdr:MW24063  a          :Instance ;
+        skos:altLabel       "mnam med dwags po lha rje'i rnam thar sgrub brgyud bstan pa'i mdzes rgyan : the biography of sgam-po-pa bsod-nams-rin-chen (1079-1153)"@en-x-mixed ;
+        skos:prefLabel      "mnyam med dwags po lha rje'i rnam thar sgrub brgyud bstan pa'i mdzes rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0EC67541570D4E53 , bdr:ID25CE4696EBDDA48A , bdr:IDB19433B1EEEBC057 ;
+        :authorshipStatement  "by sman-sdon mtshams-pa rin-po-che karma-nges-don-bstan-rgyas"@en ;
+        :biblioNote         "reproduced from a rare manuscript from the library of 'bo-dkar sprul-sku"@en ;
+        :extentStatement    "119 p." ;
+        :hasTitle           bdr:TT9C6F0D09AEFD9AFC , bdr:TTCCA80DDB3E0AB01F ;
+        :instanceEvent      bdr:EV8FC552B8006072BA ;
+        :instanceHasReproduction  bdr:W24063 ;
+        :instanceOf         bdr:WA24063 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "choten"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT9C6F0D09AEFD9AFC
+        a                   :Title ;
+        rdfs:label          "mnyam med dwags po lha rje'i rnam thar sgrub brgyud bstan pa'i mdzes rgyan/"@bo-x-ewts .
+    
+    bdr:TTCCA80DDB3E0AB01F
+        a                   :TitlePageTitle ;
+        rdfs:label          "mnam med dwags po lha rje'i rnam thar sgrub brgyud bstan pa'i mdzes rgyan : the biography of sgam-po-pa bsod-nams-rin-chen (1079-1153)"@en-x-mixed .
+}

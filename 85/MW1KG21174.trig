@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG21174 {
+    bda:LG5750612C6663CBC2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2015-02-17T16:20:15.99Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG21174  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG21174 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "85/MW1KG21174.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG21174 ;
+        adm:logEntry        bda:LG5750612C6663CBC2 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB87ADFD52FBC282E
+        a                   :PublishedEvent ;
+        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID27EB77181729CD3D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748 .G42 1978B" .
+    
+    bdr:ID8B34373E9B90DF02
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "79901827" .
+    
+    bdr:MW1KG21174  a       :Instance ;
+        skos:altLabel       "a brief account of the conquest of the land of the sog-po by gesar king of gling"@en ;
+        skos:prefLabel      "sog gling bsam don kun 'grub/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID27EB77181729CD3D , bdr:ID8B34373E9B90DF02 ;
+        :biblioNote         "reproduction of a rare manuscript from chungpo in kham"@en ;
+        :extentStatement    "242 p." ;
+        :hasTitle           bdr:TT1CA1C30C37EBA247 , bdr:TT226A9AF9FBFB7D53 , bdr:TTC027D41013A2705E ;
+        :instanceEvent      bdr:EVB87ADFD52FBC282E ;
+        :instanceHasReproduction  bdr:W1KG21174 ;
+        :instanceOf         bdr:WA1KG21174 ;
+        :note               bdr:NT27943675D5E60733 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "clement town, dehradun"@en ;
+        :publisherName      "karma tulku, nyingmapa lama's college"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT27943675D5E60733
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 1847"@en .
+    
+    bdr:TT1CA1C30C37EBA247
+        a                   :TitlePageTitle ;
+        rdfs:label          "skyes mchog ge sar rgyal po'i rnam thar sog gling bsam don kun 'grub dgos 'dod rin chen bang mdzod khams gsum dbang du bsdus pa'i lcags kyu/"@bo-x-ewts .
+    
+    bdr:TT226A9AF9FBFB7D53
+        a                   :Title ;
+        rdfs:label          "sog gling bsam don kun 'grub/"@bo-x-ewts .
+    
+    bdr:TTC027D41013A2705E
+        a                   :OtherTitle ;
+        rdfs:label          "a brief account of the conquest of the land of the sog-po by gesar king of gling"@en .
+}

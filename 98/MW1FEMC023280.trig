@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC023280 {
+    bda:LG480A3E0A514BE0E1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-24"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC023280"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC023280
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC023280 ;
+        adm:contentProvider  bda:CP047 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "98/MW1FEMC023280.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC023280 ;
+        adm:logEntry        bda:LG480A3E0A514BE0E1 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDBECEBE1EFD75E2FF
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.991.VI.6" .
+    
+    bdr:MW1FEMC023280
+        a                   :Instance ;
+        skos:prefLabel      "មន្តគាថាស្តោះពិស អុត​ ម្រេញ (វាន)"@km , "mant gāthā stoḥ bis ut mreñ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBECEBE1EFD75E2FF ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT4D1ECD3E0BA35B1A , bdr:TTC3E92592A8305B74 ;
+        :instanceHasReproduction  bdr:W1FEMC023280 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT77AB629961742394 , bdr:NTF63B94074BB5B235 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT77AB629961742394
+        a                   :Note ;
+        :noteText           "should we write (វាន) ?"@en .
+    
+    bdr:NTF63B94074BB5B235
+        a                   :Note ;
+        :contentLocationStatement  "pg. 569" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4D1ECD3E0BA35B1A
+        a                   :Title ;
+        rdfs:label          "មន្តគាថាស្តោះពិស អុត​ ម្រេញ (វាន)"@km .
+    
+    bdr:TTC3E92592A8305B74
+        a                   :Title ;
+        rdfs:label          "mant gāthā stoḥ bis ut mreñ"@km-x-twktt .
+}

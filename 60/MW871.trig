@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW871 {
+    bda:LG876521E52E187B3A
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-12-04T10:08:31.282Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGCF5B0629AA334BD5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW871  a            adm:AdminData ;
+        adm:adminAbout      bdr:MW871 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "60/MW871.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW871 ;
+        adm:logEntry        bda:LG876521E52E187B3A , bda:LGCF5B0629AA334BD5 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B73859584A05EB4
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE8D37BF300C53931
+        a                   bdr:HollisId ;
+        rdf:value           "014261103" .
+    
+    bdr:MW871  a            :Instance , :SerialInstance ;
+        skos:prefLabel      "phar phyin spyi don skal bzang klu dbang gi rol mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE8D37BF300C53931 ;
+        :authorshipStatement  "rje btsun chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT6205F8164A934224 , bdr:TTA099732F39DA2334 ;
+        :instanceEvent      bdr:EV1B73859584A05EB4 ;
+        :instanceHasReproduction  bdr:W871 ;
+        :instanceOf         bdr:WA1KG22263 , bdr:WA871 ;
+        :note               bdr:NT714F8386988FF077 , bdr:NTC4D378349D5D7831 ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "ser gtsug nang bstan dpe rnying 'tshol bsdu phyogs sgrig khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS140 ;
+        :seriesNumber       "v. 40-42" .
+    
+    bdr:NT714F8386988FF077
+        a                   :Note ;
+        :noteText           "v. 1. phar phyin skabs dang po'i spyi don skal bzang klu dbang gi rol mtsho/\nv. 2. phar phyin skabs gnyis pa gsum pa bzhi pa gsum gyi spyi don skal bzang klu dbang gi rol mtsho/\nv. 3. phar phyin skabs lnga pa drug pa bdun pa brgyad pa'i spyi don dang chos sku'i spyi don/"@en .
+    
+    bdr:NTC4D378349D5D7831
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT6205F8164A934224
+        a                   :Title ;
+        rdfs:label          "phar phyin spyi don skal bzang klu dbang gi rol mtsho/"@bo-x-ewts .
+    
+    bdr:TTA099732F39DA2334
+        a                   :TitlePageTitle ;
+        rdfs:label          "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan 'grel pa dang bcas pa'i rgya cher bshad pa legs bshad gser gyi phreng ba zhes bya ba dang rnam bshad snying po'i rgyan zhes bya ba gnyis kyi dka' ba'i gnad gsal bar byed pa legs bshad skal bzang klu dbang rol mtsho/"@bo-x-ewts .
+}

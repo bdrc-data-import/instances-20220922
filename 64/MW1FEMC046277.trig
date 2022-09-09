@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046277 {
+    bda:LGC283221B7A5A2C2F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046277"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046277
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046277 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "64/MW1FEMC046277.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046277 ;
+        adm:logEntry        bda:LGC283221B7A5A2C2F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID40B33A087F0E9F0F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "016-B.04.03.04.III.5" .
+    
+    bdr:MFFD48691FB72D6907
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "168" .
+    
+    bdr:MW1FEMC046277
+        a                   :Instance ;
+        skos:prefLabel      "ទសជាតក សុពាណាយាម, ច័ន្ទកុមារ"@km , "dasajātaka subāṇayām, canda kumār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID40B33A087F0E9F0F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2, 1" ;
+        :hasTitle           bdr:TT250C8317CDFBFA4D , bdr:TTBE2761873A0884EF ;
+        :instanceHasReproduction  bdr:W1FEMC036277 , bdr:W1FEMC046277 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFFD48691FB72D6907 ;
+        :note               bdr:NT8925FA54807ADD26 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT8925FA54807ADD26
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT250C8317CDFBFA4D
+        a                   :Title ;
+        rdfs:label          "dasajātaka subāṇayām, canda kumār"@km-x-twktt .
+    
+    bdr:TTBE2761873A0884EF
+        a                   :Title ;
+        rdfs:label          "ទសជាតក សុពាណាយាម, ច័ន្ទកុមារ"@km .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043798 {
+    bda:LG65B26C76D7D20345
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043798"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043798
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043798 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d7/MW1FEMC043798.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043798 ;
+        adm:logEntry        bda:LG65B26C76D7D20345 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID88E297783A2C6877
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "036-B.11.11.04.III.3" .
+    
+    bdr:MF82D813CD6F6A51AB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "180" .
+    
+    bdr:MW1FEMC043798
+        a                   :Instance ;
+        skos:prefLabel      "បាដិទេស្សនិយ សេក្ខិយាវគ្គ អធិករណ (កួ-ខា)"@km , "pāṭi dessanīy sekkhiyāvagg adhikaraṇa"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID88E297783A2C6877 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "4" ;
+        :hasTitle           bdr:TT5DC7875D7567442E , bdr:TT74B0D1B34D2225C0 ;
+        :instanceHasReproduction  bdr:W1FEMC033798 , bdr:W1FEMC043798 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF82D813CD6F6A51AB ;
+        :note               bdr:NTC41FEDF8CFD595B4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTC41FEDF8CFD595B4
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT5DC7875D7567442E
+        a                   :Title ;
+        rdfs:label          "pāṭi dessanīy sekkhiyāvagg adhikaraṇa"@km-x-twktt .
+    
+    bdr:TT74B0D1B34D2225C0
+        a                   :Title ;
+        rdfs:label          "បាដិទេស្សនិយ សេក្ខិយាវគ្គ អធិករណ (កួ-ខា)"@km .
+}

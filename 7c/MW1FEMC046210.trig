@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046210 {
+    bda:LGB9A13A7D617C89E2
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046210"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046210
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046210 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7c/MW1FEMC046210.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046210 ;
+        adm:logEntry        bda:LGB9A13A7D617C89E2 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID2E6C5651F455728B
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "034-B.04.10.01.VI.4" .
+    
+    bdr:MF6327963E4E096C03
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "178" .
+    
+    bdr:MW1FEMC046210
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនមន្តវិជ្ជា ​(១-២៨-១-៨)"@km , "Kpoun mant vījjā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2E6C5651F455728B ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasTitle           bdr:TT6C7CAB7B9984481A , bdr:TTCA8F915EA2D705A5 ;
+        :instanceHasReproduction  bdr:W1FEMC036210 , bdr:W1FEMC046210 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6327963E4E096C03 ;
+        :note               bdr:NT796F5FA34681D6DA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT796F5FA34681D6DA
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT6C7CAB7B9984481A
+        a                   :Title ;
+        rdfs:label          "ក្បួនមន្តវិជ្ជា ​(១-២៨-១-៨)"@km .
+    
+    bdr:TTCA8F915EA2D705A5
+        a                   :Title ;
+        rdfs:label          "Kpoun mant vījjā"@km-x-twktt .
+}

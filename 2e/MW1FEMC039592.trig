@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039592 {
+    bda:LG50034A4B4CB998E1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC039592"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039592
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC039592 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "2e/MW1FEMC039592.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039592 ;
+        adm:logEntry        bda:LG50034A4B4CB998E1 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0CF436810F742D3F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "028-PP.02.08.01.VII" .
+    
+    bdr:MF903A2FD8511066FE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "10" ;
+        :microfilmStrip     "39" .
+    
+    bdr:MW1FEMC039592
+        a                   :Instance ;
+        skos:prefLabel      "បឋមសម្ពោធិ"@pi-khmr , "paṭhamasambodhi"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0CF436810F742D3F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT8A8E4FD11CBE2104 , bdr:TT9AC9D17FA0954907 , bdr:TTBB162A935440834B , bdr:TTBBA8320FF61F61AA ;
+        :instanceHasReproduction  bdr:W1FEMC010288 , bdr:W1FEMC039592 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF903A2FD8511066FE ;
+        :note               bdr:NT61DFEAB86741B893 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT61DFEAB86741B893
+        a                   :Note ;
+        :contentLocationStatement  "pg. 109" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT8A8E4FD11CBE2104
+        a                   :CoverTitle ;
+        rdfs:label          "បថមសម្ពោធិវិត្ថារគព្ភានិក្ខមបរិវត្ត"@pi-khmr .
+    
+    bdr:TT9AC9D17FA0954907
+        a                   :Title ;
+        rdfs:label          "បឋមសម្ពោធិ"@pi-khmr ;
+        :femcConversionOf   bdr:TT8A8E4FD11CBE2104 .
+    
+    bdr:TTBB162A935440834B
+        a                   :CoverTitle ;
+        rdfs:label          "pathamasambodhivitthāragabbhānikkhamaparivatta"@pi-x-twktt .
+    
+    bdr:TTBBA8320FF61F61AA
+        a                   :Title ;
+        rdfs:label          "paṭhamasambodhi"@pi-x-twktt ;
+        :femcConversionOf   bdr:TTBB162A935440834B .
+}

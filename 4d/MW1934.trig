@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1934 {
+    bda:LG0D8F52ACB940FEAB
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGF36D48BC82A21589
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-07T10:34:13.436Z"^^xsd:dateTime ;
+        adm:logMessage      "added printe type and source trintery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1934  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW1934 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4d/MW1934.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1934 ;
+        adm:logEntry        bda:LG0D8F52ACB940FEAB , bda:LGF36D48BC82A21589 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV26D074B1EF9DC6C5
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDCCC9202866E2CE6E
+        a                   bdr:HollisId ;
+        rdf:value           "014254844" .
+    
+    bdr:MW1934  a           :Instance ;
+        skos:prefLabel      "gsung 'bum/_rin chen grub (zhol par khang)"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCCC9202866E2CE6E ;
+        :biblioNote         "in the lha sa zhol printing of the gsung 'bum of bu ston rin chen grub and sgra tshad pa rin chen rnam rgyal"@en ;
+        :extentStatement    "28 v" ;
+        :hasSourcePrintery  bdr:G1PD129185 ;
+        :hasTitle           bdr:TT6C88C47FEAB49451 ;
+        :instanceEvent      bdr:EV26D074B1EF9DC6C5 ;
+        :instanceHasReproduction  bdr:W1934 ;
+        :instanceOf         bdr:WA1934 , bdr:WA22106 ;
+        :note               bdr:NT22CABE5494FD2D55 ;
+        :numberOfVolumes    28 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[lha sa]"@en ;
+        :publisherName      "[zhol par khang]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT22CABE5494FD2D55
+        a                   :Note ;
+        :noteText           "-0761\n\ntbrc also holds edition reprinted by lokesh chandra, satapitaka series 41-68\ndescribed in the tohoku catalog."@en .
+    
+    bdr:TT6C88C47FEAB49451
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_rin chen grub (zhol par khang)"@bo-x-ewts .
+}

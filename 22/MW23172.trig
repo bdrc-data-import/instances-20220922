@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23172 {
+    bda:LG12DDF81DA73F2F2D
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-15T11:47:56.467Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGEEE3D3E6652D8B19
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23172  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23172 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "22/MW23172.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23172 ;
+        adm:logEntry        bda:LG12DDF81DA73F2F2D , bda:LGEEE3D3E6652D8B19 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV801D17CF8C6340A2
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID78A8934624E587B8
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7684 .D46 1985" .
+    
+    bdr:ID9DA445348615DDAC
+        a                   bdr:HollisId ;
+        rdf:value           "014258813" .
+    
+    bdr:IDBB07C8ECCFAAE0B0
+        a                   bdr:PL480 ;
+        rdf:value           "i-tib-2791" .
+    
+    bdr:IDC271250320D75390
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903695" .
+    
+    bdr:MW23172  a          :Instance ;
+        skos:altLabel       "collected writings of the 'bri-gun-pa hierarch dkon-mchog-rin-chen"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_dkon mchog rin chen/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID78A8934624E587B8 , bdr:ID9DA445348615DDAC , bdr:IDBB07C8ECCFAAE0B0 , bdr:IDC271250320D75390 ;
+        :biblioNote         "reproduced from one volume of the collected works of the scholar recently brought from 'bri-gun thel by the ven. yudra rinpoche"@en ;
+        :extentStatement    "676 p." ;
+        :hasTitle           bdr:TT1365F6E7DF108109 , bdr:TT403BAEA70A1AF966 , bdr:TTEB1BD36029BAF210 ;
+        :instanceEvent      bdr:EV801D17CF8C6340A2 ;
+        :instanceHasReproduction  bdr:W23172 ;
+        :instanceOf         bdr:WA23172 ;
+        :note               bdr:NT41697CC18AA23D8A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "bir tibetan society"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT41697CC18AA23D8A
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files.\n0378."@en .
+    
+    bdr:TT1365F6E7DF108109
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_dkon mchog rin chen/"@bo-x-ewts .
+    
+    bdr:TT403BAEA70A1AF966
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected writings of the 'bri-gun-pa hierarch dkon-mchog-rin-chen"@en-x-mixed .
+    
+    bdr:TTEB1BD36029BAF210
+        a                   :CoverTitle ;
+        rdfs:label          "rje dkon mchog rat+na 'i gsung 'bum/"@bo-x-ewts .
+}

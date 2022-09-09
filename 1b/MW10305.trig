@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW10305 {
+    bda:LG1427699A2B63CEA3
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW10305  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW10305 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "1b/MW10305.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW10305 ;
+        adm:logEntry        bda:LG1427699A2B63CEA3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAE15ACEFE3EC77C8
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0556B7CFC217FA94
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ750 .N34 2000" .
+    
+    bdr:ID3C0F13CC3DDD9AA9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "99950881" .
+    
+    bdr:IDBDFCBBF2DD2D4517
+        a                   bdr:HollisId ;
+        rdf:value           "014254612" .
+    
+    bdr:MW10305  a          :Instance ;
+        skos:altLabel       "the collection works of mkyen-chen ngag-dwang chos-grags."@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang chos grags/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0556B7CFC217FA94 , bdr:ID3C0F13CC3DDD9AA9 , bdr:IDBDFCBBF2DD2D4517 ;
+        :extentStatement    "6 v." ;
+        :hasTitle           bdr:TT1E829EDACC64F59D , bdr:TT2C21D9006DA0EFFE ;
+        :instanceEvent      bdr:EVAE15ACEFE3EC77C8 ;
+        :instanceHasReproduction  bdr:W10305 ;
+        :instanceOf         bdr:WA10305 ;
+        :note               bdr:NT981D513E410D06BD ;
+        :numberOfVolumes    6 ;
+        :publisherLocation  "darjeeling, w.b."@en ;
+        :publisherName      "sakya choepheling monastery"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT981D513E410D06BD
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume number 2140-2145\n\nMkhan chen ngag dbang chos grags kyi pod chen drug gi 'grel pa phyogs sgrigs. -- Rimbick Bazar, Dist. Darjeeling : Sakya Choepheling Monastery, 2000.\n6 v.\nCopy: TBRC.\nTitle on boards: The Collection works of Mkhyen-chen Ngag-dwang chos-grags."@en .
+    
+    bdr:TT1E829EDACC64F59D
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collection works of mkyen-chen ngag-dwang chos-grags."@en-x-mixed .
+    
+    bdr:TT2C21D9006DA0EFFE
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang chos grags/"@bo-x-ewts .
+}

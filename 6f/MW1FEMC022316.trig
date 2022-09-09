@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022316 {
+    bda:LGD94B77DF08D4EF61
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022316"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022316
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022316 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "6f/MW1FEMC022316.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022316 ;
+        adm:logEntry        bda:LGD94B77DF08D4EF61 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID539CCFD87EE5E429
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.394.III.3" .
+    
+    bdr:MW1FEMC022316
+        a                   :Instance ;
+        skos:prefLabel      "បព្វជ្ជាខន្ធក"@km , "pabbajjā khandhak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID539CCFD87EE5E429 ;
+        :binding            bdr:Binding_Continuous_Leporello ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT253DDDDE8B125693 , bdr:TT64D37851B283788A , bdr:TTC4ABE80E537C33D2 , bdr:TTCE798E4C4AC4C82D ;
+        :instanceHasReproduction  bdr:W1FEMC022316 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :note               bdr:NT586A9E72960F1DCB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1226" .
+    
+    bdr:NT586A9E72960F1DCB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 414" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT253DDDDE8B125693
+        a                   :Title ;
+        rdfs:label          "បព្វជ្ជាខន្ធក"@km ;
+        :femcConversionOf   bdr:TTCE798E4C4AC4C82D .
+    
+    bdr:TT64D37851B283788A
+        a                   :Title ;
+        rdfs:label          "pabbajjā khandhak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTC4ABE80E537C33D2 .
+    
+    bdr:TTC4ABE80E537C33D2
+        a                   :CoverTitle ;
+        rdfs:label          "pabbajjā khand"@km-x-twktt .
+    
+    bdr:TTCE798E4C4AC4C82D
+        a                   :CoverTitle ;
+        rdfs:label          "បព្វជ្ជាខន្ធ (ក្រាំង)"@km .
+}

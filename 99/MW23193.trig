@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23193 {
+    bda:LG80D2F837C59111F0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFD5794595C91D987
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-15T14:04:11.033Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23193  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23193 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "99/MW23193.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23193 ;
+        adm:logEntry        bda:LG80D2F837C59111F0 , bda:LGFD5794595C91D987 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV62D733BE0A632475
+        a                   :PublishedEvent ;
+        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0036402850BA946E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "77900728" .
+    
+    bdr:ID0D6778727D337321
+        a                   bdr:HollisId ;
+        rdf:value           "014258832" .
+    
+    bdr:IDCC9261E702D73015
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748 .V4 1976" .
+    
+    bdr:MW23193  a          :Instance ;
+        skos:altLabel       "ro dnos grub can gyi sgrun mkhas pa dan skye bo rnams kyi rna ba'i bcud len phun tshogs bde gter : a manuscript collection of twenty-four tibetan vetala stories"@en-x-mixed , "vetalapancavimsati. tibetan version (ro sgrung)"@sa-alalc97 ;
+        skos:prefLabel      "ro dngos grub can gyi sgrung mkhas pa dang skye bo rnams kyi rna ba'i bcud len phun tshogs bde gter/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0036402850BA946E , bdr:ID0D6778727D337321 , bdr:IDCC9261E702D73015 ;
+        :biblioNote         "reproduced from a copy of an ancient manuscript belonging to khri-byang rin-po-che"@en ;
+        :extentStatement    "[93] p." ;
+        :hasTitle           bdr:TT1CC9CC0550D158B6 , bdr:TT41A7980BF2F9A989 , bdr:TT6C2127D366727789 ;
+        :instanceEvent      bdr:EV62D733BE0A632475 ;
+        :instanceHasReproduction  bdr:W23193 ;
+        :instanceOf         bdr:WA23193 ;
+        :note               bdr:NT668AAB83E6DB29BC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "ngawang sopa"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT668AAB83E6DB29BC
+        a                   :Note ;
+        :noteText           "tbrc holds scanned images, tiffs and pdf files.\n0533."@en .
+    
+    bdr:TT1CC9CC0550D158B6
+        a                   :OtherTitle ;
+        rdfs:label          "vetalapancavimsati. tibetan version (ro sgrung)"@sa-alalc97 .
+    
+    bdr:TT41A7980BF2F9A989
+        a                   :TitlePageTitle ;
+        rdfs:label          "ro dnos grub can gyi sgrun mkhas pa dan skye bo rnams kyi rna ba'i bcud len phun tshogs bde gter : a manuscript collection of twenty-four tibetan vetala stories"@en-x-mixed .
+    
+    bdr:TT6C2127D366727789
+        a                   :Title ;
+        rdfs:label          "ro dngos grub can gyi sgrung mkhas pa dang skye bo rnams kyi rna ba'i bcud len phun tshogs bde gter/"@bo-x-ewts .
+}

@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23778 {
+    bda:LG2E27B2F4E6E3CD7C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T10:04:06.896Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGB35771AD052E7D1E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23778  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23778 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "b6/MW23778.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23778 ;
+        adm:logEntry        bda:LG2E27B2F4E6E3CD7C , bda:LGB35771AD052E7D1E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7F8B0E7F8B859245
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID22B161B5746CE91E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903872" .
+    
+    bdr:ID691FF4C4CD7C7BE0
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .G56 1985" .
+    
+    bdr:IDB975EF16E8AB978D
+        a                   bdr:HollisId ;
+        rdf:value           "014259119" .
+    
+    bdr:MW23778  a          :Instance ;
+        skos:altLabel       "the collected works (bka' 'bum) of glin-chen ras-pa padma-rdo-rje"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_pad+ma rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID22B161B5746CE91E , bdr:ID691FF4C4CD7C7BE0 , bdr:IDB975EF16E8AB978D ;
+        :biblioNote         "reproduced from a collection of rare manuscripts from go-'jo nub dgon"@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT64A76D9749F80331 , bdr:TT8A687CA8A7872013 , bdr:TT9AAAC03C8D6FE92C ;
+        :instanceEvent      bdr:EV7F8B0E7F8B859245 ;
+        :instanceHasReproduction  bdr:W23778 ;
+        :instanceOf         bdr:WA23778 ;
+        :note               bdr:NT29BDC96D3EF64B26 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tashijong, palampur, dt. kangra, H.P. :"@en ;
+        :publisherName      "khampa gar sungrab nyamso gyunphel parkhang, tibetan craft community,"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT29BDC96D3EF64B26
+        a                   :Note ;
+        :noteText           "-2657"@en .
+    
+    bdr:TT64A76D9749F80331
+        a                   :CoverTitle ;
+        rdfs:label          "glin-chen ras-pa padma-rdo-rje'i bka' 'bum"@bo-alalc97 .
+    
+    bdr:TT8A687CA8A7872013
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (bka' 'bum) of glin-chen ras-pa padma-rdo-rje"@en-x-mixed .
+    
+    bdr:TT9AAAC03C8D6FE92C
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_pad+ma rdo rje/"@bo-x-ewts .
+}

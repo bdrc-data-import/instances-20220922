@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW10319 {
+    bda:LGD69CF7929979F2D1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW10319  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW10319 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a0/MW10319.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW10319 ;
+        adm:logEntry        bda:LGD69CF7929979F2D1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEAAC96F20D5853BA
+        a                   :PublishedEvent ;
+        :eventWhen          "1995i.e.1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1ECE7DA826001ACC
+        a                   bdr:HollisId ;
+        rdf:value           "014254618" .
+    
+    bdr:IDE114806897AEBD4A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542005464" .
+    
+    bdr:MW10319  a          :Instance ;
+        skos:prefLabel      "bka' gdams chos 'byung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1ECE7DA826001ACC , bdr:IDE114806897AEBD4A ;
+        :authorshipStatement  "ngag dbang kun dga' bsod nams grags pa rgyal mtshan gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 190 p." ;
+        :hasTitle           bdr:TT2E71B561FBDB694F , bdr:TT4D7CBFB7A7296E35 , bdr:TTAEE38B37C34386FB ;
+        :instanceEvent      bdr:EVEAAC96F20D5853BA ;
+        :instanceHasReproduction  bdr:W10319 ;
+        :instanceOf         bdr:WA10319 ;
+        :note               bdr:NTB1F89A677BD5B2FC ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTB1F89A677BD5B2FC
+        a                   :Note ;
+        :noteText           "Xylograph. 000499.Dge ba'i bshes gnyen bka' gdams pa rnams kyi dam pa'i chos byung ba'i tshul legs par bshad pa ngo mtshar rgya mtsho. 102 ff. in the Sde-dge redaction. Margin: dhii."@en .
+    
+    bdr:TT2E71B561FBDB694F
+        a                   :TitlePageTitle ;
+        rdfs:label          "dge ba'i bshes gnyen bka' gdams pa rnams kyi dam pa'i chos 'byung ba'i tshul legs par bshad pa ngo mtshar rgya mtsho/"@bo-x-ewts .
+    
+    bdr:TT4D7CBFB7A7296E35
+        a                   :TitlePageTitle ;
+        rdfs:label          "bka' gdams chos 'byung bka' gdams bstan pa rgyas pa'i nyin byed/"@bo-x-ewts .
+    
+    bdr:TTAEE38B37C34386FB
+        a                   :Title ;
+        rdfs:label          "bka' gdams chos 'byung /"@bo-x-ewts .
+}

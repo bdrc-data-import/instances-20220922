@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23789 {
+    bda:LG19B4CB4E69460492
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T11:08:35.17Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG501811BBDAAFAFD9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23789  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23789 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "2a/MW23789.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23789 ;
+        adm:logEntry        bda:LG19B4CB4E69460492 , bda:LG501811BBDAAFAFD9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8EC2426BD9822F95
+        a                   :PublishedEvent ;
+        :eventWhen          "1972-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID845AD754D4B08275
+        a                   bdr:HollisId ;
+        rdf:value           "014259128" .
+    
+    bdr:IDAC9FD3D442B3F9B1
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "72906726" .
+    
+    bdr:IDEDC8A4A107477793
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683 .R46 1972" .
+    
+    bdr:MW23789  a          :Instance ;
+        skos:altLabel       "the collected works (gsun-'bum) of rgod-tshan-pa mgon-po-rdo-rje"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_mgon po rdo rje/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID845AD754D4B08275 , bdr:IDAC9FD3D442B3F9B1 , bdr:IDEDC8A4A107477793 ;
+        :biblioNote         "volume 5 - published by the sungrab nyamso gyunphel parkhang, tibetan craft community, palampur, h.p. reproduced from rare manuscripts belonging to the stag-tshan-ras-pa bla-bran of hemis"@en ;
+        :extentStatement    "v." ;
+        :hasTitle           bdr:TT345FC5A80C7996DC , bdr:TTAFA49E8B9D7EA3FF ;
+        :instanceEvent      bdr:EV8EC2426BD9822F95 ;
+        :instanceHasReproduction  bdr:W23789 ;
+        :instanceOf         bdr:WA23661 , bdr:WA23789 ;
+        :note               bdr:NTD198A7F264BBA431 ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "darjeeling"@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTD198A7F264BBA431
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files of v. 4 and 5,  tbrc volume numbers 0853-0854"@en .
+    
+    bdr:TT345FC5A80C7996DC
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_mgon po rdo rje/"@bo-x-ewts .
+    
+    bdr:TTAFA49E8B9D7EA3FF
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun-'bum) of rgod-tshan-pa mgon-po-rdo-rje"@en-x-mixed .
+}

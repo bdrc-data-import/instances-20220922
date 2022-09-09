@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21854 {
+    bda:LG01BF3D05149B4200
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-11T11:45:10.611Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGCEBB5B2475C608F6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21854  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21854 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "9b/MW21854.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21854 ;
+        adm:logEntry        bda:LG01BF3D05149B4200 , bda:LGCEBB5B2475C608F6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBF18911E3C1DF2BC
+        a                   :PublishedEvent ;
+        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4CC009B84FF0552C
+        a                   bdr:HollisId ;
+        rdf:value           "014258470" .
+    
+    bdr:ID62CE5253360735B5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .R4 1978" .
+    
+    bdr:IDB1078D495F88C8A3
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "78908878" .
+    
+    bdr:MW21854  a          :Instance ;
+        skos:altLabel       "the collected revelations (gter chos) and writings of rdo-rje-thogs-med"@en-x-mixed ;
+        skos:prefLabel      "gter chos/_rdo rje thogs med/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4CC009B84FF0552C , bdr:ID62CE5253360735B5 , bdr:IDB1078D495F88C8A3 ;
+        :extentStatement    "6 v." ;
+        :hasTitle           bdr:TT2D0B539F4CE1FB0B , bdr:TT3626B58093329CAB , bdr:TT616E4C8469C58B99 , bdr:TT93717F41CEDADC1C ;
+        :instanceEvent      bdr:EVBF18911E3C1DF2BC ;
+        :instanceHasReproduction  bdr:W21854 ;
+        :instanceOf         bdr:WA21854 ;
+        :note               bdr:NT5679CD93431D7D16 ;
+        :numberOfVolumes    6 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "kalimpong"@en ;
+        :publisherName      "dupjung lama"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT5679CD93431D7D16
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 2055-2060."@en .
+    
+    bdr:TT2D0B539F4CE1FB0B
+        a                   :CoverTitle ;
+        rdfs:label          "g.yu sgra'i rnam 'phrul rdo rje thogs med kyi zab gter gsang ba'i chos mdzod rin po che/"@bo-x-ewts .
+    
+    bdr:TT3626B58093329CAB
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected revelations (gter chos) and writings of rdo-rje-thogs-med"@en-x-mixed .
+    
+    bdr:TT616E4C8469C58B99
+        a                   :Title ;
+        rdfs:label          "gter chos/_rdo rje thogs med/"@bo-x-ewts .
+    
+    bdr:TT93717F41CEDADC1C
+        a                   :CoverTitle ;
+        rdfs:label          "the collected rediscovered teachings of rdo-rje-thogs-med"@en-x-mixed .
+}

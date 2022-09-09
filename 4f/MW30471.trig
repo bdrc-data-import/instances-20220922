@@ -1,0 +1,74 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30471 {
+    bda:LG974D1E61A7FAB81E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW30471  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30471 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4f/MW30471.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30471 ;
+        adm:logEntry        bda:LG974D1E61A7FAB81E , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVA8F92CEDF51C8110
+        a                   :PublishedEvent ;
+        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDB8D6E2CF4793794A
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "010289523-6" .
+    
+    bdr:IDD367448CD9907F5A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542012045" .
+    
+    bdr:MW30471  a          :Instance ;
+        skos:prefLabel      "sgra rig pa'i bslab gzhi/"@bo-x-ewts , "Sgra rig paʼi bslab gźi /Mkhaʼ-ʼbum gyis sgrig rtsom byas."@en-x-mixed , "sheng ming xue jiao cheng"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB8D6E2CF4793794A , bdr:IDD367448CD9907F5A ;
+        :authorshipStatement  "mkha' 'bum gyis sgrig rtsom byas/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 220 p." ;
+        :hasTitle           bdr:TT5739B02F4F8E72F6 , bdr:TT596BDA5BD28FDBFB , bdr:TTECD08DFCB9ED7D48 ;
+        :instanceEvent      bdr:EVA8F92CEDF51C8110 ;
+        :instanceOf         bdr:WA30471 , bdr:WA3CN5645 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:TT5739B02F4F8E72F6
+        a                   :Title ;
+        rdfs:label          "sgra rig pa'i bslab gzhi/"@bo-x-ewts .
+    
+    bdr:TT596BDA5BD28FDBFB
+        a                   :OtherTitle ;
+        rdfs:label          "sheng ming xue jiao cheng"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTECD08DFCB9ED7D48
+        a                   :CoverTitle ;
+        rdfs:label          "Sgra rig paʼi bslab gźi /Mkhaʼ-ʼbum gyis sgrig rtsom byas."@en-x-mixed .
+}

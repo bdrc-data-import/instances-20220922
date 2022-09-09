@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG9260 {
+    bda:LGE15725FA5BD8D158
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-03-31T12:48:44.717Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGEEC35C5AD4D9392E
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-04-18T10:50:34.407Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG9260  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG9260 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b2/MW1KG9260.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG9260 ;
+        adm:logEntry        bda:LGE15725FA5BD8D158 , bda:LGEEC35C5AD4D9392E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRAB2E08A63BEDBC69
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG4922 ;
+        :role               bdr:R0ER0024 .
+    
+    bdr:IDD4F5BC9B0223D23D
+        a                   bdr:HollisId ;
+        rdf:value           "014257529" .
+    
+    bdr:MW1KG9260  a        :Instance ;
+        skos:prefLabel      "bka' brgyud pa'i lo rgyus zin tho/"@bo-x-ewts , "bka' brgyud pa history"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD4F5BC9B0223D23D ;
+        :biblioNote         "original typewritten text in wylie or phonetic transliteration"@en ;
+        :creator            bdr:CRAB2E08A63BEDBC69 ;
+        :extentStatement    "1 v. (only v. 4)" ;
+        :hasTitle           bdr:TT9DB6FDFA36FF8E13 , bdr:TTF42F4628C32A489C ;
+        :instanceHasReproduction  bdr:W1KG9260 ;
+        :instanceOf         bdr:WA1KG9260 ;
+        :note               bdr:NT38C2E715FFF0092A , bdr:NTDEEF1C70091E3825 ;
+        :numberOfVolumes    1 ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT38C2E715FFF0092A
+        a                   :Note ;
+        :noteText           "from the library of tibet house, new delhi (no. 104)"@en .
+    
+    bdr:NTDEEF1C70091E3825
+        a                   :Note ;
+        :noteText           "marked volume 4"@en .
+    
+    bdr:TT9DB6FDFA36FF8E13
+        a                   :Title ;
+        rdfs:label          "bka' brgyud pa'i lo rgyus zin tho/"@bo-x-ewts .
+    
+    bdr:TTF42F4628C32A489C
+        a                   :CoverTitle ;
+        rdfs:label          "bka' brgyud pa history"@en .
+}

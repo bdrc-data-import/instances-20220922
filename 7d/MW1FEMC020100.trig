@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020100 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020100
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020100 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7d/MW1FEMC020100.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020100 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID98FFABF9E83AEFCF
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "a.94.II.1" .
+    
+    bdr:MW1FEMC020100
+        a                   :Instance ;
+        skos:prefLabel      "តារារត្នរឿងរង្សី"@km , "tārāratn rīöṅ raṅsī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID98FFABF9E83AEFCF ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "6, 7, 8" ;
+        :hasTitle           bdr:TT489A92E348D20C4A , bdr:TT868BA8CDCC704E9C , bdr:TTE729E7FE34DAD4D1 , bdr:TTFFD260F079A7C82D ;
+        :instanceHasReproduction  bdr:W1FEMC020100 ;
+        :instanceOf         bdr:WA1FEMC020100 , bdr:WA1FEMC120094 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT5B16E75D2F8343EF ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1619" .
+    
+    bdr:NT5B16E75D2F8343EF
+        a                   :Note ;
+        :contentLocationStatement  "pg. 21" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT489A92E348D20C4A
+        a                   :Title ;
+        rdfs:label          "tārāratn rīöṅ raṅsī"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE729E7FE34DAD4D1 .
+    
+    bdr:TT868BA8CDCC704E9C
+        a                   :Title ;
+        rdfs:label          "តារារត្នរឿងរង្សី"@km ;
+        :femcConversionOf   bdr:TTFFD260F079A7C82D .
+    
+    bdr:TTE729E7FE34DAD4D1
+        a                   :CoverTitle ;
+        rdfs:label          "tarāratn rīöṅ raṅsī"@km-x-twktt .
+    
+    bdr:TTFFD260F079A7C82D
+        a                   :CoverTitle ;
+        rdfs:label          "តរារត្នរឿងរង្សី"@km .
+}

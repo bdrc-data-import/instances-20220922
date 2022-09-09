@@ -1,0 +1,89 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW28954 {
+    bda:LG26A3E272184465CD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW28954  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW28954 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "75/MW28954.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW28954 ;
+        adm:logEntry        bda:LG26A3E272184465CD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB27897B3943A6522
+        a                   :PublishedEvent ;
+        :eventWhen          "1989"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1037DCEE1BD981C3
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "75420002244" .
+    
+    bdr:ID741CDFA84168B7E1
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4610.H6 B56 1990" .
+    
+    bdr:IDAD8B9C518AC9E415
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95900722" .
+    
+    bdr:IDC3FEFE0FC5ACBC7B
+        a                   bdr:HollisId ;
+        rdf:value           "014259843" .
+    
+    bdr:MW28954  a          :Instance ;
+        skos:altLabel       "jiao pai guang lun zhu shi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "kun mkhyen lam bzang gsal ba'i rin chen sgron me'i snang ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1037DCEE1BD981C3 , bdr:ID741CDFA84168B7E1 , bdr:IDAD8B9C518AC9E415 , bdr:IDC3FEFE0FC5ACBC7B ;
+        :authorshipStatement  "blo bzang rdo rjes brtsams ; rgyal mtshan mgon po dang bsod nams rgya mtsho gnyis kas rtsom rogs byas/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 360 p." ;
+        :hasTitle           bdr:TT0816193C8BCBD36F , bdr:TT1D0643B5D61264A8 ;
+        :illustrations      "col. ill." ;
+        :instanceEvent      bdr:EVB27897B3943A6522 ;
+        :instanceHasReproduction  bdr:W28954 ;
+        :instanceOf         bdr:WA28954 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0816193C8BCBD36F
+        a                   :Title ;
+        rdfs:label          "kun mkhyen lam bzang gsal ba'i rin chen sgron me'i snang ba/"@bo-x-ewts .
+    
+    bdr:TT1D0643B5D61264A8
+        a                   :ColophonTitle ;
+        rdfs:label          "jiao pai guang lun zhu shi"@zh-latn-pinyin-x-ndia .
+}

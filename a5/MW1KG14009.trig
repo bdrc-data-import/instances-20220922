@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14009 {
+    bda:LGB9DCB319D1EF2015
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-29T14:53:28.222Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14009  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14009 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a5/MW1KG14009.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14009 ;
+        adm:logEntry        bda:LGB9DCB319D1EF2015 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2AB6686AF5C7784B
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2A6EED6A3368B44D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789380359595" .
+    
+    bdr:IDF4D574DD96B99B5F
+        a                   bdr:HollisId ;
+        rdf:value           "014256098" .
+    
+    bdr:MW1KG14009  a       :Instance , :SerialInstance ;
+        skos:altLabel       "mind in the balance : meditation in science, buddhism and christianity"@en ;
+        skos:prefLabel      "'phrang du lus pa'i sems kyi gnas bab/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2A6EED6A3368B44D , bdr:IDF4D574DD96B99B5F ;
+        :authorshipStatement  "sbi e len we le se yis brtsams/ bstan 'dzin rig bzang gis bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "xiv, 327 p." ;
+        :hasTitle           bdr:TT15F229ED1B48E801 , bdr:TT21CE126CC227269A , bdr:TTDEFCA25A452B0792 ;
+        :instanceEvent      bdr:EV2AB6686AF5C7784B ;
+        :instanceHasReproduction  bdr:W1KG14009 ;
+        :instanceOf         bdr:WA1KG14009 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG13999 ;
+        :seriesNumber       "4" .
+    
+    bdr:TT15F229ED1B48E801
+        a                   :OtherTitle ;
+        rdfs:label          "mind in the balance : meditation in science, buddhism and christianity"@en .
+    
+    bdr:TT21CE126CC227269A
+        a                   :Subtitle ;
+        rdfs:label          "tshan rig dang / nang chos/ ye shu'i chos lugs bcas kyis sgom la dpyad pa/"@bo-x-ewts .
+    
+    bdr:TTDEFCA25A452B0792
+        a                   :Title ;
+        rdfs:label          "'phrang du lus pa'i sems kyi gnas bab/"@bo-x-ewts .
+}

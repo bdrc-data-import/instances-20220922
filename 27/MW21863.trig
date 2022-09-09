@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21863 {
+    bda:LGA30526D4CC0921DA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-02T16:41:42.903Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog,add  author, editor, cat info, print tyep and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGFE9D9A8F854E3353
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21863  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21863 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "27/MW21863.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21863 ;
+        adm:logEntry        bda:LGA30526D4CC0921DA , bda:LGFE9D9A8F854E3353 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR6E62569C350FC88A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P1KG23772 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV08846BCDF0179B90
+        a                   :PublishedEvent ;
+        :eventWhen          "1994/,1997-print."^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID032E52E609DD5432
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542006460" .
+    
+    bdr:ID80F1D316B02808C8
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS785 .S34 1997" .
+    
+    bdr:IDDEBC33866C12DD0C
+        a                   bdr:HollisId ;
+        rdf:value           "014258477" .
+    
+    bdr:IDDF9147482D169F4F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98907513" .
+    
+    bdr:MW21863  a          :Instance ;
+        skos:prefLabel      "shes rab rgan po'i 'bel gtam/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID032E52E609DD5432 , bdr:ID80F1D316B02808C8 , bdr:IDDEBC33866C12DD0C , bdr:IDDF9147482D169F4F ;
+        :authorshipStatement  "rtsom sgrig 'gan 'khur pa bstan go"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR6E62569C350FC88A ;
+        :editionStatement   "par gzhi 1"@bo-x-ewts ;
+        :extentStatement    "v. 1 (12, 214 p.)" ;
+        :hasTitle           bdr:TTBFFD43944CBE416B ;
+        :instanceEvent      bdr:EV08846BCDF0179B90 ;
+        :instanceHasReproduction  bdr:W21863 ;
+        :instanceOf         bdr:WA21863 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTBFFD43944CBE416B
+        a                   :Title ;
+        rdfs:label          "shes rab rgan po'i 'bel gtam/"@bo-x-ewts .
+}

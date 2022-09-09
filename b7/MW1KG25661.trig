@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25661 {
+    bda:LG288150E5A13717E5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-25T13:00:59.848Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB2199BEF8E53BCFC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T17:15:28.615Z"^^xsd:dateTime ;
+        adm:logMessage      "added author"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW1KG25661  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25661 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b7/MW1KG25661.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25661 ;
+        adm:logEntry        bda:LG288150E5A13717E5 , bda:LGB2199BEF8E53BCFC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV731CD50D27F32C15
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7AF91A1F6EB4657D
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105142873" .
+    
+    bdr:MW1KG25661  a       :Instance ;
+        skos:prefLabel      "brag dkar sprel rdzong gi gnas bshad/"@bo-x-ewts , "赛宗寺旅游指南"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7AF91A1F6EB4657D ;
+        :authorshipStatement  "bskal bzang don grub kyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "36 p." ;
+        :hasTitle           bdr:TT5C61353C65446378 , bdr:TT90725D28F1CEB630 , bdr:TTB64CC16A9601A229 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV731CD50D27F32C15 ;
+        :instanceHasReproduction  bdr:W1KG25661 ;
+        :instanceOf         bdr:WA1KG25661 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:TT5C61353C65446378
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "sai zong si lv you zhi nan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT90725D28F1CEB630
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "赛宗寺旅游指南"@zh-hans .
+    
+    bdr:TTB64CC16A9601A229
+        a                   :Title ;
+        rdfs:label          "brag dkar sprel rdzong gi gnas bshad/"@bo-x-ewts .
+}

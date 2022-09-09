@@ -1,0 +1,105 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW24030 {
+    bda:LGD8745DCBBAEC087A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE8C06D42CD08207D
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T14:41:49.153Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW24030  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW24030 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "bc/MW24030.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW24030 ;
+        adm:logEntry        bda:LGD8745DCBBAEC087A , bda:LGE8C06D42CD08207D , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA4A366CC70BA8DF6
+        a                   :PublishedEvent ;
+        :eventWhen          "1981"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID96984F56690C72DE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BF1777 .S63 1981" .
+    
+    bdr:IDA578C88C46F7BC3D
+        a                   bdr:HollisId ;
+        rdf:value           "014259294" .
+    
+    bdr:IDF752FEECC60820BE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "81901487" .
+    
+    bdr:MW24030  a          :Instance ;
+        skos:altLabel       "legs par bsad pa padma dkar po'i chun po : a treatise describing the qualities and criterion for appraisal and appreciation of omens, precious objects, weapons, and other possessions"@en-x-mixed ;
+        skos:prefLabel      "legs par bshad pa pad+ma dkar po'i chun po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID96984F56690C72DE , bdr:IDA578C88C46F7BC3D , bdr:IDF752FEECC60820BE ;
+        :authorshipStatement  "by snags-'chan hum-ka-ra-dza-ya"@en ;
+        :biblioNote         "reproduced from a rare manuscript belonging to jokhang lama gyaltsen"@en ;
+        :extentStatement    "267 p." ;
+        :hasTitle           bdr:TT58E7BBBE08FD689D , bdr:TTA3E5CACEDF5DA325 , bdr:TTE0CAF92B50C35581 ;
+        :instanceEvent      bdr:EVA4A366CC70BA8DF6 ;
+        :instanceHasReproduction  bdr:W24030 ;
+        :instanceOf         bdr:WA24030 ;
+        :note               bdr:NT2B538820889AF852 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "gangtok, sikkim"@en ;
+        :publisherName      "sherab gyaltsen lama"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT2B538820889AF852
+        a                   :Note ;
+        :noteText           "tbrc holds digital images, tiffs and pdf files\n3659"@en .
+    
+    bdr:TT58E7BBBE08FD689D
+        a                   :OtherTitle ;
+        rdfs:label          "pad+ma dkar po'i chun po/"@bo-x-ewts .
+    
+    bdr:TTA3E5CACEDF5DA325
+        a                   :Title ;
+        rdfs:label          "legs par bshad pa pad+ma dkar po'i chun po/"@bo-x-ewts .
+    
+    bdr:TTE0CAF92B50C35581
+        a                   :TitlePageTitle ;
+        rdfs:label          "legs par bsad pa padma dkar po'i chun po : a treatise describing the qualities and criterion for appraisal and appreciation of omens, precious objects, weapons, and other possessions"@en-x-mixed .
+}

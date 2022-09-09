@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046599 {
+    bda:LG963486C81038AD40
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046599"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046599
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046599 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "88/MW1FEMC046599.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046599 ;
+        adm:logEntry        bda:LG963486C81038AD40 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID7A39FE24B94F1AE1
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-B.11.04.01.VII" .
+    
+    bdr:MF6BA31B2C74AB99AD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "55" .
+    
+    bdr:MW1FEMC046599
+        a                   :Instance ;
+        skos:prefLabel      "មូលកច្ចាយនមេសូត្រ"@pi-khmr , "mūl kaccāyana mesūtra"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7A39FE24B94F1AE1 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT0A1186F76BA4DAE1 , bdr:TT406B4C51CB4AAC59 ;
+        :instanceHasReproduction  bdr:W1FEMC036599 , bdr:W1FEMC046599 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF6BA31B2C74AB99AD ;
+        :note               bdr:NT9A0CE1F6234D4716 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9A0CE1F6234D4716
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT0A1186F76BA4DAE1
+        a                   :Title ;
+        rdfs:label          "មូលកច្ចាយនមេសូត្រ"@pi-khmr .
+    
+    bdr:TT406B4C51CB4AAC59
+        a                   :Title ;
+        rdfs:label          "mūl kaccāyana mesūtra"@pi-x-twktt .
+}

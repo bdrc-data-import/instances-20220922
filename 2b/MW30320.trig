@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30320 {
+    bda:LG12A2F02F4B8FCB63
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30320  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30320 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "2b/MW30320.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30320 ;
+        adm:logEntry        bda:LG12A2F02F4B8FCB63 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV244B2751425BB05B
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID544A4CD76F5C9A01
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "80901530" .
+    
+    bdr:ID5C16E7AF605C067A
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4750.M354 T54 1979" .
+    
+    bdr:IDE3616BD7AA685C33
+        a                   bdr:HollisId ;
+        rdf:value           "014260730" .
+    
+    bdr:MW30320  a          :Instance ;
+        skos:altLabel       "liturgical texts focussing upon the propitiation of mahakala according to the traditions of the kam-tshan"@en-x-mixed ;
+        skos:prefLabel      "mgon po ber nag can gyi sgrub skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID544A4CD76F5C9A01 , bdr:ID5C16E7AF605C067A , bdr:IDE3616BD7AA685C33 ;
+        :biblioNote         "reproduced from manuscripts and blockrints from the library of pepung ongen rimpoche."@en ;
+        :extentStatement    "269 p." ;
+        :hasTitle           bdr:TT78FCAEE54101321E , bdr:TT9975986168A4CA71 ;
+        :instanceEvent      bdr:EV244B2751425BB05B ;
+        :instanceHasReproduction  bdr:W30320 ;
+        :instanceOf         bdr:WA30320 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "gangtok"@en ;
+        :publisherName      "sherab gyaltsen"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT78FCAEE54101321E
+        a                   :Subtitle ;
+        rdfs:label          "liturgical texts focussing upon the propitiation of mahakala according to the traditions of the kam-tshan"@en-x-mixed .
+    
+    bdr:TT9975986168A4CA71
+        a                   :Title ;
+        rdfs:label          "mgon po ber nag can gyi sgrub skor/"@bo-x-ewts .
+}

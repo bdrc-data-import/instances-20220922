@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047420 {
+    bda:LGD6DA3BA046FD4951
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047420"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047420
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047420 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "8a/MW1FEMC047420.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047420 ;
+        adm:logEntry        bda:LGD6DA3BA046FD4951 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA54E802347DD7879
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "MOE.27.06.91.3" .
+    
+    bdr:MF43956BC3469BE5A0
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "3" .
+    
+    bdr:MW1FEMC047420
+        a                   :Instance ;
+        skos:prefLabel      "មហាបរិនិព្វានសូត្របរិច្ឆេទ"@km , "Mahā​​​ Pàrinipvana Sūtra Bariccheda"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA54E802347DD7879 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT7801012EADB8A271 , bdr:TTC3133B7C71E513AB ;
+        :instanceHasReproduction  bdr:W1FEMC037420 , bdr:W1FEMC047420 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF43956BC3469BE5A0 ;
+        :note               bdr:NT53E243401F622990 , bdr:NTA2ADB7E489BC03DB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT53E243401F622990
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:NTA2ADB7E489BC03DB
+        a                   :Note ;
+        :noteText           "Canister001_Strip003"@en .
+    
+    bdr:TT7801012EADB8A271
+        a                   :Title ;
+        rdfs:label          "មហាបរិនិព្វានសូត្របរិច្ឆេទ"@km .
+    
+    bdr:TTC3133B7C71E513AB
+        a                   :Title ;
+        rdfs:label          "Mahā​​​ Pàrinipvana Sūtra Bariccheda"@km-x-twktt .
+}

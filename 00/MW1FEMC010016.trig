@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010016 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010016
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010016 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "00/MW1FEMC010016.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010016 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID1CD881424A303584
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-PP.00.03.01.V.2" .
+    
+    bdr:MF824CFFE8BC00723E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "1" ;
+        :microfilmStrip     "1" .
+    
+    bdr:MW1FEMC010016
+        a                   :Instance ;
+        skos:prefLabel      "រាជក្រឹត្យក្រមប្រដៅចៅក្រម"@km , "rāj krịty kram praṭau cau kram"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1CD881424A303584 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT191CC1099DFA4058 , bdr:TT4B44FB4C04ABDEE5 , bdr:TTAA2D162FEEFF3484 , bdr:TTD4364F399C9351E2 ;
+        :instanceHasReproduction  bdr:W1FEMC010016 ;
+        :instanceOf         bdr:WA1FEMC010016 , bdr:WA1FEMC140004 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF824CFFE8BC00723E ;
+        :note               bdr:NT5C1409B140F5B38C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "b 983" .
+    
+    bdr:NT5C1409B140F5B38C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 56" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT191CC1099DFA4058
+        a                   :Title ;
+        rdfs:label          "rāj krịty kram praṭau cau kram"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD4364F399C9351E2 .
+    
+    bdr:TT4B44FB4C04ABDEE5
+        a                   :Title ;
+        rdfs:label          "រាជក្រឹត្យក្រមប្រដៅចៅក្រម"@km ;
+        :femcConversionOf   bdr:TTAA2D162FEEFF3484 .
+    
+    bdr:TTAA2D162FEEFF3484
+        a                   :CoverTitle ;
+        rdfs:label          "រាជក្រិតក្រមប្រដៅចៅក្រម"@km .
+    
+    bdr:TTD4364F399C9351E2
+        a                   :CoverTitle ;
+        rdfs:label          "rāj krit kram praṭau cau kram"@km-x-twktt .
+}

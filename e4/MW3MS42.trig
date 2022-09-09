@@ -1,0 +1,63 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3MS42 {
+    bda:LG3A165559A9CE950E
+        a                   adm:ScanRequestCreation ;
+        adm:logDate         "2015-05-28T10:29:48.132Z"^^xsd:dateTime ;
+        adm:logMessage      "added volumeMap for scan request"@en ;
+        adm:logWho          bdu:U00020 .
+    
+    bda:LG47366AC788040EDE
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-01-12T11:16:02.247Z"^^xsd:dateTime ;
+        adm:logMessage      "added withdrawn info in note"@en ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGB5EC36A67DB959BA
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-02T20:41:38.144Z"^^xsd:dateTime ;
+        adm:logMessage      "updated works scanned in China scanInfo"@en ;
+        adm:logWhoStr       "works-update-scaninfo-from-list" .
+    
+    bda:LGDCB1C7CB8A5AC8C0
+        a                   adm:WithdrawData ;
+        adm:logDate         "2016-11-30T15:58:41.563Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn W3MS42 = new W4CZ58513 -W4CZ58525"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:MW3MS42  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW3MS42 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e4/MW3MS42.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3MS42 ;
+        adm:logEntry        bda:LG3A165559A9CE950E , bda:LG47366AC788040EDE , bda:LGB5EC36A67DB959BA , bda:LGDCB1C7CB8A5AC8C0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:MW3MS42  a          :Instance ;
+        skos:prefLabel      "reb gong rong bo dgon chen dang de'i nye 'khor gyi sa khul nas rnyed pa'i skor/"@bo-x-ewts ;
+        :hasTitle           bdr:TT47702CE101CB8530 ;
+        :instanceHasReproduction  bdr:W3MS42 ;
+        :note               bdr:NTD7AE6FFC88BA568A ;
+        :numberOfVolumes    8 .
+    
+    bdr:NTD7AE6FFC88BA568A
+        a                   :Note ;
+        :noteText           "Withdrawn in favor of W4CZ58513 through W4CZ58525"@en .
+    
+    bdr:TT47702CE101CB8530
+        a                   :Title ;
+        rdfs:label          "reb gong rong bo dgon chen dang de'i nye 'khor gyi sa khul nas rnyed pa'i skor/"@bo-x-ewts .
+}

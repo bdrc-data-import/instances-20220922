@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043328 {
+    bda:LG622E5DA8BED73395
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043328"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043328
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043328 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "37/MW1FEMC043328.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043328 ;
+        adm:logEntry        bda:LG622E5DA8BED73395 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDEB77F8F38BC0D58F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "003-B.11.02.01.III.1" .
+    
+    bdr:MFDA019BA77748FCE6
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "192" .
+    
+    bdr:MW1FEMC043328
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មសម្ពោធិកថា"@km , "dhamm sambodhikathā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEB77F8F38BC0D58F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-31" ;
+        :hasTitle           bdr:TT48FE78101657BC92 , bdr:TT72A9D5B5CDBE1BC6 ;
+        :instanceHasReproduction  bdr:W1FEMC033328 , bdr:W1FEMC043328 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFDA019BA77748FCE6 ;
+        :note               bdr:NT9BAFEBA038F617C6 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT9BAFEBA038F617C6
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT48FE78101657BC92
+        a                   :Title ;
+        rdfs:label          "dhamm sambodhikathā"@km-x-twktt .
+    
+    bdr:TT72A9D5B5CDBE1BC6
+        a                   :Title ;
+        rdfs:label          "ធម្មសម្ពោធិកថា"@km .
+}

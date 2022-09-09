@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30107 {
+    bda:LG3AE21624E913067E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG58581E798A37E75B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-17T15:23:48.736Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, cat info and lang encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30107  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30107 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ba/MW30107.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30107 ;
+        adm:logEntry        bda:LG3AE21624E913067E , bda:LG58581E798A37E75B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCB5C1A48A489380C
+        a                   :PublishedEvent ;
+        :eventWhen          "2000?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDCB054F3CF03E9229
+        a                   bdr:HollisId ;
+        rdf:value           "014260622" .
+    
+    bdr:MW30107  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_blo bzang tshul khrims byams pa rgya mtsho/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCB054F3CF03E9229 ;
+        :biblioNote         "blockprints from blocks carved in lhasa"@en ;
+        :extentStatement    "2 v." ;
+        :hasSourcePrintery  bdr:G2CN10857 ;
+        :hasTitle           bdr:TT2424AB889F52A4EF ;
+        :instanceEvent      bdr:EVCB5C1A48A489380C ;
+        :instanceHasReproduction  bdr:W30107 ;
+        :instanceOf         bdr:WA30107 ;
+        :note               bdr:NT1DDFBCCFBD23F6ED ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "phur bu lcog ri khrod byang chub gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT1DDFBCCFBD23F6ED
+        a                   :Note ;
+        :contentLocationStatement  "Volumes 1 and 2" ;
+        :noteText           "Most pages have heavy print through, requires scanning from different print or reconstruction of existing scans."@en .
+    
+    bdr:TT2424AB889F52A4EF
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_blo bzang tshul khrims byams pa rgya mtsho/"@bo-x-ewts .
+}

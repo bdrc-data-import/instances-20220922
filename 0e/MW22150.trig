@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22150 {
+    bda:LG745E833E34354C49
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFE22182A84ACA473
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T10:52:05.894Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22150  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22150 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0e/MW22150.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22150 ;
+        adm:logEntry        bda:LG745E833E34354C49 , bda:LGFE22182A84ACA473 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D0D2E8CD4270413
+        a                   :PublishedEvent ;
+        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3BF248AD68504BF6
+        a                   bdr:HollisId ;
+        rdf:value           "014258662" .
+    
+    bdr:ID6038E7718673F797
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "79903503" .
+    
+    bdr:ID743E98B4C72B0B02
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.C48 D58 1979" .
+    
+    bdr:MW22150  a          :Instance ;
+        skos:altLabel       "dmyal glin : the legend of ge-sar king of glin's conquest of hell"@en-x-mixed ;
+        skos:prefLabel      "dmyal gling rdzogs pa chen po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3BF248AD68504BF6 , bdr:ID6038E7718673F797 , bdr:ID743E98B4C72B0B02 ;
+        :authorshipStatement  "revealed by rig 'dzin drag rtsal rdo rje; edited from a manuscript from kalimpong"@en ;
+        :extentStatement    "398 p." ;
+        :hasTitle           bdr:TT270AE48EAC33CA72 , bdr:TT2A132763E3C518CA , bdr:TT45013B6CAD1B5E40 , bdr:TT7520D256759F593B ;
+        :instanceEvent      bdr:EV1D0D2E8CD4270413 ;
+        :instanceHasReproduction  bdr:W22150 ;
+        :instanceOf         bdr:WA22150 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "damchoe"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT270AE48EAC33CA72
+        a                   :SpineTitle ;
+        rdfs:label          "ge sar rtogs brjod las dmyal gling rdzogs pa chen po/"@bo-x-ewts .
+    
+    bdr:TT2A132763E3C518CA
+        a                   :TitlePageTitle ;
+        rdfs:label          "rgyal mchog yid bzhin nor bu gling rje ge sar gyi rnam thar dmyal gling rdzogs pa chen po mthong ba rang grol ngan song chos kyi bskul glu/"@bo-x-ewts .
+    
+    bdr:TT45013B6CAD1B5E40
+        a                   :Title ;
+        rdfs:label          "dmyal gling rdzogs pa chen po/"@bo-x-ewts .
+    
+    bdr:TT7520D256759F593B
+        a                   :OtherTitle ;
+        rdfs:label          "dmyal glin : the legend of ge-sar king of glin's conquest of hell"@en-x-mixed .
+}

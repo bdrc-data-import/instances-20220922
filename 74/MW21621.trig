@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21621 {
+    bda:LG56A5DB1DECD6F883
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-06-06T16:42:20.562Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed LC classification"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG9C1CE346251187C6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21621  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21621 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "74/MW21621.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21621 ;
+        adm:logEntry        bda:LG56A5DB1DECD6F883 , bda:LG9C1CE346251187C6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8ADC051FD8F4024F
+        a                   :PublishedEvent ;
+        :eventWhen          "1983,2000printing"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID802A5DDFFD24E58C
+        a                   bdr:HollisId ;
+        rdf:value           "014258364" .
+    
+    bdr:ID95D61B549E89557A
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223012587" .
+    
+    bdr:IDC83C9844AB16DA83
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.D68 R45 2000" .
+    
+    bdr:IDCA4E146CED2FFC76
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2009428018" .
+    
+    bdr:MW21621  a          :Instance ;
+        skos:altLabel       "yun lai wang tzu"@zh-latn-wadegile ;
+        skos:prefLabel      "rgyal po sprin gyi bzhon pa'i rtogs brjod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID802A5DDFFD24E58C , bdr:ID95D61B549E89557A , bdr:IDC83C9844AB16DA83 , bdr:IDCA4E146CED2FFC76 ;
+        :authorshipStatement  "dpal ldan shes rab kyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/, par thengs gnyis pa/"@bo-x-ewts ;
+        :extentStatement    "6, 121 p." ;
+        :hasTitle           bdr:TT253BC4DEBA739D4E , bdr:TT7B363C72BDAA3483 , bdr:TTAD97EA0C3C85440A ;
+        :instanceEvent      bdr:EV8ADC051FD8F4024F ;
+        :instanceHasReproduction  bdr:W21621 ;
+        :instanceOf         bdr:WA21621 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT253BC4DEBA739D4E
+        a                   :Title ;
+        rdfs:label          "yun lai wang tzu"@zh-latn-wadegile .
+    
+    bdr:TT7B363C72BDAA3483
+        a                   :Title ;
+        rdfs:label          "rgyal po sprin gyi bzhon pa'i rtogs brjod/"@bo-x-ewts .
+    
+    bdr:TTAD97EA0C3C85440A
+        a                   :ColophonTitle ;
+        rdfs:label          "yun lai wang zi"@zh-latn-pinyin-x-ndia .
+}

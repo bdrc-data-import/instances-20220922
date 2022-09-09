@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG11923 {
+    bda:LGE1E551E6B7B0BA1B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-02-21T10:09:28.007Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG11923  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG11923 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d7/MW1KG11923.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG11923 ;
+        adm:logEntry        bda:LGE1E551E6B7B0BA1B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRBF3B79773DEA5433
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6634 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV04C2AFEC8EF20234
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDB91A64924B4B7BDE
+        a                   bdr:HollisId ;
+        rdf:value           "014255759" .
+    
+    bdr:MW1KG11923  a       :Instance ;
+        skos:prefLabel      "rma lho sog shog gi lo rgyus rgyu cha phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB91A64924B4B7BDE ;
+        :biblioNote         "printed from computerized input"@en ;
+        :creator            bdr:CRBF3B79773DEA5433 ;
+        :extentStatement    "6 v." ;
+        :hasTitle           bdr:TTCE749DFEFD9ADC6B ;
+        :instanceEvent      bdr:EV04C2AFEC8EF20234 ;
+        :instanceHasReproduction  bdr:W1KG11923 ;
+        :instanceOf         bdr:WA1KG11923 ;
+        :note               bdr:NT02B76A62EC0BB89D ;
+        :numberOfVolumes    6 ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT02B76A62EC0BB89D
+        a                   :Note ;
+        :noteText           "contents:\n1. su rug che chung / (vol. no. 1);\n2. be si che chung / (vol. no. 2);\n3. kha gsum tsho lhor/ (vol. no. 3);\n4. gtsang a rig (vol. no. 4);\n5. mda' tshan lho zhod/ (vol. no. 5);\n6. thu med thor god/ (vol. no. 6)"@en .
+    
+    bdr:TTCE749DFEFD9ADC6B
+        a                   :Title ;
+        rdfs:label          "rma lho sog shog gi lo rgyus rgyu cha phyogs bsgrigs/"@bo-x-ewts .
+}

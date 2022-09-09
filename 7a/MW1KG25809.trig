@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25809 {
+    bda:LGC0445EF6D8E70033
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-25T16:23:43.378Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1KG25809  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25809 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7a/MW1KG25809.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25809 ;
+        adm:logEntry        bda:LGC0445EF6D8E70033 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFC9454DFB4664511
+        a                   :PublishedEvent ;
+        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID38CC2D14B68BB125
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BF1714.T53 X855 2016" .
+    
+    bdr:ID99D1261CDB7E5F9C
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105141272" .
+    
+    bdr:ID9C266BEA6FE1ABF8
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2016400290" .
+    
+    bdr:MW1KG25809  a       :Instance ;
+        skos:prefLabel      "藏族古日历和祭祀图谱研究"@zh-hans ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID38CC2D14B68BB125 , bdr:ID99D1261CDB7E5F9C , bdr:ID9C266BEA6FE1ABF8 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "第 1 版"@zh-hans ;
+        :extentStatement    "550 p." ;
+        :hasTitle           bdr:TT406F604AC1F2EB3B , bdr:TT5727D32DB1545CFC ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVFC9454DFB4664511 ;
+        :instanceHasReproduction  bdr:W1KG25809 ;
+        :instanceOf         bdr:WA1KG25809 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "北京市"@zh-hans ;
+        :publisherName      "民族出版社"@zh-hans ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG25806 .
+    
+    bdr:TT406F604AC1F2EB3B
+        a                   :Title ;
+        rdfs:label          "藏族古日历和祭祀图谱研究"@zh-hans .
+    
+    bdr:TT5727D32DB1545CFC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang zu gu ri li he ji si tu pu yan jiu"@zh-latn-pinyin-x-ndia .
+}

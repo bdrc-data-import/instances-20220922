@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG4189 {
+    bda:LG4350C408E458F91B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-14T12:49:23.994Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA9851DA98C3751D7
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-07-22T14:55:20.618Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00020 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG4189  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG4189 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "9d/MW1KG4189.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG4189 ;
+        adm:logEntry        bda:LG4350C408E458F91B , bda:LGA9851DA98C3751D7 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9A01BEF4AA9CA39C
+        a                   :PublishedEvent ;
+        :eventWhen          "1980"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID53578D662A793557
+        a                   bdr:HollisId ;
+        rdf:value           "014256814" .
+    
+    bdr:IDA1F4FCA8911784F4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7672.4 .N354 1980" .
+    
+    bdr:IDE1F43F461C2402D6
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903160" .
+    
+    bdr:MW1KG4189  a        :Instance ;
+        skos:prefLabel      "lam dus kyi dbang len skabs su nyer mkho'i zin bris/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID53578D662A793557 , bdr:IDA1F4FCA8911784F4 , bdr:IDE1F43F461C2402D6 ;
+        :biblioNote         "manuscript written in dbu med"@en ;
+        :extentStatement    "175 p." ;
+        :hasTitle           bdr:TT732800745321247C , bdr:TT79C6DA37D9677BC7 ;
+        :instanceEvent      bdr:EV9A01BEF4AA9CA39C ;
+        :instanceHasReproduction  bdr:W1KG4189 ;
+        :instanceOf         bdr:WA1KG4189 ;
+        :note               bdr:NT46332F55A37C1A6C ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "t. g. dhongthog rinpoche"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT46332F55A37C1A6C
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TT732800745321247C
+        a                   :TitlePageTitle ;
+        rdfs:label          "nges don snying po'i gtam zhes bya ba snyan grags lung rig nyi mas mdzad/"@bo-x-ewts .
+    
+    bdr:TT79C6DA37D9677BC7
+        a                   :Title ;
+        rdfs:label          "lam dus kyi dbang len skabs su nyer mkho'i zin bris/"@bo-x-ewts .
+}

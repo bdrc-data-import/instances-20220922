@@ -1,0 +1,113 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23916 {
+    bda:LG12F929B67D89A652
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-04T15:18:55.073Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed Catalog, author, editor,add biblio title, pub info, and language encoding"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGD22CB2BE7562E6A4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGDCA3997ACE3E69A7
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T10:22:34.376Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23916  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23916 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "96/MW23916.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23916 ;
+        adm:logEntry        bda:LG12F929B67D89A652 , bda:LGD22CB2BE7562E6A4 , bda:LGDCA3997ACE3E69A7 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR8A82D9AC19EEFEE1
+        a                   :AgentAsCreator ;
+        :agent              bdr:P2691 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVB76E20D0FEF40BE1
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID00F13ADEAB2E5152
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-453" .
+    
+    bdr:ID720F8B2B1FBEC2C8
+        a                   bdr:HollisId ;
+        rdf:value           "014259226" .
+    
+    bdr:IDE283CF594C891588
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7680.6 .L33 1985" .
+    
+    bdr:IDF9EA362B994AD223
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902824" .
+    
+    bdr:MW23916  a          :Instance , :SerialInstance ;
+        skos:altLabel       "lcags zam ban gtsan 'dus sde'i zhal 'don thams cad mkhyen pa'i lam gyi 'jug sgo chos spyod kyi rim pa gser gyi 'phren ba : the collected prayers and ritual recitations of the monastery of gcun ri-bo che and the affiliates following the practices of than..."@en-x-mixed ;
+        skos:prefLabel      "lcags zam ban gtsang 'dus sde'i zhal 'don thams cad mkhyen pa'i lam gyi 'jug sgo chos spyod kyi rim pa gser gyi 'phreng ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID00F13ADEAB2E5152 , bdr:ID720F8B2B1FBEC2C8 , bdr:IDE283CF594C891588 , bdr:IDF9EA362B994AD223 ;
+        :biblioNote         "reproduced from rare manuscripts from the library of grub-thob rin-po-che"@en ;
+        :creator            bdr:CR8A82D9AC19EEFEE1 ;
+        :extentStatement    "286 p." ;
+        :hasTitle           bdr:TT4DADCA10338315A6 , bdr:TT52621CEA231619C0 ;
+        :instanceEvent      bdr:EVB76E20D0FEF40BE1 ;
+        :instanceHasReproduction  bdr:W23916 ;
+        :instanceOf         bdr:WA23916 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "national library of bhutan"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS23916 ;
+        :seriesNumber       "v. 2" .
+    
+    bdr:TT4DADCA10338315A6
+        a                   :Title ;
+        rdfs:label          "lcags zam ban gtsang 'dus sde'i zhal 'don thams cad mkhyen pa'i lam gyi 'jug sgo chos spyod kyi rim pa gser gyi 'phreng ba/"@bo-x-ewts .
+    
+    bdr:TT52621CEA231619C0
+        a                   :TitlePageTitle ;
+        rdfs:label          "lcags zam ban gtsan 'dus sde'i zhal 'don thams cad mkhyen pa'i lam gyi 'jug sgo chos spyod kyi rim pa gser gyi 'phren ba : the collected prayers and ritual recitations of the monastery of gcun ri-bo che and the affiliates following the practices of than..."@en-x-mixed .
+}

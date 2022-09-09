@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039597 {
+    bda:LGD52860D685BE97F9
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC039597"@en ;
+        adm:logWhoStr       "Thida Heang" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039597
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC039597 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "88/MW1FEMC039597.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039597 ;
+        adm:logEntry        bda:LGD52860D685BE97F9 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID975108B44C3B75D9
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "033-PP.02.08.01.VII" .
+    
+    bdr:MF16C071A1BE502C23
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "10" ;
+        :microfilmStrip     "39" .
+    
+    bdr:MW1FEMC039597
+        a                   :Instance ;
+        skos:prefLabel      "សារត្ថសង្គហៈ"@pi-khmr , "sāratthasaṅgaha"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID975108B44C3B75D9 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT2F69820721B11E32 , bdr:TT3D080AD2C98F568C , bdr:TT6A013A84A37BFE3C , bdr:TTA1633E6CE4959639 ;
+        :instanceHasReproduction  bdr:W1FEMC010293 , bdr:W1FEMC039597 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF16C071A1BE502C23 ;
+        :note               bdr:NT0273499C1FAEFBDA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT0273499C1FAEFBDA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 110" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT2F69820721B11E32
+        a                   :Title ;
+        rdfs:label          "sāratthasaṅgaha"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT3D080AD2C98F568C .
+    
+    bdr:TT3D080AD2C98F568C
+        a                   :CoverTitle ;
+        rdfs:label          "sāsaṅgaha"@pi-x-twktt .
+    
+    bdr:TT6A013A84A37BFE3C
+        a                   :CoverTitle ;
+        rdfs:label          "សាសង្គហ"@pi-khmr .
+    
+    bdr:TTA1633E6CE4959639
+        a                   :Title ;
+        rdfs:label          "សារត្ថសង្គហៈ"@pi-khmr ;
+        :femcConversionOf   bdr:TT6A013A84A37BFE3C .
+}

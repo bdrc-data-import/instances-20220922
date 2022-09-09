@@ -1,0 +1,95 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8499 {
+    bda:LG5EF412FBB65826A7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6A809B5D3F0AC8ED
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-08-06T12:16:23.428Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW8499  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW8499 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "89/MW8499.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8499 ;
+        adm:logEntry        bda:LG5EF412FBB65826A7 , bda:LG6A809B5D3F0AC8ED , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC34B4729B9DA4205
+        a                   :PublishedEvent ;
+        :eventWhen          "1969"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDAB000E3A3F2F4A53
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "74910715" .
+    
+    bdr:IDCC0B4EDE3A96B8F6
+        a                   bdr:HollisId ;
+        rdf:value           "014261089" .
+    
+    bdr:IDD25E36D4DC7A7220
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R127.5 .D59 1969" .
+    
+    bdr:MW8499  a           :Instance , :SerialInstance ;
+        skos:altLabel       "the smallest collection of gong-sman dkon-mchog-phan-dar's medical instruction to his students"@en ;
+        skos:prefLabel      "nyams yig brgya rtsa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAB000E3A3F2F4A53 , bdr:IDCC0B4EDE3A96B8F6 , bdr:IDD25E36D4DC7A7220 ;
+        :biblioNote         "dbu med manuscript"@en ;
+        :extentStatement    "[5], 16 [i.e. 9] leaves, [104] p" ;
+        :hasTitle           bdr:TT1E627DAF0D0E00CD , bdr:TT88570BB56B45C5DB , bdr:TT9CD4C5B09B846D6F ;
+        :instanceEvent      bdr:EVC34B4729B9DA4205 ;
+        :instanceHasReproduction  bdr:W8499 ;
+        :instanceOf         bdr:WA1KG21596 , bdr:WA8499 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "sonam w. tashigang"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 1" .
+    
+    bdr:TT1E627DAF0D0E00CD
+        a                   :Subtitle ;
+        rdfs:label          "the smallest collection of gong-sman dkon-mchog-phan-dar's medical instruction to his students"@en .
+    
+    bdr:TT88570BB56B45C5DB
+        a                   :TitlePageTitle ;
+        rdfs:label          "nams yig brgya rtsa/"@bo-x-ewts .
+    
+    bdr:TT9CD4C5B09B846D6F
+        a                   :Title ;
+        rdfs:label          "nyams yig brgya rtsa/"@bo-x-ewts .
+}

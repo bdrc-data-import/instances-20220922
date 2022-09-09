@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1GS60700 {
+    bda:LG75B7805C9CD71783
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-09-17T16:11:41.005Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloging completed for scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1GS60700  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1GS60700 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8d/MW1GS60700.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS60700 ;
+        adm:logEntry        bda:LG75B7805C9CD71783 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV753C14E6CD32D639
+        a                   :PublishedEvent ;
+        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID692EE876DBCD4515
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542012274" .
+    
+    bdr:IDA4864B76CC9B2203
+        a                   bdr:HollisId ;
+        rdf:value           "014255510" .
+    
+    bdr:MW1GS60700  a       :Instance ;
+        skos:prefLabel      "gso rig lag len spyi don sgron ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID692EE876DBCD4515 , bdr:IDA4864B76CC9B2203 ;
+        :authorshipStatement  "gtso sgrig pa rgya ye blo bzang nyi ma; gnubs don grub tshe ring /"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "375 p." ;
+        :hasTitle           bdr:TT91FB408898B556BF ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV753C14E6CD32D639 ;
+        :instanceHasReproduction  bdr:IE1GS60700 , bdr:W1GS60700 ;
+        :instanceOf         bdr:WA1GS60700 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT91FB408898B556BF
+        a                   :Title ;
+        rdfs:label          "gso rig lag len spyi don sgron ma/"@bo-x-ewts .
+}

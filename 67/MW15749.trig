@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW15749 {
+    bda:LGDB0C01CDE754E5C9
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-12T16:30:21.682Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGE51B154AEFBA0DC1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW15749  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW15749 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "67/MW15749.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW15749 ;
+        adm:logEntry        bda:LGDB0C01CDE754E5C9 , bda:LGE51B154AEFBA0DC1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD3B8DF7C04D4F3AA
+        a                   :PublishedEvent ;
+        :eventWhen          "0199/?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2E8470FCAB590BC4
+        a                   bdr:HollisId ;
+        rdf:value           "014254748" .
+    
+    bdr:MW15749  a          :Instance , :SerialInstance ;
+        skos:altLabel       "two manuscript redactions of the famous tibetan medical treatise, the ma la ya'i dka' 'grel"@en ;
+        skos:prefLabel      "ma la ya'i dka' 'grel 'dod pa 'jo ba/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2E8470FCAB590BC4 ;
+        :biblioNote         "reproduced from manucripts from the library of bkra-sis-sgan by o-rgyan rnam-rgyal"@en ;
+        :extentStatement    "125 p." ;
+        :hasTitle           bdr:TT6065C8C038600DC1 , bdr:TTF0F9221FBFA1AE2E ;
+        :instanceEvent      bdr:EVD3B8DF7C04D4F3AA ;
+        :instanceHasReproduction  bdr:W15749 ;
+        :instanceOf         bdr:WA15749 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "leh"@en ;
+        :publisherName      "t. sonam & d.l. tashigang"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS00EGS1016202 ;
+        :seriesNumber       "v. 141" .
+    
+    bdr:TT6065C8C038600DC1
+        a                   :Subtitle ;
+        rdfs:label          "two manuscript redactions of the famous tibetan medical treatise, the ma la ya'i dka' 'grel"@en .
+    
+    bdr:TTF0F9221FBFA1AE2E
+        a                   :Title ;
+        rdfs:label          "ma la ya'i dka' 'grel 'dod pa 'jo ba/"@bo-x-ewts .
+}

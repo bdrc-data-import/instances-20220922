@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG988 {
+    bda:LG8E57F62642856990
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-03-13T08:47:01.773Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG948FE37B3B9C31FC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-11-17T12:40:54.304Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFCA8FF6BB4A6DCF1
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-25T14:58:45.642Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG988  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG988 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "53/MW1KG988.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG988 ;
+        adm:logEntry        bda:LG8E57F62642856990 , bda:LG948FE37B3B9C31FC , bda:LGFCA8FF6BB4A6DCF1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA6C6069C37357BC0
+        a                   :PublishedEvent ;
+        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4B3347BDC2354966
+        a                   bdr:HollisId ;
+        rdf:value           "014257647" .
+    
+    bdr:MW1KG988  a         :Instance ;
+        skos:altLabel       "the collected liturgical texts of stag lung brag"@en ;
+        skos:prefLabel      "stag brag bsam gtan gling gi phyag bzhes mdo sngags chos spyod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4B3347BDC2354966 ;
+        :biblioNote         "reproduced from a set of the stag lung brag prints"@en ;
+        :extentStatement    "4 v." ;
+        :hasSourcePrintery  bdr:G2CN10923 ;
+        :hasTitle           bdr:TT150C003016FB646A , bdr:TT809BA9B8F1E41FFE , bdr:TTBD8D6904D7677659 , bdr:TTFEF61959CACF6261 ;
+        :instanceEvent      bdr:EVA6C6069C37357BC0 ;
+        :instanceHasReproduction  bdr:W1KG988 ;
+        :instanceOf         bdr:WA1KG988 ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi/"@bo-x-ewts ;
+        :publisherName      "ngawang sopa/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "lakshmi printing works, lal kuan, delhi"@en .
+    
+    bdr:TT150C003016FB646A
+        a                   :TitlePageTitle ;
+        rdfs:label          "dgon gsas stag brag bsam gtan gling gi phyag bzhes mdo sngags chos spyod/"@bo-x-ewts .
+    
+    bdr:TT809BA9B8F1E41FFE
+        a                   :OtherTitle ;
+        rdfs:label          "the collected liturgical texts of stag lung brag"@en .
+    
+    bdr:TTBD8D6904D7677659
+        a                   :OtherTitle ;
+        rdfs:label          "the ollected ritual texts used in the stag lung brag bsam gtan gling monastery/"@bo-x-ewts .
+    
+    bdr:TTFEF61959CACF6261
+        a                   :Title ;
+        rdfs:label          "stag brag bsam gtan gling gi phyag bzhes mdo sngags chos spyod/"@bo-x-ewts .
+}

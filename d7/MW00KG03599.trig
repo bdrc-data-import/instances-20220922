@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG03599 {
+    bda:LG65FD7AD8337E47D3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-10-02T10:48:40.112Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG03599  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG03599 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d7/MW00KG03599.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG03599 ;
+        adm:logEntry        bda:LG65FD7AD8337E47D3 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR208DF55026D2D4C3
+        a                   :AgentAsCreator ;
+        :agent              bdr:P7049 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV2FF010A51EC79005
+        a                   :PublishedEvent ;
+        :eventWhen          "2002?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1BDAF94FAD097519
+        a                   bdr:HollisId ;
+        rdf:value           "014254368" .
+    
+    bdr:MW00KG03599  a      :Instance , :SerialInstance ;
+        skos:altLabel       "gan nan zhou ben jiao si yuan li shi yan ge"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "kan lho khul gyi bon dgon lo rgyus mdor bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1BDAF94FAD097519 ;
+        :authorshipStatement  "srid gros kan lho bod rigs rang skyong khul u yon lhan khang gi rig gnas lo rgyus dpyad yig dang slob sbyong dril sgrog u yon lhan khang /"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR208DF55026D2D4C3 ;
+        :extentStatement    "248 p." ;
+        :hasTitle           bdr:TT4EEA6BC47870B427 , bdr:TT924B116F94DEAED8 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV2FF010A51EC79005 ;
+        :instanceHasReproduction  bdr:W00KG03599 ;
+        :instanceOf         bdr:WA00KG03599 ;
+        :note               bdr:NTD09B6F4CB27C63CD ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "kan lho/"@bo-x-ewts ;
+        :publisherName      "kan lho'i lo rgyus dpyad gzhi'i yig rigs cus/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG03597 ;
+        :seriesNumber       "16" .
+    
+    bdr:NTD09B6F4CB27C63CD
+        a                   :Note ;
+        :noteText           "edited the prototype written by gen akal and gelek gyatso of the tibetan language part of the series and translated it into chinese language by gonpo wangyal"@en .
+    
+    bdr:TT4EEA6BC47870B427
+        a                   :Title ;
+        rdfs:label          "kan lho khul gyi bon dgon lo rgyus mdor bsdus/"@bo-x-ewts .
+    
+    bdr:TT924B116F94DEAED8
+        a                   :OtherTitle ;
+        rdfs:label          "gan nan zhou ben jiao si yuan li shi yan ge"@zh-latn-pinyin-x-ndia .
+}

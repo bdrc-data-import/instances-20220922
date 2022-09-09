@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09730 {
+    bda:LGDCF8AE287D1EAC1C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-06-17T10:42:16.312Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09730  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09730 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c5/MW00KG09730.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09730 ;
+        adm:logEntry        bda:LGDCF8AE287D1EAC1C , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV176E161B0AAE8934
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID46BF8CAE065A9281
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "008174759-4" .
+    
+    bdr:ID5CBBB3906319AE92
+        a                   bdr:HollisId ;
+        rdf:value           "014254550" .
+    
+    bdr:IDFE72316471E886B1
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105025034" .
+    
+    bdr:MW00KG09730  a      :Instance ;
+        skos:altLabel       "Rgyal rabs gsal baʼi me loṅ /Sa-skya Bsod-nams-rgyal-mtshan gyis brtsams."@en-x-mixed , "xi zang wang tong ji"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rgyal rabs gsal ba'i me long /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID46BF8CAE065A9281 , bdr:ID5CBBB3906319AE92 , bdr:IDFE72316471E886B1 ;
+        :authorshipStatement  "sa skya bsod nams rgyal mtshan gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 3, 250 p." ;
+        :hasTitle           bdr:TT4385FF3B9C0C14F0 , bdr:TT64785B666A22C117 , bdr:TT7199C106C77AD721 ;
+        :instanceEvent      bdr:EV176E161B0AAE8934 ;
+        :instanceHasReproduction  bdr:IE00KG09730 , bdr:W00KG09730 ;
+        :instanceOf         bdr:WA00CHZ0103341 , bdr:WA00KG09730 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT4385FF3B9C0C14F0
+        a                   :Title ;
+        rdfs:label          "rgyal rabs gsal ba'i me long /"@bo-x-ewts .
+    
+    bdr:TT64785B666A22C117
+        a                   :ColophonTitle ;
+        rdfs:label          "xi zang wang tong ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT7199C106C77AD721
+        a                   :CoverTitle ;
+        rdfs:label          "Rgyal rabs gsal baʼi me loṅ /Sa-skya Bsod-nams-rgyal-mtshan gyis brtsams."@en-x-mixed .
+}

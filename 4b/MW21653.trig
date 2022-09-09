@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21653 {
+    bda:LGA8E9DD38DDB49411
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW21653  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21653 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "4b/MW21653.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21653 ;
+        adm:logEntry        bda:LGA8E9DD38DDB49411 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1FEF299A02CBF68E
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0246FAF2AB1B88A6
+        a                   bdr:HollisId ;
+        rdf:value           "014258374" .
+    
+    bdr:ID980BAEB49D8EA245
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "R603.T5 D59 1996" .
+    
+    bdr:IDCB2D3759B5DAEBA9
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "710502562x" .
+    
+    bdr:IDD7540A89EA6EE4FA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98901036" .
+    
+    bdr:MW21653  a          :Instance ;
+        skos:altLabel       "shi jian gan lu di, zang yao zhi du ji"@zh-latn-wadegile ;
+        skos:prefLabel      "lag len bdud rtsi'i zegs ma : bod lugs sman rdzas lag len byed tshul bdud rtsi'i zegs ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0246FAF2AB1B88A6 , bdr:ID980BAEB49D8EA245 , bdr:IDCB2D3759B5DAEBA9 , bdr:IDD7540A89EA6EE4FA ;
+        :authorshipStatement  "dpal bzang rgya mtshos brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "1, 7, 158 p." ;
+        :hasTitle           bdr:TT47D25E9939FBCB41 , bdr:TT8DF04FBF7250A46F ;
+        :instanceEvent      bdr:EV1FEF299A02CBF68E ;
+        :instanceHasReproduction  bdr:W21653 ;
+        :instanceOf         bdr:WA21653 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT47D25E9939FBCB41
+        a                   :ColophonTitle ;
+        rdfs:label          "shi jian gan lu di, zang yao zhi du ji"@zh-latn-wadegile .
+    
+    bdr:TT8DF04FBF7250A46F
+        a                   :Title ;
+        rdfs:label          "lag len bdud rtsi'i zegs ma : bod lugs sman rdzas lag len byed tshul bdud rtsi'i zegs ma/"@bo-x-ewts .
+}

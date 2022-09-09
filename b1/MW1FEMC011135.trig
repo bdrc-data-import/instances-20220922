@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011135 {
+    bda:LGDFEFE9748CC1B071
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-17"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC011135"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011135
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011135 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "b1/MW1FEMC011135.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011135 ;
+        adm:logEntry        bda:LGDFEFE9748CC1B071 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID4F0EE765F1A1AF9D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "008-A.04.17.02.VII" .
+    
+    bdr:MF04F7C9F6AD553536
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "III" ;
+        :microfilmStrip     "15" .
+    
+    bdr:MW1FEMC011135
+        a                   :Instance ;
+        skos:prefLabel      "ចោទមេសូត្រ"@pi-khmr , "cod mesūtra"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4F0EE765F1A1AF9D ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT467D5BAE104AE124 , bdr:TT606522430B119481 , bdr:TTC2F2867DD2FE7BB3 , bdr:TTF3ACD607B4562C45 ;
+        :instanceHasReproduction  bdr:W1FEMC011135 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF04F7C9F6AD553536 ;
+        :note               bdr:NT1600E7F9DF64793E , bdr:NT93C35223E8ABE2AA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1600E7F9DF64793E
+        a                   :Note ;
+        :noteText           "Should we write (ក-កេ) ?"@en .
+    
+    bdr:NT93C35223E8ABE2AA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 274" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT467D5BAE104AE124
+        a                   :Title ;
+        rdfs:label          "cod mesūtra"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT606522430B119481 .
+    
+    bdr:TT606522430B119481
+        a                   :CoverTitle ;
+        rdfs:label          "cot mesūtra"@pi-x-twktt .
+    
+    bdr:TTC2F2867DD2FE7BB3
+        a                   :Title ;
+        rdfs:label          "ចោទមេសូត្រ"@pi-khmr ;
+        :femcConversionOf   bdr:TTF3ACD607B4562C45 .
+    
+    bdr:TTF3ACD607B4562C45
+        a                   :CoverTitle ;
+        rdfs:label          "ចោតមេសូត្រ (ក-កេ)"@pi-khmr .
+}

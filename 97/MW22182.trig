@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22182 {
+    bda:LG0A49BF06057D73BA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22182  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22182 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "97/MW22182.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22182 ;
+        adm:logEntry        bda:LG0A49BF06057D73BA , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7CC540E2ABEE1B6F
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID49FDB1087815965C
+        a                   bdr:HollisId ;
+        rdf:value           "014258684" .
+    
+    bdr:ID88959842717CCB4D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ972.I627 M57 1984" .
+    
+    bdr:IDF6399DB2DEB041D5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85900930" .
+    
+    bdr:MW22182  a          :Instance ;
+        skos:altLabel       "the biography of the second sdin-po-che cog-grwa mi-pham-nag-dban-snan-grags-dpal-bzan"@en-x-mixed ;
+        skos:prefLabel      "mi pham ngag dbang snyan grags dpal bzang po'i rnam par thar pa ngo mtshar rgya mtsho'i zlos gar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID49FDB1087815965C , bdr:ID88959842717CCB4D , bdr:IDF6399DB2DEB041D5 ;
+        :authorshipStatement  "by stag-rtse sku-skye mi-pham-phun-tshogs-ses-rab"@en ;
+        :biblioNote         "includes material relating to lha btsun rin chen rnam rgyal and his snyan rgyud gser phreng; reproduced from rare blockprints and manuscripts from hemis monastery"@en ;
+        :extentStatement    "580 p." ;
+        :hasTitle           bdr:TT22D2F2A5C43C8B74 , bdr:TT58AD68F5008C0A2F , bdr:TTFE31A54695D62739 ;
+        :instanceEvent      bdr:EV7CC540E2ABEE1B6F ;
+        :instanceHasReproduction  bdr:W22182 ;
+        :instanceOf         bdr:WA22182 ;
+        :note               bdr:NT19857DEF511DE194 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "darjeeling"@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT19857DEF511DE194
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 1686\n\nff (f. 39 missing?)"@en .
+    
+    bdr:TT22D2F2A5C43C8B74
+        a                   :Title ;
+        rdfs:label          "mi pham ngag dbang snyan grags dpal bzang po'i rnam par thar pa ngo mtshar rgya mtsho'i zlos gar/"@bo-x-ewts .
+    
+    bdr:TT58AD68F5008C0A2F
+        a                   :TitlePageTitle ;
+        rdfs:label          "rje btsun rdo rje 'chang dngos mi pham ngag dbang snyan grags dpal bzang po'i rnam par thar pa ngo mtshar rgya mtsho'i zlos gar/"@bo-x-ewts .
+    
+    bdr:TTFE31A54695D62739
+        a                   :TitlePageTitle ;
+        rdfs:label          "the biography of the second sdin-po-che cog-grwa mi-pham-nag-dban-snan-grags-dpal-bzan"@en-x-mixed .
+}

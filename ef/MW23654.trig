@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23654 {
+    bda:LG61D626CD75C8C354
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG64145168A8E0542B
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-24T10:45:05.889Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG7F572C66F768306C
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-05-09T12:42:05.529Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected annotation"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23654  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23654 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ef/MW23654.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23654 ;
+        adm:logEntry        bda:LG61D626CD75C8C354 , bda:LG64145168A8E0542B , bda:LG7F572C66F768306C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4AAADA03B801E9D5
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1DB3D5269C66CEFB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82902180" .
+    
+    bdr:ID997B96B0367FD44A
+        a                   bdr:HollisId ;
+        rdf:value           "014259019" .
+    
+    bdr:IDFE9D34BD35837658
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683 .Y36 1982" .
+    
+    bdr:MW23654  a          :Instance ;
+        skos:altLabel       "collected writing[s] (gsun 'bum) of rgyal-ba yan-dgon-pa rgyal-mtshan-dpal"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_rgyal mtshan dpal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1DB3D5269C66CEFB , bdr:ID997B96B0367FD44A , bdr:IDFE9D34BD35837658 ;
+        :biblioNote         "reproduction of three volumes of the writings of the stod 'brug-pa dkar-brgyud-pa master from rta-mgo monastery in bhutan"@en ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT084ED2A1A8D1BFCF , bdr:TTE4655CB4B1D9DEAF ;
+        :instanceEvent      bdr:EV4AAADA03B801E9D5 ;
+        :instanceHasReproduction  bdr:W23654 ;
+        :instanceOf         bdr:WA1KG17449 , bdr:WA23654 ;
+        :note               bdr:NTEEF9DEEAAE7BA6C8 ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tango, thimphu, bhutan"@en ;
+        :publisherName      "tango monastic community"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTEEF9DEEAAE7BA6C8
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 2387-2389"@en .
+    
+    bdr:TT084ED2A1A8D1BFCF
+        a                   :TitlePageTitle ;
+        rdfs:label          "collected writing[s] (gsun 'bum) of rgyal-ba yan-dgon-pa rgyal-mtshan-dpal"@en-x-mixed .
+    
+    bdr:TTE4655CB4B1D9DEAF
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_rgyal mtshan dpal/"@bo-x-ewts .
+}

@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13996 {
+    bda:LG7A9D27B076A06D0E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-29T14:40:40.983Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13996  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13996 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "0a/MW1KG13996.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13996 ;
+        adm:logEntry        bda:LG7A9D27B076A06D0E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7794D6EBAC36795F
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID9EE692396D00E28E
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789380359649" .
+    
+    bdr:IDFC439A96A9F3B1CB
+        a                   bdr:HollisId ;
+        rdf:value           "014256092" .
+    
+    bdr:MW1KG13996  a       :Instance , :SerialInstance ;
+        skos:altLabel       "history of the \"white crystal\" (shel dkar)"@en ;
+        skos:prefLabel      "shel dkar chos 'byung /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9EE692396D00E28E , bdr:IDFC439A96A9F3B1CB ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :extentStatement    "xxv, 270 p." ;
+        :hasTitle           bdr:TT048B109372ADAC44 , bdr:TTBEE4CE52A0B2B3DA , bdr:TTF32AD9CFF1589FD3 ;
+        :instanceEvent      bdr:EV7794D6EBAC36795F ;
+        :instanceHasReproduction  bdr:W1KG13996 ;
+        :instanceOf         bdr:WA1KG13996 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG13996 ;
+        :seriesNumber       "8" .
+    
+    bdr:TT048B109372ADAC44
+        a                   :TitlePageTitle ;
+        rdfs:label          "shel dkar chos 'byung legs bshad nor bu'i me long skal bzang mgrin rgyan/"@bo-x-ewts .
+    
+    bdr:TTBEE4CE52A0B2B3DA
+        a                   :Title ;
+        rdfs:label          "shel dkar chos 'byung /"@bo-x-ewts .
+    
+    bdr:TTF32AD9CFF1589FD3
+        a                   :OtherTitle ;
+        rdfs:label          "history of the \"white crystal\" (shel dkar)"@en .
+}

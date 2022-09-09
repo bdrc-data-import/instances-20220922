@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010163 {
+    bda:LGA5ED730BAE9391D8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010163"@en ;
+        adm:logWho          bdu:U00089 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010163
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010163 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "42/MW1FEMC010163.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010163 ;
+        adm:logEntry        bda:LGA5ED730BAE9391D8 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC031338 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:IDBC6A0E38CE0148D2
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "032-PP.02.01.01.III.1" .
+    
+    bdr:MF02C4409D39FFAFAE
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "6" ;
+        :microfilmStrip     "22" .
+    
+    bdr:MW1FEMC010163
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធិមគ្គវិនិច្ឆ័យ"@km , "visuddhimagg vinicchăy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBC6A0E38CE0148D2 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT0614A8812EE1A8D7 , bdr:TT0A0433E9EBB540FE , bdr:TT1DAF999EE5422787 , bdr:TTA2B7976C669B5B9F , bdr:TTCF1C466FC5ECFA1A , bdr:TTFB09368F944D24E9 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF02C4409D39FFAFAE ;
+        :note               bdr:NTA960764A26D0D37B , bdr:NTF495E3B218DD827A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA960764A26D0D37B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 85" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:NTF495E3B218DD827A
+        a                   :Note ;
+        :noteText           "For 'ចប្ប' in column 'P', should we write 'ប្ប' ? because we don't understand that"@en .
+    
+    bdr:TT0614A8812EE1A8D7
+        a                   :CoverTitle ;
+        rdfs:label          "បដិសម្ភិទាញាណទស្សនវិសុទ្ធិ"@km ;
+        :femcConversionOf   bdr:TTA2B7976C669B5B9F .
+    
+    bdr:TT0A0433E9EBB540FE
+        a                   :CoverTitle ;
+        rdfs:label          "capṅp°tecadāñāṇ dassaṇavessiddhi"@km-x-twktt .
+    
+    bdr:TT1DAF999EE5422787
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គវិនិច្ឆ័យ"@km .
+    
+    bdr:TTA2B7976C669B5B9F
+        a                   :CoverTitle ;
+        rdfs:label          "ចប្បតេចទាញាណទស្សណវេស្សិទ្ធិ"@km .
+    
+    bdr:TTCF1C466FC5ECFA1A
+        a                   :Title ;
+        rdfs:label          "visuddhimagg vinicchăy"@km-x-twktt .
+    
+    bdr:TTFB09368F944D24E9
+        a                   :CoverTitle ;
+        rdfs:label          "paṭisambhidāñāṇ dassan visuddhi"@km-x-twktt ;
+        :femcConversionOf   bdr:TT0A0433E9EBB540FE .
+}

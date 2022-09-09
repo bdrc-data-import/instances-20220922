@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20386 {
+    bda:LG145BD8C09DCBB2C9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG33E1DD8FF8440FF8
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-05T16:41:43.201Z"^^xsd:dateTime ;
+        adm:logMessage      "added lc call number and lccn"@en ;
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20386  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20386 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "92/MW20386.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20386 ;
+        adm:logEntry        bda:LG145BD8C09DCBB2C9 , bda:LG33E1DD8FF8440FF8 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5D6054D6D11D75D6
+        a                   :PublishedEvent ;
+        :eventWhen          "1994"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1E850121338896C2
+        a                   bdr:HollisId ;
+        rdf:value           "014258117" .
+    
+    bdr:ID5049D55661969ED7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7800571009" .
+    
+    bdr:ID53979B4323839102
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "NX180.T4 D56 1994" .
+    
+    bdr:ID7158606B32E01D59
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "98900308" .
+    
+    bdr:MW20386  a          :Instance ;
+        skos:altLabel       "zang zu chuan tong mei shu gai lun"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bzo gnas skra rtse'i chu thigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1E850121338896C2 , bdr:ID5049D55661969ED7 , bdr:ID53979B4323839102 , bdr:ID7158606B32E01D59 ;
+        :authorshipStatement  "dkon mchog bstan 'dzin gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "14, 521, 98 p." ;
+        :hasTitle           bdr:TT8C6FA1DBA63DFF63 , bdr:TTE83EA91BE060B703 ;
+        :instanceEvent      bdr:EV5D6054D6D11D75D6 ;
+        :instanceHasReproduction  bdr:W20386 ;
+        :instanceOf         bdr:WA20386 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod kyi shes rig dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT8C6FA1DBA63DFF63
+        a                   :Title ;
+        rdfs:label          "bzo gnas skra rtse'i chu thigs/"@bo-x-ewts .
+    
+    bdr:TTE83EA91BE060B703
+        a                   :ColophonTitle ;
+        rdfs:label          "zang zu chuan tong mei shu gai lun"@zh-latn-pinyin-x-ndia .
+}

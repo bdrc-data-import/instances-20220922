@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020155 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020155
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020155 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "8b/MW1FEMC020155.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020155 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID687C9A0D45098F62
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.48.III.5" .
+    
+    bdr:MF5957404AFB03834F
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "31" ;
+        :microfilmStrip     "54" .
+    
+    bdr:MW1FEMC020155
+        a                   :Instance ;
+        skos:prefLabel      "សុវណ្ណសាមជាតក"@km , "suvaṇṇ sām jātak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID687C9A0D45098F62 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2" ;
+        :hasTitle           bdr:TT36B25B4061780C9F , bdr:TT47300B59698593CD , bdr:TT5E22A002D4A2A869 , bdr:TT94AFAF1C5263B6AF , bdr:TT996E9E6517E956C0 , bdr:TTF219E45BD0E9207E ;
+        :instanceHasReproduction  bdr:W1FEMC020155 ;
+        :instanceOf         bdr:WA1FEMC020155 , bdr:WA1FEMC050010 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5957404AFB03834F ;
+        :note               bdr:NT3B4CABC3793CF216 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "736" .
+    
+    bdr:NT3B4CABC3793CF216
+        a                   :Note ;
+        :contentLocationStatement  "pg. 32" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT36B25B4061780C9F
+        a                   :Title ;
+        rdfs:label          "សុវណ្ណសាមជាតក"@km ;
+        :femcConversionOf   bdr:TT5E22A002D4A2A869 .
+    
+    bdr:TT47300B59698593CD
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT5E22A002D4A2A869
+        a                   :CoverTitle ;
+        rdfs:label          "សុពាណ៍សិយាម្ម"@km .
+    
+    bdr:TT94AFAF1C5263B6AF
+        a                   :Title ;
+        rdfs:label          "suvaṇṇ sām jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TTF219E45BD0E9207E .
+    
+    bdr:TT996E9E6517E956C0
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTF219E45BD0E9207E
+        a                   :CoverTitle ;
+        rdfs:label          "subāṛṇ siyāmm"@km-x-twktt .
+}

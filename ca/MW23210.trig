@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23210 {
+    bda:LG0D65D3D289913DE1
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG28C674F334CA0455
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-18T15:45:31.307Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23210  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23210 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ca/MW23210.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23210 ;
+        adm:logEntry        bda:LG0D65D3D289913DE1 , bda:LG28C674F334CA0455 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV81BB2B727B692B90
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2727ABAEE81B134E
+        a                   bdr:HollisId ;
+        rdf:value           "014258848" .
+    
+    bdr:ID73C9A478FCF521C5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85901469" .
+    
+    bdr:IDADA5395BD6281073
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-413" .
+    
+    bdr:IDDF60BD6B849008C3
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7699.G36 R36 1984" .
+    
+    bdr:MW23210  a          :Instance , :SerialInstance ;
+        skos:altLabel       "gcod skor : the collected texts concerned with the practice of gcod"@en-x-mixed ;
+        skos:prefLabel      "gcod skor gter chen rdo rje gling pa'i gter chos/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2727ABAEE81B134E , bdr:ID73C9A478FCF521C5 , bdr:IDADA5395BD6281073 , bdr:IDDF60BD6B849008C3 ;
+        :authorshipStatement  "recovered from its place of concealment by gter-chen rdo-rje-glin-pa"@en ;
+        :biblioNote         "reproduced from a manuscript collection from o-rgyan-chos-glin in bum-than"@en ;
+        :extentStatement    "502 p." ;
+        :hasTitle           bdr:TT2771ECFCBC49F60D , bdr:TTE985A8D425D2078E ;
+        :instanceEvent      bdr:EV81BB2B727B692B90 ;
+        :instanceHasReproduction  bdr:W23210 ;
+        :instanceOf         bdr:WA23210 ;
+        :note               bdr:NT440537706E6EF107 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu"@en ;
+        :publisherName      "druk sherig press"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS23208 ;
+        :seriesNumber       "v. 17" .
+    
+    bdr:NT440537706E6EF107
+        a                   :Note ;
+        :noteText           ", tbrc volume number 1968."@en .
+    
+    bdr:TT2771ECFCBC49F60D
+        a                   :Title ;
+        rdfs:label          "gcod skor gter chen rdo rje gling pa'i gter chos/"@bo-x-ewts .
+    
+    bdr:TTE985A8D425D2078E
+        a                   :TitlePageTitle ;
+        rdfs:label          "gcod skor : the collected texts concerned with the practice of gcod"@en-x-mixed .
+}

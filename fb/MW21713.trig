@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21713 {
+    bda:LG7781F063BF2B34C5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW21713  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21713 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fb/MW21713.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21713 ;
+        adm:logEntry        bda:LG7781F063BF2B34C5 , bda:LGIMA45794A9D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusOnHold .
+    
+    bdr:EVCFED454B3F56F78F
+        a                   :PublishedEvent ;
+        :eventWhen          "1995"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDA20025F8673F1C7D
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "007556557-9" .
+    
+    bdr:IDC8F838C737145427
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "4906267378" .
+    
+    bdr:MW21713  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "lho phyogs rgya gar gyi gtam brtag pa brgyad kyi me long /"@bo-x-ewts , "discourse on india of 1789"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA20025F8673F1C7D , bdr:IDC8F838C737145427 ;
+        :authorshipStatement  "michael aris/"@bo-x-ewts ;
+        :biblioNote         "part of the gtam tshogs"@en ;
+        :extentStatement    "88 p." ;
+        :hasTitle           bdr:TT3175E20B76313655 , bdr:TT42C0A57728C9BC25 , bdr:TTA8A08D96CFA8E9E3 , bdr:TTAEB994F15C8C4A34 ;
+        :instanceEvent      bdr:EVCFED454B3F56F78F ;
+        :instanceOf         bdr:WA21713 ;
+        :publisherLocation  "tokyo"@en ;
+        :publisherName      "international institute for buddhist studies"@en ;
+        :script             bdr:ScriptLatn ;
+        :serialInstanceOf   bdr:WAS21713 ;
+        :seriesNumber       "9" .
+    
+    bdr:TT3175E20B76313655
+        a                   :TitlePageTitle ;
+        rdfs:label          "'jigs med gling pa's discourse on india 1789 : a critical edition and annotated translation the lho phyogs rgya gar gyi gtam brtag pa brgyad kyi me long"@en .
+    
+    bdr:TT42C0A57728C9BC25
+        a                   :CoverTitle ;
+        rdfs:label          "ʼJigs-med-gling-pa's \"Discourse on India\" of 1789 :a critical edition and annotated translation of the Lho-phyogs rgya-gar-gyi gtam brtag-pa brgyad-kyi me-long /Michael Aris."@en-x-mixed .
+    
+    bdr:TTA8A08D96CFA8E9E3
+        a                   :Title ;
+        rdfs:label          "lho phyogs rgya gar gyi gtam brtag pa brgyad kyi me long /"@bo-x-ewts .
+    
+    bdr:TTAEB994F15C8C4A34
+        a                   :OtherTitle ;
+        rdfs:label          "discourse on india of 1789"@en .
+}

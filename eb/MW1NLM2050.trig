@@ -1,0 +1,65 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM2050 {
+    bda:LG5CB85D1B7940F52D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGCFA2C5EFED2E4169
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM2050  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM2050 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "eb/MW1NLM2050.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM2050 ;
+        adm:logEntry        bda:LG5CB85D1B7940F52D , bda:LGCFA2C5EFED2E4169 , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM2050  a       :Instance ;
+        skos:prefLabel      "dpal ldan lha mo'i dmag zor ma'i sgo nas rno mthong sgrub tshul de yi 'bras bshad pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "14.5x5.5" ;
+        :extentStatement    "34 ff. end folio missing, 5 ff., 4 ff., 5ff., 7 ff., 4 ff., 6 ff., 2 ff., 2 ff., 6 ff., 2 ff., 7 ff., 3 ff., 3 ff., 3 ff., 8 ff." ;
+        :hasTitle           bdr:TT30D3DBBAAD473EDB ;
+        :instanceHasReproduction  bdr:W1NLM2050 ;
+        :instanceOf         bdr:WA1NLM2050 ;
+        :note               bdr:NT260697333AFF67B8 , bdr:NTD187A1F172E07F56 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT260697333AFF67B8
+        a                   :Note ;
+        :noteText           "nlmId: M0059968"@en .
+    
+    bdr:NTD187A1F172E07F56
+        a                   :Note ;
+        :noteText           "missingPages: M0059968-001 [Final pages are missing 35A] Image 69"@en .
+    
+    bdr:TT30D3DBBAAD473EDB
+        a                   :Title ;
+        rdfs:label          "dpal ldan lha mo'i dmag zor ma'i sgo nas rno mthong sgrub tshul de yi 'bras bshad pa sogs/"@bo-x-ewts .
+}

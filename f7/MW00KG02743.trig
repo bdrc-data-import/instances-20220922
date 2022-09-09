@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG02743 {
+    bda:LG130A0E5F9F29A64D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-08-07T11:19:01.134Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released first time"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG1A61DF89DFA93F37
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T12:20:12.905Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and Language encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG02743  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG02743 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f7/MW00KG02743.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG02743 ;
+        adm:logEntry        bda:LG130A0E5F9F29A64D , bda:LG1A61DF89DFA93F37 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAEA7423FF4155E3E
+        a                   :PublishedEvent ;
+        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDEC8449C464ECC16B
+        a                   bdr:HollisId ;
+        rdf:value           "014254349" .
+    
+    bdr:MW00KG02743  a      :Instance , :SerialInstance ;
+        skos:prefLabel      "lhun grub rdzong /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEC8449C464ECC16B ;
+        :authorshipStatement  "grong khyer lha sa srid gros lo rgyus rig gnas dpyad yig rgyu cha rtsom 'bri u yon lhan khang nas rtsom 'bri byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "146 p." ;
+        :hasTitle           bdr:TTF5D398BBCEEF745F ;
+        :illustrations      "ill., 2 plates" ;
+        :instanceEvent      bdr:EVAEA7423FF4155E3E ;
+        :instanceHasReproduction  bdr:W00KG02743 ;
+        :instanceOf         bdr:WA00KG02743 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "grong khyer lha sa srid gros lo rgyus rig gnas dpyad yig rgyu cha rtsom 'bri u yon lhan khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS19856 ;
+        :seriesNumber       "deb 4." .
+    
+    bdr:TTF5D398BBCEEF745F
+        a                   :Title ;
+        rdfs:label          "lhun grub rdzong /"@bo-x-ewts .
+}

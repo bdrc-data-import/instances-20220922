@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09831 {
+    bda:LG236EC5EBDB59F3C8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-06-20T14:53:41.998Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC637431C6D3EEDE7
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-25T16:58:22.951Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and lang encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF2083D3689843EB1
+        a                   adm:UpdateData ;
+        adm:logDate         "2008-06-20T15:28:35.275Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09831  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09831 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "46/MW00KG09831.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09831 ;
+        adm:logEntry        bda:LG236EC5EBDB59F3C8 , bda:LGC637431C6D3EEDE7 , bda:LGF2083D3689843EB1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE2F2001DDB3E3250
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID01F6BD4AB2753976
+        a                   bdr:HollisId ;
+        rdf:value           "014254581" .
+    
+    bdr:ID4F51D9FC4B9A8069
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542107135" .
+    
+    bdr:MW00KG09831  a      :Instance ;
+        skos:prefLabel      "bod yig rtsom sgyur lo rgyus/"@bo-x-ewts , "zang wen bian yi zhi"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID01F6BD4AB2753976 , bdr:ID4F51D9FC4B9A8069 ;
+        :authorshipStatement  "a ba zhou zang wen bian yi ju bian"@zh-latn-pinyin-x-ndia ;
+        :biblioNote         "Main text is in Chinese language and the catalog records of library is in Tibetan language."@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "18, 5, 364 p." ;
+        :hasTitle           bdr:TT50165E8BEF968836 , bdr:TT747656E73C2EA1A2 , bdr:TTD6B1D5FA5425C172 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVE2F2001DDB3E3250 ;
+        :instanceHasReproduction  bdr:W00KG09831 ;
+        :instanceOf         bdr:WA00KG09831 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptHani , bdr:ScriptTibt .
+    
+    bdr:TT50165E8BEF968836
+        a                   :Title ;
+        rdfs:label          "bod yig rtsom sgyur lo rgyus/"@bo-x-ewts .
+    
+    bdr:TT747656E73C2EA1A2
+        a                   :OtherTitle ;
+        rdfs:label          "zang wen bian yi zhi"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTD6B1D5FA5425C172
+        a                   :TitlePageTitle ;
+        rdfs:label          "rnga ba bod rigs cha'ng rigs rang skyong khul gyi bod yig rtsom sgyur lo rgyus/"@bo-x-ewts .
+}

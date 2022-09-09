@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022212 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022212
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022212 ;
+        adm:contentProvider  bda:CP045 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1d/MW1FEMC022212.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022212 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID949E779B88997CF6
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "b.290.III.5" .
+    
+    bdr:MW1FEMC022212
+        a                   :Instance ;
+        skos:prefLabel      "តេមិយជាតក (សាស្រ្តាអ៊ុត)"@km , "temiy jātak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID949E779B88997CF6 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1​, 2" ;
+        :hasTitle           bdr:TTAABF5921E5615361 , bdr:TTAB7971E4F0CF5CB9 , bdr:TTDED3016E34AEF5B0 , bdr:TTE164A1325064A2D6 ;
+        :instanceHasReproduction  bdr:W1FEMC022212 ;
+        :instanceOf         bdr:WA1FEMC022212 , bdr:WA1FEMC050011 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT12C9702A1746B5DB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "722" .
+    
+    bdr:NT12C9702A1746B5DB
+        a                   :Note ;
+        :contentLocationStatement  "pg. 394" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TTAABF5921E5615361
+        a                   :Title ;
+        rdfs:label          "temiy jātak"@km-x-twktt .
+    
+    bdr:TTAB7971E4F0CF5CB9
+        a                   :Title ;
+        rdfs:label          "តេមិយជាតក (សាស្រ្តាអ៊ុត)"@km .
+    
+    bdr:TTDED3016E34AEF5B0
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TTE164A1325064A2D6
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+}

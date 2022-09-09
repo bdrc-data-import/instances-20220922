@@ -1,0 +1,69 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042648 {
+    bda:LGB00F91E9361D2CEC
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042648"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042648
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC042648 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4f/MW1FEMC042648.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042648 ;
+        adm:logEntry        bda:LGB00F91E9361D2CEC , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID66F3F59A571376CD
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "038-B.01.07.03.III.1" .
+    
+    bdr:MFF1C1C62FABCB9DB7
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "221" .
+    
+    bdr:MW1FEMC042648
+        a                   :Instance ;
+        skos:prefLabel      "វិសុទ្ធិមគ្គ ក្នុងសិលនីទេស"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID66F3F59A571376CD ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-11" ;
+        :hasTitle           bdr:TT2E0B334C99C3D4B9 ;
+        :instanceHasReproduction  bdr:W1FEMC032648 , bdr:W1FEMC042648 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFF1C1C62FABCB9DB7 ;
+        :note               bdr:NTB3B6AF45D7C2D165 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB3B6AF45D7C2D165
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT2E0B334C99C3D4B9
+        a                   :Title ;
+        rdfs:label          "វិសុទ្ធិមគ្គ ក្នុងសិលនីទេស"@km .
+}

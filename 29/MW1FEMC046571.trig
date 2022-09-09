@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046571 {
+    bda:LGDF61AC4DABE0BE9F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046571"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046571
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046571 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "29/MW1FEMC046571.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046571 ;
+        adm:logEntry        bda:LGDF61AC4DABE0BE9F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID7347C58983862E5D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "043-B.11.04.01.III.1" .
+    
+    bdr:MFEE92C883A768C1BD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "182" .
+    
+    bdr:MW1FEMC046571
+        a                   :Instance ;
+        skos:prefLabel      "សួទឺ្យស្សនិមិត្ថក្នុងព្រះសាស្នារនគរ=កុកស្គម"@km , "Soudīss nimitth knuń braḥ sāsnārnagar"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7347C58983862E5D ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT56FC072E315501CC , bdr:TTCF069F2876F2E530 ;
+        :instanceHasReproduction  bdr:W1FEMC036571 , bdr:W1FEMC046571 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFEE92C883A768C1BD ;
+        :note               bdr:NTDCA619A4E50BAB11 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTDCA619A4E50BAB11
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT56FC072E315501CC
+        a                   :Title ;
+        rdfs:label          "Soudīss nimitth knuń braḥ sāsnārnagar"@km-x-twktt .
+    
+    bdr:TTCF069F2876F2E530
+        a                   :Title ;
+        rdfs:label          "សួទឺ្យស្សនិមិត្ថក្នុងព្រះសាស្នារនគរ=កុកស្គម"@km .
+}

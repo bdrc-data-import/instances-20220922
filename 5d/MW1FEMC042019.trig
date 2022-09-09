@@ -1,0 +1,68 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC042019 {
+    bda:LGA3759E4F401084A0
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC042019"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC042019
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC042019 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "5d/MW1FEMC042019.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC042019 ;
+        adm:logEntry        bda:LGA3759E4F401084A0 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID00E7DEBEAFC66059
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "158-B.01.03.03.V.3" .
+    
+    bdr:MFEF7126D961EDAF90
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "222" .
+    
+    bdr:MW1FEMC042019
+        a                   :Instance ;
+        skos:prefLabel      "ក្បួនព្រះកម្មថាន (ក-ខី) (វាន)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID00E7DEBEAFC66059 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT3EFA28898EA8EE17 ;
+        :instanceHasReproduction  bdr:W1FEMC032019 , bdr:W1FEMC042019 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFEF7126D961EDAF90 ;
+        :note               bdr:NT32B193FC03D3E203 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT32B193FC03D3E203
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT3EFA28898EA8EE17
+        a                   :Title ;
+        rdfs:label          "ក្បួនព្រះកម្មថាន (ក-ខី) (វាន)"@km .
+}

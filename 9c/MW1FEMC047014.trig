@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047014 {
+    bda:LG962D9CA10D0B912F
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047014"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047014
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047014 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "9c/MW1FEMC047014.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047014 ;
+        adm:logEntry        bda:LG962D9CA10D0B912F , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID74FDD65C9D5F4DA4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "057-R.05.06.01" .
+    
+    bdr:MW1FEMC047014
+        a                   :Instance ;
+        skos:prefLabel      "អព្ភិធម្មកុំណើត (ន១-ន៧)"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID74FDD65C9D5F4DA4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT358D60A62917440B ;
+        :instanceHasReproduction  bdr:W1FEMC047014 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT3077A0393B702CAB , bdr:NT39E2DF4A94174AF4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3077A0393B702CAB
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:NT39E2DF4A94174AF4
+        a                   :Note ;
+        :noteText           "Canister150_Strip244"@en .
+    
+    bdr:TT358D60A62917440B
+        a                   :Title ;
+        rdfs:label          "អព្ភិធម្មកុំណើត (ន១-ន៧)"@km .
+}

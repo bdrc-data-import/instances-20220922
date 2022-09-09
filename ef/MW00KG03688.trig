@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG03688 {
+    bda:LGA82DA44FE53D875B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-10-24T15:43:35.708Z"^^xsd:dateTime ;
+        adm:logMessage      "published first time"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG03688  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG03688 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ef/MW00KG03688.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG03688 ;
+        adm:logEntry        bda:LGA82DA44FE53D875B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8D596242B1B6E28E
+        a                   :PublishedEvent ;
+        :eventWhen          "2004?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1C7D4413E71B800B
+        a                   bdr:HollisId ;
+        rdf:value           "014254399" .
+    
+    bdr:MW00KG03688  a      :Instance ;
+        skos:prefLabel      "bzhi brgya pa'i 'grel ba skal bzang mkhas pa'i mgul rgyan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1C7D4413E71B800B ;
+        :authorshipStatement  "mdzad pa po mkhan rin chen don 'grub rin po che/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "8, 333 p." ;
+        :hasTitle           bdr:TT041AECAF52BC1D4A , bdr:TT276367DC2643600D ;
+        :instanceEvent      bdr:EV8D596242B1B6E28E ;
+        :instanceHasReproduction  bdr:IE00KG03688 , bdr:W00KG03688 ;
+        :instanceOf         bdr:WA00KG03688 ;
+        :note               bdr:NTCF7C7A6745963BDE ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "taipei, taiwan"@en ;
+        :publisherName      "the corporate body of the buddha educational foundation"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTCF7C7A6745963BDE
+        a                   :Note ;
+        :noteText           "rat+na'i deb phreng dang po"@en .
+    
+    bdr:TT041AECAF52BC1D4A
+        a                   :TitlePageTitle ;
+        rdfs:label          "dbu ma bzhi brgya pa'i 'grel ba tshig don rab tu gsal ba rat+na'i chun po skal bzang mkhas pa'i mgul rgyan/"@bo-x-ewts .
+    
+    bdr:TT276367DC2643600D
+        a                   :Title ;
+        rdfs:label          "bzhi brgya pa'i 'grel ba skal bzang mkhas pa'i mgul rgyan/"@bo-x-ewts .
+}

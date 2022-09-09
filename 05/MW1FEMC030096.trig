@@ -1,0 +1,70 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC030096 {
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC030096
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC030096 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "05/MW1FEMC030096.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC030096 ;
+        adm:logEntry        bda:LGIM4F4FC78A , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDEE24839E543593F4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "0096-B.01.06.01.III.1" .
+    
+    bdr:MW1FEMC030096
+        a                   :Instance ;
+        skos:prefLabel      "សង្គាយនាគ្រែ៣"@km ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDEE24839E543593F4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT429DACA426820132 , bdr:TTD8C1E11C199D6C83 ;
+        :instanceHasReproduction  bdr:W1FEMC030096 ;
+        :instanceOf         bdr:WA1FEMC010058 , bdr:WA1FEMC030096 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT1C79C8414978186A ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT1C79C8414978186A
+        a                   :Note ;
+        :contentLocationStatement  "pg. 7" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT429DACA426820132
+        a                   :Title ;
+        rdfs:label          "សង្គាយនាគ្រែ៣"@km .
+    
+    bdr:TTD8C1E11C199D6C83
+        a                   :CoverTitle ;
+        rdfs:label          "បឋមសង្គាយនា គ្រែ៣"@km .
+}

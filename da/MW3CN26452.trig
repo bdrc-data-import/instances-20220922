@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN26452 {
+    bda:LG05F278C3189CF108
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-13T22:15:49.472Z"^^xsd:dateTime ;
+        adm:logMessage      "added isbn and infos"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGCE78E02EF9AFA966
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-06-01T09:51:36.115Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:MW3CN26452  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN26452 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "da/MW3CN26452.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN26452 ;
+        adm:logEntry        bda:LG05F278C3189CF108 , bda:LGCE78E02EF9AFA966 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE9C4EFFE3BCA46F6
+        a                   :PublishedEvent ;
+        :eventWhen          "2019"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE8FD551A40DCEC45
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787570002627" .
+    
+    bdr:MW3CN26452  a       :Instance ;
+        skos:altLabel       "六部大论入门"@zh-hans ;
+        skos:prefLabel      "thub pa dgongs gsal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE8FD551A40DCEC45 ;
+        :authorshipStatement  "smon bzang dpe rnying 'tshol bsdu khang nas bsgrigs/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 319 p." ;
+        :hasTitle           bdr:TT115F911CC02D6989 , bdr:TT1DC1DE5DF58BEDCD , bdr:TT21E1F3742D9FA874 , bdr:TT289A100A7F4BF817 , bdr:TTA84EF82E7335BB16 ;
+        :instanceEvent      bdr:EVE9C4EFFE3BCA46F6 ;
+        :instanceHasReproduction  bdr:W3CN26452 ;
+        :instanceOf         bdr:WA3CN26452 , bdr:WA3CN7877 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT115F911CC02D6989
+        a                   :TitlePageTitle ;
+        rdfs:label          "thub pa'i dgongs pa rab tu gsal ba'i bstan bcos dang 'chad thabs sogs/"@bo-x-ewts .
+    
+    bdr:TT1DC1DE5DF58BEDCD
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "六部大论入门"@zh-hans .
+    
+    bdr:TT21E1F3742D9FA874
+        a                   :FullTitle ;
+        rdfs:label          "pod chen drug gi cha lag skor/ thub pa dgongs gsal/"@bo-x-ewts .
+    
+    bdr:TT289A100A7F4BF817
+        a                   :Title ;
+        rdfs:label          "thub pa dgongs gsal/"@bo-x-ewts .
+    
+    bdr:TTA84EF82E7335BB16
+        a                   :Subtitle ;
+        rdfs:label          "sa lugs bzhed gzhung pod chen drug gam grags chen bco brgyad las/ pod chen drug gi cha lag skor/"@bo-x-ewts .
+}

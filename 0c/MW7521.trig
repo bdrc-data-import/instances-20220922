@@ -1,0 +1,79 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW7521 {
+    bda:LG187F3F08EF83C818
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-10-05T15:43:08.203Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info and annotation"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG1B1FAC3B26ECD72E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG360626EE1C257DCC
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-10-19T15:25:17.36Z"^^xsd:dateTime ;
+        adm:logMessage      "added pub info"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:MW7521  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW7521 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0c/MW7521.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW7521 ;
+        adm:logEntry        bda:LG187F3F08EF83C818 , bda:LG1B1FAC3B26ECD72E , bda:LG360626EE1C257DCC , bda:LGIM6B433BA01E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B64836EEC846BB0
+        a                   :PublishedEvent ;
+        :eventWhen          "1983"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW7521  a           :Instance ;
+        skos:prefLabel      "me btsa'i gdams pa rgyas spros shel dkar me long /"@bo-x-ewts ;
+        :biblioNote         "reproduced from a rare manuscript from the library of sog tsandan dgon; incomplete manuscript"@en ;
+        :extentStatement    "58 ff. (116 p.)" ;
+        :hasTitle           bdr:TT2CDE7BD4B0AE7466 , bdr:TT3B555923BE642BB5 ;
+        :instanceEvent      bdr:EV4B64836EEC846BB0 ;
+        :instanceHasReproduction  bdr:W7521 ;
+        :instanceOf         bdr:WA7521 ;
+        :note               bdr:NT09B12CA2044828A5 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dolanji, h.p."@en ;
+        :publisherName      "patshang lama sonam gyaltsen"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT09B12CA2044828A5
+        a                   :Note ;
+        :contentLocationStatement  "w2db13637" ;
+        :noteSource         bdr:MW2DB13637 ;
+        :noteText           "complete texts"@en .
+    
+    bdr:TT2CDE7BD4B0AE7466
+        a                   :OtherTitle ;
+        rdfs:label          "dpyad mchog gtar ga'i gdams pa nyes 'khrug rnyog drung 'byin byed ke ta ka"@bo-x-ewts .
+    
+    bdr:TT3B555923BE642BB5
+        a                   :Title ;
+        rdfs:label          "me btsa'i gdams pa rgyas spros shel dkar me long /"@bo-x-ewts .
+}

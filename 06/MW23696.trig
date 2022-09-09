@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23696 {
+    bda:LG016C240096546A71
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23696  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23696 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "06/MW23696.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23696 ;
+        adm:logEntry        bda:LG016C240096546A71 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV532FD3605297A328
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8F211217B1218568
+        a                   bdr:HollisId ;
+        rdf:value           "014259041" .
+    
+    bdr:IDCB0619B5CDA13251
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "84900626" .
+    
+    bdr:IDE74493C9B3303DC4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.4 .R56 1984" .
+    
+    bdr:MW23696  a          :Instance ;
+        skos:altLabel       "rnin ma'i chos spyod : a collection of liturgical works of the rnin-ma-pa tradition"@en-x-mixed ;
+        skos:prefLabel      "rnying ma'i chos spyod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8F211217B1218568 , bdr:IDCB0619B5CDA13251 , bdr:IDE74493C9B3303DC4 ;
+        :extentStatement    "160 p." ;
+        :hasTitle           bdr:TT42254C3129043C6C , bdr:TT6A3DC6996F85F719 ;
+        :instanceEvent      bdr:EV532FD3605297A328 ;
+        :instanceHasReproduction  bdr:W23696 ;
+        :instanceOf         bdr:WA23696 ;
+        :note               bdr:NT90AE759F641F927B ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "chokyi nyima rinpoche"@en ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "jayyed press"@en .
+    
+    bdr:NT90AE759F641F927B
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume number 0839"@en .
+    
+    bdr:TT42254C3129043C6C
+        a                   :Title ;
+        rdfs:label          "rnying ma'i chos spyod/"@bo-x-ewts .
+    
+    bdr:TT6A3DC6996F85F719
+        a                   :TitlePageTitle ;
+        rdfs:label          "rnin ma'i chos spyod : a collection of liturgical works of the rnin-ma-pa tradition"@en-x-mixed .
+}

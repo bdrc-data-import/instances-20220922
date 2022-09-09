@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022014 {
+    bda:LGA04C61BCD86A875B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022014"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022014
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022014 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8b/MW1FEMC022014.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022014 ;
+        adm:logEntry        bda:LGA04C61BCD86A875B , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE97CCB507184FB5A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.796.I.1" .
+    
+    bdr:MW1FEMC022014
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់កូនចៅធំ"@km , "cpāp' kūn cau dhaṃ"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE97CCB507184FB5A ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT39539949DC49D6F7 , bdr:TT6FEAB83228AC6663 , bdr:TT8A8840D3FC75B9C3 , bdr:TTE94C487157416776 ;
+        :instanceHasReproduction  bdr:W1FEMC022014 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTACBC638414F8B4A1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTACBC638414F8B4A1
+        a                   :Note ;
+        :contentLocationStatement  "pg. 356" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT39539949DC49D6F7
+        a                   :CoverTitle ;
+        rdfs:label          "kūn cau"@km-x-twktt .
+    
+    bdr:TT6FEAB83228AC6663
+        a                   :CoverTitle ;
+        rdfs:label          "កូនចៅ​ (វាន)"@km .
+    
+    bdr:TT8A8840D3FC75B9C3
+        a                   :Title ;
+        rdfs:label          "cpāp' kūn cau dhaṃ"@km-x-twktt ;
+        :femcConversionOf   bdr:TT39539949DC49D6F7 .
+    
+    bdr:TTE94C487157416776
+        a                   :Title ;
+        rdfs:label          "ច្បាប់កូនចៅធំ"@km ;
+        :femcConversionOf   bdr:TT6FEAB83228AC6663 .
+}

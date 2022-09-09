@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010317 {
+    bda:LGF57F8A896E6FE4BF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010317"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010317
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010317 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3c/MW1FEMC010317.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010317 ;
+        adm:logEntry        bda:LGF57F8A896E6FE4BF , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC031111 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:IDAC7434D14D2CAA95
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "040-PP.03.03.03.III.1" .
+    
+    bdr:MF087DEC0DDBFC8E2E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "15" ;
+        :microfilmStrip     "63" .
+    
+    bdr:MW1FEMC010317
+        a                   :Instance ;
+        skos:prefLabel      "ក្រុងមហាជម្ពូរាជាធិបតី"@km , "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAC7434D14D2CAA95 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1AABB609595DE578 , bdr:TT4311CDCF82FD45FE , bdr:TT5DB7AD67F088BA05 , bdr:TTCBA90D4FFE9B6DD3 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF087DEC0DDBFC8E2E ;
+        :note               bdr:NT4C6034FA3BA73F46 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT4C6034FA3BA73F46
+        a                   :Note ;
+        :contentLocationStatement  "pg. 115" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1AABB609595DE578
+        a                   :Title ;
+        rdfs:label          "kruṅ mahā jambū rājādhipatī"@km-x-twktt ;
+        :femcConversionOf   bdr:TT4311CDCF82FD45FE .
+    
+    bdr:TT4311CDCF82FD45FE
+        a                   :CoverTitle ;
+        rdfs:label          "mahā juṃbūv"@km-x-twktt .
+    
+    bdr:TT5DB7AD67F088BA05
+        a                   :CoverTitle ;
+        rdfs:label          "មហាជុំពូវ"@km .
+    
+    bdr:TTCBA90D4FFE9B6DD3
+        a                   :Title ;
+        rdfs:label          "ក្រុងមហាជម្ពូរាជាធិបតី"@km ;
+        :femcConversionOf   bdr:TT5DB7AD67F088BA05 .
+}

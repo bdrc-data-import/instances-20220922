@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG6053 {
+    bda:LG18982969B133EDA0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-10-19T13:48:36.05Z"^^xsd:dateTime ;
+        adm:logMessage      "published"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG6053  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG6053 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fc/MW1KG6053.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG6053 ;
+        adm:logEntry        bda:LG18982969B133EDA0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV67C4C825F5328A4B
+        a                   :PublishedEvent ;
+        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDABBB2F0B5C5BEA60
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105106844" .
+    
+    bdr:IDF02BB2658FDD833F
+        a                   bdr:HollisId ;
+        rdf:value           "014257269" .
+    
+    bdr:MW1KG6053  a        :Instance ;
+        skos:prefLabel      "bod lugs bzo rtsal mdzes ris slob deb/"@bo-x-ewts , "xi zang gong yi mei shu"@zh-latn-pinyin-x-ndia ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDABBB2F0B5C5BEA60 , bdr:IDF02BB2658FDD833F ;
+        :authorshipStatement  "skal bzang tshe brtan gyis brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par bzhi 1."@bo-x-ewts ;
+        :extentStatement    "2, 5, 192 p." ;
+        :hasTitle           bdr:TT1D0DAC968344E781 , bdr:TT7867AB4BBEB81CB6 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EV67C4C825F5328A4B ;
+        :instanceHasReproduction  bdr:W1KG6053 ;
+        :instanceOf         bdr:WA1KG6053 ;
+        :note               bdr:NT318178EEAD6A5E90 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT318178EEAD6A5E90
+        a                   :Note ;
+        :noteText           "bod rang skyong ljongs slob gzhi zhib bsher u lhan gyis zhib bsher mdzad / bod ljongs slob grwa chen mo'i lnga tshan bcu gcig pa'i 'char 'god slob gzhi/"@bo-x-ewts .
+    
+    bdr:TT1D0DAC968344E781
+        a                   :Title ;
+        rdfs:label          "bod lugs bzo rtsal mdzes ris slob deb/"@bo-x-ewts .
+    
+    bdr:TT7867AB4BBEB81CB6
+        a                   :ColophonTitle ;
+        rdfs:label          "xi zang gong yi mei shu"@zh-latn-pinyin-x-ndia .
+}

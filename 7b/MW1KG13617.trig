@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13617 {
+    bda:LG41290A39B7270658
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-02-27T14:18:27.529Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13617  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13617 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "7b/MW1KG13617.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13617 ;
+        adm:logEntry        bda:LG41290A39B7270658 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR9FD710FBC351078A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P5949 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV574DA800F8171413
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID14850E1C6CAEA5D7
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789937901901(set)" .
+    
+    bdr:IDA3F08F6DC8AFCCEE
+        a                   bdr:HollisId ;
+        rdf:value           "014256042" .
+    
+    bdr:MW1KG13617  a       :Instance ;
+        skos:altLabel       "the sakya lamdre collections"@en ;
+        skos:prefLabel      "sa skya'i lam 'bras/ （glog klad par ma/）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID14850E1C6CAEA5D7 , bdr:IDA3F08F6DC8AFCCEE ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CR9FD710FBC351078A ;
+        :extentStatement    "43 v." ;
+        :hasTitle           bdr:TT671A97639130BBF9 , bdr:TTAC375929D1FF1517 , bdr:TTD72B89B27C12F936 ;
+        :instanceEvent      bdr:EV574DA800F8171413 ;
+        :instanceHasReproduction  bdr:W1KG13617 ;
+        :instanceOf         bdr:WA1KG13617 , bdr:WA2PD19769 ;
+        :note               bdr:NTB160957F97BDE9F8 ;
+        :numberOfVolumes    43 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "kathmandu"@en ;
+        :publisherName      "guru lama, sachen international"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTB160957F97BDE9F8
+        a                   :Note ;
+        :noteText           "The set contain 43 volumes : \n1. lam 'bras slob bshad (v. 1-26);\n2. lam 'bras tshogs bshad (v. 27-38);\n3. lam 'bras gzhung bshad (v. 39-42);\n4. lam 'bras kha skong (v. 43)"@en .
+    
+    bdr:TT671A97639130BBF9
+        a                   :FullTitle ;
+        rdfs:label          "gsung ngag rin po che lam 'bras bu dang bcas pa/"@bo-x-ewts .
+    
+    bdr:TTAC375929D1FF1517
+        a                   :Title ;
+        rdfs:label          "sa skya'i lam 'bras/ （glog klad par ma/）"@bo-x-ewts .
+    
+    bdr:TTD72B89B27C12F936
+        a                   :OtherTitle ;
+        rdfs:label          "the sakya lamdre collections"@en .
+}

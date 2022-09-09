@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1204 {
+    bda:LG184CC2E077CE6B42
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-18T16:18:28.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGBB715B83847DBD56
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-05-01T09:11:28.696Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGD9DA979FA8797B13
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIMEDE14CA9  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-12-18T20:42:16.63Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1204  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1204 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "84/MW1NLM1204.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1204 ;
+        adm:logEntry        bda:LG184CC2E077CE6B42 , bda:LGBB715B83847DBD56 , bda:LGD9DA979FA8797B13 , bda:LGIMEDE14CA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1204  a       :Instance ;
+        skos:prefLabel      "rigs pa'i sgo 'byed bsdus gzhung legs bshad nyi ma'i 'od zer/"@bo-x-ewts ;
+        :dimensionsStatement  "56x8" ;
+        :extentStatement    "176 ff., 1 ff." ;
+        :hasTitle           bdr:TT2CFC48B85850DA43 ;
+        :instanceHasReproduction  bdr:W1NLM1204 ;
+        :instanceOf         bdr:WA1NLM1204 ;
+        :note               bdr:NT08D6CD8358CD8538 , bdr:NT2F75B9586837CE68 , bdr:NT8D6D8C38DEA812D2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT08D6CD8358CD8538
+        a                   :Note ;
+        :noteText           "missingPages: M0059122-001 [11-12iig neg huudsand dugaarlasan] Image 19-20, M0059122-001 [160-161iig neg huudsand dugaarlasan] Image 317-318"@en .
+    
+    bdr:NT2F75B9586837CE68
+        a                   :Note ;
+        :noteText           "nlmId: M0059122"@en .
+    
+    bdr:NT8D6D8C38DEA812D2
+        a                   :Note ;
+        :noteText           "coverType: wooden box"@en .
+    
+    bdr:TT2CFC48B85850DA43
+        a                   :TitlePageTitle ;
+        rdfs:label          "rigs pa'i sgo 'byed bsdus gzhung legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
+}

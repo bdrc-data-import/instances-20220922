@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23906 {
+    bda:LG3916DB953AE2A6AD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23906  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23906 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8a/MW23906.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23906 ;
+        adm:logEntry        bda:LG3916DB953AE2A6AD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRBA00EB85431EB346
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6141 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVD820A7AAC2F5A6F9
+        a                   :PublishedEvent ;
+        :eventWhen          "0200/p."^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID795B431658E40F21
+        a                   bdr:HollisId ;
+        rdf:value           "014259216" .
+    
+    bdr:MW23906  a          :Instance ;
+        skos:prefLabel      "dus 'khor nyer mkho'i chos tshan khag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID795B431658E40F21 ;
+        :biblioNote         "no covering title page"@en ;
+        :creator            bdr:CRBA00EB85431EB346 ;
+        :extentStatement    "364 p" ;
+        :hasTitle           bdr:TTA77C504B7AA327AF ;
+        :instanceEvent      bdr:EVD820A7AAC2F5A6F9 ;
+        :instanceHasReproduction  bdr:W23906 ;
+        :instanceOf         bdr:WA23906 ;
+        :note               bdr:NTBE0FD277921130BB ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[mirik?]"@en ;
+        :publisherName      "['bo dkar rin po che]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTBE0FD277921130BB
+        a                   :Note ;
+        :noteText           "tbrc.holds digitally scanned images, tiffs and pdf files\n3206"@en .
+    
+    bdr:TTA77C504B7AA327AF
+        a                   :Title ;
+        rdfs:label          "dus 'khor nyer mkho'i chos tshan khag"@bo-x-ewts .
+}

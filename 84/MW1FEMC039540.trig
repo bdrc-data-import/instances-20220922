@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC039540 {
+    bda:LG0C87782D9878ED84
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-25"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC039540"@en ;
+        adm:logWhoStr       "Samai Pon" .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC039540
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC039540 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "84/MW1FEMC039540.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC039540 ;
+        adm:logEntry        bda:LG0C87782D9878ED84 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID15D2CD793C66FB80
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "030-PP.02.08.01.III.1" .
+    
+    bdr:MFE3AE6EA74D65DC42
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "10" ;
+        :microfilmStrip     "37" .
+    
+    bdr:MW1FEMC039540
+        a                   :Instance ;
+        skos:prefLabel      "លោកន័យ"@km , "lokanăy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID15D2CD793C66FB80 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "5" ;
+        :hasTitle           bdr:TT6D48067F6B789B81 , bdr:TT855A05F092AE48CF , bdr:TTA2089A9793255B9A , bdr:TTAAB943BAEEBC5C31 ;
+        :instanceHasReproduction  bdr:W1FEMC039540 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFE3AE6EA74D65DC42 ;
+        :note               bdr:NT816DF2CDCEAB0C32 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT816DF2CDCEAB0C32
+        a                   :Note ;
+        :contentLocationStatement  "pg. 105" ;
+        :noteSource         bda:PR1FEMC03 .
+    
+    bdr:TT6D48067F6B789B81
+        a                   :CoverTitle ;
+        rdfs:label          "lokanaiy"@km-x-twktt .
+    
+    bdr:TT855A05F092AE48CF
+        a                   :Title ;
+        rdfs:label          "lokanăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6D48067F6B789B81 .
+    
+    bdr:TTA2089A9793255B9A
+        a                   :Title ;
+        rdfs:label          "លោកន័យ"@km ;
+        :femcConversionOf   bdr:TTAAB943BAEEBC5C31 .
+    
+    bdr:TTAAB943BAEEBC5C31
+        a                   :CoverTitle ;
+        rdfs:label          "លោកនៃយ"@km .
+}

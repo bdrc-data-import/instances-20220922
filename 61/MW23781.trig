@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23781 {
+    bda:LG06DDA3FE83CFD5BE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG2706C07D499606E1
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-25T11:08:33.251Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23781  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23781 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "61/MW23781.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23781 ;
+        adm:logEntry        bda:LG06DDA3FE83CFD5BE , bda:LG2706C07D499606E1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5DE1EF8EEE49FD49
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDA1910CDB67050140
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7683.4 .N315 1985" .
+    
+    bdr:IDD8429DA71DA11139
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903871" .
+    
+    bdr:IDEE3E969E27709148
+        a                   bdr:HollisId ;
+        rdf:value           "014259122" .
+    
+    bdr:MW23781  a          :Instance ;
+        skos:altLabel       "gter kha gsum 'dus yan zab thugs sgrub phrin las rgyas sdeb dan 'brel ba'i khams pa'i sgrub chen khog dbub chen mo : detailed explanations of the great rituals performed at the khams-pa sgar monastery in the nan-chen area of khams"@en-x-mixed ;
+        skos:prefLabel      "khams pa sgar gyi sgrub chen khog dbub chen mo/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA1910CDB67050140 , bdr:IDD8429DA71DA11139 , bdr:IDEE3E969E27709148 ;
+        :biblioNote         "reproduced from a rare manuscript from khams-pa sgar"@en ;
+        :extentStatement    "642 p." ;
+        :hasTitle           bdr:TT03CA6633A6278BFA , bdr:TT6ED0C85775EC344C , bdr:TT7A1EBD7FA1CA38E5 ;
+        :instanceEvent      bdr:EV5DE1EF8EEE49FD49 ;
+        :instanceHasReproduction  bdr:W23781 ;
+        :instanceOf         bdr:WA23781 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tashijong, palampur, dt. kangra, h.p."@en ;
+        :publisherName      "tibetan craft community"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT03CA6633A6278BFA
+        a                   :OtherTitle ;
+        rdfs:label          "gter kha gsum 'dus yang zab thugs sgrub phrin las rgyas sdeb dang 'brel ba'i khams pa'i sgrub chen khog dbub chen mo/"@bo-x-ewts .
+    
+    bdr:TT6ED0C85775EC344C
+        a                   :TitlePageTitle ;
+        rdfs:label          "gter kha gsum 'dus yan zab thugs sgrub phrin las rgyas sdeb dan 'brel ba'i khams pa'i sgrub chen khog dbub chen mo : detailed explanations of the great rituals performed at the khams-pa sgar monastery in the nan-chen area of khams"@en-x-mixed .
+    
+    bdr:TT7A1EBD7FA1CA38E5
+        a                   :Title ;
+        rdfs:label          "khams pa sgar gyi sgrub chen khog dbub chen mo/"@bo-x-ewts .
+}

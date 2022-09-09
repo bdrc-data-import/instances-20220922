@@ -1,0 +1,66 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2002 {
+    bda:LG269FBB2461E0957B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGB147327A2D083C49
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:MW2002  a           adm:AdminData ;
+        adm:adminAbout      bdr:MW2002 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "39/MW2002.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2002 ;
+        adm:logEntry        bda:LG269FBB2461E0957B , bda:LGB147327A2D083C49 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVA57DEF32E670CD3A
+        a                   :PublishedEvent ;
+        :eventWhen          "1975/1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID447057366A6A9C63
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .D68 1975" .
+    
+    bdr:IDDA824CCE49CC4622
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75908634" .
+    
+    bdr:MW2002  a           :Instance ;
+        skos:prefLabel      "gnas bstod skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID447057366A6A9C63 , bdr:IDDA824CCE49CC4622 ;
+        :biblioNote         "in the gsung 'bum of the third paN chen bla ma dpal ldan ye shes; reproduced from tracings of impressions of prints from the tashilhunpo xylographic blocks"@en ;
+        :extentStatement    "v. 2, 3 ff. (pp. 335-340)" ;
+        :hasTitle           bdr:TT5C032D76627D310C ;
+        :instanceEvent      bdr:EVA57DEF32E670CD3A ;
+        :language           bdr:LangBo ;
+        :note               bdr:NTAADB05D63F36A063 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "mongolian lama gurudeva"@en ;
+        :script             bdr:ScriptLatn .
+    
+    bdr:NTAADB05D63F36A063
+        a                   :Note ;
+        :noteText           "0339-0344\nmargin: gnas bstod\n\nin the 8 vol. redaction\n3 ff. in vol. 2 of 8 vol. printed gsung 'bum in the potala collection."@en .
+    
+    bdr:TT5C032D76627D310C
+        a                   :Title ;
+        rdfs:label          "gnas bstod skor/"@bo-x-ewts .
+}

@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09826 {
+    bda:LGD0F22722BDC83321
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-06-19T11:45:59.704Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09826  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09826 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "36/MW00KG09826.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09826 ;
+        adm:logEntry        bda:LGD0F22722BDC83321 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8F269AC6423C559F
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDAECB8D68ECE66063
+        a                   bdr:HollisId ;
+        rdf:value           "014254578" .
+    
+    bdr:MW00KG09826  a      :Instance ;
+        skos:prefLabel      "grags chen dar po che khag cig gi lo rgyus dang dge mtshan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDAECB8D68ECE66063 ;
+        :extentStatement    "44 p." ;
+        :hasTitle           bdr:TT088F458DB25BF212 , bdr:TTCD4E097A779FFB0E ;
+        :instanceEvent      bdr:EV8F269AC6423C559F ;
+        :instanceHasReproduction  bdr:W00KG09826 ;
+        :instanceOf         bdr:WA00KG09826 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "central executive of ngari chithun association"@en ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "indraprastha press, new delhi/"@bo-x-ewts .
+    
+    bdr:TT088F458DB25BF212
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod gangs can gyi ljongs 'dir stod mnga' ris skor gsum dang/ bar dbus gtsang ru bzhi'i khongs grags chen dar po che khag cig gi lo rgyus dang de dag sku bzhengs zhu dgos dge mtshan sogs mdor brjod phyogs bsdebs bgyis pa/"@bo-x-ewts .
+    
+    bdr:TTCD4E097A779FFB0E
+        a                   :Title ;
+        rdfs:label          "grags chen dar po che khag cig gi lo rgyus dang dge mtshan/"@bo-x-ewts .
+}

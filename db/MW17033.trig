@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW17033 {
+    bda:LG54A169425639487F
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG830A122ECEFA33E0
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-12-10T10:33:25.095Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and complete cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB3DA7D9525AE9B10
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-14T10:12:04.705Z"^^xsd:dateTime ;
+        adm:logMessage      "normalised series number"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW17033  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW17033 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "db/MW17033.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW17033 ;
+        adm:logEntry        bda:LG54A169425639487F , bda:LG830A122ECEFA33E0 , bda:LGB3DA7D9525AE9B10 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB9F38B28CEA7702C
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDD7897FD2D5F22D28
+        a                   bdr:HollisId ;
+        rdf:value           "014254773" .
+    
+    bdr:MW17033  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "rwa stod bsdus grwa dang de'i dogs bcod/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD7897FD2D5F22D28 ;
+        :authorshipStatement  "'jam dpal dge 'dun rgya mtsho/"@bo-x-ewts ;
+        :biblioNote         "reproduced of Drepung Loseling printed copy; starting from page no. 17"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :extentStatement    "3, 727 p." ;
+        :hasTitle           bdr:TTB6DCA75DE32F480E ;
+        :instanceEvent      bdr:EVB9F38B28CEA7702C ;
+        :instanceHasReproduction  bdr:W17033 ;
+        :instanceOf         bdr:WA17033 ;
+        :note               bdr:NT4C912CFE0E234832 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "ser gtsug nang bstan dpe rnying 'tshol bsdu phyogs sgrig khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS140 ;
+        :seriesNumber       "130" .
+    
+    bdr:NT4C912CFE0E234832
+        a                   :Note ;
+        :noteText           "1. tshad ma rnam 'grel gyi bsdus gzhung shes bya'i sgo 'byed rgol ngan glang po 'joms pa gdong lnga'i gad rgyangs lde mig\n2. rwa ba stod kyi bsdus grwa'i dka' gnad rnams phyogs gcig tu bkod pa gzhung bzang stong gi sgo 'byed legs bshad gser gyi lde'u mig"@en .
+    
+    bdr:TTB6DCA75DE32F480E
+        a                   :Title ;
+        rdfs:label          "rwa stod bsdus grwa dang de'i dogs bcod/"@bo-x-ewts .
+}

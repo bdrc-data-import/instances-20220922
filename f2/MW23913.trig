@@ -1,0 +1,86 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23913 {
+    bda:LG5757DC196D08B360
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-07T10:00:01.784Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGF57A79FF9C8B252E
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23913  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23913 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "f2/MW23913.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23913 ;
+        adm:logEntry        bda:LG5757DC196D08B360 , bda:LGF57A79FF9C8B252E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE2E4A80600F0B5F0
+        a                   :PublishedEvent ;
+        :eventWhen          "2002?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID67191A6FFD03439D
+        a                   bdr:HollisId ;
+        rdf:value           "014259223" .
+    
+    bdr:MW23913  a          :Instance ;
+        skos:prefLabel      "dkyil chog rgya mtsho'i thig gsal byed legs bshad nyi ma'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID67191A6FFD03439D ;
+        :authorshipStatement  "tshogs gnyis rgya mtshos sbyar/"@bo-x-ewts ;
+        :extentStatement    "358 p." ;
+        :hasSourcePrintery  bdr:G3JT12512 ;
+        :hasTitle           bdr:TT302ADD09BDE02B05 , bdr:TT787E9305214E96DB ;
+        :instanceEvent      bdr:EVE2E4A80600F0B5F0 ;
+        :instanceHasReproduction  bdr:W23913 ;
+        :instanceOf         bdr:WA23913 ;
+        :note               bdr:NT41FCB95CFC5A79F5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "['dzam thang, 'bar khams rdzong]"@en ;
+        :publisherName      "['dzam thang dgon]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT41FCB95CFC5A79F5
+        a                   :Note ;
+        :noteText           "this work bears the marginal notation ga.\ntbrc holds digitally scanned images, tiffs and pdf files 3500"@en .
+    
+    bdr:TT302ADD09BDE02B05
+        a                   :TitlePageTitle ;
+        rdfs:label          "sgrol mgon zhabs kyis mdzad pa'i dkyil chog rgya mtsho'i thig tshon gsal byed legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
+    
+    bdr:TT787E9305214E96DB
+        a                   :Title ;
+        rdfs:label          "dkyil chog rgya mtsho'i thig gsal byed legs bshad nyi ma'i 'od zer/"@bo-x-ewts .
+}

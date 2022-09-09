@@ -1,0 +1,104 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW26042 {
+    bda:LG0E63CEA498EC8835
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-09-18T09:00:59.764Z"^^xsd:dateTime ;
+        adm:logMessage      "changed print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG66E889B3FE6B7826
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-29T16:41:26.656Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGE4EE759774AE6011
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW26042  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW26042 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "f5/MW26042.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW26042 ;
+        adm:logEntry        bda:LG0E63CEA498EC8835 , bda:LG66E889B3FE6B7826 , bda:LGE4EE759774AE6011 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7F718D7363B4D9DC
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID24F753712D07862B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .P3334 1985" .
+    
+    bdr:ID5D1D165DE4B06BC5
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902624" .
+    
+    bdr:IDA79E7E1FEE39ABBE
+        a                   bdr:HollisId ;
+        rdf:value           "014259505" .
+    
+    bdr:MW26042  a          :Instance , :SerialInstance ;
+        skos:altLabel       "klon gsal gsan ba snin bcud : a collection of teachings"@en-x-mixed ;
+        skos:prefLabel      "klong gsal gsang ba snying bcud/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID24F753712D07862B , bdr:ID5D1D165DE4B06BC5 , bdr:IDA79E7E1FEE39ABBE ;
+        :authorshipStatement  "revealed by gter-chen padma-glin-pa"@en ;
+        :biblioNote         "reproduced from manuscripts from the library of o-rgyan-chos-glin"@en ;
+        :extentStatement    "752 p." ;
+        :hasTitle           bdr:TT1B68DE7C9FDF3128 , bdr:TTB29084E6160BE4B5 ;
+        :instanceEvent      bdr:EV7F718D7363B4D9DC ;
+        :instanceHasReproduction  bdr:W26042 ;
+        :instanceOf         bdr:WA26042 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "kunsang tobgeyl"@en ;
+        :script             bdr:ScriptDbuCan ;
+        :serialInstanceOf   bdr:WAS23373 ;
+        :seriesNumber       "v. 5" .
+    
+    bdr:TT1B68DE7C9FDF3128
+        a                   :TitlePageTitle ;
+        rdfs:label          "klon gsal gsan ba snin bcud : a collection of teachings"@en-x-mixed .
+    
+    bdr:TTB29084E6160BE4B5
+        a                   :Title ;
+        rdfs:label          "klong gsal gsang ba snying bcud/"@bo-x-ewts .
+}

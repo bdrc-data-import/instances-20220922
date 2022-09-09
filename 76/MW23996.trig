@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23996 {
+    bda:LG140920114821D2C1
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-26T12:35:07.588Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGDF2ED110368B5779
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23996  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23996 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "76/MW23996.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23996 ;
+        adm:logEntry        bda:LG140920114821D2C1 , bda:LGDF2ED110368B5779 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB4B69C8D58537651
+        a                   :PublishedEvent ;
+        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID345856E2E0A15162
+        a                   bdr:HollisId ;
+        rdf:value           "014259271" .
+    
+    bdr:ID3FCAFF7D33349903
+        a                   bdr:PL480 ;
+        rdf:value           "bhu-tib-400" .
+    
+    bdr:ID400FA62DE2B9A314
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902380" .
+    
+    bdr:ID8ADEFA939794F88B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7863 .J54 1984" .
+    
+    bdr:MW23996  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of the fourth zabs-drun thugs-sprul of bhutan, 'jigs-med-nor-bu, 1831-1861"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_'jigs med nor bu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID345856E2E0A15162 , bdr:ID3FCAFF7D33349903 , bdr:ID400FA62DE2B9A314 , bdr:ID8ADEFA939794F88B ;
+        :biblioNote         "reproduced from an eye-copy of the unique manuscript preserved at rta-log monastery"@en ;
+        :extentStatement    "1071 p." ;
+        :hasTitle           bdr:TTA1F7825A05A0ED34 , bdr:TTA8E7D1C23F9FFDC8 , bdr:TTC9C2033DCEF4D1DF ;
+        :instanceEvent      bdr:EVB4B69C8D58537651 ;
+        :instanceHasReproduction  bdr:W23996 ;
+        :instanceOf         bdr:WA23996 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "thimphu, bhutan"@en ;
+        :publisherName      "national library of bhutan"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TTA1F7825A05A0ED34
+        a                   :CoverTitle ;
+        rdfs:label          "zhabs drung 'jigs med nor bu'i gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TTA8E7D1C23F9FFDC8
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of the fourth zabs-drun thugs-sprul of bhutan, 'jigs-med-nor-bu, 1831-1861"@en-x-mixed .
+    
+    bdr:TTC9C2033DCEF4D1DF
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_'jigs med nor bu/"@bo-x-ewts .
+}

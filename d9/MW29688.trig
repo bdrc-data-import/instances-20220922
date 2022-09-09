@@ -1,0 +1,99 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29688 {
+    bda:LG735C09741CFFC249
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGFB6398EFEEF4937F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-30T16:59:02.646Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29688  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29688 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "d9/MW29688.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29688 ;
+        adm:logEntry        bda:LG735C09741CFFC249 , bda:LGFB6398EFEEF4937F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7C240A3D294DA8E7
+        a                   :PublishedEvent ;
+        :eventWhen          "1976/1977"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1EFDF85220C95ABC
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662 .K33 1976" .
+    
+    bdr:ID3A6C620BD45F258D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "76905079" .
+    
+    bdr:IDBB3F0BB62A7BEE05
+        a                   bdr:HollisId ;
+        rdf:value           "014260093" .
+    
+    bdr:MW29688  a          :Instance ;
+        skos:altLabel       "the collected works (gsun 'bum) of kah-thog rig-'dzin tshe-dban-nor-bu"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_tshe dbang nor bu/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1EFDF85220C95ABC , bdr:ID3A6C620BD45F258D , bdr:IDBB3F0BB62A7BEE05 ;
+        :biblioNote         "reproduced from the ms. set preserved in the library of tibetan works and archives"@en ;
+        :extentStatement    "6 v." ;
+        :hasTitle           bdr:TT5496FB9DC1ACB358 , bdr:TT7BB21202E3C8EA9C , bdr:TTFE1B3F424BE4558C ;
+        :instanceEvent      bdr:EV7C240A3D294DA8E7 ;
+        :instanceHasReproduction  bdr:W29688 ;
+        :instanceOf         bdr:WA1GS45274 , bdr:WA29688 ;
+        :note               bdr:NT7CE5ACF7C20CD5FB ;
+        :numberOfVolumes    6 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "dalhousie, h.p."@en ;
+        :publisherName      "damchoe sangpo"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:NT7CE5ACF7C20CD5FB
+        a                   :Note ;
+        :noteText           "-5580"@en .
+    
+    bdr:TT5496FB9DC1ACB358
+        a                   :TitlePageTitle ;
+        rdfs:label          "kaH thog rdo rje gdan gyi rig 'dzin chen po tshe dbang nor bu'i zhabs kyi gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TT7BB21202E3C8EA9C
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of kah-thog rig-'dzin tshe-dban-nor-bu"@en-x-mixed .
+    
+    bdr:TTFE1B3F424BE4558C
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_tshe dbang nor bu/"@bo-x-ewts .
+}

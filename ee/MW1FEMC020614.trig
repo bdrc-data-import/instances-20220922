@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020614 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020614
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020614 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ee/MW1FEMC020614.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020614 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID862B74030158249D
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d'.247.II.1" .
+    
+    bdr:MW1FEMC020614
+        a                   :Instance ;
+        skos:prefLabel      "ស័ង្ខសិល្ប៍ជ័យ"@km , "săṅkh silp jăy"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID862B74030158249D ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT001EF99DD1319951 , bdr:TT27E17A6B1CE5A292 , bdr:TT321D1C9C8027356E , bdr:TT5A4838084D8218CC ;
+        :instanceHasReproduction  bdr:W1FEMC020614 ;
+        :instanceOf         bdr:WA1FEMC020614 , bdr:WA1FEMC120030 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTA64CE6A8F3428F92 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTA64CE6A8F3428F92
+        a                   :Note ;
+        :contentLocationStatement  "pg. 115" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT001EF99DD1319951
+        a                   :Title ;
+        rdfs:label          "săṅkh silp jăy"@km-x-twktt ;
+        :femcConversionOf   bdr:TT27E17A6B1CE5A292 .
+    
+    bdr:TT27E17A6B1CE5A292
+        a                   :CoverTitle ;
+        rdfs:label          "sāṃṇ° sil jaiy°"@km-x-twktt .
+    
+    bdr:TT321D1C9C8027356E
+        a                   :Title ;
+        rdfs:label          "ស័ង្ខសិល្ប៍ជ័យ"@km ;
+        :femcConversionOf   bdr:TT5A4838084D8218CC .
+    
+    bdr:TT5A4838084D8218CC
+        a                   :CoverTitle ;
+        rdfs:label          "ស្ងាំសិលជ្យៃ"@km .
+}

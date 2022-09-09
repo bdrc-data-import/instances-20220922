@@ -1,0 +1,76 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW8LS66761 {
+    bda:LG930BA086BD82F8A7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-10-04T11:30:03.687Z"^^xsd:dateTime ;
+        adm:logMessage      "created new work record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBAA49B349694D5BB
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-11-26T10:31:04.206Z"^^xsd:dateTime ;
+        adm:logMessage      "added title page title, page number and edition statement"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGC449D0389895643B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-26T10:49:56.018Z"^^xsd:dateTime ;
+        adm:logMessage      "added translator"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:MW8LS66761  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW8LS66761 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "40/MW8LS66761.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW8LS66761 ;
+        adm:logEntry        bda:LG930BA086BD82F8A7 , bda:LGBAA49B349694D5BB , bda:LGC449D0389895643B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV93832B0197CCCD5A
+        a                   :PublishedEvent ;
+        :eventWhen          "2019"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDD89A8260E0316DF2
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223032391" .
+    
+    bdr:MW8LS66761  a       :Instance ;
+        skos:prefLabel      "bu slob kyi bsrung bya/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD89A8260E0316DF2 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par thengs gnyis pa/"@bo-x-ewts ;
+        :extentStatement    "104 p." ;
+        :hasTitle           bdr:TT3A7C80DB752D1E29 , bdr:TT6040983A873A9BDF ;
+        :instanceEvent      bdr:EV93832B0197CCCD5A ;
+        :instanceHasReproduction  bdr:W8LS66761 ;
+        :instanceOf         bdr:WA8LS66761 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT3A7C80DB752D1E29
+        a                   :Title ;
+        rdfs:label          "bu slob kyi bsrung bya/"@bo-x-ewts .
+    
+    bdr:TT6040983A873A9BDF
+        a                   :TitlePageTitle ;
+        rdfs:label          "rang rgyal gyi srol rgyun rig gnas blo gsar ngag rgyan/ bu slob kyi bsrung bya/"@bo-x-ewts .
+}

@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30409 {
+    bda:LG00FDCF1F0A360290
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-01-21T12:50:08.104Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG63D03DE819D8CCE8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBA58C1D72E368BBA
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-04-06T09:44:12.125Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed isbn"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW30409  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30409 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "97/MW30409.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30409 ;
+        adm:logEntry        bda:LG00FDCF1F0A360290 , bda:LG63D03DE819D8CCE8 , bda:LGBA58C1D72E368BBA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4D2327A07401D17B
+        a                   :PublishedEvent ;
+        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDD45DAD6CB366FC05
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624508836" .
+    
+    bdr:MW30409  a          :Instance ;
+        skos:altLabel       "藏文修辞学"@zh-hans ;
+        skos:prefLabel      "snyan ngag gi rnam bshad tshangs sras 'dzum zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD45DAD6CB366FC05 ;
+        :authorshipStatement  "blo gros rgya mtshos brtsams/"@bo-x-ewts ;
+        :biblioNote         "spyi debs dang po/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "7, 14, 253 p." ;
+        :hasTitle           bdr:TT255A6F587FC55095 , bdr:TT41CDF24CC520B955 , bdr:TTB9D5E38F5944DCC5 ;
+        :instanceEvent      bdr:EV4D2327A07401D17B ;
+        :instanceHasReproduction  bdr:W30409 ;
+        :instanceOf         bdr:WA30409 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "[zhang kang]"@en ;
+        :publisherName      "zhang kang gyi ling dpe skrun kun zi/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT255A6F587FC55095
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏文修辞学"@zh-hans .
+    
+    bdr:TT41CDF24CC520B955
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang wen xiu ci xue"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTB9D5E38F5944DCC5
+        a                   :Title ;
+        rdfs:label          "snyan ngag gi rnam bshad tshangs sras 'dzum zer/"@bo-x-ewts .
+}

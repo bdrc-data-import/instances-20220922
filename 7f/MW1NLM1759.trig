@@ -1,0 +1,71 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM1759 {
+    bda:LGAF7BBF67775D3FC0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGE7A6D05B28247A16
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-30T11:04:04.492Z"^^xsd:dateTime ;
+        adm:logMessage      "added topic, content, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF526C4144AFC457C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-12-23T21:31:39.676Z"^^xsd:dateTime ;
+        adm:logMessage      "added NLM biblioNote"@en ;
+        adm:logWhoStr       "works-nlm-add-biblionote" .
+    
+    bda:LGIM57C6901C  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2020-06-19T21:23:53.36Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM1759  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM1759 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7f/MW1NLM1759.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM1759 ;
+        adm:logEntry        bda:LGAF7BBF67775D3FC0 , bda:LGE7A6D05B28247A16 , bda:LGF526C4144AFC457C , bda:LGIM57C6901C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM1759  a       :Instance ;
+        skos:prefLabel      "bkra shis brtsegs pa sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "22x5.5" ;
+        :extentStatement    "21 ff., 20 ff. end folio missing, 12 ff., 5 ff., 5 ff., 3 ff., 6 ff." ;
+        :hasTitle           bdr:TT6B748F6D37CC7E96 ;
+        :instanceHasReproduction  bdr:W1NLM1759 ;
+        :instanceOf         bdr:WA1NLM130 , bdr:WA1NLM1759 ;
+        :note               bdr:NT08415F1180541450 , bdr:NTFCAB04EFDF15DF69 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT08415F1180541450
+        a                   :Note ;
+        :noteText           "missingPages: M0059677-003 [Final pages are missing 21A] Image 83"@en .
+    
+    bdr:NTFCAB04EFDF15DF69
+        a                   :Note ;
+        :noteText           "nlmId: M0059677"@en .
+    
+    bdr:TT6B748F6D37CC7E96
+        a                   :Title ;
+        rdfs:label          "bkra shis brtsegs pa sogs/"@bo-x-ewts .
+}

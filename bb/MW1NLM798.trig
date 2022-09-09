@@ -1,0 +1,78 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM798 {
+    bda:LG64CDE74063F8E030
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-01-17T14:40:42.768Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, topic, cat and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG8E88BBDCE5A9E611
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-10T15:26:42.508Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBEF0AD9C68F1E330
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGIM567371A3  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2019-07-26T18:50:28.143Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM9A3E46B600
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:45:53.53Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM798  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM798 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "bb/MW1NLM798.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM798 ;
+        adm:logEntry        bda:LG64CDE74063F8E030 , bda:LG8E88BBDCE5A9E611 , bda:LGBEF0AD9C68F1E330 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW1NLM798  a        :Instance ;
+        skos:prefLabel      "grub mtha'i rnam bshad rang gzhan grub mtha' kun dang bzang zab don mchog tu gsal ba kun zhing gi nyi ma lung rigs rgya mtsho skye dgu'i re ba kun skongs/"@bo-x-ewts ;
+        :dimensionsStatement  "55.5x7" ;
+        :extentStatement    "336 ff. (end folio missing)" ;
+        :hasTitle           bdr:TTCC3921A40DDE1B66 ;
+        :instanceHasReproduction  bdr:W1NLM798 ;
+        :instanceOf         bdr:WA1NLM798 ;
+        :note               bdr:NT3B3C6C18AA608DD4 , bdr:NTD03560AD4AA78A94 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT3B3C6C18AA608DD4
+        a                   :Note ;
+        :noteText           "missingPages: M0058711-001 [191, 192th pages have no B verso side] Image 382, 384 [Final pages are missing 337A] Image 673"@en .
+    
+    bdr:NTD03560AD4AA78A94
+        a                   :Note ;
+        :noteText           "nlmId: M0058711"@en .
+    
+    bdr:TTCC3921A40DDE1B66
+        a                   :TitlePageTitle ;
+        rdfs:label          "grub mtha'i rnam bshad rang gzhan grub mtha' kun dang bzang zab don mchog tu gsal ba kun zhing gi nyi ma lung rigs rgya mtsho skye dgu'i re ba kun skongs/"@bo-x-ewts .
+}

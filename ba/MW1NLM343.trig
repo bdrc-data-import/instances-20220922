@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM343 {
+    bda:LG64405D25F728EECF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-01T17:20:32.455Z"^^xsd:dateTime ;
+        adm:logMessage      "delete sponsor biblioNote from NLM"@en ;
+        adm:logWhoStr       "works-nlm-delete-sponsor" .
+    
+    bda:LGA20FCD7CC44DC23A
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-09-12T16:23:24.798Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGE3C6917B60212C2E
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-06-09T12:32:00.882Z"^^xsd:dateTime ;
+        adm:logMessage      "added donor's name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM48AAB853  a     adm:UpdateData ;
+        adm:logAgent        "NLM Importer" ;
+        adm:logDate         "2018-10-28T18:29:33.12Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD630BB0E8C
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-12-20T20:42:53.606Z"^^xsd:dateTime ;
+        adm:logMessage      "updated missing pages info from NLM spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWhoStr       "works-nlm-update-missings" .
+    
+    bda:MW1NLM343  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1NLM343 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ba/MW1NLM343.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM343 ;
+        adm:logEntry        bda:LG64405D25F728EECF , bda:LGA20FCD7CC44DC23A , bda:LGE3C6917B60212C2E , bda:LGIM48AAB853 , bda:LGIMD630BB0E8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV449A5DDB6240AA4C
+        a                   :PublishedEvent ;
+        :eventWhen          "d."^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW1NLM343  a        :Instance ;
+        skos:prefLabel      "dpal rdo rje 'jigs byed lha bcu gsum ma'i sgrub pa'i thabs/_rin po che'i za ma tog sogs/"@bo-x-ewts ;
+        :dimensionsStatement  "32.5x7.5" ;
+        :extentStatement    "1 v." ;
+        :hasTitle           bdr:TT2B769F9B18CD6269 , bdr:TT8478F6ADC5DA3E9D , bdr:TTB072B4D379851A32 ;
+        :instanceEvent      bdr:EV449A5DDB6240AA4C ;
+        :instanceHasReproduction  bdr:W1NLM343 ;
+        :instanceOf         bdr:WA1NLM343 , bdr:WA1NLM97 ;
+        :note               bdr:NT61B683E06D469C5E , bdr:NT9DD2CE1803B870AB ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NT61B683E06D469C5E
+        a                   :Note ;
+        :noteText           "nlmId: M0058256"@en .
+    
+    bdr:NT9DD2CE1803B870AB
+        a                   :Note ;
+        :noteText           "missingPages: M0058256-016 [Missing page from 20A-20B] Image 303,304"@en .
+    
+    bdr:TT2B769F9B18CD6269
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal rdo rje 'jigs byed lha bcu gsum ma'i sgrub pa'i thabs rin po che'i za ma tog"@bo-x-ewts .
+    
+    bdr:TT8478F6ADC5DA3E9D
+        a                   :Title ;
+        rdfs:label          "dpal rdo rje 'jigs byed lha bcu gsum ma'i sgrub pa'i thabs/_rin po che'i za ma tog sogs/"@bo-x-ewts .
+    
+    bdr:TTB072B4D379851A32
+        a                   :OtherTitle ;
+        rdfs:label          "rdo rje 'jigs byed lha bcu gsum ma'i sgrub thabs rin po che'i za ma tog bkod pa/"@bo-x-ewts .
+}

@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG6143 {
+    bda:LG86729EC349DD642F
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-01-09T11:55:02.67Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA0D559D5E5C048AB
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-11-08T16:20:22.557Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and published"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG6143  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG6143 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "6a/MW1KG6143.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG6143 ;
+        adm:logEntry        bda:LG86729EC349DD642F , bda:LGA0D559D5E5C048AB , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1342B1FDF7EDEED9
+        a                   :PublishedEvent ;
+        :eventWhen          "2009,2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID08A805CE79B9DFC5
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSC 2011/00014 (P) PL3748.D545" .
+    
+    bdr:IDCC54A517D2F4322B
+        a                   bdr:HollisId ;
+        rdf:value           "014257306" .
+    
+    bdr:IDD0810A9917F91D29
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2010309661" .
+    
+    bdr:MW1KG6143  a        :Instance ;
+        skos:altLabel       "the crismon consciousness of life blood"@en ;
+        skos:prefLabel      "zungs khrag gi rnam shes dmar po/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID08A805CE79B9DFC5 , bdr:IDCC54A517D2F4322B , bdr:IDD0810A9917F91D29 ;
+        :authorshipStatement  "'brong ngur dkon mchog bu chung gis brtsams/"@bo-x-ewts ;
+        :biblioNote         "printed from computerized input"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "པར་གཞི་དང་པོ།"@bo ;
+        :extentStatement    "iii, c, ii, 171 p." ;
+        :hasTitle           bdr:TT07C3902DC541ADE5 , bdr:TT086D405A63AF8C9A ;
+        :instanceEvent      bdr:EV1342B1FDF7EDEED9 ;
+        :instanceHasReproduction  bdr:W1KG6143 ;
+        :instanceOf         bdr:WA1KG6143 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "dehradun, uttarakhand"@en ;
+        :publisherName      "songtsen library"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT07C3902DC541ADE5
+        a                   :Title ;
+        rdfs:label          "zungs khrag gi rnam shes dmar po/"@bo-x-ewts .
+    
+    bdr:TT086D405A63AF8C9A
+        a                   :OtherTitle ;
+        rdfs:label          "the crismon consciousness of life blood"@en .
+}

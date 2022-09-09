@@ -1,0 +1,74 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20172 {
+    bda:LG4173341E485E0D99
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBC2A1CB84FA92DDF
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-04-12T09:53:15.686Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW20172  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20172 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a7/MW20172.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20172 ;
+        adm:logEntry        bda:LG4173341E485E0D99 , bda:LGBC2A1CB84FA92DDF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF07DC9C296FD435E
+        a                   :PublishedEvent ;
+        :eventWhen          "1998"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDE9096059F2AB9F24
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754210571x" .
+    
+    bdr:MW20172  a          :Instance ;
+        skos:altLabel       "高原之舟"@zh-hans ;
+        skos:prefLabel      "mtho sgang gi nor nag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE9096059F2AB9F24 ;
+        :authorshipStatement  "mkha' 'gro rgyal gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 2, 89 p." ;
+        :hasTitle           bdr:TT0527F61D6D72D8CC , bdr:TT7D9F8AA0C9701490 , bdr:TTF510D39E8957B282 ;
+        :instanceEvent      bdr:EVF07DC9C296FD435E ;
+        :instanceHasReproduction  bdr:W20172 ;
+        :instanceOf         bdr:WA20172 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0527F61D6D72D8CC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "高原之舟"@zh-hans .
+    
+    bdr:TT7D9F8AA0C9701490
+        a                   :Title ;
+        rdfs:label          "mtho sgang gi nor nag"@bo-x-ewts .
+    
+    bdr:TTF510D39E8957B282
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "gao yuan zhi zhou"@zh-latn-pinyin-x-ndia .
+}

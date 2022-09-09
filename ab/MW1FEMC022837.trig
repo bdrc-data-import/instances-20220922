@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022837 {
+    bda:LG7B7A1DAD275FDDD7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022837"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022837
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022837 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ab/MW1FEMC022837.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022837 ;
+        adm:logEntry        bda:LG7B7A1DAD275FDDD7 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD0F4C446BA0C7CA4
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.313.VII" .
+    
+    bdr:MFECAD5212381A0595
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIV" ;
+        :microfilmStrip     "79" .
+    
+    bdr:MW1FEMC022837
+        a                   :Instance ;
+        skos:prefLabel      "តិក្កទុក្កបដ្ឋាន"@km , "tikkadukkapaṭṭhāna"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD0F4C446BA0C7CA4 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT24BA2B200F6C13DC , bdr:TT5E220C3E46887734 , bdr:TT80F98F3A823B47AA , bdr:TTC06C7381AF1C8074 ;
+        :instanceHasReproduction  bdr:W1FEMC022837 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFECAD5212381A0595 ;
+        :note               bdr:NT12AE2324B84DC963 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "153" .
+    
+    bdr:NT12AE2324B84DC963
+        a                   :Note ;
+        :contentLocationStatement  "pg. 509" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT24BA2B200F6C13DC
+        a                   :Title ;
+        rdfs:label          "tikkadukkapaṭṭhāna"@km-x-twktt ;
+        :femcConversionOf   bdr:TT5E220C3E46887734 .
+    
+    bdr:TT5E220C3E46887734
+        a                   :CoverTitle ;
+        rdfs:label          "tikkadukapaṭṭhāna"@km-x-twktt .
+    
+    bdr:TT80F98F3A823B47AA
+        a                   :CoverTitle ;
+        rdfs:label          "តិកទុកបដ្ឋាន"@km .
+    
+    bdr:TTC06C7381AF1C8074
+        a                   :Title ;
+        rdfs:label          "តិក្កទុក្កបដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TT80F98F3A823B47AA .
+}

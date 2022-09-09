@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020352 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020352
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020352 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0b/MW1FEMC020352.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020352 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID9C007DADBAE25590
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "c.4.II.1" .
+    
+    bdr:MFC9E17D0FA28D1F3E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "65" ;
+        :microfilmStrip     "159" .
+    
+    bdr:MW1FEMC020352
+        a                   :Instance ;
+        skos:prefLabel      "សុវណ្ណខ្យងស័ង្ខ"@km , "suvaṇṇ khyaṅ săṅkh"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID9C007DADBAE25590 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-5" ;
+        :hasTitle           bdr:TT0D41AE3301A7AE36 , bdr:TT2F3C15E0BBCCCD72 , bdr:TT3FE314AAD073B7F3 , bdr:TT85FE0F90564346AF , bdr:TTD368CB7EB217EAA4 , bdr:TTE2B47D6B7A35695D ;
+        :instanceHasReproduction  bdr:W1FEMC020352 ;
+        :instanceOf         bdr:WA1FEMC020352 , bdr:WA1FEMC120041 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFC9E17D0FA28D1F3E ;
+        :note               bdr:NT3C49B685A4F8F36C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "585" .
+    
+    bdr:NT3C49B685A4F8F36C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 69" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT0D41AE3301A7AE36
+        a                   :CoverTitle ;
+        rdfs:label          "ខ្យងស័ង្ខ"@km ;
+        :femcConversionOf   bdr:TTE2B47D6B7A35695D .
+    
+    bdr:TT2F3C15E0BBCCCD72
+        a                   :Title ;
+        rdfs:label          "suvaṇṇ khyaṅ săṅkh"@km-x-twktt .
+    
+    bdr:TT3FE314AAD073B7F3
+        a                   :Title ;
+        rdfs:label          "សុវណ្ណខ្យងស័ង្ខ"@km .
+    
+    bdr:TT85FE0F90564346AF
+        a                   :CoverTitle ;
+        rdfs:label          "khyaṅ săṅkh"@km-x-twktt ;
+        :femcConversionOf   bdr:TTD368CB7EB217EAA4 .
+    
+    bdr:TTD368CB7EB217EAA4
+        a                   :CoverTitle ;
+        rdfs:label          "kyaṅ saṅkh"@km-x-twktt .
+    
+    bdr:TTE2B47D6B7A35695D
+        a                   :CoverTitle ;
+        rdfs:label          "ខ្យងសង្ខ"@km .
+}

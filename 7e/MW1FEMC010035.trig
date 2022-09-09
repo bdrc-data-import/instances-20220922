@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010035 {
+    bda:LG212F28F524B41096
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-20"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC010035"@en ;
+        adm:logWho          bdu:U00082 .
+    
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010035
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010035 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "7e/MW1FEMC010035.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010035 ;
+        adm:logEntry        bda:LG212F28F524B41096 , bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID5A92330E0197A306
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "016-PP.00.03.01.VII" .
+    
+    bdr:MF9BF8A8ACAFE656F3
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "11" ;
+        :microfilmStrip     "41" .
+    
+    bdr:MW1FEMC010035
+        a                   :Instance ;
+        skos:prefLabel      "ភិក្ខុប្បាដិមោក្ខ"@pi-khmr , "bhikkhuppāṭimokkha"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID5A92330E0197A306 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1EF0D0326D18085A , bdr:TT7EC5BC1EF00AF602 , bdr:TT8AEF1B27207F1B66 , bdr:TTA7E028022B5D5C43 ;
+        :instanceHasReproduction  bdr:W1FEMC010035 ;
+        :isComplete         true ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF9BF8A8ACAFE656F3 ;
+        :note               bdr:NTB633F88C09658E21 , bdr:NTE64059E07DB57A84 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "B 415" .
+    
+    bdr:NTB633F88C09658E21
+        a                   :Note ;
+        :noteText           "Khmer and Roman are different in original"@en .
+    
+    bdr:NTE64059E07DB57A84
+        a                   :Note ;
+        :contentLocationStatement  "pg. 60" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT1EF0D0326D18085A
+        a                   :CoverTitle ;
+        rdfs:label          "pāṭimokkhakamvujaksaranvātavitthāra"@pi-x-twktt .
+    
+    bdr:TT7EC5BC1EF00AF602
+        a                   :Title ;
+        rdfs:label          "bhikkhuppāṭimokkha"@pi-x-twktt ;
+        :femcConversionOf   bdr:TT1EF0D0326D18085A .
+    
+    bdr:TT8AEF1B27207F1B66
+        a                   :Title ;
+        rdfs:label          "ភិក្ខុប្បាដិមោក្ខ"@pi-khmr ;
+        :femcConversionOf   bdr:TTA7E028022B5D5C43 .
+    
+    bdr:TTA7E028022B5D5C43
+        a                   :CoverTitle ;
+        rdfs:label          "បាដិមោក្ខកម្វុជក្សរន្វាតវ្យិរ​​ (ក-កូ)"@pi-khmr .
+}

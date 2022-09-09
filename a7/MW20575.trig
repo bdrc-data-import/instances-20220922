@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20575 {
+    bda:LG6E8DED014807513B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20575  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20575 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "a7/MW20575.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20575 ;
+        adm:logEntry        bda:LG6E8DED014807513B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFCC196B769E3B739
+        a                   :PublishedEvent ;
+        :eventWhen          "1990"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDA6ADC31FF016E4E4
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7805 .K86 1990" .
+    
+    bdr:IDB8B191B5C5DDFA36
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95903956" .
+    
+    bdr:IDD216222467624E6B
+        a                   bdr:HollisId ;
+        rdf:value           "014258214" .
+    
+    bdr:IDF763F4F271E93662
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542100599" .
+    
+    bdr:MW20575  a          :Instance ;
+        skos:altLabel       "tsang chuan chen ch'i liao fa"@zh-latn-wadegile ;
+        skos:prefLabel      "rtsa rlung 'khrul 'khor bklags chog ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA6ADC31FF016E4E4 , bdr:IDB8B191B5C5DDFA36 , bdr:IDD216222467624E6B , bdr:IDF763F4F271E93662 ;
+        :authorshipStatement  "kun dga' dpal ldan gyis mdzad/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "91 p." ;
+        :hasTitle           bdr:TT06A9571246E83DE9 , bdr:TT624D7D1C40D04803 , bdr:TT87B8927235761D51 ;
+        :instanceEvent      bdr:EVFCC196B769E3B739 ;
+        :instanceHasReproduction  bdr:W20575 ;
+        :instanceOf         bdr:WA20575 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT06A9571246E83DE9
+        a                   :ColophonTitle ;
+        rdfs:label          "tsang chuan chen ch'i liao fa"@zh-latn-wadegile .
+    
+    bdr:TT624D7D1C40D04803
+        a                   :Title ;
+        rdfs:label          "rtsa rlung 'khrul 'khor bklags chog ma/"@bo-x-ewts .
+    
+    bdr:TT87B8927235761D51
+        a                   :TitlePageTitle ;
+        rdfs:label          "rtsa rlung 'khrul 'khor la brten nas rnal 'byor pa rnams zab lam byang chub sgrub pa'i rim pa bklags chog ma/"@bo-x-ewts .
+}

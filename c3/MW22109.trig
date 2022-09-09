@@ -1,0 +1,101 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22109 {
+    bda:LG5B76F36AB3AC053E
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-02-27T15:42:58.065Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGC041A166C57182DA
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22109  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22109 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "c3/MW22109.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22109 ;
+        adm:logEntry        bda:LG5B76F36AB3AC053E , bda:LGC041A166C57182DA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC91528D5618AF347
+        a                   :PublishedEvent ;
+        :eventWhen          "1975-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3C5377DE3C49AED9
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "75905462" .
+    
+    bdr:ID7E2DB3A4D84D715E
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7950 .T75 1975" .
+    
+    bdr:ID8DE1810D8D6F881F
+        a                   bdr:HollisId ;
+        rdf:value           "014258627" .
+    
+    bdr:MW22109  a          :Instance , :SerialInstance ;
+        skos:altLabel       "the collected works (gsun 'bum) of rje tson-kha-pa blo-bzan-grags-pa"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_tsong kha pa/ （bkras lhun par rnying / ldi lir bskyar par brgyab pa/）"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3C5377DE3C49AED9 , bdr:ID7E2DB3A4D84D715E , bdr:ID8DE1810D8D6F881F ;
+        :biblioNote         "reproduced from an example of the old bkra-sis-lhun-po redaction from the library of klu 'khyil monastery of ladakh"@en ;
+        :extentStatement    "27 v." ;
+        :hasSourcePrintery  bdr:G2CN10913 ;
+        :hasTitle           bdr:TT1EADB58E073C5B1A , bdr:TT32AF8A32E8BF37EC , bdr:TT497C2D8A9186D7D9 ;
+        :instanceEvent      bdr:EVC91528D5618AF347 ;
+        :instanceHasReproduction  bdr:W22109 ;
+        :instanceOf         bdr:WA20510 , bdr:WA22109 ;
+        :note               bdr:NT6736931F3FFB49B2 ;
+        :numberOfVolumes    27 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "ngawang gelek demo"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS11818 ;
+        :seriesNumber       "v. 79-" .
+    
+    bdr:NT6736931F3FFB49B2
+        a                   :Note ;
+        :noteText           "-3131"@en .
+    
+    bdr:TT1EADB58E073C5B1A
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of rje tson-kha-pa blo-bzan-grags-pa"@en-x-mixed .
+    
+    bdr:TT32AF8A32E8BF37EC
+        a                   :CoverTitle ;
+        rdfs:label          "the collected works (gsun 'bum) of rje rin-po-che"@en-x-mixed .
+    
+    bdr:TT497C2D8A9186D7D9
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_tsong kha pa/ （bkras lhun par rnying / ldi lir bskyar par brgyab pa/）"@bo-x-ewts .
+}

@@ -1,0 +1,82 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020603 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020603
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020603 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1d/MW1FEMC020603.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020603 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDE500FEE032787364
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d'.236.III.3" .
+    
+    bdr:MW1FEMC020603
+        a                   :Instance ;
+        skos:prefLabel      "ត្រៃសរណគមន៍"@km , "trai saraṇagaman"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDE500FEE032787364 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT4FE00E434AE3D75A , bdr:TT50E73638D26A4C5C , bdr:TTE29C7B07B14BAEFD , bdr:TTFEAD7EE5BFA6C978 ;
+        :instanceHasReproduction  bdr:W1FEMC020603 ;
+        :instanceOf         bdr:WA1FEMC010071 , bdr:WA1FEMC020603 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT87E225F45A11CE7B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT87E225F45A11CE7B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 114" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT4FE00E434AE3D75A
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃ្យសរណគំម"@km .
+    
+    bdr:TT50E73638D26A4C5C
+        a                   :Title ;
+        rdfs:label          "ត្រៃសរណគមន៍"@km ;
+        :femcConversionOf   bdr:TT4FE00E434AE3D75A .
+    
+    bdr:TTE29C7B07B14BAEFD
+        a                   :CoverTitle ;
+        rdfs:label          "traiy° saraṇagaṃm"@km-x-twktt .
+    
+    bdr:TTFEAD7EE5BFA6C978
+        a                   :Title ;
+        rdfs:label          "trai saraṇagaman"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE29C7B07B14BAEFD .
+}

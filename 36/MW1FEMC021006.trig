@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021006 {
+    bda:LG9C65AEC343B07E9F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021006"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021006
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021006 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "36/MW1FEMC021006.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021006 ;
+        adm:logEntry        bda:LG9C65AEC343B07E9F , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID35A81B400764E2C0
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "B.3.VII" .
+    
+    bdr:MFB20CADCEA1F0B934
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "X" ;
+        :microfilmStrip     "35" .
+    
+    bdr:MW1FEMC021006
+        a                   :Instance ;
+        skos:prefLabel      "វិនយខន្ធកនិទ្ទេស"@km , "vinayakhandhakaniddesa"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID35A81B400764E2C0 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 5" ;
+        :hasTitle           bdr:TT19B6B207057E6451 , bdr:TT2602FC98A34AFB2C , bdr:TT495A4C3F34FED71A , bdr:TT7984F2A0CDDEAE3B ;
+        :instanceHasReproduction  bdr:W1FEMC021006 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFB20CADCEA1F0B934 ;
+        :note               bdr:NTBF203C448F16A61B , bdr:NTEDD7209FB95485ED ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "406" .
+    
+    bdr:NTBF203C448F16A61B
+        a                   :Note ;
+        :contentLocationStatement  "pg. 179" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NTEDD7209FB95485ED
+        a                   :Note ;
+        :noteText           "(fragment non identifié) what does it mean ?"@en .
+    
+    bdr:TT19B6B207057E6451
+        a                   :Title ;
+        rdfs:label          "វិនយខន្ធកនិទ្ទេស"@km ;
+        :femcConversionOf   bdr:TT7984F2A0CDDEAE3B .
+    
+    bdr:TT2602FC98A34AFB2C
+        a                   :Title ;
+        rdfs:label          "vinayakhandhakaniddesa"@km-x-twktt ;
+        :femcConversionOf   bdr:TT495A4C3F34FED71A .
+    
+    bdr:TT495A4C3F34FED71A
+        a                   :CoverTitle ;
+        rdfs:label          "vineyyakhandhaniddesa​​ (fragment non identifiè)"@km-x-twktt .
+    
+    bdr:TT7984F2A0CDDEAE3B
+        a                   :CoverTitle ;
+        rdfs:label          "វិនេយ្យខន្ធនិទ្ទេស"@km .
+}

@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20452 {
+    bda:LGC6CAC459BAF577B6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20452  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20452 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "be/MW20452.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20452 ;
+        adm:logEntry        bda:LGC6CAC459BAF577B6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB17B9ADA7DADCED2
+        a                   :PublishedEvent ;
+        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1A6B4758CFD4A4F8
+        a                   bdr:HollisId ;
+        rdf:value           "014258160" .
+    
+    bdr:ID208445A977CA84E5
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7540918683" .
+    
+    bdr:MW20452  a          :Instance ;
+        skos:prefLabel      "nam sprul 'jigs med phun tshogs dang mkha' 'gro tA re lha mo'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1A6B4758CFD4A4F8 , bdr:ID208445A977CA84E5 ;
+        :authorshipStatement  "padma 'od gsal mtha' yas kyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "4, 161 p." ;
+        :hasTitle           bdr:TT45A24AE2A720168D , bdr:TT8445AD90772CFDE8 ;
+        :illustrations      "ill." ;
+        :instanceEvent      bdr:EVB17B9ADA7DADCED2 ;
+        :instanceHasReproduction  bdr:W20452 ;
+        :instanceOf         bdr:WA20452 ;
+        :note               bdr:NTFA84C9494ADA024A ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "khreng tu'u"@en ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTFA84C9494ADA024A
+        a                   :Note ;
+        :noteText           "biographies of nam sprul 'jigs med phun tshogs (b. 1944) and mkha' 'gro tA re lha mo (b. 1938)\n\ntbrc holds digitally scanned images, tiffs and pdf files; scanned for preservation purposes only; not for distribution\n4754"@en .
+    
+    bdr:TT45A24AE2A720168D
+        a                   :TitlePageTitle ;
+        rdfs:label          "skyabs rje nam sprul rin po che 'jigs med phun tshogs dang mkha' 'gro tA re lha mo mchog gi rnam thar rig 'dzin mkha' 'gro dgyes pa'i mchod sprin/"@bo-x-ewts .
+    
+    bdr:TT8445AD90772CFDE8
+        a                   :Title ;
+        rdfs:label          "nam sprul 'jigs med phun tshogs dang mkha' 'gro tA re lha mo'i rnam thar/"@bo-x-ewts .
+}

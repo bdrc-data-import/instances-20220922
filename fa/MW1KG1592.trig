@@ -1,0 +1,78 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1592 {
+    bda:LG2198F2A6B54B5D03
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-01-29T15:16:59.178Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1592  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1592 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fa/MW1KG1592.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1592 ;
+        adm:logEntry        bda:LG2198F2A6B54B5D03 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9968E3E77562D9D3
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDD8E8AF33D56C5306
+        a                   bdr:HollisId ;
+        rdf:value           "014256311" .
+    
+    bdr:MW1KG1592  a        :Instance ;
+        skos:prefLabel      "sa skya legs bshad don 'grel/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD8E8AF33D56C5306 ;
+        :authorshipStatement  "sa skya mkhan po sangs rgyas bstan 'dzin gyis brtsams/"@bo-x-ewts ;
+        :extentStatement    "400 p." ;
+        :hasTitle           bdr:TT07E54C9D39413FBC , bdr:TT2F74A7DFA6740E15 ;
+        :illustrations      "ill. (col.)" ;
+        :instanceEvent      bdr:EV9968E3E77562D9D3 ;
+        :instanceHasReproduction  bdr:W1KG1592 ;
+        :instanceOf         bdr:WA1KG1592 , bdr:WA20459 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "shoreline, wa"@en ;
+        :publisherName      "sapan institute"@en ;
+        :script             bdr:ScriptTibt ;
+        :workPrintery       "delhi/"@bo-x-ewts .
+    
+    bdr:TT07E54C9D39413FBC
+        a                   :Title ;
+        rdfs:label          "sa skya legs bshad don 'grel/"@bo-x-ewts .
+    
+    bdr:TT2F74A7DFA6740E15
+        a                   :ColophonTitle ;
+        rdfs:label          "legs par bshad pa rin po che'i gter gyi don 'grel blo gsal bung ba'i bsti gnas/"@bo-x-ewts .
+}

@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14472 {
+    bda:LG8ED025C0374FF65E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-06-14T15:36:08.278Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14472  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14472 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "17/MW1KG14472.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14472 ;
+        adm:logEntry        bda:LG8ED025C0374FF65E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA536172FB7A44A14
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID011042AD73C31E49
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2011354318" .
+    
+    bdr:ID0D316C558902A440
+        a                   bdr:HollisId ;
+        rdf:value           "014256131" .
+    
+    bdr:ID335838426D425894
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787800579653" .
+    
+    bdr:IDB367705CAEF33DCD
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3705 .B73 2008" .
+    
+    bdr:MW1KG14472  a       :Instance ;
+        skos:altLabel       "吴钰论文集"@zh-hans ;
+        skos:prefLabel      "bu bzhi don grub gyi ched rtsom phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID011042AD73C31E49 , bdr:ID0D316C558902A440 , bdr:ID335838426D425894 , bdr:IDB367705CAEF33DCD ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 8, 473 p." ;
+        :hasTitle           bdr:TT5CBEA3C91A791DAE , bdr:TT990B040336D70B34 , bdr:TTBBE41AF738583769 ;
+        :instanceEvent      bdr:EVA536172FB7A44A14 ;
+        :instanceHasReproduction  bdr:W1KG14472 ;
+        :instanceOf         bdr:WA1KG14472 ;
+        :note               bdr:NT28547190C62AA255 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@en ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT28547190C62AA255
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TT5CBEA3C91A791DAE
+        a                   :Title ;
+        rdfs:label          "bu bzhi don grub gyi ched rtsom phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT990B040336D70B34
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "吴钰论文集"@zh-hans .
+    
+    bdr:TTBBE41AF738583769
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "wu yu lun wen ji"@zh-latn-pinyin-x-ndia .
+}

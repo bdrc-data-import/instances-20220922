@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043330 {
+    bda:LGD83C2C14CF139874
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043330"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043330
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043330 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ae/MW1FEMC043330.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043330 ;
+        adm:logEntry        bda:LGD83C2C14CF139874 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0FE7382809830751
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "005-B.11.02.01.III.1" .
+    
+    bdr:MF1C7DD1A6ED7A5541
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "193" .
+    
+    bdr:MW1FEMC043330
+        a                   :Instance ;
+        skos:prefLabel      "ពោធីបក្ខីយធម៌"@km , "bodhī pakkhīy dhamr"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0FE7382809830751 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2, 3, 5" ;
+        :hasTitle           bdr:TTC366049FAE0572F7 , bdr:TTD05D500EA752B967 ;
+        :instanceHasReproduction  bdr:W1FEMC033330 , bdr:W1FEMC043330 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF1C7DD1A6ED7A5541 ;
+        :note               bdr:NT847253ED3949C15E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT847253ED3949C15E
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTC366049FAE0572F7
+        a                   :Title ;
+        rdfs:label          "bodhī pakkhīy dhamr"@km-x-twktt .
+    
+    bdr:TTD05D500EA752B967
+        a                   :Title ;
+        rdfs:label          "ពោធីបក្ខីយធម៌"@km .
+}

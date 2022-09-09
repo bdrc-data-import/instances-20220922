@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG12288 {
+    bda:LGBD4A7F3136F89349
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-27T11:13:53.954Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGF808A828BD5F38F2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-04-26T16:25:20.142Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG12288  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG12288 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "da/MW1KG12288.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG12288 ;
+        adm:logEntry        bda:LGBD4A7F3136F89349 , bda:LGF808A828BD5F38F2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD82802EFF27F7505
+        a                   bdr:HollisId ;
+        rdf:value           "014255847" .
+    
+    bdr:MW1KG12288  a       :Instance ;
+        skos:prefLabel      "smin gling rdor sems thugs sgrub skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD82802EFF27F7505 ;
+        :biblioNote         "hand written manuscript in dbu med"@en ;
+        :extentStatement    "524 p." ;
+        :hasTitle           bdr:TT52B660C318941EAE , bdr:TT567C13099B55D705 ;
+        :instanceHasReproduction  bdr:W1KG12288 ;
+        :instanceOf         bdr:WA1KG12288 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT52B660C318941EAE
+        a                   :CoverTitle ;
+        rdfs:label          "smin gling rdor sems thugs kyi sgrub pa'i bskor cha tshang ba/"@bo-x-ewts .
+    
+    bdr:TT567C13099B55D705
+        a                   :Title ;
+        rdfs:label          "smin gling rdor sems thugs sgrub skor/"@bo-x-ewts .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC046079 {
+    bda:LG7A8411F2B21CC7DB
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC046079"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC046079
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC046079 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8a/MW1FEMC046079.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC046079 ;
+        adm:logEntry        bda:LG7A8411F2B21CC7DB , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID01C1833E61E76D95
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "038-B.04.03.03.II.1" .
+    
+    bdr:MF2CCE1063E4F64333
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "174" .
+    
+    bdr:MW1FEMC046079
+        a                   :Instance ;
+        skos:prefLabel      "ស្រទព្វចេក"@km , "Sradabba Cek"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID01C1833E61E76D95 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-4" ;
+        :hasTitle           bdr:TT09D35F80BD1186AD , bdr:TTDD316298DF87849F ;
+        :instanceHasReproduction  bdr:W1FEMC036079 , bdr:W1FEMC046079 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF2CCE1063E4F64333 ;
+        :note               bdr:NT713A8532C9E04174 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT713A8532C9E04174
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT09D35F80BD1186AD
+        a                   :Title ;
+        rdfs:label          "Sradabba Cek"@km-x-twktt .
+    
+    bdr:TTDD316298DF87849F
+        a                   :Title ;
+        rdfs:label          "ស្រទព្វចេក"@km .
+}

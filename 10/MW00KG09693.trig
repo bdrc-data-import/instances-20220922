@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09693 {
+    bda:LG85DF823F2FBEE8BD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-06-05T12:23:00.075Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09693  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09693 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "10/MW00KG09693.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09693 ;
+        adm:logEntry        bda:LG85DF823F2FBEE8BD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04A3E8F66FFA2668
+        a                   :PublishedEvent ;
+        :eventWhen          "1989"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID28BAE38047329871
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542100122" .
+    
+    bdr:IDC8D2FC511CD485B5
+        a                   bdr:HollisId ;
+        rdf:value           "014254543" .
+    
+    bdr:MW00KG09693  a      :Instance ;
+        skos:altLabel       "zhang jia guo shi ruo bai duo jie zhuan"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "lcang skya rol pa'i rdo rje'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID28BAE38047329871 , bdr:IDC8D2FC511CD485B5 ;
+        :authorshipStatement  "thu'u bkwan chos kyi nyi mas brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 2, 806 p." ;
+        :hasTitle           bdr:TT6C1A63D2ECB9F3D7 , bdr:TT71D85F257D1422EA , bdr:TT84F5D263171005EC ;
+        :instanceEvent      bdr:EV04A3E8F66FFA2668 ;
+        :instanceHasReproduction  bdr:IE00KG09693 , bdr:W00KG09693 ;
+        :instanceOf         bdr:WA00KG09693 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT6C1A63D2ECB9F3D7
+        a                   :ColophonTitle ;
+        rdfs:label          "zhang jia guo shi ruo bai duo jie zhuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT71D85F257D1422EA
+        a                   :TitlePageTitle ;
+        rdfs:label          "khyab bdag rdo rje sems dpa'i ngo bo dpal ldan bla ma dam pa ye shes bstan pa'i sgron me dpal bzang po'i rnam par thar pa mdo tsam brjod pa dge ldan bstan pa'i mdzes rgyan/"@bo-x-ewts .
+    
+    bdr:TT84F5D263171005EC
+        a                   :Title ;
+        rdfs:label          "lcang skya rol pa'i rdo rje'i rnam thar/"@bo-x-ewts .
+}

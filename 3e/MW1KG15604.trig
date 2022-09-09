@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG15604 {
+    bda:LG933712C0F9B6A83F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-10-24T10:29:51.928Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG15604  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG15604 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3e/MW1KG15604.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG15604 ;
+        adm:logEntry        bda:LG933712C0F9B6A83F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBEF4744AAA1A92D4
+        a                   :PublishedEvent ;
+        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDFDDF7B84F2CC8734
+        a                   bdr:HollisId ;
+        rdf:value           "014256301" .
+    
+    bdr:MW1KG15604  a       :Instance , :SerialInstance ;
+        skos:prefLabel      "dbu ma dgongs pa rab gsal/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFDDF7B84F2CC8734 ;
+        :authorshipStatement  "dpal ldan zla grags dang rje blo bzang grags pa/"@bo-x-ewts ;
+        :biblioNote         "reproduced of the text published by drepung loseling monestary, mundgod, karnataka"@en ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :extentStatement    "3, lii, 647 p." ;
+        :hasTitle           bdr:TT226A27DC5362E8F8 , bdr:TTF1C6393FF09AB452 , bdr:TTF76A81ED55BD354F ;
+        :instanceEvent      bdr:EVBEF4744AAA1A92D4 ;
+        :instanceHasReproduction  bdr:W1KG15604 ;
+        :instanceOf         bdr:WA1KG15604 , bdr:WA1KG4469 ;
+        :note               bdr:NT0D5991172B02AF9B , bdr:NTD7E8CA30F7462811 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "ser gtsug nang bstan dpe rnying 'tshol bsdu phyogs sgrig khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS140 ;
+        :seriesNumber       "24" .
+    
+    bdr:NT0D5991172B02AF9B
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:NTD7E8CA30F7462811
+        a                   :Note ;
+        :noteText           "cover title mentioned dbu ma 'jug pa'i rang 'grel dang rnam bshad dgongs pa rab gsal, inside it is only dbu ma dgongs pa rab gsal"@en .
+    
+    bdr:TT226A27DC5362E8F8
+        a                   :CoverTitle ;
+        rdfs:label          "dbu ma 'jug pa'i rang 'grel dang rnam bshad dgongs pa rab gsal/"@bo-x-ewts .
+    
+    bdr:TTF1C6393FF09AB452
+        a                   :TitlePageTitle ;
+        rdfs:label          "dbu ma la 'jug pa'i rgya cher bshad pa dgongs pa rab gsal/"@bo-x-ewts .
+    
+    bdr:TTF76A81ED55BD354F
+        a                   :Title ;
+        rdfs:label          "dbu ma dgongs pa rab gsal/"@bo-x-ewts .
+}

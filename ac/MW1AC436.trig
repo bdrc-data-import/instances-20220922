@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1AC436 {
+    bda:LG25D83A8EE7209CE7
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-12-15T17:28:37.872Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00029 .
+    
+    bda:LG3BC8AA5FEACF58BB
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-16T10:21:53.798Z"^^xsd:dateTime ;
+        adm:logMessage      "edited isbn, added topic, cat info, series name and number, edition"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGED91A567948DC617
+        a                   adm:UpdateData ;
+        adm:logDate         "2017-04-19T04:00:54.064Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00021 .
+    
+    bda:MW1AC436  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1AC436 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ac/MW1AC436.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1AC436 ;
+        adm:logEntry        bda:LG25D83A8EE7209CE7 , bda:LG3BC8AA5FEACF58BB , bda:LGED91A567948DC617 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA6745E09037E0290
+        a                   :PublishedEvent ;
+        :eventWhen          "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID818C60367BC326C6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542018694" .
+    
+    bdr:MW1AC436  a         :Instance , :SerialInstance ;
+        skos:altLabel       "藏族现代诗学"@zh-hans ;
+        skos:prefLabel      "bod kyi deng rabs snyan ngag rig pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID818C60367BC326C6 ;
+        :authorshipStatement  "lcags rdor rgyal gyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "2013 par gzhi dang po/ 2013 par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "[1] 259 p." ;
+        :hasTitle           bdr:TT1D924D021E236921 , bdr:TT2BF70832C51FD007 , bdr:TT5BA7ED1F44879762 ;
+        :instanceEvent      bdr:EVA6745E09037E0290 ;
+        :instanceHasReproduction  bdr:W1AC436 ;
+        :instanceOf         bdr:WA1AC436 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG25476 ;
+        :seriesNumber       "dang po/" .
+    
+    bdr:TT1D924D021E236921
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod kyi deng rabs snyan ngag rig pa/"@bo-x-ewts .
+    
+    bdr:TT2BF70832C51FD007
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zang zu xian dai shi xue"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT5BA7ED1F44879762
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏族现代诗学"@zh-hans .
+}

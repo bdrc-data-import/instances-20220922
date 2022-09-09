@@ -1,0 +1,81 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020763 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020763
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020763 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "02/MW1FEMC020763.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020763 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF124B8216BF58FF0
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.396.III.3" .
+    
+    bdr:MW1FEMC020763
+        a                   :Instance ;
+        skos:prefLabel      "សិក្ខាបទប្រញប្តិ"@km , "sikkhā pad prañapti"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF124B8216BF58FF0 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT2FF038B60BEA6F5F , bdr:TT5CDB90B9C27DF4C3 , bdr:TT7B2B3CDA0B3F3837 , bdr:TT9A130244743E736B ;
+        :instanceHasReproduction  bdr:W1FEMC020763 ;
+        :instanceOf         bdr:WA1FEMC020763 , bdr:WA1FEMC030023 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT3B344211463F0CE9 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT3B344211463F0CE9
+        a                   :Note ;
+        :contentLocationStatement  "pg. 138" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2FF038B60BEA6F5F
+        a                   :CoverTitle ;
+        rdfs:label          "បឋមប្រញប្ត"@km .
+    
+    bdr:TT5CDB90B9C27DF4C3
+        a                   :Title ;
+        rdfs:label          "sikkhā pad prañapti"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7B2B3CDA0B3F3837 .
+    
+    bdr:TT7B2B3CDA0B3F3837
+        a                   :CoverTitle ;
+        rdfs:label          "paṭham prañāpt"@km-x-twktt .
+    
+    bdr:TT9A130244743E736B
+        a                   :Title ;
+        rdfs:label          "សិក្ខាបទប្រញប្តិ"@km ;
+        :femcConversionOf   bdr:TT2FF038B60BEA6F5F .
+}

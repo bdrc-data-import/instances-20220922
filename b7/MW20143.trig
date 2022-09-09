@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20143 {
+    bda:LGC180AD123C44EFD9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGD3CF1853F520468E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-06T13:22:44.973Z"^^xsd:dateTime ;
+        adm:logMessage      "added cat info, print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20143  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20143 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b7/MW20143.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20143 ;
+        adm:logEntry        bda:LGC180AD123C44EFD9 , bda:LGD3CF1853F520468E , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV96EB71F6C788367E
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID48F26B3FBDD5A77E
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105034661" .
+    
+    bdr:IDC460F7D302731EA0
+        a                   bdr:HollisId ;
+        rdf:value           "014258070" .
+    
+    bdr:MW20143  a          :Instance ;
+        skos:altLabel       "西藏笑话集锦"@zh-hans ;
+        skos:prefLabel      "bod kyi dgod gtam phyogs bsgrigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID48F26B3FBDD5A77E , bdr:IDC460F7D302731EA0 ;
+        :authorshipStatement  "spangs rgyan me tog rtsom sgrig khang nas rtsom sgrig byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "11, 387 p." ;
+        :hasTitle           bdr:TT114F7FD33981CB24 , bdr:TT7910BE4EF664EEC6 , bdr:TTEE4DCA006B618904 ;
+        :instanceEvent      bdr:EV96EB71F6C788367E ;
+        :instanceHasReproduction  bdr:W20143 ;
+        :instanceOf         bdr:WA20143 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe srkun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT114F7FD33981CB24
+        a                   :Title ;
+        rdfs:label          "bod kyi dgod gtam phyogs bsgrigs/"@bo-x-ewts .
+    
+    bdr:TT7910BE4EF664EEC6
+        a                   :OtherTitle ;
+        rdfs:label          "西藏笑话集锦"@zh-hans .
+    
+    bdr:TTEE4DCA006B618904
+        a                   :OtherTitle ;
+        rdfs:label          "xizang xiao hua ji jin"@zh-latn-pinyin-x-ndia .
+}

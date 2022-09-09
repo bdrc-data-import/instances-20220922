@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC047422 {
+    bda:LG3196D520E4A5092D
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC047422"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC047422
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC047422 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "39/MW1FEMC047422.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC047422 ;
+        adm:logEntry        bda:LG3196D520E4A5092D , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6D264A8A39A198A1
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.74.VII" .
+    
+    bdr:MF73EB1FA16256A357
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "174" ;
+        :microfilmStrip     "45" .
+    
+    bdr:MW1FEMC047422
+        a                   :Instance ;
+        skos:prefLabel      "សព្វទានានិសំសកថា"@pi-khmr , "Sabbadā​​​nā​​​ Nisam Sakathā"@pi-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6D264A8A39A198A1 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TTB6978D9E7D813A8C , bdr:TTBF2A83A321978EF7 ;
+        :instanceHasReproduction  bdr:W1FEMC037422 , bdr:W1FEMC047422 ;
+        :isComplete         false ;
+        :language           bdr:LangPi ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF73EB1FA16256A357 ;
+        :note               bdr:NT49E600DDB7EAC2B2 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT49E600DDB7EAC2B2
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TTB6978D9E7D813A8C
+        a                   :Title ;
+        rdfs:label          "Sabbadā​​​nā​​​ Nisam Sakathā"@pi-x-twktt .
+    
+    bdr:TTBF2A83A321978EF7
+        a                   :Title ;
+        rdfs:label          "សព្វទានានិសំសកថា"@pi-khmr .
+}

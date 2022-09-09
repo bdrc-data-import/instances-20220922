@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21663 {
+    bda:LG020FECFD7ED17F65
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG2EE5AA8112C17840
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-05-05T15:45:06.898Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW21663  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21663 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "bc/MW21663.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21663 ;
+        adm:logEntry        bda:LG020FECFD7ED17F65 , bda:LG2EE5AA8112C17840 , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C7CDC85048ADBD3
+        a                   :PublishedEvent ;
+        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8276E4A48288FE19
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "RC80 .N59 1999" .
+    
+    bdr:IDCCB4F0A6F67DD411
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001291213" .
+    
+    bdr:IDED23AD7A3D597757
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7542106945" .
+    
+    bdr:MW21663  a          :Instance ;
+        skos:altLabel       "尼达藏医药论文集"@zh-hans ;
+        skos:prefLabel      "nyi zla'i gso rig ched rtsom gces btus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8276E4A48288FE19 , bdr:IDCCB4F0A6F67DD411 , bdr:IDED23AD7A3D597757 ;
+        :authorshipStatement  "nyi zla lce nag tshang gis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 11, 239 p." ;
+        :hasTitle           bdr:TT5FBA27293E8CA223 , bdr:TTAEE24A56CFFD2A4F , bdr:TTDF1CE3954609AF21 ;
+        :instanceEvent      bdr:EV0C7CDC85048ADBD3 ;
+        :instanceHasReproduction  bdr:W21663 ;
+        :instanceOf         bdr:WA21663 ;
+        :note               bdr:NT0382BF6266D5592C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT0382BF6266D5592C
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 8068"@en .
+    
+    bdr:TT5FBA27293E8CA223
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "ni da zang yi yao lun wen ji"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTAEE24A56CFFD2A4F
+        a                   :Title ;
+        rdfs:label          "nyi zla'i gso rig ched rtsom gces btus/"@bo-x-ewts .
+    
+    bdr:TTDF1CE3954609AF21
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "尼达藏医药论文集"@zh-hans .
+}

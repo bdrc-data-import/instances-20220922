@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN5549 {
+    bda:LGE8CDAA9FBF583C4F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-04-28T15:19:27.032Z"^^xsd:dateTime ;
+        adm:logMessage      "realeased"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW3CN5549  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN5549 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3f/MW3CN5549.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN5549 ;
+        adm:logEntry        bda:LGE8CDAA9FBF583C4F , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV81E82C7D003ABD26
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID085E8D6B338C1038
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004314734" .
+    
+    bdr:ID81F3951A65C55F19
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223017341" .
+    
+    bdr:ID9001A2985A87D32D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ930 .K7618 2004" .
+    
+    bdr:MW3CN5549  a        :Instance ;
+        skos:prefLabel      "dpag bsam 'khri shing /"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID085E8D6B338C1038 , bdr:ID81F3951A65C55F19 , bdr:ID9001A2985A87D32D ;
+        :authorshipStatement  "rgyal po dge ba'i dbang pos mdzad ; shong ston rdo rje rgyal mtshan sogs kyis bsgyur/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "4, 492 p." ;
+        :hasTitle           bdr:TTB83365ADD4FCC8A3 , bdr:TTCD2241333FB188E2 , bdr:TTF35ADCE914794E3C ;
+        :instanceEvent      bdr:EV81E82C7D003ABD26 ;
+        :instanceHasReproduction  bdr:W3CN5549 ;
+        :instanceOf         bdr:WA3CN5549 ;
+        :note               bdr:NT5D23F7C366B7B92B ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa"@en ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT5D23F7C366B7B92B
+        a                   :Note ;
+        :noteSource         bdr:MW29151 ;
+        :noteText           "Dub"@en .
+    
+    bdr:TTB83365ADD4FCC8A3
+        a                   :TitlePageTitle ;
+        rdfs:label          "byang chub sems dpa'i rtogs pa brjod pa dpag bsam gyi 'khri shing /"@bo-x-ewts .
+    
+    bdr:TTCD2241333FB188E2
+        a                   :OtherTitle ;
+        rdfs:label          "bodhisattvavadanakalpalata/"@bo-x-ewts .
+    
+    bdr:TTF35ADCE914794E3C
+        a                   :Title ;
+        rdfs:label          "dpag bsam 'khri shing /"@bo-x-ewts .
+}

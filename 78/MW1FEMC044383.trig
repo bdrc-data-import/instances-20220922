@@ -1,0 +1,72 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC044383 {
+    bda:LG4C9C9DB7E8801830
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC044383"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC044383
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC044383 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "78/MW1FEMC044383.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC044383 ;
+        adm:logEntry        bda:LG4C9C9DB7E8801830 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDCEB2B7DEB01CABF6
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "024-B.09.12.01.III.6" .
+    
+    bdr:MF4FB846734FA1F9FD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "165" .
+    
+    bdr:MW1FEMC044383
+        a                   :Instance ;
+        skos:prefLabel      "ធម្មគោរុព្វធម៌"@km , "dhamm gorubb dhãm"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDCEB2B7DEB01CABF6 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasTitle           bdr:TT9376B5CB8E0259A9 , bdr:TTB19F3AF6147958E6 ;
+        :instanceHasReproduction  bdr:W1FEMC034383 , bdr:W1FEMC044383 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF4FB846734FA1F9FD ;
+        :note               bdr:NTFB0972F050E5FF86 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTFB0972F050E5FF86
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT9376B5CB8E0259A9
+        a                   :Title ;
+        rdfs:label          "ធម្មគោរុព្វធម៌"@km .
+    
+    bdr:TTB19F3AF6147958E6
+        a                   :Title ;
+        rdfs:label          "dhamm gorubb dhãm"@km-x-twktt .
+}

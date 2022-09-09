@@ -1,0 +1,88 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW21143 {
+    bda:LG12F37097D3F1A137
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG6E18D4DA2BF3F955
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-05-20T10:05:48.047Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGAC195591729DA77B
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-05-21T12:00:51.227Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW21143  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW21143 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "d7/MW21143.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW21143 ;
+        adm:logEntry        bda:LG12F37097D3F1A137 , bda:LG6E18D4DA2BF3F955 , bda:LGAC195591729DA77B , bda:LGIM3B24E310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV050E3BFAC84B7DB3
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4F9ED32664954EB7
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4860.C353 J37 1985" .
+    
+    bdr:ID56CE8E7D773F513E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902206" .
+    
+    bdr:MW21143  a          :Instance ;
+        skos:altLabel       "a detailed exegesis of the utpattikrama of Cakrasamvara, according to the mkha' 'gro snyan brgyud oral transmission of the 'brug-pa dkar-brgyud-pa"@en ;
+        skos:prefLabel      "bde mchog snyan rgyud kyi bskyed rim rnam bshad/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4F9ED32664954EB7 , bdr:ID56CE8E7D773F513E ;
+        :authorshipStatement  "by the fourth bde-chen-chos-'khor yongs-'dzin 'jam-dpal-dpa'-bo (1720-1780)"@en ;
+        :biblioNote         "reproduced from a rare manuscript from bhutan"@en ;
+        :extentStatement    "687 p." ;
+        :hasTitle           bdr:TT074D931A97FABDA5 , bdr:TT73184A2EA3FEE0CE , bdr:TTF07BD17CF9CB48F4 ;
+        :instanceEvent      bdr:EV050E3BFAC84B7DB3 ;
+        :instanceHasReproduction  bdr:W21143 ;
+        :instanceOf         bdr:WA21143 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "palampur, dist. kangra, h.p."@en ;
+        :publisherName      "khampa gar monastery"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT074D931A97FABDA5
+        a                   :OtherTitle ;
+        rdfs:label          "a detailed exegesis of the utpattikrama of Cakrasamvara, according to the mkha' 'gro snyan brgyud oral transmission of the 'brug-pa dkar-brgyud-pa"@en .
+    
+    bdr:TT73184A2EA3FEE0CE
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal mkha' 'gro snyan brgyud kyi yab bka' rgyas pa'i bskyed rim rnam bshad grub gnyis rin chen 'byung gnas/"@bo-x-ewts .
+    
+    bdr:TTF07BD17CF9CB48F4
+        a                   :Title ;
+        rdfs:label          "bde mchog snyan rgyud kyi bskyed rim rnam bshad/"@bo-x-ewts .
+}

@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC043658 {
+    bda:LG8F2A5DCE40B5B581
+        a                   adm:InitialDataCreation ;
+        adm:logMessage      "entered cataloging for W1FEMC043658"@en .
+    
+    bda:LGIM1163D81E  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc04-import.xql" ;
+        adm:logDate         "2021-10-20T16:40:23.637Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC043658
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC043658 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1c/MW1FEMC043658.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC043658 ;
+        adm:logEntry        bda:LG8F2A5DCE40B5B581 , bda:LGIM1163D81E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDBC1B9F21D920EC60
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "005-B.11.13.01.III.1" .
+    
+    bdr:MF198CD683D9F16D91
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "198" .
+    
+    bdr:MW1FEMC043658
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះពុទ្ធឃោសារ"@km , "braẖ buddh gosār"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDBC1B9F21D920EC60 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1-5" ;
+        :hasTitle           bdr:TT19A257D86C981277 , bdr:TT5AB21204FB8CE2EA ;
+        :instanceHasReproduction  bdr:W1FEMC033658 , bdr:W1FEMC043658 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF198CD683D9F16D91 ;
+        :note               bdr:NT4B82F42FB971A51F ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT4B82F42FB971A51F
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC04 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT19A257D86C981277
+        a                   :Title ;
+        rdfs:label          "braẖ buddh gosār"@km-x-twktt .
+    
+    bdr:TT5AB21204FB8CE2EA
+        a                   :Title ;
+        rdfs:label          "ព្រះពុទ្ធឃោសារ"@km .
+}

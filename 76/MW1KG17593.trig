@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG17593 {
+    bda:LG958565E85F2E6890
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2014-06-20T12:52:12.658Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG17593  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG17593 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "76/MW1KG17593.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG17593 ;
+        adm:logEntry        bda:LG958565E85F2E6890 , bda:LGIM3B24E310 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRF113C3CCAFCCBBCE
+        a                   :AgentAsCreator ;
+        :agent              bdr:P3511 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV79B471729D1175E5
+        a                   :PublishedEvent ;
+        :eventWhen          "1973"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID25508B9BC123D2F2
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "74900315" .
+    
+    bdr:ID4268057A8A2FB4DA
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "001593150" .
+    
+    bdr:ID4CC2672B21DFCDC4
+        a                   bdr:HollisId ;
+        rdf:value           "014256525" .
+    
+    bdr:IDFF423AD4910CB501
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7675.4 .M54 1973" .
+    
+    bdr:MW1KG17593  a       :Instance ;
+        skos:altLabel       "Nalendraʾi lha bsaṅs chen mo : rituals followed at ʾPhan-po Nalendra for propitiating Vaiśravana, Devi, Gñan-chen Thaṅ-lha, Rgyal-po and Dgra-lha"@en-x-mixed ;
+        skos:prefLabel      "na len+dra'i lha bsang chen mo/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID25508B9BC123D2F2 , bdr:ID4268057A8A2FB4DA , bdr:ID4CC2672B21DFCDC4 , bdr:IDFF423AD4910CB501 ;
+        :biblioNote         "reproduced from a print of the nalendra blocks"@en ;
+        :creator            bdr:CRF113C3CCAFCCBBCE ;
+        :extentStatement    "176 p." ;
+        :hasSourcePrintery  bdr:G233 ;
+        :hasTitle           bdr:TT435DAA9CED600C0F , bdr:TTA75B729C84710496 ;
+        :instanceEvent      bdr:EV79B471729D1175E5 ;
+        :instanceHasReproduction  bdr:W1KG17593 ;
+        :instanceOf         bdr:WA1KG17593 ;
+        :note               bdr:NTC46028D206A95395 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "delhi"@en ;
+        :publisherName      "ngawang topgay"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTC46028D206A95395
+        a                   :Note ;
+        :noteText           "scanned made available through the kindly lending the books by guru lama"@en .
+    
+    bdr:TT435DAA9CED600C0F
+        a                   :Title ;
+        rdfs:label          "na len+dra'i lha bsang chen mo/"@bo-x-ewts .
+    
+    bdr:TTA75B729C84710496
+        a                   :TitlePageTitle ;
+        rdfs:label          "Nalendraʾi lha bsaṅs chen mo : rituals followed at ʾPhan-po Nalendra for propitiating Vaiśravana, Devi, Gñan-chen Thaṅ-lha, Rgyal-po and Dgra-lha"@en-x-mixed .
+}

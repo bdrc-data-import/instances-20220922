@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23380 {
+    bda:LG0EE003BA2724C341
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-19T10:14:44.904Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG762DFE59B2539215
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23380  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23380 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "be/MW23380.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23380 ;
+        adm:logEntry        bda:LG0EE003BA2724C341 , bda:LG762DFE59B2539215 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEA11E8020BC65036
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID05B65C6D9B968961
+        a                   bdr:HollisId ;
+        rdf:value           "014258890" .
+    
+    bdr:ID27E648A6AEC7F977
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903749" .
+    
+    bdr:IDA7B41DCDCA7C2432
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7662.9.A2 N36 1985" .
+    
+    bdr:MW23380  a          :Instance , :SerialInstance ;
+        skos:altLabel       "the biographies of the early masters in the transmission lineage of the bka' brgyad bde gsegs 'dus pa teachings revealed by mna'-bdag myan-ral ni-ma-'od-zer"@en-x-mixed ;
+        skos:prefLabel      "mnga' bdag bla ma'i rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID05B65C6D9B968961 , bdr:ID27E648A6AEC7F977 , bdr:IDA7B41DCDCA7C2432 ;
+        :biblioNote         "reproduced from a rare manuscript from the monastery of gnam-rtse in sikkim"@en ;
+        :extentStatement    "310 p." ;
+        :hasTitle           bdr:TT06556F87045ED4FE , bdr:TTE22E0E53B47D4A6D ;
+        :instanceEvent      bdr:EVEA11E8020BC65036 ;
+        :instanceHasReproduction  bdr:W23380 ;
+        :instanceOf         bdr:WA23380 ;
+        :note               bdr:NT6014A7B3BC0260B0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "rewalsar"@en ;
+        :publisherName      "zigar drukpa kargyud institute"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :serialInstanceOf   bdr:WAS10206 ;
+        :seriesNumber       "v. 122" .
+    
+    bdr:NT6014A7B3BC0260B0
+        a                   :Note ;
+        :noteText           ".\n1563."@en .
+    
+    bdr:TT06556F87045ED4FE
+        a                   :TitlePageTitle ;
+        rdfs:label          "the biographies of the early masters in the transmission lineage of the bka' brgyad bde gsegs 'dus pa teachings revealed by mna'-bdag myan-ral ni-ma-'od-zer"@en-x-mixed .
+    
+    bdr:TTE22E0E53B47D4A6D
+        a                   :Title ;
+        rdfs:label          "mnga' bdag bla ma'i rnam thar/"@bo-x-ewts .
+}

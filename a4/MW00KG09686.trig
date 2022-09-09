@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW00KG09686 {
+    bda:LG4D52B47C5943BE9B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2008-06-05T12:41:11.457Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW00KG09686  a      adm:AdminData ;
+        adm:adminAbout      bdr:MW00KG09686 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a4/MW00KG09686.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW00KG09686 ;
+        adm:logEntry        bda:LG4D52B47C5943BE9B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB71F9C5F6B54C21D
+        a                   :PublishedEvent ;
+        :eventWhen          "1987"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID6C47A84C5D0FD652
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "93927796" .
+    
+    bdr:IDA7A6DC1FF98C1ADE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6349.R632 B573 1987" .
+    
+    bdr:IDFEB760AC903B3F9C
+        a                   bdr:HollisId ;
+        rdf:value           "014254540" .
+    
+    bdr:MW00KG09686  a      :Instance ;
+        skos:altLabel       "la pu leng shi zhi"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bla brang bkra shis 'khyil gyi gdan rabs lha'i rnga chen/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6C47A84C5D0FD652 , bdr:IDA7A6DC1FF98C1ADE , bdr:IDFEB760AC903B3F9C ;
+        :authorshipStatement  "dbal mang paN+Di tas mdzad/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :extentStatement    "2, 5, 6, 5, 577 p." ;
+        :hasTitle           bdr:TT0503A26A56085620 , bdr:TT079D32AB1C70E19B , bdr:TT77B85BC4556FB051 ;
+        :instanceEvent      bdr:EVB71F9C5F6B54C21D ;
+        :instanceHasReproduction  bdr:IE00KG09686 , bdr:W00KG09686 ;
+        :instanceOf         bdr:WA00KG09686 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        :publisherName      "Kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT0503A26A56085620
+        a                   :TitlePageTitle ;
+        rdfs:label          "mdo smad bstan pa'i 'byung gnas dpal ldan bkra shis 'khyil gyi gdan rabs rang bzhin dbyangs su brjod pa'i lha'i rnga bo che/"@bo-x-ewts .
+    
+    bdr:TT079D32AB1C70E19B
+        a                   :TitlePageTitle ;
+        rdfs:label          "bla brang bkra shis 'khyil gyi gdan rabs lha'i rnga chen/"@bo-x-ewts .
+    
+    bdr:TT77B85BC4556FB051
+        a                   :ColophonTitle ;
+        rdfs:label          "la pu leng shi zhi"@zh-latn-pinyin-x-ndia .
+}

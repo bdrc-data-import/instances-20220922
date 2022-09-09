@@ -1,0 +1,75 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN5667 {
+    bda:LG137EB2E6BDF174E7
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-10T11:16:29.555Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed ISBN"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG22FA09C6A76984E1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-22T16:34:18.09Z"^^xsd:dateTime ;
+        adm:logMessage      "detail cataloged"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:MW3CN5667  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN5667 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "eb/MW3CN5667.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN5667 ;
+        adm:logEntry        bda:LG137EB2E6BDF174E7 , bda:LG22FA09C6A76984E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C7BFD034819C6FF
+        a                   :PublishedEvent ;
+        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7DEB0150C8105259
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105138562(v.1),9787105138579(v.2),9787105138586(v.3),9787105138593(v.4)" .
+    
+    bdr:MW3CN5667  a        :Instance ;
+        skos:altLabel       "藏区竹巴噶举派寺院大全"@zh-hans ;
+        skos:prefLabel      "bod khul gyi 'brug pa bka' brgyud pa'i dgon sde khag gi lo rgyus mdor bsdus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7DEB0150C8105259 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po'i par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "4 v." ;
+        :hasTitle           bdr:TT20ACAB9E513EDDCC , bdr:TT310B547DF94A1ECF , bdr:TTC7F94B437F604064 ;
+        :instanceEvent      bdr:EV1C7BFD034819C6FF ;
+        :instanceHasReproduction  bdr:W3CN5667 ;
+        :instanceOf         bdr:WA3CN5667 ;
+        :numberOfVolumes    4 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT20ACAB9E513EDDCC
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod khul gyi 'brug pa bka' brgyud pa'i dgon sde khag gi lo rgyus mdor bsdus mes po dgyes pa'i mchod sprin/"@bo-x-ewts .
+    
+    bdr:TT310B547DF94A1ECF
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "藏区竹巴噶举派寺院大全"@zh-hans .
+    
+    bdr:TTC7F94B437F604064
+        a                   :Title ;
+        rdfs:label          "bod khul gyi 'brug pa bka' brgyud pa'i dgon sde khag gi lo rgyus mdor bsdus/"@bo-x-ewts .
+}

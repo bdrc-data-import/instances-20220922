@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG14620 {
+    bda:LG4A675FB72BA841D3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-10-24T14:02:48.293Z"^^xsd:dateTime ;
+        adm:logMessage      "released for scan request to india"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG64E58FBCD9AFA246
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-01-08T15:27:14.36Z"^^xsd:dateTime ;
+        adm:logMessage      "added copyright titles"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG14620  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG14620 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "9c/MW1KG14620.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG14620 ;
+        adm:logEntry        bda:LG4A675FB72BA841D3 , bda:LG64E58FBCD9AFA246 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0CE0E318DFEE987E
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID643C4A6CBEA63712
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787105097159" .
+    
+    bdr:IDDDB0A9BF12FC15A7
+        a                   bdr:HollisId ;
+        rdf:value           "014256182" .
+    
+    bdr:MW1KG14620  a       :Instance , :SerialInstance ;
+        skos:altLabel       "德格拉曼医著"@zh-hant ;
+        skos:prefLabel      "sde dge bla sman gyi sman yig gces btus/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID643C4A6CBEA63712 , bdr:IDDDB0A9BF12FC15A7 ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 3, 5, 7, 818 p." ;
+        :hasTitle           bdr:TTCD50BE8C566617B6 , bdr:TTF1233399403B5E15 , bdr:TTF1E351C123436A59 ;
+        :instanceEvent      bdr:EV0CE0E318DFEE987E ;
+        :instanceHasReproduction  bdr:W1KG14620 ;
+        :instanceOf         bdr:WA1KG14620 ;
+        :note               bdr:NT79B84859AB70BB30 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC418 ;
+        :seriesNumber       "75" .
+    
+    bdr:NT79B84859AB70BB30
+        a                   :Note ;
+        :noteText           "in tibetan"@en .
+    
+    bdr:TTCD50BE8C566617B6
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "德格拉曼医著"@zh-hant .
+    
+    bdr:TTF1233399403B5E15
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "de ge la man yi zhu"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTF1E351C123436A59
+        a                   :Title ;
+        rdfs:label          "sde dge bla sman gyi sman yig gces btus/"@bo-x-ewts .
+}

@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022933 {
+    bda:LGAF6AE3440B883DC4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022933"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022933
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022933 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ac/MW1FEMC022933.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022933 ;
+        adm:logEntry        bda:LGAF6AE3440B883DC4 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID8292224356DFAFD2
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.409.VII" .
+    
+    bdr:MF5A369BA4851771D3
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022933
+        a                   :Instance ;
+        skos:prefLabel      "មហាសតិបដ្ឋានសូត្រ"@km , "mahāsatipaṭṭhānasūtra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8292224356DFAFD2 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT430E73AAA7577117 , bdr:TT73F716AAF4AFB1A8 , bdr:TT98592D37D5474443 , bdr:TTAA8D4F964D0DDB51 ;
+        :instanceHasReproduction  bdr:W1FEMC022933 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5A369BA4851771D3 ;
+        :note               bdr:NT29321EA0BD8196CD , bdr:NTA1E31EFB55614AB1 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "188" .
+    
+    bdr:NT29321EA0BD8196CD
+        a                   :Note ;
+        :contentLocationStatement  "pg. 529" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NTA1E31EFB55614AB1
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:TT430E73AAA7577117
+        a                   :CoverTitle ;
+        rdfs:label          "មហាសតិបដ្ឋានសូត (វាន)"@km .
+    
+    bdr:TT73F716AAF4AFB1A8
+        a                   :Title ;
+        rdfs:label          "mahāsatipaṭṭhānasūtra"@km-x-twktt ;
+        :femcConversionOf   bdr:TT98592D37D5474443 .
+    
+    bdr:TT98592D37D5474443
+        a                   :CoverTitle ;
+        rdfs:label          "mahāsatipaṭṭhānasūta"@km-x-twktt .
+    
+    bdr:TTAA8D4F964D0DDB51
+        a                   :Title ;
+        rdfs:label          "មហាសតិបដ្ឋានសូត្រ"@km ;
+        :femcConversionOf   bdr:TT430E73AAA7577117 .
+}

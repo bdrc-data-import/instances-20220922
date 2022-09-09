@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020960 {
+    bda:LG9938F9BF1E84E5A0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC020960"@en ;
+        adm:logWho          bdu:U00085 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020960
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020960 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "cd/MW1FEMC020960.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020960 ;
+        adm:logEntry        bda:LG9938F9BF1E84E5A0 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDFC02028397E399E7
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.38.VII" .
+    
+    bdr:MFCC5C024B2BDDC785
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "I" ;
+        :microfilmStrip     "7" .
+    
+    bdr:MW1FEMC020960
+        a                   :Instance ;
+        skos:prefLabel      "មហាដីកាសទ្ទត្ថភេទចិន្ដា"@km , "mahāṭīkā saddatthabhedacintā"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDFC02028397E399E7 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2" ;
+        :hasTitle           bdr:TT1B3ECA00F0B4E6DE , bdr:TT7E75C444A9C8FC99 , bdr:TTB3D052DE48282626 , bdr:TTFC89BF5746A073F2 ;
+        :instanceHasReproduction  bdr:W1FEMC020960 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFCC5C024B2BDDC785 ;
+        :note               bdr:NTE2DC345D9B64B1B5 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "1548" .
+    
+    bdr:NTE2DC345D9B64B1B5
+        a                   :Note ;
+        :contentLocationStatement  "pg. 169" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1B3ECA00F0B4E6DE
+        a                   :Title ;
+        rdfs:label          "mahāṭīkā saddatthabhedacintā"@km-x-twktt ;
+        :femcConversionOf   bdr:TTB3D052DE48282626 .
+    
+    bdr:TT7E75C444A9C8FC99
+        a                   :CoverTitle ;
+        rdfs:label          "មហាដិកាសទ្ធត្ថភេទចិន្ដា"@km .
+    
+    bdr:TTB3D052DE48282626
+        a                   :CoverTitle ;
+        rdfs:label          "mahāṭikā saddhatthabhedacintā"@km-x-twktt .
+    
+    bdr:TTFC89BF5746A073F2
+        a                   :Title ;
+        rdfs:label          "មហាដីកាសទ្ទត្ថភេទចិន្ដា"@km ;
+        :femcConversionOf   bdr:TT7E75C444A9C8FC99 .
+}

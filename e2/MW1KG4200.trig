@@ -1,0 +1,84 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG4200 {
+    bda:LGF98D5F7B1C0D9408
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-01-14T12:50:34.15Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG4200  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG4200 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e2/MW1KG4200.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG4200 ;
+        adm:logEntry        bda:LGF98D5F7B1C0D9408 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV88C5EFB7452D36FF
+        a                   :PublishedEvent ;
+        :eventWhen          "1968"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID1F17D984F5970C86
+        a                   bdr:HollisId ;
+        rdf:value           "014256822" .
+    
+    bdr:MW1KG4200  a        :Instance ;
+        skos:prefLabel      "rgya gar gyi paN+Di ta bod du rim byon dang/_bod kyi mkhas pa rgya gar du rim par byon pa'i mtshan tho dang/_lo dus mdzad brjod rag bsdus/"@bo-x-ewts , "indian and tibean scholars who visited tibet and india from the 7th to the 17th century a. d."@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID1F17D984F5970C86 ;
+        :extentStatement    "24 p." ;
+        :hasTitle           bdr:TT0D79BF6E1FDF91C1 , bdr:TT520C7CE65B59D6F8 , bdr:TT9B54ECB1C10A96E4 ;
+        :instanceEvent      bdr:EV88C5EFB7452D36FF ;
+        :instanceHasReproduction  bdr:W1KG4200 ;
+        :instanceOf         bdr:WA1KG4200 ;
+        :note               bdr:NT88D35F4046D3B426 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "[dharamsala, h.p.]"@en ;
+        :publisherName      "chos dang rig gzhung lhan khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT88D35F4046D3B426
+        a                   :Note ;
+        :noteText           "copy made available from the library of tibetan works and archives"@en .
+    
+    bdr:TT0D79BF6E1FDF91C1
+        a                   :TitlePageTitle ;
+        rdfs:label          "dus rab bdun pa nas/_dus rab bcu bdun pa'i bar rgya gar gyi paN+Di ta bod du rim byon dang/_bod kyi mkhas pa rgya gar du rim par byon pa'i mtshan tho dang/_lo dus mdzad brjod rag bsdus bcas phyogs bsdebs rin chen nor bu'i do shal/"@bo-x-ewts .
+    
+    bdr:TT520C7CE65B59D6F8
+        a                   :Title ;
+        rdfs:label          "rgya gar gyi paN+Di ta bod du rim byon dang/_bod kyi mkhas pa rgya gar du rim par byon pa'i mtshan tho dang/_lo dus mdzad brjod rag bsdus/"@bo-x-ewts .
+    
+    bdr:TT9B54ECB1C10A96E4
+        a                   :OtherTitle ;
+        rdfs:label          "indian and tibean scholars who visited tibet and india from the 7th to the 17th century a. d."@en .
+}

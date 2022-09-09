@@ -1,0 +1,103 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG5962 {
+    bda:LG72DD69039D883E94
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-09-14T14:11:52.261Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB10F96A51170C337
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-07-03T15:05:53.144Z"^^xsd:dateTime ;
+        adm:logMessage      "changed provisional to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG5962  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG5962 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "b3/MW1KG5962.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG5962 ;
+        adm:logEntry        bda:LG72DD69039D883E94 , bda:LGB10F96A51170C337 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV59AA53897913F38A
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4771A7E9206ABCAB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6345.L482 G797 1982" .
+    
+    bdr:ID722A9F31332BE162
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82901896" .
+    
+    bdr:ID7DE6E2D2C499ACA5
+        a                   bdr:HollisId ;
+        rdf:value           "014257238" .
+    
+    bdr:MW1KG5962  a        :Instance ;
+        skos:altLabel       "catalogue and guide to the central temple of lhasa"@en ;
+        skos:prefLabel      "lha ldan rwa sa 'phrul snang gtsug lag khang gi dkar chag"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4771A7E9206ABCAB , bdr:ID722A9F31332BE162 , bdr:ID7DE6E2D2C499ACA5 ;
+        :authorshipStatement  "zhwa sgab pa dbang phyug bde ldan gyis sbyar ba'o"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "1st ed."@en ;
+        :extentStatement    "144 p." ;
+        :hasTitle           bdr:TT3BCE0010F5BD77CE , bdr:TTA249F7ED28B47468 , bdr:TTA9A3CBBEB75B024D , bdr:TTCE02C7FF0572F58F ;
+        :illustrations      "ill. [12] leaves of plates (4 folded)" ;
+        :instanceEvent      bdr:EV59AA53897913F38A ;
+        :instanceHasReproduction  bdr:W1KG5962 ;
+        :instanceOf         bdr:WA1KG5962 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "kalimpong, w.b."@en ;
+        :publisherName      "shakabpa house"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT3BCE0010F5BD77CE
+        a                   :SpineTitle ;
+        rdfs:label          "guide to the central temple of lhasa"@en .
+    
+    bdr:TTA249F7ED28B47468
+        a                   :Title ;
+        rdfs:label          "lha ldan rwa sa 'phrul snang gtsug lag khang gi dkar chag"@bo-x-ewts .
+    
+    bdr:TTA9A3CBBEB75B024D
+        a                   :TitlePageTitle ;
+        rdfs:label          "lha ldan rwa sa 'phrul snang gtsug lag khang gi dkar chag / gser dang / ra gan rnam dbye gsal por byed pa nor bu ni ka ShaH/"@bo-x-ewts .
+    
+    bdr:TTCE02C7FF0572F58F
+        a                   :OtherTitle ;
+        rdfs:label          "catalogue and guide to the central temple of lhasa"@en .
+}

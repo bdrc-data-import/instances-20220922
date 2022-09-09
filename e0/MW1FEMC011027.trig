@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC011027 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC011027
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC011027 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e0/MW1FEMC011027.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC011027 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID4B1803B8243DF4FD
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "037-A.04.07.01.V.1" .
+    
+    bdr:MFEF09403D63CFE390
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "38" ;
+        :microfilmStrip     "80" .
+    
+    bdr:MW1FEMC011027
+        a                   :Instance ;
+        skos:prefLabel      "ព្រះពុទ្ធគុណបន្លែ"@km , "braḥ buddh guṇ panlè"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4B1803B8243DF4FD ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "5" ;
+        :hasTitle           bdr:TT4B67863E7DA5FEBD , bdr:TT64A06D2227400D8D , bdr:TT9F50F1E05E49EF82 , bdr:TTA9C7E2407FA6B6BB ;
+        :instanceHasReproduction  bdr:W1FEMC011027 ;
+        :instanceOf         bdr:WA1FEMC011027 , bdr:WA1FEMC070002 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFEF09403D63CFE390 ;
+        :note               bdr:NT384D8C91BD18CE8C ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT384D8C91BD18CE8C
+        a                   :Note ;
+        :contentLocationStatement  "pg. 253" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT4B67863E7DA5FEBD
+        a                   :CoverTitle ;
+        rdfs:label          "ពុទ្ធគុន"@km .
+    
+    bdr:TT64A06D2227400D8D
+        a                   :CoverTitle ;
+        rdfs:label          "buddh gun"@km-x-twktt .
+    
+    bdr:TT9F50F1E05E49EF82
+        a                   :Title ;
+        rdfs:label          "ព្រះពុទ្ធគុណបន្លែ"@km ;
+        :femcConversionOf   bdr:TT4B67863E7DA5FEBD .
+    
+    bdr:TTA9C7E2407FA6B6BB
+        a                   :Title ;
+        rdfs:label          "braḥ buddh guṇ panlè"@km-x-twktt ;
+        :femcConversionOf   bdr:TT64A06D2227400D8D .
+}

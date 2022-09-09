@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22165 {
+    bda:LG77668B92163E3406
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22165  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22165 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "da/MW22165.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22165 ;
+        adm:logEntry        bda:LG77668B92163E3406 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCBFCD7146FD1DC73
+        a                   :PublishedEvent ;
+        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID04CA012D66781481
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2004326510" .
+    
+    bdr:ID10E9B00736F43EA6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "754210540x" .
+    
+    bdr:ID1CE07855B9EBFE15
+        a                   bdr:HollisId ;
+        rdf:value           "014258672" .
+    
+    bdr:ID1E445CC4404D6E50
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7632 .Z33 1997" .
+    
+    bdr:MW22165  a          :Instance , :SerialInstance ;
+        skos:altLabel       "li min tai yang"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "chos bshad gzhan phan nyi ma/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID04CA012D66781481 , bdr:ID10E9B00736F43EA6 , bdr:ID1CE07855B9EBFE15 , bdr:ID1E445CC4404D6E50 ;
+        :authorshipStatement  "zhabs dkar ba tshogs drug rang grol gyis brtsams/"@bo-x-ewts ;
+        :biblioNote         "has new title page giving publisher as kan su'u mi rigs dpe skrun khang"@en ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "4, 185 p." ;
+        :hasTitle           bdr:TT5EF72DB7FA6D06E1 , bdr:TT946448D8A81B77ED ;
+        :instanceEvent      bdr:EVCBFCD7146FD1DC73 ;
+        :instanceHasReproduction  bdr:W22165 ;
+        :instanceOf         bdr:WA22165 ;
+        :note               bdr:NT9B9C2187BD01FA23 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "kan su'u mi rigs dpe skrun khang"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG14493 ;
+        :seriesNumber       "1" .
+    
+    bdr:NT9B9C2187BD01FA23
+        a                   :Note ;
+        :noteText           "tbrc hold digitally scanned images, tiffs and pdf files;"@en .
+    
+    bdr:TT5EF72DB7FA6D06E1
+        a                   :Title ;
+        rdfs:label          "chos bshad gzhan phan nyi ma/"@bo-x-ewts .
+    
+    bdr:TT946448D8A81B77ED
+        a                   :ColophonTitle ;
+        rdfs:label          "li min tai yang"@zh-latn-pinyin-x-ndia .
+}

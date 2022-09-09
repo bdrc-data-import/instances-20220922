@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG12061 {
+    bda:LGA0DD6425381681F8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2012-03-12T16:30:30.717Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG12061  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG12061 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d0/MW1KG12061.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG12061 ;
+        adm:logEntry        bda:LGA0DD6425381681F8 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV486C6BF94AE3BF5B
+        a                   :PublishedEvent ;
+        :eventWhen          "1981"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID0E326D0A8ED985AB
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ4710.V324 T526 1981" .
+    
+    bdr:ID227D5CE91574311E
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "81901841" .
+    
+    bdr:IDB158EEB34AE88E66
+        a                   bdr:HollisId ;
+        rdf:value           "014255781" .
+    
+    bdr:MW1KG12061  a       :Instance ;
+        skos:altLabel       "a cycle of practice focussing upon the sadhana of vajrapani"@en ;
+        skos:prefLabel      "phyag rdor thugs kyi snying khu'i skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0E326D0A8ED985AB , bdr:ID227D5CE91574311E , bdr:IDB158EEB34AE88E66 ;
+        :authorshipStatement  "revealed from its place of concealment by rwa khro gter ston o rgyan 'gro 'dul kun 'dus gling pa"@en ;
+        :biblioNote         "reproduced from a set of manuscripts and blockprints from the rma-rgyal bla-ma"@en ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "550 p." ;
+        :hasTitle           bdr:TT054AB07AF03BAA67 , bdr:TT6183368BE3740117 , bdr:TTEEF0A4F99B2D7813 ;
+        :instanceEvent      bdr:EV486C6BF94AE3BF5B ;
+        :instanceHasReproduction  bdr:W1KG12061 ;
+        :instanceOf         bdr:WA1KG12061 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "tulku pema lodoe"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT054AB07AF03BAA67
+        a                   :Title ;
+        rdfs:label          "phyag rdor thugs kyi snying khu'i skor/"@bo-x-ewts .
+    
+    bdr:TT6183368BE3740117
+        a                   :TitlePageTitle ;
+        rdfs:label          "o rgyan 'gro 'dul kun 'dus gling pa'i zab gter mtsho rgyal skor drug gi phyag rdor thugs kyi snying khu/"@bo-x-ewts .
+    
+    bdr:TTEEF0A4F99B2D7813
+        a                   :OtherTitle ;
+        rdfs:label          "a cycle of practice focussing upon the sadhana of vajrapani"@en .
+}

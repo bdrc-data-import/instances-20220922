@@ -1,0 +1,67 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW3CN8372 {
+    bda:LG6A74B7414B85C0AB
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-22T08:58:19.617Z"^^xsd:dateTime ;
+        adm:logMessage      "added author, cat info, topic and pub info"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE75B68298B619461
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-04-10T11:24:12.117Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed isbn#"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:MW3CN8372  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW3CN8372 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ed/MW3CN8372.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW3CN8372 ;
+        adm:logEntry        bda:LG6A74B7414B85C0AB , bda:LGE75B68298B619461 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD2A7D81D117251FA
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8043CF29C85CE28F
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787540927704" .
+    
+    bdr:MW3CN8372  a        :Instance ;
+        skos:prefLabel      "gso rig 'bum bzhi/ pod gnyis pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8043CF29C85CE28F ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par gzhi dang po'i par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "612 p." ;
+        :hasTitle           bdr:TT34CF4285047905DF ;
+        :instanceEvent      bdr:EVD2A7D81D117251FA ;
+        :instanceHasReproduction  bdr:W3CN8372 ;
+        :instanceOf         bdr:WA3CN8372 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "khren tu'u/"@bo-x-ewts ;
+        :publisherName      "si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1GS60779 .
+    
+    bdr:TT34CF4285047905DF
+        a                   :TitlePageTitle ;
+        rdfs:label          "gso rig 'bum bzhi/ pod gnyis pa/"@bo-x-ewts .
+}

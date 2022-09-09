@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021357 {
+    bda:LG06EEF9196E55B0E5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021357"@en ;
+        adm:logWho          bdu:U00088 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021357
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021357 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1c/MW1FEMC021357.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021357 ;
+        adm:logEntry        bda:LG06EEF9196E55B0E5 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD0F73E0D07038A9F
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.171.VII" .
+    
+    bdr:MW1FEMC021357
+        a                   :Instance ;
+        skos:prefLabel      "បាឡីមហាវគ្គ"@km , "pāḷī mahāvagga"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD0F73E0D07038A9F ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "18" ;
+        :hasTitle           bdr:TT5D0B0237C46BF85A , bdr:TT6CA3BD1F5D46E7C0 ;
+        :instanceHasReproduction  bdr:W1FEMC021357 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NT44C0EC321463BAF7 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT44C0EC321463BAF7
+        a                   :Note ;
+        :contentLocationStatement  "pg. 248" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT5D0B0237C46BF85A
+        a                   :Title ;
+        rdfs:label          "pāḷī mahāvagga"@km-x-twktt .
+    
+    bdr:TT6CA3BD1F5D46E7C0
+        a                   :Title ;
+        rdfs:label          "បាឡីមហាវគ្គ"@km .
+}

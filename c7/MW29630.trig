@@ -1,0 +1,107 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29630 {
+    bda:LG2F29FB5105399F83
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG7AFFC63615F46BE6
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T11:01:50.401Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29630  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29630 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "c7/MW29630.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29630 ;
+        adm:logEntry        bda:LG2F29FB5105399F83 , bda:LG7AFFC63615F46BE6 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRC994078A09788A3A
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6190 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVDEAB98FCF542B96E
+        a                   :PublishedEvent ;
+        :eventWhen          "1982/1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID3A42AD9886B6AE85
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BL1145 .S27 1982" .
+    
+    bdr:ID6954E1A0685BE21D
+        a                   bdr:HollisId ;
+        rdf:value           "014260051" .
+    
+    bdr:IDA2240F8E4614E3ED
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82903830" .
+    
+    bdr:MW29630  a          :Instance , :SerialInstance ;
+        skos:altLabel       "sanskrit texts from kashmir"@en ;
+        skos:prefLabel      "kas+mir nas rnyed pa'i legs sbyar chos dpe/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID3A42AD9886B6AE85 , bdr:ID6954E1A0685BE21D , bdr:IDA2240F8E4614E3ED ;
+        :creator            bdr:CRC994078A09788A3A ;
+        :extentStatement    "9 v." ;
+        :hasTitle           bdr:TT36D9F5C69193B0A3 , bdr:TT40AD5203B814CE03 ;
+        :instanceEvent      bdr:EVDEAB98FCF542B96E ;
+        :instanceHasReproduction  bdr:W29630 ;
+        :instanceOf         bdr:WA29630 ;
+        :note               bdr:NT6DB98DFE130DA8FE ;
+        :numberOfVolumes    9 ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "sharada rani"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS00KG09211 ;
+        :seriesNumber       "v. 298-299, 305-306, 320-330, 333-335" .
+    
+    bdr:NT6DB98DFE130DA8FE
+        a                   :Note ;
+        :noteText           "-5639"@en .
+    
+    bdr:TT36D9F5C69193B0A3
+        a                   :Title ;
+        rdfs:label          "kas+mir nas rnyed pa'i legs sbyar chos dpe/"@bo-x-ewts .
+    
+    bdr:TT40AD5203B814CE03
+        a                   :TitlePageTitle ;
+        rdfs:label          "sanskrit texts from kashmir"@en .
+}

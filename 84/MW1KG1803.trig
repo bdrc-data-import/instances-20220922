@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG1803 {
+    bda:LG0FE3A77712CE184A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-03-24T12:40:30.22Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA3E51601A0ADC655
+        a                   adm:UpdateData ;
+        adm:logDate         "2009-04-03T16:12:48.428Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG1803  a        adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG1803 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "84/MW1KG1803.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG1803 ;
+        adm:logEntry        bda:LG0FE3A77712CE184A , bda:LGA3E51601A0ADC655 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9722D356A4E37B41
+        a                   :PublishedEvent ;
+        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID70AE95752EEBB1C0
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787223025416" .
+    
+    bdr:IDB1B3867DB7372759
+        a                   bdr:HollisId ;
+        rdf:value           "014256551" .
+    
+    bdr:MW1KG1803  a        :Instance , :SerialInstance ;
+        skos:altLabel       "da yuan man ci yi si yi jie"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rdzogs pa chen po tshig don bcu gcig pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID70AE95752EEBB1C0 , bdr:IDB1B3867DB7372759 ;
+        :authorshipStatement  "dpal brtsegs bod yig dpe rnying zhib 'jug khang nas bsgrigs/"@bo-x-ewts ;
+        :biblioNote         "computerised input text included with the original text"@en ;
+        :copyrightStatus    bdr:CopyrightClaimed ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "3, 3, 2, 2, 1, 196 p." ;
+        :hasTitle           bdr:TT1491CFEFDF1D6E07 , bdr:TTB7512884319C4E5A ;
+        :instanceEvent      bdr:EV9722D356A4E37B41 ;
+        :instanceHasReproduction  bdr:IE1KG1803 , bdr:W1KG1803 ;
+        :instanceOf         bdr:WA1KG1803 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1AC377 ;
+        :seriesNumber       "5" .
+    
+    bdr:TT1491CFEFDF1D6E07
+        a                   :Title ;
+        rdfs:label          "rdzogs pa chen po tshig don bcu gcig pa/"@bo-x-ewts .
+    
+    bdr:TTB7512884319C4E5A
+        a                   :ColophonTitle ;
+        rdfs:label          "da yuan man ci yi si yi jie"@zh-latn-pinyin-x-ndia .
+}

@@ -1,0 +1,91 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG10605 {
+    bda:LG21EFA821D16F97FB
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-09-15T14:34:51.627Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA0FBFFE45FC76944
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-06-25T12:13:23.956Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG10605  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG10605 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "2a/MW1KG10605.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG10605 ;
+        adm:logEntry        bda:LG21EFA821D16F97FB , bda:LGA0FBFFE45FC76944 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV872ECF44A43984BA
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID8AE8516814D33138
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PK923 .D66 1985" .
+    
+    bdr:IDC954C2B3E891FF4C
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85902815" .
+    
+    bdr:IDCD244098F07934DE
+        a                   bdr:HollisId ;
+        rdf:value           "014255650" .
+    
+    bdr:MW1KG10605  a       :Instance ;
+        skos:altLabel       "'bri-gung bka'-brgyud-pa writings on sanskrit grammar and lexicography"@en-x-mixed ;
+        skos:prefLabel      "'phags bod skad gnyis brda 'grel dang mngon brjod khag bcas/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID8AE8516814D33138 , bdr:IDC954C2B3E891FF4C , bdr:IDCD244098F07934DE ;
+        :biblioNote         "reproduced from a collection of manuscripts from limi in northwestern nepal"@en ;
+        :extentStatement    "371 p." ;
+        :hasTitle           bdr:TT78734DE7B61ED888 , bdr:TT9975FC46C4297F49 ;
+        :instanceEvent      bdr:EV872ECF44A43984BA ;
+        :instanceHasReproduction  bdr:W1KG10605 ;
+        :instanceOf         bdr:WA1KG10605 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "bir, h.p."@en ;
+        :publisherName      "d. tsondu senge"@en ;
+        :script             bdr:ScriptDbuMed .
+    
+    bdr:TT78734DE7B61ED888
+        a                   :Title ;
+        rdfs:label          "'phags bod skad gnyis brda 'grel dang mngon brjod khag bcas/"@bo-x-ewts .
+    
+    bdr:TT9975FC46C4297F49
+        a                   :TitlePageTitle ;
+        rdfs:label          "'bri-gung bka'-brgyud-pa writings on sanskrit grammar and lexicography"@en-x-mixed .
+}

@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW15448 {
+    bda:LG0D56342D7A025BF8
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG21CF8CCB5C730BD8
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-11-30T11:18:10.43Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG26ED3EDEA11C46AB
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-22T10:46:08.632Z"^^xsd:dateTime ;
+        adm:logMessage      "added source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG27EF7112D16E2C08
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-04-11T10:15:04.175Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW15448  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW15448 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8d/MW15448.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW15448 ;
+        adm:logEntry        bda:LG0D56342D7A025BF8 , bda:LG21CF8CCB5C730BD8 , bda:LG26ED3EDEA11C46AB , bda:LG27EF7112D16E2C08 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE8FB6F7F7BDF3D6E
+        a                   :PublishedEvent ;
+        :eventWhen          "19/-"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID29EA0DAB040DCB1F
+        a                   bdr:HollisId ;
+        rdf:value           "014254737" .
+    
+    bdr:MW15448  a          :Instance ;
+        skos:prefLabel      "blo sbyong nyi ma'i 'od zer/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID29EA0DAB040DCB1F ;
+        :biblioNote         "impressions from blocks carved and sponsored by shan kha ba 'gyur med bsod nams stobs rgyas at lhasa"@en ;
+        :extentStatement    "113 ff. (225 p.)" ;
+        :hasSourcePrintery  bdr:G1819 ;
+        :hasTitle           bdr:TTD23E7C1182754E1C , bdr:TTE3087F7655EBAF46 ;
+        :instanceEvent      bdr:EVE8FB6F7F7BDF3D6E ;
+        :instanceHasReproduction  bdr:W15448 ;
+        :instanceOf         bdr:WA15448 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "[lha sa/]"@en ;
+        :publisherName      "[shan kha ba 'gyur med bsod nams stobs rgyas/]"@en ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TTD23E7C1182754E1C
+        a                   :Title ;
+        rdfs:label          "blo sbyong nyi ma'i 'od zer/"@bo-x-ewts .
+    
+    bdr:TTE3087F7655EBAF46
+        a                   :ColophonTitle ;
+        rdfs:label          "byang chub sems sbyong gi gdams pa blo sbyong nyi ma'i 'od zer/"@bo-x-ewts .
+}

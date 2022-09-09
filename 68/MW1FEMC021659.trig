@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021659 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021659
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021659 ;
+        adm:contentProvider  bda:CP042 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "68/MW1FEMC021659.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021659 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDA49FCB90224A5D71
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.568.III.3" .
+    
+    bdr:MF233C95FC760F8458
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "133" ;
+        :microfilmStrip     "227" .
+    
+    bdr:MW1FEMC021659
+        a                   :Instance ;
+        skos:prefLabel      "បុច្ឆាវិស្សជ្ជនាត្រៃសិក្ខាសាសនធម៌"@km , "pucchā vissajjanā trai sikkhā sāsanadhaṛm"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDA49FCB90224A5D71 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT05440A7C8A238F21 , bdr:TT5D08A0B54FD20693 , bdr:TT7711874B6CB4D50E , bdr:TTA9DB3D515FF6C079 , bdr:TTAE50E032EA38A24D , bdr:TTB189E802577CB608 ;
+        :instanceHasReproduction  bdr:W1FEMC021659 ;
+        :instanceOf         bdr:WA1FEMC021659 , bdr:WA1FEMC030051 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF233C95FC760F8458 ;
+        :note               bdr:NTD6CD1336E0168864 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD6CD1336E0168864
+        a                   :Note ;
+        :contentLocationStatement  "pg. 299" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT05440A7C8A238F21
+        a                   :CoverTitle ;
+        rdfs:label          "trai sikkhā sāsana dhaṛm"@km-x-twktt ;
+        :femcConversionOf   bdr:TT7711874B6CB4D50E .
+    
+    bdr:TT5D08A0B54FD20693
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃសិក្ខាសាសនធម្ម៌"@km .
+    
+    bdr:TT7711874B6CB4D50E
+        a                   :CoverTitle ;
+        rdfs:label          "trai sikkhā sāsamadhaṛmm"@km-x-twktt .
+    
+    bdr:TTA9DB3D515FF6C079
+        a                   :Title ;
+        rdfs:label          "បុច្ឆាវិស្សជ្ជនាត្រៃសិក្ខាសាសនធម៌"@km .
+    
+    bdr:TTAE50E032EA38A24D
+        a                   :Title ;
+        rdfs:label          "pucchā vissajjanā trai sikkhā sāsanadhaṛm"@km-x-twktt .
+    
+    bdr:TTB189E802577CB608
+        a                   :CoverTitle ;
+        rdfs:label          "ត្រៃសិក្ខាសាសនធម៌"@km ;
+        :femcConversionOf   bdr:TT5D08A0B54FD20693 .
+}

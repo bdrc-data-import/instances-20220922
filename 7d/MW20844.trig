@@ -1,0 +1,103 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20844 {
+    bda:LG0DF0312325E81C15
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-08T23:05:20.083Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type, and encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG25AF5FADDC1D118A
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-04-06T10:22:54.185Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected isbn and added loc"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG29BBF4815EBBA7F4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW20844  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20844 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "7d/MW20844.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20844 ;
+        adm:logEntry        bda:LG0DF0312325E81C15 , bda:LG25AF5FADDC1D118A , bda:LG29BBF4815EBBA7F4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRE2696921FA215343
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6977 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV563F6051A1E846E4
+        a                   :PublishedEvent ;
+        :eventWhen          "1986"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID02C6B9D5999C056B
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS485.L2 L36 1987" .
+    
+    bdr:ID785D6CB41A1F243F
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "93927826" .
+    
+    bdr:ID8670761993024FF6
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7223000090" .
+    
+    bdr:IDDDCDBF2297E65285
+        a                   bdr:HollisId ;
+        rdf:value           "014258249" .
+    
+    bdr:MW20844  a          :Instance ;
+        skos:prefLabel      "la dwags rgyal rabs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID02C6B9D5999C056B , bdr:ID785D6CB41A1F243F , bdr:ID8670761993024FF6 , bdr:IDDDCDBF2297E65285 ;
+        :authorshipStatement  "rtsom sgrig 'gan khur ba chos 'dzoms/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRE2696921FA215343 ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "106 p." ;
+        :hasTitle           bdr:TT3816818B5F2C7740 ;
+        :instanceEvent      bdr:EV563F6051A1E846E4 ;
+        :instanceHasReproduction  bdr:W20844 ;
+        :instanceOf         bdr:WA20844 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT3816818B5F2C7740
+        a                   :Title ;
+        rdfs:label          "la dwags rgyal rabs/"@bo-x-ewts .
+}

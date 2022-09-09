@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022896 {
+    bda:LG9188F47A07A01460
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022896"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022896
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022896 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "54/MW1FEMC022896.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022896 ;
+        adm:logEntry        bda:LG9188F47A07A01460 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID097FBBC907942FC0
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.372.VII" .
+    
+    bdr:MF90172D306A168F0B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LVIII" ;
+        :microfilmStrip     "83" .
+    
+    bdr:MW1FEMC022896
+        a                   :Instance ;
+        skos:prefLabel      "បឋមភាណវារ"@km , "paṭhamabhāṇavāra"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID097FBBC907942FC0 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT6E89A50E4E93D718 , bdr:TT8C4ECF35CB4646F3 , bdr:TTE4D44B1B20F814E1 , bdr:TTF700A88CFBDEDCC7 ;
+        :instanceHasReproduction  bdr:W1FEMC022896 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF90172D306A168F0B ;
+        :note               bdr:NT13090F4D5D28320D , bdr:NT807B8260481FCD7E ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "187" .
+    
+    bdr:NT13090F4D5D28320D
+        a                   :Note ;
+        :contentLocationStatement  "pg. 521" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:NT807B8260481FCD7E
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:TT6E89A50E4E93D718
+        a                   :CoverTitle ;
+        rdfs:label          "pathamabhāṇavāra"@km-x-twktt .
+    
+    bdr:TT8C4ECF35CB4646F3
+        a                   :Title ;
+        rdfs:label          "បឋមភាណវារ"@km ;
+        :femcConversionOf   bdr:TTF700A88CFBDEDCC7 .
+    
+    bdr:TTE4D44B1B20F814E1
+        a                   :Title ;
+        rdfs:label          "paṭhamabhāṇavāra"@km-x-twktt ;
+        :femcConversionOf   bdr:TT6E89A50E4E93D718 .
+    
+    bdr:TTF700A88CFBDEDCC7
+        a                   :CoverTitle ;
+        rdfs:label          "បថមភាណវារ (វាន)"@km .
+}

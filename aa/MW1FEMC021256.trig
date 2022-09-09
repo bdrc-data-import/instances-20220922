@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021256 {
+    bda:LG88BC044397394F19
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-18"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021256"@en ;
+        adm:logWho          bdu:U00087 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021256
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021256 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "aa/MW1FEMC021256.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021256 ;
+        adm:logEntry        bda:LG88BC044397394F19 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID20D9B2049364AB26
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.74.VII" .
+    
+    bdr:MF8126D3342B40E8FB
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XXV" ;
+        :microfilmStrip     "50" .
+    
+    bdr:MW1FEMC021256
+        a                   :Instance ;
+        skos:prefLabel      "ចតុត្ថសមន្តបាសាទិកាអដ្ឋកថាចុល្លវគ្គ"@km , "catutthasamantapāsādikā aṭṭhakathā cullavagga"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID20D9B2049364AB26 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1, 2, 4, 5" ;
+        :hasTitle           bdr:TT06E43B56536E30DC , bdr:TT5739F0C9557A2589 , bdr:TT8B1D0AFA10AA8675 , bdr:TTED63563AFF4B7297 ;
+        :instanceHasReproduction  bdr:W1FEMC021256 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF8126D3342B40E8FB ;
+        :note               bdr:NTBBEE7C54CF18D858 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTBBEE7C54CF18D858
+        a                   :Note ;
+        :contentLocationStatement  "pg. 229" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT06E43B56536E30DC
+        a                   :Title ;
+        rdfs:label          "catutthasamantapāsādikā aṭṭhakathā cullavagga"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8B1D0AFA10AA8675 .
+    
+    bdr:TT5739F0C9557A2589
+        a                   :CoverTitle ;
+        rdfs:label          "ចតុត្ថសាមន្តបាសាទិកអដ្ឋកថាចុល្លវគ្គ"@km .
+    
+    bdr:TT8B1D0AFA10AA8675
+        a                   :CoverTitle ;
+        rdfs:label          "catutthasāmanta pāsadika aṭṭhakathā cullavagga"@km-x-twktt .
+    
+    bdr:TTED63563AFF4B7297
+        a                   :Title ;
+        rdfs:label          "ចតុត្ថសមន្តបាសាទិកាអដ្ឋកថាចុល្លវគ្គ"@km ;
+        :femcConversionOf   bdr:TT5739F0C9557A2589 .
+}

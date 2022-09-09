@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23566 {
+    bda:LG2F7CD5BC7328B8DE
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG9FCACFBBA9E47EBE
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-23T16:20:35.905Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23566  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23566 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "94/MW23566.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23566 ;
+        adm:logEntry        bda:LG2F7CD5BC7328B8DE , bda:LG9FCACFBBA9E47EBE , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE9F3098DF73F1558
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID521A6FCBD8F3DF6C
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7681 .S47 1982" .
+    
+    bdr:ID6D0C1151A3DEDC22
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "82902155" .
+    
+    bdr:IDAF71269755CBCB7A
+        a                   bdr:HollisId ;
+        rdf:value           "014258969" .
+    
+    bdr:MW23566  a          :Instance ;
+        skos:prefLabel      "gsung 'bum/_sgam po pa/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID521A6FCBD8F3DF6C , bdr:ID6D0C1151A3DEDC22 , bdr:IDAF71269755CBCB7A ;
+        :biblioNote         "reproduced from a manuscript reflecting the tradition of th dwags-lha sgam-po redaction prepared through the efforts of spyan-sna bsod-nams-lhun-grub from the hemis monastery in ladakh"@en ;
+        :extentStatement    "3 v." ;
+        :hasTitle           bdr:TT0CE98231CF5CF5BA , bdr:TT483BB744A59204D8 , bdr:TT7B7CB5089B0E724E ;
+        :instanceEvent      bdr:EVE9F3098DF73F1558 ;
+        :instanceHasReproduction  bdr:W23566 ;
+        :instanceOf         bdr:WA22393 , bdr:WA23566 ;
+        :note               bdr:NTBAE78C3B5C67D66A ;
+        :numberOfVolumes    3 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "darjeeling, west bengal"@en ;
+        :publisherName      "kargyud sungrab nyamso khang"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:NTBAE78C3B5C67D66A
+        a                   :Note ;
+        :noteText           "tbrc holds scans, pdfs and tiff files, tbrc volume numbers 2174-2176."@en .
+    
+    bdr:TT0CE98231CF5CF5BA
+        a                   :OtherTitle ;
+        rdfs:label          "gsung 'bum/_bsod nams rin chen/"@bo-x-ewts .
+    
+    bdr:TT483BB744A59204D8
+        a                   :Title ;
+        rdfs:label          "sgam po pa bsod nams rin chen gyi gsung 'bum/"@bo-x-ewts .
+    
+    bdr:TT7B7CB5089B0E724E
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_sgam po pa/"@bo-x-ewts .
+}

@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22174 {
+    bda:LGD2AA06F7B551A78B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22174  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22174 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "0a/MW22174.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22174 ;
+        adm:logEntry        bda:LGD2AA06F7B551A78B , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB0FC874FC181E51B
+        a                   :PublishedEvent ;
+        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID346F4113E68F52A9
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7105041234" .
+    
+    bdr:ID538AD043A57A2F62
+        a                   bdr:HollisId ;
+        rdf:value           "014258678" .
+    
+    bdr:ID7E6B1993FC8BEBCF
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "MLCSA 2002/00709 PL3611" .
+    
+    bdr:IDFCA4282C4984DE85
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2001293885" .
+    
+    bdr:MW22174  a          :Instance ;
+        skos:altLabel       "zang wen yu fa fu xi wen de tsang wen yu fa fu hsi wen ta"@zh-latn-wadegile ;
+        skos:prefLabel      "bod yig brda sprod skyar sbyong dri ba dang dris lan/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID346F4113E68F52A9 , bdr:ID538AD043A57A2F62 , bdr:ID7E6B1993FC8BEBCF , bdr:IDFCA4282C4984DE85 ;
+        :authorshipStatement  "stobs rgyas kyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "2, 107 p." ;
+        :hasTitle           bdr:TT47B9AE3172EE7A43 , bdr:TT81CCB5B21A15DAB4 , bdr:TTC87BCC6AAD773860 ;
+        :instanceEvent      bdr:EVB0FC874FC181E51B ;
+        :instanceHasReproduction  bdr:W22174 ;
+        :instanceOf         bdr:WA22174 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT47B9AE3172EE7A43
+        a                   :Title ;
+        rdfs:label          "bod yig brda sprod skyar sbyong dri ba dang dris lan/"@bo-x-ewts .
+    
+    bdr:TT81CCB5B21A15DAB4
+        a                   :ColophonTitle ;
+        rdfs:label          "zang wen yu fa fu xi wen de tsang wen yu fa fu hsi wen ta"@zh-latn-wadegile .
+    
+    bdr:TTC87BCC6AAD773860
+        a                   :TitlePageTitle ;
+        rdfs:label          "bod kyi brda'i bcos sum rtags dag gsum gyi skyar sbyong dri ba dris lan gyi tshul du spel ba blo gsar gzhon nu'i nyer mkho/"@bo-x-ewts .
+}

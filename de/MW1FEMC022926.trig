@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022926 {
+    bda:LG26828004859C98AC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022926"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022926
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022926 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "de/MW1FEMC022926.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022926 ;
+        adm:logEntry        bda:LG26828004859C98AC , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0D79E802794C3720
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.402.VII" .
+    
+    bdr:MFBDA4C47E32830689
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022926
+        a                   :Instance ;
+        skos:prefLabel      "សត្តបរិត្ត"@km , "sattaparitta"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0D79E802794C3720 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT5049DF3BE2DC211B , bdr:TT5FA1D4C9E35744E3 , bdr:TTDC6B8E9FBEC2548A , bdr:TTED96EACAAB618437 ;
+        :instanceHasReproduction  bdr:W1FEMC022926 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFBDA4C47E32830689 ;
+        :note               bdr:NT703337F25046969D , bdr:NTA425DCB4C5AF62DA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "188" .
+    
+    bdr:NT703337F25046969D
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:NTA425DCB4C5AF62DA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 527" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT5049DF3BE2DC211B
+        a                   :Title ;
+        rdfs:label          "សត្តបរិត្ត"@km ;
+        :femcConversionOf   bdr:TT5FA1D4C9E35744E3 .
+    
+    bdr:TT5FA1D4C9E35744E3
+        a                   :CoverTitle ;
+        rdfs:label          "សត្តបរិត្តំ (វាន)"@km .
+    
+    bdr:TTDC6B8E9FBEC2548A
+        a                   :Title ;
+        rdfs:label          "sattaparitta"@km-x-twktt ;
+        :femcConversionOf   bdr:TTED96EACAAB618437 .
+    
+    bdr:TTED96EACAAB618437
+        a                   :CoverTitle ;
+        rdfs:label          "sattaparittaṃ"@km-x-twktt .
+}

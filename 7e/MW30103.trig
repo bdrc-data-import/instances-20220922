@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30103 {
+    bda:LG7C27AAE215B79C6A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG7D79DA5B851D4575
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-09-25T10:51:09.885Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30103  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30103 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "7e/MW30103.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30103 ;
+        adm:logEntry        bda:LG7C27AAE215B79C6A , bda:LG7D79DA5B851D4575 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV86445D0F64CF9F05
+        a                   :PublishedEvent ;
+        :eventWhen          "1973/1974"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID78FF5EBE366F485D
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "73907896" .
+    
+    bdr:IDC5B9F96EB72DE129
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7550 .N33 1973" .
+    
+    bdr:IDEDF7B710A7EE27C3
+        a                   bdr:HollisId ;
+        rdf:value           "014260618" .
+    
+    bdr:MW30103  a          :Instance , :SerialInstance ;
+        skos:altLabel       "the collected works of skyid-sod zabs-drun sprul-sku nag-dban-bstan-'dzin-'phrin-las"@en-x-mixed ;
+        skos:prefLabel      "gsung 'bum/_ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID78FF5EBE366F485D , bdr:IDC5B9F96EB72DE129 , bdr:IDEDF7B710A7EE27C3 ;
+        :biblioNote         "reproduced from a rare ms. from ladakh"@en ;
+        :extentStatement    "2 v." ;
+        :hasTitle           bdr:TT0E416A74E55FE058 , bdr:TTCEF2A6913366950C ;
+        :instanceEvent      bdr:EV86445D0F64CF9F05 ;
+        :instanceHasReproduction  bdr:W30103 ;
+        :instanceOf         bdr:WA22116 , bdr:WA30103 ;
+        :note               bdr:NTC72CB47A3F41490F ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "new delhi"@en ;
+        :publisherName      "ngawang gelek demo"@en ;
+        :script             bdr:ScriptDbuMed ;
+        :serialInstanceOf   bdr:WAS11818 ;
+        :seriesNumber       "v. 56-57" .
+    
+    bdr:NTC72CB47A3F41490F
+        a                   :Note ;
+        :noteText           "in vol. 2 there are duplicate pages of folio 5a, 6a,7a, 8a in the first text and 5b, 6b, 7b, 8b are missing; inserted blank pages in place of missing pages"@en .
+    
+    bdr:TT0E416A74E55FE058
+        a                   :Title ;
+        rdfs:label          "gsung 'bum/_ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts .
+    
+    bdr:TTCEF2A6913366950C
+        a                   :TitlePageTitle ;
+        rdfs:label          "the collected works of skyid-sod zabs-drun sprul-sku nag-dban-bstan-'dzin-'phrin-las"@en-x-mixed .
+}

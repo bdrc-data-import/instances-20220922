@@ -1,0 +1,94 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22202 {
+    bda:LGACA8F9131407F359
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGEFE0DC10598BE09C
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-07-12T11:46:04.109Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22202  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22202 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "04/MW22202.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22202 ;
+        adm:logEntry        bda:LGACA8F9131407F359 , bda:LGEFE0DC10598BE09C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9F2231D3C541BE91
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID086C5893E2D2507D
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ968.A875 A3 1985" .
+    
+    bdr:ID212C6799A116B90B
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "86900151" .
+    
+    bdr:IDB5C42A271F7885E8
+        a                   bdr:HollisId ;
+        rdf:value           "014258697" .
+    
+    bdr:MW22202  a          :Instance ;
+        skos:altLabel       "dpal ldan bla ma dam pa karma bstan 'phel gyi rnam par thar pa grub pa'i rol rtsed : the autobiography of the first khams-sprul karma-bstan-'phel"@en-x-mixed ;
+        skos:prefLabel      "mdo khams pa karma bstan 'phel rnam thar/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID086C5893E2D2507D , bdr:ID212C6799A116B90B , bdr:IDB5C42A271F7885E8 ;
+        :authorshipStatement  "the autobiography of the first khams-sprul karma-bstan-'phel ; completed by his disciple mi-pham-blo-gros"@en ;
+        :biblioNote         "reproduced from a manuscript calligraphed from a print from the khams-pa sgar blockprint edition"@en ;
+        :extentStatement    "318 p." ;
+        :hasTitle           bdr:TT249B89E19027B658 , bdr:TT6AB5BB353F2C7AA8 , bdr:TT8813B648D2C6075D ;
+        :instanceEvent      bdr:EV9F2231D3C541BE91 ;
+        :instanceHasReproduction  bdr:W22202 ;
+        :instanceOf         bdr:WA22202 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :publisherLocation  "tashi jong, paprola"@en ;
+        :publisherName      "tibetan craft community"@en ;
+        :script             bdr:ScriptDbuCan .
+    
+    bdr:TT249B89E19027B658
+        a                   :TitlePageTitle ;
+        rdfs:label          "dpal ldan bla ma dam pa karma bstan 'phel gyi rnam par thar pa grub pa'i rol rtsed : the autobiography of the first khams-sprul karma-bstan-'phel"@en-x-mixed .
+    
+    bdr:TT6AB5BB353F2C7AA8
+        a                   :CoverTitle ;
+        rdfs:label          "the autobiography of the first khams-sprul karma-bstan-'phel"@en .
+    
+    bdr:TT8813B648D2C6075D
+        a                   :Title ;
+        rdfs:label          "mdo khams pa karma bstan 'phel rnam thar/"@bo-x-ewts .
+}

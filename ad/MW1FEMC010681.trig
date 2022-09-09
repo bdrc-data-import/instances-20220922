@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC010681 {
+    bda:LGIMC3FF7CDB  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:48:23.321Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC010681
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC010681 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ad/MW1FEMC010681.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC010681 ;
+        adm:logEntry        bda:LGIMC3FF7CDB , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDF5B399C6A6659001
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "001-A.03.04.02.V.3" .
+    
+    bdr:MFA2D95B73F70793B5
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "46" ;
+        :microfilmStrip     "114" .
+    
+    bdr:MW1FEMC010681
+        a                   :Instance ;
+        skos:prefLabel      "មូលព្រះកម្មដ្ឋាន"@km , "mūl braḥ kammaṭṭhān"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDF5B399C6A6659001 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT32A95A68953B17EA , bdr:TT70CD3621EFC6F217 , bdr:TT83AF0B2533414BA5 , bdr:TTA859B03917A2A954 ;
+        :instanceHasReproduction  bdr:W1FEMC010681 ;
+        :instanceOf         bdr:WA1FEMC010681 , bdr:WA1FEMC080001 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MFA2D95B73F70793B5 ;
+        :note               bdr:NTD8F9948B5B624EEA ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD8F9948B5B624EEA
+        a                   :Note ;
+        :contentLocationStatement  "pg. 188" ;
+        :noteSource         bdr:W1FEMC01 .
+    
+    bdr:TT32A95A68953B17EA
+        a                   :CoverTitle ;
+        rdfs:label          "kpuon mūl braḥ kāṃmasṭhān"@km-x-twktt .
+    
+    bdr:TT70CD3621EFC6F217
+        a                   :Title ;
+        rdfs:label          "មូលព្រះកម្មដ្ឋាន"@km ;
+        :femcConversionOf   bdr:TT83AF0B2533414BA5 .
+    
+    bdr:TT83AF0B2533414BA5
+        a                   :CoverTitle ;
+        rdfs:label          "ក្បួនមូលព្រះកាំម្មស្ឋាន (ក-៦០)"@km .
+    
+    bdr:TTA859B03917A2A954
+        a                   :Title ;
+        rdfs:label          "mūl braḥ kammaṭṭhān"@km-x-twktt ;
+        :femcConversionOf   bdr:TT32A95A68953B17EA .
+}

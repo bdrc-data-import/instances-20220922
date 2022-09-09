@@ -1,0 +1,83 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW20226 {
+    bda:LG431A71C2DD00B6E6
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE74BFC7136E1A52B
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-01-29T14:25:47.534Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW20226  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW20226 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b6/MW20226.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW20226 ;
+        adm:logEntry        bda:LG431A71C2DD00B6E6 , bda:LGE74BFC7136E1A52B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CRCA2072DD28E9DDDC
+        a                   :AgentAsCreator ;
+        :agent              bdr:P6669 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EVABD813B3599670C3
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID7DDA7C49FEBF4790
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3737 .B65 1985" .
+    
+    bdr:IDEF3C3DC2DE5521CA
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "95918930" .
+    
+    bdr:MW20226  a          :Instance ;
+        skos:altLabel       "西藏戏剧曲艺选"@zh-hans ;
+        skos:prefLabel      "bod kyi zlos gar gzhas gtam 'dems sgrig"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID7DDA7C49FEBF4790 , bdr:IDEF3C3DC2DE5521CA ;
+        :authorshipStatement  "rtsom sgrig 'gan 'khur ba/ mig dmar/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :creator            bdr:CRCA2072DD28E9DDDC ;
+        :extentStatement    "4, 2, 465 p." ;
+        :hasTitle           bdr:TT162CA9E8634E3A81 , bdr:TT641C32D38C6630DE , bdr:TT9542F989F44EB51D ;
+        :instanceEvent      bdr:EVABD813B3599670C3 ;
+        :instanceHasReproduction  bdr:W20226 ;
+        :instanceOf         bdr:WA20226 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT162CA9E8634E3A81
+        a                   :Title ;
+        rdfs:label          "bod kyi zlos gar gzhas gtam 'dems sgrig"@bo-x-ewts .
+    
+    bdr:TT641C32D38C6630DE
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "xi zang xi ju qu yi xuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TT9542F989F44EB51D
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "西藏戏剧曲艺选"@zh-hans .
+}

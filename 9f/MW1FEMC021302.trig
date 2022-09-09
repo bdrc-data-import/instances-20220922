@@ -1,0 +1,93 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021302 {
+    bda:LG62CB24D704FCB868
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-19"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC021302"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021302
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021302 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "9f/MW1FEMC021302.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021302 ;
+        adm:logEntry        bda:LG62CB24D704FCB868 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDD42D6CAD8E408C9A
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "D.117.VII" .
+    
+    bdr:MF624CEF436249353E
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "XXVII" ;
+        :microfilmStrip     "52" .
+    
+    bdr:MW1FEMC021302
+        a                   :Instance ;
+        skos:prefLabel      "បបញ្ចសូទនីអដ្ឋកថាមជ្ឈិមនិកាយឧបរិបណ្ណាសក"@km , "papañcasūdanī aṭṭhakathāmajjhimanikāya Uparipaṇṇāsaka"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDD42D6CAD8E408C9A ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "10" ;
+        :hasTitle           bdr:TT2E246B93EBE68D07 , bdr:TT420E59FD9C14EC87 , bdr:TT4FF74C261334A690 , bdr:TTE6FC3EF8CEA4F67A ;
+        :instanceHasReproduction  bdr:W1FEMC021302 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF624CEF436249353E ;
+        :note               bdr:NTD25A143F04C80125 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTD25A143F04C80125
+        a                   :Note ;
+        :contentLocationStatement  "pg. 238" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT2E246B93EBE68D07
+        a                   :Title ;
+        rdfs:label          "បបញ្ចសូទនីអដ្ឋកថាមជ្ឈិមនិកាយឧបរិបណ្ណាសក"@km ;
+        :femcConversionOf   bdr:TT4FF74C261334A690 .
+    
+    bdr:TT420E59FD9C14EC87
+        a                   :Title ;
+        rdfs:label          "papañcasūdanī aṭṭhakathāmajjhimanikāya Uparipaṇṇāsaka"@km-x-twktt ;
+        :femcConversionOf   bdr:TTE6FC3EF8CEA4F67A .
+    
+    bdr:TT4FF74C261334A690
+        a                   :CoverTitle ;
+        rdfs:label          "បបញ្ចសូទនីអដ្ឋកថាមជ្ឈិមនិកាយឧបរិបណ្ណាស"@km .
+    
+    bdr:TTE6FC3EF8CEA4F67A
+        a                   :CoverTitle ;
+        rdfs:label          "papañcasudanī aṭṭhakathāmajjhimanikāya Uparipaṇṇāsa"@km-x-twktt .
+}

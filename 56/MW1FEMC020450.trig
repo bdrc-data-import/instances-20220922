@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC020450 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC020450
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC020450 ;
+        adm:contentProvider  bda:CP041 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "56/MW1FEMC020450.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC020450 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:IDB333A80BF6A0B2DE
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.83.III.1" .
+    
+    bdr:MF5B3085A4C949D501
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "68" ;
+        :microfilmStrip     "162" .
+    
+    bdr:MW1FEMC020450
+        a                   :Instance ;
+        skos:prefLabel      "បឋមសម្ពោធិ"@km , "paṭham sambodhi"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDB333A80BF6A0B2DE ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "29" ;
+        :hasTitle           bdr:TT93A725795814A355 , bdr:TT99F4E0FB1331CBD7 , bdr:TTD4EE863976C63438 , bdr:TTEC1F978D6CF2A63B , bdr:TTF3A5F1D740678C55 , bdr:TTF5DAC9C00B2AE7A0 ;
+        :instanceHasReproduction  bdr:W1FEMC020450 ;
+        :instanceOf         bdr:WA1FEMC010047 , bdr:WA1FEMC020450 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF5B3085A4C949D501 ;
+        :note               bdr:NT5B38E5036D38CBE4 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT5B38E5036D38CBE4
+        a                   :Note ;
+        :contentLocationStatement  "pg. 88" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT93A725795814A355
+        a                   :CoverTitle ;
+        rdfs:label          "patham sambodhi mār băndh"@km-x-twktt .
+    
+    bdr:TT99F4E0FB1331CBD7
+        a                   :Title ;
+        rdfs:label          "បឋមសម្ពោធិ"@km .
+    
+    bdr:TTD4EE863976C63438
+        a                   :CoverTitle ;
+        rdfs:label          "បថមសម្ពោធិមារពន្ធ័"@km .
+    
+    bdr:TTEC1F978D6CF2A63B
+        a                   :CoverTitle ;
+        rdfs:label          "paṭham sambodhi mār bandhan"@km-x-twktt ;
+        :femcConversionOf   bdr:TT93A725795814A355 .
+    
+    bdr:TTF3A5F1D740678C55
+        a                   :CoverTitle ;
+        rdfs:label          "បឋមសម្ពោធិមារពន្ធន៍"@km ;
+        :femcConversionOf   bdr:TTD4EE863976C63438 .
+    
+    bdr:TTF5DAC9C00B2AE7A0
+        a                   :Title ;
+        rdfs:label          "paṭham sambodhi"@km-x-twktt .
+}

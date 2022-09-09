@@ -1,0 +1,98 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC022915 {
+    bda:LG291C7E97CB0A9282
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2019-07-23"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC022915"@en ;
+        adm:logWho          bdu:U00084 .
+    
+    bda:LGIM3045394C  a     adm:InitialDataImport , adm:UpdateData ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC022915
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC022915 ;
+        adm:contentProvider  bda:CP046 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "41/MW1FEMC022915.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC022915 ;
+        adm:logEntry        bda:LG291C7E97CB0A9282 , bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID6EF0A99942688AE2
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "A.391.VII" .
+    
+    bdr:MF33B60D9FAD5BC14B
+        a                   :ItemMicrofilmAsset ;
+        :microfilmCanister  "LIX" ;
+        :microfilmStrip     "84" .
+    
+    bdr:MW1FEMC022915
+        a                   :Instance ;
+        skos:prefLabel      "ទ្វាទសបរិត្ត"@km , "dvādasaparitta"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID6EF0A99942688AE2 ;
+        :format             bdr:FormatShortPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT23B6088F55840DA0 , bdr:TT4DD3D8A013254FCD , bdr:TT8EB6DBC6753C2708 , bdr:TTEFC8E154A3802861 ;
+        :instanceHasReproduction  bdr:W1FEMC022915 ;
+        :isComplete         true ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF33B60D9FAD5BC14B ;
+        :note               bdr:NT67887EAB65E19DDE , bdr:NTD4AEF316868E3CD0 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr ;
+        :workKDPPOldId      "188" .
+    
+    bdr:NT67887EAB65E19DDE
+        a                   :Note ;
+        :noteText           "Should we write (វាន) ?"@en .
+    
+    bdr:NTD4AEF316868E3CD0
+        a                   :Note ;
+        :contentLocationStatement  "pg. 525" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT23B6088F55840DA0
+        a                   :CoverTitle ;
+        rdfs:label          "ទ្វាទសបរិត្តំ (វាន)"@km .
+    
+    bdr:TT4DD3D8A013254FCD
+        a                   :Title ;
+        rdfs:label          "ទ្វាទសបរិត្ត"@km ;
+        :femcConversionOf   bdr:TT23B6088F55840DA0 .
+    
+    bdr:TT8EB6DBC6753C2708
+        a                   :CoverTitle ;
+        rdfs:label          "dvādasaparittaṃ"@km-x-twktt .
+    
+    bdr:TTEFC8E154A3802861
+        a                   :Title ;
+        rdfs:label          "dvādasaparitta"@km-x-twktt ;
+        :femcConversionOf   bdr:TT8EB6DBC6753C2708 .
+}

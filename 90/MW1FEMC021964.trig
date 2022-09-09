@@ -1,0 +1,90 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC021964 {
+    bda:LGIM3045394C  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2019-08-14T18:51:13.73Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC021964
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC021964 ;
+        adm:contentProvider  bda:CP043 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "90/MW1FEMC021964.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC021964 ;
+        adm:logEntry        bda:LGIM3045394C , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID0EE972222CA42948
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "d.746.III.5" .
+    
+    bdr:MW1FEMC021964
+        a                   :Instance ;
+        skos:prefLabel      "មហោសថជាតក"@km , "mahosath jātak"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID0EE972222CA42948 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "1" ;
+        :hasTitle           bdr:TT1B965F4453E63EF5 , bdr:TT36D6A8BD88455213 , bdr:TT7C29917E70420AAA , bdr:TT84F15C18EBACBAD9 , bdr:TTEA1B7AB459D4097A , bdr:TTFEA86E412AE02828 ;
+        :instanceHasReproduction  bdr:W1FEMC021964 ;
+        :instanceOf         bdr:WA1FEMC021964 , bdr:WA1FEMC050006 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :note               bdr:NTB3592AB47675E098 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NTB3592AB47675E098
+        a                   :Note ;
+        :contentLocationStatement  "pg. 349" ;
+        :noteSource         bdr:W1FEMC02 .
+    
+    bdr:TT1B965F4453E63EF5
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+    
+    bdr:TT36D6A8BD88455213
+        a                   :CoverTitle ;
+        rdfs:label          "mahosath"@km-x-twktt .
+    
+    bdr:TT7C29917E70420AAA
+        a                   :CoverTitle ;
+        rdfs:label          "មហោសថ"@km .
+    
+    bdr:TT84F15C18EBACBAD9
+        a                   :Title ;
+        rdfs:label          "mahosath jātak"@km-x-twktt ;
+        :femcConversionOf   bdr:TT36D6A8BD88455213 .
+    
+    bdr:TTEA1B7AB459D4097A
+        a                   :Title ;
+        rdfs:label          "មហោសថជាតក"@km ;
+        :femcConversionOf   bdr:TT7C29917E70420AAA .
+    
+    bdr:TTFEA86E412AE02828
+        a                   :OtherTitle ;
+        rdfs:label          "ទសជាតក"@km .
+}

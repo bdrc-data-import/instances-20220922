@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW22069 {
+    bda:LG32EF8106805C1432
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG51FD3FB4B1BCCD13
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-01T15:37:08.196Z"^^xsd:dateTime ;
+        adm:logMessage      "released from onhold and completed cataloging"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW22069  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW22069 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "92/MW22069.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW22069 ;
+        adm:logEntry        bda:LG32EF8106805C1432 , bda:LG51FD3FB4B1BCCD13 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV412540A6E4274E6D
+        a                   :PublishedEvent ;
+        :eventWhen          "1982"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID2FD813665F64C07F
+        a                   bdr:HollisId ;
+        rdf:value           "014258601" .
+    
+    bdr:ID38F6C3DBBE645587
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "90186384" .
+    
+    bdr:IDAD40D1DA21CD4050
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "PL3748.G425 M4 1982" .
+    
+    bdr:MW22069  a          :Instance ;
+        skos:altLabel       "格萨尔王传 --梅岭之战"@zh-hans ;
+        skos:prefLabel      "me gling g.yul 'khrug"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID2FD813665F64C07F , bdr:ID38F6C3DBBE645587 , bdr:IDAD40D1DA21CD4050 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :copyrightStatus    bdr:CopyrightUndetermined ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "328 p." ;
+        :hasTitle           bdr:TT4A789761E96A2271 , bdr:TT87C71D0E88B42B89 , bdr:TT970BB43FA19A190F , bdr:TTCC8348403FC3AB90 ;
+        :instanceEvent      bdr:EV412540A6E4274E6D ;
+        :instanceHasReproduction  bdr:W22069 ;
+        :instanceOf         bdr:WA22069 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "lha sa/"@bo-x-ewts ;
+        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT4A789761E96A2271
+        a                   :ColophonTitle ;
+        rdfs:label          "格萨尔王传 --梅岭之战"@zh-hans .
+    
+    bdr:TT87C71D0E88B42B89
+        a                   :TitlePageTitle ;
+        rdfs:label          "gling ge sar rgyal po'i sgrung me gling g.yul 'khrug"@bo-x-ewts .
+    
+    bdr:TT970BB43FA19A190F
+        a                   :Title ;
+        rdfs:label          "me gling g.yul 'khrug"@bo-x-ewts .
+    
+    bdr:TTCC8348403FC3AB90
+        a                   :ColophonTitle ;
+        rdfs:label          "ge sa er wang zhuan-- mei ling zhi zhan"@zh-latn-pinyin-x-ndia .
+}

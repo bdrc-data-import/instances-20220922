@@ -1,0 +1,102 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW29679 {
+    bda:LG5B8B0469550204F5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGAE58A491738382D0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-10T13:56:55.802Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW29679  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW29679 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "73/MW29679.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW29679 ;
+        adm:logEntry        bda:LG5B8B0469550204F5 , bda:LGAE58A491738382D0 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:CR763C788C0495354C
+        a                   :AgentAsCreator ;
+        :agent              bdr:P8LS75560 ;
+        :role               bdr:R0ER0015 .
+    
+    bdr:EV0789BA0BF1C34D39
+        a                   :PublishedEvent ;
+        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID197D06D4E196D782
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2005312342" .
+    
+    bdr:ID390C767197F07BD5
+        a                   bdr:HollisId ;
+        rdf:value           "014260086" .
+    
+    bdr:ID57BF43C28C4CA482
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ6331.B952 Z35 2005" .
+    
+    bdr:MW29679  a          :Instance , :SerialInstance ;
+        skos:prefLabel      "dpal ri pad+ma 'od gling gi lo rgyus bde chen dag pa'i zhing bkod kyi rgyan/"@bo-x-ewts , "history of palri phodrang"@en ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID197D06D4E196D782 , bdr:ID390C767197F07BD5 , bdr:ID57BF43C28C4CA482 ;
+        :creator            bdr:CR763C788C0495354C ;
+        :editionStatement   "par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "84, 50 p." ;
+        :hasTitle           bdr:TT566FA7C2DE165AEE , bdr:TTD6DBAC18703599F5 ;
+        :instanceEvent      bdr:EV0789BA0BF1C34D39 ;
+        :instanceHasReproduction  bdr:W29679 ;
+        :instanceOf         bdr:WA29679 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "bylakuppe. karnataka state"@en ;
+        :publisherName      "snga 'gyur mtho slob mdo sngags rig pa'i 'byung gnas gling /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG13815 ;
+        :seriesNumber       "deb phreng 27" .
+    
+    bdr:TT566FA7C2DE165AEE
+        a                   :Title ;
+        rdfs:label          "dpal ri pad+ma 'od gling gi lo rgyus bde chen dag pa'i zhing bkod kyi rgyan/"@bo-x-ewts .
+    
+    bdr:TTD6DBAC18703599F5
+        a                   :OtherTitle ;
+        rdfs:label          "history of palri phodrang"@en .
+}

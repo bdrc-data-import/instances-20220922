@@ -1,0 +1,85 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG25557 {
+    bda:LGABC11D25547BD835
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2017-05-18T11:35:30.098Z"^^xsd:dateTime ;
+        adm:logMessage      "completed cataloging and released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB3B99E9B604D4A5D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T17:13:40.045Z"^^xsd:dateTime ;
+        adm:logMessage      "added editor"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:MW1KG25557  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG25557 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "86/MW1KG25557.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG25557 ;
+        adm:logEntry        bda:LGABC11D25547BD835 , bda:LGB3B99E9B604D4A5D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7C0C2B6C459F4895
+        a                   :PublishedEvent ;
+        :eventWhen          "2012,2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID06BC05ED84CAD560
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2014358719" .
+    
+    bdr:ID96CAF90E6006A6E5
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9787542018779" .
+    
+    bdr:IDD824A3169EC29314
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "SD222.T52 R33 2012" .
+    
+    bdr:MW1KG25557  a       :Instance ;
+        skos:altLabel       "zhi wu yuan di"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "rtsi shing gi zhing khams/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID06BC05ED84CAD560 , bdr:ID96CAF90E6006A6E5 , bdr:IDD824A3169EC29314 ;
+        :authorshipStatement  "pad+ma dbang chen gyis sgrig rtsom byas/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        :extentStatement    "[4], [13], 135 p." ;
+        :hasTitle           bdr:TT28F625E857474C5D , bdr:TT96D84EE2745C2F59 , bdr:TTBB7838DB893AB6EC ;
+        :illustrations      "ill. (col.)" ;
+        :instanceEvent      bdr:EV7C0C2B6C459F4895 ;
+        :instanceHasReproduction  bdr:W1KG25557 ;
+        :instanceOf         bdr:WA1KG25557 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zi ling /"@bo-x-ewts ;
+        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT28F625E857474C5D
+        a                   :Title ;
+        rdfs:label          "rtsi shing gi zhing khams/"@bo-x-ewts .
+    
+    bdr:TT96D84EE2745C2F59
+        a                   :TitlePageTitle ;
+        rdfs:label          "shes bya dris brgya ba/ rtsi shing gi zhing khams/"@bo-x-ewts .
+    
+    bdr:TTBB7838DB893AB6EC
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "zhi wu yuan di"@zh-latn-pinyin-x-ndia .
+}

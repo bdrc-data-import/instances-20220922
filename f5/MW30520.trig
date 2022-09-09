@@ -1,0 +1,111 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW30520 {
+    bda:LG01CF5273FA43509B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8693C79D1C024C12
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-08-28T11:14:42.659Z"^^xsd:dateTime ;
+        adm:logMessage      "changed onhold to released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM3B24E310  a     adm:UpdateData ;
+        adm:logAgent        "pubinfo-update-lcCallNumber-fromCSV.xql" ;
+        adm:logDate         "2019-06-17T21:07:27.001Z"^^xsd:dateTime ;
+        adm:logMessage      "correct mw:lcCallNumber field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW30520  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW30520 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "f5/MW30520.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW30520 ;
+        adm:logEntry        bda:LG01CF5273FA43509B , bda:LG8693C79D1C024C12 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A195AE57D6BDD8C
+        a                   :PublishedEvent ;
+        :eventWhen          "2003"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID4BFF9BE6A5299AF8
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9624506973" .
+    
+    bdr:ID5B1A024B34BBD220
+        a                   bdr:HollisId ;
+        rdf:value           "014260831" .
+    
+    bdr:ID918B85FFAD76D986
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "RS131.75.T55 B57 2003" .
+    
+    bdr:IDB1917E3B0B1BC3FE
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "2003323491" .
+    
+    bdr:MW30520  a          :Instance ;
+        skos:altLabel       "常用臧中西药婧碎"@zh-hans ;
+        skos:prefLabel      "bod rgya phyi gsum gso rig nyer mkho'i bcud thigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID4BFF9BE6A5299AF8 , bdr:ID5B1A024B34BBD220 , bdr:ID918B85FFAD76D986 , bdr:IDB1917E3B0B1BC3FE ;
+        :authorshipStatement  "mkhan sprul bkra shis don grub kyis brtsams/"@bo-x-ewts ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
+        :extentStatement    "12, 397 p." ;
+        :hasTitle           bdr:TT5FDA04CBF01FE28A , bdr:TTB391EF65A7B46437 , bdr:TTFF9F4CD4A311F136 ;
+        :instanceEvent      bdr:EV1A195AE57D6BDD8C ;
+        :instanceHasReproduction  bdr:W30520 ;
+        :instanceOf         bdr:WA30520 ;
+        :note               bdr:NTC6B20DCD8E5EF7DC ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "zhang kang /"@bo-x-ewts ;
+        :publisherName      "zhang kang then mA dpe skrun kung zi/"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NTC6B20DCD8E5EF7DC
+        a                   :Note ;
+        :noteText           "contents:  skabs dang po: gangs ljongs gso rig bdud rtsi'i bcud thigs.--skabs gnyis pa: rgya lugs gso rig rgya mtsho'i gzegs ma.--skabs gsum pa: nub lugs gso rig chu klung zil thigs.--legs sbyar sgra rig pa'i lo rgyus dang spyi don mdor bsdus.--snyan ngag dbyangs can pi wang."@en .
+    
+    bdr:TT5FDA04CBF01FE28A
+        a                   :Title ;
+        rdfs:label          "bod rgya phyi gsum gso rig nyer mkho'i bcud thigs/"@bo-x-ewts .
+    
+    bdr:TTB391EF65A7B46437
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "chang yong zang zhong xi yao jing sui"@zh-latn-pinyin-x-ndia .
+    
+    bdr:TTFF9F4CD4A311F136
+        a                   :CopyrightPageTitle ;
+        rdfs:label          "常用臧中西药婧碎"@zh-hans .
+}

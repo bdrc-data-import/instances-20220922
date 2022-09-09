@@ -1,0 +1,100 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1KG13999 {
+    bda:LG073518A09CD8D163
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2013-04-29T14:49:22.471Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMA45794A9D2
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-05-02T18:19:14.334Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeHarvard to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1KG13999  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1KG13999 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "78/MW1KG13999.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1KG13999 ;
+        adm:logEntry        bda:LG073518A09CD8D163 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3405EEA72E56561B
+        a                   :PublishedEvent ;
+        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID057A63A4522428EA
+        a                   bdr:HarvardShelfId ;
+        rdf:value           "013874607-9" .
+    
+    bdr:IDB2900F6E5FF9FFEA
+        a                   bdr:HollisId ;
+        rdf:value           "014256094" .
+    
+    bdr:IDDCCBD562023FD8BE
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "9789380359601" .
+    
+    bdr:MW1KG13999  a       :Instance , :SerialInstance ;
+        skos:altLabel       "Dṅos yod kyi ʼjig rten :tshad ma daṅ tshan rig dbar gyi gsaṅ gtam /rtsom pa po, A-mchog Blo-bzaṅ-rnam-rgyal."@en-x-mixed ;
+        skos:prefLabel      "dngos yod kyi 'jig rten/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID057A63A4522428EA , bdr:IDB2900F6E5FF9FFEA , bdr:IDDCCBD562023FD8BE ;
+        :contentMethod      bdr:ContentMethod_ComputerInput ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "viii, 139 p." ;
+        :hasTitle           bdr:TT3A55871084930C1E , bdr:TT6A40061B54323DD5 , bdr:TTA11FB8C2C9F84151 ;
+        :instanceEvent      bdr:EV3405EEA72E56561B ;
+        :instanceHasReproduction  bdr:W1KG13999 ;
+        :instanceOf         bdr:WA1KG13999 ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "dharamsala, h.p."@en ;
+        :publisherName      "library of tibetan works and archives"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS1KG13999 ;
+        :seriesNumber       "5" .
+    
+    bdr:TT3A55871084930C1E
+        a                   :CoverTitle ;
+        rdfs:label          "Dṅos yod kyi ʼjig rten :tshad ma daṅ tshan rig dbar gyi gsaṅ gtam /rtsom pa po, A-mchog Blo-bzaṅ-rnam-rgyal."@en-x-mixed .
+    
+    bdr:TT6A40061B54323DD5
+        a                   :Title ;
+        rdfs:label          "dngos yod kyi 'jig rten/"@bo-x-ewts .
+    
+    bdr:TTA11FB8C2C9F84151
+        a                   :Subtitle ;
+        rdfs:label          "tshad ma dang tshan rig dbar gyi gsang gtam/"@bo-x-ewts .
+}

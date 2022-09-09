@@ -1,0 +1,97 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW23706 {
+    bda:LG8503309F6BC62B8F
+        a                   adm:UpdateData ;
+        adm:logDate         "2013-03-06T10:09:07.401Z"^^xsd:dateTime ;
+        adm:logMessage      "added print type and source printery"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LG863A0242294710C4
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW23706  a          adm:AdminData ;
+        adm:adminAbout      bdr:MW23706 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "50/MW23706.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW23706 ;
+        adm:logEntry        bda:LG8503309F6BC62B8F , bda:LG863A0242294710C4 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV505E521875100D29
+        a                   :PublishedEvent ;
+        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:ID36ECF671A2B157FE
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "BQ7672.6 .B76 1985" .
+    
+    bdr:IDAFCEB9D53D77C0AB
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "85903747" .
+    
+    bdr:IDB0C201FA4B3BADCF
+        a                   bdr:HollisId ;
+        rdf:value           "014259052" .
+    
+    bdr:MW23706  a          :Instance , :SerialInstance ;
+        skos:altLabel       "exegesis of the thub pa'i dgons pa rab gsal and tshad ma rig gter, two works by sa-skya pandi-ta kun-dga'-rgyal-mtshan on the fundamentals of buddhist practice and logic"@en-x-mixed ;
+        skos:prefLabel      "thub pa'i dgongs pa rab gsal dang tshad ma rig gter skor/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID36ECF671A2B157FE , bdr:IDAFCEB9D53D77C0AB , bdr:IDB0C201FA4B3BADCF ;
+        :authorshipStatement  "glo-bo mkhan-chen bsod-nams-lhun-grub/"@bo-x-ewts ;
+        :biblioNote         "reproduced from a print from the sde-dge dgon-chen blocks"@en ;
+        :hasSourcePrintery  bdr:G1657 ;
+        :hasTitle           bdr:TT379DE6F158CF7A06 , bdr:TTB46256016E8E7969 ;
+        :instanceEvent      bdr:EV505E521875100D29 ;
+        :instanceHasReproduction  bdr:W23706 ;
+        :instanceOf         bdr:WA23706 ;
+        :note               bdr:NT51834297BC564F8C ;
+        :numberOfVolumes    2 ;
+        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
+        :publisherLocation  "manduwala, dehra dun, u.p."@en ;
+        :publisherName      "pal ewam chodan ngorpa center"@en ;
+        :script             bdr:ScriptTibt ;
+        :serialInstanceOf   bdr:WAS23659 ;
+        :seriesNumber       "v.1-2" .
+    
+    bdr:NT51834297BC564F8C
+        a                   :Note ;
+        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 2479-2480\n\nother volumes in series are also available: w23659 and w23707"@en .
+    
+    bdr:TT379DE6F158CF7A06
+        a                   :TitlePageTitle ;
+        rdfs:label          "exegesis of the thub pa'i dgons pa rab gsal and tshad ma rig gter, two works by sa-skya pandi-ta kun-dga'-rgyal-mtshan on the fundamentals of buddhist practice and logic"@en-x-mixed .
+    
+    bdr:TTB46256016E8E7969
+        a                   :Title ;
+        rdfs:label          "thub pa'i dgongs pa rab gsal dang tshad ma rig gter skor/"@bo-x-ewts .
+}

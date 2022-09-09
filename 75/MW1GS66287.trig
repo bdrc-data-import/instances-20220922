@@ -1,0 +1,96 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1GS66287 {
+    bda:LG11020BAE528575DC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2007-11-19T11:07:07.584Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged for creating scan request"@en ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGBB9E3E36FD0A2F41
+        a                   adm:UpdateData ;
+        adm:logDate         "2007-11-21T15:32:19.933Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGIM6B433BA01E
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logMessage      "normalize encoding field for pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00012 .
+    
+    bda:LGIMD5FAEE0C6C
+        a                   adm:UpdateData ;
+        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logMessage      "added hollis field to pub info"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:MW1GS66287  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW1GS66287 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "75/MW1GS66287.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1GS66287 ;
+        adm:logEntry        bda:LG11020BAE528575DC , bda:LGBB9E3E36FD0A2F41 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBA5219849696A078
+        a                   :PublishedEvent ;
+        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDC530EF1DAD5AB0DF
+        a                   bdr:HollisId ;
+        rdf:value           "014255527" .
+    
+    bdr:IDD362FE8A30F7D843
+        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        rdf:value           "7800577546" .
+    
+    bdr:MW1GS66287  a       :Instance ;
+        skos:altLabel       "tibet painting"@en , "xizang huihua"@zh-latn-pinyin-x-ndia ;
+        skos:prefLabel      "bod kyi ri mo'i slob deb lag len zhun thigs/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:IDC530EF1DAD5AB0DF , bdr:IDD362FE8A30F7D843 ;
+        :authorshipStatement  "bstan pa rab brtan gyis brtsams/"@bo-x-ewts ;
+        :copyrightStatus    bdr:CopyrightInCopyright ;
+        :extentStatement    "4, 2, 154, 130 p.of  ill. (some col.)" ;
+        :hasTitle           bdr:TT0578124E4FC59B85 , bdr:TT2D79856A86619520 , bdr:TT45320A4A991E22E8 ;
+        :illustrations      "ill. (many col.)" ;
+        :instanceEvent      bdr:EVBA5219849696A078 ;
+        :instanceHasReproduction  bdr:W1GS66287 ;
+        :instanceOf         bdr:WA1GS66287 ;
+        :note               bdr:NT8EC3FA38642DE690 ;
+        :numberOfVolumes    1 ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:NT8EC3FA38642DE690
+        a                   :Note ;
+        :noteText           "scanned for preservation purposes only; not for distribution because of copyright considerations"@en .
+    
+    bdr:TT0578124E4FC59B85
+        a                   :Title ;
+        rdfs:label          "bod kyi ri mo'i slob deb lag len zhun thigs/"@bo-x-ewts .
+    
+    bdr:TT2D79856A86619520
+        a                   :OtherTitle ;
+        rdfs:label          "tibet painting"@en .
+    
+    bdr:TT45320A4A991E22E8
+        a                   :OtherTitle ;
+        rdfs:label          "xizang huihua"@zh-latn-pinyin-x-ndia .
+}

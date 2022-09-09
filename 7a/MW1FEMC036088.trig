@@ -1,0 +1,87 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1FEMC036088 {
+    bda:LG5906E1A445CBD9E3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-01-13"^^xsd:date ;
+        adm:logMessage      "entered cataloging for W1FEMC036088"@en ;
+        adm:logWho          bdu:U00083 .
+    
+    bda:LGIM4F4FC78A  a     adm:InitialDataImport ;
+        adm:logAgent        "works-femc01-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIM4F4FC78A3
+        a                   adm:UpdateData ;
+        adm:logAgent        "works-femc03-import.xql" ;
+        adm:logDate         "2021-08-09T15:39:57.044Z"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:LGIMF0695A99  a     adm:UpdateData ;
+        adm:logAgent        "admin/pubinfo-femc-update-biblioNote.xql" ;
+        adm:logDate         "2021-08-18T18:23:42.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblioNote"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1FEMC036088
+        a                   adm:AdminData ;
+        adm:adminAbout      bdr:MW1FEMC036088 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7a/MW1FEMC036088.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1FEMC036088 ;
+        adm:logEntry        bda:LG5906E1A445CBD9E3 , bda:LGIM4F4FC78A , bda:LGIM4F4FC78A3 , bda:LGIMF0695A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:MW1FEMC046088 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:ID48894983E0F5BCA8
+        a                   bdr:FEMCManuscriptCode ;
+        rdf:value           "047-B.04.03.03.I.1" .
+    
+    bdr:MF815189855E95E6CD
+        a                   :ItemMicrofilmAsset ;
+        :microfilmStrip     "175" .
+    
+    bdr:MW1FEMC036088
+        a                   :Instance ;
+        skos:prefLabel      "ច្បាប់ក្រំម (១-៧)(១-៨)"@km , "Cpāp' kraṃm"@km-x-twktt ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID48894983E0F5BCA8 ;
+        :format             bdr:FormatLongPalmLeaf ;
+        :hasFascicles       "2, 5" ;
+        :hasTitle           bdr:TT26C44670BEA63CB3 , bdr:TTB877A02E0C3D4DA5 ;
+        :isComplete         false ;
+        :language           bdr:LangKm ;
+        :material           bdr:MaterialCoryphaPalmLeaf ;
+        :microfilmItem      bdr:MF815189855E95E6CD ;
+        :note               bdr:NT08E8D023685DB6DE ;
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Manuscript ;
+        :script             bdr:ScriptKhmr .
+    
+    bdr:NT08E8D023685DB6DE
+        a                   :Note ;
+        :noteSource         bda:PR1FEMC03 ;
+        :noteText           "Catalog" .
+    
+    bdr:TT26C44670BEA63CB3
+        a                   :Title ;
+        rdfs:label          "Cpāp' kraṃm"@km-x-twktt .
+    
+    bdr:TTB877A02E0C3D4DA5
+        a                   :Title ;
+        rdfs:label          "ច្បាប់ក្រំម (១-៧)(១-៨)"@km .
+}
