@@ -12,31 +12,54 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW20167 {
-    bda:LGF80B583D369D0810
+    bda:LGCD52012A1A4B012E
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGF5756E472CF305D0
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-09-20T16:08:12.115Z"^^xsd:dateTime ;
+        adm:logMessage      "released from Onhold and full cataloged"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:MW20167  a          adm:AdminData ;
         adm:adminAbout      bdr:MW20167 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "2c/MW20167.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW20167 ;
-        adm:logEntry        bda:LGF80B583D369D0810 ;
+        adm:logEntry        bda:LGCD52012A1A4B012E , bda:LGF5756E472CF305D0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusOnHold .
+        adm:status          bda:StatusReleased .
     
     bdr:EV40FBE1C9D9328971
         a                   :PublishedEvent ;
         :eventWhen          "1973"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW20167  a          :Instance ;
+    bdr:ID89BE63B4EC7937EC
+        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        rdf:value           "74163072" .
+    
+    bdr:IDF80B583D369D0810
+        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        rdf:value           "DS786 .P45" .
+    
+    bdr:MW20167  a          :Instance , :SerialInstance ;
         skos:prefLabel      "aristocracy and government in tibet, 1728 1959"@en ;
-        :authorshipStatement  "by luciano petech/"@bo-x-ewts ;
+        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
+            bdr:ID89BE63B4EC7937EC , bdr:IDF80B583D369D0810 ;
+        :contentMethod      bdr:ContentMethod_TypeSet ;
+        :extentStatement    "ix, 274 p." ;
         :hasTitle           bdr:TTBF16E196D09767A8 ;
         :instanceEvent      bdr:EV40FBE1C9D9328971 ;
+        :instanceHasReproduction  bdr:W20167 ;
         :instanceOf         bdr:WA20167 ;
-        :script             bdr:ScriptLatn .
+        :numberOfVolumes    1 ;
+        :printMethod        bdr:PrintMethod_Modern ;
+        :publisherLocation  "Roma"@en ;
+        :publisherName      "Istituto italiano per il Medio ed Estremo Oriente"@en ;
+        :serialInstanceOf   bdr:WAS20167 ;
+        :seriesNumber       "v. 45" .
     
     bdr:TTBF16E196D09767A8
         a                   :Title ;
