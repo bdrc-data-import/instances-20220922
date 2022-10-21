@@ -1,17 +1,58 @@
 @prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix adr:   <http://purl.bdrc.io/resource-nc/auth/> .
+@prefix as:    <http://www.w3.org/ns/activitystreams#> .
+@prefix aut:   <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdac:  <http://purl.bdrc.io/anncollection/> .
+@prefix bdan:  <http://purl.bdrc.io/annotation/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdgu:  <http://purl.bdrc.io/graph-nc/user/> .
+@prefix bdgup: <http://purl.bdrc.io/graph-nc/user-private/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdou:  <http://purl.bdrc.io/ontology/ext/user/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bds:   <http://purl.bdrc.io/ontology/shapes/core/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dila:  <http://purl.dila.edu.tw/resource/> .
+@prefix eftr:  <http://purl.84000.co/resource/core/> .
+@prefix f:     <java:io.bdrc.libraries.sparql.functions.> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix mbbt:  <http://mbingenheimer.net/tools/bibls/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix ola:   <https://openlibrary.org/authors/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsh:   <http://purl.bdrc.io/shacl/core/shape/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix srcd:  <https://sakyaresearch.org/deities/> .
+@prefix srcl:  <https://sakyaresearch.org/literary_forms/> .
+@prefix srcpe: <https://sakyaresearch.org/persons/> .
+@prefix srcpl: <https://sakyaresearch.org/places/> .
+@prefix srcs:  <https://sakyaresearch.org/sources/> .
+@prefix srct:  <https://sakyaresearch.org/topics/> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix text:  <http://jena.apache.org/text#> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN10662 {
+    bda:LG0MW3CN10662_XPU4FGI92TYJ
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-10-21T03:20:53.431324Z"^^xsd:dateTime ;
+        adm:logMessage      "marked as in copyright"@en ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG671FA31A573A371E
         a                   adm:UpdateData ;
         adm:logDate         "2021-03-22T15:59:10.652Z"^^xsd:dateTime ;
@@ -30,40 +71,35 @@ bdg:MW3CN10662 {
         adm:gitPath         "c9/MW3CN10662.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN10662 ;
-        adm:logEntry        bda:LG671FA31A573A371E , bda:LG9BF2AC3FFB2A8D63 ;
+        adm:logEntry        bda:LG0MW3CN10662_XPU4FGI92TYJ , bda:LG671FA31A573A371E , bda:LG9BF2AC3FFB2A8D63 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV63D0EF240F5B562E
-        a                   :PublishedEvent ;
-        :eventWhen          "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
-    
     bdr:ID72C4DAF63AA5008A
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9788192326337" .
     
-    bdr:MW3CN10662  a       :Instance ;
+    bdr:MW3CN10662  a       bdo:Instance ;
         skos:prefLabel      "dka' sdug gi zin tho/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID72C4DAF63AA5008A ;
-        :authorshipStatement  "'jigs med rgya mtshos brtsams/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "175 p." ;
-        :hasTitle           bdr:TTD09095119BE4D3E1 ;
-        :instanceEvent      bdr:EV63D0EF240F5B562E ;
-        :instanceHasReproduction  bdr:W3CN10662 ;
-        :instanceOf         bdr:WA3CN10662 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "Dharamsala"@en ;
-        :publisherName      "rgyal spyi'i pen gyi yan lag bod kyi rtsom pa po'i mthun tshogs nas par skrun zhus/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS3CN10662 .
+        bf:identifiedBy     bdr:ID72C4DAF63AA5008A ;
+        bdo:authorshipStatement  "'jigs med rgya mtshos brtsams/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "175 p." ;
+        bdo:hasTitle        bdr:TTD09095119BE4D3E1 ;
+        bdo:instanceHasReproduction  bdr:W3CN10662 ;
+        bdo:instanceOf      bdr:WA3CN10662 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Dharamsala"@en ;
+        bdo:publisherName   "rgyal spyi'i pen gyi yan lag bod kyi rtsom pa po'i mthun tshogs nas par skrun zhus/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS3CN10662 .
     
     bdr:TTD09095119BE4D3E1
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "dka' sdug gi zin tho/"@bo-x-ewts .
 }
