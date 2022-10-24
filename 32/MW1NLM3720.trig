@@ -1,17 +1,58 @@
 @prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix adr:   <http://purl.bdrc.io/resource-nc/auth/> .
+@prefix as:    <http://www.w3.org/ns/activitystreams#> .
+@prefix aut:   <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdac:  <http://purl.bdrc.io/anncollection/> .
+@prefix bdan:  <http://purl.bdrc.io/annotation/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdgu:  <http://purl.bdrc.io/graph-nc/user/> .
+@prefix bdgup: <http://purl.bdrc.io/graph-nc/user-private/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdou:  <http://purl.bdrc.io/ontology/ext/user/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bds:   <http://purl.bdrc.io/ontology/shapes/core/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dila:  <http://purl.dila.edu.tw/resource/> .
+@prefix eftr:  <http://purl.84000.co/resource/core/> .
+@prefix f:     <java:io.bdrc.libraries.sparql.functions.> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix mbbt:  <http://mbingenheimer.net/tools/bibls/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix ola:   <https://openlibrary.org/authors/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsh:   <http://purl.bdrc.io/shacl/core/shape/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix srcd:  <https://sakyaresearch.org/deities/> .
+@prefix srcl:  <https://sakyaresearch.org/literary_forms/> .
+@prefix srcpe: <https://sakyaresearch.org/persons/> .
+@prefix srcpl: <https://sakyaresearch.org/places/> .
+@prefix srcs:  <https://sakyaresearch.org/sources/> .
+@prefix srct:  <https://sakyaresearch.org/topics/> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix text:  <http://jena.apache.org/text#> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3720 {
+    bda:LG0MW1NLM3720_UTSW8DE5YEXM
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-10-24T15:25:38.362210Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,31 +64,37 @@ bdg:MW1NLM3720 {
         adm:gitPath         "32/MW1NLM3720.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3720 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3720_UTSW8DE5YEXM , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3720  a       :Instance ;
+    bdr:MW1NLM3720  a       bdo:Instance ;
         skos:prefLabel      "rta mgrin yang gsang khros pa'i sgrub thabs kyi rnam bshad bsgom khog bla chen chos dpal bzang pos mdzad sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "40x6" ;
-        :extentStatement    "56 ff., 24 ff., 43 ff., 5 ff." ;
-        :hasTitle           bdr:TT2B42810B8FA49A48 ;
-        :instanceHasReproduction  bdr:W1NLM3720 ;
-        :instanceOf         bdr:WA1NLM3720 ;
-        :note               bdr:NTA5689B99AFE37BEF , bdr:NTEFC2C52557E3F284 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+        bdo:biblioNote      "Scanned at the National Library of Mongolia in collaboration with Asian Classics Input Project and with generous support from Khyentse Foundation."@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "40x6" ;
+        bdo:extentStatement  "56 ff., 24 ff., 43 ff., 5 ff." ;
+        bdo:hasTitle        bdr:TT2B42810B8FA49A48 ;
+        bdo:instanceHasReproduction  bdr:W1NLM3720 ;
+        bdo:instanceOf      bdr:WA1NLM3720 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTA5689B99AFE37BEF , bdr:NTEFC2C52557E3F284 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "Mongolia"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTA5689B99AFE37BEF
-        a                   :Note ;
-        :noteText           "nlmId: M0061638"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061638"@en .
     
     bdr:NTEFC2C52557E3F284
-        a                   :Note ;
-        :noteText           "missingPages: M0061638-029 [Missing page from 18A-18B] Image 195-196"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061638-029 [Missing page from 18A-18B] Image 195-196"@en .
     
     bdr:TT2B42810B8FA49A48
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rta mgrin yang gsang khros pa'i sgrub thabs kyi rnam bshad bsgom khog bla chen chos dpal bzang pos mdzad sogs/"@bo-x-ewts .
 }
