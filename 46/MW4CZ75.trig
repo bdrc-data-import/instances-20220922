@@ -1,14 +1,49 @@
 @prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix adr:   <http://purl.bdrc.io/resource-nc/auth/> .
+@prefix as:    <http://www.w3.org/ns/activitystreams#> .
+@prefix aut:   <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdac:  <http://purl.bdrc.io/anncollection/> .
+@prefix bdan:  <http://purl.bdrc.io/annotation/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdgu:  <http://purl.bdrc.io/graph-nc/user/> .
+@prefix bdgup: <http://purl.bdrc.io/graph-nc/user-private/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdou:  <http://purl.bdrc.io/ontology/ext/user/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bds:   <http://purl.bdrc.io/ontology/shapes/core/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dila:  <http://purl.dila.edu.tw/resource/> .
+@prefix eftr:  <http://purl.84000.co/resource/core/> .
+@prefix f:     <java:io.bdrc.libraries.sparql.functions.> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix mbbt:  <http://mbingenheimer.net/tools/bibls/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix ola:   <https://openlibrary.org/authors/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsh:   <http://purl.bdrc.io/shacl/core/shape/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix srcd:  <https://sakyaresearch.org/deities/> .
+@prefix srcl:  <https://sakyaresearch.org/literary_forms/> .
+@prefix srcpe: <https://sakyaresearch.org/persons/> .
+@prefix srcpl: <https://sakyaresearch.org/places/> .
+@prefix srcs:  <https://sakyaresearch.org/sources/> .
+@prefix srct:  <https://sakyaresearch.org/topics/> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix text:  <http://jena.apache.org/text#> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ75 {
@@ -17,6 +52,12 @@ bdg:MW4CZ75 {
         adm:logDate         "2013-04-22T12:48:49.072Z"^^xsd:dateTime ;
         adm:logMessage      "added print type and source printery"@en ;
         adm:logWho          bdu:U00013 .
+    
+    bda:LG0MW4CZ75_6ENHRKPD4NHY
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-11-01T06:53:35.246243Z"^^xsd:dateTime ;
+        adm:logMessage      "add reference to LvdK's article"@en ;
+        adm:logWho          bdu:U1653882847 .
     
     bda:LG27B49EA928EA4383
         a                   adm:UpdateData ;
@@ -78,48 +119,50 @@ bdg:MW4CZ75 {
         adm:gitPath         "46/MW4CZ75.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ75 ;
-        adm:logEntry        bda:LG0D5B10A4B1DE45B2 , bda:LG27B49EA928EA4383 , bda:LG3470033E56E73949 , bda:LG389970337C7FE311 , bda:LG771BBEC8B3342228 , bda:LGA4D9F2EC3FBD61C5 , bda:LGB218E297956D5E8A , bda:LGDEFFBB1F200BF76A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0D5B10A4B1DE45B2 , bda:LG0MW4CZ75_6ENHRKPD4NHY , bda:LG27B49EA928EA4383 , bda:LG3470033E56E73949 , bda:LG389970337C7FE311 , bda:LG771BBEC8B3342228 , bda:LGA4D9F2EC3FBD61C5 , bda:LGB218E297956D5E8A , bda:LGDEFFBB1F200BF76A , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV64A851D0F032B0F2
-        a                   :PublishedEvent ;
-        :eventWhen          "1294"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1294/1309"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDF5717927D9CF031F
         a                   bdr:HollisId ;
         rdf:value           "014260966" .
     
-    bdr:MW4CZ75  a          :Instance ;
+    bdr:MW4CZ75  a          bdo:Instance ;
         skos:prefLabel      "rgyud kyi rgyal po dpal dus kyi 'khor lo/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF5717927D9CF031F ;
-        :biblioNote         "original blockprint is missing last page but text is completed"@en ;
-        :extentStatement    "178 ff." ;
-        :hasSourcePrintery  bdr:G584 ;
-        :hasTitle           bdr:TT4CB1D7C9FACA2E21 , bdr:TTE4D39E4C06E8C3D2 ;
-        :instanceEvent      bdr:EV64A851D0F032B0F2 ;
-        :instanceHasReproduction  bdr:W4CZ75 ;
-        :instanceOf         bdr:WA4CZ75 ;
-        :note               bdr:NT0FD0F35BFC8DD8DC , bdr:NTCF1E274372CD628B ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherName      "*kau lang ho/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:IDF5717927D9CF031F ;
+        bdo:biblioNote      "original blockprint is missing last page but text is completed"@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "178 ff." ;
+        bdo:hasSourcePrintery  bdr:G584 ;
+        bdo:hasTitle        bdr:TT4CB1D7C9FACA2E21 , bdr:TTE4D39E4C06E8C3D2 ;
+        bdo:instanceEvent   bdr:EV64A851D0F032B0F2 ;
+        bdo:instanceHasReproduction  bdr:W4CZ75 ;
+        bdo:instanceOf      bdr:WA4CZ75 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT0FD0F35BFC8DD8DC , bdr:NTCF1E274372CD628B ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherName   "*kau lang ho/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT0FD0F35BFC8DD8DC
-        a                   :Note ;
-        :noteText           "དུས་འཁོར་རྒྱུད་ཀྱི་པར་མ་འདི་ནི་བོད་ཡིག་གི་གསུང་རབ་ཤིང་པར་དུ་བརྐོས་པའི་ནང་ནས་སྔ་ཤོས་ཀྱི་གྲས་ཏེ། སྤྱི་ལོ་༡༢༩༤ལོར་སེ་ཆེན་རྒྱལ་པོའི་དགོངས་རྫོགས་སུ་དེའི་ཡུམ་སྲས་གཉིས་ཀྱིས་གྲུབ་ཆེན་ཨུ་རྒྱན་པ་གདན་ཞུས་མཛད་དེ་བཞེངས་པའོ༎"@bo .
+        a                   bdo:Note ;
+        bdo:noteText        "དུས་འཁོར་རྒྱུད་ཀྱི་པར་མ་འདི་ནི་བོད་ཡིག་གི་གསུང་རབ་ཤིང་པར་དུ་བརྐོས་པའི་ནང་ནས་སྔ་ཤོས་ཀྱི་གྲས་ཏེ། སྤྱི་ལོ་༡༢༩༤ལོར་སེ་ཆེན་རྒྱལ་པོའི་དགོངས་རྫོགས་སུ་དེའི་ཡུམ་སྲས་གཉིས་ཀྱིས་གྲུབ་ཆེན་ཨུ་རྒྱན་པ་གདན་ཞུས་མཛད་དེ་བཞེངས་པའོ༎"@bo .
     
     bdr:NTCF1E274372CD628B
-        a                   :Note ;
-        :noteText           "photographs of old mongol blocks of rare texts from tbrc collection"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "This block print is described in Leonard van der Kujip, 2004, \"The Kālackra and the Patronage of Tibetan Buddhism by the Mongol Imperial Family\", description starting page 20."@en .
     
     bdr:TT4CB1D7C9FACA2E21
-        a                   :FullTitle ;
+        a                   bdo:ColophonTitle ;
         rdfs:label          "mchog gi dang po'i sangs rgyas las phyung ba rgyud kyi rgyal po dpal dus kyi 'khor lo/"@bo-x-ewts .
     
     bdr:TTE4D39E4C06E8C3D2
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rgyud kyi rgyal po dpal dus kyi 'khor lo/"@bo-x-ewts .
 }
