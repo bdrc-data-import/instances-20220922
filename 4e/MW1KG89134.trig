@@ -1,14 +1,49 @@
 @prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix adr:   <http://purl.bdrc.io/resource-nc/auth/> .
+@prefix as:    <http://www.w3.org/ns/activitystreams#> .
+@prefix aut:   <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdac:  <http://purl.bdrc.io/anncollection/> .
+@prefix bdan:  <http://purl.bdrc.io/annotation/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdgu:  <http://purl.bdrc.io/graph-nc/user/> .
+@prefix bdgup: <http://purl.bdrc.io/graph-nc/user-private/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdou:  <http://purl.bdrc.io/ontology/ext/user/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bds:   <http://purl.bdrc.io/ontology/shapes/core/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dila:  <http://purl.dila.edu.tw/resource/> .
+@prefix eftr:  <http://purl.84000.co/resource/core/> .
+@prefix f:     <java:io.bdrc.libraries.sparql.functions.> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix mbbt:  <http://mbingenheimer.net/tools/bibls/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix ola:   <https://openlibrary.org/authors/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsh:   <http://purl.bdrc.io/shacl/core/shape/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix srcd:  <https://sakyaresearch.org/deities/> .
+@prefix srcl:  <https://sakyaresearch.org/literary_forms/> .
+@prefix srcpe: <https://sakyaresearch.org/persons/> .
+@prefix srcpl: <https://sakyaresearch.org/places/> .
+@prefix srcs:  <https://sakyaresearch.org/sources/> .
+@prefix srct:  <https://sakyaresearch.org/topics/> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix text:  <http://jena.apache.org/text#> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG89134 {
@@ -17,6 +52,12 @@ bdg:MW1KG89134 {
         adm:logDate         "2018-06-06T16:19:40.636Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LG0MW1KG89134_LBEYVOVTYYZD
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-11-03T16:17:43.468251Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected title"@en ;
+        adm:logWho          bdu:U1426146149 .
     
     bda:LGIM5822C27E  a     adm:UpdateData ;
         adm:logAgent        "pubinfo-add-biblioNote" ;
@@ -30,32 +71,31 @@ bdg:MW1KG89134 {
         adm:gitPath         "4e/MW1KG89134.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG89134 ;
-        adm:logEntry        bda:LG030CE0AF5909A030 , bda:LGIM5822C27E ;
+        adm:logEntry        bda:LG030CE0AF5909A030 , bda:LG0MW1KG89134_LBEYVOVTYYZD , bda:LGIM5822C27E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:CR85EC161DB934B758
-        a                   :AgentAsCreator ;
-        :agent              bdr:P280 ;
-        :role               bdr:R0ER0015 .
-    
-    bdr:MW1KG89134  a       :Instance ;
-        skos:prefLabel      "legs par bshad pa bka' gdams rin po che'i gsung gi gces btus nor bu'i bang mdzod/"@bo-x-ewts ;
-        :creator            bdr:CR85EC161DB934B758 ;
-        :extentStatement    "334 ff." ;
-        :hasTitle           bdr:TT9ABCC09C477FB05C ;
-        :instanceHasReproduction  bdr:W1KG89134 ;
-        :instanceOf         bdr:WA1KG89134 ;
-        :note               bdr:NT1A8ADD894D967522 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1KG89134  a       bdo:Instance ;
+        skos:prefLabel      "bka' gdams kyi man ngag be'u bum sngon po'i 'grel pa/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "334 ff." ;
+        bdo:hasTitle        bdr:TT9ABCC09C477FB05C ;
+        bdo:instanceHasReproduction  bdr:W1KG89134 ;
+        bdo:instanceOf      bdr:WA1KG12954 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT1A8ADD894D967522 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT1A8ADD894D967522
-        a                   :Note ;
-        :noteText           "Digitized images made avaliable under the aggrement of National Library of Mongolia, Ulaanbaatar and ACIP. The text is preserved in the National Library of Mongolia, Ulaanbaatar."@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Digitized images made avaliable under the aggrement of National Library of Mongolia, Ulaanbaatar and ACIP. The text is preserved in the National Library of Mongolia, Ulaanbaatar."@en .
     
     bdr:TT9ABCC09C477FB05C
-        a                   :Title ;
-        rdfs:label          "legs par bshad pa bka' gdams rin po che'i gsung gi gces btus nor bu'i bang mdzod/"@bo-x-ewts .
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "bka' gdams kyi man ngag be'u bum sngon po'i 'grel pa/"@bo-x-ewts .
 }
