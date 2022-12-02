@@ -1,17 +1,58 @@
 @prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix adr:   <http://purl.bdrc.io/resource-nc/auth/> .
+@prefix as:    <http://www.w3.org/ns/activitystreams#> .
+@prefix aut:   <http://purl.bdrc.io/ontology/ext/auth/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdac:  <http://purl.bdrc.io/anncollection/> .
+@prefix bdan:  <http://purl.bdrc.io/annotation/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdgu:  <http://purl.bdrc.io/graph-nc/user/> .
+@prefix bdgup: <http://purl.bdrc.io/graph-nc/user-private/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdou:  <http://purl.bdrc.io/ontology/ext/user/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bds:   <http://purl.bdrc.io/ontology/shapes/core/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dila:  <http://purl.dila.edu.tw/resource/> .
+@prefix eftr:  <http://purl.84000.co/resource/core/> .
+@prefix f:     <java:io.bdrc.libraries.sparql.functions.> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix iiif2: <http://iiif.io/api/presentation/2#> .
+@prefix iiif3: <http://iiif.io/api/presentation/3#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix mbbt:  <http://mbingenheimer.net/tools/bibls/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix ola:   <https://openlibrary.org/authors/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsh:   <http://purl.bdrc.io/shacl/core/shape/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix srcd:  <https://sakyaresearch.org/deities/> .
+@prefix srcl:  <https://sakyaresearch.org/literary_forms/> .
+@prefix srcpe: <https://sakyaresearch.org/persons/> .
+@prefix srcpl: <https://sakyaresearch.org/places/> .
+@prefix srcs:  <https://sakyaresearch.org/sources/> .
+@prefix srct:  <https://sakyaresearch.org/topics/> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix text:  <http://jena.apache.org/text#> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS42293 {
+    bda:LG0MW8LS42293_AEPJIUNOTP2I
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-12-02T16:50:09.294632Z"^^xsd:dateTime ;
+        adm:logMessage      "fix title"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG7FFE7AF98D5616BE
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-01-10T11:34:41.86Z"^^xsd:dateTime ;
@@ -24,35 +65,32 @@ bdg:MW8LS42293 {
         adm:gitPath         "83/MW8LS42293.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS42293 ;
-        adm:logEntry        bda:LG7FFE7AF98D5616BE ;
+        adm:logEntry        bda:LG0MW8LS42293_AEPJIUNOTP2I , bda:LG7FFE7AF98D5616BE ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV6DF78AFD4AD63599
-        a                   :PublishedEvent ;
-        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW8LS42293  a       :Instance ;
-        skos:prefLabel      "gsung 'bum/chos rgyal nam mkha'i nor bu/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :extentStatement    "5 v." ;
-        :hasTitle           bdr:TT6D246B8446220479 , bdr:TT97A057763EEFC8FC ;
-        :instanceEvent      bdr:EV6DF78AFD4AD63599 ;
-        :instanceHasReproduction  bdr:W8LS42293 ;
-        :instanceOf         bdr:WA8LS42293 ;
-        :numberOfVolumes    5 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "zi ling /"@bo-x-ewts ;
-        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TT6D246B8446220479
-        a                   :Title ;
-        rdfs:label          "gsung 'bum/chos rgyal nam mkha'i nor bu/"@bo-x-ewts .
+    bdr:MW8LS42293  a       bdo:Instance ;
+        skos:prefLabel      "chos rgyal nam mkha'i nor bu'i gsung 'bum/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:extentStatement  "5 v." ;
+        bdo:hasTitle        bdr:TT97A057763EEFC8FC ;
+        bdo:instanceEvent   bdr:EV6DF78AFD4AD63599 ;
+        bdo:instanceHasReproduction  bdr:W8LS42293 ;
+        bdo:instanceOf      bdr:WA8LS42293 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  5 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "zi ling /"@bo-x-ewts ;
+        bdo:publisherName   "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT97A057763EEFC8FC
-        a                   :TitlePageTitle ;
-        rdfs:label          "chos rgyal nam mkha'i nor bu'i gsung 'bum/"@bo-x-ewts .
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "chos rgyal nam mkha'i nor bu'i gsung 'bum bzhugs so/"@bo-x-ewts .
 }
