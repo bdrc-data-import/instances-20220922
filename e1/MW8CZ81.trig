@@ -4,6 +4,8 @@
 @prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
@@ -26,10 +28,16 @@ bdg:MW8CZ81 {
         adm:logMessage      "new"@en ;
         adm:logWho          bdu:U2089842660 .
     
+    bda:LG0MW8CZ81_TRGAERSRYBML
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-12-20T13:55:10.155981Z"^^xsd:dateTime ;
+        adm:logMessage      "new"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:MW8CZ81  a          adm:AdminData ;
         adm:adminAbout      bdr:MW8CZ81 ;
         adm:graphId         bdg:MW8CZ81 ;
-        adm:logEntry        bda:LG0MW8CZ81_0G9PXEWURCJK , bda:LG0MW8CZ81_5CABFJS9ELNG , bda:LG0MW8CZ81_AEVT6HPKHWV0 ;
+        adm:logEntry        bda:LG0MW8CZ81_0G9PXEWURCJK , bda:LG0MW8CZ81_5CABFJS9ELNG , bda:LG0MW8CZ81_AEVT6HPKHWV0 , bda:LG0MW8CZ81_TRGAERSRYBML ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -37,9 +45,14 @@ bdg:MW8CZ81 {
         a                   bdo:PublishedEvent ;
         bdo:eventWhen       "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
+    bdr:IDMW8CZ81MGAJLHHC
+        a                   bf:Isbn ;
+        rdf:value           "7105092765" .
+    
     bdr:MW8CZ81  a          bdo:Instance ;
         skos:altLabel       "gnam dpyad rig pa'i yab chen/"@bo-x-ewts ;
         skos:prefLabel      "kho pher ne se/"@bo-x-ewts ;
+        bf:identifiedBy     bdr:IDMW8CZ81MGAJLHHC ;
         bdo:binding         bdr:Binding_Codex_Perfect ;
         bdo:copyrightStatus  bdr:CopyrightInCopyright ;
         bdo:editionStatement  "par thengs dang po/"@bo-x-ewts ;
