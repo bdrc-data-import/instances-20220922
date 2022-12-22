@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS76939 {
@@ -24,34 +21,41 @@ bdg:MW8LS76939 {
         adm:gitPath         "93/MW8LS76939.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS76939 ;
-        adm:logEntry        bda:LG2D8CD430A7A70421 ;
+        adm:logEntry        bda:LG2D8CD430A7A70421 , bdr:LG0W8LS76939_08HPBHESLLHT ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7F0D8A77AE39E29B
-        a                   :PublishedEvent ;
-        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW8LS76939  a       :Instance ;
+    bdr:LG0W8LS76939_08HPBHESLLHT
+        a                   adm:WithdrawData ;
+        adm:logDate         "2022-12-22T21:20:20.321486Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw W8LS76939 in favor of W8LS24034"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1426146149 .
+    
+    bdr:MW8LS76939  a       bdo:Instance ;
         skos:prefLabel      "lam rim mchan bzhi sbrags ma/"@bo-x-ewts ;
-        :biblioNote         "Digital images of the text are made available through the kind support of Great Enlightenment Buddhist Institute Society (GEBIS) in Canada"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT41D1D3A979CF0817 , bdr:TTA3D063A96DC656D2 ;
-        :instanceEvent      bdr:EV7F0D8A77AE39E29B ;
-        :instanceHasReproduction  bdr:W8LS76939 ;
-        :instanceOf         bdr:WA00KG09355 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "Dharamsala"@en ;
-        :publisherName      "tre hor btan bzhugs tshogs chung /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "Digital images of the text are made available through the kind support of Great Enlightenment Buddhist Institute Society (GEBIS) in Canada"@en ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TT41D1D3A979CF0817 , bdr:TTA3D063A96DC656D2 ;
+        bdo:instanceEvent   bdr:EV7F0D8A77AE39E29B ;
+        bdo:instanceHasReproduction  bdr:W8LS24034 ;
+        bdo:instanceOf      bdr:WA00KG09355 ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Dharamsala"@en ;
+        bdo:publisherName   "tre hor btan bzhugs tshogs chung /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT41D1D3A979CF0817
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "lam rim mchan bzhi sbrags ma/"@bo-x-ewts .
     
     bdr:TTA3D063A96DC656D2
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "mnyam med rje btsun tsong kha pa chen pos mdzad pa'i byang chub lam rim chen mo'i dka' ba'i gnad rnams mchan bu bzhi'i sgo nas legs par bshad pa theg chen lam gyi gsal sgron/"@bo-x-ewts .
 }
