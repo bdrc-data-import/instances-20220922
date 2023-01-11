@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG208022 {
+    bda:LG0MW2KG208022_VQZ1TMUI9TKP
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-11T15:45:33.947950Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of W3CN6348"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGB5FDA345B9563476
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-07-23T12:33:34.319Z"^^xsd:dateTime ;
@@ -24,38 +29,38 @@ bdg:MW2KG208022 {
         adm:gitPath         "f1/MW2KG208022.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG208022 ;
-        adm:logEntry        bda:LGB5FDA345B9563476 ;
+        adm:logEntry        bda:LG0MW2KG208022_VQZ1TMUI9TKP , bda:LGB5FDA345B9563476 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusWithdrawn .
     
     bdr:EVCF749BC857EF1E52
-        a                   :PublishedEvent ;
-        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID4C3EBDD7803DB863
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787542027566" .
     
-    bdr:MW2KG208022  a      :Instance ;
+    bdr:MW2KG208022  a      bdo:Instance ;
         skos:prefLabel      "g.yung drung bon gyi zhal 'don phyogs bsgrigs dgos 'dod kun 'byung /"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4C3EBDD7803DB863 ;
-        :authorshipStatement  "rin chen tshe ring dang bsod nams bkra shis kyis bsgrigs/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "4, 349 p." ;
-        :hasTitle           bdr:TTB5E5F8D206F06AD8 ;
-        :instanceEvent      bdr:EVCF749BC857EF1E52 ;
-        :instanceHasReproduction  bdr:W2KG208022 ;
-        :instanceOf         bdr:WA2KG208022 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "zi ling /"@bo-latn-wadegile ;
-        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID4C3EBDD7803DB863 ;
+        bdo:authorshipStatement  "rin chen tshe ring dang bsod nams bkra shis kyis bsgrigs/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "4, 349 p." ;
+        bdo:hasTitle        bdr:TTB5E5F8D206F06AD8 ;
+        bdo:instanceEvent   bdr:EVCF749BC857EF1E52 ;
+        bdo:instanceHasReproduction  bdr:W2KG208022 ;
+        bdo:instanceOf      bdr:WA2KG208022 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "zi ling /"@bo-latn-wadegile ;
+        bdo:publisherName   "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TTB5E5F8D206F06AD8
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "g.yung drung bon gyi zhal 'don phyogs bsgrigs dgos 'dod kun 'byung /"@bo-x-ewts .
 }
