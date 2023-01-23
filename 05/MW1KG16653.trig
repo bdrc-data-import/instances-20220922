@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG16653 {
+    bda:LG0MW1KG16653_SRTJ5ENGMGMC
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-23T17:48:07.975543Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG92756FC609D45645
         a                   adm:UpdateData ;
         adm:logDate         "2016-09-12T14:59:19.515Z"^^xsd:dateTime ;
@@ -48,55 +53,56 @@ bdg:MW1KG16653 {
         adm:gitPath         "05/MW1KG16653.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG16653 ;
-        adm:logEntry        bda:LG92756FC609D45645 , bda:LGB38B8E331A4514D5 , bda:LGC156EF40D081960A , bda:LGCD1CDA1D445758A7 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG0MW1KG16653_SRTJ5ENGMGMC , bda:LG92756FC609D45645 , bda:LGB38B8E331A4514D5 , bda:LGC156EF40D081960A , bda:LGCD1CDA1D445758A7 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV50AB6A372917A40B
-        a                   :PublishedEvent ;
-        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID5B902507C0C5FDE1
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787805892207" .
     
-    bdr:MW1KG16653  a       :Instance ;
+    bdr:MW1KG16653  a       bdo:Instance ;
         skos:altLabel       "贡珠颜登降措全集"@zh-hans ;
-        skos:prefLabel      "gsung 'bum/ blo gros mtha' yas/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5B902507C0C5FDE1 ;
-        :authorshipStatement  "kong sprul blo gros mtha' yas kyis brtsams/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :editionStatement   "par gzhi dang pa/"@bo-x-ewts ;
-        :extentStatement    "20 v.+1 v.(dkar chag)" ;
-        :hasTitle           bdr:TT2AEC9F8E772BD720 , bdr:TT4B8F2723958B86A6 , bdr:TTB8A05791D5D01C86 , bdr:TTC51D5235B78E8187 , bdr:TTF45900FE84D75BA7 ;
-        :instanceEvent      bdr:EV50AB6A372917A40B ;
-        :instanceHasReproduction  bdr:W1KG16653 ;
-        :instanceOf         bdr:WA1KG16653 ;
-        :numberOfVolumes    21 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "lha sa/"@bo-x-ewts ;
-        :publisherName      "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "gsung 'bum/ 'jam mgon kong sprul blo gros mtha' yas/"@bo-x-ewts , "gong zhu yan deng jiang cuo quan ji"@zh-latn-pinyin-x-ndia ;
+        bf:identifiedBy     bdr:ID5B902507C0C5FDE1 ;
+        bdo:authorshipStatement  "kong sprul blo gros mtha' yas kyis brtsams/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang pa/"@bo-x-ewts ;
+        bdo:extentStatement  "20 v.+1 v.(dkar chag)" ;
+        bdo:hasTitle        bdr:TT2AEC9F8E772BD720 , bdr:TT4B8F2723958B86A6 , bdr:TTB8A05791D5D01C86 , bdr:TTC51D5235B78E8187 , bdr:TTF45900FE84D75BA7 ;
+        bdo:instanceEvent   bdr:EV50AB6A372917A40B ;
+        bdo:instanceHasReproduction  bdr:W1KG16653 ;
+        bdo:instanceOf      bdr:WA1KG16653 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  21 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lha sa/"@bo-x-ewts ;
+        bdo:publisherName   "bod ljongs bod yig dpe rnying dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT2AEC9F8E772BD720
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "'jam mgon kong sprul gyi gsung 'bum rgya chen bka' yi mdzod/"@bo-x-ewts .
     
     bdr:TT4B8F2723958B86A6
-        a                   :Title ;
-        rdfs:label          "gsung 'bum/ blo gros mtha' yas/"@bo-x-ewts .
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "gsung 'bum/ 'jam mgon kong sprul blo gros mtha' yas/"@bo-x-ewts .
     
     bdr:TTB8A05791D5D01C86
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "贡珠颜登降措全集"@zh-hans .
     
     bdr:TTC51D5235B78E8187
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "gong zhu yan deng jiang cuo quan ji"@zh-latn-pinyin-x-ndia .
     
     bdr:TTF45900FE84D75BA7
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "rgya chen bka' mdzod/"@bo-x-ewts .
 }
