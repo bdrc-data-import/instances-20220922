@@ -4,10 +4,17 @@
 @prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8CZ77 {
+    bda:LG0MW8CZ77_BWJ5DRRHSBPZ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-24T14:39:03.662183Z"^^xsd:dateTime ;
+        adm:logMessage      "new"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG0MW8CZ77_NXNDISSLYZCS
         a                   adm:UpdateData ;
         adm:logDate         "2022-12-19T15:47:04.628113Z"^^xsd:dateTime ;
@@ -17,7 +24,7 @@ bdg:MW8CZ77 {
     bda:MW8CZ77  a          adm:AdminData ;
         adm:adminAbout      bdr:MW8CZ77 ;
         adm:graphId         bdg:MW8CZ77 ;
-        adm:logEntry        bda:LG0MW8CZ77_NXNDISSLYZCS ;
+        adm:logEntry        bda:LG0MW8CZ77_BWJ5DRRHSBPZ , bda:LG0MW8CZ77_NXNDISSLYZCS ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusScanned .
@@ -28,9 +35,10 @@ bdg:MW8CZ77 {
     
     bdr:MW8CZ77  a          bdo:Instance ;
         skos:altLabel       "mchod rten chen po bya rung kha shor gyi lo rgyus"@bo-x-ewts ;
-        skos:prefLabel      "bya rung kha shor gyi lo rgyus/"@bo-x-ewts ;
+        skos:prefLabel      "bya rung kha shor gyi lo rgyus/"@bo-x-ewts , "Account of the great stupa at Boudhanath"@en ;
         bdo:binding         bdr:Binding_Codex_Perfect ;
         bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:hasTitle        bdr:TTMW8CZ77N136TAWL ;
         bdo:instanceEvent   bdr:EVMW8CZ775UAF8BRJ ;
         bdo:instanceHasReproduction  bdr:W8CZ77 ;
         bdo:instanceOf      bdr:WA8CZ77 ;
@@ -40,4 +48,8 @@ bdg:MW8CZ77 {
         bdo:publisherLocation  "bal yul/"@bo-x-ewts ;
         bdo:publisherName   "gzhung dgon bsam gtan gling /"@bo-x-ewts ;
         bdo:script          bdr:ScriptDbuCan .
+    
+    bdr:TTMW8CZ77N136TAWL
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "Account of the great stupa at Boudhanath"@en .
 }
