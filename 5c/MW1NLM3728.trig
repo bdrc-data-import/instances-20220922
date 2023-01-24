@@ -1,17 +1,19 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3728 {
+    bda:LG0MW1NLM3728_DQDCTSWPXDN0
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-24T21:07:49.537533Z"^^xsd:dateTime ;
+        adm:logMessage      "added"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,31 +25,33 @@ bdg:MW1NLM3728 {
         adm:gitPath         "5c/MW1NLM3728.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3728 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3728_DQDCTSWPXDN0 , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3728  a       :Instance ;
-        skos:prefLabel      "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan 'grel pa dang bcas pa'i rgya cher bshad pa legs bshad gser gyi phreng ba/"@bo-x-ewts ;
-        :dimensionsStatement  "47.5x6.5" ;
-        :extentStatement    "336 ff." ;
-        :hasTitle           bdr:TTF4CB1342611D28B2 ;
-        :instanceHasReproduction  bdr:W1NLM3728 ;
-        :instanceOf         bdr:WA1NLM3728 ;
-        :note               bdr:NT6DB6473931AD2FCF , bdr:NTD8DD10FFC0062560 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1NLM3728  a       bdo:Instance ;
+        skos:altLabel       "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan 'grel pa dang bcas pa'i rgya cher bshad pa legs bshad gser gyi phreng ba/"@bo-x-ewts ;
+        skos:prefLabel      "legs bshad gser phreng /"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:dimensionsStatement  "47.5x6.5" ;
+        bdo:extentStatement  "336 ff." ;
+        bdo:instanceExtentStatement  "336 ff." ;
+        bdo:instanceHasReproduction  bdr:W1NLM3728 ;
+        bdo:instanceOf      bdr:WA1NLM3728 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT6DB6473931AD2FCF , bdr:NTD8DD10FFC0062560 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "[s.l.]"@bo-x-ewts ;
+        bdo:publisherName   "[s.n.]"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT6DB6473931AD2FCF
-        a                   :Note ;
-        :noteText           "missingPages: M0061646-001 [72th page was double numbered] Image 143-146"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061646-001 [72th page was double numbered] Image 143-146"@en .
     
     bdr:NTD8DD10FFC0062560
-        a                   :Note ;
-        :noteText           "nlmId: M0061646"@en .
-    
-    bdr:TTF4CB1342611D28B2
-        a                   :Title ;
-        rdfs:label          "shes rab kyi pha rol tu phyin pa'i man ngag gi bstan bcos mngon par rtogs pa'i rgyan 'grel pa dang bcas pa'i rgya cher bshad pa legs bshad gser gyi phreng ba/"@bo-x-ewts .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061646"@en .
 }
