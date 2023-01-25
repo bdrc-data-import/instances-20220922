@@ -1,17 +1,19 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3730 {
+    bda:LG0MW1NLM3730_EXS9P7NMXWQ4
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-25T15:53:15.296499Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,27 +25,34 @@ bdg:MW1NLM3730 {
         adm:gitPath         "1f/MW1NLM3730.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3730 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3730_EXS9P7NMXWQ4 , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3730  a       :Instance ;
-        skos:prefLabel      "rnam 'dren bskal bzang sangs rgyas stong gi mchod chog phan bde'i dngos grub stsol ba'i 'dod 'jo'i bum bzang sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "46.5x6" ;
-        :extentStatement    "86 ff., 7 ff., 13 ff., 28 ff., 2 ff., 3 ff." ;
-        :hasTitle           bdr:TTA4A9EFD3453D4539 ;
-        :instanceHasReproduction  bdr:W1NLM3730 ;
-        :instanceOf         bdr:WA1NLM3730 ;
-        :note               bdr:NT87499070A1942E55 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:EVMW1NLM3730GDEKO3LJ
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "18"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW1NLM3730  a       bdo:Instance ;
+        skos:altLabel       "rnam 'dren bskal bzang sangs rgyas stong gi mchod chog phan bde'i dngos grub stsol ba'i 'dod 'jo'i bum bzang /"@bo-x-ewts ;
+        skos:prefLabel      "sangs rgyas stong gi mchod chog phan bde'i dngos grub stsol ba'i 'dod 'jo'i bum bzang sogs/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "46.5x6" ;
+        bdo:extentStatement  "86 ff., 7 ff., 13 ff., 28 ff., 2 ff., 3 ff." ;
+        bdo:hasSourcePrintery  bdr:G3JT12534 ;
+        bdo:instanceEvent   bdr:EVMW1NLM3730GDEKO3LJ ;
+        bdo:instanceHasReproduction  bdr:W1NLM3730 ;
+        bdo:instanceOf      bdr:WA1NLM3730 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT87499070A1942E55 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "pe cin/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT87499070A1942E55
-        a                   :Note ;
-        :noteText           "nlmId: M0061648"@en .
-    
-    bdr:TTA4A9EFD3453D4539
-        a                   :Title ;
-        rdfs:label          "rnam 'dren bskal bzang sangs rgyas stong gi mchod chog phan bde'i dngos grub stsol ba'i 'dod 'jo'i bum bzang sogs/"@bo-x-ewts .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061648"@en .
 }
