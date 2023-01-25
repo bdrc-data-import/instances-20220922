@@ -1,17 +1,19 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3733 {
+    bda:LG0MW1NLM3733_RYT7J4VTEAAN
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-25T21:05:46.523736Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,27 +25,37 @@ bdg:MW1NLM3733 {
         adm:gitPath         "85/MW1NLM3733.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3733 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3733_RYT7J4VTEAAN , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3733  a       :Instance ;
+    bdr:EVMW1NLM3733PFR5HHAG
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "19?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW1NLM3733  a       bdo:Instance ;
         skos:prefLabel      "kun rig gi dkyil 'khor sgrub mchod dang 'brel ba'i zhi ba'i sbyin sreg gi lag len gsal ba'i sgron me sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "47.5x7.5" ;
-        :extentStatement    "142-192 ff., 15 ff., 4 ff., 15 ff., 7 ff., 9 ff., 7 ff., 2 ff., 11 ff." ;
-        :hasTitle           bdr:TT86EF35E7B575AB7C ;
-        :instanceHasReproduction  bdr:W1NLM3733 ;
-        :instanceOf         bdr:WA1NLM3733 ;
-        :note               bdr:NT5FC0B8209CA870AE ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:dimensionsStatement  "47.5x7.5" ;
+        bdo:extentStatement  "142-192 ff., 15 ff., 4 ff., 15 ff., 7 ff., 9 ff., 7 ff., 2 ff., 11 ff." ;
+        bdo:hasSourcePrintery  bdr:G2KR19 ;
+        bdo:instanceEvent   bdr:EVMW1NLM3733PFR5HHAG ;
+        bdo:instanceHasReproduction  bdr:W1NLM3733 ;
+        bdo:instanceOf      bdr:WA1NLM3733 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT5FC0B8209CA870AE , bdr:NTMW1NLM3733HLLMFH5K ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "sog yul/"@bo-x-ewts ;
+        bdo:publisherName   "tA khu re dgon chen"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT5FC0B8209CA870AE
-        a                   :Note ;
-        :noteText           "nlmId: M0061651"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061651"@en .
     
-    bdr:TT86EF35E7B575AB7C
-        a                   :Title ;
-        rdfs:label          "kun rig gi dkyil 'khor sgrub mchod dang 'brel ba'i zhi ba'i sbyin sreg gi lag len gsal ba'i sgron me sogs/"@bo-x-ewts .
+    bdr:NTMW1NLM3733HLLMFH5K
+        a                   bdo:Note ;
+        bdo:noteText        "Mix block print, first section was printed in Peking and rest are from Mongol "@en .
 }
