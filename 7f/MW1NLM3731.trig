@@ -1,17 +1,19 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3731 {
+    bda:LG0MW1NLM3731_AA2YHKF6ZAKC
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-25T20:02:28.211721Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,27 +25,30 @@ bdg:MW1NLM3731 {
         adm:gitPath         "7f/MW1NLM3731.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3731 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3731_AA2YHKF6ZAKC , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3731  a       :Instance ;
-        skos:prefLabel      "'phags pa blo gros mi zad pas bstan pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts ;
-        :dimensionsStatement  "47.5x7" ;
-        :extentStatement    "140 ff." ;
-        :hasTitle           bdr:TTFFADC3FE09BD4FEC ;
-        :instanceHasReproduction  bdr:W1NLM3731 ;
-        :instanceOf         bdr:WA1NLM3731 ;
-        :note               bdr:NTA2845B306E562490 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1NLM3731  a       bdo:Instance ;
+        skos:altLabel       "'phags pa blo gros mi zad pas bstan pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts ;
+        skos:prefLabel      "blo gros mi zad pas bstan pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:dimensionsStatement  "47.5x7" ;
+        bdo:extentStatement  "140 ff." ;
+        bdo:hasSourcePrintery  bdr:G1KG12672 ;
+        bdo:instanceExtentStatement  "140 ff." ;
+        bdo:instanceHasReproduction  bdr:W1NLM3731 ;
+        bdo:instanceOf      bdr:WA1NLM3731 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTA2845B306E562490 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "sog yul/"@bo-x-ewts ;
+        bdo:publisherName   "bde chen lhun grub gling /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTA2845B306E562490
-        a                   :Note ;
-        :noteText           "nlmId: M0061649"@en .
-    
-    bdr:TTFFADC3FE09BD4FEC
-        a                   :Title ;
-        rdfs:label          "'phags pa blo gros mi zad pas bstan pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061649"@en .
 }
