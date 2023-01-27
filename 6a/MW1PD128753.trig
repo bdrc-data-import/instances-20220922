@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD128753 {
+    bda:LG0MW1PD128753_ZMFURMX3EFPF
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-27T17:19:05.942818Z"^^xsd:dateTime ;
+        adm:logMessage      "added altLable"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG5F551DB7BF846F77
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-05-22T10:23:30.021Z"^^xsd:dateTime ;
@@ -36,35 +39,46 @@ bdg:MW1PD128753 {
         adm:gitPath         "6a/MW1PD128753.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD128753 ;
-        adm:logEntry        bda:LG5F551DB7BF846F77 , bda:LGBB7FBAB90D8E0B92 , bda:LGCB90D82144C7CB7A ;
+        adm:logEntry        bda:LG0MW1PD128753_ZMFURMX3EFPF , bda:LG5F551DB7BF846F77 , bda:LGBB7FBAB90D8E0B92 , bda:LGCB90D82144C7CB7A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1PD128753  a      :Instance ;
-        skos:altLabel       "the proto-kanjur manuscript of gondhla"@en ;
-        skos:prefLabel      "bka' 'gyur/(gon dha la bris ma/)"@bo-x-ewts ;
-        :extentStatement    "36 v." ;
-        :hasTitle           bdr:TT066E52224FD23851 , bdr:TT9FE421A502D648B6 , bdr:TTA911C6C295C33DDA ;
-        :instanceHasReproduction  bdr:W1PD128753 ;
-        :instanceOf         bdr:WA0BC001 ;
-        :note               bdr:NT2BAE78DD1969E546 ;
-        :numberOfVolumes    36 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+    bdr:MW1PD128753  a      bdo:Instance ;
+        skos:altLabel       "gon dha la bka' 'gyur bris ma/"@bo-x-ewts ;
+        skos:prefLabel      "bka' 'gyur/ (gon dha la bris ma/)"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "36 v." ;
+        bdo:hasTitle        bdr:TT066E52224FD23851 , bdr:TT9FE421A502D648B6 , bdr:TTA911C6C295C33DDA , bdr:TTMW1PD1287536UXXG64G , bdr:TTMW1PD128753D2GJ99N1 ;
+        bdo:instanceHasReproduction  bdr:W1PD128753 ;
+        bdo:instanceOf      bdr:WA0BC001 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT2BAE78DD1969E546 ;
+        bdo:numberOfVolumes  36 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT2BAE78DD1969E546
-        a                   :Note ;
-        :noteText           "Scanned from a unique 14th century handwritten canonical collection from Gondhla made available by the Cultural History of the Western Himalaya - Project \"Tibetan Manuscripts\" (University of Vienna)"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Scanned from a unique 14th century handwritten canonical collection from Gondhla made available by the Cultural History of the Western Himalaya - Project \"Tibetan Manuscripts\" (University of Vienna)"@en .
     
     bdr:TT066E52224FD23851
-        a                   :Title ;
-        rdfs:label          "bka' 'gyur/(gon dha la bris ma/)"@bo-x-ewts .
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "bka' 'gyur/ (gon dha la bris ma/)"@bo-x-ewts .
     
     bdr:TT9FE421A502D648B6
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "the proto-kanjur manuscript of gondhla"@en .
     
     bdr:TTA911C6C295C33DDA
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "the gondhla proto-kanjur"@en .
+    
+    bdr:TTMW1PD1287536UXXG64G
+        a                   bdo:OtherTitle ;
+        rdfs:label          "gon dho la'i bka' 'gyur bris ma/"@bo-x-ewts .
+    
+    bdr:TTMW1PD128753D2GJ99N1
+        a                   bdo:OtherTitle ;
+        rdfs:label          "gon dha la bka' 'gyur bris ma/"@bo-x-ewts .
 }
