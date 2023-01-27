@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN20612 {
+    bda:LG0MW3CN20612_6ULSZHESVXC8
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-27T16:48:16.409802Z"^^xsd:dateTime ;
+        adm:logMessage      "added altLable"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG1CB8E5BC297970B9
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-03-27T15:03:06.376Z"^^xsd:dateTime ;
@@ -24,39 +27,43 @@ bdg:MW3CN20612 {
         adm:gitPath         "e0/MW3CN20612.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN20612 ;
-        adm:logEntry        bda:LG1CB8E5BC297970B9 ;
+        adm:logEntry        bda:LG0MW3CN20612_6ULSZHESVXC8 , bda:LG1CB8E5BC297970B9 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR740C672A0D768E65
-        a                   :AgentAsCreator ;
-        :agent              bdr:P956 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P956 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EVC151A70BB2CA2EB2
-        a                   :PublishedEvent ;
-        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3CN20612  a       :Instance ;
+    bdr:MW3CN20612  a       bdo:Instance ;
+        skos:altLabel       "sde dge bka' 'gyur mtshal par/"@bo-x-ewts ;
         skos:prefLabel      "bka' 'gyur/ (sde dge'i mtshal par spus legs/)"@bo-x-ewts ;
-        :creator            bdr:CR740C672A0D768E65 ;
-        :extentStatement    "103 v." ;
-        :hasSourcePrintery  bdr:G1657 ;
-        :hasTitle           bdr:TT502FB7C69135CEC2 , bdr:TTC790EB5ABB8E3FCF ;
-        :instanceEvent      bdr:EVC151A70BB2CA2EB2 ;
-        :instanceHasReproduction  bdr:W3CN20612 ;
-        :instanceOf         bdr:WA0BC001 ;
-        :numberOfVolumes    103 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "sde dge"@bo-x-ewts ;
-        :publisherName      "sde dge par khang chen mo/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:creator         bdr:CR740C672A0D768E65 ;
+        bdo:extentStatement  "103 v." ;
+        bdo:hasSourcePrintery  bdr:G1657 ;
+        bdo:hasTitle        bdr:TT502FB7C69135CEC2 , bdr:TTC790EB5ABB8E3FCF ;
+        bdo:instanceEvent   bdr:EVC151A70BB2CA2EB2 ;
+        bdo:instanceHasReproduction  bdr:W3CN20612 ;
+        bdo:instanceOf      bdr:WA0BC001 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  103 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "sde dge"@bo-x-ewts ;
+        bdo:publisherName   "sde dge par khang chen mo/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT502FB7C69135CEC2
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "bka' 'gyur/ (sde dge'i mtshal par spus legs/)"@bo-x-ewts .
     
     bdr:TTC790EB5ABB8E3FCF
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rgyal ba'i bka' 'gyur rin po che sde dge'i mtshal par spus legs/"@bo-x-ewts .
 }
