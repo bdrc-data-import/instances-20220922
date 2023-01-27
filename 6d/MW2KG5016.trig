@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG5016 {
+    bda:LG0MW2KG5016_GNCQOEWMR2EN
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-27T17:30:02.621804Z"^^xsd:dateTime ;
+        adm:logMessage      "added altLable"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG917C0FC0B86D0F2A
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-08-27T16:29:07.538Z"^^xsd:dateTime ;
@@ -24,47 +27,54 @@ bdg:MW2KG5016 {
         adm:gitPath         "6d/MW2KG5016.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG5016 ;
-        adm:logEntry        bda:LG917C0FC0B86D0F2A ;
+        adm:logEntry        bda:LG0MW2KG5016_GNCQOEWMR2EN , bda:LG917C0FC0B86D0F2A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVF0D4A36AB01940BD
-        a                   :PublishedEvent ;
-        :eventWhen          "14cent."^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "14XX"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW2KG5016  a        :Instance ;
-        skos:altLabel       "gondhala proto kangyur"@en ;
+    bdr:MW2KG5016  a        bdo:Instance ;
+        skos:altLabel       "gon d+ho la'i bka' 'gyur bris ma/"@bo-x-ewts ;
         skos:prefLabel      "bka' 'gyur/ (gon d+ho la bris ma/)"@bo-x-ewts ;
-        :extentStatement    "47 v." ;
-        :hasTitle           bdr:TT11FD61D3C657B463 , bdr:TT18C05C55109E83C3 , bdr:TT2CDAB4B37133592B ;
-        :instanceEvent      bdr:EVF0D4A36AB01940BD ;
-        :instanceHasReproduction  bdr:W2KG5016 ;
-        :instanceOf         bdr:WA0BC001 ;
-        :note               bdr:NT5259F6C2C848E02D , bdr:NTD5E232497A1ED15C ;
-        :numberOfVolumes    47 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "gondhala, lahaul, h.p."@en ;
-        :script             bdr:ScriptDbuCan ;
-        :sourceNote         "Manuscript preserved by Mr. Ramesh Thakur, Gondhala village, Lahaul, H.P."@en .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "47 v." ;
+        bdo:hasTitle        bdr:TT11FD61D3C657B463 , bdr:TT18C05C55109E83C3 , bdr:TT2CDAB4B37133592B , bdr:TTMW2KG5016NXU79SR7 ;
+        bdo:instanceEvent   bdr:EVF0D4A36AB01940BD ;
+        bdo:instanceHasReproduction  bdr:W2KG5016 ;
+        bdo:instanceOf      bdr:WA0BC001 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT5259F6C2C848E02D , bdr:NTD5E232497A1ED15C ;
+        bdo:numberOfVolumes  47 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "gondhala, lahaul, h.p."@en ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:sourceNote      "Manuscript preserved by Mr. Ramesh Thakur, Gondhala village, Lahaul, H.P."@en .
     
     bdr:NT5259F6C2C848E02D
-        a                   :Note ;
-        :noteText           "Multimedia Section, Shantarakshita Library, Code no. DT000005."@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Multimedia Section, Shantarakshita Library, Code no. DT000005."@en .
     
     bdr:NTD5E232497A1ED15C
-        a                   :Note ;
-        :noteText           "Contents:\nDT000005_01 (Vol. 001) ཕལ་ཆེན། (ཀ) \nDT000005_02 (Vol. 002) ཕལ་ཆེན། (ཁ) \nDT000005_03 (Vol. 003) ཕལ་ཆེན། (ག) \nDT000005_04 (Vol. 004) ཕལ་ཆེན། (ང) \nDT000005_05 (Vol. 005) དཀོན་བརྩེགས། (ཀ) \nDT000005_06 (Vol. 006) དཀོན་བརྩེགས། (ཁ) \nDT000005_07 (Vol. 007) དཀོན་བརྩེགས། (ག) \nDT000005_08 (Vol. 008) དཀོན་བརྩེགས། (ང) \nDT000005_09 (Vol. 009) དཀོན་བརྩེགས། (ཅ) \nDT000005_10 (Vol. 010) དཀོན་བརྩེགས། (ཆ) \nDT000005_11 (Vol. 011) མདོ་སྡེ་བསྐལ་བཟང། \nDT000005_12 (Vol. 012) རྒྱ་ཆེར་རོལ་པ། \nDT000005_13 (Vol. 013) ཡེ་ཤེས་རྒྱས་མདོ། \nDT000005_14 (Vol. 014) འགྲོ་བའི་མདོ། \nDT000005_15 (Vol. 015) ཏིང་ངེ་འཛིན་གྱི་མདོ། \nDT000005_16 (Vol. 016) སའི་སྙིང་པོ་འཁོར་ལོ་བཅུ་པའི་མདོ། \nDT000005_17 (Vol. 017) རྣམ་འཕྲུལ་གྱི་མདོ། \nDT000005_18 (Vol. 018) དགེ་འཛིན་མདོ། \nDT000005_19 (Vol. 019) ལངྐར་མདོ། \nDT000005_20 (Vol. 020) དགོངས་པ་ངེས་འགྲེལ། \nDT000005_21 (Vol. 021) བསོད་ནམས་བསྡུས་མདོ། \nDT000005_22 (Vol. 022) སྒྲིབ་པ་རྣམ་དག \nDT000005_23 (Vol. 023) པད་དཀར། \nDT000005_24 (Vol. 024) གཎ་ཌྰིའི་མདོ། \nDT000005_25 (Vol. 025) བློ་གྲོས་མི་ཟད་པའི་མདོ། \nDT000005_26 (Vol. 026) དྲི་མེད་མདོ། \nDT000005_27 (Vol. 027) འགྱོད་བསལ་མདོ། \nDT000005_28 (Vol. 028) མ་སྐྱེས་དགྲའི་མདོ། \nDT000005_29 (Vol. 029) རྟོགས་བརྗོད་མདོ། \nDT000005_30 (Vol. 030) ལས་བརྒྱའི་མདོ། \nDT000005_31 (Vol. 031) མདོ་སྡེ་ལས་བརྒྱ་པ། \nDT000005_32 (Vol. 032) ཨུ་རྒྱན་མདོ། \nDT000005_33 (Vol. 033) དྲན་ཉེར་མདོ། \nDT000005_34 (Vol. 034) མྱང་འདས་མདོ། (ཀ) \nDT000005_35 (Vol. 035) མྱང་འདས་མདོ། (ཁ) \nDT000005_36 (Vol. 036) མཚན་འབུམ། \nDT000005_37 (Vol. 037) སྤྱན་རས་གཟིགས་ཀྱི་མདོ། \nDT000005_38 (Vol. 038) ཤེས་ཕྱིན། (ཀ) \nDT000005_39 (Vol. 039) ཤེས་ཕྱིན། (ཁ) \nDT000005_40 (Vol. 040) ཤེས་ཕྱིན། (ག) \nDT000005_41 (Vol. 041) ཤེས་ཕྱིན། (ཅ) \nDT000005_42 (Vol. 042) ཤེས་ཕྱིན། (ཆ) \nDT000005_43 (Vol. 043) ཤེས་ཕྱིན། (ཇ) \nDT000005_44 (Vol. 044) ཤེས་ཕྱིན། (ཉ) \nDT000005_45 (Vol. 045) ཤེས་ཕྱིན། (ཏ) \nDT000005_46 (Vol. 046) ཤེས་ཕྱིན། (ཐ) \nDT000005_47 (Vol. 047) བརྒྱད་སྟོང་།"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Contents:\nDT000005_01 (Vol. 001) ཕལ་ཆེན། (ཀ) \nDT000005_02 (Vol. 002) ཕལ་ཆེན། (ཁ) \nDT000005_03 (Vol. 003) ཕལ་ཆེན། (ག) \nDT000005_04 (Vol. 004) ཕལ་ཆེན། (ང) \nDT000005_05 (Vol. 005) དཀོན་བརྩེགས། (ཀ) \nDT000005_06 (Vol. 006) དཀོན་བརྩེགས། (ཁ) \nDT000005_07 (Vol. 007) དཀོན་བརྩེགས། (ག) \nDT000005_08 (Vol. 008) དཀོན་བརྩེགས། (ང) \nDT000005_09 (Vol. 009) དཀོན་བརྩེགས། (ཅ) \nDT000005_10 (Vol. 010) དཀོན་བརྩེགས། (ཆ) \nDT000005_11 (Vol. 011) མདོ་སྡེ་བསྐལ་བཟང། \nDT000005_12 (Vol. 012) རྒྱ་ཆེར་རོལ་པ། \nDT000005_13 (Vol. 013) ཡེ་ཤེས་རྒྱས་མདོ། \nDT000005_14 (Vol. 014) འགྲོ་བའི་མདོ། \nDT000005_15 (Vol. 015) ཏིང་ངེ་འཛིན་གྱི་མདོ། \nDT000005_16 (Vol. 016) སའི་སྙིང་པོ་འཁོར་ལོ་བཅུ་པའི་མདོ། \nDT000005_17 (Vol. 017) རྣམ་འཕྲུལ་གྱི་མདོ། \nDT000005_18 (Vol. 018) དགེ་འཛིན་མདོ། \nDT000005_19 (Vol. 019) ལངྐར་མདོ། \nDT000005_20 (Vol. 020) དགོངས་པ་ངེས་འགྲེལ། \nDT000005_21 (Vol. 021) བསོད་ནམས་བསྡུས་མདོ། \nDT000005_22 (Vol. 022) སྒྲིབ་པ་རྣམ་དག \nDT000005_23 (Vol. 023) པད་དཀར། \nDT000005_24 (Vol. 024) གཎ་ཌྰིའི་མདོ། \nDT000005_25 (Vol. 025) བློ་གྲོས་མི་ཟད་པའི་མདོ། \nDT000005_26 (Vol. 026) དྲི་མེད་མདོ། \nDT000005_27 (Vol. 027) འགྱོད་བསལ་མདོ། \nDT000005_28 (Vol. 028) མ་སྐྱེས་དགྲའི་མདོ། \nDT000005_29 (Vol. 029) རྟོགས་བརྗོད་མདོ། \nDT000005_30 (Vol. 030) ལས་བརྒྱའི་མདོ། \nDT000005_31 (Vol. 031) མདོ་སྡེ་ལས་བརྒྱ་པ། \nDT000005_32 (Vol. 032) ཨུ་རྒྱན་མདོ། \nDT000005_33 (Vol. 033) དྲན་ཉེར་མདོ། \nDT000005_34 (Vol. 034) མྱང་འདས་མདོ། (ཀ) \nDT000005_35 (Vol. 035) མྱང་འདས་མདོ། (ཁ) \nDT000005_36 (Vol. 036) མཚན་འབུམ། \nDT000005_37 (Vol. 037) སྤྱན་རས་གཟིགས་ཀྱི་མདོ། \nDT000005_38 (Vol. 038) ཤེས་ཕྱིན། (ཀ) \nDT000005_39 (Vol. 039) ཤེས་ཕྱིན། (ཁ) \nDT000005_40 (Vol. 040) ཤེས་ཕྱིན། (ག) \nDT000005_41 (Vol. 041) ཤེས་ཕྱིན། (ཅ) \nDT000005_42 (Vol. 042) ཤེས་ཕྱིན། (ཆ) \nDT000005_43 (Vol. 043) ཤེས་ཕྱིན། (ཇ) \nDT000005_44 (Vol. 044) ཤེས་ཕྱིན། (ཉ) \nDT000005_45 (Vol. 045) ཤེས་ཕྱིན། (ཏ) \nDT000005_46 (Vol. 046) ཤེས་ཕྱིན། (ཐ) \nDT000005_47 (Vol. 047) བརྒྱད་སྟོང་།"@en .
     
     bdr:TT11FD61D3C657B463
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "bka' 'gyur/ (gon d+ho la bris ma/)"@bo-x-ewts .
     
     bdr:TT18C05C55109E83C3
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "bka' 'gyur/ (gon d+ha la bris ma/)"@bo-x-ewts .
     
     bdr:TT2CDAB4B37133592B
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "gondhala proto kangyur"@en .
+    
+    bdr:TTMW2KG5016NXU79SR7
+        a                   bdo:OtherTitle ;
+        rdfs:label          "gon d+ho la'i bka' 'gyur bris ma/"@bo-x-ewts .
 }
