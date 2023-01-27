@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG208170 {
+    bda:LG0MW2KG208170_0IRYZIPTUTDQ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-01-27T03:52:02.013745Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG9AF753C05BEFF85E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2022-10-13T12:02:40.041Z"^^xsd:dateTime ;
@@ -24,12 +29,39 @@ bdg:MW2KG208170 {
         adm:gitPath         "60/MW2KG208170.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG208170 ;
-        adm:logEntry        bda:LG9AF753C05BEFF85E ;
+        adm:logEntry        bda:LG0MW2KG208170_0IRYZIPTUTDQ , bda:LG9AF753C05BEFF85E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusEditing .
+        adm:status          bda:StatusReleased .
     
-    bdr:MW2KG208170  a      :Instance ;
-        :biblioNote         "Scanned at the National Library of Mongolia by Asian Classics Input Project."@en ;
-        :instanceOf         bdr:WA2KG208170 ;
-        :script             bdr:ScriptTibt .
+    bdr:EVMW2KG208170AHFURWA7
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2020"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDMW2KG208170U68HFJJ5
+        a                   bf:Isbn ;
+        rdf:value           "9787542148995" .
+    
+    bdr:MW2KG208170  a      bdo:Instance ;
+        skos:prefLabel      "g+hi rem si bu spun gnyis kyi byis sgrung /"@bo-x-ewts ;
+        bf:identifiedBy     bdr:IDMW2KG208170U68HFJJ5 ;
+        bdo:authorshipStatement  "('jar man ) lje'e khob g+hi rem dang we lem yan g+hi rem gnyis kyis brtsams/ a skyid tshe lha skyabs kyis bsgyur/"@bo-x-ewts ;
+        bdo:biblioNote      "Digital images are made available through the kind support of Sarah Library, College for Higher Tibetan Studies, IBD Sarah, Himachal Pradesh, India"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "par gzhi dang po/ par thengs dang po"@bo-x-ewts ;
+        bdo:hasTitle        bdr:TTMW2KG208170WFAM527N ;
+        bdo:instanceEvent   bdr:EVMW2KG208170AHFURWA7 ;
+        bdo:instanceExtentStatement  "183 p." ;
+        bdo:instanceHasReproduction  bdr:W2KG208170 ;
+        bdo:instanceOf      bdr:WA2KG208170 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        bdo:publisherName   "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
+    
+    bdr:TTMW2KG208170WFAM527N
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "g+hi rem si bu spun gnyis kyi byis sgrung /"@bo-x-ewts .
 }
