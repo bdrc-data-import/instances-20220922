@@ -1,26 +1,68 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG228739 {
+    bda:LG0MW2KG228739_TQFRTICDHUT6
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-03T22:35:37.201566Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:MW2KG228739  a      adm:AdminData ;
         adm:adminAbout      bdr:MW2KG228739 ;
         adm:gitPath         "38/MW2KG228739.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG228739 ;
+        adm:logEntry        bda:LG0MW2KG228739_TQFRTICDHUT6 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusEditing .
+        adm:status          bda:StatusReleased .
     
-    bdr:MW2KG228739  a      :Instance ;
+    bdr:EVMW2KG228739ASCXTIHY
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2017"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDMW2KG228739FG7ULE6V
+        a                   bf:Isbn ;
+        rdf:value           "9789888474981" .
+    
+    bdr:MW2KG228739  a      bdo:Instance ;
         rdfs:seeAlso        "https://www.namdroling.net/Portal/Home"^^xsd:anyURI ;
-        :instanceOf         bdr:WA2KG228739 .
+        skos:altLabel       "animal farm"@en ;
+        skos:prefLabel      "dud 'gro'i gzhis ka/"@bo-x-ewts ;
+        bf:identifiedBy     bdr:IDMW2KG228739FG7ULE6V ;
+        bdo:biblioNote      "Digital images are made available through the kind support of Sarah Library, College for Higher Tibetan Studies, IBD Sarah, Himachal Pradesh, India"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        bdo:hasTitle        bdr:TTMW2KG228739NU8YHB6J , bdr:TTMW2KG228739R52T4BIN ;
+        bdo:instanceEvent   bdr:EVMW2KG228739ASCXTIHY ;
+        bdo:instanceExtentStatement  "6, 1, 3, 225 p." ;
+        bdo:instanceHasReproduction  bdr:W2KG228739 ;
+        bdo:instanceOf      bdr:WA2KG228739 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTMW2KG228739ATRVUXJG ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherName   "krung go rgyal spyi'i skad yig dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
+    
+    bdr:NTMW2KG228739ATRVUXJG
+        a                   bdo:Note .
+    
+    bdr:TTMW2KG228739NU8YHB6J
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "dud 'gro'i gzhis ka/"@bo-x-ewts .
+    
+    bdr:TTMW2KG228739R52T4BIN
+        a                   bdo:OtherTitle ;
+        rdfs:label          "animal farm"@en .
 }
