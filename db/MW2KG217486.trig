@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG217486 {
+    bda:LG0MW2KG217486_RWVPBHAI3UV7
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-03T21:17:46.211692Z"^^xsd:dateTime ;
+        adm:logMessage      "cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG3125C8587BD3A0A8
         a                   adm:InitialDataCreation ;
         adm:logDate         "2022-10-13T14:41:32.217Z"^^xsd:dateTime ;
@@ -24,14 +29,44 @@ bdg:MW2KG217486 {
         adm:gitPath         "db/MW2KG217486.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG217486 ;
-        adm:logEntry        bda:LG3125C8587BD3A0A8 ;
+        adm:logEntry        bda:LG0MW2KG217486_RWVPBHAI3UV7 , bda:LG3125C8587BD3A0A8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusEditing .
+        adm:restrictedInChina  true ;
+        adm:status          bda:StatusReleased .
     
-    bdr:MW2KG217486  a      :Instance ;
-        :biblioNote         "blo bzang dgongs rgyan mu tig phreng mdzes deb/"@bo-x-ewts ;
-        :instanceOf         bdr:WA2KG217486 ;
-        :publisherLocation  "mundgod, karnataka"@en ;
-        :publisherName      "drepung loseling educational society"@en ;
-        :script             bdr:ScriptTibt .
+    bdr:EVMW2KG217486JVTT9UBA
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2020"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:IDMW2KG2174863GBZM8P2
+        a                   bf:Isbn ;
+        rdf:value           "9787542148957" .
+    
+    bdr:MW2KG217486  a      bdo:Instance ;
+        skos:altLabel       "The Red and the Black"@en ;
+        skos:prefLabel      "dmar po dang nag po/"@bo-x-ewts ;
+        bf:identifiedBy     bdr:IDMW2KG2174863GBZM8P2 ;
+        bdo:biblioNote      "Digital images are made available through the kind support of Sarah Library, College for Higher Tibetan Studies, IBD Sarah, Himachal Pradesh, India"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        bdo:hasTitle        bdr:TTMW2KG217486TBSSJUYW , bdr:TTMW2KG217486WPK5AXE4 ;
+        bdo:instanceEvent   bdr:EVMW2KG217486JVTT9UBA ;
+        bdo:instanceExtentStatement  "248 p." ;
+        bdo:instanceHasReproduction  bdr:W2KG217486 ;
+        bdo:instanceOf      bdr:WA2KG217486 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
+    
+    bdr:TTMW2KG217486TBSSJUYW
+        a                   bdo:OtherTitle ;
+        rdfs:label          "The Red and the Black"@en .
+    
+    bdr:TTMW2KG217486WPK5AXE4
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "dmar po dang nag po/"@bo-x-ewts .
 }
