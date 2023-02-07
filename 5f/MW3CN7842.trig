@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN7842 {
+    bda:LG0MW3CN7842_CSK3JIHJTKEV
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-07T03:40:43.765930Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected typo"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGA992A0FD55F136F2
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-23T08:43:07.194Z"^^xsd:dateTime ;
@@ -24,25 +27,27 @@ bdg:MW3CN7842 {
         adm:gitPath         "5f/MW3CN7842.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN7842 ;
-        adm:logEntry        bda:LGA992A0FD55F136F2 ;
+        adm:logEntry        bda:LG0MW3CN7842_CSK3JIHJTKEV , bda:LGA992A0FD55F136F2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN7842  a        :Instance ;
+    bdr:MW3CN7842  a        bdo:Instance ;
         skos:prefLabel      "sdom gsum 'jam dbyangs bla ma'i dgongs rgyan rtsa 'grel/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :extentStatement    "765 p." ;
-        :hasTitle           bdr:TT7D12ECD0A4F81D0D ;
-        :instanceHasReproduction  bdr:W3CN7842 ;
-        :instanceOf         bdr:WA3CN7842 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khren tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron bod yig dpe rngying bsdu sgrig khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:extentStatement  "765 p." ;
+        bdo:hasTitle        bdr:TT7D12ECD0A4F81D0D ;
+        bdo:instanceHasReproduction  bdr:W3CN7842 ;
+        bdo:instanceOf      bdr:WA3CN7842 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khren tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron bod yig dpe rnying bsdu sgrig khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT7D12ECD0A4F81D0D
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "sdom gsum 'jam dbyangs bla ma'i dgongs rgyan rtsa 'grel/"@bo-x-ewts .
 }
