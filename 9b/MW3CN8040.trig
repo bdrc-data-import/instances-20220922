@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN8040 {
+    bda:LG0MW3CN8040_GKFPHJHTCM7H
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-08T20:58:04.167740Z"^^xsd:dateTime ;
+        adm:logMessage      "added serial no. 8"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG9C20FC2077311261
         a                   adm:UpdateData ;
         adm:logDate         "2021-06-02T13:19:04.225Z"^^xsd:dateTime ;
@@ -30,45 +35,47 @@ bdg:MW3CN8040 {
         adm:gitPath         "9b/MW3CN8040.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN8040 ;
-        adm:logEntry        bda:LG9C20FC2077311261 , bda:LGD67A4185F0184D1C ;
+        adm:logEntry        bda:LG0MW3CN8040_GKFPHJHTCM7H , bda:LG9C20FC2077311261 , bda:LGD67A4185F0184D1C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR5E0B945393075415
-        a                   :AgentAsCreator ;
-        :agent              bdr:P3CN26530 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P3CN26530 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV70A8E0FD5B914F98
-        a                   :PublishedEvent ;
-        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDE797188A313E52B0
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787540960872" .
     
-    bdr:MW3CN8040  a        :Instance ;
+    bdr:MW3CN8040  a        bdo:Instance ;
         skos:prefLabel      "mkha' 'gro bsod nams dpal 'dren gyi rnam thar sogs/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE797188A313E52B0 ;
-        :authorshipStatement  "si khron bod yig dpe rnying bsdu sgrig khang gis bsgrigs/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CR5E0B945393075415 ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "260 p." ;
-        :hasTitle           bdr:TT08D24BCE9B74389F ;
-        :instanceEvent      bdr:EV70A8E0FD5B914F98 ;
-        :instanceHasReproduction  bdr:W3CN8040 ;
-        :instanceOf         bdr:WA3CN8040 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khren tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron dus deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS3CN8396 .
+        bf:identifiedBy     bdr:IDE797188A313E52B0 ;
+        bdo:authorshipStatement  "si khron bod yig dpe rnying bsdu sgrig khang gis bsgrigs/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:creator         bdr:CR5E0B945393075415 ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "260 p." ;
+        bdo:hasTitle        bdr:TT08D24BCE9B74389F ;
+        bdo:instanceEvent   bdr:EV70A8E0FD5B914F98 ;
+        bdo:instanceHasReproduction  bdr:W3CN8040 ;
+        bdo:instanceOf      bdr:WA3CN8040 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khren tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron dus deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS3CN8396 ;
+        bdo:seriesNumber    "8" .
     
     bdr:TT08D24BCE9B74389F
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "mkha' 'gro bsod nams dpal 'dren gyi rnam thar sogs/"@bo-x-ewts .
 }
