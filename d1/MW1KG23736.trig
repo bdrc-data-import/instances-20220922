@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG23736 {
+    bda:LG0MW1KG23736_A6JXAACO59DL
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-08T05:26:21.742465Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected serial no."@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGE4423A536637864D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-06-20T15:15:34.499Z"^^xsd:dateTime ;
@@ -24,41 +27,44 @@ bdg:MW1KG23736 {
         adm:gitPath         "d1/MW1KG23736.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG23736 ;
-        adm:logEntry        bda:LGE4423A536637864D ;
+        adm:logEntry        bda:LG0MW1KG23736_A6JXAACO59DL , bda:LGE4423A536637864D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVF9949FF25D912D04
-        a                   :PublishedEvent ;
-        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW1KG23736  a       :Instance , :SerialInstance ;
+    bdr:MW1KG23736  a       bdo:Instance ;
         skos:prefLabel      "blo bzang dgongs rgyan mu tig phreng mdzes deb bcu pa/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :extentStatement    "v, ca, 272 p." ;
-        :hasTitle           bdr:TT0D1E23F7A59B773F ;
-        :instanceEvent      bdr:EVF9949FF25D912D04 ;
-        :instanceHasReproduction  bdr:W1KG23736 ;
-        :instanceOf         bdr:WA1KG23736 ;
-        :note               bdr:NT1DEB43318B8240B0 , bdr:NTC3F43ECABA03A791 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "mundgod, karnataka"@en ;
-        :publisherName      "drepung loseling educational society"@en ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1KG23648 ;
-        :seriesNumber       "10" .
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "v, ca, 272 p." ;
+        bdo:hasTitle        bdr:TT0D1E23F7A59B773F ;
+        bdo:instanceEvent   bdr:EVF9949FF25D912D04 ;
+        bdo:instanceHasReproduction  bdr:W1KG23736 ;
+        bdo:instanceOf      bdr:WA1KG23736 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT1DEB43318B8240B0 , bdr:NTC3F43ECABA03A791 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "mundgod, karnataka"@en ;
+        bdo:publisherName   "drepung loseling educational society"@en ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS1KG23648 ;
+        bdo:seriesNumber    "11" .
     
     bdr:NT1DEB43318B8240B0
-        a                   :Note ;
-        :noteText           "scan made available from the library of tibetan works and archives; ltwa acc. no. 7370"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "scan made available from the library of tibetan works and archives; ltwa acc. no. 7370"@en .
     
     bdr:NTC3F43ECABA03A791
-        a                   :Note ;
-        :noteText           "contents:\n1. 'jam mgon rgyal ba gnyis pa la bstan pa'i snying po gsal baar mdzad pa'i tshul las brtsams te bstod pa don dang ldan pa/ dkon mchog bstan pa'i sgron me/\n2. gzh'i'i gsum gyi rnam gzhag rab gsal sgron me/ dbyangs can dga' ba'i blo gros/"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "contents:\n1. 'jam mgon rgyal ba gnyis pa la bstan pa'i snying po gsal baar mdzad pa'i tshul las brtsams te bstod pa don dang ldan pa/ dkon mchog bstan pa'i sgron me/\n2. gzh'i'i gsum gyi rnam gzhag rab gsal sgron me/ dbyangs can dga' ba'i blo gros/"@bo-x-ewts .
     
     bdr:TT0D1E23F7A59B773F
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "blo bzang dgongs rgyan mu tig phreng mdzes deb bcu pa/"@bo-x-ewts .
 }
