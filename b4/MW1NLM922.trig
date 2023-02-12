@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM922 {
@@ -48,31 +45,38 @@ bdg:MW1NLM922 {
         adm:gitPath         "b4/MW1NLM922.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM922 ;
-        adm:logEntry        bda:LG5F9AFD9DEDE6D03E , bda:LG6B090AA804B91449 , bda:LG74DA6B57E859E9C3 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 ;
+        adm:logEntry        bda:LG5F9AFD9DEDE6D03E , bda:LG6B090AA804B91449 , bda:LG74DA6B57E859E9C3 , bda:LGIM567371A3 , bda:LGIM9A3E46B600 , bdr:LG0WA1NLM922_GZ90UQB9YVYH ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM922  a        :Instance ;
+    bdr:LG0WA1NLM922_GZ90UQB9YVYH
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-02-12T12:35:47.535629Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1NLM922 in favor of WA1KG25320"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW1NLM922  a        bdo:Instance ;
         skos:prefLabel      "rta nag rnam 'grel las le'u bzhi pa'i mtha' dpyod/"@bo-x-ewts ;
-        :dimensionsStatement  "44.5x6.5" ;
-        :extentStatement    "180 ff." ;
-        :hasTitle           bdr:TT33EA89C084534A3C , bdr:TT38D55B6FD318FF9A ;
-        :instanceHasReproduction  bdr:W1NLM922 ;
-        :instanceOf         bdr:WA1NLM922 ;
-        :note               bdr:NT2AFDACBA2496C167 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:dimensionsStatement  "44.5x6.5" ;
+        bdo:extentStatement  "180 ff." ;
+        bdo:hasTitle        bdr:TT33EA89C084534A3C , bdr:TT38D55B6FD318FF9A ;
+        bdo:instanceHasReproduction  bdr:W1NLM922 ;
+        bdo:instanceOf      bdr:WA1KG25320 ;
+        bdo:note            bdr:NT2AFDACBA2496C167 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:NT2AFDACBA2496C167
-        a                   :Note ;
-        :noteText           "nlmId: M0058835"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0058835"@en .
     
     bdr:TT33EA89C084534A3C
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "rta nag rnam 'grel las le'u bzhi pa'i mtha' dpyod/"@bo-x-ewts .
     
     bdr:TT38D55B6FD318FF9A
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rgyas pa'i bstan bcos tshad ma rnam 'grel gyi le'u bzhi pa'i mtha' dpyod mkhas pa'i dbang po rje rta nag pa dge 'dun blo bzang gi gsung rgyun dri ma med pa/"@bo-x-ewts .
 }
