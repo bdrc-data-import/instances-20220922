@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS17934 {
+    bda:LG0MW8LS17934_IJEEJVAPKH3E
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-12T11:53:09.158846Z"^^xsd:dateTime ;
+        adm:logMessage      "date and compiler"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LGA6E2D8B8456E5FFE
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-07-25T11:25:27.155Z"^^xsd:dateTime ;
@@ -24,30 +27,35 @@ bdg:MW8LS17934 {
         adm:gitPath         "d8/MW8LS17934.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS17934 ;
-        adm:logEntry        bda:LGA6E2D8B8456E5FFE ;
+        adm:logEntry        bda:LG0MW8LS17934_IJEEJVAPKH3E , bda:LGA6E2D8B8456E5FFE ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS17934  a       :Instance ;
+    bdr:CRMW8LS17934GW3IXZ0X
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P9418 ;
+        bdo:role            bdr:R0ER0015 .
+    
+    bdr:EVMW8LS17934T71QUEPF
+        a                   bdo:CarvedEvent ;
+        bdo:eventWhen       "1835"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW8LS17934  a       bdo:Instance ;
         skos:prefLabel      "rta nag rnam 'grel/ le'u dang po/"@bo-x-ewts ;
-        :extentStatement    "1444 p." ;
-        :hasSourcePrintery  bdr:G3JT12498 ;
-        :hasTitle           bdr:TT10F00F877BF88795 , bdr:TT97E2369FD1FF30BF , bdr:TTEC8F341CDD18E170 ;
-        :instanceHasReproduction  bdr:W8LS17934 ;
-        :instanceOf         bdr:WA8LS17934 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:creator         bdr:CRMW8LS17934GW3IXZ0X ;
+        bdo:extentStatement  "1444 p." ;
+        bdo:hasSourcePrintery  bdr:G3JT12498 ;
+        bdo:hasTitle        bdr:TT10F00F877BF88795 ;
+        bdo:instanceEvent   bdr:EVMW8LS17934T71QUEPF ;
+        bdo:instanceHasReproduction  bdr:W8LS17934 ;
+        bdo:instanceOf      bdr:WA8LS17934 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT10F00F877BF88795
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rgyas pa'i bstan bcos tshad ma rnam 'grel gyi le'u dang po'i mtha' dpyod mkhas pa'i dbang po rje rta nag pa dge 'dun blo bzang gi gsung rgyun dri ma med pa/"@bo-x-ewts .
-    
-    bdr:TT97E2369FD1FF30BF
-        a                   :Title ;
-        rdfs:label          "rta nag rnam 'grel/ le'u dang po/"@bo-x-ewts .
-    
-    bdr:TTEC8F341CDD18E170
-        a                   :Title ;
-        rdfs:label          "tshad ma rnam 'grel gyi mtha' dpyod/"@bo-x-ewts .
 }
