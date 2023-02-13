@@ -1,40 +1,48 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MWEAP310-2-1 {
+    bda:LG0MWEAP310-2-1_WCULSVMJFMQF
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-13T16:31:09.081798Z"^^xsd:dateTime ;
+        adm:logMessage      "added alt. lable"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:MWEAP310-2-1  a     adm:AdminData ;
         adm:adminAbout      bdr:MWEAP310-2-1 ;
         adm:facetIndex      2 ;
         adm:gitPath         "d6/MWEAP310-2-1.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MWEAP310-2-1 ;
+        adm:logEntry        bda:LG0MWEAP310-2-1_WCULSVMJFMQF ;
         adm:metadataLegal   bda:LD_EAP_metadata ;
         adm:originalRecord  "https://eap.bl.uk/collection/EAP310-2-1"^^xsd:anyURI ;
         adm:status          bda:StatusReleased .
     
     bdr:EMWEAP310-2-1_01
-        a                   :CopyEvent ;
-        :eventWhen          "1650/1950"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:CopyEvent ;
+        bdo:eventWhen       "1650/1950"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MWEAP310-2-1  a     :Instance ;
+    bdr:MWEAP310-2-1  a     bdo:Instance ;
+        skos:altLabel       "gnas phug bka' 'gyur/"@bo-x-ewts ;
         skos:prefLabel      "bka' 'gyur/ (gnas phug/)"@bo-x-ewts ;
-        :instanceHasReproduction  bdr:WEAP310-2-1 ;
-        :instanceOf         bdr:WA0BC001 ;
-        :note               bdr:NT13BEFDFEED9AA059 ;
-        :numberOfVolumes    106 ;
-        :workEvent          bdr:EMWEAP310-2-1_01 .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:instanceHasReproduction  bdr:WEAP310-2-1 ;
+        bdo:instanceOf      bdr:WA0BC001 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT13BEFDFEED9AA059 ;
+        bdo:numberOfVolumes  106 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:workEvent       bdr:EMWEAP310-2-1_01 .
     
     bdr:NT13BEFDFEED9AA059
-        a                   :Note ;
-        :noteText           "The Kanjur manuscript contains 108 volumes including 16 volumes of Sher phyin, 6 volumes of dKon brtsegs, 6 volumes of Phal chen, 4 volumes of Myang 'das, ... volumes of mDo sde, … volumes of rGyud and 13 volumes of 'Dul ba. The canon includes the earliest sermons of the Buddha, the dialogues between him and his disciples, monastic codes of discipline, the large Mahayana sutras which appeared around the beginning of the first millennium and the tantric literature, which is also attributed to the Buddha but appeared from the middle of the first millennium. The Kanjur canon contains Tibetan translation of these canonical Buddhist scriptures which were produced largely between 8th and 13th century. The texts form the foundation of Tibetan Buddhism. 106 volumes of manuscripts on paper in loose leaf poti format.Dates of original material: unknownScript(s) of material: Tibetan dBu can script."@en .
+        a                   bdo:Note ;
+        bdo:noteText        "The Kanjur manuscript contains 108 volumes including 16 volumes of Sher phyin, 6 volumes of dKon brtsegs, 6 volumes of Phal chen, 4 volumes of Myang 'das, ... volumes of mDo sde, … volumes of rGyud and 13 volumes of 'Dul ba. The canon includes the earliest sermons of the Buddha, the dialogues between him and his disciples, monastic codes of discipline, the large Mahayana sutras which appeared around the beginning of the first millennium and the tantric literature, which is also attributed to the Buddha but appeared from the middle of the first millennium. The Kanjur canon contains Tibetan translation of these canonical Buddhist scriptures which were produced largely between 8th and 13th century. The texts form the foundation of Tibetan Buddhism. 106 volumes of manuscripts on paper in loose leaf poti format.Dates of original material: unknownScript(s) of material: Tibetan dBu can script."@en .
 }
