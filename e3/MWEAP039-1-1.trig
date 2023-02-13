@@ -1,40 +1,48 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MWEAP039-1-1 {
+    bda:LG0MWEAP039-1-1_ELUPGNY93STK
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-13T16:38:39.336053Z"^^xsd:dateTime ;
+        adm:logMessage      "added alt. lable"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:MWEAP039-1-1  a     adm:AdminData ;
         adm:adminAbout      bdr:MWEAP039-1-1 ;
         adm:facetIndex      2 ;
         adm:gitPath         "e3/MWEAP039-1-1.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MWEAP039-1-1 ;
+        adm:logEntry        bda:LG0MWEAP039-1-1_ELUPGNY93STK ;
         adm:metadataLegal   bda:LD_EAP_metadata ;
         adm:originalRecord  "https://eap.bl.uk/collection/EAP039-1-1"^^xsd:anyURI ;
         adm:status          bda:StatusReleased .
     
     bdr:EMWEAP039-1-1_01
-        a                   :CopyEvent ;
-        :eventWhen          "1690/1692"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:CopyEvent ;
+        bdo:eventWhen       "1690/1692"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MWEAP039-1-1  a     :Instance ;
+    bdr:MWEAP039-1-1  a     bdo:Instance ;
+        skos:altLabel       "sgang steng bka' 'gyur/"@bo-x-ewts ;
         skos:prefLabel      "bka' 'gyur/ (sgang steng/)"@bo-x-ewts ;
-        :instanceHasReproduction  bdr:WEAP039-1-1 ;
-        :instanceOf         bdr:WA0BC001 ;
-        :note               bdr:NT851BCC728217DE22 ;
-        :numberOfVolumes    109 ;
-        :workEvent          bdr:EMWEAP039-1-1_01 .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:instanceHasReproduction  bdr:WEAP039-1-1 ;
+        bdo:instanceOf      bdr:WA0BC001 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT851BCC728217DE22 ;
+        bdo:numberOfVolumes  109 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:workEvent       bdr:EMWEAP039-1-1_01 .
     
     bdr:NT851BCC728217DE22
-        a                   :Note ;
-        :noteText           "This series consists of titles from the kBa' 'gyur.Written in the dBu can script.Originals dated as: c.1690-1692."@en .
+        a                   bdo:Note ;
+        bdo:noteText        "This series consists of titles from the kBa' 'gyur.Written in the dBu can script.Originals dated as: c.1690-1692."@en .
 }
