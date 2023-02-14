@@ -6,6 +6,7 @@
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
@@ -16,10 +17,16 @@ bdg:MW8CZ139 {
         adm:logMessage      "new"@en ;
         adm:logWho          bdu:U2089842660 .
     
+    bda:LG0MW8CZ139_TEPHFJCGC3GZ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-14T16:25:08.198855Z"^^xsd:dateTime ;
+        adm:logMessage      "add"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:MW8CZ139  a         adm:AdminData ;
         adm:adminAbout      bdr:MW8CZ139 ;
         adm:graphId         bdg:MW8CZ139 ;
-        adm:logEntry        bda:LG0MW8CZ139_ODJF6IIINODM ;
+        adm:logEntry        bda:LG0MW8CZ139_ODJF6IIINODM , bda:LG0MW8CZ139_TEPHFJCGC3GZ ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -33,11 +40,12 @@ bdg:MW8CZ139 {
         rdf:value           "8186419793" .
     
     bdr:MW8CZ139  a         bdo:Instance ;
-        skos:prefLabel      "rtsa chu'i brtag thabs Tika phyogs bsdus/"@bo-x-ewts ;
+        skos:prefLabel      "rtsa chu'i brtag thabs TIka phyogs bsdus/"@bo-x-ewts ;
         bf:identifiedBy     bdr:IDMW8CZ1393YJD5EIX ;
         bdo:binding         bdr:Binding_Codex_Perfect ;
         bdo:copyrightStatus  bdr:CopyrightInCopyright ;
         bdo:editionStatement  "first edition "@en ;
+        bdo:hasTitle        bdr:TTMW8CZ139HQJHL0KY ;
         bdo:instanceEvent   bdr:EVMW8CZ139849P3W1W ;
         bdo:instanceExtentStatement  "x, 503 p." ;
         bdo:instanceHasReproduction  bdr:W8CZ139 ;
@@ -48,4 +56,8 @@ bdg:MW8CZ139 {
         bdo:publisherLocation  "Dharamsala"@en ;
         bdo:publisherName   "dbus sman rtsis khang dpe deb zhib 'jug dang par skrun sde tshan/"@bo-x-ewts ;
         bdo:script          bdr:ScriptDbuCan .
+    
+    bdr:TTMW8CZ139HQJHL0KY
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "rtsa chu'i brtag thabs kyi TIka phyogs bsdus/"@bo-x-ewts .
 }
