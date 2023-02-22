@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3738 {
+    bda:LG0MW1NLM3738_JNZXUJLB4PST
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-22T21:36:58.747069Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,31 +26,37 @@ bdg:MW1NLM3738 {
         adm:gitPath         "01/MW1NLM3738.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3738 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3738_JNZXUJLB4PST , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusScanned .
     
-    bdr:MW1NLM3738  a       :Instance ;
-        skos:prefLabel      "jo bo lugs kyi smon 'jug sems bskyed sdom pa rang gi blang ba'i cho ga sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "40.5x5.5" ;
-        :extentStatement    "38-162 ff., 7 ff., 5 ff., 4 ff., 4 ff." ;
-        :hasTitle           bdr:TT9B59A64C0A80D55F ;
-        :instanceHasReproduction  bdr:W1NLM3738 ;
-        :instanceOf         bdr:WA1NLM3738 ;
-        :note               bdr:NTB650CD730D16729E , bdr:NTE47761B207FED83B ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+    bdr:MW1NLM3738  a       bdo:Instance ;
+        skos:altLabel       "jo bo lugs kyi smon 'jug sems bskyed sdom pa rang gi blang ba'i cho ga sogs/"@bo-x-ewts ;
+        skos:prefLabel      "smon 'jug sems bskyed sdom pa rang gi blang ba'i cho ga sogs/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "40.5x5.5" ;
+        bdo:extentStatement  "38-162 ff., 7 ff., 5 ff., 4 ff., 4 ff." ;
+        bdo:hasTitle        bdr:TT9B59A64C0A80D55F ;
+        bdo:instanceHasReproduction  bdr:W1NLM3738 ;
+        bdo:instanceOf      bdr:WA1NLM3738 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTB650CD730D16729E , bdr:NTE47761B207FED83B ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "[s.l.]"@bo-x-ewts ;
+        bdo:publisherName   "[s.n.]"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTB650CD730D16729E
-        a                   :Note ;
-        :noteText           "nlmId: M0061656"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061656"@en .
     
     bdr:NTE47761B207FED83B
-        a                   :Note ;
-        :noteText           "missingPages: M0061656-008 [Missing page from 96A-101B] Image 117"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061656-008 [Missing page from 96A-101B] Image 117"@en .
     
     bdr:TT9B59A64C0A80D55F
-        a                   :Title ;
+        a                   bdo:ColophonTitle ;
         rdfs:label          "jo bo lugs kyi smon 'jug sems bskyed sdom pa rang gi blang ba'i cho ga sogs/"@bo-x-ewts .
 }
