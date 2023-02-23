@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3739 {
+    bda:LG0MW1NLM3739_AYFPO4M0X34J
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-02-23T14:17:09.340105Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,27 +26,36 @@ bdg:MW1NLM3739 {
         adm:gitPath         "70/MW1NLM3739.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3739 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3739_AYFPO4M0X34J , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusScanned .
     
-    bdr:MW1NLM3739  a       :Instance ;
-        skos:prefLabel      "rgyud kyi rgyal po dpal gsang ba 'dus pa'i le'u gnyis pa nas lnga pa'i bar gyi rtsa 'grel gyi tshig don gsal bar 'chad pa'i man ngag rim gnyis gter mdzod sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "47x6.5" ;
-        :extentStatement    "39 ff., 50 ff., 66 ff." ;
-        :hasTitle           bdr:TT853C2AF8A4628DCB ;
-        :instanceHasReproduction  bdr:W1NLM3739 ;
-        :instanceOf         bdr:WA1NLM3739 ;
-        :note               bdr:NT1CF54D7F116B9A77 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1NLM3739  a       bdo:Instance ;
+        skos:altLabel       "rgyud kyi rgyal po dpal gsang ba 'dus pa'i le'u gnyis pa nas lnga pa'i bar gyi rtsa 'grel gyi tshig don gsal bar 'chad pa'i man ngag rim gnyis gter mdzod sogs/"@bo-x-ewts ;
+        skos:prefLabel      "gsang 'dus sgron ma rab tu gsal bar byed ba'i rgya cher bshad pa/"@bo-x-ewts ;
+        bdo:biblioNote      "Detailed commentary of 2nd-5th chapter of Guhyasamaja Tantra"@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "47x6.5" ;
+        bdo:extentStatement  "39 ff., 50 ff., 66 ff." ;
+        bdo:hasSourcePrintery  bdr:G584 ;
+        bdo:hasTitle        bdr:TT853C2AF8A4628DCB ;
+        bdo:instanceExtentStatement  "310 p." ;
+        bdo:instanceHasReproduction  bdr:W1NLM3739 ;
+        bdo:instanceOf      bdr:WA1NLM3739 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT1CF54D7F116B9A77 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "sog yul/"@bo-x-ewts ;
+        bdo:publisherName   "dga' ldan dge rgyas gling /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT1CF54D7F116B9A77
-        a                   :Note ;
-        :noteText           "nlmId: M0061657"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061657"@en .
     
     bdr:TT853C2AF8A4628DCB
-        a                   :Title ;
-        rdfs:label          "rgyud kyi rgyal po dpal gsang ba 'dus pa'i le'u gnyis pa nas lnga pa'i bar gyi rtsa 'grel gyi tshig don gsal bar 'chad pa'i man ngag rim gnyis gter mdzod sogs/"@bo-x-ewts .
+        a                   bdo:IncipitTitle ;
+        rdfs:label          "gsang ba 'dus pa'i le'u gnyis pa nas lnga pa'i bar gyi rtsa 'grel gyi tshig don gsal bar 'chad pa'i man ngag rim gnyis gter mdzod/"@bo-x-ewts .
 }
