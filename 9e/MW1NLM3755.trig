@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3755 {
+    bda:LG0MW1NLM3755_RGWYZUHBVVWF
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-01T15:28:36.349996Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,27 +26,33 @@ bdg:MW1NLM3755 {
         adm:gitPath         "9e/MW1NLM3755.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3755 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3755_RGWYZUHBVVWF , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusScanned .
     
-    bdr:MW1NLM3755  a       :Instance ;
+    bdr:MW1NLM3755  a       bdo:Instance ;
         skos:prefLabel      "shing rta'i srol 'byed zin bris sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "47x6.5" ;
-        :extentStatement    "80 ff., 14 ff., 10 ff., 10 ff., 5 ff., 14 ff." ;
-        :hasTitle           bdr:TTBAC2885092E024EA ;
-        :instanceHasReproduction  bdr:W1NLM3755 ;
-        :instanceOf         bdr:WA1NLM3755 ;
-        :note               bdr:NT5446AF1F80D2745C ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "47x6.5" ;
+        bdo:extentStatement  "80 ff., 14 ff., 10 ff., 10 ff., 5 ff., 14 ff." ;
+        bdo:hasSourcePrintery  bdr:G584 ;
+        bdo:hasTitle        bdr:TTBAC2885092E024EA ;
+        bdo:instanceHasReproduction  bdr:W1NLM3755 ;
+        bdo:instanceOf      bdr:WA1NLM3755 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT5446AF1F80D2745C ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "sog yul/"@bo-x-ewts ;
+        bdo:publisherName   "bkra shis phun tshogs gling dgon/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT5446AF1F80D2745C
-        a                   :Note ;
-        :noteText           "nlmId: M0061673"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061673"@en .
     
     bdr:TTBAC2885092E024EA
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "shing rta'i srol 'byed zin bris sogs/"@bo-x-ewts .
 }
