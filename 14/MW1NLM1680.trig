@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM1680 {
@@ -41,27 +38,34 @@ bdg:MW1NLM1680 {
         adm:gitPath         "14/MW1NLM1680.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM1680 ;
-        adm:logEntry        bda:LG481B33ECF2469ECC , bda:LG69FEBA2D2836BAA1 , bda:LG8CFBCA02CD1BFF3E , bda:LGIMA07EBF90 ;
+        adm:logEntry        bda:LG481B33ECF2469ECC , bda:LG69FEBA2D2836BAA1 , bda:LG8CFBCA02CD1BFF3E , bda:LGIMA07EBF90 , bdr:LG0WA1NLM1680_1SSF6SZUN00I ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM1680  a       :Instance ;
+    bdr:LG0WA1NLM1680_1SSF6SZUN00I
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-03-01T17:57:53.127356Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1NLM1680 in favor of WA0RK0016"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW1NLM1680  a       bdo:Instance ;
         skos:prefLabel      "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts ;
-        :dimensionsStatement  "19x5.5" ;
-        :extentStatement    "79 ff." ;
-        :hasTitle           bdr:TT463CEFEE452A3298 ;
-        :instanceHasReproduction  bdr:W1NLM1680 ;
-        :instanceOf         bdr:WA1NLM1680 ;
-        :note               bdr:NT07918A4BA1FAC84B ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+        bdo:dimensionsStatement  "19x5.5" ;
+        bdo:extentStatement  "79 ff." ;
+        bdo:hasTitle        bdr:TT463CEFEE452A3298 ;
+        bdo:instanceHasReproduction  bdr:W1NLM1680 ;
+        bdo:instanceOf      bdr:WA0RK0016 ;
+        bdo:note            bdr:NT07918A4BA1FAC84B ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT07918A4BA1FAC84B
-        a                   :Note ;
-        :noteText           "nlmId: M0059598"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0059598"@en .
     
     bdr:TT463CEFEE452A3298
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
 }
