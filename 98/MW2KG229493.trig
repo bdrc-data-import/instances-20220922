@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG229493 {
@@ -24,31 +21,38 @@ bdg:MW2KG229493 {
         adm:gitPath         "98/MW2KG229493.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG229493 ;
-        adm:logEntry        bda:LGB0005FBA9A00E3EE ;
+        adm:logEntry        bda:LGB0005FBA9A00E3EE , bdr:LG0WA2KG200150_XQOBNI92ZFL5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW2KG229493  a      :Instance ;
+    bdr:LG0WA2KG200150_XQOBNI92ZFL5
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-03-01T17:26:27.914955Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA2KG200150 in favor of WA0RK0016"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW2KG229493  a      bdo:Instance ;
         skos:prefLabel      "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa/"@bo-x-ewts ;
-        :biblioNote         "Digital images of the text are made available through the kind support of Great Enlightenment Buddhist Institute Society (GEBIS) in Canada."@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :extentStatement    "64 p." ;
-        :hasTitle           bdr:TT3D055577FF19317A , bdr:TT8A9A78F247EA8147 ;
-        :illustrations      "ill. (col.)" ;
-        :instanceHasReproduction  bdr:W2KG229493 ;
-        :instanceOf         bdr:WA2KG200150 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "[s.l.]"@en ;
-        :publisherName      "tsha ba rong pa rnam dpal tshang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "Digital images of the text are made available through the kind support of Great Enlightenment Buddhist Institute Society (GEBIS) in Canada."@en ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "64 p." ;
+        bdo:hasTitle        bdr:TT3D055577FF19317A , bdr:TT8A9A78F247EA8147 ;
+        bdo:illustrations   "ill. (col.)" ;
+        bdo:instanceHasReproduction  bdr:W2KG229493 ;
+        bdo:instanceOf      bdr:WA0RK0016 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "tsha ba rong pa rnam dpal tshang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT3D055577FF19317A
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa zhes bya ba theg pa chen po'i mdo/"@bo-x-ewts .
     
     bdr:TT8A9A78F247EA8147
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "'phags pa shes rab kyi pha rol tu phyin pa rdo rje gcod pa/"@bo-x-ewts .
 }
