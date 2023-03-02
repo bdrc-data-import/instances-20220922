@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3760 {
+    bda:LG0MW1NLM3760_URQJJHYHUQUS
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-02T15:50:35.995366Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM4F552576  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-10-26T17:09:02.792Z"^^xsd:dateTime ;
@@ -23,27 +26,34 @@ bdg:MW1NLM3760 {
         adm:gitPath         "4f/MW1NLM3760.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3760 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LG0MW1NLM3760_URQJJHYHUQUS , bda:LGIM4F552576 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusScanned .
     
-    bdr:MW1NLM3760  a       :Instance ;
-        skos:prefLabel      "grub chen nyi ma sbas pa'i lugs kyi rtsa ba'i sgrol ma las tshogs kyi sgrol ma dang bcas pa'i sgrub thabs las tshogs dang bcas pa nag 'gros kyi tshul du bgod pa bskal bzang u t+pal rgyan 'phreng /"@bo-x-ewts ;
-        :dimensionsStatement  "45.5x6.5" ;
-        :extentStatement    "125 ff." ;
-        :hasTitle           bdr:TTCA0FB82265918205 ;
-        :instanceHasReproduction  bdr:W1NLM3760 ;
-        :instanceOf         bdr:WA1NLM3760 ;
-        :note               bdr:NT2F1BAF7FBDD99A5C ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1NLM3760  a       bdo:Instance ;
+        skos:altLabel       "grub chen nyi ma sbas pa'i lugs kyi rtsa ba'i sgrol ma las tshogs kyi sgrol ma dang bcas pa'i sgrub thabs las tshogs dang bcas pa nag 'gros kyi tshul du bgod pa bskal bzang u t+pal rgyan 'phreng /"@bo-x-ewts ;
+        skos:prefLabel      "nyi ma sbas pa'i lugs kyi rtsa ba'i sgrol ma las tshogs kyi sgrol ma dang bcas pa'i sgrub thabs las tshogs dang bcas pa nag 'gros kyi tshul du bgod pa bskal bzang u t+pal rgyan 'phreng /"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "45.5x6.5" ;
+        bdo:extentStatement  "125 ff." ;
+        bdo:hasTitle        bdr:TTCA0FB82265918205 ;
+        bdo:instanceExtentStatement  "125 ff." ;
+        bdo:instanceHasReproduction  bdr:W1NLM3760 ;
+        bdo:instanceOf      bdr:WA1NLM3760 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT2F1BAF7FBDD99A5C ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT2F1BAF7FBDD99A5C
-        a                   :Note ;
-        :noteText           "nlmId: M0061678"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061678"@en .
     
     bdr:TTCA0FB82265918205
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "grub chen nyi ma sbas pa'i lugs kyi rtsa ba'i sgrol ma las tshogs kyi sgrol ma dang bcas pa'i sgrub thabs las tshogs dang bcas pa nag 'gros kyi tshul du bgod pa bskal bzang u t+pal rgyan 'phreng /"@bo-x-ewts .
 }
