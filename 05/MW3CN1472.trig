@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN1472 {
+    bda:LG0MW3CN1472_SQQBP1CB498I
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-04T07:44:10.676003Z"^^xsd:dateTime ;
+        adm:logMessage      "update"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG4141EE75B30BCBD1
         a                   adm:InitialDataCreation ;
         adm:logDate         "2015-03-03T11:29:08.712Z"^^xsd:dateTime ;
@@ -30,26 +33,30 @@ bdg:MW3CN1472 {
         adm:gitPath         "05/MW3CN1472.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN1472 ;
-        adm:logEntry        bda:LG4141EE75B30BCBD1 , bda:LGD029D591893514CD ;
+        adm:logEntry        bda:LG0MW3CN1472_SQQBP1CB498I , bda:LG4141EE75B30BCBD1 , bda:LGD029D591893514CD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN1472  a        :Instance ;
+    bdr:MW3CN1472  a        bdo:Instance ;
         skos:prefLabel      "snyan ngag me long gi rgya cher 'grel pa gzhung don gsal ba/"@bo-x-ewts ;
-        :extentStatement    "285 p." ;
-        :hasTitle           bdr:TTD0E498835161C15A , bdr:TTFA7086A93CA5218E ;
-        :instanceHasReproduction  bdr:W3CN1472 ;
-        :instanceOf         bdr:WA3CN1472 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed ;
-        :sourceNote         "bod ljongs dpe mdzod khang /"@bo-x-ewts .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "285 p." ;
+        bdo:hasTitle        bdr:TTD0E498835161C15A ;
+        bdo:instanceHasReproduction  bdr:W3CN1472 ;
+        bdo:instanceOf      bdr:WA3CN1472 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTMW3CN1472HJXYT41R ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed ;
+        bdo:sourceNote      "bod ljongs dpe mdzod khang /"@bo-x-ewts .
+    
+    bdr:NTMW3CN1472HJXYT41R
+        a                   bdo:Note ;
+        bdo:noteText        "The scans of the manuscripts were transferred to BDRC with the indication that it was from the Drepung library"@en .
     
     bdr:TTD0E498835161C15A
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "snyan ngag me long gi rgya cher 'grel pa gzhung don gsal ba/"@bo-x-ewts .
-    
-    bdr:TTFA7086A93CA5218E
-        a                   :OtherTitle ;
-        rdfs:label          "snyan 'grel gzhung don gsal ba/"@bo-x-ewts .
 }
