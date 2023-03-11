@@ -1,48 +1,74 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/45/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0070 {
-    bda:LG99A7F3C8AEBE9481
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
-        adm:logMessage      "deleted biblioNote"@en ;
-        adm:logWhoStr       "works-ttbbc-del-biblionote" .
-    
-    bda:LGIMD8DD6D40  a     adm:UpdateData ;
-        adm:logAgent        "NGMP Importer" ;
-        adm:logDate         "2020-07-20T16:08:04.18Z"^^xsd:dateTime ;
-        adm:logMethod       bda:BatchMethod .
-    
-    bda:MW0TTBBC0070  a     adm:AdminData ;
-        adm:adminAbout      bdr:MW0TTBBC0070 ;
-        adm:facetIndex      4 ;
-        adm:gitPath         "45/MW0TTBBC0070.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW0TTBBC0070 ;
-        adm:logEntry        bda:LG99A7F3C8AEBE9481 , bda:LGIMD8DD6D40 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW0TTBBC0070  a     :Instance ;
-        skos:prefLabel      "NGMPP L 66/5"@en ;
-        :hasTitle           bdr:TTA851FF7D13F35E18 ;
-        :instanceHasReproduction  bdr:W0TTBBC0070 ;
-        :instanceOf         bdr:WA0TTBBC0070 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TTA851FF7D13F35E18
-        a                   :Title ;
-        rdfs:label          "NGMPP L 66/5"@en .
+    bda:MW0TTBBC0070 a adm:AdminData ;
+        adm:adminAbout bdr:MW0TTBBC0070 ;
+        adm:facetIndex 4 ;
+        adm:gitPath "45/MW0TTBBC0070.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW0TTBBC0070 ;
+        adm:logEntry bda:LG99A7F3C8AEBE9481,
+            bda:LGIMD8DD6D40 ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bda:LG99A7F3C8AEBE9481 a adm:UpdateData ;
+        adm:logDate "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
+        adm:logMessage "deleted biblioNote"@en ;
+        adm:logWhoStr "works-ttbbc-del-biblionote" .
+
+    bda:LGIMD8DD6D40 a adm:UpdateData ;
+        adm:logAgent "NGMP Importer" ;
+        adm:logDate "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
+        adm:logMethod bda:BatchMethod .
+
+    bdr:EVMW0TTBBC0070_TIBTEV1 a bdo:CarvedEvent ;
+        bdo:eventWhen "1551/1552"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+
+    bdr:MW0NGMCP46008_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/66/5" .
+
+    bdr:MW0NGMCP46008_N1 a bdo:Note ;
+        bdo:noteText "place: Syang, Muktinath, Jomosom, filmed on: 1984-09-17, reel: L/66/5, "@en .
+
+    bdr:MW0NGMCP46008_T1 a bdo:Title ;
+        rdfs:label "mtshan ldan bla ma dam pa mnyam med chos dbang rgyal mtshan gyi rnam par thar pa | rin po che nor bu'i phreng ba/"@bo-x-ewts .
+
+    bdr:MW0TTBBC0070 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP46008_ID ;
+        bdo:colophon "ces pa 'di ni dpal ldan bla ma dam pa sde snod dang rgyud sde'i bdag po/_rnal 'byor gyi dbang phyug mngon par rtogs pa'i yon tan bsam gyis mi khyab par mnga' ba/_bshad sgrub kyis bstan pa'i rgyal mtshan mi nub par 'dzin pa/_yang dag pa yongs kyi dge ba'i bshes gnyen/_lha dang bcas pa'i 'gro ba ma lus pa'i dpal mgon/_mtshan ldan bla ma dam pa mnyam med chos dbang rgyal mtshan zhes mtshan yongs su grags pa de nyid kyi rnam par thar pa ched du brjod pa rin po che nor bu'i phreng ba zhes bya ba 'di nyid/_rin po che nyid kyis byin gyi brlabs pa'i dge slong nam mkha' dkon mchog dang /_dge slong dpal ldan grub pa dang sgrub pa po rgyal mtshan rnams kyis kyang bskul ba'i ngor/_rin po che ba nyid kyis zhabs rdul spyi bos len cing /_thugs yid gcig tu 'dres pa'i sras gyi tha chungs/_dge slong dkon mchog rgyal dbang ngam/_ ming gzhan mkhyen rabs dbang phyug dpal bzang po zhes bya bas/_thun mong zhes pa lcags pho khyi'i lo/_khrums zla ba'i tshes brgyad gzhu'i dus sbyor bzang po la/_dpal ldan mngon dga'i gtsug lag khang bde chen rab rgyas su grub par byas pa'i yi ge pa ni/_gong du smos pa'i dge slong rnam gnyis so/_ 'dis kyang rgyal ba'i bstan pa dar zhing rgyas pa dang /_rjes 'jug rnams kyis/_dam pa khyed kyi rnam par thar pa ji lta ba bzhin 'khyongs par gyur cig/_de kho na bzhin du gyur cig/_kun bzang mchod sprin rgya mtsho'i rdul snyed kyi/_brdul rer de nyid mchod sprin mkha' khyab pas/_phyi nang gsang ba de nyid 'dod dgu yis/_srid mthar bla ma rgyal ba mnyes byed shog/_'di ltar brtsams pa'i rnam dkar dge ba yis/_tshogs gnyis rgya mtsho rgya chen kun bsdus nas/_mar gyur 'gro bas rgyal ba khyed nyid kyi/_go 'phang dam pa de ring thob par shog/_khyed kyi rnam thar dran pa'am bklags pas kyang /_mos gus lam gyis bdag rgyud smin byas te/_mig 'phrul sgyu ma lta bu'i ngang nyid nas/_'gal rkyen sgrib bral tshogs gnyis mthar phyin shog/_phan bde'i 'byung gnas bstan pa dar zhing rgyas/_de 'dzin skyes mchog dam pa sku khams bzang /_bshad sgrub bstan pa mi nyams phyogs bcur 'phel/_dam chos tshul bzhin spyod pas bde gyur cig/_'jig rten nad mtshon mu ge mya ngan bral/_char chu dus phebs lo phyugs rtag tu legs/_bsam sbyor dge ba'i chos la spyod pa dang /_myur du rgyal ba'i go 'phang brnyes gyur cig/_ bla ma'i bkra shis byin brlabs 'od stong 'bar/_yi dam bkra shis kun khyab lha yi sku/_mkha' 'gro'i bkra shis las bzhi'i dngos grub stsol/_chos skyong bkra shis gdon bgegs rak+SHar+tu/_yod med la sogs tha snyad kun dang bral/_gdod nas rnam grol nam yang bcings pa med/_'pho 'gyur med pa nam mkha'i dkyil lta bu'i/_kun khyab phyag rgya chen po'i bkra shis shog/_bkra shis dpal 'bar 'dzam gling rgyan gyur shog/_mang+ga lam+b+ha wan+tu/_sar+bwa dza ga tam/_shu b+ham/_ om swa sti sid d+ham/_rnam mang rgyal ba rgya mtsho ji snyed pa'i/_rnam 'phrul chos dbang rgyal mtshan bla ma rje'i/_rnam dkar mdzad pa 'phrin las gzi 'od 'bar/_ rnam thar spel legs nor bu'i phreng ba 'di/_nam mkhas ji snyed khyab pa'i 'gro ba'i don/_nam mkha'i ming can sum ldan rdo rje 'dzin/_nam mkhas'i khon ltar lhag bsam rgya chen des/_nam mkha' ji snyed gnas pa'i yul dus kun/_dam chos chos bzhin smra ba'i seng ge yi/_dam pa' rnam thar thar lam rtsa bar bsam/_dam chos bka' drin drin gyis rgyud bskul te/_dam pa'i thugs sras sras kyi gtso bo la/_gang gi rnam thar chos 'khor bskor bar bskul/_bskul bas de tshe nor bu'i phreng ba bstsal/_bstsal tshe dge slong rnam gnyis lhag bsam dge/_dge sbyong dkon mchog rgyal mtshan rnam gsum rang /_rang stobs spar du bsgrubs par brtsams dus yang /_yang dag mched po bod kyis spar yig bris/_bris pa'i mod la nyid kyi thugs sras mchog/_mchog gi rgyal tshab chos rje dkon mchog rgyal/_rgyal ba'i dbang po'i thugs rjes nam mkha'i mdzod/_dgos 'dod 'bad med stsol ba'i lhag bsam can/_dge la phyogs med nang so dpal ldan pas/_gnang sbyin khal grangs brgya phrag phyed dang gsum/_ tshugs ston bzang po mang jas brgyan pa dang/_tshwa dang 'byams sdor la sogs 'bad med du/_thugs bsam dag pas mtshan ldan bla ma yi/_thugs kyi dgongs pa yongs su rdzogs phyir dang/_drin che'i yab yum la sogs sgrib sbyang phyir/_lhag par 'di dang tshe rabs thams cad du/_rang gzhan bla med byang chub thob bya'i phyir/_bla brang nang nas dgos 'dod 'bad med bstsal/_dam pas rjes bzung mi phyed dad ldan mchog/_'tsho byed slob dpon gu ru gang de yis/_bcu tshigs bzang dang khal grangs zhe gsum phul/_ 'di dag rnams la gang 'di'i gzhi blangs te/_spar du bsgrub pa'i lag len dod ma dang/_zhus dag la sogs dngos gzhi'i 'thil len rnams/_gang gi slob bu'i tha chungs snyoms las can/_nam mkha'i ming can bdag gis bsgrubs pa'i tshe/_nyid la gsol btab 'grub pa'i mtshan ma yang/_dngos dang brgyud pas byin brlabs ltas bzang thob/_de tshe thugs rje'i klong nas rnam thos bu/_rab dges gzugs sku ya mtshan dngos su byon/_'thun rkyen dgos 'dod ji ltar 'tsham pa bstsal/_dga' bas phyogs te rnam dkar dge tshogs spel/_zhing dang dad gus rgyu rkyen 'dzom pa yis/_phyogs 'dir bcu tshigs 'bul cha byung tho la/_mngon dga' dge 'dun 'dus pa rgya mtsho yis/_khal dgu ri ba'i ba cig gnang sbyin mdzad/_dpal dbang bla ma rdo rje mgon skyabs kyis/_lham dmar dga' ba gcig gi 'bul ba mdzad/_ le'u'i drung pa dkon mchog dpal bzang pas/_ nas rkyang khal gsum bla ma grags rgyal bas/_nas khal gcig phul dge sbyong chos skyabs kyis/_dbu rgyan gser ma gse sbug nas kyi khongs/_khal gsum bre lnga lhag bsam dag pas phul/_'byor ldan dge ba'i bshes gnyen dpal rab gyis/_khal ni bcu gnyis ri ba'i ba cig phul/_zhal ta tshul rgyal nas khal phyed gnyis dang/_dge sbyong rdo rje gsal la sgang pa yis/_nas rkyang khal ni gsum gyi 'bul ba mdzad/_dge sbyong rdo rje bzang pos pha ma'i don/_khal bcu bre grangs bcu gsum ri ba'i zhing/_lhag bsam dad gus ldan pas legs par phul/_dge sbyong dpal ldan rgya legs pha ma'i (125v2) phyir/_nas rkyang khal gcig bre lnga dad pas phul/_yon bdag btsum pas 'bul ba phul tho la/_thugs sras bla ma rdo rje dpal 'bar gyis/_khal grangs bdun (125v3) de ri ba'i sku 'gag phul/_dpon mo che ba bsod nams rnam rgyal dang/_gnas po rdo rje rgyal po bsam grub dang/_sri thar rgyal po yab sras rnam bzhi yis/_khal grangs brgyad (125v4) nyid ri ba'i ba cig phul/_gnas po dkon mchog rgyal pos rang gzhan don/_g.yu gnyis khongs su khal bzhi gus pas phul/_gnas po byin brlabs mgon po dad pa yis/_(125v5) chur phye bre do mar bre lnga nyid phul/_gnas po mgon po bza' mi dad pa yis/_slang cig la khal bzhi ri ba phul/_drung pa slob dpon nam mkha' rgyal mtshan dang/_bcu dpon 'dul (125v6) le dpal ni don grub dang/_gnas po bsam grub bkra shis gnas mo yi dam gyis/_khal re re lhag bsam dag pas phul/_dbon yig 'dzom pa rdo rje kha shas gcig/_(126r1) gnas po na rag don grub khal gnyis dang/_gnas po dgra 'dul dad pas ra gcig phul/_shes rab khal phyed bkra shis don grub kyis/_nas bre bcwo (126r2) lnga rang gzhan don phyir phul/_mtshan ldan thugs sras drung pa 'jigs med pas/_smar rkyang zho do ri ba'i 'dzo mo gnang/_nang tshad dag nas 'bul ba byung tho la/_(126r3) gnas dga'i gdan sa drung pa sangs 'od kyis/_bcu ston bzang dang khal lnga ri ba'i glang/_thugs bsam dag pas gnang sbyin yang dag mdzad/_kyi pa dge 'dun (126r4) dad pas snam dkar phyed/_mthu stobs gus pas nas khal phyed dang gnyis/_slob dpon dkon mchog mchog grub nas khal gsum/_dpon mo che ba smon lam blo gros (126r5) kyis/_ral gri gri thung dung skor khongs su ni/_khal bcu ri ba rang gzhan don phyir phul/_sbas yul bya 'dabs yon bdag gtsang pa yi/_yon mchod drag (126r6) zhan dad ldan 'di dag gis/_bcu tshigs 'bul cha gus pas bsgrubs tshul ni/_bcu dpon don grub khal ni phyed gsum dang/_dge sbyong gu rus glang dang ra yi (126v1) khongs/_khal lnga phul ba sku mched rnam gnyis kyis/_pha bzang bsod mgon ma rgan dpal 'dzoms gyi/_sgrib gnyis sbyong zhing sku gnyis thob phyir phul/_bcu dpon rdor rgyal dad pe lhun grub dang/_(126v2) dpal legs gsum gyis bcu tshigs re re zhus/_dge bshes nam rin pe rings mgon rdor dang/_dpon btsun chos skyong rnam gsum dad pa yis/_par shing gnyis re'i sbyin bdag gus pas (126v3) mdzad/_yon bdag dpal ldan bzang po nor bu dang/_bsod nams dpal ldan rgyal mtshan bsam rgyal dang/_dkon mchog mdzom dang kun bzang dpal 'dren sogs/_yon bdag pho (126v4) mos chur phye khal phyed phul/_bla ma gzhon nus dbu rgyan gser ma la/_khal lnga ri ba rang gzhan don phyir gnang/_dka' bcu tshe rings bdun tshar khang pa'i khongs/_khal bdun rang (126v5) gzhan don phyir 'bul ba mdzad/_dkon gnyer bzang pos nas rkyang khal gnyis phul/_dge sbyong d+har+mA sku mched lcam sring gis/_nas dang khro'i khongs nas khal bdun phul/_rta (126v6) khyu mgon pos nas rkyang khal gcig dang/_gro mas a ne'i don du ra gcig phul/_mkhas pa bsod nams bkra shis bza' mi yi/_lhag bsam dag pas bcu ston bzang po dang/_(127r1) 'bul cha khal grangs drug bcu re bzhi ni/_rang gzhan pha ma rnams kyi don du phul/_mgon po dbang phyug spar shing gsum dang ni/_rdo rje dpal ldan bcu tshigs (127r2) gcig nyid zhus/_mgon po rgyal mtshan bcu tshigs spar shing gsum/_dge bshes mkha' 'gro dad pas spar shing gcig/_mgon po skyabs mas bcu tshigs tshwa bre gang /_btsum (127r3) bre bcwo lnga rang gzhan don du phul/_chos skyong bzang mo mas mang bcu tshigs dang /_khal bcu ri ba'i zhing cig dad pas phul/_dkon mchog rnam rgyal khal ni phyed gsum dang /_(127r4) phyug po dpal mgon nas rkyang khal gcig dang/_'dren mas btsam bre drug nyid dad pas phul/_dge sbyong nam mkhas bcu tshigs phyed nyid zhus/_khro chung bza' mis bcu tshigs (127r5) phyed dang ni/_khal brgyad ri ba'i lcags sgyed che legs phul/_'a pha phyug po lha mgon gzhon nu yis/_bcu tshigs cig zhus lha mgon spar shing lnga/_dpon mo che pa kyi rug spar (127r6) shing gsum/_dge sbyong kun dga' nyi mas 'a ma'i don/_nas bre bcwo lnga lhag bsam dag pas phul/_dpon po mgon nes spar shing gsum nyid dang/_nam mkha' blo gros khal gnyis bre lnga phul/_(127v1) slob dpon gu ru dpal les spar shing cig/_gcer dga'i gdan sa drung pa chos dpal pas/_khal bzhi ri ba'i zhing cig gnang sbyin mdzad/_rtsas sne don grub dad pas khal gnyis phul/_(127v2) thugs sras dam pa drung pa chos dar dang /_a ne rin chen ldan gyis bcu tshigs cig/_tshul khrims bzang mos nas bre bcu bzhi dang /_'tsho byed tshe mgon nas rkyang khal gnyis (127v3) phul/_drung pa dge slong mkha' 'gro lcam sring gis/_tshe 'di'i drin can a' pha rnam rgyal dang /_ma rgan chos skyabs tshogs rdzogs sgrib sbyong la/_bcu tshigs bzang dang lto zhing dga' (127v4) ba la/_khal grangs bzhi bcu ri ba'i 'bul ba mdzad/_yig mkhan 'od zer dad pas khal gnyis phul/_a hoH_de ltar dad ldan sbyin bdag so so yis/_bcu ston dngos (127v5) po phra rags phul ba dang/_bdag sogs sgo gsum 'bad pa drag po yi/_lhag bsam dag pas bsgrubs pa'i 'bras bu mchog/_mthong thos dran reg dgos 'dod kun stsol ba/_rnam thar rin (127v6) chen nor bu'i phreng ba dang/_gsung ngag bsam 'phel 'dod dgu 'byung rnams kyi/_spar yig rnams dang le lha'i rig byed ni/_gtsang phrug 'od zer bdag gis legs par bris/_brkos byed (128r1) dge slong mkha' 'gro dpal bzang dang/_bcu dpon rdo rje rgyal mtshan la sogs pa/_mkhas pa bcu phrag gcig dang lnga yis rkos/_rang rang sug rjes (128r2) ming yig thad na gsal/_khyad par le lha stod cha'i rim pa rnams/_bcu dpon rdor rgyal sor mo'i sgyu rtsal mkhas/_shing rnams gzhog mkhas nam mkha' rdo rje'o/(128r3) spar shing 'jam bdar sangs rgyas rgyal mos bsgrubs/_mkhas pa nam mes spar shing gang dgos phul/_'gal byed ces bya lcags mo phag lo'i ston/_kun gsal (128r4) sgang po che yi ri khrod du/_hor zla bcu pa'i yar tshes bcu gsum la/_dpal ldan mgon dga'i gtsug rgyan dam pa mchog/_chos rje dkon mchog rgyal dbang dpon slob (128r5) kyis/_rtsa gsum bla ma'i dkyil 'khor zhal phye nas/_me rlung phrad pa'i dus sbyor bzang po la/_rab gnas bkra shis me tog char pa phab/_(128r6) 'di ltar bsgrubs pa'i bsod nams rgya chen mthus/_bdag sogs dang nas tshe rabs thams cad du/_dal 'byor mchog thob bstan la rab byung nas/_(129r1) dam pas rjes bzung bka' bzhin bsgrub par shog/_'phags pa'i nor bdun bslab gsum 'byor pas phyug/_(129r2) thos bsam lung rigs sgro 'dogs legs bcad nas/_rnog chung tshe 'dir nam yang ma chags par/_gzhan don (129r3) tshe dang bsgrub pa snyoms par shog/_rang don mngon gyur gzhan don lhun gyis grub/_'phrin las rnam bzhis mar (129r4) gyur 'gro ba'i don/_ji ltar sngon gyi rgyal ba'i mdzad pa bzhin/_tshe 'dir don gnyis 'grub par byin gyis rlobs/_(129r5) dpal ldan bla ma'i thugs dgongs rdzogs pa dang/_dpal ldan sangs rgyas bstan pa dar ba dang/_dpal ldan (129r6) rjes 'jug chos bzhin sbyod pa yis/_dpal ldan bla ma'i rnam thar 'khyongs par shog/_mtha' dmag phyir #129v1 bzlog nad mtshon mu ge zhi/_rgyal khams lo legs rgyal po chos #129v2 bzhin spyod/_'gro ba'i bde skyid skabs gsum bdag po bzhin/_rtag tu bde ba'i dpal la spyod par shog/_ #129v3 bla med dkon mchog gsum gyi byin brlabs dang/_'gyur med chos nyid bden pa'i rang bzhin dang/_slu med chos can #129v4 rgyu 'bras bden pa'i mthus/_rtsol med mkha' khyab bsngo ba 'grub par shog/_bla ma lhar bcas mkhyen brtse nus #129v5 mthu dang/_lhag bsam rab dkar las byung dge tshogs 'dis/_rdzogs ldan bzhin du chos spyod bde skyid 'phel/_ #129v6 thub chen bstan pa dar rgyas bkra shis shog/_de kho na bzhin du mang+ga lam ku ru ru/_sar+ba dza ga tam/_sa mA pa tA mi thi/_//"@bo-x-ewts ;
+        bdo:dimHeight 7.5 ;
+        bdo:dimWidth 31.5 ;
+        bdo:extentStatement "129 folios"@en ;
+        bdo:hasSourcePrintery bdr:G1GS145736 ;
+        bdo:hasTitle bdr:MW0NGMCP46008_T1,
+            bdr:TTA851FF7D13F35E18 ;
+        bdo:incipit "na mo gu ru ratna bhyaH/_dpal ldan bla ma de nyid bla ma mchog/_dpal ldan bla ma kun 'dus bla ma mchog/_kun phan kun mkhyen 'gro ba kun gyi mgon/_mchog rab dam pa gnyug ma bde chen dbyings/_smra brjod las 'das kun khyab mchog chos sku'i ngang /_rnam kun mchog ldan bde chen longs spyod rdzogs/_ngo mtshar rmad byung rnam 'gyur sprul pa'i sku/_phyi nang gsang ba de kho na nyid du/_mchog gsum rtsa gsum sku gsum thig ler gcig/_skyabs gnas kun 'dus mtshan ldan bla ma mchog/_chos dbang rgyal mtshan zhabs la phyag 'tshal lo//"@bo-x-ewts ;
+        bdo:instanceEvent bdr:EVMW0TTBBC0070_TIBTEV1 ;
+        bdo:instanceHasReproduction bdr:W0TTBBC0070 ;
+        bdo:instanceOf bdr:WA0TTBBC0070 ;
+        bdo:note bdr:MW0NGMCP46008_N1,
+            bdr:NTMW0TTBBC0070_TTBBC01 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script bdr:ScriptTibt ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00046008"^^xsd:anyURI ;
+        skos:prefLabel "mtshan ldan bla ma dam pa mnyam med chos dbang rgyal mtshan gyi rnam par thar pa | rin po che nor bu'i phreng ba/"@bo-x-ewts,
+            "NGMPP L 66/5"@en .
+
+    bdr:NTMW0TTBBC0070_TTBBC01 bdo:noteText "Some catalog information (including incipit and colophon) imported from the by the projects 'Tibetan Book Evolution and Technology (TiBET)' and 'Transforming Tibetan and Buddhist Book Culture (TTBBC)'."@en .
+
+    bdr:TTA851FF7D13F35E18 a bdo:Title ;
+        rdfs:label "NGMPP L 66/5"@en .
 }
+

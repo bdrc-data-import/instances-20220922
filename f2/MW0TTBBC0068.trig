@@ -1,48 +1,81 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/f2/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0068 {
-    bda:LGF23570E9B217506F
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
-        adm:logMessage      "deleted biblioNote"@en ;
-        adm:logWhoStr       "works-ttbbc-del-biblionote" .
-    
-    bda:LGIMD8DD6D40  a     adm:UpdateData ;
-        adm:logAgent        "NGMP Importer" ;
-        adm:logDate         "2020-07-20T16:08:04.18Z"^^xsd:dateTime ;
-        adm:logMethod       bda:BatchMethod .
-    
-    bda:MW0TTBBC0068  a     adm:AdminData ;
-        adm:adminAbout      bdr:MW0TTBBC0068 ;
-        adm:facetIndex      4 ;
-        adm:gitPath         "f2/MW0TTBBC0068.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW0TTBBC0068 ;
-        adm:logEntry        bda:LGF23570E9B217506F , bda:LGIMD8DD6D40 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW0TTBBC0068  a     :Instance ;
-        skos:prefLabel      "NGMPP L 569/10"@en ;
-        :hasTitle           bdr:TT54CC071375F8F5EF ;
-        :instanceHasReproduction  bdr:W0TTBBC0068 ;
-        :instanceOf         bdr:WA0TTBBC0068 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TT54CC071375F8F5EF
-        a                   :Title ;
-        rdfs:label          "NGMPP L 569/10"@en .
+    bda:MW0TTBBC0068 a adm:AdminData ;
+        adm:adminAbout bdr:MW0TTBBC0068 ;
+        adm:facetIndex 4 ;
+        adm:gitPath "f2/MW0TTBBC0068.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW0TTBBC0068 ;
+        adm:logEntry bda:LGF23570E9B217506F,
+            bda:LGIMD8DD6D40 ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bdr:WA0NGMCP50831 skos:altLabel "phyag chen yi ge bzhi pa/"@bo-x-ewts .
+
+    bda:LGF23570E9B217506F a adm:UpdateData ;
+        adm:logDate "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
+        adm:logMessage "deleted biblioNote"@en ;
+        adm:logWhoStr "works-ttbbc-del-biblionote" .
+
+    bda:LGIMD8DD6D40 a adm:UpdateData ;
+        adm:logAgent "NGMP Importer" ;
+        adm:logDate "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
+        adm:logMethod bda:BatchMethod .
+
+    bdr:EVMW0TTBBC0068_TIBTEV1 a bdo:CarvedEvent ;
+        bdo:eventWhen "1525/1557"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+
+    bdr:MW0NGMCP37649_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/569/10" .
+
+    bdr:MW0NGMCP37649_N1 a bdo:Note ;
+        bdo:noteText "place: Phole, Taplejung, filmed on: 1995-05-14, reel: L/569/10, remarks: remark on card: print from <name type=\\\"place\\\">Brag dkar</name>, "@en .
+
+    bdr:MW0NGMCP37649_TS1 a bdo:Title ;
+        rdfs:label "phyag chen yi ge bzhi pa/"@bo-x-ewts ;
+        bdo:abbreviationOf bdr:MW0NGMCP37649_T1 .
+
+    bdr:MW0TTBBC0068 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP37649_ID ;
+        bdo:colophon "yi ge bzhi pa'i rgyud kyi sa bcad kyi sbas don gsal ba'i nyi ma zhes bya ba 'di nyid/_rnal 'byor pa chos kyi rgya mtsho sogs kyis yang yang du bskul ba'i dor/_grub thob gtsang pa he ru ka dang thugs yid gcig tu 'dres pa'i/_lha'i btsun pa rin chen rnam rgyal gyis/_gnas chen brag dkar rta sor sbyar ba 'dis kyang /_mdo sngags snying po'i bstan pa dar zhing rgyas par gyur cing //_ e ma ho//_mtho ris yon tan bdun ldan 'phags pa'i nor/_bdun ldan nub ris dpon btsun pad ma yis/_brkos rnams legs par bsgrubs dge ba'i 'degs/_zho gsuM phul ba'i dge rtsa'i ma nus kyis/_pha ma gtso byas 'gro drug son rnaMs/_smin grol sku gsuM mngon gyur bkra shis shog/_e waM/_dge"@bo-x-ewts ;
+        bdo:dimHeight 48.8 ;
+        bdo:dimWidth 8.9 ;
+        bdo:extentStatement "9 folios"@en ;
+        bdo:hasSourcePrintery bdr:G317 ;
+        bdo:hasTitle bdr:MW0NGMCP37649_T1,
+            bdr:MW0NGMCP37649_TS1,
+            bdr:TT54CC071375F8F5EF ;
+        bdo:incipit "bla ma dam pa rnams la phyag 'tsha lo//_yang dag par rdzogs pa'i sangs rgyas rdo rje 'chang gi gdams pa zhal nas snyan du rgyud pa phyag rgya chen po yi ge bzhi pa 'di la don gnyis te/_bla ma rgyud pa'i rim pa dang /_rgyud pa de las byung ba'i gdams pa dngos so//"@bo-x-ewts ;
+        bdo:instanceEvent bdr:EVMW0TTBBC0068_TIBTEV1 ;
+        bdo:instanceHasReproduction bdr:W0TTBBC0068 ;
+        bdo:instanceOf bdr:WA0TTBBC0068 ;
+        bdo:note bdr:MW0NGMCP37649_N1,
+            bdr:NTMW0TTBBC0068_TTBBC01 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script bdr:ScriptTibt ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00037649"^^xsd:anyURI ;
+        skos:prefLabel "phyag rgya chen po yi ge bzhi pa'i sa bcad sbas don gsal ba'i nyi ma/"@bo-x-ewts,
+            "NGMPP L 569/10"@en .
+
+    bdr:NTMW0TTBBC0068_TTBBC01 bdo:noteText "Some catalog information (including incipit and colophon) imported from the by the projects 'Tibetan Book Evolution and Technology (TiBET)' and 'Transforming Tibetan and Buddhist Book Culture (TTBBC)'."@en .
+
+    bdr:TT54CC071375F8F5EF a bdo:Title ;
+        rdfs:label "NGMPP L 569/10"@en .
+
+    bdr:MW0NGMCP37649_T1 a bdo:Title ;
+        rdfs:label "phyag rgya chen po yi ge bzhi pa'i sa bcad sbas don gsal ba'i nyi ma/"@bo-x-ewts .
 }
+

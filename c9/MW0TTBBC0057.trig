@@ -1,48 +1,74 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/c9/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0057 {
-    bda:LGAE7D920BDB744160
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
-        adm:logMessage      "deleted biblioNote"@en ;
-        adm:logWhoStr       "works-ttbbc-del-biblionote" .
-    
-    bda:LGIMD8DD6D40  a     adm:UpdateData ;
-        adm:logAgent        "NGMP Importer" ;
-        adm:logDate         "2020-07-20T16:08:04.18Z"^^xsd:dateTime ;
-        adm:logMethod       bda:BatchMethod .
-    
-    bda:MW0TTBBC0057  a     adm:AdminData ;
-        adm:adminAbout      bdr:MW0TTBBC0057 ;
-        adm:facetIndex      4 ;
-        adm:gitPath         "c9/MW0TTBBC0057.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW0TTBBC0057 ;
-        adm:logEntry        bda:LGAE7D920BDB744160 , bda:LGIMD8DD6D40 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW0TTBBC0057  a     :Instance ;
-        skos:prefLabel      "NGMPP L 477/14"@en ;
-        :hasTitle           bdr:TT5B2A53A864954819 ;
-        :instanceHasReproduction  bdr:W0TTBBC0057 ;
-        :instanceOf         bdr:WA0TTBBC0057 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TT5B2A53A864954819
-        a                   :Title ;
-        rdfs:label          "NGMPP L 477/14"@en .
+    bda:MW0TTBBC0057 a adm:AdminData ;
+        adm:adminAbout bdr:MW0TTBBC0057 ;
+        adm:facetIndex 4 ;
+        adm:gitPath "c9/MW0TTBBC0057.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW0TTBBC0057 ;
+        adm:logEntry bda:LGAE7D920BDB744160,
+            bda:LGIMD8DD6D40 ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bda:LGAE7D920BDB744160 a adm:UpdateData ;
+        adm:logDate "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
+        adm:logMessage "deleted biblioNote"@en ;
+        adm:logWhoStr "works-ttbbc-del-biblionote" .
+
+    bda:LGIMD8DD6D40 a adm:UpdateData ;
+        adm:logAgent "NGMP Importer" ;
+        adm:logDate "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
+        adm:logMethod bda:BatchMethod .
+
+    bdr:EVMW0TTBBC0057_TIBTEV1 a bdo:CarvedEvent ;
+        bdo:eventWhen "1525/1557"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+
+    bdr:MW0NGMCP56991_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/477/14" .
+
+    bdr:MW0NGMCP56991_N1 a bdo:Note ;
+        bdo:noteText "place: Nyile, Tsum, filmed on: 1994-04-21, reel: L/477/14, remarks: remark on card: this text is a block print from <name type=\\\"place\\\">Drag dkar</name>, "@en .
+
+    bdr:MW0NGMCP56991_T1 a bdo:Title ;
+        rdfs:label "thun mong ma yin pa rdo rje'i mgur sogs | mgur ma 'ga' yar bzhugs so | dge legs 'phel/"@bo-x-ewts .
+
+    bdr:MW0TTBBC0057 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP56991_ID ;
+        bdo:colophon "lung rtogs mnga' bdag lha btsun chos kyi rjes/_lung bstan ltas bzhin rdo rje'i mgur drug sogs/_par du sgrub par mdzad pa ji bzhin du/_rtogs ldan chos rgyan bdag gi mchog spel/_he he/"@bo-x-ewts ;
+        bdo:dimHeight 9.0 ;
+        bdo:dimWidth 50.0 ;
+        bdo:extentStatement "19 folios"@en ;
+        bdo:hasSourcePrintery bdr:G317 ;
+        bdo:hasTitle bdr:MW0NGMCP56991_T1,
+            bdr:TT5B2A53A864954819 ;
+        bdo:incipit "na mo gu ru/_rnal 'byor gyi dbang phyug rje btsun mi la ras pa de nyid kyis/_Na ro bon chung rdzu 'phrul gyis pham par byas nas/_ti se'i rdzu 'phrul phug na bzhugs te/_ras chung pa la mkha' 'gro snyan brgyud kyi gdams ngag rnams chig brgyud du rdzogs par gnang nas/_tshe 'dir 'bras bu mngon du 'gyur ba'i nyams len 'bungs cig gsung ngo//"@bo-x-ewts ;
+        bdo:instanceEvent bdr:EVMW0TTBBC0057_TIBTEV1 ;
+        bdo:instanceHasReproduction bdr:W0TTBBC0057 ;
+        bdo:instanceOf bdr:WA0TTBBC0057 ;
+        bdo:note bdr:MW0NGMCP56991_N1,
+            bdr:NTMW0TTBBC0057_TTBBC01 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script bdr:ScriptTibt ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00056991"^^xsd:anyURI ;
+        skos:prefLabel "thun mong ma yin pa rdo rje'i mgur sogs | mgur ma 'ga' yar bzhugs so | dge legs 'phel/"@bo-x-ewts,
+            "NGMPP L 477/14"@en .
+
+    bdr:NTMW0TTBBC0057_TTBBC01 bdo:noteText "Some catalog information (including incipit and colophon) imported from the by the projects 'Tibetan Book Evolution and Technology (TiBET)' and 'Transforming Tibetan and Buddhist Book Culture (TTBBC)'."@en .
+
+    bdr:TT5B2A53A864954819 a bdo:Title ;
+        rdfs:label "NGMPP L 477/14"@en .
 }
+

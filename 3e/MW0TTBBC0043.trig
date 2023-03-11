@@ -1,48 +1,64 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/3e/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0043 {
-    bda:LG90A6A00C9D1CE3DF
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
-        adm:logMessage      "deleted biblioNote"@en ;
-        adm:logWhoStr       "works-ttbbc-del-biblionote" .
-    
-    bda:LGIMD8DD6D40  a     adm:UpdateData ;
-        adm:logAgent        "NGMP Importer" ;
-        adm:logDate         "2020-07-20T16:08:04.18Z"^^xsd:dateTime ;
-        adm:logMethod       bda:BatchMethod .
-    
-    bda:MW0TTBBC0043  a     adm:AdminData ;
-        adm:adminAbout      bdr:MW0TTBBC0043 ;
-        adm:facetIndex      4 ;
-        adm:gitPath         "3e/MW0TTBBC0043.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW0TTBBC0043 ;
-        adm:logEntry        bda:LG90A6A00C9D1CE3DF , bda:LGIMD8DD6D40 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW0TTBBC0043  a     :Instance ;
-        skos:prefLabel      "NGMPP L 195/11"@en ;
-        :hasTitle           bdr:TT6FA435140D35E8F2 ;
-        :instanceHasReproduction  bdr:W0TTBBC0043 ;
-        :instanceOf         bdr:WA0TTBBC0043 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TT6FA435140D35E8F2
-        a                   :Title ;
-        rdfs:label          "NGMPP L 195/11"@en .
+    bda:MW0TTBBC0043 a adm:AdminData ;
+        adm:adminAbout bdr:MW0TTBBC0043 ;
+        adm:facetIndex 4 ;
+        adm:gitPath "3e/MW0TTBBC0043.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW0TTBBC0043 ;
+        adm:logEntry bda:LG90A6A00C9D1CE3DF,
+            bda:LGIMD8DD6D40 ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bda:LG90A6A00C9D1CE3DF a adm:UpdateData ;
+        adm:logDate "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
+        adm:logMessage "deleted biblioNote"@en ;
+        adm:logWhoStr "works-ttbbc-del-biblionote" .
+
+    bda:LGIMD8DD6D40 a adm:UpdateData ;
+        adm:logAgent "NGMP Importer" ;
+        adm:logDate "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
+        adm:logMethod bda:BatchMethod .
+
+    bdr:MW0NGMCP46860_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/195/11" .
+
+    bdr:MW0NGMCP46860_N1 a bdo:Note ;
+        bdo:noteText "place: Thini, Jomosom, filmed on: 1988-10-02, reel: L/195/11, remarks: vol. ga, "@en .
+
+    bdr:MW0NGMCP46860_T1 a bdo:Title ;
+        rdfs:label "skyes mchog gi zhus lan thugs kyi snying po zab mo'i gter mdzod/"@bo-x-ewts .
+
+    bdr:MW0TTBBC0043 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP46860_ID ;
+        bdo:dimHeight 8.5 ;
+        bdo:dimWidth 46.5 ;
+        bdo:extentStatement "32 folios"@en ;
+        bdo:hasTitle bdr:MW0NGMCP46860_T1,
+            bdr:TT6FA435140D35E8F2 ;
+        bdo:instanceHasReproduction bdr:W0TTBBC0043 ;
+        bdo:instanceOf bdr:WA0TTBBC0043 ;
+        bdo:note bdr:MW0NGMCP46860_N1 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script bdr:ScriptTibt ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00046860"^^xsd:anyURI ;
+        skos:prefLabel "skyes mchog gi zhus lan thugs kyi snying po zab mo'i gter mdzod/"@bo-x-ewts,
+            "NGMPP L 195/11"@en .
+
+    bdr:TT6FA435140D35E8F2 a bdo:Title ;
+        rdfs:label "NGMPP L 195/11"@en .
 }
+

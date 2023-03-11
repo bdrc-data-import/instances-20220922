@@ -1,48 +1,71 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/e7/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0053 {
-    bda:LG2DFCC8B813F030E7
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
-        adm:logMessage      "deleted biblioNote"@en ;
-        adm:logWhoStr       "works-ttbbc-del-biblionote" .
-    
-    bda:LGIMD8DD6D40  a     adm:UpdateData ;
-        adm:logAgent        "NGMP Importer" ;
-        adm:logDate         "2020-07-20T16:08:04.18Z"^^xsd:dateTime ;
-        adm:logMethod       bda:BatchMethod .
-    
-    bda:MW0TTBBC0053  a     adm:AdminData ;
-        adm:adminAbout      bdr:MW0TTBBC0053 ;
-        adm:facetIndex      4 ;
-        adm:gitPath         "e7/MW0TTBBC0053.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW0TTBBC0053 ;
-        adm:logEntry        bda:LG2DFCC8B813F030E7 , bda:LGIMD8DD6D40 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW0TTBBC0053  a     :Instance ;
-        skos:prefLabel      "NGMPP L 340/12"@en ;
-        :hasTitle           bdr:TTF1B651FD3CCDB2DA ;
-        :instanceHasReproduction  bdr:W0TTBBC0053 ;
-        :instanceOf         bdr:WA0TTBBC0053 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TTF1B651FD3CCDB2DA
-        a                   :Title ;
-        rdfs:label          "NGMPP L 340/12"@en .
+    bda:MW0TTBBC0053 a adm:AdminData ;
+        adm:adminAbout bdr:MW0TTBBC0053 ;
+        adm:facetIndex 4 ;
+        adm:gitPath "e7/MW0TTBBC0053.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW0TTBBC0053 ;
+        adm:logEntry bda:LG2DFCC8B813F030E7,
+            bda:LGIMD8DD6D40 ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bdr:WA0NGMCP48258 skos:altLabel "'jigs med bzang po 'am chos legs kyi rnam thar/"@bo-x-ewts .
+
+    bda:LG2DFCC8B813F030E7 a adm:UpdateData ;
+        adm:logDate "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
+        adm:logMessage "deleted biblioNote"@en ;
+        adm:logWhoStr "works-ttbbc-del-biblionote" .
+
+    bda:LGIMD8DD6D40 a adm:UpdateData ;
+        adm:logAgent "NGMP Importer" ;
+        adm:logDate "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
+        adm:logMethod bda:BatchMethod .
+
+    bdr:MW0NGMCP48258_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/340/12" .
+
+    bdr:MW0NGMCP48258_N1 a bdo:Note ;
+        bdo:noteText "place: Serang Gompa, Kutang, filmed on: 1991-04-26, reel: L/340/12, remarks: vol. kha, missing fols.: 1, 2, "@en .
+
+    bdr:MW0NGMCP48258_TS1 a bdo:Title ;
+        rdfs:label "'jigs med bzang po 'am chos legs kyi rnam thar/"@bo-x-ewts ;
+        bdo:abbreviationOf bdr:MW0NGMCP48258_T1 .
+
+    bdr:MW0TTBBC0053 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP48258_ID ;
+        bdo:dimHeight 7.3 ;
+        bdo:dimWidth 33.2 ;
+        bdo:extentStatement "123 folios"@en ;
+        bdo:hasTitle bdr:MW0NGMCP48258_T1,
+            bdr:MW0NGMCP48258_TS1,
+            bdr:TTF1B651FD3CCDB2DA ;
+        bdo:instanceHasReproduction bdr:W0TTBBC0053 ;
+        bdo:instanceOf bdr:WA0TTBBC0053 ;
+        bdo:note bdr:MW0NGMCP48258_N1 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script bdr:ScriptTibt ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00048258"^^xsd:anyURI ;
+        skos:prefLabel "'jigs med bzang po 'am mtshan ldan chos legs kyi rnam thar yon tan 'brug sgra/"@bo-x-ewts,
+            "NGMPP L 340/12"@en .
+
+    bdr:TTF1B651FD3CCDB2DA a bdo:Title ;
+        rdfs:label "NGMPP L 340/12"@en .
+
+    bdr:MW0NGMCP48258_T1 a bdo:Title ;
+        rdfs:label "'jigs med bzang po 'am mtshan ldan chos legs kyi rnam thar yon tan 'brug sgra/"@bo-x-ewts .
 }
+

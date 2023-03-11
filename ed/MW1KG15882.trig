@@ -1,49 +1,72 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bdu: <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/ed/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG15882 {
-    bda:LGCE90746D07B7B15D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2018-01-23T15:01:13.199Z"^^xsd:dateTime ;
-        adm:logMessage      "full cataloged"@en ;
-        adm:logWho          bdu:U00016 .
-    
-    bda:MW1KG15882  a       adm:AdminData ;
-        adm:adminAbout      bdr:MW1KG15882 ;
-        adm:facetIndex      4 ;
-        adm:gitPath         "ed/MW1KG15882.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW1KG15882 ;
-        adm:logEntry        bda:LGCE90746D07B7B15D ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW1KG15882  a       :Instance ;
-        skos:prefLabel      "rje btsun phyogs las rnam par rgyal ba'i rnam par thar pa ngo mtshar rgya mtsho/"@bo-x-ewts ;
-        :biblioNote         "Images are converted from MFM-Roll#026; Nepal-German manuscript preservation project, running no. L5919, Reel no. L571/7"@en ;
-        :extentStatement    "88 ff. (folio 24 and 34 are missing)" ;
-        :hasTitle           bdr:TT18BC5384D4167E04 , bdr:TT56C4DEFE7096C808 ;
-        :instanceHasReproduction  bdr:W1KG15882 ;
-        :instanceOf         bdr:WA1KG15882 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TT18BC5384D4167E04
-        a                   :TitlePageTitle ;
-        rdfs:label          "rje btsun thams cad mkhyen pa phyogs thams cad las rnam par rgyal ba'i rnam par thar pa ngo mtshar rgya mtsho/"@bo-x-ewts .
-    
-    bdr:TT56C4DEFE7096C808
-        a                   :Title ;
-        rdfs:label          "rje btsun phyogs las rnam par rgyal ba'i rnam par thar pa ngo mtshar rgya mtsho/"@bo-x-ewts .
+    bda:MW1KG15882 a adm:AdminData ;
+        adm:adminAbout bdr:MW1KG15882 ;
+        adm:facetIndex 4 ;
+        adm:gitPath "ed/MW1KG15882.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW1KG15882 ;
+        adm:logEntry bda:LGCE90746D07B7B15D ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bdr:WA0NGMCP37667 skos:altLabel "'jigs bral zhabs kyi rnam thar/"@bo-x-ewts .
+
+    bda:LGCE90746D07B7B15D a adm:InitialDataCreation ;
+        adm:logDate "2018-01-23T15:01:13.199000+00:00"^^xsd:dateTime ;
+        adm:logMessage "full cataloged"@en ;
+        adm:logWho bdu:U00016 .
+
+    bdr:MW0NGMCP37667_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/571/7" .
+
+    bdr:MW0NGMCP37667_N1 a bdo:Note ;
+        bdo:noteText "place: Phole, Taplejung, filmed on: 1995-05-14, reel: L/571/7, remarks: in two cases two folio numbers are given to the same folio: 47+48, 66+67, "@en .
+
+    bdr:MW0NGMCP37667_TS1 a bdo:Title ;
+        rdfs:label "'jigs bral zhabs kyi rnam thar/"@bo-x-ewts ;
+        bdo:abbreviationOf bdr:MW0NGMCP37667_T1 .
+
+    bdr:MW1KG15882 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP37667_ID ;
+        bdo:biblioNote "Images are converted from MFM-Roll#026; Nepal-German manuscript preservation project, running no. L5919, Reel no. L571/7"@en ;
+        bdo:dimHeight 47.0 ;
+        bdo:dimWidth 8.2 ;
+        bdo:extentStatement "88 ff. (folio 24 and 34 are missing)",
+            "86 folios"@en ;
+        bdo:hasTitle bdr:MW0NGMCP37667_T1,
+            bdr:MW0NGMCP37667_TS1,
+            bdr:TT18BC5384D4167E04,
+            bdr:TT56C4DEFE7096C808 ;
+        bdo:instanceHasReproduction bdr:W1KG15882 ;
+        bdo:instanceOf bdr:WA1KG15882 ;
+        bdo:note bdr:MW0NGMCP37667_N1 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script bdr:ScriptTibt ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00037667"^^xsd:anyURI ;
+        skos:prefLabel "dpal phyogs thams cad las rnam par rgyal ba 'jigs bral zhabs kyi rnam par thar pa ngo mtshar gyis rgya mtsho/"@bo-x-ewts,
+            "rje btsun phyogs las rnam par rgyal ba'i rnam par thar pa ngo mtshar rgya mtsho/"@bo-x-ewts .
+
+    bdr:TT18BC5384D4167E04 a bdo:TitlePageTitle ;
+        rdfs:label "rje btsun thams cad mkhyen pa phyogs thams cad las rnam par rgyal ba'i rnam par thar pa ngo mtshar rgya mtsho/"@bo-x-ewts .
+
+    bdr:TT56C4DEFE7096C808 a bdo:Title ;
+        rdfs:label "rje btsun phyogs las rnam par rgyal ba'i rnam par thar pa ngo mtshar rgya mtsho/"@bo-x-ewts .
+
+    bdr:MW0NGMCP37667_T1 a bdo:Title ;
+        rdfs:label "dpal phyogs thams cad las rnam par rgyal ba 'jigs bral zhabs kyi rnam par thar pa ngo mtshar gyis rgya mtsho/"@bo-x-ewts .
 }
+

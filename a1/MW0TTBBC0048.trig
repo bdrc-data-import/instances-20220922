@@ -1,48 +1,70 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/a1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0048 {
-    bda:LG805AC135930B2A03
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
-        adm:logMessage      "deleted biblioNote"@en ;
-        adm:logWhoStr       "works-ttbbc-del-biblionote" .
-    
-    bda:LGIMD8DD6D40  a     adm:UpdateData ;
-        adm:logAgent        "NGMP Importer" ;
-        adm:logDate         "2020-07-20T16:08:04.18Z"^^xsd:dateTime ;
-        adm:logMethod       bda:BatchMethod .
-    
-    bda:MW0TTBBC0048  a     adm:AdminData ;
-        adm:adminAbout      bdr:MW0TTBBC0048 ;
-        adm:facetIndex      4 ;
-        adm:gitPath         "a1/MW0TTBBC0048.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW0TTBBC0048 ;
-        adm:logEntry        bda:LG805AC135930B2A03 , bda:LGIMD8DD6D40 ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW0TTBBC0048  a     :Instance ;
-        skos:prefLabel      "NGMPP L 250/7"@en ;
-        :hasTitle           bdr:TTE3A8ECDA383E24DF ;
-        :instanceHasReproduction  bdr:W0TTBBC0048 ;
-        :instanceOf         bdr:WA0TTBBC0048 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
-    
-    bdr:TTE3A8ECDA383E24DF
-        a                   :Title ;
-        rdfs:label          "NGMPP L 250/7"@en .
+    bda:MW0TTBBC0048 a adm:AdminData ;
+        adm:adminAbout bdr:MW0TTBBC0048 ;
+        adm:facetIndex 4 ;
+        adm:gitPath "a1/MW0TTBBC0048.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW0TTBBC0048 ;
+        adm:logEntry bda:LG805AC135930B2A03,
+            bda:LGIMD8DD6D40 ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bda:LG805AC135930B2A03 a adm:UpdateData ;
+        adm:logDate "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
+        adm:logMessage "deleted biblioNote"@en ;
+        adm:logWhoStr "works-ttbbc-del-biblionote" .
+
+    bda:LGIMD8DD6D40 a adm:UpdateData ;
+        adm:logAgent "NGMP Importer" ;
+        adm:logDate "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
+        adm:logMethod bda:BatchMethod .
+
+    bdr:MW0NGMCP47456_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/250/7" .
+
+    bdr:MW0NGMCP47456_N1 a bdo:Note ;
+        bdo:noteText "place: Dekyi Samling, Junbesi, filmed on: 1989-05-15, reel: L/250/7, remarks: remark on card: print of <name type=\\\"place\\\">Brag dkar rta so</name>, references: "@en .
+
+    bdr:MW0NGMCP47456_T1 a bdo:Title ;
+        rdfs:label "rnal 'byor gyi dbang phyug dam pa rje btsun mi la ras pa'i rnam thar | thar pa dang thams cad mkhyen pa'i lam ston/"@bo-x-ewts .
+
+    bdr:MW0TTBBC0048 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP47456_ID ;
+        bdo:colophon "e waM//_na mo gu ru de wa DA ki ni/_rdo rje'i sku mnyes sgrub brgyud rgyal mtshan btsugs/_thos pas rab dga' bzhad pa rdo rje nges/_gsang chen snying po'i bstan pa rgyas mdzad pa grub mchog mi la ras chen zhabs la 'dud/_mthong thos dran pas srid pa'i mtha' 'jig pa'i/_gang gi rnam thar bsam 'phel rin chen mchog/_ rje btsun gtsang pas mi zad sngar du sgrubs/_'gro don chos pas cung zad mi gsal ba/_lha btsun chos kyi rgyal pos par du bsgrubs/_de yang 'gro don chos pas mi gsal ba/_ratna'i mi 'dzin mu cer smra ba yis/_gsar sgrub bya phyir de bskul tho bkod pa/_lhag bsam rnam dag grub pa'i mchog brnyis pa/_sgrub chen ngag dbang chos 'phel zhes bya yis/_mar bre brgya dang bal sum bcu gnyis/_'bri g.yag bdun cu gsum rnams legs par gnang /_thugs bsaM rnaM dag thugs dam yi ger bcas/_gnang ba'i mthu las la tags chos rgyal ni/_bde ldan rnam par rgyal bas smar dang zed/_mgur zho bcu gnang zhig phyag mdzod pa/_rdo rje rgyal mtshan kha btags ther dkar phul/_rgyal me dpal 'dzin byu ru sbus lags pa/_nyi shu rtsa bzhi dar ljang khru gsum gnang /_hi mi chos rje sa snying gug zho gang /_ras dar gnang zhing grub chen snyan g.yon dang /_ga ga shAkya rnam gnyis zho re re/_phul zhing dad ldan no no lhun grub dang /_na 'od zer rnam gnyis a lya drug/_phul zhing nu mo ngag dbang sgrol ma yis/_byu ru che legs bchud phul mthun sbyor mdzad/_no no tshe ring chos 'phel kong sna gcig/_no no bsam gtan rkong sna gcig dag phul/_no no kun bzang 'o lan blon po ni/_no no kun dga' rnam gnyis 'brel ba bgyis/_sog po bkra shis don grub gnyis/_thar dkar re re lhag bsam dag pas phul/_a li ma li sras dang gu ru seng /_no no rgyal dang gsol dpon skyabs pa rnams/_lhag bsam dag pas 'brel ba phul/_byin mdzad/_ga ga 'bi khas sa snying zho phyed phul/_grub chen bka' gsal spos shel 'brel pa mdzad/_no no 'brug rgyas gos chen kha gsum dang /_a lyA gcig dang ras dkar bcas pa phul/_nyo ma'i bla tshogs a lyA gsum rnams phul/_'al ni'i gnyer pas dngul gsum dar khru gsum/_ru zho rgan po tshe ring tshe brtan sogs/_'brog sde grong res khal re re phul/_tsha rong g.yu'i sa snying gug zho gang /_a lyā bcu gnyis ther dmar spus lags phul/_gnyos mi dkon mchog skyab mas gser zho gang /_lhag bsam rnam dag sde pa rje drung gis/_gse[r] zho gang phul sde pa bu chung gis/_ras dar bdun mtshan nya zhur dpon po yis/_gur gum zhe gang phul zhed rtsa dang nas/_no no tshe ring bsam 'grub gser zho gang /_ras yug lnga dang bu ram bcu gnyis phul/_dpon po dkon mchog ras khra'i bla re phul/_sde pa khang dmar nas kyi 'brel pa mdzad/_rgya gar rtse'i rdo rje 'dzin pa ni/_dar ma sku skye 'phrin las rgyal mtshan gyis/_sa snying zho gang cob ras khal thong bdun/_khrab rnams phul zhing dbu mdzad rin chen dang /_dge slong kun dga' bkra shis 'phrin las dbang /_cob dar re re phul zhing che dbang bzang /_shes rab dpal mo bka' brgyud rgyal mtshan dang /_phun tshogs dkon mchog mtsho mo khal pa re/_tshogs pa spyi dang bsam gtan dbang mo dang /_kun dga' dbyangs can dngos grub rgyal mtshan dang /_chos skyong dpal mo rin chen dpal mo dang /_dpag bsam rgyal mtshan rnams kyi 'brel pa bgyis/_khyung lung"@bo-x-ewts ;
+        bdo:dimHeight 11.0 ;
+        bdo:dimWidth 51.0 ;
+        bdo:extentStatement "115 folios"@en ;
+        bdo:hasSourcePrintery bdr:G317 ;
+        bdo:hasTitle bdr:MW0NGMCP47456_T1,
+            bdr:TTE3A8ECDA383E24DF ;
+        bdo:incipit "na mo gu ru/_chos sku'i lha lam ma rig chu 'dzin gdod bral dbyings na gzugs sku lag pa'i nyin mtshan mgon ni bdud chu'i sgra gcan rtsa bral 'phrin las mkhyen brtse'i 'od 'gyed mtha' yas dpal 'bar bas/_shes bya'i dngos kun khyab cing 'gro ba rigs ro lam rgyud dbang po skye gnas dus kyis bsdus pa'i srog ldan kun gyi chos la rmongs pa'i glo bur mun pa mtha' dag rab bsal nas/_dug lnga'i dbang gis dge dang mi dge phyogs dang mtshams bral phung pos 'phangs pa'i lam du zhugs dang 'jug 'gyur zhugs 'bras tshor ba nyams myong kun las phyir ldog bde bar dal bsos te/_slar yang rnam byang rgyu lam dag la bkod nas 'bras bu dbang phyug klu ldan tshe 'dir stsol mdzad mkha' mnyam 'gro ba'i dpal mgon mi la zhes grags stobs bcu mnga' ba de la 'dud/"@bo-x-ewts ;
+        bdo:instanceHasReproduction bdr:W0TTBBC0048 ;
+        bdo:instanceOf bdr:WA0TTBBC0048 ;
+        bdo:note bdr:MW0NGMCP47456_N1,
+            bdr:NTMW0TTBBC0048_TTBBC01 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script bdr:ScriptTibt ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00047456"^^xsd:anyURI ;
+        skos:prefLabel "rnal 'byor gyi dbang phyug dam pa rje btsun mi la ras pa'i rnam thar | thar pa dang thams cad mkhyen pa'i lam ston/"@bo-x-ewts,
+            "NGMPP L 250/7"@en .
+
+    bdr:NTMW0TTBBC0048_TTBBC01 bdo:noteText "Some catalog information (including incipit and colophon) imported from the by the projects 'Tibetan Book Evolution and Technology (TiBET)' and 'Transforming Tibetan and Buddhist Book Culture (TTBBC)'."@en .
+
+    bdr:TTE3A8ECDA383E24DF a bdo:Title ;
+        rdfs:label "NGMPP L 250/7"@en .
 }
+

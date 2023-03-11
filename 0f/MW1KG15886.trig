@@ -1,45 +1,60 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
-@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda:   <http://purl.bdrc.io/admindata/> .
-@prefix bdg:   <http://purl.bdrc.io/graph/> .
-@prefix bdr:   <http://purl.bdrc.io/resource/> .
-@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda: <http://purl.bdrc.io/admindata/> .
+@prefix bdg: <http://purl.bdrc.io/graph/> .
+@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr: <http://purl.bdrc.io/resource/> .
+@prefix bdu: <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/0f/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG15886 {
-    bda:LGEB73DC1BBB08118D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2018-01-23T15:10:39.253Z"^^xsd:dateTime ;
-        adm:logMessage      "full cataloged"@en ;
-        adm:logWho          bdu:U00016 .
-    
-    bda:MW1KG15886  a       adm:AdminData ;
-        adm:adminAbout      bdr:MW1KG15886 ;
-        adm:facetIndex      3 ;
-        adm:gitPath         "0f/MW1KG15886.trig" ;
-        adm:gitRepo         bda:GR0012 ;
-        adm:graphId         bdg:MW1KG15886 ;
-        adm:logEntry        bda:LGEB73DC1BBB08118D ;
-        adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:MW1KG15886  a       :Instance ;
-        skos:prefLabel      "rdo rje ma bdun ma'i lo rgyus sngon med legs par bshad pa'i bden gtam blo ldan dga' bskyed dpyid kyi rgyal mo'i glu dbyangs/"@bo-x-ewts ;
-        :biblioNote         "Images are converted from MFM-Roll#026; Nepal-German manuscript preservation project, running no. L5234, Reel no. L491/3"@en ;
-        :extentStatement    "15 ff." ;
-        :hasTitle           bdr:TT4FA861CE31801425 ;
-        :instanceHasReproduction  bdr:W1KG15886 ;
-        :instanceOf         bdr:WA1KG15886 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
-    
-    bdr:TT4FA861CE31801425
-        a                   :TitlePageTitle ;
-        rdfs:label          "rdo rje ma bdun ma'i lo rgyus sngon med legs par bshad pa'i bden gtam blo ldan dga' bskyed dpyid kyi rgyal mo'i glu dbyangs/"@bo-x-ewts .
+    bda:MW1KG15886 a adm:AdminData ;
+        adm:adminAbout bdr:MW1KG15886 ;
+        adm:facetIndex 3 ;
+        adm:gitPath "0f/MW1KG15886.trig" ;
+        adm:gitRepo bda:GR0012 ;
+        adm:graphId bdg:MW1KG15886 ;
+        adm:logEntry bda:LGEB73DC1BBB08118D ;
+        adm:metadataLegal bda:LD_BDRC_CC0 ;
+        adm:status bda:StatusReleased .
+
+    bda:LGEB73DC1BBB08118D a adm:InitialDataCreation ;
+        adm:logDate "2018-01-23T15:10:39.253000+00:00"^^xsd:dateTime ;
+        adm:logMessage "full cataloged"@en ;
+        adm:logWho bdu:U00016 .
+
+    bdr:MW0NGMCP57183_ID a bdr:IDNGMPP ;
+        rdf:value "NGMPP L/491/3" .
+
+    bdr:MW0NGMCP57183_N1 a bdo:Note ;
+        bdo:noteText "place: Nyile, Tsum, filmed on: 1994-04-25, reel: L/491/3, "@en .
+
+    bdr:MW0NGMCP57183_T1 a bdo:Title ;
+        rdfs:label "rdo rje ma bdun ma'i lo rgyus sngon med legs par bshad pa'i bden gtam blo ldan dga' bskyed dpyid kyi rgyal mo'i glu dbyangs/"@bo-x-ewts .
+
+    bdr:MW1KG15886 a bdo:Instance ;
+        bf:identifiedBy bdr:MW0NGMCP57183_ID ;
+        bdo:biblioNote "Images are converted from MFM-Roll#026; Nepal-German manuscript preservation project, running no. L5234, Reel no. L491/3"@en ;
+        bdo:dimHeight 7.5 ;
+        bdo:dimWidth 46.0 ;
+        bdo:extentStatement "15 ff.",
+            "15 folios"@en ;
+        bdo:hasTitle bdr:MW0NGMCP57183_T1,
+            bdr:TT4FA861CE31801425 ;
+        bdo:instanceHasReproduction bdr:W1KG15886 ;
+        bdo:instanceOf bdr:WA1KG15886 ;
+        bdo:note bdr:MW0NGMCP57183_N1 ;
+        bdo:numberOfVolumes 1 ;
+        bdo:printMethod bdr:PrintMethod_Manuscript ;
+        bdo:script bdr:ScriptDbuMed ;
+        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00057183"^^xsd:anyURI ;
+        skos:prefLabel "rdo rje ma bdun ma'i lo rgyus sngon med legs par bshad pa'i bden gtam blo ldan dga' bskyed dpyid kyi rgyal mo'i glu dbyangs/"@bo-x-ewts .
+
+    bdr:TT4FA861CE31801425 a bdo:TitlePageTitle ;
+        rdfs:label "rdo rje ma bdun ma'i lo rgyus sngon med legs par bshad pa'i bden gtam blo ldan dga' bskyed dpyid kyi rgyal mo'i glu dbyangs/"@bo-x-ewts .
 }
+
