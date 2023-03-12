@@ -1,17 +1,21 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0058 {
+    bda:LG0MW0TTBBC0058_9K2MSJKWBKZO
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-12T10:26:50.714791Z"^^xsd:dateTime ;
+        adm:logMessage      "add title"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG2CFF25F19AC4F681
         a                   adm:UpdateData ;
         adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
@@ -29,20 +33,22 @@ bdg:MW0TTBBC0058 {
         adm:gitPath         "85/MW0TTBBC0058.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW0TTBBC0058 ;
-        adm:logEntry        bda:LG2CFF25F19AC4F681 , bda:LGIMD8DD6D40 ;
+        adm:logEntry        bda:LG0MW0TTBBC0058_9K2MSJKWBKZO , bda:LG2CFF25F19AC4F681 , bda:LGIMD8DD6D40 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW0TTBBC0058  a     :Instance ;
-        skos:prefLabel      "NGMPP L 4/3 - 4/4"@en ;
-        :hasTitle           bdr:TT94053081645655CA ;
-        :instanceHasReproduction  bdr:W0TTBBC0058 ;
-        :instanceOf         bdr:WA0TTBBC0058 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:IDMW0TTBBC0058V4VT997F
+        a                   bdr:IDNGMPP ;
+        rdf:value           "L 4/3 - 4/4" .
     
-    bdr:TT94053081645655CA
-        a                   :Title ;
-        rdfs:label          "NGMPP L 4/3 - 4/4"@en .
+    bdr:MW0TTBBC0058  a     bdo:Instance ;
+        skos:prefLabel      "Incomplete texts by Chole Namgyal"@en ;
+        bf:identifiedBy     bdr:IDMW0TTBBC0058V4VT997F ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:instanceHasReproduction  bdr:W0TTBBC0058 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptDbuCan .
 }
