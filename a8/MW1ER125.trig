@@ -1,51 +1,62 @@
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda: <http://purl.bdrc.io/admindata/> .
-@prefix bdg: <http://purl.bdrc.io/graph/> .
-@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
-@prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix bdu: <http://purl.bdrc.io/resource-nc/user/> .
-@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/a8/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1ER125 {
-    bda:MW1ER125 a adm:AdminData ;
-        adm:adminAbout bdr:MW1ER125 ;
-        adm:graphId bdg:MW1ER125 ;
-        adm:logEntry bda:LG0MW1ER125_TD3SUIBUP4KY ;
-        adm:metadataLegal bda:LD_BDRC_CC0 ;
-        adm:status bda:StatusReleased .
-
-    bda:LG0MW1ER125_TD3SUIBUP4KY a adm:UpdateData ;
-        adm:logDate "2023-03-06T08:13:53.153885+00:00"^^xsd:dateTime ;
-        adm:logMessage "create"@en ;
-        adm:logWho bdu:U1653882847 .
-
-    bdr:MW0NGMCP47305_ID a bdr:IDNGMPP ;
-        rdf:value "NGMPP L/235/6" .
-
-    bdr:MW0NGMCP47305_N1 a bdo:Note ;
-        bdo:noteText "place: Serlog Gompa, Solokhumbu, Junbesi, filmed on: 1989-05-08, reel: L/235/6, "@en .
-
-    bdr:MW0NGMCP47305_T1 a bdo:Title ;
-        rdfs:label "shar khum bu'i phyogs su snga 'gyur snying ma'i chos brgyud bye brag pa rim par thub pa'i thob yig"@bo-x-ewts .
-
-    bdr:MW1ER125 a bdo:Instance ;
-        bf:identifiedBy bdr:MW0NGMCP47305_ID ;
-        bdo:authorshipStatement "sangs rgyas bstan 'dzin/"@bo-x-ewts ;
-        bdo:binding bdr:Binding_LooseLeaf_Pecha ;
-        bdo:copyrightStatus bdr:CopyrightPublicDomain ;
-        bdo:dimHeight 8.5 ;
-        bdo:dimWidth 41.0 ;
-        bdo:extentStatement "13 folios"@en ;
-        bdo:hasTitle bdr:MW0NGMCP47305_T1 ;
-        bdo:instanceHasReproduction bdr:W1ER125 ;
-        bdo:note bdr:MW0NGMCP47305_N1 ;
-        bdo:printMethod bdr:PrintMethod_Manuscript ;
-        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00047305"^^xsd:anyURI ;
-        skos:prefLabel "shar khum bu'i phyogs su snga 'gyur snying ma'i chos brgyud bye brag pa rim par thub pa'i thob yig"@bo-x-ewts .
+    bda:LG0MW1ER125_TD3SUIBUP4KY
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-06T08:13:53.153885+00:00"^^xsd:dateTime ;
+        adm:logMessage      "create"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bda:LG0MW1ER125_VVBXOP2JNBHX
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-12T14:47:02.695220Z"^^xsd:dateTime ;
+        adm:logMessage      "title, work"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bda:MW1ER125  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1ER125 ;
+        adm:graphId         bdg:MW1ER125 ;
+        adm:logEntry        bda:LG0MW1ER125_TD3SUIBUP4KY , bda:LG0MW1ER125_VVBXOP2JNBHX ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW0NGMCP47305_ID
+        a                   bdr:IDNGMPP ;
+        rdf:value           "NGMPP L/235/6" .
+    
+    bdr:MW0NGMCP47305_N1
+        a                   bdo:Note ;
+        bdo:noteText        "place: Serlog Gompa, Solokhumbu, Junbesi, filmed on: 1989-05-08, reel: L/235/6, "@en .
+    
+    bdr:MW0NGMCP47305_T1
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "shar khum bu'i phyogs su snga 'gyur snying ma'i chos brgyud bye brag pa rim par thub pa'i thob yig"@bo-x-ewts .
+    
+    bdr:MW1ER125  a         bdo:Instance ;
+        rdfs:seeAlso        "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00047305"^^xsd:anyURI ;
+        skos:prefLabel      "shar khum bu'i phyogs su snga 'gyur snying ma'i chos brgyud bye brag pa rim par thub pa'i thob yig"@bo-x-ewts ;
+        bf:identifiedBy     bdr:MW0NGMCP47305_ID ;
+        bdo:authorshipStatement  "sangs rgyas bstan 'dzin/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimHeight       "8.5"^^xsd:float ;
+        bdo:dimWidth        "41"^^xsd:float ;
+        bdo:extentStatement  "13 folios"@en ;
+        bdo:hasTitle        bdr:MW0NGMCP47305_T1 ;
+        bdo:instanceHasReproduction  bdr:W1ER125 ;
+        bdo:instanceOf      bdr:WA1ER125 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:MW0NGMCP47305_N1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
 }
-
