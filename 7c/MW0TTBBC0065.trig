@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0065 {
+    bda:LG0MW0TTBBC0065_WPEX1A0GT2BG
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-12T10:06:33.219758Z"^^xsd:dateTime ;
+        adm:logMessage      "add titles"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LGB4C39379ECC36724
         a                   adm:UpdateData ;
         adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
@@ -29,20 +34,32 @@ bdg:MW0TTBBC0065 {
         adm:gitPath         "7c/MW0TTBBC0065.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW0TTBBC0065 ;
-        adm:logEntry        bda:LGB4C39379ECC36724 , bda:LGIMD8DD6D40 ;
+        adm:logEntry        bda:LG0MW0TTBBC0065_WPEX1A0GT2BG , bda:LGB4C39379ECC36724 , bda:LGIMD8DD6D40 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW0TTBBC0065  a     :Instance ;
-        skos:prefLabel      "NGMPP L 547/3"@en ;
-        :hasTitle           bdr:TTDA6D1C4C48517EDE ;
-        :instanceHasReproduction  bdr:W0TTBBC0065 ;
-        :instanceOf         bdr:WA0TTBBC0065 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:IDMW0TTBBC0065QZXG6DWW
+        a                   bdr:IDNGMPP ;
+        rdf:value           "L 547/3" .
+    
+    bdr:MW0TTBBC0065  a     bdo:Instance ;
+        skos:prefLabel      "dbon ston skyer sgang pa'i rnam thar/"@bo-x-ewts ;
+        bf:identifiedBy     bdr:IDMW0TTBBC0065QZXG6DWW ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:hasSourcePrintery  bdr:G317 ;
+        bdo:hasTitle        bdr:TTDA6D1C4C48517EDE , bdr:TTMW0TTBBC006592CTVQPN ;
+        bdo:instanceHasReproduction  bdr:W0TTBBC0065 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TTDA6D1C4C48517EDE
-        a                   :Title ;
-        rdfs:label          "NGMPP L 547/3"@en .
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "dbon ston skyer sgang pa'i rnam thar/"@en .
+    
+    bdr:TTMW0TTBBC006592CTVQPN
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "dbon ston skyer sgang pa'i gsang ba'i rnam thar"@bo-x-ewts .
 }
