@@ -1,53 +1,66 @@
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda: <http://purl.bdrc.io/admindata/> .
-@prefix bdg: <http://purl.bdrc.io/graph/> .
-@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
-@prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/97/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0051 {
-    bda:MW0TTBBC0051 a adm:AdminData ;
-        adm:adminAbout bdr:MW0TTBBC0051 ;
-        adm:facetIndex 4 ;
-        adm:gitPath "97/MW0TTBBC0051.trig" ;
-        adm:gitRepo bda:GR0012 ;
-        adm:graphId bdg:MW0TTBBC0051 ;
-        adm:logEntry bda:LGC7A9CA202C75DA3E,
-            bda:LGIMD8DD6D40 ;
-        adm:metadataLegal bda:LD_BDRC_CC0 ;
-        adm:status bda:StatusReleased .
-
-    bda:LGC7A9CA202C75DA3E a adm:UpdateData ;
-        adm:logDate "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
-        adm:logMessage "deleted biblioNote"@en ;
-        adm:logWhoStr "works-ttbbc-del-biblionote" .
-
-    bda:LGIMD8DD6D40 a adm:UpdateData ;
-        adm:logAgent "NGMP Importer" ;
-        adm:logDate "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
-        adm:logMethod bda:BatchMethod .
-
-    bdr:MW0NGMCP47739_ID a bdr:IDNGMPP ;
-        rdf:value "NGMPP L/275/10" .
-
-    bdr:MW0NGMCP47739_N1 a bdo:Note ;
-        bdo:noteText "place: Dzaden, Helambu, filmed on: 1990-01-30, reel: L/275/10, remarks: margin: ku, missing fols.: various fols. incl. title fol. and colophon, remark on card: the print is from <name type=\\\"place\\\">Brag dkar rta so</name>, cycle: klong chen snying thig, references: klong chen snying thig"@en .
-
-    bdr:MW0TTBBC0051 a bdo:Instance ;
-        bf:identifiedBy bdr:MW0NGMCP47739_ID ;
-        bdo:authorshipStatement "klong chen rab 'byams pa/"@bo-x-ewts ;
-        bdo:dimensions "9.5 x 4.6?" ;
-        bdo:extentStatement "433 folios"@en ;
-        bdo:instanceHasReproduction bdr:W0TTBBC0051 ;
-        bdo:instanceOf bdr:WA0TTBBC0051 ;
-        bdo:note bdr:MW0NGMCP47739_N1 ;
-        bdo:numberOfVolumes 2 ;
-        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
-        bdo:script bdr:ScriptTibt ;
-        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00047739"^^xsd:anyURI .
+    bda:LG0MW0TTBBC0051_WUGNMEKRCGSO
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-12T09:48:13.045445Z"^^xsd:dateTime ;
+        adm:logMessage      "add title and place of production"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bda:LGC7A9CA202C75DA3E
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-09-22T15:16:45.154000+00:00"^^xsd:dateTime ;
+        adm:logMessage      "deleted biblioNote"@en ;
+        adm:logWhoStr       "works-ttbbc-del-biblionote" .
+    
+    bda:LGIMD8DD6D40  a     adm:UpdateData ;
+        adm:logAgent        "NGMP Importer" ;
+        adm:logDate         "2020-07-20T16:08:04.180000+00:00"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW0TTBBC0051  a     adm:AdminData ;
+        adm:adminAbout      bdr:MW0TTBBC0051 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "97/MW0TTBBC0051.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW0TTBBC0051 ;
+        adm:logEntry        bda:LG0MW0TTBBC0051_WUGNMEKRCGSO , bda:LGC7A9CA202C75DA3E , bda:LGIMD8DD6D40 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW0NGMCP47739_ID
+        a                   bdr:IDNGMPP ;
+        rdf:value           "NGMPP L/275/10" .
+    
+    bdr:MW0NGMCP47739_N1
+        a                   bdo:Note ;
+        bdo:noteText        "place: Dzaden, Helambu, filmed on: 1990-01-30, reel: L/275/10, remarks: margin: ku, missing fols.: various fols. incl. title fol. and colophon, remark on card: the print is from <name type=\\\"place\\\">Brag dkar rta so</name>, cycle: klong chen snying thig, references: klong chen snying thig"@en .
+    
+    bdr:MW0TTBBC0051  a     bdo:Instance ;
+        rdfs:seeAlso        "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00047739"^^xsd:anyURI ;
+        skos:prefLabel      "Incomplete texts from the klong chen snying thig"@bo-x-ewts ;
+        bf:identifiedBy     bdr:MW0NGMCP47739_ID ;
+        bdo:authorshipStatement  "klong chen rab 'byams pa/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensions      "9.5 x 4.6?" ;
+        bdo:extentStatement  "433 folios"@en ;
+        bdo:hasSourcePrintery  bdr:G317 ;
+        bdo:instanceHasReproduction  bdr:W0TTBBC0051 ;
+        bdo:instanceOf      bdr:WA0TTBBC0051 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:MW0NGMCP47739_N1 ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptDbuCan .
 }
-
