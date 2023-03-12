@@ -1,17 +1,21 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW0TTBBC0072 {
+    bda:LG0MW0TTBBC0072_SZQOS2X1WEQD
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-12T10:24:32.196755Z"^^xsd:dateTime ;
+        adm:logMessage      "add titles"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG5AA84E7688FA9146
         a                   adm:UpdateData ;
         adm:logDate         "2020-09-22T15:16:45.154Z"^^xsd:dateTime ;
@@ -29,20 +33,27 @@ bdg:MW0TTBBC0072 {
         adm:gitPath         "5c/MW0TTBBC0072.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW0TTBBC0072 ;
-        adm:logEntry        bda:LG5AA84E7688FA9146 , bda:LGIMD8DD6D40 ;
+        adm:logEntry        bda:LG0MW0TTBBC0072_SZQOS2X1WEQD , bda:LG5AA84E7688FA9146 , bda:LGIMD8DD6D40 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW0TTBBC0072  a     :Instance ;
-        skos:prefLabel      "NGMPP L 844/7"@en ;
-        :hasTitle           bdr:TT2C8E197D45FB8216 ;
-        :instanceHasReproduction  bdr:W0TTBBC0072 ;
-        :instanceOf         bdr:WA0TTBBC0072 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:IDMW0TTBBC0072IO9RFYRV
+        a                   bdr:IDNGMPP ;
+        rdf:value           "L 844/7" .
     
-    bdr:TT2C8E197D45FB8216
-        a                   :Title ;
-        rdfs:label          "NGMPP L 844/7"@en .
+    bdr:MW0TTBBC0072  a     bdo:Instance ;
+        skos:prefLabel      "gshin rje dregs pa 'joms byed kyi gsad pa'i 'khor legs kyi dpe'u ri sogs/"@en ;
+        bf:identifiedBy     bdr:IDMW0TTBBC0072IO9RFYRV ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:instanceHasReproduction  bdr:W0TTBBC0072 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTMW0TTBBC00721MNA3UU3 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
+    
+    bdr:NTMW0TTBBC00721MNA3UU3
+        a                   bdo:Note ;
+        bdo:noteText        "gshin rje dregs pa 'joms byed kyi gsad pa'i 'khor legs kyi dpe'u ri/\ngshin rje dregs pa 'joms byed kyi bsrung bzlog gis cakra'i dpe'u ri/\ngshin rje dregs pa 'joms byed kyi mnan pa'i bca' gzhi dpe'u ri/\ngshin rje dregs pa 'joms byed kyi mchod bshegs bskang zlogs sogs kyi gtor dpe'u ri/\ngshin rje dregs pa 'joms byed kyi zor rdzas kyi dpe'u ri/"@en .
 }
