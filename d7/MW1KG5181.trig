@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG5181 {
@@ -17,6 +14,12 @@ bdg:MW1KG5181 {
         adm:logDate         "2014-03-19T11:24:55.79Z"^^xsd:dateTime ;
         adm:logMessage      "with drawn in favor of W1KG10720"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LG0MW1KG5181_IIDZH2MCY7UO
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-13T16:07:14.810037Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U1426146149 .
     
     bda:LG1F657D76ADF1F309
         a                   adm:UpdateData ;
@@ -42,28 +45,34 @@ bdg:MW1KG5181 {
         adm:gitPath         "d7/MW1KG5181.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG5181 ;
-        adm:logEntry        bda:LG02431ECE74AA2757 , bda:LG1F657D76ADF1F309 , bda:LG35AA8CA02A43728A , bda:LG636EC191342FEA1B ;
+        adm:logEntry        bda:LG02431ECE74AA2757 , bda:LG0MW1KG5181_IIDZH2MCY7UO , bda:LG1F657D76ADF1F309 , bda:LG35AA8CA02A43728A , bda:LG636EC191342FEA1B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusWithdrawn .
+        adm:status          bda:StatusReleased .
     
-    bdr:MW1KG5181  a        :Instance ;
+    bdr:MW1KG5181  a        bdo:Instance ;
         skos:prefLabel      "gsung 'bum/_'jam dbyangs 'phrin las/"@bo-x-ewts ;
-        :extentStatement    "7 v. (vol. ka - ja)" ;
-        :hasTitle           bdr:TT1E758811F5FC3137 , bdr:TTA15DCF56A432A585 ;
-        :language           bdr:LangBo ;
-        :note               bdr:NTD523876DEDD2E28F ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptLatn .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "7 v. (vol. ka - ja)" ;
+        bdo:hasTitle        bdr:TT1E758811F5FC3137 , bdr:TTA15DCF56A432A585 ;
+        bdo:instanceHasReproduction  bdr:W1KG5181 ;
+        bdo:instanceOf      bdr:WA1KG10720 ;
+        bdo:language        bdr:LangBo ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTD523876DEDD2E28F ;
+        bdo:numberOfVolumes  7 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTD523876DEDD2E28F
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TT1E758811F5FC3137
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsung 'bum/_'jam dbyangs 'phrin las/"@bo-x-ewts .
     
     bdr:TTA15DCF56A432A585
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "tho yon 'jam dbyangs 'phrin las kyi gsung 'bum/"@bo-x-ewts .
 }
