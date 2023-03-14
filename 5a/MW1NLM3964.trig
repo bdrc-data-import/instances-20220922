@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3964 {
@@ -23,31 +20,38 @@ bdg:MW1NLM3964 {
         adm:gitPath         "5a/MW1NLM3964.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3964 ;
-        adm:logEntry        bda:LGIM4F552576 ;
+        adm:logEntry        bda:LGIM4F552576 , bdr:LG0WA1NLM4153_66GZ4PO6065V ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3964  a       :Instance ;
+    bdr:LG0WA1NLM4153_66GZ4PO6065V
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-03-14T08:44:36.965376Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1NLM4153 in favor of WA0RT3216"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW1NLM3964  a       bdo:Instance ;
         skos:prefLabel      "byang chub sems dpa'i spyod pa la 'jug pa/"@bo-x-ewts ;
-        :dimensionsStatement  "18.5x5" ;
-        :extentStatement    "220 ff." ;
-        :hasTitle           bdr:TT7AE96C3FF0E255A1 ;
-        :instanceHasReproduction  bdr:W1NLM3964 ;
-        :instanceOf         bdr:WA1NLM4153 ;
-        :note               bdr:NT03A206C5235E7BC8 , bdr:NT54A67C109F73B8A5 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:dimensionsStatement  "18.5x5" ;
+        bdo:extentStatement  "220 ff." ;
+        bdo:hasTitle        bdr:TT7AE96C3FF0E255A1 ;
+        bdo:instanceHasReproduction  bdr:W1NLM3964 ;
+        bdo:instanceOf      bdr:WA0RT3216 ;
+        bdo:note            bdr:NT03A206C5235E7BC8 , bdr:NT54A67C109F73B8A5 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:NT03A206C5235E7BC8
-        a                   :Note ;
-        :noteText           "missingPages: M0061882-001 [51th page has gong 'og] Image 101-104 M0061882-001 [175B page empty] Image 352"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061882-001 [51th page has gong 'og] Image 101-104 M0061882-001 [175B page empty] Image 352"@en .
     
     bdr:NT54A67C109F73B8A5
-        a                   :Note ;
-        :noteText           "nlmId: M0061882"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061882"@en .
     
     bdr:TT7AE96C3FF0E255A1
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "byang chub sems dpa'i spyod pa la 'jug pa/"@bo-x-ewts .
 }
