@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS35907 {
+    bda:LG0MW8LS35907_Y0GPNYOIJQ0R
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-21T18:18:10.716442Z"^^xsd:dateTime ;
+        adm:logMessage      "fix titles"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LGC13D3741C190CB18
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-07-11T09:46:18.715Z"^^xsd:dateTime ;
@@ -24,43 +29,44 @@ bdg:MW8LS35907 {
         adm:gitPath         "c9/MW8LS35907.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS35907 ;
-        adm:logEntry        bda:LGC13D3741C190CB18 ;
+        adm:logEntry        bda:LG0MW8LS35907_Y0GPNYOIJQ0R , bda:LGC13D3741C190CB18 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV765ED4C2097901BC
-        a                   :PublishedEvent ;
-        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDAA39C14D9DABDBEE
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9789380282718" .
     
-    bdr:MW8LS35907  a       :Instance , :SerialInstance ;
-        skos:prefLabel      "bod kyi bka' bstan lo rgyus 'od snang gsar pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDAA39C14D9DABDBEE ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :extentStatement    "xxiv, 370 p." ;
-        :hasTitle           bdr:TT99EF14EFE8692B75 , bdr:TTBAD7D9722D4A04D8 ;
-        :instanceEvent      bdr:EV765ED4C2097901BC ;
-        :instanceHasReproduction  bdr:W8LS35907 ;
-        :instanceOf         bdr:WA8LS35907 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "Sarnath, Varanasi"@en ;
-        :publisherName      "Central University of Tibetan Studies"@en ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS8LS24037 ;
-        :seriesNumber       "30" .
+    bdr:MW8LS35907  a       bdo:Instance ;
+        skos:prefLabel      "bod kyi bka' bstan lo rgyus 'od snang gsar pa/"@bo-x-ewts , "History of Tibetan Translation of Buddhist Tripitaka (Kagyur & Tangyur)"@en ;
+        bf:identifiedBy     bdr:IDAA39C14D9DABDBEE ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:extentStatement  "xxiv, 370 p." ;
+        bdo:hasTitle        bdr:TT99EF14EFE8692B75 , bdr:TTMW8LS359076V1X9JQJ ;
+        bdo:instanceEvent   bdr:EV765ED4C2097901BC ;
+        bdo:instanceHasReproduction  bdr:W8LS35907 ;
+        bdo:instanceOf      bdr:WA8LS35907 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Sarnath, Varanasi"@en ;
+        bdo:publisherName   "Central University of Tibetan Studies"@en ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS8LS24037 ;
+        bdo:seriesNumber    "30" .
     
     bdr:TT99EF14EFE8692B75
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bcom ldan 'das bde bar gshegs pa shAkya thub pa'i bka' dang / de'i dgongs 'grel gyi bstan bcos bod kyi skad du 'gyur ro 'tshal gyi chos phung bsdu sgrig dang glegs bam du bris bzhengs rgyun spel ji ltar mdzad pa'i bka' bstan lo rgyus 'od snang gsar pa/"@bo-x-ewts .
     
-    bdr:TTBAD7D9722D4A04D8
-        a                   :Title ;
-        rdfs:label          "bod kyi bka' bstan lo rgyus 'od snang gsar pa/"@bo-x-ewts .
+    bdr:TTMW8LS359076V1X9JQJ
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "History of Tibetan Translation of Buddhist Tripitaka (Kagyur & Tangyur)"@en .
 }
