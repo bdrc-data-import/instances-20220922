@@ -4,10 +4,17 @@
 @prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8CZ181 {
+    bda:LG0MW8CZ181_EKYBLDNCS57W
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-21T19:46:50.989327Z"^^xsd:dateTime ;
+        adm:logMessage      "saveed"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG0MW8CZ181_KXEVCOGSNUPU
         a                   adm:UpdateData ;
         adm:logDate         "2023-03-21T17:32:02.964941Z"^^xsd:dateTime ;
@@ -17,17 +24,40 @@ bdg:MW8CZ181 {
     bda:MW8CZ181  a         adm:AdminData ;
         adm:adminAbout      bdr:MW8CZ181 ;
         adm:graphId         bdg:MW8CZ181 ;
-        adm:logEntry        bda:LG0MW8CZ181_KXEVCOGSNUPU ;
+        adm:logEntry        bda:LG0MW8CZ181_EKYBLDNCS57W , bda:LG0MW8CZ181_KXEVCOGSNUPU ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusScanned .
     
     bdr:MW8CZ181  a         bdo:Instance ;
         skos:altLabel       "bla ma dam pa bsod nams rgyal mtshan gyi rnam thar/"@bo-x-ewts ;
         skos:prefLabel      "chos rje bla ma dam pa'i rnam thar thog mtha' bar gsum du dge ba/"@bo-x-ewts ;
         bdo:biblioNote      "Biography of Lama Dampa Sonam Gyaltsen (1312-1375)  and others\n"@en ;
-        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:hasTitle        bdr:TTMW8CZ18119P5WXHQ , bdr:TTMW8CZ1812YGZWLFW , bdr:TTMW8CZ18153RKR6RX ;
+        bdo:instanceExtentStatement  "67 ff. 32 ff. 87 ff." ;
         bdo:instanceOf      bdr:WA8CZ181 ;
         bdo:material        bdr:MaterialPaper ;
-        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:note            bdr:NTMW8CZ18184G2QYW7 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
         bdo:script          bdr:ScriptDbuCan .
+    
+    bdr:NTMW8CZ18184G2QYW7
+        a                   bdo:Note ;
+        bdo:noteText        "phyi/ ra/ 152. 123, "@en .
+    
+    bdr:TTMW8CZ18119P5WXHQ
+        a                   bdo:OtherTitle ;
+        rdfs:label          "chos rje byang sems chen po'i rnam par thar pa yon tan rin po che'i gter mdzod kun las btus pa/"@bo-x-ewts .
+    
+    bdr:TTMW8CZ1812YGZWLFW
+        a                   bdo:OtherTitle ;
+        rdfs:label          "dpal ldan bla ma'i rnam par thar pa rnam par thar pa dad pa'i ljon shing rgyas byed/ "@bo-x-ewts .
+    
+    bdr:TTMW8CZ18153RKR6RX
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "chos rje bla ma dam pa'i rnam thar thog mtha' bar gsum du dge ba/"@bo-x-ewts .
 }
