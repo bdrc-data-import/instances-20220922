@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD90025 {
+    bda:LG0MW1PD90025_DRPMATJTKCQR
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-23T14:12:35.180501Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG2B1D4612CB8E5EED
         a                   adm:UpdateData ;
         adm:logDate         "2021-05-18T15:45:16.447Z"^^xsd:dateTime ;
@@ -62,55 +67,57 @@ bdg:MW1PD90025 {
         adm:gitPath         "f8/MW1PD90025.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD90025 ;
-        adm:logEntry        bda:LG2B1D4612CB8E5EED , bda:LG3D4F681EC65B3295 , bda:LG928CD05BEE614385 , bda:LGEC86B194BD186D83 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1PD90025_DRPMATJTKCQR , bda:LG2B1D4612CB8E5EED , bda:LG3D4F681EC65B3295 , bda:LG928CD05BEE614385 , bda:LGEC86B194BD186D83 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV8577EA3D92C5575D
-        a                   :PublishedEvent ;
-        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID579E895DD92E280C
         a                   bdr:HollisId ;
         rdf:value           "014257924" .
     
     bdr:ID692A85F4EFA5B186
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7105035765" .
     
     bdr:IDC45251550FAC450F
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "DS797.77.S664 S67 1999" .
     
     bdr:IDECB74F4F6793D341
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "2006381036" .
     
-    bdr:MW1PD90025  a       :Instance ;
+    bdr:MW1PD90025  a       bdo:Instance ;
         skos:altLabel       "zung chu rdzong gi lo rgyus/"@bo-x-ewts ;
         skos:prefLabel      "song pan xian zhi"@zh-latn-pinyin-x-ndia ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID579E895DD92E280C , bdr:ID692A85F4EFA5B186 , bdr:IDC45251550FAC450F , bdr:IDECB74F4F6793D341 ;
-        :authorshipStatement  "si chuan sheng a ba zang zu qiang zu zi zhi zhou song pan xian zhi bian cuan wei yuan hui bian"@zh-latn-pinyin-x-ndia ;
-        :biblioNote         "written in chinese"@en ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :editionStatement   "di 1 ban."@zh-latn-pinyin ;
-        :extentStatement    "8, 21, 1034, p." ;
-        :hasTitle           bdr:TT682C2BD6C1BBE536 , bdr:TTD63B72EB22FE162B ;
-        :illustrations      "ill. (32 p. of plates, col.), map (folded)" ;
-        :instanceEvent      bdr:EV8577EA3D92C5575D ;
-        :instanceHasReproduction  bdr:W1PD90025 ;
-        :instanceOf         bdr:WA1PD90025 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "bei jing"@zh-latn-pinyin-x-ndia ;
-        :publisherName      "min zu chu ban she"@zh-latn-pinyin-x-ndia ;
-        :script             bdr:ScriptHani .
+        bf:identifiedBy     bdr:ID579E895DD92E280C , bdr:ID692A85F4EFA5B186 , bdr:IDC45251550FAC450F , bdr:IDECB74F4F6793D341 ;
+        bdo:authorshipStatement  "si chuan sheng a ba zang zu qiang zu zi zhi zhou song pan xian zhi bian cuan wei yuan hui bian"@zh-latn-pinyin-x-ndia ;
+        bdo:biblioNote      "written in chinese"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "di 1 ban."@zh-latn-pinyin ;
+        bdo:extentStatement  "8, 21, 1034, p." ;
+        bdo:hasTitle        bdr:TT682C2BD6C1BBE536 , bdr:TTD63B72EB22FE162B ;
+        bdo:illustrations   "ill. (32 p. of plates, col.), map (folded)" ;
+        bdo:instanceEvent   bdr:EV8577EA3D92C5575D ;
+        bdo:instanceHasReproduction  bdr:W1PD90025 ;
+        bdo:instanceOf      bdr:WA1PD90025 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "bei jing"@zh-latn-pinyin-x-ndia ;
+        bdo:publisherName   "min zu chu ban she"@zh-latn-pinyin-x-ndia ;
+        bdo:script          bdr:ScriptHans .
     
     bdr:TT682C2BD6C1BBE536
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "zung chu rdzong gi lo rgyus/"@bo-x-ewts .
     
     bdr:TTD63B72EB22FE162B
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "song pan xian zhi"@zh-latn-pinyin-x-ndia .
 }
