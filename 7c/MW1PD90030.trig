@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD90030 {
@@ -17,6 +16,12 @@ bdg:MW1PD90030 {
         adm:logDate         "2021-05-18T15:45:18.245Z"^^xsd:dateTime ;
         adm:logMessage      "Reviewed Catalog, add cat info and language encoding"@en ;
         adm:logWho          bdu:U00017 .
+    
+    bda:LG0MW1PD90030_JTEDSGBACPP6
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-23T14:20:41.978182Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
     
     bda:LGABBEEAC359E22D86
         a                   adm:UpdateData ;
@@ -56,60 +61,58 @@ bdg:MW1PD90030 {
         adm:gitPath         "7c/MW1PD90030.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD90030 ;
-        adm:logEntry        bda:LG083C760D8CEFDC74 , bda:LGABBEEAC359E22D86 , bda:LGCBE2C08A96E32CC1 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG083C760D8CEFDC74 , bda:LG0MW1PD90030_JTEDSGBACPP6 , bda:LGABBEEAC359E22D86 , bda:LGCBE2C08A96E32CC1 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV1459521684457D06
-        a                   :PublishedEvent ;
-        :eventWhen          "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1993"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID516AEDF5E2791F34
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7105021020" .
     
     bdr:ID696575568C1F8938
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "DS793.A357 A35 1993" .
     
     bdr:ID9C99307106492913
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "96472626" .
     
     bdr:IDF6BDCA8A8441DBB8
         a                   bdr:HollisId ;
         rdf:value           "014257929" .
     
-    bdr:MW1PD90030  a       :Instance ;
+    bdr:MW1PD90030  a       bdo:Instance ;
         skos:altLabel       "rnga ba rdzong sa gnas lo rgyus/（rgya yig）"@bo-x-ewts ;
-        skos:prefLabel      "阿坝县志"@zh-hans ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID516AEDF5E2791F34 , bdr:ID696575568C1F8938 , bdr:ID9C99307106492913 , bdr:IDF6BDCA8A8441DBB8 ;
-        :authorshipStatement  "si chuan sheng a ba zang zu qiang zu zi zhi zhou a ba xian di fang zhi bian cuan wei yuan hui bian"@zh-latn-pinyin-x-ndia ;
-        :biblioNote         "written in chinese"@en ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :editionStatement   "di 1 ban."@zh-latn-pinyin ;
-        :extentStatement    "6, 2, 20, 739 p." ;
-        :hasTitle           bdr:TT269F27A170A785D7 , bdr:TTAD45B880EB31F47F , bdr:TTEABDC40E6A8CFB02 ;
-        :illustrations      "ill. (24 p. of plates, some col.), map (folded)" ;
-        :instanceEvent      bdr:EV1459521684457D06 ;
-        :instanceHasReproduction  bdr:W1PD90030 ;
-        :instanceOf         bdr:WA1PD90030 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "bei jing"@zh-latn-pinyin-x-ndia ;
-        :publisherName      "min zu chu ban she"@zh-latn-pinyin-x-ndia ;
-        :script             bdr:ScriptHani ;
-        :serialInstanceOf   bdr:WAS1PD89986 .
-    
-    bdr:TT269F27A170A785D7
-        a                   :Title ;
-        rdfs:label          "rnga ba rdzong sa gnas lo rgyus/（rgya yig）"@bo-x-ewts .
+        skos:prefLabel      "阿坝县志"@zh-hans , "a ba xian zhi"@zh-latn-pinyin-x-ndia ;
+        bf:identifiedBy     bdr:ID516AEDF5E2791F34 , bdr:ID696575568C1F8938 , bdr:ID9C99307106492913 , bdr:IDF6BDCA8A8441DBB8 ;
+        bdo:authorshipStatement  "si chuan sheng a ba zang zu qiang zu zi zhi zhou a ba xian di fang zhi bian cuan wei yuan hui bian"@zh-latn-pinyin-x-ndia ;
+        bdo:biblioNote      "written in chinese"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "di 1 ban."@zh-latn-pinyin ;
+        bdo:extentStatement  "6, 2, 20, 739 p." ;
+        bdo:hasTitle        bdr:TTAD45B880EB31F47F , bdr:TTEABDC40E6A8CFB02 ;
+        bdo:illustrations   "ill. (24 p. of plates, some col.), map (folded)" ;
+        bdo:instanceEvent   bdr:EV1459521684457D06 ;
+        bdo:instanceHasReproduction  bdr:W1PD90030 ;
+        bdo:instanceOf      bdr:WA1PD90030 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "bei jing"@zh-latn-pinyin-x-ndia ;
+        bdo:publisherName   "min zu chu ban she"@zh-latn-pinyin-x-ndia ;
+        bdo:script          bdr:ScriptHans ;
+        bdo:serialInstanceOf  bdr:WAS1PD89986 .
     
     bdr:TTAD45B880EB31F47F
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "a ba xian zhi"@zh-latn-pinyin-x-ndia .
     
     bdr:TTEABDC40E6A8CFB02
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "阿坝县志"@zh-hans .
 }
