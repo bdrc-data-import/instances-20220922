@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD90023 {
+    bda:LG0MW1PD90023_TKHQFZEWFVQO
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-23T14:18:10.849677Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG34C0E42DB5F79100
         a                   adm:UpdateData ;
         adm:logDate         "2009-07-14T11:29:10.471Z"^^xsd:dateTime ;
@@ -68,16 +73,16 @@ bdg:MW1PD90023 {
         adm:gitPath         "62/MW1PD90023.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD90023 ;
-        adm:logEntry        bda:LG34C0E42DB5F79100 , bda:LG4119BDAA227BEF9C , bda:LG6458874F34B2C32A , bda:LG9590AA156C3017CD , bda:LGFFE568B2265BD2EC , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1PD90023_TKHQFZEWFVQO , bda:LG34C0E42DB5F79100 , bda:LG4119BDAA227BEF9C , bda:LG6458874F34B2C32A , bda:LG9590AA156C3017CD , bda:LGFFE568B2265BD2EC , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV4E0B9A78186F6B95
-        a                   :PublishedEvent ;
-        :eventWhen          "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1996"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID05B5CB7363838361
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "98460243" .
     
     bdr:ID24F06638A56FACD9
@@ -85,39 +90,41 @@ bdg:MW1PD90023 {
         rdf:value           "014257922" .
     
     bdr:ID2EAA25E9A71B76E5
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7220032560" .
     
     bdr:ID586F78F2B589ACA3
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "DS793.H728 H86 1996" .
     
-    bdr:MW1PD90023  a       :Instance ;
+    bdr:MW1PD90023  a       bdo:Instance ;
         skos:altLabel       "hong yon rdzong gi lo rgyus/"@bo-x-ewts ;
         skos:prefLabel      "hong yuan xian zhi"@zh-latn-pinyin-x-ndia ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID05B5CB7363838361 , bdr:ID24F06638A56FACD9 , bdr:ID2EAA25E9A71B76E5 , bdr:ID586F78F2B589ACA3 ;
-        :authorshipStatement  "si chuan sheng hong yuan xian zhi bian cuan wei yuan hui bian cuan"@zh-latn-pinyin-x-ndia ;
-        :biblioNote         "written in chinese"@en ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :editionStatement   "di 1 ban."@zh-latn-pinyin ;
-        :extentStatement    "2, 2, 1, 18, 701 p." ;
-        :hasTitle           bdr:TTAD85171E8F859619 , bdr:TTD373A9FE0E04B1C5 ;
-        :illustrations      "ill. (32 p. of plates), map (folded)" ;
-        :instanceEvent      bdr:EV4E0B9A78186F6B95 ;
-        :instanceHasReproduction  bdr:W1PD90023 ;
-        :instanceOf         bdr:WA1PD90023 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "cheng du"@zh-latn-pinyin-x-ndia ;
-        :publisherName      "si chuan ren min chu ban she"@zh-latn-pinyin-x-ndia ;
-        :script             bdr:ScriptHani ;
-        :serialInstanceOf   bdr:WAS1PD89986 .
+        bf:identifiedBy     bdr:ID05B5CB7363838361 , bdr:ID24F06638A56FACD9 , bdr:ID2EAA25E9A71B76E5 , bdr:ID586F78F2B589ACA3 ;
+        bdo:authorshipStatement  "si chuan sheng hong yuan xian zhi bian cuan wei yuan hui bian cuan"@zh-latn-pinyin-x-ndia ;
+        bdo:biblioNote      "written in chinese"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "di 1 ban."@zh-latn-pinyin ;
+        bdo:extentStatement  "2, 2, 1, 18, 701 p." ;
+        bdo:hasTitle        bdr:TTAD85171E8F859619 , bdr:TTD373A9FE0E04B1C5 ;
+        bdo:illustrations   "ill. (32 p. of plates), map (folded)" ;
+        bdo:instanceEvent   bdr:EV4E0B9A78186F6B95 ;
+        bdo:instanceHasReproduction  bdr:W1PD90023 ;
+        bdo:instanceOf      bdr:WA1PD90023 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "cheng du"@zh-latn-pinyin-x-ndia ;
+        bdo:publisherName   "si chuan ren min chu ban she"@zh-latn-pinyin-x-ndia ;
+        bdo:script          bdr:ScriptHans ;
+        bdo:serialInstanceOf  bdr:WAS1PD89986 .
     
     bdr:TTAD85171E8F859619
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "hong yon rdzong gi lo rgyus/"@bo-x-ewts .
     
     bdr:TTD373A9FE0E04B1C5
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "hong yuan xian zhi"@zh-latn-pinyin-x-ndia .
 }
