@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD90010 {
+    bda:LG0MW1PD90010_UPXHBUT7AAKH
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-23T14:23:20.111832Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG46A4C8B7CBA2F27C
         a                   adm:UpdateData ;
         adm:logDate         "2009-07-17T14:33:59.043Z"^^xsd:dateTime ;
@@ -67,16 +72,16 @@ bdg:MW1PD90010 {
         adm:gitPath         "87/MW1PD90010.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD90010 ;
-        adm:logEntry        bda:LG46A4C8B7CBA2F27C , bda:LG4A02C656C97B4A01 , bda:LG594D44190AD5D13F , bda:LG72381A488371404B , bda:LGC39A451A40B382DE , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1PD90010_UPXHBUT7AAKH , bda:LG46A4C8B7CBA2F27C , bda:LG4A02C656C97B4A01 , bda:LG594D44190AD5D13F , bda:LG72381A488371404B , bda:LGC39A451A40B382DE , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV0D9E7C73CCAE20EB
-        a                   :PublishedEvent ;
-        :eventWhen          "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1997"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID14F318077BA36603
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "DS797.77.J585 J588 1997" .
     
     bdr:ID3402A8009D92CF49
@@ -84,39 +89,36 @@ bdg:MW1PD90010 {
         rdf:value           "014257916" .
     
     bdr:ID458A2B529D28491B
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7220036159" .
     
     bdr:ID999DE5C8D22E9637
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "99135951" .
     
-    bdr:MW1PD90010  a       :Instance ;
+    bdr:MW1PD90010  a       bdo:Instance ;
         skos:altLabel       "brgyad zil rdzong gi lo rgyus/"@bo-x-ewts ;
         skos:prefLabel      "jiu long xian zhi"@zh-latn-pinyin-x-ndia ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID14F318077BA36603 , bdr:ID3402A8009D92CF49 , bdr:ID458A2B529D28491B , bdr:ID999DE5C8D22E9637 ;
-        :authorshipStatement  "si chuan sheng jiu long xian zhi bian cuan wei yuan hui bian cuan"@zh-latn-pinyin-x-ndia ;
-        :biblioNote         "written in chinese"@en ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :editionStatement   "di 1 ban."@zh-latn-pinyin ;
-        :extentStatement    "3, 4, 2, 16, 535 p." ;
-        :hasTitle           bdr:TT37FF7E40C571CD6F , bdr:TTF1EB22AA0D3FFE9D ;
-        :illustrations      "ill. (8 p. of col. plates), map (folded)" ;
-        :instanceEvent      bdr:EV0D9E7C73CCAE20EB ;
-        :instanceHasReproduction  bdr:W1PD90010 ;
-        :instanceOf         bdr:WA1PD90010 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "cheng du"@zh-latn-pinyin-x-ndia ;
-        :publisherName      "si chuan ren min chu ban she"@zh-latn-pinyin-x-ndia ;
-        :script             bdr:ScriptHani ;
-        :serialInstanceOf   bdr:WAS1PD89986 .
-    
-    bdr:TT37FF7E40C571CD6F
-        a                   :Title ;
-        rdfs:label          "jiu long xian zhi"@zh-latn-pinyin-x-ndia .
+        bf:identifiedBy     bdr:ID14F318077BA36603 , bdr:ID3402A8009D92CF49 , bdr:ID458A2B529D28491B , bdr:ID999DE5C8D22E9637 ;
+        bdo:authorshipStatement  "si chuan sheng jiu long xian zhi bian cuan wei yuan hui bian cuan"@zh-latn-pinyin-x-ndia ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "di 1 ban."@zh-latn-pinyin ;
+        bdo:extentStatement  "3, 4, 2, 16, 535 p." ;
+        bdo:hasTitle        bdr:TTF1EB22AA0D3FFE9D ;
+        bdo:illustrations   "ill. (8 p. of col. plates), map (folded)" ;
+        bdo:instanceEvent   bdr:EV0D9E7C73CCAE20EB ;
+        bdo:instanceHasReproduction  bdr:W1PD90010 ;
+        bdo:instanceOf      bdr:WA1PD90010 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "cheng du"@zh-latn-pinyin-x-ndia ;
+        bdo:publisherName   "si chuan ren min chu ban she"@zh-latn-pinyin-x-ndia ;
+        bdo:script          bdr:ScriptHans ;
+        bdo:serialInstanceOf  bdr:WAS1PD89986 .
     
     bdr:TTF1EB22AA0D3FFE9D
-        a                   :OtherTitle ;
-        rdfs:label          "brgyad zil rdzong gi lo rgyus/"@bo-x-ewts .
+        a                   bdo:CoverTitle ;
+        rdfs:label          "jiu long xian zhi"@zh-Latn-pinyin .
 }
