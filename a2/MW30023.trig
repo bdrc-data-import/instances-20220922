@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30023 {
+    bda:LG0MW30023_HCIVSVYS5MIZ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-23T14:04:48.644993Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG67CF34279625BC85
         a                   adm:UpdateData ;
         adm:logDate         "2007-11-27T10:23:20.099Z"^^xsd:dateTime ;
@@ -48,52 +53,54 @@ bdg:MW30023 {
         adm:gitPath         "a2/MW30023.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW30023 ;
-        adm:logEntry        bda:LG67CF34279625BC85 , bda:LG952F71EEDEDA073D , bda:LGC45A4F851BF826DF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW30023_HCIVSVYS5MIZ , bda:LG67CF34279625BC85 , bda:LG952F71EEDEDA073D , bda:LGC45A4F851BF826DF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CRF1497B61F6C5C91F
-        a                   :AgentAsCreator ;
-        :agent              bdr:P9469 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P9469 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV021F87C6593411FA
-        a                   :PublishedEvent ;
-        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID002226BC40CA378F
         a                   bdr:HollisId ;
         rdf:value           "014260576" .
     
     bdr:IDF2F0BF2056D41EA6
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7542010441" .
     
-    bdr:MW30023  a          :Instance , :SerialInstance ;
+    bdr:MW30023  a          bdo:Instance ;
         skos:prefLabel      "rtsis rig"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID002226BC40CA378F , bdr:IDF2F0BF2056D41EA6 ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :creator            bdr:CRF1497B61F6C5C91F ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "8, 3, 2, 2, 849 p." ;
-        :hasTitle           bdr:TT0A3B7499EBF2CFBC ;
-        :instanceEvent      bdr:EV021F87C6593411FA ;
-        :instanceHasReproduction  bdr:W30023 ;
-        :instanceOf         bdr:WA1KG23482 , bdr:WA30023 ;
-        :note               bdr:NT92B82BE897B90706 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "zi ling /"@bo-x-ewts ;
-        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS26176 ;
-        :seriesNumber       "v. 4" .
+        bf:identifiedBy     bdr:ID002226BC40CA378F , bdr:IDF2F0BF2056D41EA6 ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:creator         bdr:CRF1497B61F6C5C91F ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "8, 3, 2, 2, 849 p." ;
+        bdo:hasTitle        bdr:TT0A3B7499EBF2CFBC ;
+        bdo:instanceEvent   bdr:EV021F87C6593411FA ;
+        bdo:instanceHasReproduction  bdr:W30023 ;
+        bdo:instanceOf      bdr:WA1KG23482 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT92B82BE897B90706 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "zi ling /"@bo-x-ewts ;
+        bdo:publisherName   "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS26176 ;
+        bdo:seriesNumber    "v. 4" .
     
     bdr:NT92B82BE897B90706
-        a                   :Note ;
-        :noteText           "scanned for preservation purposes; not for distribution\n5743"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "scanned for preservation purposes; not for distribution\n5743"@en .
     
     bdr:TT0A3B7499EBF2CFBC
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "rtsis rig"@bo-x-ewts .
 }
