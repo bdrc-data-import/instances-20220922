@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG12273 {
+    bda:LG0MW1KG12273_BYFRSCKLWO22
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-23T14:08:11.468504Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LGE25D08131514911B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-04-26T15:06:25.696Z"^^xsd:dateTime ;
@@ -45,18 +50,18 @@ bdg:MW1KG12273 {
         adm:gitPath         "e1/MW1KG12273.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG12273 ;
-        adm:logEntry        bda:LGE25D08131514911B , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1KG12273_BYFRSCKLWO22 , bda:LGE25D08131514911B , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR2E643F35C8C63B6C
-        a                   :AgentAsCreator ;
-        :agent              bdr:P00EGS1017192 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P00EGS1017192 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV51C43F9F22D9E0B2
-        a                   :PublishedEvent ;
-        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID3A7EE8ED1C36C1A9
         a                   bdr:HollisId ;
@@ -67,41 +72,43 @@ bdg:MW1KG12273 {
         rdf:value           "012517191-9" .
     
     bdr:ID75643C639E83A619
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787542116550" .
     
-    bdr:MW1KG12273  a       :Instance ;
+    bdr:MW1KG12273  a       bdo:Instance ;
         skos:altLabel       "Gnaʼ boʼi Źaṅ Bod tshig mdzod /Dge-bśes Blo-gros-rab-gsal gyis gtso sgrig byas."@en-x-mixed , "古代象藏词典"@zh-hans ;
         skos:prefLabel      "gna' bo'i zhang bod tshig mdzod/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3A7EE8ED1C36C1A9 , bdr:ID6E520494904A5AFA , bdr:ID75643C639E83A619 ;
-        :biblioNote         "printed from computerized input"@en ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :creator            bdr:CR2E643F35C8C63B6C ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "10, [2], 546 p." ;
-        :hasTitle           bdr:TTB396136B6EC4E01A , bdr:TTB60EA0F2F439CFB2 , bdr:TTE3E953C5D72547B4 , bdr:TTFF3FA60A3CAE7D10 ;
-        :instanceEvent      bdr:EV51C43F9F22D9E0B2 ;
-        :instanceHasReproduction  bdr:W1KG12273 ;
-        :instanceOf         bdr:WA1KG12273 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "lan gru/"@bo-x-ewts ;
-        :publisherName      "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID3A7EE8ED1C36C1A9 , bdr:ID6E520494904A5AFA , bdr:ID75643C639E83A619 ;
+        bdo:biblioNote      "printed from computerized input"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:creator         bdr:CR2E643F35C8C63B6C ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "10, [2], 546 p." ;
+        bdo:hasTitle        bdr:TTB396136B6EC4E01A , bdr:TTB60EA0F2F439CFB2 , bdr:TTE3E953C5D72547B4 , bdr:TTFF3FA60A3CAE7D10 ;
+        bdo:instanceEvent   bdr:EV51C43F9F22D9E0B2 ;
+        bdo:instanceHasReproduction  bdr:W1KG12273 ;
+        bdo:instanceOf      bdr:WA1KG12273 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lan gru/"@bo-x-ewts ;
+        bdo:publisherName   "kan su'u mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TTB396136B6EC4E01A
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "gna' bo'i zhang bod tshig mdzod/"@bo-x-ewts .
     
     bdr:TTB60EA0F2F439CFB2
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "古代象藏词典"@zh-hans .
     
     bdr:TTE3E953C5D72547B4
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "Gnaʼ boʼi Źaṅ Bod tshig mdzod /Dge-bśes Blo-gros-rab-gsal gyis gtso sgrig byas."@en-x-mixed .
     
     bdr:TTFF3FA60A3CAE7D10
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "gu dai xiang zang ci dian"@zh-latn-pinyin-x-ndia .
 }
