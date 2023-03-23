@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21597 {
+    bda:LG0MW21597_VOD0Y8TFEBMQ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-23T14:13:20.383045Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG1348FF198819678C
         a                   adm:UpdateData ;
         adm:logDate         "2010-03-26T12:57:43.455Z"^^xsd:dateTime ;
@@ -54,25 +59,25 @@ bdg:MW21597 {
         adm:gitPath         "e6/MW21597.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21597 ;
-        adm:logEntry        bda:LG1348FF198819678C , bda:LG9E39C68EBCA0175C , bda:LGFF2B2C0DB5CA212B , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW21597_VOD0Y8TFEBMQ , bda:LG1348FF198819678C , bda:LG9E39C68EBCA0175C , bda:LGFF2B2C0DB5CA212B , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR99D061EFF4AA1EBA
-        a                   :AgentAsCreator ;
-        :agent              bdr:P7424 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P7424 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV05538CAA581D9C9A
-        a                   :PublishedEvent ;
-        :eventWhen          "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2000"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID4B018A4C465F3598
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "95905740" .
     
     bdr:ID94F6334A05194D41
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "722301198x" .
     
     bdr:IDC7528784E0322F2B
@@ -80,42 +85,44 @@ bdg:MW21597 {
         rdf:value           "014258346" .
     
     bdr:IDFF5F48E2F5B04E24
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "PL3748 .K47 1983" .
     
-    bdr:MW21597  a          :Instance ;
+    bdr:MW21597  a          bdo:Instance ;
         skos:altLabel       "驭鹰神童"@zh-hans ;
-        skos:prefLabel      "khye'u bya bzhon gyi rnam thar/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID4B018A4C465F3598 , bdr:ID94F6334A05194D41 , bdr:IDC7528784E0322F2B , bdr:IDFF5F48E2F5B04E24 ;
-        :authorshipStatement  "blo bzang don grub kyis bsdu bsgrig byas/"@bo-x-ewts ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :creator            bdr:CR99D061EFF4AA1EBA ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "99 p." ;
-        :hasTitle           bdr:TTB146128AA6FB793A , bdr:TTCD40BD2B07374A34 , bdr:TTE26432B7E4ECEA6A ;
-        :instanceEvent      bdr:EV05538CAA581D9C9A ;
-        :instanceHasReproduction  bdr:W21597 ;
-        :instanceOf         bdr:WA21597 ;
-        :note               bdr:NT9B83ED530E9369FA ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "lha sa/"@bo-x-ewts ;
-        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "khye'u bya bzhon gyi rnam thar/"@bo-x-ewts , "yu ying shen tong"@zh-latn-pinyin-x-ndia ;
+        bf:identifiedBy     bdr:ID4B018A4C465F3598 , bdr:ID94F6334A05194D41 , bdr:IDC7528784E0322F2B , bdr:IDFF5F48E2F5B04E24 ;
+        bdo:authorshipStatement  "blo bzang don grub kyis bsdu bsgrig byas/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:creator         bdr:CR99D061EFF4AA1EBA ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "99 p." ;
+        bdo:hasTitle        bdr:TTB146128AA6FB793A , bdr:TTCD40BD2B07374A34 , bdr:TTE26432B7E4ECEA6A ;
+        bdo:instanceEvent   bdr:EV05538CAA581D9C9A ;
+        bdo:instanceHasReproduction  bdr:W21597 ;
+        bdo:instanceOf      bdr:WA21597 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT9B83ED530E9369FA ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lha sa/"@bo-x-ewts ;
+        bdo:publisherName   "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT9B83ED530E9369FA
-        a                   :Note ;
-        :noteText           "tbrc hold digitally scanned images, tiffs and pdf files;"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "tbrc hold digitally scanned images, tiffs and pdf files;"@en .
     
     bdr:TTB146128AA6FB793A
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "khye'u bya bzhon gyi rnam thar/"@bo-x-ewts .
     
     bdr:TTCD40BD2B07374A34
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "yu ying shen tong"@zh-latn-pinyin-x-ndia .
     
     bdr:TTE26432B7E4ECEA6A
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "驭鹰神童"@zh-hans .
 }
