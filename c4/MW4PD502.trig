@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4PD502 {
@@ -17,6 +16,12 @@ bdg:MW4PD502 {
         adm:logDate         "2016-01-07T23:30:31.507Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00021 .
+    
+    bda:LG0MW4PD502_P6YYASN6AOQ9
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-24T06:32:38.175440Z"^^xsd:dateTime ;
+        adm:logMessage      "copyright claimed"@en ;
+        adm:logWho          bdu:U1653882847 .
     
     bda:LG7C19E551296E1931
         a                   adm:InitialDataCreation ;
@@ -35,52 +40,53 @@ bdg:MW4PD502 {
         adm:gitPath         "c4/MW4PD502.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4PD502 ;
-        adm:logEntry        bda:LG0522F5FF2FEA52F9 , bda:LG7C19E551296E1931 , bda:LGF12B80642931538A ;
+        adm:logEntry        bda:LG0522F5FF2FEA52F9 , bda:LG0MW4PD502_P6YYASN6AOQ9 , bda:LG7C19E551296E1931 , bda:LGF12B80642931538A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:CRD12AEBE96C33ECDA
-        a                   :AgentAsCreator ;
-        :agent              bdr:P4PD503 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P4PD503 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV6ADC0D2CDC067A76
-        a                   :PublishedEvent ;
-        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID3A9716C226BF27AA
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787542129284" .
     
-    bdr:MW4PD502  a         :Instance ;
+    bdr:MW4PD502  a         bdo:Instance ;
         skos:altLabel       "门库经典汇编"@zh-hans ;
         skos:prefLabel      "gsung rab sgo mdzod rin po che'i glegs bam/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID3A9716C226BF27AA ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CRD12AEBE96C33ECDA ;
-        :extentStatement    "150 v." ;
-        :hasTitle           bdr:TT455D73865BAC724F , bdr:TTAD4A482873394E04 , bdr:TTEC8573FDF6A505E3 ;
-        :instanceEvent      bdr:EV6ADC0D2CDC067A76 ;
-        :instanceHasReproduction  bdr:W4PD502 ;
-        :instanceOf         bdr:WA4PD502 ;
-        :numberOfVolumes    151 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "lan kru'u/"@bo-x-ewts ;
-        :publisherName      "kan su'u mi rogs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID3A9716C226BF27AA ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:creator         bdr:CRD12AEBE96C33ECDA ;
+        bdo:extentStatement  "150 v." ;
+        bdo:hasTitle        bdr:TT455D73865BAC724F , bdr:TTAD4A482873394E04 , bdr:TTEC8573FDF6A505E3 ;
+        bdo:instanceEvent   bdr:EV6ADC0D2CDC067A76 ;
+        bdo:instanceHasReproduction  bdr:W4PD502 ;
+        bdo:instanceOf      bdr:WA4PD502 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  151 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lan kru'u/"@bo-x-ewts ;
+        bdo:publisherName   "kan su'u mi rogs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT455D73865BAC724F
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "men ku jing dian hui bian"@zh-latn-pinyin-x-ndia .
     
     bdr:TTAD4A482873394E04
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "gsung rab sgo mdzod rin po che'i glegs bam/"@bo-x-ewts .
     
     bdr:TTEC8573FDF6A505E3
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "门库经典汇编"@zh-hans .
 }
