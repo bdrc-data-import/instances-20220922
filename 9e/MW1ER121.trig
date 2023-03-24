@@ -1,50 +1,52 @@
-@prefix adm: <http://purl.bdrc.io/ontology/admin/> .
-@prefix bda: <http://purl.bdrc.io/admindata/> .
-@prefix bdg: <http://purl.bdrc.io/graph/> .
-@prefix bdo: <http://purl.bdrc.io/ontology/core/> .
-@prefix bdr: <http://purl.bdrc.io/resource/> .
-@prefix bdu: <http://purl.bdrc.io/resource-nc/user/> .
-@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix ns1: <file:///home/eroux/BUDA/softs/bdrc-git-repos/instances-20220922/9e/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1ER121 {
-    bda:MW1ER121 a adm:AdminData ;
-        adm:adminAbout bdr:MW1ER121 ;
-        adm:graphId bdg:MW1ER121 ;
-        adm:logEntry bda:LG0MW1ER121_TD3SUIBUP4KY ;
-        adm:metadataLegal bda:LD_BDRC_CC0 ;
-        adm:status bda:StatusReleased .
-
-    bda:LG0MW1ER121_TD3SUIBUP4KY a adm:UpdateData ;
-        adm:logDate "2023-03-06T08:13:53.153885+00:00"^^xsd:dateTime ;
-        adm:logMessage "create"@en ;
-        adm:logWho bdu:U1653882847 .
-
-    bdr:MW0NGMCP70250_ID a bdr:IDNGMPP ;
-        rdf:value "NGMPP AT/129/6" .
-
-    bdr:MW0NGMCP70250_N1 a bdo:Note ;
-        bdo:noteText "place: Kathmandu, filmed on: 1992-11-18, reel: AT/129/6, references: "@en .
-
-    bdr:MW0NGMCP70250_T1 a bdo:Title ;
-        rdfs:label "dam tshig thams cad kyi nyams chag skong ba'i lung /"@bo-x-ewts .
-
-    bdr:MW1ER121 a bdo:Instance ;
-        bf:identifiedBy bdr:MW0NGMCP70250_ID ;
-        bdo:binding bdr:Binding_LooseLeaf_Pecha ;
-        bdo:copyrightStatus bdr:CopyrightPublicDomain ;
-        bdo:dimHeight 9.0 ;
-        bdo:dimWidth 53.5 ;
-        bdo:extentStatement "42 folios"@en ;
-        bdo:hasTitle bdr:MW0NGMCP70250_T1 ;
-        bdo:instanceHasReproduction bdr:W1ER121 ;
-        bdo:note bdr:MW0NGMCP70250_N1 ;
-        bdo:printMethod bdr:PrintMethod_Relief_WoodBlock ;
-        rdfs:seeAlso "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00070250"^^xsd:anyURI ;
-        skos:prefLabel "dam tshig thams cad kyi nyams chag skong ba'i lung /"@bo-x-ewts .
+    bda:LG0MW1ER121_TD3SUIBUP4KY
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2023-03-06T08:13:53.153885+00:00"^^xsd:dateTime ;
+        adm:logMessage      "create"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bda:MW1ER121  a         adm:AdminData ;
+        adm:adminAbout      bdr:MW1ER121 ;
+        adm:graphId         bdg:MW1ER121 ;
+        adm:logEntry        bda:LG0MW1ER121_TD3SUIBUP4KY ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:MW0NGMCP70250_ID
+        a                   bdr:IDNGMPP ;
+        rdf:value           "NGMPP AT/129/6" .
+    
+    bdr:MW0NGMCP70250_N1
+        a                   bdo:Note ;
+        bdo:noteText        "place: Kathmandu, filmed on: 1992-11-18, reel: AT/129/6, references: "@en .
+    
+    bdr:MW0NGMCP70250_T1
+        a                   bdo:Title ;
+        rdfs:label          "dam tshig thams cad kyi nyams chag skong ba'i lung /"@bo-x-ewts .
+    
+    bdr:MW1ER121  a         bdo:Instance ;
+        rdfs:seeAlso        "https://catalogue.ngmcp.uni-hamburg.de/receive/aaingmcp_tbtdocument_00070250"^^xsd:anyURI ;
+        bf:identifiedBy     bdr:MW0NGMCP70250_ID ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimHeight       9.0 ;
+        bdo:dimWidth        53.5 ;
+        bdo:extentStatement  "42 folios"@en ;
+        bdo:hasTitle        bdr:MW0NGMCP70250_T1 ;
+        bdo:instanceHasReproduction  bdr:W1ER121 ;
+        bdo:note            bdr:MW0NGMCP70250_N1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        skos:prefLabel      "dam tshig thams cad kyi nyams chag skong ba'i lung /"@bo-x-ewts .
 }
-
