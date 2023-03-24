@@ -4,10 +4,17 @@
 @prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8CZ183 {
+    bda:LG0MW8CZ183_ISQEJK0ICL5N
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-24T20:20:05.644250Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG0MW8CZ183_QYC1JRIBCALK
         a                   adm:InitialDataCreation ;
         adm:logDate         "2023-03-23T17:36:36.855525+00:00"^^xsd:dateTime ;
@@ -17,26 +24,31 @@ bdg:MW8CZ183 {
     bda:MW8CZ183  a         adm:AdminData ;
         adm:adminAbout      bdr:MW8CZ183 ;
         adm:graphId         bdg:MW8CZ183 ;
-        adm:logEntry        bda:LG0MW8CZ183_QYC1JRIBCALK ;
+        adm:logEntry        bda:LG0MW8CZ183_ISQEJK0ICL5N , bda:LG0MW8CZ183_QYC1JRIBCALK ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusScanned .
     
     bdr:MW8CZ183  a         bdo:Instance ;
-        bdo:biblioNote      "Collections of ritual and texts focussed upon Kurukulle deity"@en ;
+        skos:altLabel       "dpal ldan sa skya pa'i khyad par gyi gdams pa gser chos dmar po skor gsum zhes grags pa'i chos skor/"@bo-x-ewts ;
+        skos:prefLabel      "sa skya'i gser chos dmar po skor gsum zhes grags pa'i chos skor/"@bo-x-ewts ;
+        bdo:biblioNote      "Collection of ritual texts concerned with the focussing upon three red deities of the Sakya tradition"@en ;
         bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
         bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:hasTitle        bdr:TTMW8CZ183EIF3970R ;
         bdo:instanceOf      bdr:WA8CZ183 ;
         bdo:material        bdr:MaterialPaper ;
         bdo:note            bdr:NTMW8CZ183PYLU4GMZ ;
-        bdo:numberOfVolumes  1 ;
+        bdo:numberOfVolumes  3 ;
         bdo:printMethod     bdr:PrintMethod_Manuscript ;
         bdo:publisherLocation  "[s.l.]"@en ;
         bdo:publisherName   "[s.n.]"@en ;
-        bdo:script          bdr:ScriptDbuMed ;
-        skos:altLabel       "gangs ljongs bstan pa'i mnga' bdag dpal dan sa skya pa'i zab chos rje btsun rig byed ma'i chos skor dwags po paN+Dita bkra shis rnam rgyal gyis mdzad pa dang de'i gsal byed sa skya pa rdo rje 'chang ngag dbang kun dga' blo gros kyis mdzad pa sog  "@bo-x-ewts ;
-        skos:prefLabel      "rje btsun rig byed ma'i chos skor/"@bo-x-ewts .
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NTMW8CZ183PYLU4GMZ
         a                   bdo:Note ;
         bdo:noteText        "This is part of the Sakyapa's the three red deities\n"@en .
+    
+    bdr:TTMW8CZ183EIF3970R
+        a                   bdo:IncipitTitle ;
+        rdfs:label          "gangs ljongs bstan pa'i mnga' bdag dpal dan sa skya pa'i zab chos skor gsum/"@bo-x-ewts .
 }
