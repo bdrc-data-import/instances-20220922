@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG14473 {
@@ -17,6 +16,12 @@ bdg:MW1KG14473 {
         adm:logDate         "2013-05-09T15:25:15.772Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LG0MW1KG14473_LKIMOHPOL2YZ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-03-27T03:07:06.748246Z"^^xsd:dateTime ;
+        adm:logMessage      "added alt title"@en ;
+        adm:logWho          bdu:U1426146149 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -38,17 +43,17 @@ bdg:MW1KG14473 {
         adm:gitPath         "d6/MW1KG14473.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG14473 ;
-        adm:logEntry        bda:LG0259A6FA4F02655B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0259A6FA4F02655B , bda:LG0MW1KG14473_LKIMOHPOL2YZ , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV529561B2DE9EE6DC
-        a                   :PublishedEvent ;
-        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID0B3C9E8864C4BF2F
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ4860.Y34 T535" .
     
     bdr:IDA6C8D5F5E4BD215B
@@ -56,30 +61,36 @@ bdg:MW1KG14473 {
         rdf:value           "014256132" .
     
     bdr:IDC55098BB56AD1CDD
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "78906117" .
     
-    bdr:MW1KG14473  a       :Instance ;
-        skos:altLabel       "'jam dpal gsin rje'i gsed khro chu dug sdong nag po'i chos skor : a collection of texts from the 'bri gung, kam tshang, and gnas mdo bka' brgyud pa traditions focussing upon the propitiation of a form of yamantaka according to the rediscoveries of rgya zang khrom rdo rje 'od 'bar"@en ;
-        skos:prefLabel      "'jam dpal gshin rje'i gshed khro chu dug sdong nag po'i chos skor/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0B3C9E8864C4BF2F , bdr:IDA6C8D5F5E4BD215B , bdr:IDC55098BB56AD1CDD ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT050EA94C4116B6B6 , bdr:TTF0C958393955798E ;
-        :instanceEvent      bdr:EV529561B2DE9EE6DC ;
-        :instanceHasReproduction  bdr:W1KG14473 ;
-        :instanceOf         bdr:WA1KG14473 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "bir, h.p."@en ;
-        :publisherName      "pema lodoe and zogyam"@en ;
-        :script             bdr:ScriptDbuMed .
+    bdr:MW1KG14473  a       bdo:Instance ;
+        skos:altLabel       "'jam dpal gshin rje'i gshed khro chu dug gdong nag po'i chos skor/"@bo-x-ewts ;
+        skos:prefLabel      "'jam dpal gshin rje'i gshed khro chu dug sdong nag po'i chos skor/"@bo-x-ewts , "'jam dpal gsin rje'i gsed khro chu dug sdong nag po'i chos skor : a collection of texts from the 'bri gung, kam tshang, and gnas mdo bka' brgyud pa traditions focussing upon the propitiation of a form of yamantaka according to the rediscoveries of rgya zang khrom rdo rje 'od 'bar"@en ;
+        bf:identifiedBy     bdr:ID0B3C9E8864C4BF2F , bdr:IDA6C8D5F5E4BD215B , bdr:IDC55098BB56AD1CDD ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TT050EA94C4116B6B6 , bdr:TTF0C958393955798E , bdr:TTMW1KG14473JGPC5J76 ;
+        bdo:instanceEvent   bdr:EV529561B2DE9EE6DC ;
+        bdo:instanceHasReproduction  bdr:W1KG14473 ;
+        bdo:instanceOf      bdr:WA1KG14473 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "bir, h.p."@en ;
+        bdo:publisherName   "pema lodoe and zogyam"@en ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TT050EA94C4116B6B6
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "'jam dpal gsin rje'i gsed khro chu dug sdong nag po'i chos skor : a collection of texts from the 'bri gung, kam tshang, and gnas mdo bka' brgyud pa traditions focussing upon the propitiation of a form of yamantaka according to the rediscoveries of rgya zang khrom rdo rje 'od 'bar"@en .
     
     bdr:TTF0C958393955798E
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "'jam dpal gshin rje'i gshed khro chu dug sdong nag po'i chos skor/"@bo-x-ewts .
+    
+    bdr:TTMW1KG14473JGPC5J76
+        a                   bdo:OtherTitle ;
+        rdfs:label          "'jam dpal gshin rje'i gshed khro chu dug gdong nag po'i chos skor/"@bo-x-ewts .
 }
