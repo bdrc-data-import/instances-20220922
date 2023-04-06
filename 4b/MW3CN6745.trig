@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN6745 {
+    bda:LG0MW3CN6745_ITUYY0E8LP2C
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-04-06T07:44:16.675320Z"^^xsd:dateTime ;
+        adm:logMessage      "in copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG7FFAA83260BE0EBB
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-06-01T15:29:59.07Z"^^xsd:dateTime ;
@@ -23,37 +28,40 @@ bdg:MW3CN6745 {
         adm:gitPath         "4b/MW3CN6745.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN6745 ;
-        adm:logEntry        bda:LG7FFAA83260BE0EBB ;
+        adm:logEntry        bda:LG0MW3CN6745_ITUYY0E8LP2C , bda:LG7FFAA83260BE0EBB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVC7ADADF4AFFDFF79
-        a                   :PublishedEvent ;
-        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDA565312C2828713E
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "20955057" .
     
-    bdr:MW3CN6745  a        :Instance , :SerialInstance ;
+    bdr:MW3CN6745  a        bdo:Instance ;
         skos:prefLabel      "gangs ljongs nyi gzhon/ (dus deb/)"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDA565312C2828713E ;
-        :editionStatement   "spyi'i deb 24"@bo-x-ewts ;
-        :extentStatement    "v. 6" ;
-        :hasTitle           bdr:TT7C4070F35A71A81E ;
-        :illustrations      "ill." ;
-        :instanceEvent      bdr:EVC7ADADF4AFFDFF79 ;
-        :instanceHasReproduction  bdr:W3CN6745 ;
-        :instanceOf         bdr:WA3CN6745 ;
-        :numberOfVolumes    100 ;
-        :publisherLocation  "si chuan/"@bo-x-ewts ;
-        :publisherName      "si khron zhing chen u yon lhan khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS3CN6745 ;
-        :seriesNumber       "2016-6" .
+        bf:identifiedBy     bdr:IDA565312C2828713E ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:editionStatement  "spyi'i deb 24"@bo-x-ewts ;
+        bdo:extentStatement  "v. 6" ;
+        bdo:hasTitle        bdr:TT7C4070F35A71A81E ;
+        bdo:illustrations   "ill." ;
+        bdo:instanceEvent   bdr:EVC7ADADF4AFFDFF79 ;
+        bdo:instanceHasReproduction  bdr:W3CN6745 ;
+        bdo:instanceOf      bdr:WA3CN6745 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  100 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "si chuan/"@bo-x-ewts ;
+        bdo:publisherName   "si khron zhing chen u yon lhan khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS3CN6745 ;
+        bdo:seriesNumber    "2016-6" .
     
     bdr:TT7C4070F35A71A81E
-        a                   :Title ;
-        rdfs:label          "gangs ljongs nyi gzhon/ (dus deb/)"@bo-x-ewts .
+        a                   bdo:CoverTitle ;
+        rdfs:label          "gangs ljongs nyi gzhon/"@bo-x-ewts .
 }
