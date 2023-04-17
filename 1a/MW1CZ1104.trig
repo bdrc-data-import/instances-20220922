@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1CZ1104 {
+    bda:LG0MW1CZ1104_SN3NIZUAS5FF
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-04-17T19:23:39.332250Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG4DE54ECC4A17958C
         a                   adm:UpdateData ;
         adm:logDate         "2009-06-30T11:59:37.711Z"^^xsd:dateTime ;
@@ -43,7 +48,7 @@ bdg:MW1CZ1104 {
         adm:gitPath         "1a/MW1CZ1104.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1CZ1104 ;
-        adm:logEntry        bda:LG4DE54ECC4A17958C , bda:LGB83507BE82A9F5A9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1CZ1104_SN3NIZUAS5FF , bda:LG4DE54ECC4A17958C , bda:LGB83507BE82A9F5A9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -51,22 +56,25 @@ bdg:MW1CZ1104 {
         a                   bdr:HollisId ;
         rdf:value           "014255023" .
     
-    bdr:MW1CZ1104  a        :Instance ;
+    bdr:MW1CZ1104  a        bdo:Instance ;
         skos:prefLabel      "lha mo dbyangs can ma la bstod pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID64BEA4D8C775DE51 ;
-        :extentStatement    "4 ff." ;
-        :hasTitle           bdr:TT34CC3E986488CB25 , bdr:TTADA9456C99A16668 ;
-        :instanceHasReproduction  bdr:W1CZ1104 ;
-        :instanceOf         bdr:WA1CZ1104 ;
-        :numberOfVolumes    1 ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID64BEA4D8C775DE51 ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "4 ff." ;
+        bdo:hasTitle        bdr:TT34CC3E986488CB25 , bdr:TTADA9456C99A16668 ;
+        bdo:instanceHasReproduction  bdr:W1CZ1104 ;
+        bdo:instanceOf      bdr:WA1CZ1104 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TT34CC3E986488CB25
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "lha mo dbyangs can ma la bstod pa/"@bo-x-ewts .
     
     bdr:TTADA9456C99A16668
-        a                   :TitlePageTitle ;
-        rdfs:label          "smon dpon chen po bram ze phur bu dang paN+Di ta nag mo khol po dang sum pa lo ts+tsha ba blo gros seng+ge dang mkha' drag pa byang chub gzhon nu rnams kyi mdzad pa'i bstod pa bzhi/"@bo-x-ewts .
+        a                   bdo:ColophonTitle ;
+        rdfs:label          "slob dpon chen po bram ze phur bu dang paN+Di ta nag mo khol po dang sum pa lo ts+tsha ba blo gros seng+ge dang mkha' drag pa byang chub gzhon nu rnams kyi mdzad pa'i bstod pa bzhi/"@bo-x-ewts .
 }
