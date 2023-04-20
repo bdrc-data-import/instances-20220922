@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ368784 {
@@ -18,57 +17,63 @@ bdg:MW4CZ368784 {
         adm:logMessage      "new catalog and released"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG0MW4CZ368784_UGUUOSY0FZ9U
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-04-20T07:01:05.887986Z"^^xsd:dateTime ;
+        adm:logMessage      "biblio note"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:MW4CZ368784  a      adm:AdminData ;
         adm:adminAbout      bdr:MW4CZ368784 ;
         adm:facetIndex      7 ;
         adm:gitPath         "bc/MW4CZ368784.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ368784 ;
-        adm:logEntry        bda:LG083E4E9FED3060E2 ;
+        adm:logEntry        bda:LG083E4E9FED3060E2 , bda:LG0MW4CZ368784_UGUUOSY0FZ9U ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:CR881AF1459EC579BF
-        a                   :AgentAsCreator ;
-        :agent              bdr:P4CN12053 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P4CN12053 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:CRC35EB379813ADE4F
-        a                   :AgentAsCreator ;
-        :agent              bdr:P7278 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P7278 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV23E62424450287AC
-        a                   :PublishedEvent ;
-        :eventWhen          "2017"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2017"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID2CFE9B46543738AF
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787542030092" .
     
-    bdr:MW4CZ368784  a      :Instance ;
+    bdr:MW4CZ368784  a      bdo:Instance ;
         skos:prefLabel      "bud med rtsom pa pos gsar rtsom gleng ba/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2CFE9B46543738AF ;
-        :biblioNote         "Digital images are made available through the kind support of Sarah Library, College for Higher Tibetan Studies, IBD Sarah, Himachal Pradesh, India"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CR881AF1459EC579BF , bdr:CRC35EB379813ADE4F ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "1, 287p." ;
-        :hasTitle           bdr:TT2C649C1D4F4FF1B0 ;
-        :instanceEvent      bdr:EV23E62424450287AC ;
-        :instanceHasReproduction  bdr:W4CZ368784 ;
-        :instanceOf         bdr:WA4CZ368784 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "zi ling /"@bo-x-ewts ;
-        :publisherName      "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS4CZ368784 .
+        bf:identifiedBy     bdr:ID2CFE9B46543738AF ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:creator         bdr:CR881AF1459EC579BF , bdr:CRC35EB379813ADE4F ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "1,287 p." ;
+        bdo:hasTitle        bdr:TT2C649C1D4F4FF1B0 ;
+        bdo:instanceEvent   bdr:EV23E62424450287AC ;
+        bdo:instanceHasReproduction  bdr:W4CZ368784 ;
+        bdo:instanceOf      bdr:WA4CZ368784 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "zi ling /"@bo-x-ewts ;
+        bdo:publisherName   "mtsho sngon mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS4CZ368784 .
     
     bdr:TT2C649C1D4F4FF1B0
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "bud med rtsom pa pos gsar rtsom gleng ba/"@bo-x-ewts .
 }
