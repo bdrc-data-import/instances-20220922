@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD96682 {
+    bda:LG0MW1PD96682_MLLENQBFLBRD
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-04-26T10:50:49.040860Z"^^xsd:dateTime ;
+        adm:logMessage      "copyright"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG3130AC68F4108BF4
         a                   adm:UpdateData ;
         adm:logDate         "2016-03-29T01:05:37.209Z"^^xsd:dateTime ;
@@ -72,70 +77,67 @@ bdg:MW1PD96682 {
         adm:gitPath         "92/MW1PD96682.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD96682 ;
-        adm:logEntry        bda:LG3130AC68F4108BF4 , bda:LG4DE3257C1E28A174 , bda:LG5A47053CE4AEA782 , bda:LG60C27181DCB862B1 , bda:LG7505A38B5E60892A , bda:LG7E51FF62A9E9FC8C , bda:LG8196344CA6AC827F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1PD96682_MLLENQBFLBRD , bda:LG3130AC68F4108BF4 , bda:LG4DE3257C1E28A174 , bda:LG5A47053CE4AEA782 , bda:LG60C27181DCB862B1 , bda:LG7505A38B5E60892A , bda:LG7E51FF62A9E9FC8C , bda:LG8196344CA6AC827F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVD963033776A743CE
-        a                   :PublishedEvent ;
-        :eventWhen          "2006/2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2006/2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID21490CC60E0E5201
         a                   bdr:HollisId ;
         rdf:value           "014257983" .
     
     bdr:IDF02B081855B9B067
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
-        rdf:value           "7800576949(seeindividualISBNonnotefield)" .
+        a                   bf:Isbn ;
+        rdf:value           "7800576949" .
     
-    bdr:MW1PD96682  a       :Instance ;
+    bdr:MW1PD96682  a       bdo:Instance ;
         skos:altLabel       "甘珠尔(对勘本）"@zh-hans ;
-        skos:prefLabel      "bka' 'gyur/ (dpe bsdur ma/)"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID21490CC60E0E5201 , bdr:IDF02B081855B9B067 ;
-        :authorshipStatement  "ཀྲུང་གོའི་བོད་ཀྱི་ཤེས་རིག་ཞིབ་འཇུག་ལྟེ་གནས་ཀྱི་བཀའ་བསྟན་དཔེ་སྡུར་ཁང་གིས་དཔེ་བསྡུར་ཞུས།"@bo ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
-        :extentStatement    "109 v." ;
-        :hasTitle           bdr:TT0F061F17219978FB , bdr:TT164B7C2F6FE40D2B , bdr:TT31AEA718E01FB06E , bdr:TT3DBB590B561C00AC , bdr:TT6510D61C05723E9C , bdr:TT8650372EEAACE88B ;
-        :illustrations      "ill. (col.)" ;
-        :instanceEvent      bdr:EVD963033776A743CE ;
-        :instanceHasReproduction  bdr:IE1PD96682 , bdr:W1PD96682 ;
-        :instanceOf         bdr:WA0BC001 ;
-        :note               bdr:NTBC200F135D7947E8 ;
-        :numberOfVolumes    109 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "krung go'i bod rig pa'i dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "bka' 'gyur/ (dpe bsdur ma/)"@bo-x-ewts , "zhong hua da zang jing gan zhu er (dui kuan ben)"@zh-latn-pinyin-x-ndia ;
+        bf:identifiedBy     bdr:ID21490CC60E0E5201 , bdr:IDF02B081855B9B067 ;
+        bdo:authorshipStatement  "ཀྲུང་གོའི་བོད་ཀྱི་ཤེས་རིག་ཞིབ་འཇུག་ལྟེ་གནས་ཀྱི་བཀའ་བསྟན་དཔེ་སྡུར་ཁང་གིས་དཔེ་བསྡུར་ཞུས།"@bo ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "109 v." ;
+        bdo:hasTitle        bdr:TT164B7C2F6FE40D2B , bdr:TT31AEA718E01FB06E , bdr:TT3DBB590B561C00AC , bdr:TT6510D61C05723E9C , bdr:TT8650372EEAACE88B ;
+        bdo:illustrations   "ill. (col.)" ;
+        bdo:instanceEvent   bdr:EVD963033776A743CE ;
+        bdo:instanceHasReproduction  bdr:IE1PD96682 , bdr:W1PD96682 ;
+        bdo:instanceOf      bdr:WA0BC001 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTBC200F135D7947E8 ;
+        bdo:numberOfVolumes  109 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "krung go'i bod rig pa'i dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTBC200F135D7947E8
-        a                   :Note ;
-        :noteText           "པོད་1 པོ།  འདུལ་བ།   ཀ   isbn: 7800576140\nཔོད་ 2 པ།  འདུལ་བ།   ཁ  isbn: 9787800576159   \nཔོད་ 3 པ། འདུལ་བ།   ག   isbn: 7800576167 \nཔོད་ 4 པ།  འདུལ་བ།   ང   isbn: 7800576191 \nཔོད་ 5 པ།  འདུལ་བ།   ཅ   isbn: 7800576205 \nཔོད་ 6 པ།  འདུལ་བ།   ཆ   isbn: 780057623x\nཔོད་ 7 པ།  འདུལ་བ།   ཇ   isbn: 7800576256\nཔོད་ 8 པ།  འདུལ་བ།   ཉ   isbn: 7800576264 \nཔོད་ 9 པ།  འདུལ་བ།   ཏ   isbn: 7800576523\nཔོད་ 10 པ།  འདུལ་བ།   ཐ   isbn: 7800576831 \nཔོད་ 11 པ།  འདུལ་བ།   ད   isbn: 7800576841 \nཔོད་ 12 པ།  འདུལ་བ།   ན   isbn: 780057685x \nཔོད་ 13 པ།  འདུལ་བ།   པ  isbn: 7800576868  \nཔོད་ 14 པ།  འབུམ།   ཀ   isbn: 7800576876\nཔོད་ 15 པ།  འབུམ།   ཁ   isbn: 7800576884 \nཔོད་ 16 པ།  འབུམ།   ག   isbn: 7800576892\nཔོད་ 17 པ།  འབུམ།   ང   isbn: 7800576906\nཔོད་ 18 པ།  འབུམ།   ཅ   isbn: 7800576914\nཔོད་ 19 པ།  འབུམ།   ཆ   isbn: 7800576957\nཔོད་ 20 པ།  འབུམ།   ཇ   isbn: 7800576922\nཔོད་ 21 པ།  འབུམ།   ཉ   isbn: 7800576930 \nཔོད་ 22 པ།  འབུམ།   ཏ   isbn: 7800576957 \nཔོད་ 23 པ།  འབུམ།   ཐ   isbn: 7800576965 \nཔོད་ 24 པ།  འབུམ།   ད   isbn: 7800576973 \nཔོད་ 25 པ།  འབུམ།   ཨ   isbn: 7800576981\nཔོད་ 26 པ།   ཉི་ཁྲི།   ཀ   isbn: 978700578502\nཔོད་ 27 པ།   ཉི་ཁྲི།   ཁ   isbn: 978700578519\nཔོད་ 28 པ།   ཉི་ཁྲི།   ཨ   isbn: 978700578528\nཔོད་ 29 པ།   ཁྲི་བརྒྱད།   ཀ   isbn: 978700578915\nཔོད་ 30 པ།   ཁྲི་བརྒྱད།   ཁ   isbn: 978700578939\nཔོད་ 31 པ།   ཁྲི་བརྒྱད།   ག   isbn: 978700577345 \nཔོད་ 32 པ།   ཁྲི་བརྒྱད།   ང   isbn: 978700577918\nཔོད་ 33 པ།  བརྒྱད་སྟོང་།   ཀ   isbn: 978700578298 \nཔོད་ 34 པ།   ཤེས་རབ་སྣ་ཚོགས།   ཀ   isbn: 978700578335\nཔོད་ 35 པ།  ཕལ་པོ་ཆེ།   ཀ   isbn: 9787800578847\nཔོད་ 36 པ།  ཕལ་པོ་ཆེ།   ཁ   isbn: 9787800578854\nཔོད་ 37 པ།   ཕལ་པོ་ཆེ།  ག   isbn: 9787800578946\nཔོད་ 38 པ།   ཕལ་པོ་ཆེ།  ཨ   isbn: 9787800578953\nཔོད་ 39 པ།   དཀོན་བརྩེགས།  ཀ   isbn: 9787800578960\nཔོད་ 40 པ།   དཀོན་བརྩེགས།  ཁ   isbn: 9787800578977\nཔོད་ 41 པ།  དཀོན་བརྩེགས།   ག   isbn: 9787802530591\nཔོད་ 42 པ།  དཀོན་བརྩེགས།   ང   isbn: 9787802530607\nཔོད་ 43 པ།  དཀོན་བརྩེགས།   ཅ   isbn: 9787802530614 \nཔོད་ 44 པ།  དཀོན་བརྩེགས།   ཆ   isbn: 9787802530621  \nཔོད་ 45 པ།   མདོ་སྡེ།   ཀ   isbn: 9787802530638\nཔོད་ 46 པ།   མདོ་སྡེ།   ཁ   isbn: 9787802530645\nཔོད་ 47 པ།   མདོ་སྡེ།   ག   isbn: 9787802530652\nཔོད་ 48 པ།   མདོ་སྡེ།   ང   isbn: 9787802530669\nཔོད་ 49 པ།   མདོ་སྡེ།   ཅ   isbn: 9787802530676\nཔོད་ 50 པ།   མདོ་སྡེ།   ཆ   isbn: 9787802530683\nཔོད་ 51 པ།   མདོ་སྡེ།   ཇ   isbn: 9787802530690\nཔོད་ 52 པ།   མདོ་སྡེ།   ཉ   isbn: 9787802530706\nཔོད་ 53 པ།   མདོ་སྡེ།   ཏ   isbn: 9787802530713\nཔོད་ 54 པ།   མདོ་སྡེ།   ཐ   isbn: 9787802530720\nཔོད་ 55 པ།   མདོ་སྡེ།   ད   isbn: 9787802530737\nཔོད་ 56 པ།   མདོ་སྡེ།   ན   isbn: 9787802530744\nཔོད་ 57 པ།   མདོ་སྡེ།   པ   isbn: 9787802530751\nཔོད་ 58 པ།   མདོ་སྡེ།   ཕ   isbn: 9787802530768\nཔོད་ 59 པ།   མདོ་སྡེ།   བ   isbn: 9787802530775\nཔོད་ 60 པ།   མདོ་སྡེ།   མ   isbn: 9787802530782\nཔོད་ 61 པ།   མདོ་སྡེ།   ཙ   isbn: 9787802530799\nཔོད་ 62 པ།   མདོ་སྡེ།   ཚ   isbn: 9787802530805\nཔོད་ 63 པ།   མདོ་སྡེ།   ཛ   isbn: 9787802530812\nཔོད་ 64 པ།   མདོ་སྡེ།   ཝ   isbn: 9787802530829\nཔོད་ 65 པ།   མདོ་སྡེ།   ཞ   isbn: 9787802530836\nཔོད་ 66 པ།   མདོ་སྡེ།   ཟ   isbn: 9787802530843\nཔོད་ 67 པ།   མདོ་སྡེ།   འ   isbn: 9787802530850\nཔོད་ 68 པ།   མདོ་སྡེ།   ཡ   isbn: 9787802530867\nཔོད་ 69 པ།   མདོ་སྡེ།   ར   isbn: 9787802530874\nཔོད་ 70 པ།   མདོ་སྡེ།   ལ   isbn: 9787802530881\nཔོད་ 71 པ།   མདོ་སྡེ།   ཤ   isbn: 9787802530898\nཔོད་ 72 པ།   མདོ་སྡེ།   ས   isbn: 9787802530904\nཔོད་ 73 པ།   མདོ་སྡེ།   ཧ   isbn: 9787802530911\nཔོད་ 74 པ།   མདོ་སྡེ།   ཨ   isbn: 9787802530928\nཔོད་ 75 པ།   མདོ་སྡེ།   ཨཾ   isbn: 9787802530935\nཔོད་ 76 པ།   མདོ་སྡེ།   ཨཱཿ   isbn: 9787802530942\nཔོད་ 77 པ།   རྒྱུད་འབུམ།   ཀ   isbn: 9787802530959\nཔོད་ 78 པ།   རྒྱུད་འབུམ།   ཁ   isbn: 9787802530966\nཔོད་ 79 པ།   རྒྱུད་འབུམ།   ག   isbn: 9787802530973\nཔོད་ 80 པ།   རྒྱུད་འབུམ།   ང   isbn: 9787802530980\nཔོད་ 81 པ།  རྒྱུད་འབུམ།    ཅ   isbn: 9787802530997\nཔོད་ 82 པ།   རྒྱུད་འབུམ།   ཆ   isbn: 9787802531000\nཔོད་ 83 པ།   རྒྱུད་འབུམ།   ཇ   isbn: 9787802531017\nཔོད་ 84 པ།   རྒྱུད་འབུམ།   ཉ   isbn: 9787802531024\nཔོད་ 85 པ།   རྒྱུད་འབུམ།   ཏ   isbn: 9787802531031\nཔོད་ 86 པ།   རྒྱུད་འབུམ།   ཐ   isbn: 9787802531048\nཔོད་ 87 པ།   རྒྱུད་འབུམ།   ད   isbn: 9787802531055\nཔོད་ 88 པ།   རྒྱུད་འབུམ།   ན   isbn: 9787802531062\nཔོད་ 89 པ།   རྒྱུད་འབུམ།   པ   isbn: 9787802531079\nཔོད་ 90 པ།   རྒྱུད་འབུམ།   ཕ   isbn: 9787802531086\nཔོད་ 91 པ།  རྒྱུད་འབུམ།    བ   isbn: 9787802531093\nཔོད་ 92 པ།   རྒྱུད་འབུམ།   མ   isbn: 9787802531109\nཔོད་ 93 པ།   རྒྱུད་འབུམ།   ཙ   isbn: 9787802531116\nཔོད་ 94 པ།   རྒྱུད་འབུམ།   ཚ   isbn: 9787802531123\nཔོད་ 95 པ།   རྒྱུད་འབུམ།   ཛ   isbn: 9787802531130\nཔོད་ 96 པ།   རྒྱུད་འབུམ།   ཝ   isbn: 9787802531147\nཔོད་ 97 པ།   གཟུངས་འདུས།   ཨེ   isbn: 9787802531154\nཔོད་ 98 པ།   གཟུངས་འདུས།    ཝཾ   isbn: 9787802531161\nཔོད་ 99 པ།   དྲི་མེད་འོད།  ཤྲཱིཿ   isbn: 9787802531178\nཔོད་ 100 པ།   དྲི་མེད་འོད།  ཤྲཱི   isbn: 9787802531185\nཔོད་ 101 པ།   རྙིང་རྒྱུད།  ཀ   isbn: 9787802531192\nཔོད་ 102 པ།   རྙིང་རྒྱུད།  ཁ   isbn: 9787802531208\nཔོད་ 103 པ།   རྙིང་རྒྱུད།  ག   isbn: 9787802531215\nཔོད་ 104 པ།   རྒྱུད།  ཨོཾ   isbn: 9787802531222\nཔོད་ 105 པ།   དཀར་ཆག  ༡  isbn: 9787802531239\nཔོད་ 106 པ།   དཀར་ཆག  ༢  isbn: 9787802531246\nཔོད་ 107 པ།  དཀར་ཆག  ༣  isbn: 9787802531253\nཔོད་ 108 པ།  དཀར་ཆག  ༤  isbn: 9787802531260"@en .
-    
-    bdr:TT0F061F17219978FB
-        a                   :Title ;
-        rdfs:label          "bka' 'gyur/ (dpe bsdur ma/)"@bo-x-ewts .
+        a                   bdo:Note ;
+        bdo:noteText        "པོད་1 པོ།  འདུལ་བ།   ཀ   isbn: 7800576140\nཔོད་ 2 པ།  འདུལ་བ།   ཁ  isbn: 9787800576159   \nཔོད་ 3 པ། འདུལ་བ།   ག   isbn: 7800576167 \nཔོད་ 4 པ།  འདུལ་བ།   ང   isbn: 7800576191 \nཔོད་ 5 པ།  འདུལ་བ།   ཅ   isbn: 7800576205 \nཔོད་ 6 པ།  འདུལ་བ།   ཆ   isbn: 780057623x\nཔོད་ 7 པ།  འདུལ་བ།   ཇ   isbn: 7800576256\nཔོད་ 8 པ།  འདུལ་བ།   ཉ   isbn: 7800576264 \nཔོད་ 9 པ།  འདུལ་བ།   ཏ   isbn: 7800576523\nཔོད་ 10 པ།  འདུལ་བ།   ཐ   isbn: 7800576831 \nཔོད་ 11 པ།  འདུལ་བ།   ད   isbn: 7800576841 \nཔོད་ 12 པ།  འདུལ་བ།   ན   isbn: 780057685x \nཔོད་ 13 པ།  འདུལ་བ།   པ  isbn: 7800576868  \nཔོད་ 14 པ།  འབུམ།   ཀ   isbn: 7800576876\nཔོད་ 15 པ།  འབུམ།   ཁ   isbn: 7800576884 \nཔོད་ 16 པ།  འབུམ།   ག   isbn: 7800576892\nཔོད་ 17 པ།  འབུམ།   ང   isbn: 7800576906\nཔོད་ 18 པ།  འབུམ།   ཅ   isbn: 7800576914\nཔོད་ 19 པ།  འབུམ།   ཆ   isbn: 7800576957\nཔོད་ 20 པ།  འབུམ།   ཇ   isbn: 7800576922\nཔོད་ 21 པ།  འབུམ།   ཉ   isbn: 7800576930 \nཔོད་ 22 པ།  འབུམ།   ཏ   isbn: 7800576957 \nཔོད་ 23 པ།  འབུམ།   ཐ   isbn: 7800576965 \nཔོད་ 24 པ།  འབུམ།   ད   isbn: 7800576973 \nཔོད་ 25 པ།  འབུམ།   ཨ   isbn: 7800576981\nཔོད་ 26 པ།   ཉི་ཁྲི།   ཀ   isbn: 978700578502\nཔོད་ 27 པ།   ཉི་ཁྲི།   ཁ   isbn: 978700578519\nཔོད་ 28 པ།   ཉི་ཁྲི།   ཨ   isbn: 978700578528\nཔོད་ 29 པ།   ཁྲི་བརྒྱད།   ཀ   isbn: 978700578915\nཔོད་ 30 པ།   ཁྲི་བརྒྱད།   ཁ   isbn: 978700578939\nཔོད་ 31 པ།   ཁྲི་བརྒྱད།   ག   isbn: 978700577345 \nཔོད་ 32 པ།   ཁྲི་བརྒྱད།   ང   isbn: 978700577918\nཔོད་ 33 པ།  བརྒྱད་སྟོང་།   ཀ   isbn: 978700578298 \nཔོད་ 34 པ།   ཤེས་རབ་སྣ་ཚོགས།   ཀ   isbn: 978700578335\nཔོད་ 35 པ།  ཕལ་པོ་ཆེ།   ཀ   isbn: 9787800578847\nཔོད་ 36 པ།  ཕལ་པོ་ཆེ།   ཁ   isbn: 9787800578854\nཔོད་ 37 པ།   ཕལ་པོ་ཆེ།  ག   isbn: 9787800578946\nཔོད་ 38 པ།   ཕལ་པོ་ཆེ།  ཨ   isbn: 9787800578953\nཔོད་ 39 པ།   དཀོན་བརྩེགས།  ཀ   isbn: 9787800578960\nཔོད་ 40 པ།   དཀོན་བརྩེགས།  ཁ   isbn: 9787800578977\nཔོད་ 41 པ།  དཀོན་བརྩེགས།   ག   isbn: 9787802530591\nཔོད་ 42 པ།  དཀོན་བརྩེགས།   ང   isbn: 9787802530607\nཔོད་ 43 པ།  དཀོན་བརྩེགས།   ཅ   isbn: 9787802530614 \nཔོད་ 44 པ།  དཀོན་བརྩེགས།   ཆ   isbn: 9787802530621  \nཔོད་ 45 པ།   མདོ་སྡེ།   ཀ   isbn: 9787802530638\nཔོད་ 46 པ།   མདོ་སྡེ།   ཁ   isbn: 9787802530645\nཔོད་ 47 པ།   མདོ་སྡེ།   ག   isbn: 9787802530652\nཔོད་ 48 པ།   མདོ་སྡེ།   ང   isbn: 9787802530669\nཔོད་ 49 པ།   མདོ་སྡེ།   ཅ   isbn: 9787802530676\nཔོད་ 50 པ།   མདོ་སྡེ།   ཆ   isbn: 9787802530683\nཔོད་ 51 པ།   མདོ་སྡེ།   ཇ   isbn: 9787802530690\nཔོད་ 52 པ།   མདོ་སྡེ།   ཉ   isbn: 9787802530706\nཔོད་ 53 པ།   མདོ་སྡེ།   ཏ   isbn: 9787802530713\nཔོད་ 54 པ།   མདོ་སྡེ།   ཐ   isbn: 9787802530720\nཔོད་ 55 པ།   མདོ་སྡེ།   ད   isbn: 9787802530737\nཔོད་ 56 པ།   མདོ་སྡེ།   ན   isbn: 9787802530744\nཔོད་ 57 པ།   མདོ་སྡེ།   པ   isbn: 9787802530751\nཔོད་ 58 པ།   མདོ་སྡེ།   ཕ   isbn: 9787802530768\nཔོད་ 59 པ།   མདོ་སྡེ།   བ   isbn: 9787802530775\nཔོད་ 60 པ།   མདོ་སྡེ།   མ   isbn: 9787802530782\nཔོད་ 61 པ།   མདོ་སྡེ།   ཙ   isbn: 9787802530799\nཔོད་ 62 པ།   མདོ་སྡེ།   ཚ   isbn: 9787802530805\nཔོད་ 63 པ།   མདོ་སྡེ།   ཛ   isbn: 9787802530812\nཔོད་ 64 པ།   མདོ་སྡེ།   ཝ   isbn: 9787802530829\nཔོད་ 65 པ།   མདོ་སྡེ།   ཞ   isbn: 9787802530836\nཔོད་ 66 པ།   མདོ་སྡེ།   ཟ   isbn: 9787802530843\nཔོད་ 67 པ།   མདོ་སྡེ།   འ   isbn: 9787802530850\nཔོད་ 68 པ།   མདོ་སྡེ།   ཡ   isbn: 9787802530867\nཔོད་ 69 པ།   མདོ་སྡེ།   ར   isbn: 9787802530874\nཔོད་ 70 པ།   མདོ་སྡེ།   ལ   isbn: 9787802530881\nཔོད་ 71 པ།   མདོ་སྡེ།   ཤ   isbn: 9787802530898\nཔོད་ 72 པ།   མདོ་སྡེ།   ས   isbn: 9787802530904\nཔོད་ 73 པ།   མདོ་སྡེ།   ཧ   isbn: 9787802530911\nཔོད་ 74 པ།   མདོ་སྡེ།   ཨ   isbn: 9787802530928\nཔོད་ 75 པ།   མདོ་སྡེ།   ཨཾ   isbn: 9787802530935\nཔོད་ 76 པ།   མདོ་སྡེ།   ཨཱཿ   isbn: 9787802530942\nཔོད་ 77 པ།   རྒྱུད་འབུམ།   ཀ   isbn: 9787802530959\nཔོད་ 78 པ།   རྒྱུད་འབུམ།   ཁ   isbn: 9787802530966\nཔོད་ 79 པ།   རྒྱུད་འབུམ།   ག   isbn: 9787802530973\nཔོད་ 80 པ།   རྒྱུད་འབུམ།   ང   isbn: 9787802530980\nཔོད་ 81 པ།  རྒྱུད་འབུམ།    ཅ   isbn: 9787802530997\nཔོད་ 82 པ།   རྒྱུད་འབུམ།   ཆ   isbn: 9787802531000\nཔོད་ 83 པ།   རྒྱུད་འབུམ།   ཇ   isbn: 9787802531017\nཔོད་ 84 པ།   རྒྱུད་འབུམ།   ཉ   isbn: 9787802531024\nཔོད་ 85 པ།   རྒྱུད་འབུམ།   ཏ   isbn: 9787802531031\nཔོད་ 86 པ།   རྒྱུད་འབུམ།   ཐ   isbn: 9787802531048\nཔོད་ 87 པ།   རྒྱུད་འབུམ།   ད   isbn: 9787802531055\nཔོད་ 88 པ།   རྒྱུད་འབུམ།   ན   isbn: 9787802531062\nཔོད་ 89 པ།   རྒྱུད་འབུམ།   པ   isbn: 9787802531079\nཔོད་ 90 པ།   རྒྱུད་འབུམ།   ཕ   isbn: 9787802531086\nཔོད་ 91 པ།  རྒྱུད་འབུམ།    བ   isbn: 9787802531093\nཔོད་ 92 པ།   རྒྱུད་འབུམ།   མ   isbn: 9787802531109\nཔོད་ 93 པ།   རྒྱུད་འབུམ།   ཙ   isbn: 9787802531116\nཔོད་ 94 པ།   རྒྱུད་འབུམ།   ཚ   isbn: 9787802531123\nཔོད་ 95 པ།   རྒྱུད་འབུམ།   ཛ   isbn: 9787802531130\nཔོད་ 96 པ།   རྒྱུད་འབུམ།   ཝ   isbn: 9787802531147\nཔོད་ 97 པ།   གཟུངས་འདུས།   ཨེ   isbn: 9787802531154\nཔོད་ 98 པ།   གཟུངས་འདུས།    ཝཾ   isbn: 9787802531161\nཔོད་ 99 པ།   དྲི་མེད་འོད།  ཤྲཱིཿ   isbn: 9787802531178\nཔོད་ 100 པ།   དྲི་མེད་འོད།  ཤྲཱི   isbn: 9787802531185\nཔོད་ 101 པ།   རྙིང་རྒྱུད།  ཀ   isbn: 9787802531192\nཔོད་ 102 པ།   རྙིང་རྒྱུད།  ཁ   isbn: 9787802531208\nཔོད་ 103 པ།   རྙིང་རྒྱུད།  ག   isbn: 9787802531215\nཔོད་ 104 པ།   རྒྱུད།  ཨོཾ   isbn: 9787802531222\nཔོད་ 105 པ།   དཀར་ཆག  ༡  isbn: 9787802531239\nཔོད་ 106 པ།   དཀར་ཆག  ༢  isbn: 9787802531246\nཔོད་ 107 པ།  དཀར་ཆག  ༣  isbn: 9787802531253\nཔོད་ 108 པ།  དཀར་ཆག  ༤  isbn: 9787802531260"@en .
     
     bdr:TT164B7C2F6FE40D2B
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "bka' 'gyur dpe bsdur ma/"@bo-x-ewts .
     
     bdr:TT31AEA718E01FB06E
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "bka' 'gyur/"@bo-x-ewts .
     
     bdr:TT3DBB590B561C00AC
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "zhong hua da zang jing gan zhu er (dui kuan ben)"@zh-latn-pinyin-x-ndia .
     
     bdr:TT6510D61C05723E9C
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "甘珠尔(对勘本）"@zh-hans .
     
     bdr:TT8650372EEAACE88B
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "中华大藏经 甘珠尔（对勘本）"@zh-hans .
 }
