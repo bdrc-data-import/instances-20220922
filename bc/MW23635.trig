@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23635 {
+    bda:LG0MW23635_ADWBZ98PSDAT
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-05-01T16:15:09.526127Z"^^xsd:dateTime ;
+        adm:logMessage      "added biblio note"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG324C5B11F0638B76
         a                   adm:UpdateData ;
         adm:logDate         "2013-02-25T14:21:28.074Z"^^xsd:dateTime ;
@@ -48,54 +53,56 @@ bdg:MW23635 {
         adm:gitPath         "bc/MW23635.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW23635 ;
-        adm:logEntry        bda:LG324C5B11F0638B76 , bda:LG3BB46601FEB42CF5 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW23635_ADWBZ98PSDAT , bda:LG324C5B11F0638B76 , bda:LG3BB46601FEB42CF5 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVD44AAD818FE60198
-        a                   :PublishedEvent ;
-        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID62D5477BBE09ABF1
         a                   bdr:HollisId ;
         rdf:value           "014259003" .
     
     bdr:IDA5CDDDDD5F297D28
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "99956350" .
     
     bdr:IDCDB4C98C48E2BA0B
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7550 .S285 1999" .
     
-    bdr:MW23635  a          :Instance ;
+    bdr:MW23635  a          bdo:Instance ;
         skos:altLabel       "the collection works of the ancient sa-skya-pa scholars"@en ;
         skos:prefLabel      "sa skya pa'i mkhas pa rnams kyi gsung skor/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID62D5477BBE09ABF1 , bdr:IDA5CDDDDD5F297D28 , bdr:IDCDB4C98C48E2BA0B ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :extentStatement    "1-4, 7-9 v. (vol. 5, 6 are not available)" ;
-        :hasTitle           bdr:TT10BD41AB6D49FF9E , bdr:TT53687C56DD1DC7CD , bdr:TTF7C082DFF98769FC ;
-        :instanceEvent      bdr:EVD44AAD818FE60198 ;
-        :instanceHasReproduction  bdr:W23635 ;
-        :instanceOf         bdr:WA23635 ;
-        :numberOfVolumes    9 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "rajpur,dist. dehra dun, u.p."@en ;
-        :publisherName      "sakya college"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID62D5477BBE09ABF1 , bdr:IDA5CDDDDD5F297D28 , bdr:IDCDB4C98C48E2BA0B ;
+        bdo:biblioNote      "Volumes 5 and 6 are made available through the kind support of Sakya College, Rajpur, Dehradun, Uttarakhand."@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "9 v." ;
+        bdo:hasTitle        bdr:TT10BD41AB6D49FF9E , bdr:TT53687C56DD1DC7CD , bdr:TTF7C082DFF98769FC ;
+        bdo:instanceEvent   bdr:EVD44AAD818FE60198 ;
+        bdo:instanceHasReproduction  bdr:W23635 ;
+        bdo:instanceOf      bdr:WA23635 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  9 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "rajpur, distt. dehra dun, u.p."@en ;
+        bdo:publisherName   "sakya college"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT10BD41AB6D49FF9E
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "sa-skya-pa'i mkhas pa rnams kyi gsun skor"@en .
     
     bdr:TT53687C56DD1DC7CD
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "sa skya pa'i mkhas pa rnams kyi gsung skor/"@bo-x-ewts .
     
     bdr:TTF7C082DFF98769FC
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "the collection works of the ancient sa-skya-pa scholars"@en .
 }
