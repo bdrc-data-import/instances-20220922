@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG4269 {
+    bda:LG0MW1KG4269_SSJUWA5FTS7Y
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-06-05T15:14:17.840820Z"^^xsd:dateTime ;
+        adm:logMessage      "fix image instance reference"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LGC294A3BAC4BD93A3
         a                   adm:InitialDataCreation ;
         adm:logDate         "2022-10-12T09:56:10.607Z"^^xsd:dateTime ;
@@ -24,35 +27,37 @@ bdg:MW1KG4269 {
         adm:gitPath         "95/MW1KG4269.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG4269 ;
-        adm:logEntry        bda:LGC294A3BAC4BD93A3 ;
+        adm:logEntry        bda:LG0MW1KG4269_SSJUWA5FTS7Y , bda:LGC294A3BAC4BD93A3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVEB3FE41C65A7A154
-        a                   :PublishedEvent ;
-        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW1KG4269  a        :Instance ;
+    bdr:MW1KG4269  a        bdo:Instance ;
         skos:prefLabel      "rgya rigs shes yon pas sprul sku bstan 'dzin bde legs skor la spel ba'i ched rtsom phyogs bsgrigs/"@bo-x-ewts ;
-        :authorshipStatement  "gtso sgyur mkhan/ tha'e wan bde skyid sgrol ma/"@bo-x-ewts ;
-        :biblioNote         "copy made available from the library of tibetan works and archives; ltwa acc. no. Acc. No. D29752"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :extentStatement    "xi, 199 p." ;
-        :hasTitle           bdr:TT7BC1BB743FAD72B6 , bdr:TTF14FFE08AE0DE078 ;
-        :illustrations      "ill. (1 col. plate)" ;
-        :instanceEvent      bdr:EVEB3FE41C65A7A154 ;
-        :instanceOf         bdr:WA1KG4269 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "delhi"@en ;
-        :publisherName      "tibetan cultural & religious publication centre"@en ;
-        :script             bdr:ScriptTibt .
+        bdo:authorshipStatement  "gtso sgyur mkhan/ tha'e wan bde skyid sgrol ma/"@bo-x-ewts ;
+        bdo:biblioNote      "copy made available from the library of tibetan works and archives; ltwa acc. no. Acc. No. D29752"@en ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "xi, 199 p." ;
+        bdo:hasTitle        bdr:TT7BC1BB743FAD72B6 , bdr:TTF14FFE08AE0DE078 ;
+        bdo:illustrations   "ill. (1 col. plate)" ;
+        bdo:instanceEvent   bdr:EVEB3FE41C65A7A154 ;
+        bdo:instanceHasReproduction  bdr:W1KG4269 ;
+        bdo:instanceOf      bdr:WA1KG4269 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "delhi"@en ;
+        bdo:publisherName   "tibetan cultural & religious publication centre"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT7BC1BB743FAD72B6
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rgya rigs shes yon pas sprul sku bstan 'dzin bde legs skor la spel ba'i ched rtsom phyogs bsgrigs/ (deb phreng gnyis pa/)"@bo-x-ewts .
     
     bdr:TTF14FFE08AE0DE078
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "rgya rigs shes yon pas sprul sku bstan 'dzin bde legs skor la spel ba'i ched rtsom phyogs bsgrigs/"@bo-x-ewts .
 }
