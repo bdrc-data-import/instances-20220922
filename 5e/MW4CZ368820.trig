@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ368820 {
@@ -18,34 +15,44 @@ bdg:MW4CZ368820 {
         adm:logMessage      "webedditors"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG0MW4CZ368820_NEHLE6G6L6EC
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-06-05T15:11:44.189569Z"^^xsd:dateTime ;
+        adm:logMessage      "fix image instance reference"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:MW4CZ368820  a      adm:AdminData ;
         adm:adminAbout      bdr:MW4CZ368820 ;
         adm:facetIndex      4 ;
         adm:gitPath         "5e/MW4CZ368820.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ368820 ;
-        adm:logEntry        bda:LG07C25C275B30351A ;
+        adm:logEntry        bda:LG07C25C275B30351A , bda:LG0MW4CZ368820_NEHLE6G6L6EC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVA7DC785FA04516E3
-        a                   :PublishedEvent ;
-        :eventWhen          "2011"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2011"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW4CZ368820  a      :Instance ;
+    bdr:MW4CZ368820  a      bdo:Instance ;
         skos:prefLabel      "mnyam 'brel rgyal tshogs kyi spyi chings khag phyogs bsgrigs/"@bo-x-ewts ;
-        :authorshipStatement  "gom 'bar bsod nams bkra shis/"@bo-x-ewts ;
-        :biblioNote         "copy made available from the library of tibetan works and archives; ltwa acc. no.D12568"@en ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :extentStatement    "9, 15, 429 p." ;
-        :hasTitle           bdr:TT6AED9ECFB0658A8C ;
-        :instanceEvent      bdr:EVA7DC785FA04516E3 ;
-        :instanceOf         bdr:WA4CZ368820 ;
-        :publisherLocation  "dharamsala, h.p."@en ;
-        :publisherName      "bod gzhung shes rig par khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:authorshipStatement  "gom 'bar bsod nams bkra shis/"@bo-x-ewts ;
+        bdo:biblioNote      "copy made available from the library of tibetan works and archives; ltwa acc. no.D12568"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "9, 15, 429 p." ;
+        bdo:hasTitle        bdr:TT6AED9ECFB0658A8C ;
+        bdo:instanceEvent   bdr:EVA7DC785FA04516E3 ;
+        bdo:instanceHasReproduction  bdr:W4CZ368820 ;
+        bdo:instanceOf      bdr:WA4CZ368820 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "dharamsala, h.p."@en ;
+        bdo:publisherName   "bod gzhung shes rig par khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT6AED9ECFB0658A8C
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "mnyam 'brel rgyal tshogs kyi spyi chings khag phyogs bsgrigs/"@bo-x-ewts .
 }
