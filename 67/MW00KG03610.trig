@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG03610 {
+    bda:LG0MW00KG03610_UTT3IWLYZICD
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-06-05T18:15:31.884820Z"^^xsd:dateTime ;
+        adm:logMessage      "fix copyright status"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG39E3A279A9CDF66A
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-10-24T14:00:45.489Z"^^xsd:dateTime ;
@@ -44,48 +49,49 @@ bdg:MW00KG03610 {
         adm:gitPath         "67/MW00KG03610.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG03610 ;
-        adm:logEntry        bda:LG39E3A279A9CDF66A , bda:LG794FF2D57DEE23FA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW00KG03610_UTT3IWLYZICD , bda:LG39E3A279A9CDF66A , bda:LG794FF2D57DEE23FA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV6008DC5E2540D0E7
-        a                   :PublishedEvent ;
-        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID16E34F2D13408469
         a                   bdr:HollisId ;
         rdf:value           "014254377" .
     
-    bdr:MW00KG03610  a      :Instance ;
+    bdr:MW00KG03610  a      bdo:Instance ;
         skos:prefLabel      "bod kyi gsar 'god las rigs dang de'i lag len/"@bo-x-ewts , "status of the tibetan media"@en ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID16E34F2D13408469 ;
-        :authorshipStatement  "bod kyi gsar 'god mthun tshogs kyis tshogs chen go sgrig byas/"@bo-x-ewts ;
-        :biblioNote         "the articles are written in tibetan and engilsh language"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :extentStatement    "13, 133 p." ;
-        :hasTitle           bdr:TT65EF4C781C9EF2CB , bdr:TT88BCAE09B4233C2D , bdr:TT9325833FA957F363 ;
-        :instanceEvent      bdr:EV6008DC5E2540D0E7 ;
-        :instanceHasReproduction  bdr:W00KG03610 ;
-        :instanceOf         bdr:WA00KG03610 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "dharamsala, h.p."@en ;
-        :publisherName      "bod kyi gsar 'god mthun tshogs/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :workPrintery       "sherig parkhang, print plus delhi"@en .
+        bf:identifiedBy     bdr:ID16E34F2D13408469 ;
+        bdo:authorshipStatement  "bod kyi gsar 'god mthun tshogs kyis tshogs chen go sgrig byas/"@bo-x-ewts ;
+        bdo:biblioNote      "the articles are written in tibetan and engilsh language"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:extentStatement  "13, 133 p." ;
+        bdo:hasTitle        bdr:TT65EF4C781C9EF2CB , bdr:TT88BCAE09B4233C2D , bdr:TT9325833FA957F363 ;
+        bdo:instanceEvent   bdr:EV6008DC5E2540D0E7 ;
+        bdo:instanceHasReproduction  bdr:W00KG03610 ;
+        bdo:instanceOf      bdr:WA00KG03610 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "dharamsala, h.p."@en ;
+        bdo:publisherName   "bod kyi gsar 'god mthun tshogs/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:workPrintery    "sherig parkhang, print plus delhi"@en .
     
     bdr:TT65EF4C781C9EF2CB
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "status of the tibetan media"@en .
     
     bdr:TT88BCAE09B4233C2D
-        a                   :Title ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "bod kyi gsar 'god las rigs dang de'i lag len/"@bo-x-ewts .
     
     bdr:TT9325833FA957F363
-        a                   :Subtitle ;
+        a                   bdo:Subtitle ;
         rdfs:label          "bod kyi gsar 'god pa'i rgyal spyi'i tshogs chen thengs dang po'i gsung bshad dang rtsom yig khag"@bo-x-ewts .
 }
