@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG14783 {
+    bda:LG0MW1KG14783_79QF8HZ5LAIR
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-06-07T05:12:03.731350Z"^^xsd:dateTime ;
+        adm:logMessage      "fix copyright status"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LG6B0F09D818790DF4
         a                   adm:InitialDataCreation ;
         adm:logDate         "2015-03-23T09:31:07.643Z"^^xsd:dateTime ;
@@ -36,63 +41,60 @@ bdg:MW1KG14783 {
         adm:gitPath         "e7/MW1KG14783.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG14783 ;
-        adm:logEntry        bda:LG6B0F09D818790DF4 , bda:LG72AA68B8C050617A , bda:LGEDC55E86B2707B8C ;
+        adm:logEntry        bda:LG0MW1KG14783_79QF8HZ5LAIR , bda:LG6B0F09D818790DF4 , bda:LG72AA68B8C050617A , bda:LGEDC55E86B2707B8C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR68FAF59F2DA3DDF0
-        a                   :AgentAsCreator ;
-        :agent              bdr:P2362 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P2362 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:CRE18E2F695D4BC150
-        a                   :AgentAsCreator ;
-        :agent              bdr:P1PD112141 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P1PD112141 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EVFBA8C6C2F3EE030E
-        a                   :PublishedEvent ;
-        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDCCD64E8021EEC05E
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787105104123,978105104130" .
     
-    bdr:MW1KG14783  a       :Instance ;
+    bdr:MW1KG14783  a       bdo:Instance ;
         skos:altLabel       "宁玛续部汇编"@zh-hans ;
-        skos:prefLabel      "snga 'gyur rgyud 'bum phyogs bsgrigs/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCCD64E8021EEC05E ;
-        :authorshipStatement  "dpal brtsegs bod yig dpe rnying zhib 'jug khang gis bsgrigs/"@bo-x-ewts ;
-        :biblioNote         "In volume no. 28, folio no. 50b - 52b there is an invert in the order of the contents. Also in volume no. 30, folio no. 330b - 331b there is an invert in the order of the contents. In the end, it has marked ལ་ instead of ཨ། the contents are correct. In volume no. 46, there are many folios that are missing in the original final print, but here substituted from the pre-final text. Therefore some of the images do not have running titles. In volume no. 54, the Tibetan folio number is not in the correct order, but the contents does not have any missing pages."@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CR68FAF59F2DA3DDF0 , bdr:CRE18E2F695D4BC150 ;
-        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
-        :extentStatement    "58 + 1 v." ;
-        :hasTitle           bdr:TT2D93A8E5B676B74D , bdr:TT439D49AFC9D68548 , bdr:TT808A0710FFF07FF8 , bdr:TTE507893ED80088B9 ;
-        :instanceEvent      bdr:EVFBA8C6C2F3EE030E ;
-        :instanceHasReproduction  bdr:W1KG14783 ;
-        :instanceOf         bdr:WA3JT13481 ;
-        :numberOfVolumes    59 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "snga 'gyur rgyud 'bum phyogs bsgrigs/"@bo-x-ewts , "ning ma xu bu hui bian"@zh-latn-pinyin-x-ndia ;
+        bf:identifiedBy     bdr:IDCCD64E8021EEC05E ;
+        bdo:authorshipStatement  "dpal brtsegs bod yig dpe rnying zhib 'jug khang gis bsgrigs/"@bo-x-ewts ;
+        bdo:biblioNote      "In volume no. 28, folio no. 50b - 52b there is an invert in the order of the contents. Also in volume no. 30, folio no. 330b - 331b there is an invert in the order of the contents. In the end, it has marked ལ་ instead of ཨ། the contents are correct. In volume no. 46, there are many folios that are missing in the original final print, but here substituted from the pre-final text. Therefore some of the images do not have running titles. In volume no. 54, the Tibetan folio number is not in the correct order, but the contents does not have any missing pages."@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:creator         bdr:CR68FAF59F2DA3DDF0 , bdr:CRE18E2F695D4BC150 ;
+        bdo:editionStatement  "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "58 + 1 v." ;
+        bdo:hasTitle        bdr:TT2D93A8E5B676B74D , bdr:TT808A0710FFF07FF8 , bdr:TTE507893ED80088B9 ;
+        bdo:instanceEvent   bdr:EVFBA8C6C2F3EE030E ;
+        bdo:instanceHasReproduction  bdr:W1KG14783 ;
+        bdo:instanceOf      bdr:WA3JT13481 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  59 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT2D93A8E5B676B74D
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "宁玛续部汇编"@zh-hans .
     
-    bdr:TT439D49AFC9D68548
-        a                   :Title ;
-        rdfs:label          "snga 'gyur rgyud 'bum phyogs bsgrigs/"@bo-x-ewts .
-    
     bdr:TT808A0710FFF07FF8
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "ning ma xu bu hui bian"@zh-latn-pinyin-x-ndia .
     
     bdr:TTE507893ED80088B9
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "snga 'gyur rgyud 'bum rin po che phyogs bsgrigs/"@bo-x-ewts .
 }
