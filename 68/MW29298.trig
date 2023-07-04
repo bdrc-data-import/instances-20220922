@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW29298 {
+    bda:LG0MW29298_O0UXTDDDVYG1
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-04T14:22:18.658008Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG1FC0F943EE2DFEA8
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
@@ -49,25 +54,25 @@ bdg:MW29298 {
         adm:gitPath         "68/MW29298.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW29298 ;
-        adm:logEntry        bda:LG1FC0F943EE2DFEA8 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW29298_O0UXTDDDVYG1 , bda:LG1FC0F943EE2DFEA8 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CRDE8F354F11AF3850
-        a                   :AgentAsCreator ;
-        :agent              bdr:P6650 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P6650 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV477B8B8BE463DDAD
-        a                   :PublishedEvent ;
-        :eventWhen          "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID328056B11B16176D
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "PL3734 .B96 2005" .
     
     bdr:ID6FFC9CE654910D57
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "2005322263" .
     
     bdr:ID974D06C25E4E89C7
@@ -75,51 +80,49 @@ bdg:MW29298 {
         rdf:value           "014259982" .
     
     bdr:ID9B9E05DD2196035A
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7105068361" .
     
     bdr:IDB601A03597484DD6
         a                   bdr:HarvardShelfId ;
         rdf:value           "010590995-5" .
     
-    bdr:MW29298  a          :Instance ;
-        skos:altLabel       "collection of contemporary writing by tibetan women"@en ;
-        skos:prefLabel      "bzho lung /"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID328056B11B16176D , bdr:ID6FFC9CE654910D57 , bdr:ID974D06C25E4E89C7 , bdr:ID9B9E05DD2196035A , bdr:IDB601A03597484DD6 ;
-        :authorshipStatement  "dpal mos phyogs bsgrigs byas ; foreword by lauren r. hartley/"@bo-x-ewts ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CRDE8F354F11AF3850 ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "12, 9, 286 p." ;
-        :hasTitle           bdr:TT1C310DA724BCFD81 , bdr:TT60B87A86BE0FBDD8 , bdr:TT9C2D768E7EDC4C89 , bdr:TTA15277555E4EC6BB ;
-        :illustrations      "ports." ;
-        :instanceEvent      bdr:EV477B8B8BE463DDAD ;
-        :instanceHasReproduction  bdr:W29298 ;
-        :instanceOf         bdr:WA29298 ;
-        :note               bdr:NT1CD7AB8F356499E5 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+    bdr:MW29298  a          bdo:Instance ;
+        skos:altLabel       "Collection of contemporary writing by Tibetan women"@en ;
+        skos:prefLabel      "bzho lung /"@bo-x-ewts , "Bzo luṅ / dpal-mos rtsom sgrig byas."@en-x-mixed ;
+        bf:identifiedBy     bdr:ID328056B11B16176D , bdr:ID6FFC9CE654910D57 , bdr:ID974D06C25E4E89C7 , bdr:ID9B9E05DD2196035A , bdr:IDB601A03597484DD6 ;
+        bdo:authorshipStatement  "Edit by Palmo and foreword by Lauran R. Hartley"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:creator         bdr:CRDE8F354F11AF3850 ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "12, 9, 286 p." ;
+        bdo:hasTitle        bdr:TT1C310DA724BCFD81 , bdr:TT9C2D768E7EDC4C89 , bdr:TTA15277555E4EC6BB ;
+        bdo:illustrations   "ports." ;
+        bdo:instanceEvent   bdr:EV477B8B8BE463DDAD ;
+        bdo:instanceHasReproduction  bdr:W29298 ;
+        bdo:instanceOf      bdr:WA29298 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT1CD7AB8F356499E5 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT1CD7AB8F356499E5
-        a                   :Note ;
-        :noteText           "anthology of poetry by modern women writers"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Anthology of poetry by modern women writers"@en .
     
     bdr:TT1C310DA724BCFD81
-        a                   :CoverTitle ;
-        rdfs:label          "Bźo luṅ /Dpal-mos rtsom sgrig byas."@en-x-mixed .
-    
-    bdr:TT60B87A86BE0FBDD8
-        a                   :Title ;
-        rdfs:label          "bzho lung /"@bo-x-ewts .
+        a                   bdo:CoverTitle ;
+        rdfs:label          "Bzo luṅ / dpal-mos rtsom sgrig byas."@en-x-mixed .
     
     bdr:TT9C2D768E7EDC4C89
-        a                   :OtherTitle ;
-        rdfs:label          "collection of contemporary writing by tibetan women"@en .
+        a                   bdo:OtherTitle ;
+        rdfs:label          "Collection of contemporary writing by Tibetan women"@en .
     
     bdr:TTA15277555E4EC6BB
-        a                   :Subtitle ;
+        a                   bdo:Subtitle ;
         rdfs:label          "deng rabs bod kyi bud med rtsom pa po'i snyan rtsom gces btus/"@bo-x-ewts .
 }
