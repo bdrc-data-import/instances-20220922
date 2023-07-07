@@ -4,6 +4,8 @@
 @prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -15,20 +17,33 @@ bdg:MW4CN12094 {
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U0ES1788534075 .
     
+    bda:LG0MW4CN12094_XTUJHW4DPWQU
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-07T22:39:41.520180Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:MW4CN12094  a       adm:AdminData ;
         adm:adminAbout      bdr:MW4CN12094 ;
         adm:graphId         bdg:MW4CN12094 ;
-        adm:logEntry        bda:LG0MW4CN12094_P9HKXXS2J3OC ;
+        adm:logEntry        bda:LG0MW4CN12094_P9HKXXS2J3OC , bda:LG0MW4CN12094_XTUJHW4DPWQU ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
+    bdr:IDMW4CN12094RA87CYZH
+        a                   bf:Isbn ;
+        rdf:value           "9787105155422" .
+    
     bdr:MW4CN12094  a       bdo:Instance ;
         skos:prefLabel      "legs sbyar bang mdzod phyag bstar ma/"@bo-x-ewts , "梵文宝库"@zh-hans ;
+        bf:identifiedBy     bdr:IDMW4CN12094RA87CYZH ;
+        bdo:biblioNote      "Sanskrit lexicon. Handwritten by Gedun Chophel."@en ;
         bdo:binding         bdr:Binding_LooseLeaf_Pothi ;
-        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
         bdo:extentStatement  "2, 5, 178 p." ;
         bdo:hasTitle        bdr:TTMW4CN12094OJQQMS74 , bdr:TTMW4CN12094YXL8AVA8 ;
+        bdo:instanceOf      bdr:WA4CN12094 ;
         bdo:material        bdr:MaterialPaper ;
         bdo:numberOfVolumes  1 ;
         bdo:printMethod     bdr:PrintMethod_Modern ;
