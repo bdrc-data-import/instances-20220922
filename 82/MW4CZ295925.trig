@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ295925 {
+    bda:LG0MW4CZ295925_5X5CXYO5DWUE
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-18T19:34:07.794913Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG86D52ADAC95DAA70
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-09-06T10:27:36.297Z"^^xsd:dateTime ;
@@ -24,25 +27,36 @@ bdg:MW4CZ295925 {
         adm:gitPath         "82/MW4CZ295925.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ295925 ;
-        adm:logEntry        bda:LG86D52ADAC95DAA70 ;
+        adm:logEntry        bda:LG0MW4CZ295925_5X5CXYO5DWUE , bda:LG86D52ADAC95DAA70 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW4CZ295925  a      :Instance ;
+    bdr:EVMW4CZ295925RK7JP7OT
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW4CZ295925  a      bdo:Instance ;
         skos:prefLabel      "mdo las btus pa'i chos tshan sna tshogs/"@bo-x-ewts ;
-        :extentStatement    "1 v." ;
-        :hasTitle           bdr:TT4DD38341A2ABFC2C , bdr:TTE628DBA37A81429C ;
-        :instanceHasReproduction  bdr:W4CZ295925 ;
-        :instanceOf         bdr:WA4CZ295925 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:editionStatement  "par pa dpal ldan nas par du bskrun pa'o/"@bo-x-ewts ;
+        bdo:extentStatement  "1 v." ;
+        bdo:hasTitle        bdr:TT4DD38341A2ABFC2C , bdr:TTE628DBA37A81429C ;
+        bdo:instanceEvent   bdr:EVMW4CZ295925RK7JP7OT ;
+        bdo:instanceHasReproduction  bdr:W4CZ295925 ;
+        bdo:instanceOf      bdr:WA4CZ295925 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "lha sa/"@bo-x-ewts ;
+        bdo:publisherName   "dpal ldan/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT4DD38341A2ABFC2C
-        a                   :Title ;
+        a                   bdo:RunningTitle ;
         rdfs:label          "mdo las btus pa'i chos tshan sna tshogs/"@bo-x-ewts .
     
     bdr:TTE628DBA37A81429C
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "'phags pa tshe dang ye shes dpag tu med pa zhes bya ba theg pa chen po'i mdo sogs/"@bo-x-ewts .
 }
