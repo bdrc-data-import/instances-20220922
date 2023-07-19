@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW22178 {
+    bda:LG0MW22178_37XFEQ8NATIT
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-19T18:43:45.263018Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG404BCE5FA805A097
         a                   adm:UpdateData ;
         adm:logDate         "2020-10-13T15:23:29.268Z"^^xsd:dateTime ;
@@ -40,20 +43,23 @@ bdg:MW22178 {
         adm:gitPath         "a7/MW22178.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW22178 ;
-        adm:logEntry        bda:LG404BCE5FA805A097 , bda:LGC0CC2A07E1D13BBD , bda:LGD736D917F544ED20 , bda:LGFC395E35B4CDBFCB ;
+        adm:logEntry        bda:LG0MW22178_37XFEQ8NATIT , bda:LG404BCE5FA805A097 , bda:LGC0CC2A07E1D13BBD , bda:LGD736D917F544ED20 , bda:LGFC395E35B4CDBFCB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW22178  a          :Instance ;
+    bdr:MW22178  a          bdo:Instance ;
         skos:prefLabel      "dam chos 'dul ba'i skor gyi yig cha rnying pa gces bsdus/"@bo-x-ewts ;
-        :biblioNote         "phal che ba dbu med lag bris yin mod 'ga' zhig shing par rtsa chen yang yod do/"@bo-x-ewts ;
-        :extentStatement    "32 v." ;
-        :hasTitle           bdr:TTE13D69D1EE4F8543 ;
-        :instanceOf         bdr:WA22178 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:biblioNote      "phal che ba dbu med lag bris yin mod 'ga' zhig shing par rtsa chen yang yod do/"@bo-x-ewts ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "32 v." ;
+        bdo:hasTitle        bdr:TTE13D69D1EE4F8543 ;
+        bdo:instanceHasReproduction  bdr:W22178 ;
+        bdo:instanceOf      bdr:WA22178 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TTE13D69D1EE4F8543
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "dam chos 'dul ba'i skor gyi yig cha rnying pa gces bsdus/"@bo-x-ewts .
 }
