@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN22163 {
+    bda:LG0MW3CN22163_ESGH8REWPT0K
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-19T15:35:31.484910Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG22751EC7AE3B736A
         a                   adm:UpdateData ;
         adm:logDate         "2020-10-13T15:40:51.797Z"^^xsd:dateTime ;
@@ -35,26 +38,28 @@ bdg:MW3CN22163 {
         adm:gitPath         "90/MW3CN22163.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN22163 ;
-        adm:logEntry        bda:LG22751EC7AE3B736A , bda:LG4B60B55304CF273F , bda:LGDF1C9EEF7643D868 ;
+        adm:logEntry        bda:LG0MW3CN22163_ESGH8REWPT0K , bda:LG22751EC7AE3B736A , bda:LG4B60B55304CF273F , bda:LGDF1C9EEF7643D868 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW3CN22163  a       :Instance ;
+    bdr:MW3CN22163  a       bdo:Instance ;
         skos:prefLabel      "gsung thor bu/ rin chen bzang po/"@bo-x-ewts ;
-        :extentStatement    "1 v.(103 ff.)" ;
-        :hasTitle           bdr:TTA81CE3D912E67829 ;
-        :instanceHasReproduction  bdr:W3CN22163 ;
-        :instanceOf         bdr:WA3CN22163 ;
-        :note               bdr:NTA30681C50E631CF5 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "1 v.(103 ff.)" ;
+        bdo:hasTitle        bdr:TTA81CE3D912E67829 ;
+        bdo:instanceHasReproduction  bdr:W3CN22163 ;
+        bdo:instanceOf      bdr:WA3CN22163 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTA30681C50E631CF5 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NTA30681C50E631CF5
-        a                   :Note ;
-        :noteText           "originally missing some pages and restricted"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "originally missing some pages and restricted"@en .
     
     bdr:TTA81CE3D912E67829
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsung thor bu/ rin chen bzang po/"@bo-x-ewts .
 }
