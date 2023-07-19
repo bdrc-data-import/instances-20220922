@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN4062 {
+    bda:LG0MW3CN4062_E1PTGA1YQ378
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-19T13:51:49.295222Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG1B328EB54E55DA20
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-11-18T16:50:20.958Z"^^xsd:dateTime ;
@@ -36,21 +39,23 @@ bdg:MW3CN4062 {
         adm:gitPath         "db/MW3CN4062.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN4062 ;
-        adm:logEntry        bda:LG1B328EB54E55DA20 , bda:LG20EDFAE48F073C8F , bda:LGE4A6A4290725A818 ;
+        adm:logEntry        bda:LG0MW3CN4062_E1PTGA1YQ378 , bda:LG1B328EB54E55DA20 , bda:LG20EDFAE48F073C8F , bda:LGE4A6A4290725A818 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW3CN4062  a        :Instance ;
+    bdr:MW3CN4062  a        bdo:Instance ;
         skos:prefLabel      "dbus gyur 'chang gi gter chos phyogs bsdus/"@bo-x-ewts ;
-        :extentStatement    "33 v." ;
-        :hasTitle           bdr:TTD4C5539AEC1EC1B2 ;
-        :instanceHasReproduction  bdr:W3CN4062 ;
-        :instanceOf         bdr:WA3CN4062 ;
-        :numberOfVolumes    33 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "33 v." ;
+        bdo:hasTitle        bdr:TTD4C5539AEC1EC1B2 ;
+        bdo:instanceHasReproduction  bdr:W3CN4062 ;
+        bdo:instanceOf      bdr:WA3CN4062 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  33 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TTD4C5539AEC1EC1B2
-        a                   :Title ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "dbus gyur 'chang gi gter chos phyogs bsdus/"@bo-x-ewts .
 }
