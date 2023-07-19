@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN419 {
+    bda:LG0MW3CN419_U0FGEO96J1FJ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-19T14:56:24.861471Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LGA942D3287B8BB890
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-09-21T23:50:51.267Z"^^xsd:dateTime ;
@@ -30,25 +33,27 @@ bdg:MW3CN419 {
         adm:gitPath         "51/MW3CN419.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN419 ;
-        adm:logEntry        bda:LGA942D3287B8BB890 , bda:LGDB2C52B2DD45B247 ;
+        adm:logEntry        bda:LG0MW3CN419_U0FGEO96J1FJ , bda:LGA942D3287B8BB890 , bda:LGDB2C52B2DD45B247 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW3CN419  a         :Instance ;
+    bdr:MW3CN419  a         bdo:Instance ;
         skos:prefLabel      "dpal dus kyi 'khor lo'i bskyed rdzogs kyi lam rim sogs/"@bo-x-ewts ;
-        :extentStatement    "1 v." ;
-        :hasTitle           bdr:TT5FB54D836A02B5C6 , bdr:TTFA886A4C43D0A025 ;
-        :instanceHasReproduction  bdr:W3CN419 ;
-        :instanceOf         bdr:WA3CN419 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "1 v." ;
+        bdo:hasTitle        bdr:TT5FB54D836A02B5C6 , bdr:TTFA886A4C43D0A025 ;
+        bdo:instanceHasReproduction  bdr:W3CN419 ;
+        bdo:instanceOf      bdr:WA3CN419 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TT5FB54D836A02B5C6
-        a                   :Title ;
+        a                   bdo:FullTitle ;
         rdfs:label          "dpal dus kyi 'khor lo'i bskyed rdzogs kyi lam gyi rim pa rgyud don gsal byed thar 'dod gru rdzings/"@bo-x-ewts .
     
     bdr:TTFA886A4C43D0A025
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "dpal dus kyi 'khor lo'i bskyed rdzogs kyi lam rim sogs/"@bo-x-ewts .
 }
