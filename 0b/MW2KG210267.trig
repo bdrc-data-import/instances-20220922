@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG210267 {
@@ -17,6 +14,12 @@ bdg:MW2KG210267 {
         adm:logDate         "2020-10-13T15:40:49.553Z"^^xsd:dateTime ;
         adm:logMessage      "temporarily removed tbrc holdings note"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LG0MW2KG210267_KZXIZOHHXJW0
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-19T15:39:02.368102Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U0ES1788534075 .
     
     bda:LG5D9326315E101119
         a                   adm:InitialDataCreation ;
@@ -35,26 +38,28 @@ bdg:MW2KG210267 {
         adm:gitPath         "0b/MW2KG210267.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG210267 ;
-        adm:logEntry        bda:LG08CD59639D7D8AB4 , bda:LG5D9326315E101119 , bda:LGA83E6C3495903B7E ;
+        adm:logEntry        bda:LG08CD59639D7D8AB4 , bda:LG0MW2KG210267_KZXIZOHHXJW0 , bda:LG5D9326315E101119 , bda:LGA83E6C3495903B7E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW2KG210267  a      :Instance ;
+    bdr:MW2KG210267  a      bdo:Instance ;
         skos:prefLabel      "gsung thor bu/ blo gros rgyal po/"@bo-x-ewts ;
-        :extentStatement    "1 v. (658 ff.)" ;
-        :hasTitle           bdr:TT8D784AFED3EC2BDA ;
-        :instanceHasReproduction  bdr:W2KG210267 ;
-        :instanceOf         bdr:WA2KG210267 ;
-        :note               bdr:NT25380D66153999E5 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "1 v. (658 ff.)" ;
+        bdo:hasTitle        bdr:TT8D784AFED3EC2BDA ;
+        bdo:instanceHasReproduction  bdr:W2KG210267 ;
+        bdo:instanceOf      bdr:WA2KG210267 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT25380D66153999E5 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NT25380D66153999E5
-        a                   :Note ;
-        :noteText           "this volume is mixing manuscript and woodblock print together"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "this volume is mixing manuscript and woodblock print together"@en .
     
     bdr:TT8D784AFED3EC2BDA
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsung thor bu/ blo gros rgyal po/"@bo-x-ewts .
 }
