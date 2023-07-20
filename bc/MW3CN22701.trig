@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN22701 {
@@ -17,6 +14,12 @@ bdg:MW3CN22701 {
         adm:logDate         "2020-10-13T15:49:13.715Z"^^xsd:dateTime ;
         adm:logMessage      "temporarily removed tbrc holdings note"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LG0MW3CN22701_GIF1KOU5NK2I
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-20T15:59:01.671043Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
     
     bda:LG63AF031F370D69CB
         a                   adm:UpdateData ;
@@ -42,23 +45,27 @@ bdg:MW3CN22701 {
         adm:gitPath         "bc/MW3CN22701.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN22701 ;
-        adm:logEntry        bda:LG04243FE3F05A8935 , bda:LG63AF031F370D69CB , bda:LGA43B15CF6197FCD0 , bda:LGCABCEAAD9A3C3C6F ;
+        adm:logEntry        bda:LG04243FE3F05A8935 , bda:LG0MW3CN22701_GIF1KOU5NK2I , bda:LG63AF031F370D69CB , bda:LGA43B15CF6197FCD0 , bda:LGCABCEAAD9A3C3C6F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW3CN22701  a       :Instance ;
+    bdr:MW3CN22701  a       bdo:Instance ;
         skos:prefLabel      "rgyal chen rnam thos sras kyi chos skor/"@bo-x-ewts ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT350571F70A03D64B , bdr:TT592DD472127355BF ;
-        :instanceOf         bdr:WA3CN22701 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:hasTitle        bdr:TT350571F70A03D64B , bdr:TT592DD472127355BF ;
+        bdo:instanceHasReproduction  bdr:W3CN22701 ;
+        bdo:instanceOf      bdr:WA3CN22701 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT350571F70A03D64B
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rnam sras be'u bum/"@bo-x-ewts .
     
     bdr:TT592DD472127355BF
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "rgyal chen rnam thos sras kyi chos skor/"@bo-x-ewts .
 }
