@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN22914 {
+    bda:LG0MW3CN22914_QBSH2ZEYY5NJ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-20T22:16:27.109375Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG4F2F19BCB7B90DE4
         a                   adm:UpdateData ;
         adm:logDate         "2020-06-14T19:24:28.271Z"^^xsd:dateTime ;
@@ -35,19 +38,24 @@ bdg:MW3CN22914 {
         adm:gitPath         "48/MW3CN22914.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN22914 ;
-        adm:logEntry        bda:LG4F2F19BCB7B90DE4 , bda:LG68DEB28E12C0D3B0 , bda:LG863F78DFE35EC43F ;
+        adm:logEntry        bda:LG0MW3CN22914_QBSH2ZEYY5NJ , bda:LG4F2F19BCB7B90DE4 , bda:LG68DEB28E12C0D3B0 , bda:LG863F78DFE35EC43F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW3CN22914  a       :Instance ;
+    bdr:MW3CN22914  a       bdo:Instance ;
         skos:prefLabel      "gsang 'dus rtsa rgyud sogs gsang ba 'dus pa'i skor gyi rgya gzhung dpe rnying /"@bo-x-ewts ;
-        :extentStatement    "5 v." ;
-        :hasTitle           bdr:TT4E42F96B361ADEA4 ;
-        :instanceOf         bdr:WA3CN22914 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "5 v." ;
+        bdo:hasTitle        bdr:TT4E42F96B361ADEA4 ;
+        bdo:instanceHasReproduction  bdr:W3CN22914 ;
+        bdo:instanceOf      bdr:WA3CN22914 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  5 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TT4E42F96B361ADEA4
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsang 'dus rtsa rgyud sogs gsang ba 'dus pa'i skor gyi rgya gzhung dpe rnying /"@bo-x-ewts .
 }
