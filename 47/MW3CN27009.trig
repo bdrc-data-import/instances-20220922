@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN27009 {
+    bda:LG0MW3CN27009_KVKH7RS1EPEJ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-07-27T20:55:24.138366Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG3AD0044AB1BBBF7F
         a                   adm:UpdateData ;
         adm:logDate         "2022-01-12T12:54:36.65Z"^^xsd:dateTime ;
@@ -42,19 +45,23 @@ bdg:MW3CN27009 {
         adm:gitPath         "47/MW3CN27009.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN27009 ;
-        adm:logEntry        bda:LG3AD0044AB1BBBF7F , bda:LGBC649120EC5BF0A3 , bda:LGE7BD5D3287BA2630 , bda:LGE813DDE7658A878F ;
+        adm:logEntry        bda:LG0MW3CN27009_KVKH7RS1EPEJ , bda:LG3AD0044AB1BBBF7F , bda:LGBC649120EC5BF0A3 , bda:LGE7BD5D3287BA2630 , bda:LGE813DDE7658A878F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusHidden .
     
-    bdr:MW3CN27009  a       :Instance ;
+    bdr:MW3CN27009  a       bdo:Instance ;
         skos:prefLabel      "mdo sngags bstan bcos sna tshogs kyi dpe rnying bris ma phyogs bsdebs/"@bo-x-ewts ;
-        :extentStatement    "134 v." ;
-        :hasTitle           bdr:TTD784F5FAC7C4E41C ;
-        :instanceOf         bdr:WA3CN27009 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:hasTitle        bdr:TTD784F5FAC7C4E41C ;
+        bdo:instanceHasReproduction  bdr:W3CN27009 ;
+        bdo:instanceOf      bdr:WA3CN27009 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  111 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TTD784F5FAC7C4E41C
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "mdo sngags bstan bcos sna tshogs kyi dpe rnying bris ma phyogs bsdebs/"@bo-x-ewts .
 }
