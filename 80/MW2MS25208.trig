@@ -1,0 +1,66 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW2MS25208 {
+    bda:LG06A2A62CFDB55838
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-09-29T10:08:38.761Z"^^xsd:dateTime ;
+        adm:logMessage      "publish into indium"@en ;
+        adm:logWho          bdu:U00020 .
+    
+    bda:LG4BDDE08697D9D91F
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-06-19T16:56:27.722Z"^^xsd:dateTime ;
+        adm:logMessage      "changed status to withdrawn"@en ;
+        adm:logWho          bdu:U00006 .
+    
+    bda:LGB03F410A03533403
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-09-29T10:13:18.937Z"^^xsd:dateTime ;
+        adm:logMessage      "pub into indium as admin user"@en ;
+        adm:logWho          bdu:U00020 .
+    
+    bda:LGIMB50083FA  a     adm:UpdateData ;
+        adm:logAgent        "works-mark-withdrawn.xql" ;
+        adm:logDate         "2019-06-19T17:03:10.044Z"^^xsd:dateTime ;
+        adm:logMessage      "changed status to withdrawn"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW2MS25208  a       adm:AdminData ;
+        adm:adminAbout      bdr:MW2MS25208 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "80/MW2MS25208.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW2MS25208 ;
+        adm:logEntry        bda:LG06A2A62CFDB55838 , bda:LG4BDDE08697D9D91F , bda:LGB03F410A03533403 , bda:LGIMB50083FA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV8676FB9A284CAD0C
+        a                   :PublishedEvent ;
+        :eventWhen          "1994/2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW2MS25208  a       :Instance ;
+        skos:prefLabel      "bstan 'gyur (dpe bsdur ma)"@bo-x-ewts ;
+        :editionStatement   "computer input for the purpose of printing; processed into Unicode Tibetan XML by TBRC"@en ;
+        :hasTitle           bdr:TT9CEFFF539264A222 ;
+        :instanceEvent      bdr:EV8676FB9A284CAD0C ;
+        :language           bdr:LangBo ;
+        :publisherLocation  "pe cin/"@bo-x-ewts ;
+        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        :script             bdr:ScriptTibt .
+    
+    bdr:TT9CEFFF539264A222
+        a                   :Title ;
+        rdfs:label          "bstan 'gyur (dpe bsdur ma)"@bo-x-ewts .
+}
