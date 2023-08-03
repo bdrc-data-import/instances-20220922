@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ295448 {
@@ -17,6 +14,12 @@ bdg:MW4CZ295448 {
         adm:logDate         "2017-10-23T10:06:27.344Z"^^xsd:dateTime ;
         adm:logMessage      "added more info and released"@en ;
         adm:logWho          bdu:U00017 .
+    
+    bda:LG0MW4CZ295448_E3DBPS8DUDH2
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-03T16:18:44.303104Z"^^xsd:dateTime ;
+        adm:logMessage      "added IE"@en ;
+        adm:logWho          bdu:U1426146149 .
     
     bda:LG4C5FB67FCB8B82B8
         a                   adm:InitialDataCreation ;
@@ -36,35 +39,39 @@ bdg:MW4CZ295448 {
         adm:gitPath         "c9/MW4CZ295448.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ295448 ;
-        adm:logEntry        bda:LG03EA0E3C56A28DA0 , bda:LG4C5FB67FCB8B82B8 , bda:LG90D6902984630F4C ;
+        adm:logEntry        bda:LG03EA0E3C56A28DA0 , bda:LG0MW4CZ295448_E3DBPS8DUDH2 , bda:LG4C5FB67FCB8B82B8 , bda:LG90D6902984630F4C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVB85AFB49F817AB15
-        a                   :PublishedEvent ;
-        :eventWhen          "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2015"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW4CZ295448  a      :Instance , :SerialInstance ;
+    bdr:MW4CZ295448  a      bdo:Instance ;
         skos:prefLabel      "tshad ma rigs pa'i gter gyi rnam bshad legs par bshad pa'i snying po/"@bo-x-ewts ;
-        :editionStatement   "1st edition"@en ;
-        :extentStatement    "l, 351 p." ;
-        :hasTitle           bdr:TTEE66B781A4B84899 , bdr:TTFA4F25D5CCEB1168 ;
-        :instanceEvent      bdr:EVB85AFB49F817AB15 ;
-        :instanceHasReproduction  bdr:W4CZ295448 ;
-        :instanceOf         bdr:WA4CZ295448 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "bylakuppe, mysore"@en ;
-        :publisherName      "bahd sgrub zung 'brel dpar bskrun lhan tshogs/"@en ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1KG24218 ;
-        :seriesNumber       "4" .
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:editionStatement  "1st edition"@en ;
+        bdo:extentStatement  "l, 351 p." ;
+        bdo:hasTitle        bdr:TTEE66B781A4B84899 , bdr:TTFA4F25D5CCEB1168 ;
+        bdo:instanceEvent   bdr:EVB85AFB49F817AB15 ;
+        bdo:instanceHasReproduction  bdr:IE4CZ295448 , bdr:W4CZ295448 ;
+        bdo:instanceOf      bdr:WA4CZ295448 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "bylakuppe, mysore"@en ;
+        bdo:publisherName   "bshad sgrub zung 'brel dpar bskrun lhan tshogs/"@en ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS1KG24218 ;
+        bdo:seriesNumber    "4" .
     
     bdr:TTEE66B781A4B84899
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "rigs gter rnam bshad legs par bshad pa'i snying po/ (rtsa 'grel sbyar ma/)"@bo-x-ewts .
     
     bdr:TTFA4F25D5CCEB1168
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "tshad ma rigs pa'i gter gyi rnam bshad legs par bshad pa'i snying po/"@bo-x-ewts .
 }
