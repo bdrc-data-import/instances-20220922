@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1AB1 {
+    bda:LG0MW1AB1_JHTBHGZVMHRQ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-03T15:37:55.752799Z"^^xsd:dateTime ;
+        adm:logMessage      "added IE"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGD33D32B45F51096A
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-10-24T18:23:25.717Z"^^xsd:dateTime ;
@@ -24,41 +27,44 @@ bdg:MW1AB1 {
         adm:gitPath         "7d/MW1AB1.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1AB1 ;
-        adm:logEntry        bda:LGD33D32B45F51096A ;
+        adm:logEntry        bda:LG0MW1AB1_JHTBHGZVMHRQ , bda:LGD33D32B45F51096A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV150872E9D7AE9E81
-        a                   :PublishedEvent ;
-        :eventWhen          "2017"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2017"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW1AB1  a           :Instance ;
+    bdr:MW1AB1  a           bdo:Instance ;
         skos:prefLabel      "kun btus dar Tik"@bo-x-ewts ;
-        :authorshipStatement  "mdzad pa po/ rtsa ba/ shing rta chen po slob dpon thogs med/ 'grel pa/ rgyal tshab dar ma rin chen/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :editionStatement   "1st ed."@en ;
-        :extentStatement    "j, xiii, 633 p." ;
-        :hasTitle           bdr:TT14DC767DE4256ACD , bdr:TTFEE1128D9B2C3ADD ;
-        :instanceEvent      bdr:EV150872E9D7AE9E81 ;
-        :instanceHasReproduction  bdr:W1AB1 ;
-        :instanceOf         bdr:WA1AB1 ;
-        :note               bdr:NTE33741B2AAEA4D5C ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "bylakuppe, karnataka"@en ;
-        :publisherName      "bshad sgrub zung 'brel par skrun lhan tshogs/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:authorshipStatement  "mdzad pa po/ rtsa ba/ shing rta chen po slob dpon thogs med/ 'grel pa/ rgyal tshab dar ma rin chen/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:editionStatement  "1st ed."@en ;
+        bdo:extentStatement  "j, xiii, 633 p." ;
+        bdo:hasTitle        bdr:TT14DC767DE4256ACD , bdr:TTFEE1128D9B2C3ADD ;
+        bdo:instanceEvent   bdr:EV150872E9D7AE9E81 ;
+        bdo:instanceHasReproduction  bdr:IE1AB1 , bdr:W1AB1 ;
+        bdo:instanceOf      bdr:WA1AB1 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTE33741B2AAEA4D5C ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "bylakuppe, karnataka"@en ;
+        bdo:publisherName   "bshad sgrub zung 'brel par skrun lhan tshogs/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTE33741B2AAEA4D5C
-        a                   :Note ;
-        :noteText           "Offered by Jampa Khedrub (Dan Frey), from Sera Je Monastery"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Offered by Jampa Khedrub (Dan Frey), from Sera Je Monastery"@en .
     
     bdr:TT14DC767DE4256ACD
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "kun btus dar Tik"@bo-x-ewts .
     
     bdr:TTFEE1128D9B2C3ADD
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "kun btus rnam bshad legs par bshad pa chos mngon rgya mtsho'i snying po/"@bo-x-ewts .
 }
