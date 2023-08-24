@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3JT13371 {
+    bda:LG0MW3JT13371_MJPIY43VA13T
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-24T15:55:26.340581Z"^^xsd:dateTime ;
+        adm:logMessage      "added IE and scan"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG2551A8960E5F5947
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-02-26T10:11:04.657Z"^^xsd:dateTime ;
@@ -29,29 +32,36 @@ bdg:MW3JT13371 {
         adm:gitPath         "64/MW3JT13371.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3JT13371 ;
-        adm:logEntry        bda:LG2551A8960E5F5947 , bda:LGBB750A375A5A80C7 ;
+        adm:logEntry        bda:LG0MW3JT13371_MJPIY43VA13T , bda:LG2551A8960E5F5947 , bda:LGBB750A375A5A80C7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVD77D26CDA311E406
-        a                   :PublishedEvent ;
-        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2005"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3JT13371  a       :Instance ;
+    bdr:MW3JT13371  a       bdo:Instance ;
         skos:prefLabel      "'dul ba me tog phreng rgyud/"@bo-x-ewts ;
-        :biblioNote         "Electronic edition from Vajra Vidya Institute"@en ;
-        :hasTitle           bdr:TTF0BFAF3AA238A96A , bdr:TTF5DDD8273784D6FE ;
-        :instanceEvent      bdr:EVD77D26CDA311E406 ;
-        :instanceOf         bdr:WA3JT13371 ;
-        :publisherLocation  "Sarnath, Varanasi, U.P."@en ;
-        :publisherName      "Vajra Vidya Institute"@en ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "Electronic edition from Vajra Vidya Institute"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "242 p." ;
+        bdo:hasTitle        bdr:TTF0BFAF3AA238A96A , bdr:TTF5DDD8273784D6FE ;
+        bdo:instanceEvent   bdr:EVD77D26CDA311E406 ;
+        bdo:instanceHasReproduction  bdr:IE3JT13371 , bdr:W3JT13371 ;
+        bdo:instanceOf      bdr:WA3JT13371 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Sarnath, Varanasi, U.P."@en ;
+        bdo:publisherName   "Vajra Vidya Institute"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TTF0BFAF3AA238A96A
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "'phags pa gzhi thams cad yod par smra ba'i 'dul ba tshig le'ur byas pa me tog gi phreng rgyud/"@bo-x-ewts .
     
     bdr:TTF5DDD8273784D6FE
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "'dul ba me tog phreng rgyud/"@bo-x-ewts .
 }
