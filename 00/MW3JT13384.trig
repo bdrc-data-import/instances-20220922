@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3JT13384 {
+    bda:LG0MW3JT13384_XOJLLSLBKE9R
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-29T21:15:37.550044Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGC5BD4D00A09A4016
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-02-26T10:11:05.16Z"^^xsd:dateTime ;
@@ -29,21 +32,28 @@ bdg:MW3JT13384 {
         adm:gitPath         "00/MW3JT13384.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3JT13384 ;
-        adm:logEntry        bda:LGC5BD4D00A09A4016 , bda:LGFE4DEE6F2744288B ;
+        adm:logEntry        bda:LG0MW3JT13384_XOJLLSLBKE9R , bda:LGC5BD4D00A09A4016 , bda:LGFE4DEE6F2744288B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3JT13384  a       :Instance ;
-        skos:prefLabel      "'jam dbyangs mkhyen brtse'i dbang po sogs bla ma kha shas kyi gsung phyogs bsgrigs/"@bo-x-ewts ;
-        :hasTitle           bdr:TT385209D73DB770B6 , bdr:TT60FD992A69E4EB70 ;
-        :instanceOf         bdr:WA3JT13384 ;
-        :script             bdr:ScriptTibt .
+    bdr:MW3JT13384  a       bdo:Instance ;
+        skos:prefLabel      "gsung 'bum/ 'jam dbyangs mkhyen brtse'i dbang po/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "18 v." ;
+        bdo:hasTitle        bdr:TT385209D73DB770B6 , bdr:TT60FD992A69E4EB70 ;
+        bdo:instanceHasReproduction  bdr:IE3JT13384 , bdr:W3JT13384 ;
+        bdo:instanceOf      bdr:WA3JT13384 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  18 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT385209D73DB770B6
-        a                   :Title ;
-        rdfs:label          "'jam dbyangs mkhyen brtse'i dbang po sogs bla ma kha shas kyi gsung phyogs bsgrigs/"@bo-x-ewts .
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "gsung 'bum/ 'jam dbyangs mkhyen brtse'i dbang po/"@bo-x-ewts .
     
     bdr:TT60FD992A69E4EB70
-        a                   :TitlePageTitle ;
-        rdfs:label          "'jam dbyangs mkhyen brtse'i dbang po sogs bla ma khag gi gsung phyogs bsgrigs/"@bo-x-ewts .
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "rdzong sar 'jam dbyangs mkhyen brtse'i dbang po'i gsung 'bum/"@bo-x-ewts .
 }
