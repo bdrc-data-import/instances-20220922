@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3JT13282 {
+    bda:LG0MW3JT13282_QXGM9VGPJGZP
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-29T20:07:07.598190Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG1D4C0C7F34AFDCEC
         a                   adm:UpdateData ;
         adm:logDate         "2014-05-12T20:31:26.746Z"^^xsd:dateTime ;
@@ -35,33 +38,37 @@ bdg:MW3JT13282 {
         adm:gitPath         "cf/MW3JT13282.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3JT13282 ;
-        adm:logEntry        bda:LG1D4C0C7F34AFDCEC , bda:LG640BC39AC6BCCCE8 , bda:LGEF9767BF0460103F ;
+        adm:logEntry        bda:LG0MW3JT13282_QXGM9VGPJGZP , bda:LG1D4C0C7F34AFDCEC , bda:LG640BC39AC6BCCCE8 , bda:LGEF9767BF0460103F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVF045D058895C2F89
-        a                   :PublishedEvent ;
-        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3JT13282  a       :Instance ;
+    bdr:MW3JT13282  a       bdo:Instance ;
         skos:prefLabel      "sdom pa gsum gyi rnam gzhag mdor bsdus pa/"@bo-x-ewts ;
-        :authorshipStatement  "zhes pa bkra shis zur mangs nas bla ma nam mkha' rdo rjes dgos zhes/ chos grags rgya mtshos kong yul gsa' phur bris pa'o"@bo-x-ewts ;
-        :biblioNote         "Electronic edition from Karma Leksheyling"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT30DB563E4EE80800 ;
-        :instanceEvent      bdr:EVF045D058895C2F89 ;
-        :instanceOf         bdr:WA3JT13282 ;
-        :note               bdr:NT880330953CD35864 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "swayambhu, kathmandu"@en ;
-        :publisherName      "karma leksheyling"@en ;
-        :script             bdr:ScriptTibt .
+        bdo:authorshipStatement  "zhes pa bkra shis zur mangs nas bla ma nam mkha' rdo rjes dgos zhes/ chos grags rgya mtshos kong yul gsa' phur bris pa'o"@bo-x-ewts ;
+        bdo:biblioNote      "Electronic edition from Karma Leksheyling"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:hasTitle        bdr:TT30DB563E4EE80800 ;
+        bdo:instanceEvent   bdr:EVF045D058895C2F89 ;
+        bdo:instanceOf      bdr:WA3JT13282 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT880330953CD35864 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "swayambhu, kathmandu"@en ;
+        bdo:publisherName   "karma leksheyling"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT880330953CD35864
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TT30DB563E4EE80800
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "sdom pa gsum gyi rnam gzhag mdor bsdus pa/"@bo-x-ewts .
 }
