@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG22061 {
+    bda:LG0MW1KG22061_4A4EWHO3LMZG
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-29T14:23:40.066351Z"^^xsd:dateTime ;
+        adm:logMessage      "generated IE"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGB46EC4FC962FAC96
         a                   adm:InitialDataCreation ;
         adm:logDate         "2015-06-10T15:27:04.682Z"^^xsd:dateTime ;
@@ -24,16 +29,16 @@ bdg:MW1KG22061 {
         adm:gitPath         "4a/MW1KG22061.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG22061 ;
-        adm:logEntry        bda:LGB46EC4FC962FAC96 ;
+        adm:logEntry        bda:LG0MW1KG22061_4A4EWHO3LMZG , bda:LGB46EC4FC962FAC96 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV9D49D97E792F66A6
-        a                   :PublishedEvent ;
-        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID17B0CD618EA8C613
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "85900397" .
     
     bdr:IDA94FDBB92DC0E457
@@ -41,36 +46,38 @@ bdg:MW1KG22061 {
         rdf:value           "i tib 2557" .
     
     bdr:IDBDE6EE8AA61CC14E
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ1885 .M5 1984" .
     
-    bdr:MW1KG22061  a       :Instance ;
+    bdr:MW1KG22061  a       bdo:Instance ;
         skos:altLabel       "a detailed commentary on the prajnaparamita literature"@en ;
         skos:prefLabel      "sher phyin mngon rtogs rgyan gyi bstan bcos rgyas 'grel/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID17B0CD618EA8C613 , bdr:IDA94FDBB92DC0E457 , bdr:IDBDE6EE8AA61CC14E ;
-        :biblioNote         "Reproduced from a clear print from the Dpal-spungs blocks."@en ;
-        :extentStatement    "2 v." ;
-        :hasSourcePrintery  bdr:G3JT12497 ;
-        :hasTitle           bdr:TT5BBB97CDE2E29B6C , bdr:TT677D16C14FB5CB4D , bdr:TT7E87EE7BFFFC04D4 ;
-        :instanceEvent      bdr:EV9D49D97E792F66A6 ;
-        :instanceHasReproduction  bdr:W1KG22061 ;
-        :instanceOf         bdr:WA1KG22061 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "delhi"@en ;
-        :publisherName      "delhi karmapae choedhey, gyalwae sungrab partun khang"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID17B0CD618EA8C613 , bdr:IDA94FDBB92DC0E457 , bdr:IDBDE6EE8AA61CC14E ;
+        bdo:biblioNote      "Reproduced from a clear print from the Dpal-spungs blocks."@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasSourcePrintery  bdr:G3JT12497 ;
+        bdo:hasTitle        bdr:TT5BBB97CDE2E29B6C , bdr:TT677D16C14FB5CB4D , bdr:TT7E87EE7BFFFC04D4 ;
+        bdo:instanceEvent   bdr:EV9D49D97E792F66A6 ;
+        bdo:instanceHasReproduction  bdr:IE3JT13310 , bdr:W1KG22061 ;
+        bdo:instanceOf      bdr:WA1KG22061 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "delhi"@en ;
+        bdo:publisherName   "delhi karmapae choedhey, gyalwae sungrab partun khang"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT5BBB97CDE2E29B6C
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "shes rab kyi pha rol tu phyin pa'i lung chos mtha' dag gi bdud rtsi'i snying por gyur pa gang la ldan pa'i gzhi rje btsun mchog tu dgyes par ngal gso ba'i yongs 'du sa brtol gyi ljon pa rgyas pa/"@bo-x-ewts .
     
     bdr:TT677D16C14FB5CB4D
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "a detailed commentary on the prajnaparamita literature"@en .
     
     bdr:TT7E87EE7BFFFC04D4
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "sher phyin mngon rtogs rgyan gyi bstan bcos rgyas 'grel/"@bo-x-ewts .
 }
