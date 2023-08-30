@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG11903 {
+    bda:LG0MW1KG11903_4FRCD6PPTWN6
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-30T11:40:30.135685Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG23C10E2F89EFF9A6
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-02-29T14:58:21.895Z"^^xsd:dateTime ;
@@ -38,38 +43,41 @@ bdg:MW1KG11903 {
         adm:gitPath         "06/MW1KG11903.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG11903 ;
-        adm:logEntry        bda:LG23C10E2F89EFF9A6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1KG11903_4FRCD6PPTWN6 , bda:LG23C10E2F89EFF9A6 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7E611F616B66DCEE
-        a                   :PublishedEvent ;
-        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDE43E6300E7EAECBD
         a                   bdr:HollisId ;
         rdf:value           "014255754" .
     
-    bdr:MW1KG11903  a       :Instance ;
+    bdr:MW1KG11903  a       bdo:Instance ;
         skos:prefLabel      "gsung 'bum/_shes rab rin chen/ (sa skya rgyal yongs gsung rab slob gnyer khang gi glog klad par ma/)"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE43E6300E7EAECBD ;
-        :biblioNote         "printed from computerized input"@en ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TTAC95B1203522D251 , bdr:TTE114A8C8CD99DAD7 ;
-        :instanceEvent      bdr:EV7E611F616B66DCEE ;
-        :instanceHasReproduction  bdr:IE1KG11903 , bdr:W1KG11903 ;
-        :instanceOf         bdr:WA1KG11903 ;
-        :numberOfVolumes    2 ;
-        :publisherLocation  "[kathmandu]"@en ;
-        :publisherName      "sa skya rgyal yongs gsung rab slob gnyer khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:IDE43E6300E7EAECBD ;
+        bdo:biblioNote      "printed from computerized input"@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TTAC95B1203522D251 , bdr:TTE114A8C8CD99DAD7 ;
+        bdo:instanceEvent   bdr:EV7E611F616B66DCEE ;
+        bdo:instanceHasReproduction  bdr:IE1KG11903 , bdr:W1KG11903 ;
+        bdo:instanceOf      bdr:WA1KG11903 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "[kathmandu]"@en ;
+        bdo:publisherName   "sa skya rgyal yongs gsung rab slob gnyer khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TTAC95B1203522D251
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsung 'bum/_shes rab rin chen/ (sa skya rgyal yongs gsung rab slob gnyer khang gi glog klad par ma/)"@bo-x-ewts .
     
     bdr:TTE114A8C8CD99DAD7
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "stag tshang lo tsA ba shes rab rin chen gyi gsung 'bum/"@bo-x-ewts .
 }
