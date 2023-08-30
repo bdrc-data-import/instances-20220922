@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG11946 {
+    bda:LG0MW1KG11946_JJ5Y2ET0H45W
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-30T13:18:32.823139Z"^^xsd:dateTime ;
+        adm:logMessage      "added IE"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGA44850CB7F484C49
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-02-29T15:08:30.911Z"^^xsd:dateTime ;
@@ -38,38 +43,41 @@ bdg:MW1KG11946 {
         adm:gitPath         "b4/MW1KG11946.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG11946 ;
-        adm:logEntry        bda:LGA44850CB7F484C49 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1KG11946_JJ5Y2ET0H45W , bda:LGA44850CB7F484C49 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV953013A2B0D0018B
-        a                   :PublishedEvent ;
-        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID7CDB559CFFDEFD44
         a                   bdr:HollisId ;
         rdf:value           "014255765" .
     
-    bdr:MW1KG11946  a       :Instance ;
+    bdr:MW1KG11946  a       bdo:Instance ;
         skos:prefLabel      "gsung 'bum/_kun dga' bstan pa'i rgyal mtshan/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID7CDB559CFFDEFD44 ;
-        :biblioNote         "printed from computerized input"@en ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT17B250A76CBFDC4D , bdr:TTD9E47D1F50BCFE81 ;
-        :instanceEvent      bdr:EV953013A2B0D0018B ;
-        :instanceHasReproduction  bdr:W1KG11946 ;
-        :instanceOf         bdr:WA1KG11946 ;
-        :numberOfVolumes    2 ;
-        :publisherLocation  "[kathmandu]"@en ;
-        :publisherName      "sa skya rgyal yongs gsung rab slob gnyer khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID7CDB559CFFDEFD44 ;
+        bdo:biblioNote      "printed from computerized input"@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TT17B250A76CBFDC4D , bdr:TTD9E47D1F50BCFE81 ;
+        bdo:instanceEvent   bdr:EV953013A2B0D0018B ;
+        bdo:instanceHasReproduction  bdr:IE1KG11946 , bdr:W1KG11946 ;
+        bdo:instanceOf      bdr:WA1KG11946 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "[Kathmandu]"@en ;
+        bdo:publisherName   "sa skya rgyal yongs gsung rab slob gnyer khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT17B250A76CBFDC4D
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsung 'bum/_kun dga' bstan pa'i rgyal mtshan/"@bo-x-ewts .
     
     bdr:TTD9E47D1F50BCFE81
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "sde ston 'jam dbyangs kun dga' bstan pa'i rgyal mtshan gyi gsung 'bum/"@bo-x-ewts .
 }
