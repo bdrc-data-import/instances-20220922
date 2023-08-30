@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8039 {
+    bda:LG0MW8039_XBAIH5PVIMHZ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-30T14:22:20.259799Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG6363337DE3C61695
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
@@ -41,43 +46,46 @@ bdg:MW8039 {
         adm:gitPath         "44/MW8039.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8039 ;
-        adm:logEntry        bda:LG6363337DE3C61695 , bda:LGBCE3E77D784C9E48 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW8039_XBAIH5PVIMHZ , bda:LG6363337DE3C61695 , bda:LGBCE3E77D784C9E48 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7816A4E06819276B
-        a                   :PublishedEvent ;
-        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDC4DBABA8120CCA8B
         a                   bdr:HollisId ;
         rdf:value           "014261062" .
     
-    bdr:MW8039  a           :Instance ;
+    bdr:MW8039  a           bdo:Instance ;
         skos:prefLabel      "gsung 'bum/_mi bskyod rdo rje/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC4DBABA8120CCA8B ;
-        :authorshipStatement  "edited by karma bde legs/"@bo-x-ewts ;
-        :biblioNote         "in the 26 v. (2004) collected works of karma pa 08 mi bskyod rdo rje; texts sought out with the support of the bodhi foundation and published through the support of the tsadra foundation"@en ;
-        :extentStatement    "26 v." ;
-        :hasTitle           bdr:TTB28CA8DD431DD49D , bdr:TTF634C02425F1DB3D ;
-        :instanceEvent      bdr:EV7816A4E06819276B ;
-        :instanceHasReproduction  bdr:W8039 ;
-        :instanceOf         bdr:WA8039 ;
-        :note               bdr:NT9DCD120C0263968D ;
-        :numberOfVolumes    26 ;
-        :publisherLocation  "[lha sa]"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:IDC4DBABA8120CCA8B ;
+        bdo:authorshipStatement  "edited by karma bde legs/"@bo-x-ewts ;
+        bdo:biblioNote      "in the 26 v. (2004) collected works of karma pa 08 mi bskyod rdo rje; texts sought out with the support of the bodhi foundation and published through the support of the tsadra foundation"@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "26 v." ;
+        bdo:hasTitle        bdr:TTB28CA8DD431DD49D , bdr:TTF634C02425F1DB3D ;
+        bdo:instanceEvent   bdr:EV7816A4E06819276B ;
+        bdo:instanceHasReproduction  bdr:IE8039 , bdr:W8039 ;
+        bdo:instanceOf      bdr:WA8039 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT9DCD120C0263968D ;
+        bdo:numberOfVolumes  26 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "[lha sa]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT9DCD120C0263968D
-        a                   :Note ;
-        :noteText           "tbrc holds a number of writings of mi bskyod rdo rje including this edition\nthere exists a gsung 'bum in 14 manuscript vols in the beijing mi rigs dpe mdzod khang. these manuscripts are marked: ga, nga, ca, nya, ta, tha, da, pha, ma, zha, za, ha, and two unmarked volumes"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "tbrc holds a number of writings of mi bskyod rdo rje including this edition\nthere exists a gsung 'bum in 14 manuscript vols in the beijing mi rigs dpe mdzod khang. these manuscripts are marked: ga, nga, ca, nya, ta, tha, da, pha, ma, zha, za, ha, and two unmarked volumes"@en .
     
     bdr:TTB28CA8DD431DD49D
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "gsung 'bum/_mi bskyod rdo rje/"@bo-x-ewts .
     
     bdr:TTF634C02425F1DB3D
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "dpal rgyal ba karma pa sku 'phreng brgyad pa mi bskyod rdo rje'i gsung 'bum/"@bo-x-ewts .
 }
