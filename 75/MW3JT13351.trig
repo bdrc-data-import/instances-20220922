@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3JT13351 {
+    bda:LG0MW3JT13351_KM4MUPQG0KXH
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-30T14:38:52.934673Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of W1KG11947"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG52D1627B5F11A445
         a                   adm:UpdateData ;
         adm:logDate         "2014-05-12T20:31:26.746Z"^^xsd:dateTime ;
@@ -29,32 +32,34 @@ bdg:MW3JT13351 {
         adm:gitPath         "75/MW3JT13351.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3JT13351 ;
-        adm:logEntry        bda:LG52D1627B5F11A445 , bda:LGDA5AA8B37DA8EFE4 ;
+        adm:logEntry        bda:LG0MW3JT13351_KM4MUPQG0KXH , bda:LG52D1627B5F11A445 , bda:LGDA5AA8B37DA8EFE4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusWithdrawn .
     
     bdr:EV17375BBBA87901F7
-        a                   :PublishedEvent ;
-        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3JT13351  a       :Instance ;
+    bdr:MW3JT13351  a       bdo:Instance ;
         skos:prefLabel      "sngon byon sa skya pa'i mkhas pa rnams kyi gzhung 'grel skor/"@bo-x-ewts ;
-        :biblioNote         "Electronic edition from sa skya rgyal yongs gsung rab slob gnyer khang Kathmandu"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT097AD4D55175B81D ;
-        :instanceEvent      bdr:EV17375BBBA87901F7 ;
-        :instanceOf         bdr:WA3JT13351 ;
-        :note               bdr:NTCF1621D3C00ED511 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "Bouddha, Kathmandu"@en ;
-        :publisherName      "sa skya rgyal yongs gsung rab slob gnyer khang"@en ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "Electronic edition from sa skya rgyal yongs gsung rab slob gnyer khang Kathmandu"@en ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:hasTitle        bdr:TT097AD4D55175B81D ;
+        bdo:instanceEvent   bdr:EV17375BBBA87901F7 ;
+        bdo:instanceOf      bdr:WA3JT13351 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTCF1621D3C00ED511 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Bouddha, Kathmandu"@en ;
+        bdo:publisherName   "sa skya rgyal yongs gsung rab slob gnyer khang"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTCF1621D3C00ED511
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TT097AD4D55175B81D
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "sngon byon sa skya pa'i mkhas pa rnams kyi gzhung 'grel skor/"@bo-x-ewts .
 }
