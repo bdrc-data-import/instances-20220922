@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1CZ2485 {
+    bda:LG0MW1CZ2485_XBMI5ZUL7D0L
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-31T19:05:36.609303Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG600679CD91EA0DD4
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-11-15T13:37:45.652Z"^^xsd:dateTime ;
@@ -43,7 +48,7 @@ bdg:MW1CZ2485 {
         adm:gitPath         "b5/MW1CZ2485.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1CZ2485 ;
-        adm:logEntry        bda:LG600679CD91EA0DD4 , bda:LGD9E63FD23061F862 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1CZ2485_XBMI5ZUL7D0L , bda:LG600679CD91EA0DD4 , bda:LGD9E63FD23061F862 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
@@ -52,24 +57,27 @@ bdg:MW1CZ2485 {
         a                   bdr:HollisId ;
         rdf:value           "014255355" .
     
-    bdr:MW1CZ2485  a        :Instance ;
+    bdr:MW1CZ2485  a        bdo:Instance ;
         skos:prefLabel      "phyag chen lhan cig skyes sbyor zab don lam gyi snying po grub thob brgyud pa'i zhal lung /"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID482059B33930B729 ;
-        :extentStatement    "266 ff." ;
-        :hasTitle           bdr:TT2EBEB11F1B33ABE1 , bdr:TT6A449C60F128C513 ;
-        :instanceHasReproduction  bdr:IE1CZ2485 , bdr:W1CZ2485 ;
-        :instanceOf         bdr:WA1CZ2485 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "[khams nang chen]"@en ;
-        :publisherName      "[zur mang bdud rtsi mthil]"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID482059B33930B729 ;
+        bdo:binding         bdr:Binding_Codex_Sewn ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "266 ff." ;
+        bdo:hasTitle        bdr:TT2EBEB11F1B33ABE1 , bdr:TT6A449C60F128C513 ;
+        bdo:instanceHasReproduction  bdr:IE1CZ2485 , bdr:W1CZ2485 ;
+        bdo:instanceOf      bdr:WA1CZ2485 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "[khams nang chen]"@en ;
+        bdo:publisherName   "[zur mang bdud rtsi mthil]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT2EBEB11F1B33ABE1
-        a                   :TitlePageTitle ;
+        a                   bdo:RunningTitle ;
         rdfs:label          "phyag rgya chen po lhan cig skyes sbyor zab don gyi chu bo skal ldan gyi gdul bya'i yod mtshor 'jug pa'i 'bab stegs myur bde lam gyi snying po grub thob brgyud pa'i zhal lung /"@bo-x-ewts .
     
     bdr:TT6A449C60F128C513
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "phyag chen lhan cig skyes sbyor zab don lam gyi snying po grub thob brgyud pa'i zhal lung /"@bo-x-ewts .
 }
