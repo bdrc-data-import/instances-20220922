@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG17189 {
+    bda:LG0MW1KG17189_DWX73YZAWUDA
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-31T18:44:44.120386Z"^^xsd:dateTime ;
+        adm:logMessage      "added IE"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG90E5FBA320A8F038
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-05-29T12:26:38.561Z"^^xsd:dateTime ;
@@ -36,60 +41,61 @@ bdg:MW1KG17189 {
         adm:gitPath         "1a/MW1KG17189.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG17189 ;
-        adm:logEntry        bda:LG90E5FBA320A8F038 , bda:LGC13C3BED389BF141 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1KG17189_DWX73YZAWUDA , bda:LG90E5FBA320A8F038 , bda:LGC13C3BED389BF141 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR085D47CE69586911
-        a                   :AgentAsCreator ;
-        :agent              bdr:P560 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P560 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:CR0E676FAB449165DC
-        a                   :AgentAsCreator ;
-        :agent              bdr:P258 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P258 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EVFE2093EC3158F5EF
-        a                   :PublishedEvent ;
-        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID6D9252FDD5C06F59
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9993342300" .
     
     bdr:IDFBFC3024D81EEE95
         a                   bdr:HollisId ;
         rdf:value           "014256458" .
     
-    bdr:MW1KG17189  a       :Instance ;
+    bdr:MW1KG17189  a       bdo:Instance ;
         skos:prefLabel      "sgrub thabs kun btus/ (glog klad par ma/)"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6D9252FDD5C06F59 , bdr:IDFBFC3024D81EEE95 ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CR085D47CE69586911 , bdr:CR0E676FAB449165DC ;
-        :extentStatement    "14 v." ;
-        :hasTitle           bdr:TT6E246863FE776D4B , bdr:TTDD585D0DD1E69DB1 ;
-        :instanceEvent      bdr:EVFE2093EC3158F5EF ;
-        :instanceHasReproduction  bdr:W1KG17189 ;
-        :instanceOf         bdr:WA1KG17189 ;
-        :note               bdr:NT9C66780EFD9A6255 ;
-        :numberOfVolumes    14 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "kathmandu"@en ;
-        :publisherName      "sachen international, guru lama"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID6D9252FDD5C06F59 , bdr:IDFBFC3024D81EEE95 ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:creator         bdr:CR085D47CE69586911 , bdr:CR0E676FAB449165DC ;
+        bdo:extentStatement  "14 v." ;
+        bdo:hasTitle        bdr:TT6E246863FE776D4B , bdr:TTDD585D0DD1E69DB1 ;
+        bdo:instanceEvent   bdr:EVFE2093EC3158F5EF ;
+        bdo:instanceHasReproduction  bdr:IE1KG17189 , bdr:W1KG17189 ;
+        bdo:instanceOf      bdr:WA1KG17189 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT9C66780EFD9A6255 ;
+        bdo:numberOfVolumes  14 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Kathmandu"@en ;
+        bdo:publisherName   "sachen international, guru lama"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT9C66780EFD9A6255
-        a                   :Note ;
-        :noteText           "scanned made available through the kindly lending the books by guru lama"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "scanned made available through the kindly lending the books by guru lama"@en .
     
     bdr:TT6E246863FE776D4B
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "sgrub thabs kun btus/ (glog klad par ma/)"@bo-x-ewts .
     
     bdr:TTDD585D0DD1E69DB1
-        a                   :FullTitle ;
+        a                   bdo:FullTitle ;
         rdfs:label          "sgrub pa'i thabs kun las btus pa dngos grub rin po che'i 'dod 'jo/"@bo-x-ewts .
 }
