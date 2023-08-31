@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00EGS1016968 {
@@ -17,6 +16,12 @@ bdg:MW00EGS1016968 {
         adm:logDate         "2006-12-20T00:25:05.812Z"^^xsd:dateTime ;
         adm:logMessage      "published for creation of scan requests"@en ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG0MW00EGS1016968_I32JVVHCGP2J
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-31T15:04:30.763106Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
@@ -39,45 +44,47 @@ bdg:MW00EGS1016968 {
         adm:gitPath         "a6/MW00EGS1016968.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00EGS1016968 ;
-        adm:logEntry        bda:LG0CFAB3D440EB8973 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0CFAB3D440EB8973 , bda:LG0MW00EGS1016968_I32JVVHCGP2J , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVA87F9D7331C2EF9B
-        a                   :PublishedEvent ;
-        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID093425DC39CB860C
         a                   bdr:HollisId ;
         rdf:value           "014253927" .
     
     bdr:MW00EGS1016968
-        a                   :Instance ;
+        a                   bdo:Instance ;
         skos:prefLabel      "phyag chen rgyas pa nges don rgya mtsho/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID093425DC39CB860C ;
-        :authorshipStatement  "mdzad pa po karma pa dgu pa dbang phyug rdo rje/"@bo-x-ewts ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "xxxxiii, 283 p." ;
-        :hasTitle           bdr:TT157D0B0706969BBE , bdr:TT7719982769C77B83 , bdr:TT904F9A391191C8E8 ;
-        :instanceEvent      bdr:EVA87F9D7331C2EF9B ;
-        :instanceHasReproduction  bdr:W00EGS1016968 ;
-        :instanceOf         bdr:WA00EGS1016968 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "sarnath"@en ;
-        :publisherName      "wA Na badz+ra bi dya dpe mdzod khang"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID093425DC39CB860C ;
+        bdo:authorshipStatement  "mdzad pa po karma pa dgu pa dbang phyug rdo rje/"@bo-x-ewts ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "xxxxiii, 283 p." ;
+        bdo:hasTitle        bdr:TT157D0B0706969BBE , bdr:TT7719982769C77B83 , bdr:TT904F9A391191C8E8 ;
+        bdo:instanceEvent   bdr:EVA87F9D7331C2EF9B ;
+        bdo:instanceHasReproduction  bdr:W00EGS1016968 ;
+        bdo:instanceOf      bdr:WA00EGS1016968 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "sarnath"@en ;
+        bdo:publisherName   "wA Na badz+ra bi dya dpe mdzod khang"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT157D0B0706969BBE
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "phyag chen rgyas pa nges don rgya mtsho/"@bo-x-ewts .
     
     bdr:TT7719982769C77B83
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "phyag chen bsdus pa chos sku mdzub tshugs/"@bo-x-ewts .
     
     bdr:TT904F9A391191C8E8
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "phyag chen 'bring po ma rig mun sel/"@bo-x-ewts .
 }
