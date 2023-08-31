@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3JT13359 {
@@ -17,6 +14,12 @@ bdg:MW3JT13359 {
         adm:logDate         "2014-05-12T20:31:26.746Z"^^xsd:dateTime ;
         adm:logMessage      "added encoding field"@en ;
         adm:logWho          bdu:U00012 .
+    
+    bda:LG0MW3JT13359_ANTUHWHAVZNE
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-31T17:31:40.719410Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of W1KG4285"@en ;
+        adm:logWho          bdu:U1426146149 .
     
     bda:LGC3BB851C4EFDF8EA
         a                   adm:InitialDataCreation ;
@@ -29,36 +32,38 @@ bdg:MW3JT13359 {
         adm:gitPath         "83/MW3JT13359.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3JT13359 ;
-        adm:logEntry        bda:LG0C2B4479956354F3 , bda:LGC3BB851C4EFDF8EA ;
+        adm:logEntry        bda:LG0C2B4479956354F3 , bda:LG0MW3JT13359_ANTUHWHAVZNE , bda:LGC3BB851C4EFDF8EA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:status          bda:StatusWithdrawn .
     
     bdr:EV7284C950F9189149
-        a                   :PublishedEvent ;
-        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3JT13359  a       :Instance ;
+    bdr:MW3JT13359  a       bdo:Instance ;
         skos:prefLabel      "blo sbyong gi skor/"@bo-x-ewts ;
-        :biblioNote         "Electronic edition from sa skya rgyal yongs gsung rab slob gnyer khang Kathmandu"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TT2EB2A7C24948E60D , bdr:TTF97EA320181C393A ;
-        :instanceEvent      bdr:EV7284C950F9189149 ;
-        :instanceOf         bdr:WA3JT13359 ;
-        :note               bdr:NT5F64D87E9B509769 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "Bouddha, Kathmandu"@en ;
-        :publisherName      "sa skya rgyal yongs gsung rab slob gnyer khang"@en ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "Electronic edition from sa skya rgyal yongs gsung rab slob gnyer khang Kathmandu"@en ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:hasTitle        bdr:TT2EB2A7C24948E60D , bdr:TTF97EA320181C393A ;
+        bdo:instanceEvent   bdr:EV7284C950F9189149 ;
+        bdo:instanceOf      bdr:WA3JT13359 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT5F64D87E9B509769 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Bouddha, Kathmandu"@en ;
+        bdo:publisherName   "sa skya rgyal yongs gsung rab slob gnyer khang"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT5F64D87E9B509769
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TT2EB2A7C24948E60D
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "blo sbyong gi skor phyogs bsgrigs/"@bo-x-ewts .
     
     bdr:TTF97EA320181C393A
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "blo sbyong gi skor/"@bo-x-ewts .
 }
