@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN636 {
+    bda:LG0MW3CN636_UKXZQHAISR82
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-08-31T15:50:11.265108Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG1878093991C02D3F
         a                   adm:UpdateData ;
         adm:logDate         "2015-11-22T23:14:58.017Z"^^xsd:dateTime ;
@@ -30,38 +33,42 @@ bdg:MW3CN636 {
         adm:gitPath         "9a/MW3CN636.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN636 ;
-        adm:logEntry        bda:LG1878093991C02D3F , bda:LGC73632CB22B95667 ;
+        adm:logEntry        bda:LG0MW3CN636_UKXZQHAISR82 , bda:LG1878093991C02D3F , bda:LGC73632CB22B95667 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR7B7EA9BD65BD8F87
-        a                   :AgentAsCreator ;
-        :agent              bdr:P6173 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P6173 ;
+        bdo:role            bdr:R0ER0015 .
     
-    bdr:MW3CN636  a         :Instance ;
-        skos:prefLabel      "phyag rgya chen po'i rgya gzhung /"@bo-x-ewts ;
-        :creator            bdr:CR7B7EA9BD65BD8F87 ;
-        :extentStatement    "3 v." ;
-        :hasSourcePrintery  bdr:G3JT12497 ;
-        :hasTitle           bdr:TT15C8859E8C3A655A , bdr:TT43B986435F165363 , bdr:TT8BF320A6C8108921 ;
-        :instanceHasReproduction  bdr:W3CN636 ;
-        :instanceOf         bdr:WA3CN636 ;
-        :numberOfVolumes    3 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "mdo khams sde dge"@bo-x-ewts ;
-        :publisherName      "dpal spungs dgon pa/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+    bdr:MW3CN636  a         bdo:Instance ;
+        skos:altLabel       "phyag rgya chen po'i rgya gzhung /"@bo-x-ewts ;
+        skos:prefLabel      "phyag chen rgya gzhung /"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:creator         bdr:CR7B7EA9BD65BD8F87 ;
+        bdo:extentStatement  "3 v." ;
+        bdo:hasSourcePrintery  bdr:G3JT12497 ;
+        bdo:hasTitle        bdr:TT15C8859E8C3A655A , bdr:TT43B986435F165363 , bdr:TT8BF320A6C8108921 ;
+        bdo:instanceHasReproduction  bdr:IE3JT13319 , bdr:W3CN636 ;
+        bdo:instanceOf      bdr:WA3CN636 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  3 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "mdo khams sde dge"@bo-x-ewts ;
+        bdo:publisherName   "dpal spungs dgon pa/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT15C8859E8C3A655A
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "gnas lugs phyag rgya chen po'i rgya gzhung glegs bam gsum/"@bo-x-ewts .
     
     bdr:TT43B986435F165363
-        a                   :Title ;
+        a                   bdo:RunningTitle ;
         rdfs:label          "phyag rgya chen po'i rgya gzhung /"@bo-x-ewts .
     
     bdr:TT8BF320A6C8108921
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "phyag chen rgya gzhung glegs bam gsum bsgrigs/"@bo-x-ewts .
 }
