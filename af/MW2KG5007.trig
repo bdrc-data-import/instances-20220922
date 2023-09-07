@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2KG5007 {
+    bda:LG0MW2KG5007_1SMUBB8GLHZM
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-07T13:39:19.673258Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG6F8E5F77F8E8B620
         a                   adm:InitialDataCreation ;
         adm:logDate         "2020-07-23T13:31:17.311Z"^^xsd:dateTime ;
@@ -24,24 +27,27 @@ bdg:MW2KG5007 {
         adm:gitPath         "af/MW2KG5007.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2KG5007 ;
-        adm:logEntry        bda:LG6F8E5F77F8E8B620 ;
+        adm:logEntry        bda:LG0MW2KG5007_1SMUBB8GLHZM , bda:LG6F8E5F77F8E8B620 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW2KG5007  a        :Instance ;
+    bdr:MW2KG5007  a        bdo:Instance ;
         skos:prefLabel      "rtsa gsum bka' srung bcas kyi gtor bsngos/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :extentStatement    "125 p." ;
-        :hasTitle           bdr:TT764417942555289A ;
-        :instanceHasReproduction  bdr:W2KG5007 ;
-        :instanceOf         bdr:WA2KG5007 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "'jang ri smug po/"@bo-x-ewts ;
-        :publisherName      "sbyin pa rgya mtsho/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "125 p." ;
+        bdo:hasTitle        bdr:TT764417942555289A ;
+        bdo:instanceHasReproduction  bdr:IE3JT13343 , bdr:W2KG5007 ;
+        bdo:instanceOf      bdr:WA2KG5007 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "'jang ri smug po/"@bo-x-ewts ;
+        bdo:publisherName   "sbyin pa rgya mtsho/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT764417942555289A
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rtsa gsum bka' srung bcas kyi gtor bsngos/"@bo-x-ewts .
 }
