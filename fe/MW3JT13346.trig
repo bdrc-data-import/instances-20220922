@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3JT13346 {
+    bda:LG0MW3JT13346_041Q1D45JFKO
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-07T16:40:02.446041Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG411B6DF7A000839B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-02-07T12:12:32.571Z"^^xsd:dateTime ;
@@ -29,32 +32,42 @@ bdg:MW3JT13346 {
         adm:gitPath         "fe/MW3JT13346.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3JT13346 ;
-        adm:logEntry        bda:LG411B6DF7A000839B , bda:LGA45F6429ECE46CFD ;
+        adm:logEntry        bda:LG0MW3JT13346_041Q1D45JFKO , bda:LG411B6DF7A000839B , bda:LGA45F6429ECE46CFD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV3373729858BC572A
-        a                   :PublishedEvent ;
-        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3JT13346  a       :Instance ;
-        skos:prefLabel      "chos tshan sna tshogs/"@bo-x-ewts ;
-        :biblioNote         "Electronic edition from Karma Leksheyling"@en ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :hasTitle           bdr:TTA440EE7F4E0BEBB6 ;
-        :instanceEvent      bdr:EV3373729858BC572A ;
-        :instanceOf         bdr:WA3JT13346 ;
-        :note               bdr:NTA2EEE53842C2FB8C ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "swayambhu, kathmandu"@en ;
-        :publisherName      "karma leksheyling"@en ;
-        :script             bdr:ScriptTibt .
+    bdr:MW3JT13346  a       bdo:Instance ;
+        skos:prefLabel      "gsung rabs gces btus/"@bo-x-ewts ;
+        bdo:biblioNote      "Electronic edition from Karma Leksheyling"@en ;
+        bdo:binding         bdr:Binding_Codex_Sewn ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:editionStatement  "mtshur phu dgon gtsug lag dpe tshogs/"@bo ;
+        bdo:hasTitle        bdr:TTA440EE7F4E0BEBB6 , bdr:TTMW3JT13346FDBJF9M0 ;
+        bdo:instanceEvent   bdr:EV3373729858BC572A ;
+        bdo:instanceHasReproduction  bdr:IE3JT13346 , bdr:IE8CZ265 ;
+        bdo:instanceOf      bdr:WA3JT13346 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTA2EEE53842C2FB8C ;
+        bdo:numberOfVolumes  41 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "swayambhu, kathmandu"@en ;
+        bdo:publisherName   "karma leksheyling"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTA2EEE53842C2FB8C
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TTA440EE7F4E0BEBB6
-        a                   :Title ;
-        rdfs:label          "chos tshan sna tshogs/"@bo-x-ewts .
+        a                   bdo:RunningTitle ;
+        rdfs:label          "bka' brgyud pa'i gsung rabs gces btus/"@bo-x-ewts .
+    
+    bdr:TTMW3JT13346FDBJF9M0
+        a                   bdo:IncipitTitle ;
+        rdfs:label          "phyag chen smon lam gyi 'grel pa kun gyis go bde ba sogs/"@bo-x-ewts .
 }
