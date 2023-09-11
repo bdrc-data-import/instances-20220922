@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23743 {
+    bda:LG0MW23743_XFMVBYILWIJ7
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-11T20:39:49.699364Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG9C5CED9BD02757C2
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
@@ -36,60 +41,62 @@ bdg:MW23743 {
         adm:gitPath         "ee/MW23743.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW23743 ;
-        adm:logEntry        bda:LG9C5CED9BD02757C2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW23743_XFMVBYILWIJ7 , bda:LG9C5CED9BD02757C2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV70535148CDD5A3DC
-        a                   :PublishedEvent ;
-        :eventWhen          "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2001"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID2361AA21D92D19F2
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7550 .B74 2001" .
     
     bdr:ID25396E57DDF7270A
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "8188109010" .
     
     bdr:ID764A7E8B71130345
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "2001362771" .
     
     bdr:IDFE8165FAE7CFEB9A
         a                   bdr:HollisId ;
         rdf:value           "014259085" .
     
-    bdr:MW23743  a          :Instance ;
+    bdr:MW23743  a          bdo:Instance ;
         skos:altLabel       "the collected works (bka' 'bum) of kham gsum chos kyi rgyal po thub dbang ratna sri (skyob-pa 'jig-rten-gsum-mgon)"@en-x-mixed ;
         skos:prefLabel      "gsung 'bum/_'jig rten mgon po/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2361AA21D92D19F2 , bdr:ID25396E57DDF7270A , bdr:ID764A7E8B71130345 , bdr:IDFE8165FAE7CFEB9A ;
-        :authorshipStatement  "[edited] by H.H. Drikung Kyabgon Chetsang Konchog Tenzin Kunzang Thinley Lhundub."@bo-x-ewts ;
-        :extentStatement    "12 v." ;
-        :hasTitle           bdr:TT1E4C23BF0BB3B0DD , bdr:TT21176F2F988F3BC0 , bdr:TT597502C1E07A4CC9 ;
-        :instanceEvent      bdr:EV70535148CDD5A3DC ;
-        :instanceHasReproduction  bdr:W23743 ;
-        :instanceOf         bdr:WA1KG10019 ;
-        :note               bdr:NTA0CD183655FF1C55 ;
-        :numberOfVolumes    12 ;
-        :publisherLocation  "Delhi"@en ;
-        :publisherName      "Drikung Kagyu Ratna Shri Sungrab Nyamso Khang"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID2361AA21D92D19F2 , bdr:ID25396E57DDF7270A , bdr:ID764A7E8B71130345 , bdr:IDFE8165FAE7CFEB9A ;
+        bdo:authorshipStatement  "[edited] by H.H. Drikung Kyabgon Chetsang Konchog Tenzin Kunzang Thinley Lhundub."@bo-x-ewts ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "12 v." ;
+        bdo:hasTitle        bdr:TT1E4C23BF0BB3B0DD , bdr:TT21176F2F988F3BC0 , bdr:TT597502C1E07A4CC9 ;
+        bdo:instanceEvent   bdr:EV70535148CDD5A3DC ;
+        bdo:instanceHasReproduction  bdr:IE8CZ266 , bdr:W23743 ;
+        bdo:instanceOf      bdr:WA1KG10019 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTA0CD183655FF1C55 ;
+        bdo:numberOfVolumes  12 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Delhi"@en ;
+        bdo:publisherName   "Drikung Kagyu Ratna Shri Sungrab Nyamso Khang"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTA0CD183655FF1C55
-        a                   :Note ;
-        :noteText           "-2576"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "-2576"@en .
     
     bdr:TT1E4C23BF0BB3B0DD
-        a                   :Subtitle ;
+        a                   bdo:Subtitle ;
         rdfs:label          "the collected works (bka' 'bum) of kham gsum chos kyi rgyal po thub dbang ratna sri (skyob-pa 'jig-rten-gsum-mgon)"@en-x-mixed .
     
     bdr:TT21176F2F988F3BC0
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "khams gsum chos kyi rgyal po thub dbang rat+na shrI'i phyi yi bka' 'bum nor bu'i bang mdzod/"@bo-x-ewts .
     
     bdr:TT597502C1E07A4CC9
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "gsung 'bum/_'jig rten mgon po/"@bo-x-ewts .
 }
