@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3JT13378 {
+    bda:LG0MW3JT13378_A2N1D4BWWX5M
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-13T18:01:36.777707Z"^^xsd:dateTime ;
+        adm:logMessage      "added scans and IE"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG24F86DA9C6EB2260
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-02-26T10:11:04.902Z"^^xsd:dateTime ;
@@ -29,25 +32,36 @@ bdg:MW3JT13378 {
         adm:gitPath         "61/MW3JT13378.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3JT13378 ;
-        adm:logEntry        bda:LG24F86DA9C6EB2260 , bda:LG3F55D35ACDE4161D ;
+        adm:logEntry        bda:LG0MW3JT13378_A2N1D4BWWX5M , bda:LG24F86DA9C6EB2260 , bda:LG3F55D35ACDE4161D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV04B33EADEE728215
-        a                   :PublishedEvent ;
-        :eventWhen          "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2004"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3JT13378  a       :Instance ;
-        skos:prefLabel      "mngon rtogs rgyan gyi sa bcad snang byed sgron me gzhung dang bcas pa dang / sher phyin skabs brgyad kyi stong thun/ dbu ma chos dbyings bstod pa'i rnam bshad bcas/"@bo-x-ewts ;
-        :biblioNote         "Electronic edition from Vajra Vidya Institute"@en ;
-        :hasTitle           bdr:TT118CB60FBB30AED8 ;
-        :instanceEvent      bdr:EV04B33EADEE728215 ;
-        :instanceOf         bdr:WA3JT13378 ;
-        :publisherLocation  "Sarnath, Varanasi, U.P."@en ;
-        :publisherName      "Vajra Vidya Institute"@en ;
-        :script             bdr:ScriptTibt .
+    bdr:MW3JT13378  a       bdo:Instance ;
+        skos:prefLabel      "mngon rtogs rgyan gyi sa bcad snang byed sgron me sogs/"@bo-x-ewts ;
+        bdo:biblioNote      "Electronic edition from Vajra Vidya Institute"@en ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "309 p." ;
+        bdo:hasTitle        bdr:TT118CB60FBB30AED8 , bdr:TTMW3JT13378EQXA2JT0 ;
+        bdo:instanceEvent   bdr:EV04B33EADEE728215 ;
+        bdo:instanceHasReproduction  bdr:IE3JT13378 , bdr:W3JT13378 ;
+        bdo:instanceOf      bdr:WA3JT13378 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "Sarnath, Varanasi, U.P."@en ;
+        bdo:publisherName   "Vajra Vidya Institute Library"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT118CB60FBB30AED8
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "mngon rtogs rgyan gyi sa bcad snang byed sgron me gzhung dang bcas pa dang / sher phyin skabs brgyad kyi stong thun/ dbu ma chos dbyings bstod pa'i rnam bshad bcas/"@bo-x-ewts .
+    
+    bdr:TTMW3JT13378EQXA2JT0
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "mngon rtogs rgyan gyi sa bcad snang byed sgron me gzhung dang bcas pa dang / sher phyin skabs brgyad kyi stong thun/ dbu ma chos dbyings bstod pa'i rnam bshad bcas/"@bo-x-ewts .
 }
