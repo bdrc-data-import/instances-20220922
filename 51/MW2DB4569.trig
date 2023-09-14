@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW2DB4569 {
+    bda:LG0MW2DB4569_HLRWQCLM8MZC
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-14T21:24:47.576474Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LG7F25C2F4F2186B06
         a                   adm:UpdateData ;
         adm:logDate         "2008-02-13T10:37:28.469Z"^^xsd:dateTime ;
@@ -50,56 +55,58 @@ bdg:MW2DB4569 {
         adm:gitPath         "51/MW2DB4569.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW2DB4569 ;
-        adm:logEntry        bda:LG7F25C2F4F2186B06 , bda:LGB1E9C13411C9E8A0 , bda:LGF0C5F640659D3E8F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW2DB4569_HLRWQCLM8MZC , bda:LG7F25C2F4F2186B06 , bda:LGB1E9C13411C9E8A0 , bda:LGF0C5F640659D3E8F , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV19D285CC6D9BCE5E
-        a                   :PublishedEvent ;
-        :eventWhen          "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2007"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID068065558EC5A8CB
         a                   bdr:HollisId ;
         rdf:value           "014260497" .
     
     bdr:ID9CAA50E0783534C6
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787800578465" .
     
-    bdr:MW2DB4569  a        :Instance , :SerialInstance ;
+    bdr:MW2DB4569  a        bdo:Instance ;
         skos:altLabel       "sa jia wu zu quan ji dui kan ben"@zh-latn-pinyin-x-ndia ;
         skos:prefLabel      "gsung 'bum （dpe bsdur ma）/_grags pa rgyal mtshan/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID068065558EC5A8CB , bdr:ID9CAA50E0783534C6 ;
-        :authorshipStatement  "grags pa rgyal mtshan gyis brtsams/ dpal brtsegs bod yig dpe rnying zhib 'jug khang nas bsgrigs/"@bo-x-ewts ;
-        :copyrightStatus    bdr:CopyrightClaimed ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "5 v." ;
-        :hasTitle           bdr:TT4756A1919B7E566E , bdr:TT77DCDDA5543485DC , bdr:TT8849C598E381FFBF , bdr:TTE3CDD938A8F15870 ;
-        :illustrations      "col. ill." ;
-        :instanceEvent      bdr:EV19D285CC6D9BCE5E ;
-        :instanceHasReproduction  bdr:W2DB4569 ;
-        :instanceOf         bdr:WA2DB4569 ;
-        :numberOfVolumes    5 ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1AC308 ;
-        :seriesNumber       "10 - 14" .
+        bf:identifiedBy     bdr:ID068065558EC5A8CB , bdr:ID9CAA50E0783534C6 ;
+        bdo:authorshipStatement  "grags pa rgyal mtshan gyis brtsams/ dpal brtsegs bod yig dpe rnying zhib 'jug khang nas bsgrigs/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "5 v." ;
+        bdo:hasTitle        bdr:TT4756A1919B7E566E , bdr:TT77DCDDA5543485DC , bdr:TT8849C598E381FFBF , bdr:TTE3CDD938A8F15870 ;
+        bdo:illustrations   "col. ill." ;
+        bdo:instanceEvent   bdr:EV19D285CC6D9BCE5E ;
+        bdo:instanceHasReproduction  bdr:IE8CZ271 ;
+        bdo:instanceOf      bdr:WA2DB4569 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  5 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS1AC308 ;
+        bdo:seriesNumber    "10 - 14" .
     
     bdr:TT4756A1919B7E566E
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "sa skya gong ma rnam lnga'i gsung 'bum dpe bsdur ma las grags pa rgyal mtshan gyi gsung /"@bo-x-ewts .
     
     bdr:TT77DCDDA5543485DC
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "grags pa rgyal mtshan gyi gsung 'bum/"@bo-x-ewts .
     
     bdr:TT8849C598E381FFBF
-        a                   :Title ;
+        a                   bdo:RunningTitle ;
         rdfs:label          "gsung 'bum （dpe bsdur ma）/_grags pa rgyal mtshan/"@bo-x-ewts .
     
     bdr:TTE3CDD938A8F15870
-        a                   :ColophonTitle ;
+        a                   bdo:ColophonTitle ;
         rdfs:label          "sa jia wu zu quan ji dui kan ben"@zh-latn-pinyin-x-ndia .
 }
