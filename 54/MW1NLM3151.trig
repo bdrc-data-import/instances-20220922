@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3151 {
+    bda:LG0MW1NLM3151_3VOCVGVJZVGI
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-25T01:44:38.669982Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -23,31 +26,36 @@ bdg:MW1NLM3151 {
         adm:gitPath         "54/MW1NLM3151.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3151 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG0MW1NLM3151_3VOCVGVJZVGI , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3151  a       :Instance ;
+    bdr:MW1NLM3151  a       bdo:Instance ;
         skos:prefLabel      "'phags pa gnam sa snang brgyad sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "18x6.5" ;
-        :extentStatement    "17 ff., 5 ff., 6 ff., 2 ff., 6 ff., 2 ff., 2 ff., 2 ff., 4 ff., 8 ff. end folio missing, 5 ff., 2 ff., 3 ff., 8 ff., 7 ff., 3 ff., 16 ff., 2 ff., 3 ff., 3 ff., 6 ff., 12 ff., 11 ff., 2 ff., 3 ff., 3 ff., 5 ff., 6 ff." ;
-        :hasTitle           bdr:TT00F365F3D796FC73 ;
-        :instanceHasReproduction  bdr:W1NLM3151 ;
-        :instanceOf         bdr:WA1NLM4301 ;
-        :note               bdr:NT411EDDF565BAA6A6 , bdr:NTD8D89F3E1AEB82DE ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "18x6.5" ;
+        bdo:extentStatement  "17 ff., 5 ff., 6 ff., 2 ff., 6 ff., 2 ff., 2 ff., 2 ff., 4 ff., 8 ff. end folio missing, 5 ff., 2 ff., 3 ff., 8 ff., 7 ff., 3 ff., 16 ff., 2 ff., 3 ff., 3 ff., 6 ff., 12 ff., 11 ff., 2 ff., 3 ff., 3 ff., 5 ff., 6 ff." ;
+        bdo:hasTitle        bdr:TT00F365F3D796FC73 ;
+        bdo:instanceHasReproduction  bdr:W1NLM3151 ;
+        bdo:instanceOf      bdr:WA1NLM4301 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT411EDDF565BAA6A6 , bdr:NTD8D89F3E1AEB82DE ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT411EDDF565BAA6A6
-        a                   :Note ;
-        :noteText           "missingPages: M0061069-010 [Final pages are missing 9A] Image 109 M0061069-014 [Missing page from 7A-7B] Image 142, 143"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061069-010 [Final pages are missing 9A] Image 109 M0061069-014 [Missing page from 7A-7B] Image 142, 143"@en .
     
     bdr:NTD8D89F3E1AEB82DE
-        a                   :Note ;
-        :noteText           "nlmId: M0061069"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061069"@en .
     
     bdr:TT00F365F3D796FC73
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "'phags pa gnam sa snang brgyad sogs/"@bo-x-ewts .
 }
