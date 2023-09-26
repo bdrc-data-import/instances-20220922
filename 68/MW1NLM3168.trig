@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3168 {
+    bda:LG0MW1NLM3168_GVTMQXIVPGLW
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-26T18:42:26.562090Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -23,31 +26,41 @@ bdg:MW1NLM3168 {
         adm:gitPath         "68/MW1NLM3168.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3168 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG0MW1NLM3168_GVTMQXIVPGLW , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3168  a       :Instance ;
-        skos:prefLabel      "legs par gsungs pa'i dam pa'i chos 'dul ba mtha' dag gi snying po'i don legs par bshad pa rin po che'i phreng ba/"@bo-x-ewts ;
-        :dimensionsStatement  "47x6.5" ;
-        :extentStatement    "357 ff." ;
-        :hasTitle           bdr:TT887CB75C5378053D ;
-        :instanceHasReproduction  bdr:W1NLM3168 ;
-        :instanceOf         bdr:WA1NLM3168 ;
-        :note               bdr:NTBA88E41D609E90E6 , bdr:NTD476887F498F662B ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1NLM3168  a       bdo:Instance ;
+        skos:prefLabel      "'dul ba mtha' dag gi snying po'i don legs par bshad pa rin po che'i phreng ba/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "47x6.5" ;
+        bdo:extentStatement  "357 ff." ;
+        bdo:hasSourcePrintery  bdr:G2CN10913 ;
+        bdo:hasTitle        bdr:TT887CB75C5378053D , bdr:TTMW1NLM3168EOV60AOO ;
+        bdo:instanceHasReproduction  bdr:W1NLM3168 ;
+        bdo:instanceOf      bdr:WA1NLM3168 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTBA88E41D609E90E6 , bdr:NTD476887F498F662B ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "bkra shis lhun po/"@bo-x-ewts ;
+        bdo:publisherName   "bkra shis lhun dgon/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTBA88E41D609E90E6
-        a                   :Note ;
-        :noteText           "nlmId: M0061086"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061086"@en .
     
     bdr:NTD476887F498F662B
-        a                   :Note ;
-        :noteText           "missingPages: M0061086-001 [Missing page from 7A-30B] Image 13 M0061086-001 60A-60B] Image 72 M0061086-001 [186,187; 224,225; pages printed on the same page ] Image 323-324, 397-398"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061086-001 [Missing page from 7A-30B] Image 13 M0061086-001 60A-60B] Image 72 M0061086-001 [186,187; 224,225; pages printed on the same page ] Image 323-324, 397-398"@en .
     
     bdr:TT887CB75C5378053D
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "'dul ba mtha' dag gi snying po'i don legs par bshad pa rin po che'i phreng ba/"@bo-x-ewts .
+    
+    bdr:TTMW1NLM3168EOV60AOO
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "legs par gsungs pa'i dam pa'i chos 'dul ba mtha' dag gi snying po'i don legs par bshad pa rin po che'i phreng ba/"@bo-x-ewts .
 }
