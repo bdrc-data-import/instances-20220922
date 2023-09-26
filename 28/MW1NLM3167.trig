@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3167 {
+    bda:LG0MW1NLM3167_NDNSMZDZ3D98
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-09-26T15:01:39.860073Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -23,31 +26,41 @@ bdg:MW1NLM3167 {
         adm:gitPath         "28/MW1NLM3167.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3167 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG0MW1NLM3167_NDNSMZDZ3D98 , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3167  a       :Instance ;
-        skos:prefLabel      "grel pa don gsal gyi rnam bshad rtogs dka' snang ba zhes bya ba mkhas grub thams cad mkhyen pas mdzad pa/"@bo-x-ewts ;
-        :dimensionsStatement  "48.5x6.5" ;
-        :extentStatement    "252 ff." ;
-        :hasTitle           bdr:TT301917B5FD35A54F ;
-        :instanceHasReproduction  bdr:W1NLM3167 ;
-        :instanceOf         bdr:WA1NLM3167 ;
-        :note               bdr:NT60A2871CD2DE0BD8 , bdr:NTA23DB4E93A8F88EE ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1NLM3167  a       bdo:Instance ;
+        skos:prefLabel      "'grel pa don gsal gyi rnam bshad rtogs dka'i snang ba/"@bo-x-ewts ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "48.5x6.5" ;
+        bdo:extentStatement  "252 ff." ;
+        bdo:hasSourcePrintery  bdr:G507 ;
+        bdo:hasTitle        bdr:TT301917B5FD35A54F , bdr:TTMW1NLM31677KJZXFWP ;
+        bdo:instanceHasReproduction  bdr:W1NLM3167 ;
+        bdo:instanceOf      bdr:WA1NLM3167 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT60A2871CD2DE0BD8 , bdr:NTA23DB4E93A8F88EE ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "sog yul/"@bo-x-ewts ;
+        bdo:publisherName   "dga' ldan theg chen gling /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT60A2871CD2DE0BD8
-        a                   :Note ;
-        :noteText           "nlmId: M0061085"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061085"@en .
     
     bdr:NTA23DB4E93A8F88EE
-        a                   :Note ;
-        :noteText           "missingPages: M0061085-001 [Missing page from 16A-16B] Image 31, 32"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061085-001 [Missing page from 16A-16B] Image 31, 32"@en .
     
     bdr:TT301917B5FD35A54F
-        a                   :Title ;
-        rdfs:label          "grel pa don gsal gyi rnam bshad rtogs dka' snang ba zhes bya ba mkhas grub thams cad mkhyen pas mdzad pa/"@bo-x-ewts .
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "'grel pa don gsal gyi rnam bshad rtogs dka'i snang ba/"@bo-x-ewts .
+    
+    bdr:TTMW1NLM31677KJZXFWP
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "'grel pa don gsal gyi rnam bshad rtogs dka'i snang ba zhes bya ba mkhas grub thams cad mkhyen pas mdzad pa/"@bo-x-ewts .
 }
