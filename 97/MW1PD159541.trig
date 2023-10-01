@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD159541 {
@@ -64,42 +63,48 @@ bdg:MW1PD159541 {
         adm:gitPath         "97/MW1PD159541.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD159541 ;
-        adm:logEntry        bda:LG2D11BAA8771853C2 , bda:LG3BF72C0CEBCA3474 , bda:LG4BF9E780604F2CC7 , bda:LG9C0B6EF37F96DC35 , bda:LGC219374EC79139FE , bda:LGFA3A26E0AED90D0B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG2D11BAA8771853C2 , bda:LG3BF72C0CEBCA3474 , bda:LG4BF9E780604F2CC7 , bda:LG9C0B6EF37F96DC35 , bda:LGC219374EC79139FE , bda:LGFA3A26E0AED90D0B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C , bdr:LG0WA1PD159541_4K9QZNDW94YP ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR1DB64587BCE755B1
-        a                   :AgentAsCreator ;
-        :agent              bdr:P2PD14811 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P2PD14811 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV477C29D732D23091
-        a                   :PublishedEvent ;
-        :eventWhen          "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID2E78BB78968F9C26
         a                   bdr:HollisId ;
         rdf:value           "014257727" .
     
-    bdr:MW1PD159541  a      :Instance ;
+    bdr:LG0WA1PD159541_4K9QZNDW94YP
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-10-01T16:00:38.427876Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1PD159541 in favor of WA4PD1990"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1796164652 .
+    
+    bdr:MW1PD159541  a      bdo:Instance ;
         skos:prefLabel      "bka' ma shin tu rgyas pa/ (dpal yul shing par/)"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2E78BB78968F9C26 ;
-        :biblioNote         "snga 'gyur bka' ma shin tu rgyas pa 'di ni dpal yul dgon pa'i sprul sku thub bzang mchog gis gtso skyong gnang ste/ 1982 lor shing par gyi dbu btsugs/ 2012lor mjug grub pa'o// 'di'i nang par gsar du brkos pa pod 133 la ldeb grangs 45215 dang shing par sngar yod 'dus mdo pod bzhi la ldeb grangs 1540 ste/ bsdoms pod 137 la ldeb grangs 46824 bzhugs/ dkar chag tu pod 140 'khod 'dug pa ni dmyal ba'i mdo dbang rnyed na slar 'dzud pa'i ched du pod rtags me tse tshe gsum stong par bzhag 'dug"@bo-x-ewts ;
-        :creator            bdr:CR1DB64587BCE755B1 ;
-        :extentStatement    "137 v." ;
-        :hasSourcePrintery  bdr:G3JT12568 ;
-        :hasTitle           bdr:TTB5E13E245BF1156D ;
-        :instanceEvent      bdr:EV477C29D732D23091 ;
-        :instanceHasReproduction  bdr:W1PD159541 ;
-        :instanceOf         bdr:WA1PD159541 ;
-        :numberOfVolumes    137 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "dpal yul rdzong /"@bo-x-ewts ;
-        :publisherName      "dpal yul dgon/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID2E78BB78968F9C26 ;
+        bdo:biblioNote      "snga 'gyur bka' ma shin tu rgyas pa 'di ni dpal yul dgon pa'i sprul sku thub bzang mchog gis gtso skyong gnang ste/ 1982 lor shing par gyi dbu btsugs/ 2012lor mjug grub pa'o// 'di'i nang par gsar du brkos pa pod 133 la ldeb grangs 45215 dang shing par sngar yod 'dus mdo pod bzhi la ldeb grangs 1540 ste/ bsdoms pod 137 la ldeb grangs 46824 bzhugs/ dkar chag tu pod 140 'khod 'dug pa ni dmyal ba'i mdo dbang rnyed na slar 'dzud pa'i ched du pod rtags me tse tshe gsum stong par bzhag 'dug"@bo-x-ewts ;
+        bdo:creator         bdr:CR1DB64587BCE755B1 ;
+        bdo:extentStatement  "137 v." ;
+        bdo:hasSourcePrintery  bdr:G3JT12568 ;
+        bdo:hasTitle        bdr:TTB5E13E245BF1156D ;
+        bdo:instanceEvent   bdr:EV477C29D732D23091 ;
+        bdo:instanceHasReproduction  bdr:W1PD159541 ;
+        bdo:instanceOf      bdr:WA4PD1990 ;
+        bdo:numberOfVolumes  137 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "dpal yul rdzong /"@bo-x-ewts ;
+        bdo:publisherName   "dpal yul dgon/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TTB5E13E245BF1156D
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "bka' ma shin tu rgyas pa/ (dpal yul shing par/)"@bo-x-ewts .
 }
