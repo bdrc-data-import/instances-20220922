@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21508 {
@@ -54,53 +53,59 @@ bdg:MW21508 {
         adm:gitPath         "82/MW21508.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21508 ;
-        adm:logEntry        bda:LGA4566665C6240507 , bda:LGBA972C7B4886E181 , bda:LGC92F4CF1F4F2694D , bda:LGE036333924E09F67 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LGA4566665C6240507 , bda:LGBA972C7B4886E181 , bda:LGC92F4CF1F4F2694D , bda:LGE036333924E09F67 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C , bdr:LG0WA21508_MOJEHXHLAK44 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:CRF90015CB11799B99
-        a                   :AgentAsCreator ;
-        :agent              bdr:P7274 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P7274 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:ID09EB79D267B77ACF
         a                   bdr:HollisId ;
         rdf:value           "014258316" .
     
-    bdr:MW21508  a          :Instance ;
+    bdr:LG0WA21508_MOJEHXHLAK44
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-10-01T15:59:41.300478Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA21508 in favor of WA4PD1990"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1796164652 .
+    
+    bdr:MW21508  a          bdo:Instance ;
         skos:prefLabel      "bka' ma shin tu rgyas pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID09EB79D267B77ACF ;
-        :biblioNote         "volume no. 2, 90, 91, 92, 99, 101, 105, 106 are missing; when we find these missing volumes, we will add in archive"@en ;
-        :creator            bdr:CRF90015CB11799B99 ;
-        :extentStatement    "110 v." ;
-        :hasTitle           bdr:TT9F7CD90617C77C9D ;
-        :instanceHasReproduction  bdr:W21508 ;
-        :instanceOf         bdr:WA21508 ;
-        :note               bdr:NT5FF2E98D8C0EFBC1 , bdr:NT746635D9A3C92479 , bdr:NTC3E8D9F45208AB55 ;
-        :numberOfVolumes    110 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "[chengdu]"@en ;
-        :publisherName      "*mkhan po mun sel/"@bo-x-ewts ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:ID09EB79D267B77ACF ;
+        bdo:biblioNote      "volume no. 2, 90, 91, 92, 99, 101, 105, 106 are missing; when we find these missing volumes, we will add in archive"@en ;
+        bdo:creator         bdr:CRF90015CB11799B99 ;
+        bdo:extentStatement  "110 v." ;
+        bdo:hasTitle        bdr:TT9F7CD90617C77C9D ;
+        bdo:instanceHasReproduction  bdr:W21508 ;
+        bdo:instanceOf      bdr:WA4PD1990 ;
+        bdo:note            bdr:NT5FF2E98D8C0EFBC1 , bdr:NT746635D9A3C92479 , bdr:NTC3E8D9F45208AB55 ;
+        bdo:numberOfVolumes  110 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "[chengdu]"@en ;
+        bdo:publisherName   "*mkhan po mun sel/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT5FF2E98D8C0EFBC1
-        a                   :Note ;
-        :noteSource         bdr:MW1PD100944 ;
-        :noteText           "computerized input of 133 volumes of kama compiled by students of khenpo munsel w1pd100944"@en .
+        a                   bdo:Note ;
+        bdo:noteSource      bdr:MW1PD100944 ;
+        bdo:noteText        "computerized input of 133 volumes of kama compiled by students of khenpo munsel w1pd100944"@en .
     
     bdr:NT746635D9A3C92479
-        a                   :Note ;
-        :noteSource         bdr:MW25983 ;
-        :noteText           "the 120 volumes of kama compiled at katok monastery by students of khenpo munsel and khenpo jamyang w25983"@en .
+        a                   bdo:Note ;
+        bdo:noteSource      bdr:MW25983 ;
+        bdo:noteText        "the 120 volumes of kama compiled at katok monastery by students of khenpo munsel and khenpo jamyang w25983"@en .
     
     bdr:NTC3E8D9F45208AB55
-        a                   :Note ;
-        :noteSource         bdr:MW19229 ;
-        :noteText           "the 58 volumes of kama are an expansion upon an earlier edition compiled by rdzogs chen rgyal sras gzhan phan mtha' yas (b. 1800) and were issued with the editorial approval of the bdud 'joms 'jigs bral ye shes rdo rje (1904-1988) w19229"@en .
+        a                   bdo:Note ;
+        bdo:noteSource      bdr:MW19229 ;
+        bdo:noteText        "the 58 volumes of kama are an expansion upon an earlier edition compiled by rdzogs chen rgyal sras gzhan phan mtha' yas (b. 1800) and were issued with the editorial approval of the bdud 'joms 'jigs bral ye shes rdo rje (1904-1988) w19229"@en .
     
     bdr:TT9F7CD90617C77C9D
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "bka' ma shin tu rgyas pa/"@bo-x-ewts .
 }
