@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN53 {
@@ -30,23 +27,30 @@ bdg:MW3CN53 {
         adm:gitPath         "8b/MW3CN53.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN53 ;
-        adm:logEntry        bda:LG309C5BA34B6F5A2F , bda:LG4E7DBB6BD9EA55A3 ;
+        adm:logEntry        bda:LG309C5BA34B6F5A2F , bda:LG4E7DBB6BD9EA55A3 , bdr:LG0WA3CN53_8MRXZB5EJSTW ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN53  a          :Instance ;
+    bdr:LG0WA3CN53_8MRXZB5EJSTW
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-10-01T16:00:55.218983Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA3CN53 in favor of WA4PD1990"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1796164652 .
+    
+    bdr:MW3CN53  a          bdo:Instance ;
         skos:prefLabel      "snga 'gyur bka' ma'i yig rnying phyogs bsdus/"@bo-x-ewts ;
-        :biblioNote         "'di rnams ni ma dpe rnying khungs can rnams la zer par tshon khra can btab pa 'ba' zhig te/ bka' ma'i phyogs sgrig gzhan pa W19229 & W25983 sogs dang par gzhi mi 'dra ba'am 'di'i nang la lag bris kyang 'dres mar snang zhing / 'di rnams ni de kun las rnying khungs che ba'i dpe dkon du mjal lo/"@en ;
-        :extentStatement    "50 V." ;
-        :hasTitle           bdr:TT406C809B229166B9 ;
-        :instanceHasReproduction  bdr:W3CN53 ;
-        :instanceOf         bdr:WA3CN53 ;
-        :numberOfVolumes    50 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "'di rnams ni ma dpe rnying khungs can rnams la zer par tshon khra can btab pa 'ba' zhig te/ bka' ma'i phyogs sgrig gzhan pa W19229 & W25983 sogs dang par gzhi mi 'dra ba'am 'di'i nang la lag bris kyang 'dres mar snang zhing / 'di rnams ni de kun las rnying khungs che ba'i dpe dkon du mjal lo/"@en ;
+        bdo:extentStatement  "50 V." ;
+        bdo:hasTitle        bdr:TT406C809B229166B9 ;
+        bdo:instanceHasReproduction  bdr:W3CN53 ;
+        bdo:instanceOf      bdr:WA4PD1990 ;
+        bdo:numberOfVolumes  50 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT406C809B229166B9
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "snga 'gyur bka' ma'i yig rnying phyogs bsdus/"@bo-x-ewts .
 }
