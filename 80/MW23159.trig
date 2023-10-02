@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23159 {
+    bda:LG0MW23159_WDAIWNMSMHZJ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-02T08:25:33.711828Z"^^xsd:dateTime ;
+        adm:logMessage      "mTshan byang"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LG382C08A908419245
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
@@ -61,16 +66,16 @@ bdg:MW23159 {
         adm:gitPath         "80/MW23159.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW23159 ;
-        adm:logEntry        bda:LG382C08A908419245 , bda:LG922241DFF4106FD7 , bda:LGC20316FC397C1CD9 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW23159_WDAIWNMSMHZJ , bda:LG382C08A908419245 , bda:LG922241DFF4106FD7 , bda:LGC20316FC397C1CD9 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV00E0C8B75AC37DE4
-        a                   :PublishedEvent ;
-        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID8C02679934259FB9
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ1965 .V5518 1979" .
     
     bdr:IDE322F76B9821CF33
@@ -78,39 +83,40 @@ bdg:MW23159 {
         rdf:value           "014258801" .
     
     bdr:IDEFE37CA45A208FD9
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "80904456" .
     
     bdr:IDFECC7686410296D5
         a                   bdr:HarvardShelfId ;
         rdf:value           "011204756-4" .
     
-    bdr:MW23159  a          :Instance ;
+    bdr:MW23159  a          bdo:Instance ;
         skos:altLabel       "'phags pa ses rab kyi pha rold tu phyin pa'i snying po rgya cher bsad pa : the tibetan translation of the arya-prajnaparamitahrdayatika of vimalamitra"@en ;
         skos:prefLabel      "shes rab snying po'i rgya cher bshad pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8C02679934259FB9 , bdr:IDE322F76B9821CF33 , bdr:IDEFE37CA45A208FD9 , bdr:IDFECC7686410296D5 ;
-        :biblioNote         "reproduced from an ancient manuscript in archaic orthography from the library of ayang rinpoche"@en ;
-        :extentStatement    "33 p." ;
-        :hasTitle           bdr:TT475820699E200BEB , bdr:TTD60F70C827CA663B , bdr:TTF35CCBC569F403E8 ;
-        :instanceEvent      bdr:EV00E0C8B75AC37DE4 ;
-        :instanceHasReproduction  bdr:W23159 ;
-        :instanceOf         bdr:WA23159 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "bir, h.p."@en ;
-        :publisherName      "d. tsondu senghe"@en ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:ID8C02679934259FB9 , bdr:IDE322F76B9821CF33 , bdr:IDEFE37CA45A208FD9 , bdr:IDFECC7686410296D5 ;
+        bdo:biblioNote      "reproduced from an ancient manuscript in archaic orthography from the library of ayang rinpoche"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "33 p." ;
+        bdo:hasTitle        bdr:TT475820699E200BEB , bdr:TTD60F70C827CA663B , bdr:TTF35CCBC569F403E8 ;
+        bdo:instanceEvent   bdr:EV00E0C8B75AC37DE4 ;
+        bdo:instanceHasReproduction  bdr:W23159 ;
+        bdo:instanceOf      bdr:WA23159 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "bir, h.p."@en ;
+        bdo:publisherName   "d. tsondu senghe"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT475820699E200BEB
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "ʼPhags pa Śes rab kyi pha rold tu phyind paʼi sñiṅ po rgya cher bśad pa :the Tibetan translation of the Ārya-Prajñāpāramitāhṛdayaṭīkā of Vimalamitra."@en-x-mixed .
     
     bdr:TTD60F70C827CA663B
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "shes rab snying po'i rgya cher bshad pa/"@bo-x-ewts .
     
     bdr:TTF35CCBC569F403E8
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "'phags pa ses rab kyi pha rold tu phyin pa'i snying po rgya cher bsad pa : the tibetan translation of the arya-prajnaparamitahrdayatika of vimalamitra"@en .
 }
