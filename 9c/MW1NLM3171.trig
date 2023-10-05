@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM3171 {
+    bda:LG0MW1NLM3171_PRU1DUKFJYNF
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-05T14:45:49.333849Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloged"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LGIM63F77742  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2021-04-16T15:18:14.719Z"^^xsd:dateTime ;
@@ -23,31 +26,45 @@ bdg:MW1NLM3171 {
         adm:gitPath         "9c/MW1NLM3171.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM3171 ;
-        adm:logEntry        bda:LGIM63F77742 ;
+        adm:logEntry        bda:LG0MW1NLM3171_PRU1DUKFJYNF , bda:LGIM63F77742 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM3171  a       :Instance ;
+    bdr:EVMW1NLM3171F8KGDHKL
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "19XX"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+    
+    bdr:MW1NLM3171  a       bdo:Instance ;
         skos:prefLabel      "legs par bshad pa chos mngon rgya mtsho'i snying po bzhugs pa'i dbu'i phyogs lags/"@bo-x-ewts ;
-        :dimensionsStatement  "48x6.5" ;
-        :extentStatement    "236 ff." ;
-        :hasTitle           bdr:TTED551E84027B8080 ;
-        :instanceHasReproduction  bdr:W1NLM3171 ;
-        :instanceOf         bdr:WA1NLM3303 ;
-        :note               bdr:NT735AEDBD597345B0 , bdr:NT8F922A0F723B8F4F ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "48x6.5" ;
+        bdo:extentStatement  "236 ff." ;
+        bdo:hasTitle        bdr:TTED551E84027B8080 , bdr:TTMW1NLM31716B98C9H0 ;
+        bdo:instanceEvent   bdr:EVMW1NLM3171F8KGDHKL ;
+        bdo:instanceHasReproduction  bdr:W1NLM3171 ;
+        bdo:instanceOf      bdr:WA1NLM3303 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT735AEDBD597345B0 , bdr:NT8F922A0F723B8F4F ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "sku 'bum/"@bo-x-ewts ;
+        bdo:publisherName   "sku 'bum byams pa gling /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT735AEDBD597345B0
-        a                   :Note ;
-        :noteText           "nlmId: M0061089"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0061089"@en .
     
     bdr:NT8F922A0F723B8F4F
-        a                   :Note ;
-        :noteText           "missingPages: M0061089-001 [Page 26, 27 printed on the same page] Image 51, 52 [Missing page from 155A-155B] Image 307-308 [165th page was double numbered] Image 327-330"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0061089-001 [Page 26, 27 printed on the same page] Image 51, 52 [Missing page from 155A-155B] Image 307-308 [165th page was double numbered] Image 327-330"@en .
     
     bdr:TTED551E84027B8080
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
+        rdfs:label          "legs par bshad pa chos mngon rgya mtsho'i snying po/"@bo-x-ewts .
+    
+    bdr:TTMW1NLM31716B98C9H0
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "legs par bshad pa chos mngon rgya mtsho'i snying po bzhugs pa'i dbu'i phyogs lags/"@bo-x-ewts .
 }
