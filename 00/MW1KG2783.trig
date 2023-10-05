@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG2783 {
@@ -17,6 +16,12 @@ bdg:MW1KG2783 {
         adm:logDate         "2009-08-05T12:22:54.468Z"^^xsd:dateTime ;
         adm:logMessage      "cataloged and released"@en ;
         adm:logWho          bdu:U00016 .
+    
+    bda:LG0MW1KG2783_UJELLWJST28I
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-05T17:00:19.819578Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@en ;
+        adm:logWho          bdu:U1426146149 .
     
     bda:LG5A98FC2F91B69FB6
         a                   adm:UpdateData ;
@@ -56,7 +61,7 @@ bdg:MW1KG2783 {
         adm:gitPath         "00/MW1KG2783.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG2783 ;
-        adm:logEntry        bda:LG0A2D65CECFF742BE , bda:LG5A98FC2F91B69FB6 , bda:LGAEC39B2BA2253769 , bda:LGCD25800745723BE2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0A2D65CECFF742BE , bda:LG0MW1KG2783_UJELLWJST28I , bda:LG5A98FC2F91B69FB6 , bda:LGAEC39B2BA2253769 , bda:LGCD25800745723BE2 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -64,32 +69,36 @@ bdg:MW1KG2783 {
         a                   bdr:HollisId ;
         rdf:value           "014256622" .
     
-    bdr:MW1KG2783  a        :Instance ;
+    bdr:MW1KG2783  a        bdo:Instance ;
         skos:prefLabel      "mi la ras pa'i rnam mgur/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID2C1FD8664BC9AEC3 ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT0F69807D9E5210FD , bdr:TT5695DB4C3BD7017C , bdr:TT9CC36BD99704F4A0 ;
-        :instanceHasReproduction  bdr:W1KG2783 ;
-        :instanceOf         bdr:WA1CZ1988 ;
-        :note               bdr:NT351F99FFD08E340F ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:ID2C1FD8664BC9AEC3 ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TT0F69807D9E5210FD , bdr:TT5695DB4C3BD7017C , bdr:TT9CC36BD99704F4A0 ;
+        bdo:instanceHasReproduction  bdr:W1KG2783 ;
+        bdo:instanceOf      bdr:WA1CZ1988 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT351F99FFD08E340F ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT351F99FFD08E340F
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TT0F69807D9E5210FD
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rnal 'byor gyi dbang phyug dam pa rje btsun mi la ras pa'i rnam thar thar pa dang thams cad mkhyen pa'i lam ston/"@bo-x-ewts .
     
     bdr:TT5695DB4C3BD7017C
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "rje btsun mi la ras pa'i rnam thar rgyas par phye ba mgur 'bum/"@bo-x-ewts .
     
     bdr:TT9CC36BD99704F4A0
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "mi la ras pa'i rnam mgur/"@bo-x-ewts .
 }
