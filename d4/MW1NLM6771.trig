@@ -1,0 +1,47 @@
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:MW1NLM6771 {
+    bda:LG0NLMGVAGJJ6IB0G2
+        a                   adm:InitialDataImport ;
+        adm:logAgent        "buda-scripts/imports/NLM/import-simple.py" ;
+        adm:logDate         "2023-10-06T14:28:34.788212"^^xsd:dateTime ;
+        adm:logMethod       bda:BatchMethod .
+    
+    bda:MW1NLM6771  a       adm:AdminData ;
+        adm:access          bda:AccessOpen ;
+        adm:adminAbout      bdr:MW1NLM6771 ;
+        adm:gitPath         "d4/MW1NLM6771.trig" ;
+        adm:gitRepo         bda:GR0012 ;
+        adm:graphId         bdg:MW1NLM6771 ;
+        adm:logEntry        bda:LG0NLMGVAGJJ6IB0G2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:restrictedInChina  false ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:ID1NLM6771_001
+        a                   bdr:NLMId ;
+        rdf:value           "M0064689" .
+    
+    bdr:MW1NLM6771  a       bdo:Instance ;
+        bf:identifiedBy     bdr:ID1NLM6771_001 ;
+        bdo:dimHeight       "6.5" ;
+        bdo:dimWidth        "26" ;
+        bdo:instanceHasReproduction  bdr:W1NLM6771 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTMW1NLM6771_001 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed ;
+        skos:prefLabel      "bde mchog dkar po'i sgo nas tshe sgrub bya tshul 'chi bdag 'joms pa'i mtshon cha sogs/"@bo-x-ewts .
+    
+    bdr:NTMW1NLM6771_001
+        a                   bdo:Note ;
+        bdo:noteText        "cover_type: n/a; missing pages: M0064689-006 [Final pages are missing 4A] Image 51"@en .
+}
