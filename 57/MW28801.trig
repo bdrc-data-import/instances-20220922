@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW28801 {
@@ -36,34 +35,40 @@ bdg:MW28801 {
         adm:gitPath         "57/MW28801.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW28801 ;
-        adm:logEntry        bda:LG861FF05FE1D235A0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG861FF05FE1D235A0 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C , bdr:LG0WA28801_1S76JQZ42O9Z ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVF9D5B4A6848797B7
-        a                   :PublishedEvent ;
-        :eventWhen          "1967"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1967"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDBD7E8AEDC40C9F7C
         a                   bdr:HollisId ;
         rdf:value           "014259777" .
     
-    bdr:MW28801  a          :Instance ;
+    bdr:LG0WA28801_1S76JQZ42O9Z
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-10-08T15:46:59.894847Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA28801 in favor of WA20827"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
+    bdr:MW28801  a          bdo:Instance ;
         skos:prefLabel      "bod snga rabs pa gsang chen rnying ma'i chos 'byung legs bshad gsar pa'i dga' ston/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDBD7E8AEDC40C9F7C ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :extentStatement    "3, 819 p." ;
-        :hasTitle           bdr:TTD00B965059F0AE0B ;
-        :instanceEvent      bdr:EVF9D5B4A6848797B7 ;
-        :instanceHasReproduction  bdr:W28801 ;
-        :instanceOf         bdr:WA28801 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "kalimpong"@en ;
-        :publisherName      "dudjom tulku rimpoche"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:IDBD7E8AEDC40C9F7C ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:extentStatement  "3, 819 p." ;
+        bdo:hasTitle        bdr:TTD00B965059F0AE0B ;
+        bdo:instanceEvent   bdr:EVF9D5B4A6848797B7 ;
+        bdo:instanceHasReproduction  bdr:W28801 ;
+        bdo:instanceOf      bdr:WA20827 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:publisherLocation  "kalimpong"@en ;
+        bdo:publisherName   "dudjom tulku rimpoche"@en ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TTD00B965059F0AE0B
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "bod snga rabs pa gsang chen rnying ma'i chos 'byung legs bshad gsar pa'i dga' ston/"@bo-x-ewts .
 }
