@@ -1,20 +1,25 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21728 {
     bda:LG0E9A029C1513F561
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG0MW21728_6JXPDFOANGAA
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-14T16:22:16.289559Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་ཁ་སྣོན་བྱས།"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
     
     bda:LG30C3DC4B1B4567D4
         a                   adm:UpdateData ;
@@ -55,16 +60,16 @@ bdg:MW21728 {
         adm:gitPath         "8c/MW21728.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21728 ;
-        adm:logEntry        bda:LG0E9A029C1513F561 , bda:LG30C3DC4B1B4567D4 , bda:LGA5FAA74D36F69D31 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0E9A029C1513F561 , bda:LG0MW21728_6JXPDFOANGAA , bda:LG30C3DC4B1B4567D4 , bda:LGA5FAA74D36F69D31 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7003483280524502
-        a                   :PublishedEvent ;
-        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID001BF079B6A87B21
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662 .B38 1978" .
     
     bdr:ID013D7495FCB489B2
@@ -72,57 +77,58 @@ bdg:MW21728 {
         rdf:value           "014258410" .
     
     bdr:ID511B85179FB80B1D
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "78908880" .
     
     bdr:ID853F359CD1FF14BC
         a                   bdr:HarvardShelfId ;
         rdf:value           "011207258-5" .
     
-    bdr:MW21728  a          :Instance ;
+    bdr:MW21728  a          bdo:Instance ;
         skos:altLabel       "the collected gter ma rediscoveries gter chen bdud 'joms gling pa"@en ;
         skos:prefLabel      "gter chos/_bdud 'joms gling pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID001BF079B6A87B21 , bdr:ID013D7495FCB489B2 , bdr:ID511B85179FB80B1D , bdr:ID853F359CD1FF14BC ;
-        :authorshipStatement  "edited by h.h. bdud-'joms 'jigs-bral-ye-ses-rdo-rje"@en ;
-        :biblioNote         "this text is in dbu med"@en ;
-        :extentStatement    "20 v." ;
-        :hasTitle           bdr:TT2B6898CA4C95EAC0 , bdr:TT87B024674CEFCCDD , bdr:TT948D116DC81A7C9E , bdr:TTC5F9B0803DF2E1FF , bdr:TTD7969CA7BAC7FDFC , bdr:TTF034361A143577E1 ;
-        :instanceEvent      bdr:EV7003483280524502 ;
-        :instanceHasReproduction  bdr:W21728 ;
-        :instanceOf         bdr:WA21728 ;
-        :note               bdr:NTA341E6F18F8FAE75 ;
-        :numberOfVolumes    20 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "kalimpong"@en ;
-        :publisherName      "dupjung lama"@en ;
-        :script             bdr:ScriptDbuMed .
+        bf:identifiedBy     bdr:ID001BF079B6A87B21 , bdr:ID013D7495FCB489B2 , bdr:ID511B85179FB80B1D , bdr:ID853F359CD1FF14BC ;
+        bdo:authorshipStatement  "edited by h.h. bdud-'joms 'jigs-bral-ye-ses-rdo-rje"@en ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་སྤྲུལ་པའི་གཏེར་ཆེན་ཁྲག་འཐུང་བདུད་འཇོམས་གླིང་པ་ (1835–1904; BDRC: P705) ཡི་ཟབ་གཏེར་ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་གི་གཏེར་ཆོས་རྣམས་དམ་པ་དེ་ཉིད་ཀྱི་སྐུ་སྐྱེ་དེ་མ་ཐག་པ་བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ་ (1904–1988; BDRC: P736) ཡིས་ཕྱོགས་གཅིག་ཏུ་བསྒྲིགས་ཤིང་། པར་བྱང་སྨོན་ཚིག་ལས། “གྲུབ་པའི་འཁོར་སྒྱུར་བདུད་འཇོམས་གླིང་པ་ཡི། །ཟབ་གཏེར་གསང་བའི་ཆོས་མཛོད་ཡིད་བཞིན་ནོར། །རིག་འཛིན་དབང་མོས་སྤར་དུ་བཏབ་སྟེ་སྤེལ། །”ཞེས་འབྱུང་བ་ལྟར་དེ་ཉིད་ཀྱི་གསང་ཡུམ་རིག་འཛིན་དབང་མོ་ཡིས་ཀ་ལི་སྤུངས་ནས་སྤྱི་ལོ་ 1978 ལ་པར་དུ་བསྐྲུན་པའོ། །དབུ་མེད་བྲིས་མའི་གསུང་འབུམ་གྱི་དཀར་ཆག་དབུ་ཅན་བྲིས་མ་ཡིན། དཀར་ཆག་གཞིར་བཟུང་བྱས་ན་གཏེར་ཆོས་འདིར་ཆོས་ཚན་ 1128 བཞུགས་སོ། །\nཔོད་དང་པོ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་གི་ཁ་བྱང་སོགས་དང་། བླ་མ་ཞི་དྲག་གསུམ་ལ་ཁྱོན་འདིར་ཆོས་ཚན་དྲུག་ཅུ་རེ་ལྔ་བཞུགས།\nཔོད་གཉིས་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་ཆོས་སྡེ་བཞི་སྟེ། འཇམ་དཔལ་ཞི་བའི་སྐོར་དང་། འཇམ་དཔལ་དྲག་པོ་གཤིན་རྗེ་གཤེད་ལས་གཤིན་དང་བཅས་པའི་སྐོར། བདེ་ཆེན་ཞིང་སྒྲུབ་ཀྱི་སྐོར། ཚེ་སྒྲུབ་དངོས་གྲུབ་འདོད་འབྱུང་གི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་ལྔ་བཅུ་ང་གཅིག་བཞུགས།\nཔོད་གསུམ་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་སྐོར་ཚོ་ལྔ་སྟེ། འཕགས་མཆོག་ཐུགས་རྗེ་ཆེན་པོ། རྟ་མགྲིན་ཡང་ཁྲོས་ནག་པོ་ཆ་ལག་དང་བཅས་པ། བླ་མ་རྡོ་རྗེ་སེམས་དཔའ། བླ་མ་ཞི་ཁྲོ་འདུས་པ། གསང་བདག་ཕྱག་ན་རྡོ་རྗེའི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་དྲུག་ཅུ་རེ་ལྔ་བཞུགས།\nཔོད་བཞི་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་ཆོས་སྡེ་ལས། ཐུགས་སྒྲུབ་གསང་བའི་རྒྱ་ཅན་དཔལ་ཆེན་རྡོ་རྗེ་གཞོན་ནུ་སྒྲུབ་སྐོར་ལ་ནང་གསེས་ཆོས་ཚན་དཀྱུས་གཅིག་ཏུ་བརྩིས་པའི་ཆོས་སྡེ་གཅིག་བཞུགས།\nཔོད་ལྔ་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་སྐོར་ཚོ་གསུམ་སྟེ། ཕུར་པ་ཐུགས་སྒྲུབ་གསང་བ་རྒྱ་ཅན་གནམ་ལྕགས་སྤུ་གྲིའི་སྐོར། ཕུར་པ་བདེ་གཤེགས་སྙིང་པོའི་སྐོར། རིག་འཛིན་སྙིང་གི་ཡང་ཐིག་གི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་ལྔ་བཅུ་ང་གཅིག་བཞུགས།\nཔོད་དྲུག་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་སྒྲུབ་སྐོར་གསུམ་སྟེ། བཀའ་བརྒྱད་ཆུ་གཏེར་འདུས་པའི་སྐོར། བཀའ་བརྒྱད་གསང་འདུས་སྐོར། བཀའ་བརྒྱད་འབྱུང་འདུལ་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་སུམ་ཅུ་སོ་བཞི་བཞུགས།\nཔོད་བདུན་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་མཁའ་འགྲོའི་སྒྲུབ་སྐོར་ལ་ལྔ་སྟེ། ཐུགས་སྒྲུབ་ཡེ་ཤེས་ཉི་མའི་ཕྱི་སྒྲུབ་གསང་བ་ཡེ་ཤེས་ཀྱི་སྐོར། ནང་སྒྲུབ་བདུད་འདུལ་དྲག་མོ་སེང་གདོང་མའི་སྐོར། ཕག་མོའི་སྐོར། གསང་སྒྲུབ་སྒྲོལ་མའི་སྐོར། མཁའ་འགྲོ་གསང་བའི་གབ་ཐིག་ལས་ཡང་གསང་སྒྲུབ་པ་མཚོ་རྒྱལ་སྐོར་བཅས་ལ་ཆོས་ཚན་ལྔ་བཅུ་ང་དྲུག་བཞུགས།\nཔོད་བརྒྱད་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་སྲུང་མའི་སྒྲུབ་སྐོར་སྟོད་ཆ་ལ་བཞི་སྟེ། མ་ཧཱ་ཀ་ལའི་སྐོར། སྔགས་སྲུང་མའི་སྐོར། ལྷ་ཆེན་རྣམ་གསུམ་སྐོར། གནོད་སྦྱིན་ཤན་པ་དམར་ནག་གི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་དྲུག་ཅུ་རེ་གཉིས་བཞུགས།\nཔོད་དགུ་པ། ཟབ་གསང་མཁའ་འགྲོ་སྙིང་ཐིག་དང་འབྲེལ་བའི་སྲུང་མའི་སྒྲུབ་སྐོར་སྨད་ཆ་ལ་བདུན་སྟེ། དྲང་སྲོང་གཟའ་བདུད་ནག་པོའི་སྐོར། དམ་ཅན་རྡོ་རྗེ་ལེགས་པའི་སྐོར། ནོར་བདག་ཨ་པ་ར་ཙིཏྟའི་སྐོར། རྒྱལ་པོ་ཆེན་པོ་རྣམ་ཐོས་སྲས་ཀྱི་སྐོར། བཙན་རྒོད་རོལ་པ་སྐྱ་བདུན་གནོད་སྦྱིན་ཙིའུ་དམར་པོའི་སྐོར། ཟབ་མོ་གཅོད་ཀྱི་བསྟན་སྲུང་བཙན་རྒོད་ཤན་པ་ཀུས་འདེབས་སྐྱ་གཅིག་གི་སྐོར། བཀའ་སྲུང་དམ་ཅན་དྲེགས་པ་སྡེ་དགུའི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་ལྔ་བཅུ་ང་གཅིག་བཞུགས།\nཔོད་བཅུ་པ། དགོངས་གཏེར་ནམ་མཁའ་མཛོད་ཀྱི་ཆོས་སྡེ་ལས་མཁའ་འགྲོ་ཁྲོས་མའི་སྐོར་གྱི་སྟོད་ཆ་ལ་ཁྱོན་ཆོས་ཚན་དྲུག་ཅུ་རེ་གཅིག་བཞུགས།\nཔོད་བཅུ་གཅིག་པ། དགོངས་གཏེར་ནམ་མཁའ་མཛོད་ཀྱི་ཆོས་སྡེ་ལས་མཁའ་འགྲོ་ཁྲོས་མའི་སྐོར་གྱི་སྨད་ཆ་ལ་གཉིས་ལས། གཏེར་གཞུང་རྩ་བའི་སྐོར་དང་། ཡན་ལག་ཁ་སྐོང་གི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་སུམ་ཅུ་སོ་དྲུག་བཞུགས།\nཔོད་བཅུ་གཉིས་པ། དགོངས་གཏེར་ནམ་མཁའ་མཛོད་ཀྱི་ཆོས་སྡེ་ལས་དགོངས་གཏེར་སྣ་ཚོགས་པའི་སྐོར་ཚོ་ལ་གཉིས་ཏེ། དང་པོ་ཟབ་ཆོས་དགོངས་པ་ཀློང་རྡོལ་གྱི་སྐོར་ལ་བཞི་སྟེ། གསོལ་འདེབས་དང་སྒྲུབ་ཐབས་སྣ་ཚོགས་ཀྱི་སྐོར། བདུད་རྩི་འཁྱིལ་བའི་སྐོར། སྣ་ཚོགས་སྐོར། རྨ་ཆེན་སྤོམ་རའི་སྐོར། གཉིས་པ་ཆོས་ཉིད་ནམ་མཁའི་ཀློང་མཛོད་སྐོར་སྟོད་ཆ་ལ། བླ་སྒྲུབ་སྣ་ཚོགས་སྐོར། ཡི་དམ་སྒྲུབ་པ་ཕྲིན་ལས་སྣ་ཚོགས་སྐོར། མཁའ་འགྲོའི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་བརྒྱད་ཅུ་གྱ་བརྒྱད་བཞུགས།\nཔོད་བཅུ་གསུམ་པ། ཆོས་ཉིད་ནམ་མཁའི་ཀློང་མཛོད་སྐོར་བར་ཆ་ལ། བཀའ་སྲུང་སྒྲུབ་ཐབས་སྣ་ཚོགས་སྐོར་བཅུ་གཅིག་སྟེ། མགོན་པོའི་སྐོར། སྔགས་སྲུང་མའི་སྐོར། ལྷ་ཆེན་སྐོར། ཤན་པའི་སྐོར། ནོར་བདག་ཨ་པ་རའི་སྐོར། གཟའི་སྐོར། གཏེར་སྲུང་གཞི་བདག་སྣ་ཚོགས་ཀྱི་སྐོར་དང་། དམ་ཅན་སྐོར། ཞིང་སྐྱོང་སེང་གདོང་སྐོར། གནོད་སྦྱིན་ཙིའུ་དམར་སོགས་བཙན་གྱི་སྐོར། མ་མོ་སྔགས་སྲུང་ཤ་ཟ་ཧོར་མོའི་སྐོར། བསང་དང་གསོལ་མཆོད་བསྐང་ཕྲིན་སྣ་ཚོགས་ཀྱི་སྐོར་བཅས་ལ་ཆོས་ཚན་བརྒྱ་དང་ནི་ཤུ་རྩ་བརྒྱད་བཞུགས།\nཔོད་བཅུ་བཞི་པ། ཆོས་ཉིད་ནམ་མཁའི་ཀློང་མཛོད་སྐོར་སྨད་ཆ་ལ་སྐོར་ཚོ་གསུམ་སྟེ། གསོལ་འདེབས་སྣ་ཚོགས་སྐོར། སྒྲུབ་ཁོག་སོགས་ཀྱི་སྐོར། སྨོན་ལམ་སྐོར། ཞར་བྱུང་ཉེར་མཁོ་ཁ་སྐོང་སྐོར་རོ། །ཟབ་གཏེར་གསང་བའི་ཆོས་སྡེ་ལས། དག་སྣང་ཡེ་ཤེས་དྲྭ་བའི་སྐོར་གྱི་སྟོད་ཆ་ལ་གསུམ་སྟེ། ལུང་བྱང་སྣ་ཚོགས་སྐོར། སྔོན་འགྲོ་ངག་འདོན་སྐོར། གསོལ་འདེབས་དང་ཞབས་བརྟན་སྨོན་ཚིག་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་བདུན་ཅུ་དོན་དྲུག་བཞུགས།\nཔོད་བཅོ་ལྔ་པ། ཟབ་གཏེར་གསང་བའི་ཆོས་སྡེ་ལས། དག་སྣང་ཡེ་ཤེས་དྲྭ་བའི་སྐོར་གྱི་བར་ཆ་ལ་སྐོར་ཚོ་དྲུག་སྟེ། བླ་མ་ཞི་དྲག་སོགས་ཀྱི་སྒྲུབ་སྐོར། འཇམ་དཔལ་སྨྲ་སེང་སྐོར། ཕུར་པའི་སྐོར། ཉེར་མཁོ་ཁ་སྐོང་སྣ་ཚོགས་སྐོར། བཀའ་སྲུང་སྣ་ཚོགས་སྐོར། ཡུལ་གཏེར་གནས་གཞི་ཆོས་སྲུང་རྣམས་ཀྱི་བསང་གསོལ་སྣ་ཚོགས་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་བརྒྱ་དང་ཉི་ཤུ་རྩ་ལྔ་བཞུགས།\nཟབ་གཏེར་གསང་བའི་ཆོས་སྡེ་ལས། དག་སྣང་ཡེ་ཤེས་དྲྭ་བའི་སྐོར་གྱི་སྨད་ཆ་ལ་སྐོར་ཚོ་བཞི་སྟེ། གནས་ཀྱི་དཀར་ཆག་སོགས་སྣ་ཚོགས་སྐོར། སྨོན་ལམ་སྣ་ཚོགས་ཀྱི་སྐོར། ཞར་བྱུང་ཉེར་མཁོ་ས་གཏེར་ཁ་སྐོང་སྐོར། ཟབ་གཏེར་ཀུན་གྱི་རྒྱབ་ཆོས་ཁྲིད་ཡིག་གི་སྐོར་བཅས་ལ་ཁྱོན་ཆོས་ཚན་སུམ་ཅུ་སོ་དྲུག་བཞུགས།\nཔོད་བཅུ་བདུན་པ། ཟབ་གཏེར་གསང་བའི་ཆོས་སྡེ་ལས། དག་སྣང་ཡེ་ཤེས་དྲྭ་བའི་སྐོར་ལ། ཟབ་གཏེར་ཀུན་གྱི་རྒྱབ་ཆོས་སུ་གྱུར་པ་གནས་ལུགས་རང་བྱུང་གི་རྒྱུད་རྡོ་རྗེའི་སྙིང་པོ་ཞེས་བྱ་བའི་ཁྲིད་ཆོས་ཚན་གཅིག་བཞུགས།\nཔོད་བཅོ་བརྒྱད་པ། གསུང་མགུར་ཞལ་གདམས་སྣ་ཚོགས་པ་འདིར་མགུར་ཚན་བརྒྱ་དང་སུམ་ཅུ་སོ་ལྔ་བཞུགས།\nཔོད་བཅུ་དགུ་པ། ཟབ་གཏེར་གསང་བའི་ཆོས་སྡེ་འབྲེལ་བར་སྐོར་ཚོ་གཉིས་ལས། ཁྲིད་ཀྱི་སྐོར་དང་། རྨད་བྱུང་རྣམ་ཐར་གྱི་སྐོར་བཅས་ཁྱོན་ཆོས་ཚན་ལྔ་བཞུགས།\nཔོད་ཉི་ཤུ་པ། ཟབ་གཏེར་གསང་བའི་ཆོས་སྡེ་ལས། ཁ་སྐོང་སྐོར་བཅས་སོ། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "this text is in dbu med"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "20 v." ;
+        bdo:hasTitle        bdr:TT2B6898CA4C95EAC0 , bdr:TT87B024674CEFCCDD , bdr:TT948D116DC81A7C9E , bdr:TTC5F9B0803DF2E1FF , bdr:TTD7969CA7BAC7FDFC , bdr:TTF034361A143577E1 ;
+        bdo:instanceEvent   bdr:EV7003483280524502 ;
+        bdo:instanceHasReproduction  bdr:W21728 ;
+        bdo:instanceOf      bdr:WA21728 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTA341E6F18F8FAE75 ;
+        bdo:numberOfVolumes  20 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "kalimpong"@en ;
+        bdo:publisherName   "dupjung lama"@en ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NTA341E6F18F8FAE75
-        a                   :Note ;
-        :noteText           "tbrc hold scanned images, tiffs and pdf files\n2807-2826"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "tbrc hold scanned images, tiffs and pdf files\n2807-2826"@en .
     
     bdr:TT2B6898CA4C95EAC0
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "pad+ma'i rnam rol bdud 'joms gling pa'i srol nye brgyud zab gter chos mdzod rin po che/"@bo-x-ewts .
     
     bdr:TT87B024674CEFCCDD
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "gter chos/_bdud 'joms gling pa/"@bo-x-ewts .
     
     bdr:TT948D116DC81A7C9E
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "sprul pa'i gter chen bdud 'joms gling pa'i zab gter gsang ba'i chos sde/"@bo-x-ewts .
     
     bdr:TTC5F9B0803DF2E1FF
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "The collected gter-ma rediscoveries of Gter-chen Bdud-ʼjoms-gliṅ-pa /edited by H. H. Bdud-ʼjoms ʼJigs-bral-ye-śes-rdo-rje."@en-x-mixed .
     
     bdr:TTD7969CA7BAC7FDFC
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bdud 'joms gling pa'i gter chos/"@bo-x-ewts .
     
     bdr:TTF034361A143577E1
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "the collected gter ma rediscoveries gter chen bdud 'joms gling pa"@en .
 }
