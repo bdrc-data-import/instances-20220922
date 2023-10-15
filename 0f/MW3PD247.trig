@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3PD247 {
+    bda:LG0MW3PD247_JWUJVUQUM1TB
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-15T20:57:44.512976Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG1B78027D3DAFE039
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-12-01T11:06:14.543Z"^^xsd:dateTime ;
@@ -24,41 +27,44 @@ bdg:MW3PD247 {
         adm:gitPath         "0f/MW3PD247.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3PD247 ;
-        adm:logEntry        bda:LG1B78027D3DAFE039 ;
+        adm:logEntry        bda:LG0MW3PD247_JWUJVUQUM1TB , bda:LG1B78027D3DAFE039 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV123D1E2D598E1595
-        a                   :PublishedEvent ;
-        :eventWhen          "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2014"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3PD247  a         :Instance ;
+    bdr:MW3PD247  a         bdo:Instance ;
         skos:prefLabel      "gsung 'bum/ sprul sku tshul khrims bzang po/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :extentStatement    "16 v." ;
-        :hasTitle           bdr:TT175A21CB9949B347 , bdr:TT54C8F9116C9F16AF , bdr:TT6D01F6C013FE8DFE , bdr:TT86DB78AEE37F7618 ;
-        :instanceEvent      bdr:EV123D1E2D598E1595 ;
-        :instanceHasReproduction  bdr:W3PD247 ;
-        :instanceOf         bdr:WA3PD247 ;
-        :numberOfVolumes    16 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "[s.l.]"@en ;
-        :publisherName      "[s.n.]"@en ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "16 v." ;
+        bdo:hasTitle        bdr:TT175A21CB9949B347 , bdr:TT54C8F9116C9F16AF , bdr:TT6D01F6C013FE8DFE , bdr:TT86DB78AEE37F7618 ;
+        bdo:instanceEvent   bdr:EV123D1E2D598E1595 ;
+        bdo:instanceHasReproduction  bdr:IE3PD247 , bdr:W3PD247 ;
+        bdo:instanceOf      bdr:WA3PD247 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  16 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT175A21CB9949B347
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "grub pa'i dbang phyug chen po shI la b+ha dra'i gsung 'bum theg mchog bdud rtsi'i dga' ston/"@bo-x-ewts .
     
     bdr:TT54C8F9116C9F16AF
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "sprul sku tshul lo'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TT6D01F6C013FE8DFE
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "sprul sku tshul khrims bzang po'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TT86DB78AEE37F7618
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsung 'bum/ sprul sku tshul khrims bzang po/"@bo-x-ewts .
 }
