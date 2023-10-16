@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG3816 {
+    bda:LG0MW1KG3816_P93T9J2BIR1S
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-16T14:27:29.063040Z"^^xsd:dateTime ;
+        adm:logMessage      "བསྡུས་དོན།"@bo ;
+        adm:logWho          bdu:U0ES1062566167 .
+    
     bda:LGC0B236ED2AC21BEC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2009-10-30T14:37:12.831Z"^^xsd:dateTime ;
@@ -38,36 +43,43 @@ bdg:MW1KG3816 {
         adm:gitPath         "83/MW1KG3816.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG3816 ;
-        adm:logEntry        bda:LGC0B236ED2AC21BEC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1KG3816_P93T9J2BIR1S , bda:LGC0B236ED2AC21BEC , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV134FDF79D472CAB6
-        a                   :PublishedEvent ;
-        :eventWhen          "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDCA581A7C5B2F5EC5
         a                   bdr:HollisId ;
         rdf:value           "014256743" .
     
-    bdr:MW1KG3816  a        :Instance ;
+    bdr:MW1KG3816  a        bdo:Instance ;
         skos:prefLabel      "nges shes rin po che'i sgron me'i rnam bshad 'od zer dri med/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDCA581A7C5B2F5EC5 ;
-        :biblioNote         "computerized print text"@en ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :extentStatement    "242 ff. (483 p.)" ;
-        :hasTitle           bdr:TTBE7B1093C1AD03D1 ;
-        :instanceEvent      bdr:EV134FDF79D472CAB6 ;
-        :instanceHasReproduction  bdr:W1KG3816 ;
-        :instanceOf         bdr:WA1KG3816 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "bylakuppa, karnataka"@en ;
-        :publisherName      "ngagyur nyingma institute"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:IDCA581A7C5B2F5EC5 ;
+        bdo:biblioNote      "computerized print text"@en ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:extentStatement  "242 ff. (483 p.)" ;
+        bdo:hasTitle        bdr:TTBE7B1093C1AD03D1 ;
+        bdo:instanceEvent   bdr:EV134FDF79D472CAB6 ;
+        bdo:instanceHasReproduction  bdr:W1KG3816 ;
+        bdo:instanceOf      bdr:WA1KG3816 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTMW1KG38164HEH4JYG ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "bylakuppa, karnataka"@en ;
+        bdo:publisherName   "ngagyur nyingma institute"@en ;
+        bdo:script          bdr:ScriptDbuCan .
+    
+    bdr:NTMW1KG38164HEH4JYG
+        a                   bdo:Note ;
+        bdo:noteText        "༼༡༽ ཕྱི་ལོ ༡༨༥༢ དགུང་ལོ ༧ པ། ཆུ་བྱི་ལོར་བསྟན་བཅོས་ཆེན་པོ་«ངེས་ཤེས་རིན་པོ་ཆེའི་སྒྲོན་མེ་»སྟན་ཐོག་གཅིག་ལ་དཀྱུས་གཅིག་ཏུ་བརྩམས། གསལ་བཤད། ངེས་ཤེས་རིན་པོ་ཆེའི་སྒྲོན་མེ་འདི་འཇམ་མགོན་བླ་མས་དགུང་ལོ ༧ ཐོག་ལ་བརྩམས་པ་ཡིན་ཞེས་བླ་མ་གོང་མའི་ཞལ་རྒྱུན་ལ་གྲགས་ཀྱང་། དེང་སང་ཁ་ཅིག་གིས་དེར་མ་ངེས་ཚུལ་འཆལ་གཏམ་སྣ་ཚོགས་སྨྲ་མོད། འདིར་ནི་༸ཆོས་རྗེ་ཡིད་བཞིན་ནོར་བུས་གསོལ་འདེབས་གཡུལ་ལས་རྣམ་པར་རྒྱལ་བའི་རྔ་སྒྲ་ལས། ༼གཉིས་པ་ནི། སྙིང་དབུས་མི་ཤིགས་གཞོན་ནུས་སྒོ་བརྒྱ་ཕྱེས་ཏེ་སྤོབས་པའི་གཏེར་ཆེན་བརྒྱད་ལ་མངའ་དབང་བསྒྱུར་ནས་ལེགས་བཤད་དམ་ཆོས་རྒྱ་མཚོའི་ཕ་ཕོག །རིས་མེད་སྐལ་བཟང་ཡོངས་ཀྱི་མདུན་སར་བཀྲམ་པ་སྟེ། དགུང་ལོ་བདུན་གྱི་དུས་སུ་མདོ་སྔགས་དགོངས་འགྲེལ་མཐའ་དག་གི་གནད་དོན་ཨ་ར་པ་ཙ་ན་དྷིཿ ཡི་རང་བཞིན་དུ་ཐུགས་ལ་ཤར་ཚེ་སྐུ་ན་ཧ་ཅང་གཞོན་ཆེས་པས་ཡི་གེའི་ཕྱི་མོ་བྲི་བའང་ཇི་བཞིན་རྔོ་མི་ཐོགས་པའི་སྐབས་སུ་འཇུ་བླ་རིན་ཆེན་མགོན་པོས་ཡི་གེ་པ་བྱས་ཏེ་རྩེད་མོའི་ཞོར་ལ་བྲིས་པའི་བསྟན་བཅོས་ངན་པ་དྲུག་བྲལ་བཟང་པོ་གསུམ་དང་ལྡན་པའི་ལེགས་བཤད་རྨད་དུ་བྱུང་བ་ངེས་ཤེས་རིན་པོ་ཆེའི་སྒྲོན་མེ་ཞེས་ད་ལྟ་གྲགས་སྙན་དབྱར་སྐྱེས་ཀྱི་རྔ་གསང་གིས་སྲིད་གསུམ་དོག་པོར་བྱེད་ནུས་པ་འདི་ཉིད་དོ། །༽ཞེས་འཇམ་མགོན་བླ་མས་ཡེ་ཤེས་སྐུ་ཡི་རྗེས་སུ་གཟུང་བའི་སྐྱེས་ཆེན་ཁོང་གིས་གསུངས་པའི་མངོན་སུམ་ལོ་རྒྱུས་གསལ་ལ་མ་འདྲེས་པ་འདི་དང་། ཀཿཿ ཐོག་མཁན་རྒན་བསོད་ནམས་བསྟན་པས་བཞུགས་བྱང་ཕྱོགས་ལས་རྣམས་པར་རྒྱལ་བའི་རྒྱལ་མཚན་ལས། ༼དགུང་ལོ་བདུན་པའི་དུས་ངེས་ཤེས་སྒྲོན་མེ་སྟན་ཐོག་གཅིག་ཏུ་བརྩམས་ཞེས་དངོས་སློབ་བླ་མ་ཉག་བླ་དབང་ཕྱུག་ནས་གསུངས།༽ཞེས་པ་འདི་གཉིས་ལ་ཁུངས་སུ་བྱས་པ་ལགས།"@bo .
     
     bdr:TTBE7B1093C1AD03D1
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "nges shes rin po che'i sgron me'i rnam bshad 'od zer dri med/"@bo-x-ewts .
 }
