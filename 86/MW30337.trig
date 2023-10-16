@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW30337 {
+    bda:LG0MW30337_R5YMRBBOG4MX
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-16T17:18:02.279115Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་ཁ་སྣོན་བྱས"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LGBAA8B44B97EB95BB
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
@@ -55,13 +60,13 @@ bdg:MW30337 {
         adm:gitPath         "86/MW30337.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW30337 ;
-        adm:logEntry        bda:LGBAA8B44B97EB95BB , bda:LGF858D3134396575C , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW30337_R5YMRBBOG4MX , bda:LGBAA8B44B97EB95BB , bda:LGF858D3134396575C , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVBF3DB91A1BFE1D8F
-        a                   :PublishedEvent ;
-        :eventWhen          "1970"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1970"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID5239E792BFE2A611
         a                   bdr:HarvardShelfId ;
@@ -72,40 +77,41 @@ bdg:MW30337 {
         rdf:value           "014260738" .
     
     bdr:ID8DED10BA0839C1F1
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662.4 .B3422 1970" .
     
     bdr:IDCEEA39013D0B9DE3
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "72911611" .
     
-    bdr:MW30337  a          :Instance ;
+    bdr:MW30337  a          bdo:Instance ;
         skos:altLabel       "a systematic presentation of the teachings of the dzogchen approach of nyingmapa buddhism"@en ;
-        skos:prefLabel      "dag snang ye shes drwa ba las gnas lugs rang byung gi rgyud rdo rje'i snying po/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5239E792BFE2A611 , bdr:ID63AF20BF0DA3AEE5 , bdr:ID8DED10BA0839C1F1 , bdr:IDCEEA39013D0B9DE3 ;
-        :authorshipStatement  "from the dag snang ye shes drwa ba visions of khrag thung rol pa'i rdo rje {i.e. gter ston bdud 'joms gling pa]"@en ;
-        :biblioNote         "impressions from original blocks"@en ;
-        :extentStatement    "177 leaves" ;
-        :hasTitle           bdr:TT338A9A665383612D , bdr:TT5110E51963A440AF , bdr:TT53391911BF3B3AF4 ;
-        :instanceEvent      bdr:EVBF3DB91A1BFE1D8F ;
-        :instanceHasReproduction  bdr:W30337 ;
-        :instanceOf         bdr:WA21729 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "dehradun"@en ;
-        :publisherName      "g.t.kunga lodoy and n. gyaltshan"@en ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "dag snang ye shes drwa ba las gnas lugs rang byung gi rgyud rdo rje'i snying po/"@bo-x-ewts , "Dag snang ye shes dra ba las gnas lugs rang byung gi rgyud rdo rjeʼi snying po :a systematic presentation of the teachings of the Dzogchen approach of Nyingmapa Buddhism /from the Dag-snang-ye-saes-drwa-ba [sic] visions of Khrag-thung Rol-paʼi-rdo-rje [i.e. Gter-ston Bdud-ʼjoms-gliṅ-pa]."@en-x-mixed ;
+        bf:identifiedBy     bdr:ID5239E792BFE2A611 , bdr:ID63AF20BF0DA3AEE5 , bdr:ID8DED10BA0839C1F1 , bdr:IDCEEA39013D0B9DE3 ;
+        bdo:authorshipStatement  "from the dag snang ye shes drwa ba visions of khrag thung rol pa'i rdo rje {i.e. gter ston bdud 'joms gling pa]"@en ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཁྲག་འཐུང་བདུད་འཇོམས་གླིང་པ་ (1835–1904; BDRC: P705) ཡི་ཟབ་མོ་དག་སྣང་ལས་བྱུང་བའི་«དག་སྣང་ཡེ་ཤེས་དྲྭ་བ་ལས༔ གནས་ལུགས་རང་བྱུང་གི་རྒྱུད་རྡོ་རྗེ་སྙིང་པོ་»དེ་ཡིན། པར་མ་དེ་ནི་ནང་བསྟན་དཔེ་ཚོགས་ཀྱི་དཔེ་ཨང་ MW1ER138 དེ་དང་གཅིག་པ་ཡིན། པར་མ་གཞན་དེ་དང་བསྡུར་ན་ཧ་ཅང་གསལ་ཞིང་པར་མ་གཞན་ལ་ཆད་པའི་ལྡེབ་མ་གཉིས་ཀྱང་འདིར་བཞུགས་པར་སྣང་ངོ་། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "impressions from original blocks"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "177 leaves" ;
+        bdo:hasTitle        bdr:TT338A9A665383612D , bdr:TT5110E51963A440AF , bdr:TT53391911BF3B3AF4 ;
+        bdo:instanceEvent   bdr:EVBF3DB91A1BFE1D8F ;
+        bdo:instanceHasReproduction  bdr:W30337 ;
+        bdo:instanceOf      bdr:WA21729 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "dehradun"@en ;
+        bdo:publisherName   "g.t.kunga lodoy and n. gyaltshan"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT338A9A665383612D
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "Dag snang ye shes dra ba las gnas lugs rang byung gi rgyud rdo rjeʼi snying po :a systematic presentation of the teachings of the Dzogchen approach of Nyingmapa Buddhism /from the Dag-snang-ye-saes-drwa-ba [sic] visions of Khrag-thung Rol-paʼi-rdo-rje [i.e. Gter-ston Bdud-ʼjoms-gliṅ-pa]."@en-x-mixed .
     
     bdr:TT5110E51963A440AF
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "dag snang ye shes drwa ba las gnas lugs rang byung gi rgyud rdo rje'i snying po/"@bo-x-ewts .
     
     bdr:TT53391911BF3B3AF4
-        a                   :Subtitle ;
+        a                   bdo:Subtitle ;
         rdfs:label          "a systematic presentation of the teachings of the dzogchen approach of nyingmapa buddhism"@en .
 }
