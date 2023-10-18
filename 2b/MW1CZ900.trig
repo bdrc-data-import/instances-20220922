@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1CZ900 {
+    bda:LG0MW1CZ900_7JDBS32QYZ79
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-18T15:39:21.253954Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་ཁ་སྣོན་བྱས"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LG31A5544C028A7F30
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-05-04T13:49:54.92Z"^^xsd:dateTime ;
@@ -53,42 +58,44 @@ bdg:MW1CZ900 {
         adm:gitPath         "2b/MW1CZ900.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1CZ900 ;
-        adm:logEntry        bda:LG31A5544C028A7F30 , bda:LG69D6E58A9083C4C5 , bda:LG988588AFC921B898 , bda:LGCD1BEBBFABC7ECA1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1CZ900_7JDBS32QYZ79 , bda:LG31A5544C028A7F30 , bda:LG69D6E58A9083C4C5 , bda:LG988588AFC921B898 , bda:LGCD1BEBBFABC7ECA1 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR308E97B3D2744A0F
-        a                   :AgentAsCreator ;
-        :agent              bdr:P731 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P731 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:IDD18889C9B98472EA
         a                   bdr:HollisId ;
         rdf:value           "014255430" .
     
-    bdr:MW1CZ900  a         :Instance ;
+    bdr:MW1CZ900  a         bdo:Instance ;
         skos:prefLabel      "bdud 'joms gling pa'i rnam thar zhal gsungs ma/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDD18889C9B98472EA ;
-        :creator            bdr:CR308E97B3D2744A0F ;
-        :extentStatement    "126 ff." ;
-        :hasTitle           bdr:TT03208F1E0798337B , bdr:TT6ACB34F89B70CA60 ;
-        :instanceHasReproduction  bdr:W1CZ900 ;
-        :instanceOf         bdr:WA1CZ900 ;
-        :note               bdr:NTFC9D011D6A50801E ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:IDD18889C9B98472EA ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཁྲག་འཐུང་བདུད་འཇོམས་གླིང་པ་ (1835–1904; BDRC: P705) ཉིད་ཀྱིས་མཛད་པའི་རང་རྣམ་དུ་བརྩམས་པའི་གཞུང་མཚན་ཡང་«གཏེར་ཆེན་ཆོས་ཀྱི་རྒྱལ་པོ་ཁྲག་འཐུང་བདུད་འཇོམས་གླིང་པའི་རྣམ་པར་ཐར་པ་ཞལ་གསུངས་མ་»ཞེས་བྱ་བ་དེ་ཡིན། པར་བྱང་སྨོན་ཚིག་ལས། “རྣམ་པར་དགོངས་ནས་གང་གི་དེ་མ་ཐག །མཆོག་གི་སྤྲུལ་སྐུ་ཡེ་ཤེས་རྡོ་རྗེ་ཡིས། །ཞུས་ཤིང་བྱི་དོར་གཙང་བྱས་ཆོས་སྦྱིན་བར། །རིས་མེད་གདུལ་བྱའི་དཔལ་དུ་ལེགས་པར་བསྐྲུན། །”ཞེས་འབྱུང་བས་པར་མ་དེ་ནི་བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ་ (1904–1988; BDRC: P736) ཡིས་ཞུས་དག་དང་། རྣམ་རྒྱལ་དཔལ་མོ་སོགས་སྦྱིན་པའི་བདག་པོ་རྣམས་ཀྱི་བསམ་པ་རྫོགས་པའི་སླད་དུ་དེ་ཉིད་ཀྱི་བཀའ་སྤྱི་བོར་མཆོད་དེ། ཀུ་སཱ་ལི་སངས་རྒྱས་རྡོ་རྗེའམ་བྱ་བྲལ་རིན་པོ་ཆེའི་སྨོན་ཚིག་ཏུ་བྲིས་པ་ཞིག་སྣང་ངོ་། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:creator         bdr:CR308E97B3D2744A0F ;
+        bdo:extentStatement  "126 ff." ;
+        bdo:hasTitle        bdr:TT03208F1E0798337B , bdr:TT6ACB34F89B70CA60 ;
+        bdo:instanceHasReproduction  bdr:W1CZ900 ;
+        bdo:instanceOf      bdr:WA1CZ900 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTFC9D011D6A50801E ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTFC9D011D6A50801E
-        a                   :Note ;
-        :noteText           "TBRC also has scans of a printed version of the same manuscript W20534"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "TBRC also has scans of a printed version of the same manuscript W20534"@en .
     
     bdr:TT03208F1E0798337B
-        a                   :Subtitle ;
+        a                   bdo:Subtitle ;
         rdfs:label          "gter chen chos kyi rgyal po khrag 'thung bdud 'joms gling pa'i rnam thar zhal gsungs ma/"@bo-x-ewts .
     
     bdr:TT6ACB34F89B70CA60
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bdud 'joms gling pa'i rnam thar zhal gsungs ma/"@bo-x-ewts .
 }
