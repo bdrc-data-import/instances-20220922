@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG9609 {
+    bda:LG0MW1KG9609_QDCP2PMTUCFQ
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-20T14:05:19.106470Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་ཁ་སྣོན་བྱས"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LG4D85B51FFDC1353F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2011-05-11T14:28:55Z"^^xsd:dateTime ;
@@ -57,17 +62,17 @@ bdg:MW1KG9609 {
         adm:gitPath         "d1/MW1KG9609.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG9609 ;
-        adm:logEntry        bda:LG4D85B51FFDC1353F , bda:LGA07C7CB62F878E15 , bda:LGDC15BAC7D7BB02D0 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1KG9609_QDCP2PMTUCFQ , bda:LG4D85B51FFDC1353F , bda:LGA07C7CB62F878E15 , bda:LGDC15BAC7D7BB02D0 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7EEECA2CDCDD7218
-        a                   :PublishedEvent ;
-        :eventWhen          "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1979"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID279946AA82FE29F6
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ4750.D334 T553 1979" .
     
     bdr:ID2E2B154F9D478128
@@ -75,44 +80,45 @@ bdg:MW1KG9609 {
         rdf:value           "014257604" .
     
     bdr:ID4672C9E7C37B45F5
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "79902884" .
     
     bdr:IDD94465CB28BAF27F
         a                   bdr:HarvardShelfId ;
         rdf:value           "011206734-4" .
     
-    bdr:MW1KG9609  a        :Instance ;
+    bdr:MW1KG9609  a        bdo:Instance ;
         skos:altLabel       "Khros maʼi sgrub skor :a cycle of practice focussing upon the realization of the Wrathful Ḍākinī, from the Chos ñid nam mkhaʼi kloṅ mdzod revelations of Bdud-ʼjoms-gliṅ-pa and amplified by the liturgical instructions of various masters of the tradition."@en-x-mixed ;
         skos:prefLabel      "khros ma'i sgrub skor/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID279946AA82FE29F6 , bdr:ID2E2B154F9D478128 , bdr:ID4672C9E7C37B45F5 , bdr:IDD94465CB28BAF27F ;
-        :biblioNote         "hand written dbu chen script"@en ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT06D8A8B23952FA2A , bdr:TT77FC6E263ABBB376 , bdr:TT8444607867428833 ;
-        :instanceEvent      bdr:EV7EEECA2CDCDD7218 ;
-        :instanceHasReproduction  bdr:W1KG9609 ;
-        :instanceOf         bdr:WA1KG9609 ;
-        :note               bdr:NT91B1EAEBF97E054F ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "kalimpong, w.b."@en ;
-        :publisherName      "mani dorji"@en ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:ID279946AA82FE29F6 , bdr:ID2E2B154F9D478128 , bdr:ID4672C9E7C37B45F5 , bdr:IDD94465CB28BAF27F ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཁྲག་འཐུང་བདུད་འཇོམས་གླིང་པ་ (1835–1904; BDRC: P705) ཡི་འོད་གསལ་ཆོས་ཉིད་ནམ་མཁའི་མཛོད་ཀྱི་ཀློང་ལས། རྗེ་བཙུན་རྡོ་རྗེ་རྣལ་འབྱོར་མ་ཁྲོས་མ་ནག་མོའི་སྒྲུབ་སྐོར་གྱི་ཆོས་སྡེ་ཡོངས་སུ་རྫོགས་པའི་གླེགས་བམ་རིན་པོ་ཆེ་དེ་ནི་དཔལ་མིའི་དབང་པོ་ཚེ་དབང་རིག་འཛིན་རྣམ་པར་རྒྱལ་བའི་སྡེའི་ཐུགས་ཀྱི་བཞེད་པ་སྐོང་བའི་སླད་དུ། རིག་པ་འཛིན་པའི་མྱུ་གུ་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེས་སྙིང་ནས་སྤྲོ་ཞིང་རྗེས་སུ་ཡི་རང་བའི་སྒོ་ནས་བརྗོད་པ་ཞེས་པར་བྱང་སྨོན་ཚིག་ཏུ་གསལ་ལོ། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "hand written dbu chen script"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TT06D8A8B23952FA2A , bdr:TT77FC6E263ABBB376 , bdr:TT8444607867428833 ;
+        bdo:instanceEvent   bdr:EV7EEECA2CDCDD7218 ;
+        bdo:instanceHasReproduction  bdr:W1KG9609 ;
+        bdo:instanceOf      bdr:WA1KG9609 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT91B1EAEBF97E054F ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "kalimpong, w.b."@en ;
+        bdo:publisherName   "mani dorji"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT91B1EAEBF97E054F
-        a                   :Note ;
-        :noteText           "in tibetan; preface in english"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan; preface in english"@en .
     
     bdr:TT06D8A8B23952FA2A
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "khros ma'i sgrub skor/"@bo-x-ewts .
     
     bdr:TT77FC6E263ABBB376
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "Khros maʼi sgrub skor :a cycle of practice focussing upon the realization of the Wrathful Ḍākinī, from the Chos ñid nam mkhaʼi kloṅ mdzod revelations of Bdud-ʼjoms-gliṅ-pa and amplified by the liturgical instructions of various masters of the tradition."@en-x-mixed .
     
     bdr:TT8444607867428833
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "zab gter mkha' 'gro khros ma'i chos sde yongs rdzogs kyi glegs bam rin po che'i bzhugs byang nor bu bai DUr+ya'i do shal/"@bo-x-ewts .
 }
