@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS31158 {
+    bda:LG0MW8LS31158_URAO6OUMQSSY
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-20T15:55:50.915445Z"^^xsd:dateTime ;
+        adm:logMessage      "correction the author"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG1BDCFC61B9D5FBB7
         a                   adm:InitialDataCreation ;
         adm:logDate         "2018-01-18T15:53:26.766Z"^^xsd:dateTime ;
@@ -24,25 +27,27 @@ bdg:MW8LS31158 {
         adm:gitPath         "35/MW8LS31158.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS31158 ;
-        adm:logEntry        bda:LG1BDCFC61B9D5FBB7 ;
+        adm:logEntry        bda:LG0MW8LS31158_URAO6OUMQSSY , bda:LG1BDCFC61B9D5FBB7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS31158  a       :Instance ;
+    bdr:MW8LS31158  a       bdo:Instance ;
         skos:prefLabel      "rigs 'dzin 'ja' tshon snying po'i gsang ba'i rnam thar mthong ba rang grol/"@bo-x-ewts ;
-        :extentStatement    "21 ff." ;
-        :hasTitle           bdr:TT24C6AECB0B20A8CB , bdr:TTC7AC04C1354D44D0 ;
-        :instanceHasReproduction  bdr:W8LS31158 ;
-        :instanceOf         bdr:WA8LS31158 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "21 ff." ;
+        bdo:hasTitle        bdr:TT24C6AECB0B20A8CB , bdr:TTC7AC04C1354D44D0 ;
+        bdo:instanceHasReproduction  bdr:W8LS31158 ;
+        bdo:instanceOf      bdr:WA8LS31158 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TT24C6AECB0B20A8CB
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "snyigs dus pad+ma'i rgyal tshab rigs 'dzin 'ja' tshon snying po'i gsang ba'i rnam thar mthong ba rang grol/"@bo-x-ewts .
     
     bdr:TTC7AC04C1354D44D0
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "rigs 'dzin 'ja' tshon snying po'i gsang ba'i rnam thar mthong ba rang grol/"@bo-x-ewts .
 }
