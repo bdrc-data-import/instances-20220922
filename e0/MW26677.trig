@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW26677 {
+    bda:LG0MW26677_C8MXAPM2HSGV
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-25T04:39:05.884220Z"^^xsd:dateTime ;
+        adm:logMessage      "nnn"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LGB972F2A07DF75707
         a                   adm:UpdateData ;
         adm:logDate         "2013-07-30T10:03:22.028Z"^^xsd:dateTime ;
@@ -55,20 +60,20 @@ bdg:MW26677 {
         adm:gitPath         "e0/MW26677.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW26677 ;
-        adm:logEntry        bda:LGB972F2A07DF75707 , bda:LGF46EF73C853784DF , bda:LGFE7499FAFEC04A58 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW26677_C8MXAPM2HSGV , bda:LGB972F2A07DF75707 , bda:LGF46EF73C853784DF , bda:LGFE7499FAFEC04A58 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV577EB983152C7E55
-        a                   :PublishedEvent ;
-        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID5589B4FC71167795
         a                   bdr:HollisId ;
         rdf:value           "014259565" .
     
     bdr:IDA80D32DFD08F53FA
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "78903293" .
     
     bdr:IDB03C68004CEA07DB
@@ -76,31 +81,32 @@ bdg:MW26677 {
         rdf:value           "011212063-6" .
     
     bdr:IDD72B37ACF4196F00
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662.4 .B3423 1978" .
     
-    bdr:MW26677  a          :Instance ;
+    bdr:MW26677  a          bdo:Instance ;
         skos:altLabel       "Rare Rdzogs-chen instructions from the revelations of Bdud-ʼjoms-gliṅ-pa."@en-x-mixed ;
         skos:prefLabel      "rdzogs chen khrid skor bdud 'joms gling pa'i gter chos/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5589B4FC71167795 , bdr:IDA80D32DFD08F53FA , bdr:IDB03C68004CEA07DB , bdr:IDD72B37ACF4196F00 ;
-        :biblioNote         "produced from authentic manuscripts prepared at the order of h.h. dudjom rinpoche"@en ;
-        :extentStatement    "213 + 12 p." ;
-        :hasTitle           bdr:TT634F0CF56B43CED4 , bdr:TTDB89139CDD06B9B7 ;
-        :instanceEvent      bdr:EV577EB983152C7E55 ;
-        :instanceHasReproduction  bdr:W26677 ;
-        :instanceOf         bdr:WA26677 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "thimphu"@en ;
-        :publisherName      "kunsang topgay"@en ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:ID5589B4FC71167795 , bdr:IDA80D32DFD08F53FA , bdr:IDB03C68004CEA07DB , bdr:IDD72B37ACF4196F00 ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཁྲག་འཐུང་བདུད་འཇོམས་གླིང་པ་ (1835–1904; BDRC: P705) དང་འབྲེལ་བའི་རྫོགས་པ་ཆེན་པོའི་ཁྲིད་ཀྱི་སྐོར་ཏེ། འདིར་ཁྲིད་ཡིག་འགའ་ཤས་བཞུགས་པར་སྣང་ངོ་། །«དག་སྣང་ཡེ་ཤེས་དྲྭ་བ་ལས༔ ཀ་དག་ཀུན་ཏུ་བཟང་མོའི་དབྱིངས༔ ལྷུན་གྲུབ་རྫོགས་པ་ཆེན་པོའི་མཛོད༔ ཤེས་ཪིག་རྡོ་རྗེ་རྣོན་པོའི་རྒྱུད༔ གསང་ཆེན་སྔགས་ཀྱི་ཡང་བཅུད་»དང་། «ཀ་དག་རྫོགས་པ་ཆེན་པོའི་ཀློང་མཛོད་ཟབ་མོ༔ མ་བཅོས་རྫོགས་ལྡན་རང་བྱུང་གི་སངས་རྒྱས༔ ཀུན་ཏུ་བཟང་པོའི་དགོངས་པ་མཐིལ་ཏུ་བཀྲམ་ནས་ལྷག་གེར་བསྟན་པ༔ དགོངས་བརྡ་སྙན་བརྒྱུད་ཆིག་རྫོགས་ཀྱི་མན་ངག་བཀའ་བརྒྱ་མ་» «རང་བཞིན་རྫོགས་པ་ཆེན་པོའི་རང་ཞལ་མངོན་དུ་བྱེད་པའི་གདམས་པ་མ་བསྒོམ་སངས་རྒྱས» «རྨོངས་པའི་བླུན་ཆོས་འདག་གོས་བྱ་སྤུ་ཅན་» «རྫོགས་ཆེན་ཁྲེགས་ཆོད་སྣང་སྦྱང་གི་བསྡུས་དོན་» «རང་བཞིན་རྫོགས་པ་ཆེན་པོའི་རང་ཞལ་མངོན་དུ་བྱེད་པའི་གདམས་པ་ཟབ་གསང་སྙིང་པོ་»བཅས་ཆོས་ཚན་དྲུག་བཞུགས་སོ། །\nདང་པོ་ནི། སློབ་བྱ་བྲལ་བ་པདྨ་བཀྲ་ཤིས་དང་། ཨོ་རྒྱན་རྡོ་རྗེ། རིག་པའི་མྱུ་གུ། བློ་གྲོས་དབང་པོ་རྣམས་ཀྱིས་ནན་དུ་བསྐུལ་ངོར་ ཁྲག་འཐུང་བདུད་འཇོམས་དཔའ་བོའི་ཡེ་ཤེས་སྒྱུ་མར་རོལ་པའི་སྣང་ཉམས་སུ་ཤར་བའོ། །ཞེས་རྒྱུད་དེ་ཉིད་ཀྱི་མཇུག་བྱང་དུ་གསལ། རྒྱུད་དེ་ནི་སྐབས་བརྒྱད་ཀྱི་བདག་ཉིད་ཅན་ཞིག་གོ། །སྤར་བྱང་སྨོན་ཚིག་དེ་ནི་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེས་བྲིས་པའོ། །\nགཉིས་པ་ནི། འོད་གསལ་རྫོགས་པ་ཆེན་པོ་ཀློང་ཡངས་ནམ་མཁའི་རྣལ་འབྱོར་པ་རིག་འཛིན་བདུད་འཇོམས་རྡོ་རྗེ་ཁྲོ་ལོད་རྩལ་གྱིས་ཡེ་ཤེས་སྒྱུ་མར་རོལ་པའི་སྣང་ཉམས་སུ་ཤར་བ་གདུལ་བྱ་དུས་ལ་བབས་ཚེ་སྐལ་བཟང་སློབ་མ་རྣམས་ཀྱི་དོན་དུ་དག་པར་ཕབ་པའི་ཡི་གེ་བ་ནི་རང་སློབ་དམ་པ་ཚེས་བཅུའི་མིང་ཅན་གྱི་བགྱིས་པ་མཇུག་བྱང་དུ་འབྱུང་ངོ་། །གཞུང་དེ་ནི་གཏེར་ཆེན་རང་ལོ་ཉེར་བདུན་པ་ཁྱིའི་ལོ་ཧོར་ཟླ་བཅུ་གཉིས་པའི་ཚེས་བཅུའི་ནུབ་མོར་བདག་གི་སྣང་བ་ཐམས་ཅད་ཆོས་དབྱིངས་ཀ་དག་ཆེན་པོའི་དབྱིངས་སུ་ཐིམ་ནས་རང་གཞི་ངོ་འཕྲོད་པ་བྱུང་། རེ་ཞིག་གི་ཚེ་ལྷུན་གྲུབ་ཀྱི་སྣང་བ་སྟོན་འཁོར་གྱི་རོལ་པར་ཤར་བའི་གཞུང་ཞིག་ཡིན་ནོ། །\nགསུམ་པ་ནི། གཞུང་དེའི་མཇུག་བྱང་དུ་གསལ་བ་ལྟར་ན། སྐྱེ་བ་དུ་མར་ལས་དང་སྨོན་ལམ་གྱིས་འབྲེལ་བའི་སྤྲུལ་སྐུ་པདྨ་ལུང་རྟོགས་རྒྱ་མཚོ་དང་། མཁྱེན་རབ་རྒྱ་མཚོ་གཉིས་ཀྱིས་ནན་གྱིས་བསྐུལ་ངོར། ཁྲག་འཐུང་བདུད་འཇོམས་ཁྲོ་ལོད་རྩལ་གྱིས་ཡེ་ཤེས་སྒྱུ་འཕྲུལ་རོལ་པའི་ཀློང་མཛོད་ལས་གཏན་ལ་ཕབས་པ་ཆོས་ཀྱི་བདག་པོ་སྐྱེས་མཆོག་དྲུག་ཅུ་རྩ་བརྒྱད་དུ་མཁའ་འགྲོས་ལུང་བསྟན་ནས་རྟེན་འབྲེལ་གྱི་དུས་ཚིག་ཡིན་ཞེས་ཨོ་རྒྱན་ཆེན་པོས་བཀས་གནང་བ་ཕེབས་པའོ། །གཏེར་ཆེན་ཉིད་ཀྱི་རིགས་སྲས་དམ་པ་མཁས་མཆོག་བསོད་ནམས་བསྟན་འཛིན་{རྡོ་གྲུབ་རིན་པོ་ཆེ།}གྱིས་ཞུས་དག་ནན་དུ་བགྱིས་པའོ། །གཞུང་དེ་ཉིད་སྔོན་ཆད་སྐུ་སྲས་མཁྱེན་རབ་ཀྱི་དབང་ཕྱུག་གྲུབ་སྤྲུལ་རིན་པོ་ཆེ་ཞལ་ནས་ཅུང་ཟད་ཞུས་དག་གནང་ཡང་། མ་ཕྱི་རྣམས་མང་པོ་རྒྱུན་འབྱམས་སོང་བས་ཡི་གེ་འབྲུ་རྣམས་ནོར་བ་ཤིན་ཏུ་མང་བར་བརྟེན། དཔལ་མིའི་དབང་པོ་ཚེ་དབང་རིག་འཛིན་གྱི་ཆོས་སྦྱིན་ཆེད་དུ་བསྒྲུབས་ཏེ་ཡབ་གཞིས་བསམ་འགྲུབ་ཕོ་བྲང་གི་གནྡྷོ་ལར་བཞུགས་སུ་གསོལ་བའི་སྐབས་སྤར་གྱི་ཕྱི་མོར་ལེགས་པར་དཔྱད་པའི་སྒོ་ནས་ཞུས་ཏེ་གཙང་དག་ཏུ་གཏན་ལ་འབེབས་པ་པོ་ནི་ཁྲག་འཐུང་ཆེན་པོའི་སྐྱེ་བའི་སྒྱུ་གར་དུ་རློམ་པ་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེས་བྱས་པའོ། །ཞེས་གཞུང་གི་མཇུག་བྱང་དུ་གསལ་ལོ། །\nབཞི་པ་ནི། གདམས་ངག་ཕྲན་བུ་འགའ་ཤས་བཞུགས་ཤིང་སྤར་བྱང་སྨོན་ཚིག་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེས་བྲིས་པར་སྣང་ངོ་། །\nལྔ་པ་ནི། རྫོགས་ཆེན་ཁྲེགས་ཆོད་སྣང་སྦྱང་གི་བསྡུས་དོན་ཞེས་བྱ་བ་དེ་ནི་སློབ་དཔོན་ཐུབ་བསྟན་རྒྱལ་མཚན་གྱིས་ཁྲིད་དཔོན་སྐབས་སུ་གོ་བདེའི་གསལ་བྱེད་དུ་བྲིས་ཤིག་པར་བསྐུལ་བ་བཞིན་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེས་བྲིས་པའོ། །གཞུང་དེའི་མཇུག་བྱང་དུགསལ་ལོ། །\nདྲུག་པ་ནི། རང་བཞིན་རྫོགས་པ་ཆེན་པོའི་རང་ཞལ་མངོན་དུ་བྱེད་པའི་གདམས་པ་ཟབ་གསང་སྙིང་པོ་ཞེས་བྱ་བ་དེ་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེས་ཉུང་གསལ་གོ་བདེར་སྤེལ་བ་དགེའོ། །ཞེས་གཞུང་གི་མཇུག་བྱང་དུ་གསལ་ལོ། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།\n"@bo , "produced from authentic manuscripts prepared at the order of h.h. dudjom rinpoche"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "213 + 12 p." ;
+        bdo:hasTitle        bdr:TT634F0CF56B43CED4 , bdr:TTDB89139CDD06B9B7 ;
+        bdo:instanceEvent   bdr:EV577EB983152C7E55 ;
+        bdo:instanceHasReproduction  bdr:W26677 ;
+        bdo:instanceOf      bdr:WA26677 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "thimphu"@en ;
+        bdo:publisherName   "kunsang topgay"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT634F0CF56B43CED4
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "Rare Rdzogs-chen instructions from the revelations of Bdud-ʼjoms-gliṅ-pa."@en-x-mixed .
     
     bdr:TTDB89139CDD06B9B7
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rdzogs chen khrid skor bdud 'joms gling pa'i gter chos/"@bo-x-ewts .
 }
