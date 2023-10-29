@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN4053 {
@@ -30,24 +27,31 @@ bdg:MW3CN4053 {
         adm:gitPath         "74/MW3CN4053.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN4053 ;
-        adm:logEntry        bda:LG586FEFFF37E072F9 , bda:LG7ECBAD41F561177D ;
+        adm:logEntry        bda:LG586FEFFF37E072F9 , bda:LG7ECBAD41F561177D , bdr:LG0WA3CN4053_KHTNFOC1M0U8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN4053  a        :Instance ;
+    bdr:LG0WA3CN4053_KHTNFOC1M0U8
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-10-29T04:48:26.839594Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA3CN4053 in favor of WA1KG9609"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
+    bdr:MW3CN4053  a        bdo:Instance ;
         skos:prefLabel      "dag snang lasHdbang sdud zil gnon khros pa'i gad rgyangs/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_Facsimile ;
-        :extentStatement    "1 v." ;
-        :hasTitle           bdr:TT76870F9F3130A522 ;
-        :instanceHasReproduction  bdr:W3CN4053 ;
-        :instanceOf         bdr:WA3CN4053 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "[s.l.]"@en ;
-        :publisherName      "[s.n.]"@en ;
-        :script             bdr:ScriptTibt .
+        bdo:contentMethod   bdr:ContentMethod_Facsimile ;
+        bdo:extentStatement  "1 v." ;
+        bdo:hasTitle        bdr:TT76870F9F3130A522 ;
+        bdo:instanceHasReproduction  bdr:W3CN4053 ;
+        bdo:instanceOf      bdr:WA1KG9609 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "[s.l.]"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT76870F9F3130A522
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "dag snang lasHdbang sdud zil gnon khros pa'i gad rgyangs/"@bo-x-ewts .
 }
