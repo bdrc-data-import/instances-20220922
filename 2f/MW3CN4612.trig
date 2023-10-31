@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN4612 {
@@ -24,28 +21,35 @@ bdg:MW3CN4612 {
         adm:gitPath         "2f/MW3CN4612.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN4612 ;
-        adm:logEntry        bda:LG7A24DA94BE7FCEB8 ;
+        adm:logEntry        bda:LG7A24DA94BE7FCEB8 , bdr:LG0WA3CN4612_1FS9GGGSIATP ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN4612  a        :Instance ;
+    bdr:LG0WA3CN4612_1FS9GGGSIATP
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-10-31T04:40:05.274855Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA3CN4612 in favor of WA0XLE90C9C1E4D4C"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1796164652 .
+    
+    bdr:MW3CN4612  a        bdo:Instance ;
         skos:prefLabel      "yon tan mdzod 'grel bden gnyis shing rta/ (glegs bam gnyis pa/)"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :extentStatement    "886 p." ;
-        :hasTitle           bdr:TT0298E4F87C3C344F , bdr:TT7F91AB723F4C04EE ;
-        :instanceHasReproduction  bdr:W3CN4612 ;
-        :instanceOf         bdr:WA3CN4612 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "gser rta rdzong /"@bo-x-ewts ;
-        :publisherName      "gser thang bla rung lnga rig nang bstan slob gling /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:extentStatement  "886 p." ;
+        bdo:hasTitle        bdr:TT0298E4F87C3C344F , bdr:TT7F91AB723F4C04EE ;
+        bdo:instanceHasReproduction  bdr:W3CN4612 ;
+        bdo:instanceOf      bdr:WA0XLE90C9C1E4D4C ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "gser rta rdzong /"@bo-x-ewts ;
+        bdo:publisherName   "gser thang bla rung lnga rig nang bstan slob gling /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT0298E4F87C3C344F
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "yon tan mdzod 'grel bden gnyis shing rta/ (glegs bam gnyis pa/)"@bo-x-ewts .
     
     bdr:TT7F91AB723F4C04EE
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "yon tan rin po che'i mdzod kyi rgya cher 'grel pa bden gnyis shing rta/ (glegs bam gnyis pa/)"@bo-x-ewts .
 }
