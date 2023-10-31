@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW23751 {
+    bda:LG0MW23751_WGA4UEBQUZLY
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-10-31T11:47:45.414704Z"^^xsd:dateTime ;
+        adm:logMessage      "དཔེ་ཐོའི་ཟིན་བྲིས་ཁ་སྣོན་བྱས།"@bo ;
+        adm:logWho          bdu:U0ES1796164652 .
+    
     bda:LG329CA1BA9D1A84FF
         a                   adm:UpdateData ;
         adm:logDate         "2013-07-25T10:03:51.342Z"^^xsd:dateTime ;
@@ -42,49 +47,50 @@ bdg:MW23751 {
         adm:gitPath         "11/MW23751.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW23751 ;
-        adm:logEntry        bda:LG329CA1BA9D1A84FF , bda:LG69B6D21CA8F567EF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW23751_WGA4UEBQUZLY , bda:LG329CA1BA9D1A84FF , bda:LG69B6D21CA8F567EF , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV59190E1CA93F1AD5
-        a                   :PublishedEvent ;
-        :eventWhen          "1980/<1981>"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1980/1981"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID8CD82779996B2E0B
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "80902507" .
     
     bdr:IDB38381632466DB7E
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ2180.G935 Z87 1980" .
     
     bdr:IDB5CD0E33732B98A0
         a                   bdr:HollisId ;
         rdf:value           "014259093" .
     
-    bdr:MW23751  a          :Instance ;
+    bdr:MW23751  a          bdo:Instance ;
         skos:altLabel       "zur lugs gsan snin yig cha'i skor : a collection of texts explaining the guhyagarbha tantra, the fundamental example of the mahayoga class, according to the teachings of the zur tradition"@en-x-mixed ;
         skos:prefLabel      "zur lugs gsang snying yig cha'i skor/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8CD82779996B2E0B , bdr:IDB38381632466DB7E , bdr:IDB5CD0E33732B98A0 ;
-        :authorshipStatement  "by zur-'tsho btsun-pa dkon-mchog-tshul-khrims"@en ;
-        :biblioNote         "reproduced from a collection of rare manuscripts from the library of the late lama kunsang of kyirong, now preserved in the library of tibetan works and archives"@en ;
-        :extentStatement    "v. <1-4 >" ;
-        :hasTitle           bdr:TT2D8EE757153377B5 , bdr:TTF5EB9536FEC43A2A ;
-        :instanceEvent      bdr:EV59190E1CA93F1AD5 ;
-        :instanceHasReproduction  bdr:W23751 ;
-        :instanceOf         bdr:WA23751 ;
-        :numberOfVolumes    4 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "dalhousie"@en ;
-        :publisherName      "damchoe sangpo"@en ;
-        :script             bdr:ScriptDbuMed .
+        bf:identifiedBy     bdr:ID8CD82779996B2E0B , bdr:IDB38381632466DB7E , bdr:IDB5CD0E33732B98A0 ;
+        bdo:authorshipStatement  "by zur-'tsho btsun-pa dkon-mchog-tshul-khrims"@en ;
+        bdo:biblioNote      " ༡༽«དམ་ཚིག་གསལ་བཀྲའི་མཆན་འགྲེལ་»རྩ་བ་དབུ་མེད་ཚུགས་ཡིག་དང་། རྩ་བའི་དཀྱུས་དང་ཡིག་ཕྲེང་བར་དུ་དབུ་མེད་ཡིག་ཆུང་གི་ལམ་ནས་མཆན་བཏབ་པ་ཞིག་ཡིན། འོན་ཀྱང་ཡིག་གཟུགས་མི་ལེགས་ཤིང་ཡིག་ནོར་མང་བ། སྐབས་འགར་རྩ་བ་དང་མཆན་གཉིས་ཕན་ཚུན་འཛིངས་པ་དང་ནག་འབྱམས་སོང་སྟེ་ཀློག་ཤིན་ཏུ་དཀའ་བ་ཞིག་ཡིན། གཞུང་གི་མཇུག་ཏུ་གསལ་བའི་མཆན་བུ་ཞིག་ཏུ་“ཟུར་སྡེ་རྣམས་ནས་”ཞེས་འབྱུང་བ་ཙམ་ལས་མཛད་པ་པོ་དང་ཡིག་མཁན་སུ་ཡིན་ཁ་གསལ་མེད། རྩ་གཞུང་དང་མཆན་དཀྱུས་སུ་འགོད་མཁན་གཉིས་ཡིག་གཟུགས་ཀྱི་བབ་ལ་བལྟས་ན་རྩ་མཆན་གཉིས་ཀ་འབྲི་མཁན་གང་ཟག་གཅིག་ཡིན་པ་དཔོག་ཐུབ། གཞན་ཡང་ཟུར་ཚོ་དཀོན་མཆོག་ཚུལ་ཁྲིམས་ཀྱིས་མཛད་པའི་«གསང་སྙིང་ལྷན་ཐབས་»ཀྱི་དཀྱུས་དང་མཆན་གྱི་ཡིག་གཟུགས་། དེ་བཞིན་བསྐུངས་ཡིག་དང་ཡིག་ནོར་སོགས་གཅིག་མཚུངས་སུ་འབྱུང་བ་དག་དང་ཆེས་ཤིན་ཏུ་མཐུན་པས་དཀོན་མཆོག་ཚུལ་ཁྲིམས་ཡིན་མིན་ལ་བརྟག་གཞི་དང་། འགྲེལ་པ་དེ་གཉིས་ཀྱི་ཡིག་མཁན་གང་ཟག་གཅིག་པ་གསལ་བར་ངེས། འདིའི་དཔེ་དངོས་རྡ་ས་བོད་ཀྱི་དཔེ་མཛོད་ཁང་དུ་གཅིག་བཞུགས་པ་ལས་གཞན་དུ་ཡོད་པའི་ལོ་རྒྱུས་མ་ཐོས་ཤིང་། སྔོན་གྱི་མཁན་པ་དག་ལའང་ཡོངས་སུ་མ་གྲགས་པས་དཔེ་རྙིང་དཔེ་དཀོན་རྩ་ཆེན་ཞིག་ཡིན།\n༢༽«གསང་སྙིང་གསལ་བྱེད་ལྷན་ཐབས་»འདི་ཉིད་ནི་སྒྱུ་འཕྲུལ་རྩ་བའི་རྒྱུད་«གསང་བའི་སྙིང་པོ་»ཡི་ལྷན་ཐབས་སམ་ཁ་སྐོང་ཞིག་སྟེ། གཞུང་གི་དབུའི་མཚན་བྱང་དུ་“རྩ་རྒྱུད་ལྷན་ཐབས་”ཞེས་བསྡུས་མིང་ཙམ་དང་། མཛད་བྱང་དུ། “རྩ་བའི་རྒྱུད་གསང་བ་སྙིང་པོ་དེ་ཁོ་ན་ཉིད་ངེས་པ་གསལ་བར་བྱེད་པའི་ལྷན་ཐབས་”ཞེས་འདི་འབྱུང་། མཛད་སའི་ནི། མཛད་བྱང་དུ་གསལ་བ་ལྟར་ན་“རྒྱལ་པོའི་ཕྲོ་བྲང་བཀྲ་ཤིས་ཕུག་པར་”ཞེས་གསལ། ཡིག་གཟུགས་དབུ་མེད་བྲིས་མ་ཞིག་ལ་དཀྱུས་སུ་མཆན་འགའ་རེ་བྱུང་བ་རྣམས་ཡིག་ཆུང་གི་རྣམ་པར་བྲིས་ཤིང་སྐབས་འགར་དབུ་ཅན་གྱི་ལམ་ནས་བྲིས་པའང་ཡོད། བརྗོད་དོན་གཙོ་བོ་ནི། རྣལ་འབྱོར་བླ་མེད་ཀྱི་ལམ་ཐབས་གྲོལ་གཉིས་ལས་ཐབས་ལམ་འོག་སྒོ་དང་སྦྱར་ཏེ་དཀྱིལ་འཁོར་དང་། དམ་ཚིག་སོགས་ཀྱི་དོན་གསལ་བར་བཀྲལ་བ་ཞིག་ཡིན། མཛད་པ་པོ་ཟུར་ཚོ་དཀོན་མཆོག་ཚུལ་ཁྲིམས་ཡིན་པ་མཛད་བྱང་དུ་འབྱུང་། འདིའི་དཔེ་དངོས་རྡ་ས་བོད་ཀྱི་དཔེ་མཛོད་ཁང་དུ་བཞུགས་པའི་དཔེ་རྙིང་དཔེ་དཀོན་རིན་ཐང་ཅན་ཞིག་ཡིན།\n༣༽«གསང་སྙིང་སྦས་པའི་གསལ་བྱེད་»ཅེས་པའི་གཞུང་འདི་ཉིད་ནི་སྒྱུ་འཕྲུལ་«གསང་བའི་སྙིང་པོ་»ཡི་སྦས་དོན་གསལ་བར་བྱས་པའི་འགྲེལ་པ་ཞིག ཡིག་གཟུགས་མི་ལེགས་ཤིང་ཡིག་ནོར་ཧ་ཅང་མང་བ་ཞིག་ཡིན། དེ་ཡང་མཛད་བྱང་དུ། “ཟུར་ཚོའི་བཙུན་པ་དཀོན་མཆོག་ཚུལ་ཁྲིམས་ཀྱིས་”ཞེས་མཛད་པ་པོའི་མཚན་དང་འབྲེལ་ཏེ་ཡུལ་གྱི་མིང་གསལ་བར་སྣང་ཡང་དམ་པ་འདིའི་རྣམ་ཐར་བཤད་ས་ཁོ་མོས་ད་བར་མ་མཇལ་བས་ཇི་ལྟར་ཡིན་ཆ་མ་འཚལ།  མཇུག་བྱང་དུ་གསལ་བ་ལྟར་ན་མྱུར་ཕུ་བའི་གདུང་བརྒྱུད་འཛིན་པ་ནམ་མཁའ་རྡོ་རྗེའི་ཉི་མའི་ཕྱག་དཔེ་དང་། སྔགས་འཆང་ཆེ་མཆོག་རྡོ་རྗེའི་ཕྱག་དཔེ་གཉིས་ལས་ཞལ་བཤུས་ཡོད་ཚུལ་གསུངས།  མཛད་ཚུལ་ནི། བསིལ་ཟེར་ཅན་དུ་བཅོ་ལྔའི་ཟླ་བ་ལྟ་བུས་བསྐུལ་བའི་ངོར་མཛད་ཡོད་ཚུལ་གསུངས་ཀྱང་བསྐུལ་བ་པོའི་མཚན་དང་དུས་ནམ་ཞིག་ལ་མཛད་ཁ་གསལ་མ་རྙེད། བརྗོད་དོན་གཙོ་བོ་ནི། གསང་སྙིང་ལེའུ་ཉེར་གཉིས་ཀྱི་དཀའ་བའི་གནད་རྣམས་ཀྱང་སྒྲོ་ཕུག་པ་དང་། ལྷ་རྗེ་ཉ་ཚ་བ་སོགས་ཀྱི་གཞུང་ལ་ཁུངས་གཙོ་བོར་མཛད་དེ་གསལ་བར་སྟོན་པའི་གཞུང་དུ་ཞིག་སྣང་། འདིའི་དཔེ་དངོས་རྡ་ས་བོད་ཀྱི་དཔེ་མཛོད་ཁང་དུ་བཞུགས་ཤིང་གོང་གསལ་ལྟར་དཔེ་དཀོན་རིན་ཐང་བྲལ་བ་ཞིག་ཡིན།\n༤༽«དམ་ཚིག་གསལ་བཀྲའི་འགྲེལ་པ་»གཞུང་འདི་ཉིད་ད་ཆ་རྡ་སའི་བོད་ཀྱི་དཔེ་མཛོད་ཁང་དུ་བཞུགས་ཤིང་རྩ་ཆེན་གྱི་དཔེ་རྙིང་དཔེ་དཀོན་དབུ་མེད་ཚུགས་ཡིག་ཅན། ཡིག་གཟུགས་མི་ལེགས་པ་ཞིག་ལ་ཡིག་ནོར་ཧ་ཅང་མང་། འདི་ཉིད་ནི་“སྒྱུ་འཕྲུལ་རྣམ་བཀོད་གཏོར་རྒྱུད་ཚོགས་རྒྱུད་རྒྱུད་ཆེན་ལས། །”ཞེས་པའི་རྒྱུད་དེ་དག་གི་ཚིག་ལུང་འདྲེན་བྱས་ཏེ་མ་ཧཱ་ཡོ་གར་གཏོགས་ཚུལ་གསུངས། འདིར་རྒྱུད་གསུམ་ནི་སྒྱུ་འཕྲུལ་རྣམ་བཀོད་དང་། གཏོར་རྒྱུད་ཆེན་པོ་དང་། ཚོགས་རྒྱུད་ཆེན་པོ་གསུམ་ལ་ངོས་འཛིན་ཡོད།\nའགྲེལ་པ་འདི་«གསལ་བཀྲ་»ཡི་འགྲེལ་པ་གཞན་དང་མ་འདྲ་བ་རྩ་བའི་ཚིག་དོན་མཐར་ཆགས་སུ་མ་བཀྲོལ་བར་གོང་འོག་ཅི་རིགས་སུ་བསྡེབས་པའམ་དཀྲུགས་པ་ཞིག་སྟེ། གོང་དུ་རྩིས་འགོ་ཡན་ལག་ལྔའི་ནང་ཚན་མཛད་པ་པོ་སུས་མཛད་ཅེས་པའི་ཐད་མཛད་བྱང་གི་བསྔོ་བའི་ཚིག་“འཁོར་བའི་ངང་ཆུའི་ཚུལ་གྱིས་སྒེག་པའི་བློས་བཏུས་པའི། །”ཞེས་སོགས་ཡར་བླངས་ཏེ་དེར་བཀྲལ་ཡོད། གཞུང་འདི་ཉིད་«ཀཿཐོག་བཀའ་མ་ཤིན་ཏུ་རྒྱས་པ་» (vol. Hu, pp. 49–325) «སྔ་འགྱུར་བཀའ་མ་ཤིན་ཏུ་རྒྱས་པ་» (vol. Ru, pp. 41–272) སོགས་སུ་བཞུགས་ཡོད།\nབརྗོད་དོན་གཙོ་བོ་ནི། དམ་ཚིག་གི་ངོ་བོ་དང༌། རྣམ་གྲངས་སོགས་ས་བཅད་བཅུ་པོ་ནི། “རིམ་གྱིས་པའི་དམ་ཚིག་དགུ་དང་། ཅིག་ཅར་བའི་དམ་ཚིག་གཅིག་དང་བཅུར་དམ་ཚིག་གིས་དོན་ཐམས་ཅད་དྲིལ་ནས་བཤད་པར་བྱའོ། །”ཞེས་དབྱེར་ན་བཅུ་དང་ཚུར་བསྡུ་ན་རིམ་དང་ཅིག་ཅར་གཉིས་ཀྱི་ནང་དུའང་འདུ་བར་གསུངས།\n༥༽«ཁོག་དབུབ་ཡིད་བཞིན་ནོར་བུ་»གཞུང་འདིའི་མཛད་བྱང་དུ་གསལ་བ་ལྟར་ན་རྗུས་འཇུག་གིས་བསྐུར་བའི་ངོར་ཟུར་ཚོའི་བཙུན་པ་དཀོར་མཆོག་ཚུལ་ཁྲིསམ་ཀྱིས་མཛད་ཚུལ་འཁོད་ཡོད། དབུ་ཤོག་ཏུ་འཁོད་པའི་མཚན་དུ། “རྒྱུད་ཀྱི་རྒྱལ་པོ་གཉིས་ཀྱི་ཁོག་དབུབ་ཡིད་བཞིན་ནོར་བུ་”དང་། མཛད་བྱང་དུ་“རྩ་རྒྱུད་གསང་བའི་སྙིང་པོ་བཤད་རྒྱུད་རྒྱས་པ་གཉིས་ཀྱི་ཁོག་དབུབ་ཡིད་བཞིན་ནོར་བུ་”ཞེས་མཚན་རྒྱས་བསྡུས་ཅུང་ཙམ་ཁྱད་འབྱུང་། དཔེ་འདི་ནི་དབུ་མེད་ཚུགས་བྲིས་ཡིག་གཟུགས་མི་ལེགས་པ་ཞིག་ལ་དཀྱུས་སུ་གཅིག་དང་། བཞི། བཞིན་སོགས་ལ་ཨང་ཀིའི་ལམ་ནས། ༡ དང་། ༤། ༤ིན་སོགས་ཏེ། དཔེར་ན་“སྔགས་༣དང་ཕྱག་རྒྱ་༤”འདི་ལྟ་བུ་བྲིས་པ་ཤིན་ཏུ་མང་། གཞུང་གི་མགོ་མཇུག་ཕལ་ཆེ་བར་བསྐུངས་ཡིག་མང་བ་དང་། ཁྱད་པར་དུ་རྒྱུན་ལྡན་བསྐུངས་ཡིག་ལས་གཞན་བཀླག་མ་ཐུབ་པའི་རིགས་ཧ་ཅང་མང་། \nབརྗོད་དོན་གཙོ་བོ་ནི། «སྒྱུ་འཕྲུལ་བརྒྱད་ཅུ་པ་»སོགས་སྒྱུ་འཕྲུལ་གྱི་ཁག་དང་། བྱང་ཆུབ་སེམས་སྒོམ་སོགས་རྫོགས་པ་ཆེའི་གཞུང་དག་ལུང་འདྲེན་མཛད། གང་གཏན་ལ་དབབ་བྱ་རྣམས་ཀྱི་ངོ་བོ་དང་། ངེས་ཚིག དབྱེ་བ་རྣམས་ལུང་རིགས་མན་ངག་དང་། ཉ་རི་བ་དང་། ལྷ་རྗེ་ཉ་ཚ་བ་སོགས་ཟུར་ལུགས་ཡིག་ཆ་འཛིན་པ་རྣམས་ཀྱི་བཞེད་པ་དྲངས་ཏེ་དགག་སྒྲུབ་ཀྱི་རྣམ་གཞག་གསལ་བར་བྱས་པའི་གསང་འགྲེལ་ཞིག་ཡིན། འདིའི་དཔེ་དངོས་རྡ་ས་བོད་ཀྱི་དཔེ་མཛོད་ཁང་དུ་བཞུགས་པའི་དཔེ་རྙིང་དཔེ་དཀོན་ཐང་ཅན་ཞིག་ཡིན་ནོ། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་མཁན་མོ་པདྨ་ཆོས་སྐྱིད་ནས།"@bo , "reproduced from a collection of rare manuscripts from the library of the late lama kunsang of kyirong, now preserved in the library of tibetan works and archives"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "v. <1-4 >" ;
+        bdo:hasTitle        bdr:TT2D8EE757153377B5 , bdr:TTF5EB9536FEC43A2A ;
+        bdo:instanceEvent   bdr:EV59190E1CA93F1AD5 ;
+        bdo:instanceHasReproduction  bdr:W23751 ;
+        bdo:instanceOf      bdr:WA23751 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  4 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "dalhousie"@en ;
+        bdo:publisherName   "damchoe sangpo"@en ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TT2D8EE757153377B5
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "zur lugs gsan snin yig cha'i skor : a collection of texts explaining the guhyagarbha tantra, the fundamental example of the mahayoga class, according to the teachings of the zur tradition"@en-x-mixed .
     
     bdr:TTF5EB9536FEC43A2A
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "zur lugs gsang snying yig cha'i skor/"@bo-x-ewts .
 }
