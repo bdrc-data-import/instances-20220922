@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS16534 {
@@ -24,27 +21,34 @@ bdg:MW8LS16534 {
         adm:gitPath         "c3/MW8LS16534.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS16534 ;
-        adm:logEntry        bda:LG63781C7D611117DD ;
+        adm:logEntry        bda:LG63781C7D611117DD , bdr:LG0WA8LS16534_B5QT31Z9NX5N ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS16534  a       :Instance ;
+    bdr:LG0WA8LS16534_B5QT31Z9NX5N
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-10-31T16:03:54.210618Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA8LS16534 in favor of WA3CN3391"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1796164652 .
+    
+    bdr:MW8LS16534  a       bdo:Instance ;
         skos:prefLabel      "rtsa rgyud gsang ba'i snying po'i spyi don gsang bdag zhal lung /"@bo-x-ewts ;
-        :biblioNote         "margin marked rgyab chos skor gsang snying lo chen/ spyi don/ gi/e"@en ;
-        :extentStatement    "2 v." ;
-        :hasSourcePrintery  bdr:G14 ;
-        :hasTitle           bdr:TT418F9B0667539A08 , bdr:TT60B30F1979EFCE42 ;
-        :instanceHasReproduction  bdr:W8LS16534 ;
-        :instanceOf         bdr:WA8LS16534 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "margin marked rgyab chos skor gsang snying lo chen/ spyi don/ gi/e"@en ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasSourcePrintery  bdr:G14 ;
+        bdo:hasTitle        bdr:TT418F9B0667539A08 , bdr:TT60B30F1979EFCE42 ;
+        bdo:instanceHasReproduction  bdr:W8LS16534 ;
+        bdo:instanceOf      bdr:WA3CN3391 ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT418F9B0667539A08
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "dpal gsang ba'i snying po de kho na nyid nges pa'i rgyud kyi rgyal po sgyu 'phrul drwa ba spyi don gyi sgo nas gtan la 'bebs par byed pa'i legs bshad gsang bdag zhal lung / stod cha dang smad cha/"@bo-x-ewts .
     
     bdr:TT60B30F1979EFCE42
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "rtsa rgyud gsang ba'i snying po'i spyi don gsang bdag zhal lung /"@bo-x-ewts .
 }
