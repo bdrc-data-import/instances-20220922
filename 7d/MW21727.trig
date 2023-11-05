@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21727 {
+    bda:LG0MW21727_WJDRA9SW67HY
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-05T10:29:28.869770Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་ཁ་སྣོན་"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LG40E8DC2AB70A7DB6
         a                   adm:UpdateData ;
         adm:logDate         "2013-07-11T10:46:13.209Z"^^xsd:dateTime ;
@@ -55,20 +60,20 @@ bdg:MW21727 {
         adm:gitPath         "7d/MW21727.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21727 ;
-        adm:logEntry        bda:LG40E8DC2AB70A7DB6 , bda:LGCF28F6695352C0A4 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW21727_WJDRA9SW67HY , bda:LG40E8DC2AB70A7DB6 , bda:LGCF28F6695352C0A4 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV110FAB5C5041097D
-        a                   :PublishedEvent ;
-        :eventWhen          "1975/1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1975/1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID094D3074DDF3073B
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662 .P334 1975" .
     
     bdr:ID231798D51AAC4825
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "75903254" .
     
     bdr:IDA5DB8A81CB45F124
@@ -79,41 +84,42 @@ bdg:MW21727 {
         a                   bdr:HollisId ;
         rdf:value           "014258409" .
     
-    bdr:MW21727  a          :Instance ;
+    bdr:MW21727  a          bdo:Instance ;
         skos:altLabel       "the rediscovered teachings of the great padma-glin-pa"@en-x-mixed ;
-        skos:prefLabel      "rig 'dzin padma gling pa'i zab gter chos mdzod rin po che/"@bo-alalc97 ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID094D3074DDF3073B , bdr:ID231798D51AAC4825 , bdr:IDA5DB8A81CB45F124 , bdr:IDB59F7B3520B3C54E ;
-        :biblioNote         "reproduced from the original manuscripts preserved at sgan-sten dgon-pa of bhutan at the order of h.m the royal grandmother under the inspiration of dudjom rimpoche"@en ;
-        :extentStatement    "21 v." ;
-        :hasTitle           bdr:TT66A162328DE1A35F , bdr:TT907A25D89305227B , bdr:TTB11F04DFB8302CE8 , bdr:TTC3D241628A9EC0DE ;
-        :instanceEvent      bdr:EV110FAB5C5041097D ;
-        :instanceHasReproduction  bdr:W21727 ;
-        :instanceOf         bdr:WA21727 ;
-        :note               bdr:NT37BA6ACAAF3A8F31 ;
-        :numberOfVolumes    21 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "thimphu"@en ;
-        :publisherName      "kunsang tobgay"@en ;
-        :script             bdr:ScriptDbuCan .
+        skos:prefLabel      "rig 'dzin padma gling pa'i zab gter chos mdzod rin po che/"@bo-alalc97 , "pad+ma gling pa'i gter chos/"@bo-x-ewts ;
+        bf:identifiedBy     bdr:ID094D3074DDF3073B , bdr:ID231798D51AAC4825 , bdr:IDA5DB8A81CB45F124 , bdr:IDB59F7B3520B3C54E ;
+        bdo:biblioNote      "པོད་དང་པོ་དང་གཉིས་པར། གཏེར་ཆེན་གྱིས་བསམ་ཡས་མཆིམས་ཕུའི་ལྷོ་བྲག་སྨན་མདོའི་བྲག་སེངྒེའི་གདོང་པ་ཅན་ནས་སྤྱན་དྲངས་པའི་ཟབ་ཆོས་བླ་མ་ནོར་བུ་རྒྱ་མཚོ་དང་འབྲེལ་བའི་ཆོས་སྐོར་ཆོས་ཚན་ཆིག་བརྒྱ་བཅུ་གཅིག་བཞུགས།\nཔོད་གསུམ་པར། གཏེར་ཆེན་གྱིས་བུམ་ཐང་སྐུ་རྗེས་རྡོ་རྗེ་བརྩེགས་པའི་བྲག་ནས་སྤྱན་དྲངས་པའི་ཟབ་ཆོས་བླ་མ་དྲག་པོ་དམར་ཆེན་མེ་ལྕེ་ཕྲེང་བ་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་དྲུག་ཅུ་བཞུགས། བླ་མ་དྲག་པོ་འགྲོ་འདུལ་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་བཅུ་དགུ། བླ་མ་དྲག་པོ་མེ་རླུང་འཁྱིལ་བ་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་བཅུ་གཉིས་བཅས་ཁྱོན་ཆོས་ཚན་དགུ་བཅུ་གོ་གཅིག་བཞུགས།\nཔོད་བཞི་པར། གཏེར་ཆེན་གྱིས་བསམ་ཡས་མཆིམས་ཕུའི་མཆོད་རྟེན་ནས་སྤྱན་དྲངས་པའི་རྫོགས་ཆེན་ཀུན་བཟང་དགོངས་འདུས་དང་འབྲེལ་བའི་ཆོས་སྐོར་སྟོད་ཆ་ལ་ཆོས་ཚན་ཉི་ཤུ་བཞུགས།\nཔོད་ལྔ་པར། གཏེར་ཆེན་གྱིས་བུམ་ཐང་མེ་འབར་མཚོ་ནས་གདན་དྲངས་པའི་ཀློང་གསལ་གསང་བ་སྙིང་བཅུད་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་ཉི་ཤུ་རྩ་གཅིག་བཞུགས།\nཔོད་དྲུག་པར། གཏེར་ཆེན་གྱིས་བུམ་ཐང་སེངྒེ་བྲག་རི་མོ་ཅན་ནས་པད་གླིང་ཆོས་སྐལ་གཏེར་སྟོན་ཤེས་རབ་མེ་འབར་གྱིས་བཏོན་པ་པད་གླིང་ལ་ཡང་གཏེར་དུ་བབས་པ་རྒྱུད་བུ་ཆུང་དང་འབྲེལ་བའི་ཆོས་སྐོར་སུམ་ཅུ་སོ་ལྔ་བཞུགས།\nཔོད་བདུན་པར། གཏེར་ཆེན་གྱིས་བུམ་ཐང་སྟང་གི་བྲག་རི་མོ་ཅན་གྱི་ཟངས་ཕུག་རྡོ་རྗེའི་ར་བ་ནས་སྤྱན་དྲངས་པའི་ཐུགས་རྗེ་ཆེན་པོ་མུན་སེལ་སྒྲོན་མེའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་སུམ་ཅུ་སོ་གཉིས་བཞུགས།\nཔོད་བརྒྱད་པར། གཏེར་ཆེན་གྱིས་སྨན་མདོའི་བྲག་སེངྒེ་གདོང་པ་ཅན་ནས་སྤྱན་དྲངས་པའི་ཚེ་ཁྲིད་རྡོ་རྗེའི་ཕྲེང་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་ཉི་ཤུ་རྩ་དགུ་བཞུགས།\nཔོད་དགུ་པར། གཏེར་ཆེན་གྱིས་མཚལ་མདོའི་ཁྲ་རིང་བྲག་ནས་སྤྱན་དྲངས་པའི་ཕྱག་རྡོར་དྲེགས་པ་ཀུན་འདུས་ཀྱི་ཆོས་སྐོར་ལ་ཆོས་ཚན་སུམ་ཅུ་སོ་བདུན་དང་། བུམ་ཐང་རི་མོ་ཅན་ནས་སྤྱན་དྲངས་པའི་བདུད་རྩི་སྨན་སྒྲུབ་ཀྱི་ཆོས་སྐོར་ལ་ཆོས་ཚན་བཅོ་བརྒྱད་བཅས་ཁྱོན་ཆོས་ཚན་ལྔ་བཅུ་ང་ལྔ་བཞུགས་སོ། །\nཔོད་བཅུ་པར། གཏེར་ཆེན་གྱིས་བུམ་ཐང་རྩེ་ལུང་ལྷ་ཁང་གྱི་རྒྱབ་ནས་སྤྱན་དྲངས་པའི་བཀའ་བརྒྱད་ཡང་གསང་ཐུགས་ཀྱི་མེ་ལོང་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་ཉི་ཤུ་རྩ་ལྔ་བཞུགས།\nཔོད་བཅུ་གཅིག་པར། གཏེར་ཆེན་གྱིས་ལྷོ་བྲག་སྨན་མདོའི་བྲག་གནམ་ལྕགས་འབར་བ་ནས་སྤྱན་དྲངས་པའི་བཀའ་སྲུང་དཔལ་མགོན་པོ་མ་ནིང་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་ཉི་ཤུ་རྩ་ལྔ་དང་། བུམ་ཐང་རྩེ་ལྷ་ལུང་གི་སྒོ་སྲུང་མཆན་འོག་ནས་བཏོན་པའི་ནག་པོ་སྐོར་གསུམ་དུ་གྲགས་པ་ལས། གཤིན་རྗེ་ཁ་ཐུན་ནག་པོའི་སྐོར་ལ་ཆོས་ཚན་བཞི་དང་། ཕྲ་མེན་ཕག་ཤ་ནག་པོའི་སྐོར་ལ་ཆོས་ཚན་གཅིག་དང་། མུ་སྟེགས་གུ་ལང་ནག་པོའི་སྐོར་ལ་ཆོས་ཚན་བཅུ་གཉིས་བཅས་ཁྱོན་ཆོས་ཚན་བཞི་བཅུ་ཞེ་གཉིས་བཞུགས།\nཔོད་བཅུ་གཉིས་པར། གཏེར་ཆེན་གྱིས་སྐུ་རྗེས་རྡོ་རྗེ་བརྩེགས་པའི་བྲག་ནས་སྤྱན་དྲངས་པའི་ཚེ་སྒྲུབ་ནོར་བུ་ལམ་ཁྱེར་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་བཅུ་གཉིས་དང་། སྨན་མདོའི་གཏེར་མ་རྟ་མགྲིན་དམར་པོ་དྲེགས་པ་ཟིལ་གནོན་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་གཅིག བྲག་དམར་དོ་བོའི་གཏེར་མ་རྟ་མགྲིན་ནག་པོ་ལྕགས་རལ་ཅན་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་དགུ་བཅས་ཁྱོན་ཉི་ཤུ་རྩ་གཉིས་བཞུགས།\nཔོད་བཅུ་གསུམ་པར། ཆོས་ཚན་བཅུ་གསུམ་བཞུགས\nཔོད་བཅུ་བཞི་པར། གཏེར་ཆེན་གྱི་ཟབ་གཏེར་ཆོས་སྡེ་ཡོངས་རྫོགས་དང་རྗེས་སུ་འབྲེལ་བ་རྣམ་ཐར་སྐོར་ལ་ཆོས་ཚན་བཞི་བཞུགས།\nཔོད་བཅོ་ལྔ་པར། གཏེར་ཆེན་གྱིས་བསམ་ཡས་མཆིམས་ཕུའི་མཆོད་རྟེན་ནས་སྤྱན་དྲངས་པའི་རྫོགས་ཆེན་ཀུན་བཟང་དགོངས་འདུས་དང་འབྲེལ་བའི་ཆོས་སྐོར་སྨད་ཆ་ལ་ཆོས་ཚན་བཞི་བཅུ་ཞེ་གསུམ་བཞུགས།\nཔོད་བཅུ་དྲུག་པར། གཏེར་ཆེན་གྱིས་ལྷོ་བྲག་སྨན་མདོའི་སེང་གདོང་བྲག་ནས་སྤྱན་དྲངས་པའི་ཕུར་པ་ཡང་གསང་སྲོག་གི་སྤུ་གྲི་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་སུམ་ཅུ་སོ་གཉིས་བཞུགས།\nཔོད་བཅུ་བདུན་པར། གཏེར་ཆེན་གྱིས་མེ་འབར་མཚོ་ནས་སྤྱན་དྲངས་པའི་ཀློང་གསལ་གསང་བ་སྙིང་བཅུད་ཀྱི་ཆོས་སྡེ་སྨད་ཆ་ལ་ཆོས་ཚན་ཉི་ཤུ་རྩ་གཅིག་བཞུགས། མཚོན་བསྲུང་གསན་ཡིག་ཏུ་གསལ་རུང་འདིར་དཔེ་མ་རྙེད། ཅེས་དཀར་ཆག་ཏུ་གསལ་།\nཔོད་བཅོ་བརྒྱད་པར། བླ་མའི་ཐུགས་སྒྲུབ་ནོར་བུ་རྒྱ་མཚོའི་ལས་བྱང་པདྨའི་ལྗོན་ཤིང་ཁྲིགས་སུ་བསྡེབས་པ་རིག་འཛིན་དགོངས་རྒྱན་དང་འབྲེལ་བའི་སྐོར་བཞུགས། དཀར་ཆག་བཞུགས་མེད་པས་ཆོས་ཚན་གྲངས་བཀོད་མེད།\nཔོད་བཅུ་དགུ་པར། གཏེར་ཆེན་པདྨ་གླིང་པའི་ཟབ་གཏེར་ཆོས་མཛོད་ཀྱི་ཁ་སྐོང་སྨིན་བྱེད་དབང་གི་མཚམས་སྦྱོར་དང་འབྲེལ་བའི་ཆོས་སྐོར་ལ་ཆོས་ཚན་སུམ་ཅུ་སོ་དྲུག་བཞུགས།\nཔོད་ཉི་ཤུ་པར། པད་གླིང་གཏེར་བྱོན་བླ་མ་ནོར་བུ་རྒྱ་མཚོ་ལས༔ བསངས་ཆོག་བར་ཆད་ཀུན་སེལ་ལྷན་ཐབས་དང་བཅས་པའི་སྐོར་བཞུགས། དཀར་ཆག་མ་བཞུགས་པའི་རྐྱེན་པས་ཆོས་ཚན་གྲངས་བཀོད་མེད།\nཔོད་ཉི་ཤུ་རྩ་གཅིག་པར། གཏེར་ཆེན་པདྨ་གླིང་པའི་ཟབ་གཏེར་ལས་ཨོ་རྒྱན་པདྨ་འབྱུང་གནས་ཀྱི་འཁྲུངས་རབས་སངས་རྒྱས་བསྟན་པའི་ཆོས་བྱུང་མུན་སེལ་སྒྲོན་མེ་སྟེ་པད་གླིང་བཀའ་ཐང་བཞུགས།\nགཏེར་ཆེན་པདྨ་གླིང་པའི་ཟབ་མོའི་གཏེར་ཆོས་དཀར་ཆག་དུ་བཀོད་པའི་ཆོས་ཚན་ 634 བཞུགས་པར་སྣང་ངོ་། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "reproduced from the original manuscripts preserved at sgan-sten dgon-pa of bhutan at the order of h.m the royal grandmother under the inspiration of dudjom rimpoche"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "21 v." ;
+        bdo:hasTitle        bdr:TT66A162328DE1A35F , bdr:TT907A25D89305227B , bdr:TTB11F04DFB8302CE8 , bdr:TTC3D241628A9EC0DE ;
+        bdo:instanceEvent   bdr:EV110FAB5C5041097D ;
+        bdo:instanceHasReproduction  bdr:W21727 ;
+        bdo:instanceOf      bdr:WA21727 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT37BA6ACAAF3A8F31 ;
+        bdo:numberOfVolumes  21 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "thimphu"@en ;
+        bdo:publisherName   "kunsang tobgay"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT37BA6ACAAF3A8F31
-        a                   :Note ;
-        :noteText           "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 1905-1925\nscanned with the support of christine tomlinson, austin, tx."@en .
+        a                   bdo:Note ;
+        bdo:noteText        "tbrc holds scans, tiffs and pdf files, tbrc volume numbers 1905-1925\nscanned with the support of christine tomlinson, austin, tx."@en .
     
     bdr:TT66A162328DE1A35F
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "pad+ma gling pa'i gter chos/"@bo-x-ewts .
     
     bdr:TT907A25D89305227B
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "rig 'dzin padma gling pa'i zab gter chos mdzod rin po che/"@bo-alalc97 .
     
     bdr:TTB11F04DFB8302CE8
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "the rediscovered teachings of the great padma-glin-pa"@en-x-mixed .
     
     bdr:TTC3D241628A9EC0DE
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "The rediscovered teachings of the great Padma-gliṅ-pa."@en-x-mixed .
 }
