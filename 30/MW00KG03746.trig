@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW00KG03746 {
@@ -51,20 +50,20 @@ bdg:MW00KG03746 {
         adm:gitPath         "30/MW00KG03746.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW00KG03746 ;
-        adm:logEntry        bda:LG13E824ABE7227757 , bda:LGE9FA19CE7E57950E , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG13E824ABE7227757 , bda:LGE9FA19CE7E57950E , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C , bdr:LG0WA00KG03746_FQCREZSQ723Y ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVE9C52968D30B4F32
-        a                   :PublishedEvent ;
-        :eventWhen          "1977"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1977"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID1042AFD6205D8216
         a                   bdr:HollisId ;
         rdf:value           "014254409" .
     
     bdr:ID60653CD19B263627
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7950.P327 P32 1977" .
     
     bdr:ID6BE515027DF85767
@@ -72,39 +71,45 @@ bdg:MW00KG03746 {
         rdf:value           "011215486-7" .
     
     bdr:IDD1BBA1CBCF97BBDF
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "77901957" .
     
-    bdr:MW00KG03746  a      :Instance ;
+    bdr:LG0WA00KG03746_FQCREZSQ723Y
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-06T10:12:37.911327Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA00KG03746 in favor of WA1CZ3868"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
+    bdr:MW00KG03746  a      bdo:Instance ;
         skos:altLabel       "the life of the mahaguru padmasambhava from the revelations of padma gling pa"@en ;
         skos:prefLabel      "pad+ma thang yig"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID1042AFD6205D8216 , bdr:ID60653CD19B263627 , bdr:ID6BE515027DF85767 , bdr:IDD1BBA1CBCF97BBDF ;
-        :biblioNote         "reproduced from a rare manuscript from the library of burmiok athing"@en ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT1C6D2F0E3C639979 , bdr:TT2A956452E6B58614 , bdr:TT43C36E83F2073C85 , bdr:TTC58D9615B3E35F49 ;
-        :instanceEvent      bdr:EVE9C52968D30B4F32 ;
-        :instanceHasReproduction  bdr:W00KG03746 ;
-        :instanceOf         bdr:WA00KG03746 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "gangtok"@en ;
-        :publisherName      "gonpo tseten"@en ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:ID1042AFD6205D8216 , bdr:ID60653CD19B263627 , bdr:ID6BE515027DF85767 , bdr:IDD1BBA1CBCF97BBDF ;
+        bdo:biblioNote      "reproduced from a rare manuscript from the library of burmiok athing"@en ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TT1C6D2F0E3C639979 , bdr:TT2A956452E6B58614 , bdr:TT43C36E83F2073C85 , bdr:TTC58D9615B3E35F49 ;
+        bdo:instanceEvent   bdr:EVE9C52968D30B4F32 ;
+        bdo:instanceHasReproduction  bdr:W00KG03746 ;
+        bdo:instanceOf      bdr:WA1CZ3868 ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "gangtok"@en ;
+        bdo:publisherName   "gonpo tseten"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT1C6D2F0E3C639979
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "o rgyan slob dpon pad+ma 'byung gnas kyi 'khrungs rabs chen mo zhes bya ba sangs rgyas bstan pa'i byung khungs mun sel sgron me las rnam thar don gsal me long /"@bo-x-ewts .
     
     bdr:TT2A956452E6B58614
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "the life of the mahaguru padmasambhava from the revelations of padma gling pa"@en .
     
     bdr:TT43C36E83F2073C85
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "pad+ma thang yig"@bo-x-ewts .
     
     bdr:TTC58D9615B3E35F49
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "U rgyan Slob dpon Padma ʼbyuṅ gnas kyi ʼkhruṅs rabs chen mo źes bya ba Saṅs rgyas bstan paʼi byuṅ khuṅs mun sel sgron me las rnam thar don gsal me loṅ :the life of the Mahāguru Padmasambhava /from the revelations of Padma-gliṅ-pa."@en-x-mixed .
 }
