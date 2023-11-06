@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21555 {
+    bda:LG0MW21555_GLQWHOV9QMVU
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-06T16:21:14.419944Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་ཁ་སྣོན་བྱས"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LG2F35D0A3DFD5429A
         a                   adm:UpdateData ;
         adm:logDate         "2014-11-18T16:35:55.861Z"^^xsd:dateTime ;
@@ -55,16 +60,16 @@ bdg:MW21555 {
         adm:gitPath         "5a/MW21555.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21555 ;
-        adm:logEntry        bda:LG2F35D0A3DFD5429A , bda:LG39AC8E1FA729F092 , bda:LG960F462DF633A3C5 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW21555_GLQWHOV9QMVU , bda:LG2F35D0A3DFD5429A , bda:LG39AC8E1FA729F092 , bda:LG960F462DF633A3C5 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV0C8A2005E05015CC
-        a                   :PublishedEvent ;
-        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID01FDA2524AE243D2
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7950.P327 P3 1978" .
     
     bdr:ID42F0655770CC1FA2
@@ -76,49 +81,50 @@ bdg:MW21555 {
         rdf:value           "011215496-4" .
     
     bdr:IDBE8BD6E78BFD3D05
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "78906166" .
     
     bdr:IDEF0F1F9146A17C22
         a                   bdr:HarvardShelfId ;
         rdf:value           "013455000-5" .
     
-    bdr:MW21555  a          :Instance ;
+    bdr:MW21555  a          bdo:Instance ;
         skos:altLabel       "O rgyan Padma ʼbyuṅ gnas kyi ʼkhruṅs rabs Saṅs rgyas bstan paʼi chos ʼbyuṅ mun sel sgron me :the famed life of Guru Padmasambhava revealed from its place of concealment /by Gter-chen Padma-gliṅ-pa. Sprul paʼi sras mchog Zla ba rgyal mtshan gyi rnam thar rin chen rgyan mdzes : the life of Padma-gliṅ-paʼs chief disciple, Thugs-sras Zla-ba-rgyal-mtshan."@en-x-mixed ;
-        skos:prefLabel      "bka' thang mun sel sgron me/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID01FDA2524AE243D2 , bdr:ID42F0655770CC1FA2 , bdr:ID5B78F5D37F57A10B , bdr:IDBE8BD6E78BFD3D05 , bdr:IDEF0F1F9146A17C22 ;
-        :authorshipStatement  "revealed from its place of concealment by gter-chen padma-glin-pa"@en ;
-        :biblioNote         "reproduced from ancient manuscripts from the monastery of sumra gsan-snags-chos-glin"@en ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TT95F2AAD3E4127BB1 , bdr:TTC4971AD59A291FCE , bdr:TTDC262B3033B14260 , bdr:TTDE1F1B1E9BFA6CD5 ;
-        :instanceEvent      bdr:EV0C8A2005E05015CC ;
-        :instanceHasReproduction  bdr:W21555 ;
-        :instanceOf         bdr:WA1CZ3868 ;
-        :note               bdr:NTBBC699D4989AFDB3 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "sumra, h.p."@en ;
-        :publisherName      "urgyan dorji"@en ;
-        :script             bdr:ScriptDbuMed .
+        skos:prefLabel      "padma 'byun gnas kyi bka' than rgyas pa."@bo-alalc97 , "bka' thang mun sel sgron me/"@bo-x-ewts ;
+        bf:identifiedBy     bdr:ID01FDA2524AE243D2 , bdr:ID42F0655770CC1FA2 , bdr:ID5B78F5D37F57A10B , bdr:IDBE8BD6E78BFD3D05 , bdr:IDEF0F1F9146A17C22 ;
+        bdo:authorshipStatement  "revealed from its place of concealment by gter-chen padma-glin-pa"@en ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཆོས་རྒྱལ་ཁྲི་སྲོང་གི་སྲས་མོ་ལྷ་ལྕམ་པདྨ་གསལ་གྱི་རྣམ་འཕྲུལ་གཏེར་སྟོན་རྒྱལ་པོ་ལྔའི་ཡ་གྱལ་སྤྲུལ་པའི་གཏེར་ཆེན་བཞི་པ་རིག་འཛིན་ཆེན་པོ་པདྨ་གླིང་པ་ (1450–1521; BDRC: P1693) ཡིས་གཏེར་ནས་གདན་དྲངས་པའི་«ཨོ་རྒྱན་པདྨ་འབྱུང་གནས་ཀྱི་འཁྲུངས་རབས་སངས་རྒྱས་བསྟན་པའི་ཆོས་འབྱུང་མུན་སེལ་སྒྲོན་མེ་»ཞེས་བྱ་བ་དེའི་པར་བསྐྲུན་གནས་ཚུལ་ལྟར་ན། དཔེ་རྒྱུན་དེ་ནི་སུམ་ར་གསང་སྔགས་ཆོས་གླིང་གི་རྩ་ཆེན་དཔེ་རྙིང་དབུ་མེད་བྲིས་མ་དེ་ཨོ་རྒྱན་རྡོ་རྗེའི་སྤྱི་ལོ་ 1978 ལོར་པར་དུ་བསྐྱར་དུ་བསྐྲུན་པའོ། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "reproduced from ancient manuscripts from the monastery of sumra gsan-snags-chos-glin"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TT95F2AAD3E4127BB1 , bdr:TTC4971AD59A291FCE , bdr:TTDC262B3033B14260 , bdr:TTDE1F1B1E9BFA6CD5 ;
+        bdo:instanceEvent   bdr:EV0C8A2005E05015CC ;
+        bdo:instanceHasReproduction  bdr:W21555 ;
+        bdo:instanceOf      bdr:WA1CZ3868 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTBBC699D4989AFDB3 ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "sumra, h.p."@en ;
+        bdo:publisherName   "urgyan dorji"@en ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NTBBC699D4989AFDB3
-        a                   :Note ;
-        :noteText           "tbrc holds scanned images, tiffs and pdf files\n2602-2603\n\nincludes the sprul pa'i sras mchog zla ba rgyal mtshan gyi rnam rhar rin chen rgyan mdzes, the life of padma-glin-pa's chief disciple, thugs-sras zla-ba-rgyal-mtshan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "tbrc holds scanned images, tiffs and pdf files\n2602-2603\n\nincludes the sprul pa'i sras mchog zla ba rgyal mtshan gyi rnam rhar rin chen rgyan mdzes, the life of padma-glin-pa's chief disciple, thugs-sras zla-ba-rgyal-mtshan"@en .
     
     bdr:TT95F2AAD3E4127BB1
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "o rgyan pad+ma 'byung gnas kyi 'khrungs rabs sangs rgyas bstan pa'i chos 'byung mun sel sgron me/"@bo-x-ewts .
     
     bdr:TTC4971AD59A291FCE
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "padma 'byun gnas kyi bka' than rgyas pa."@bo-alalc97 .
     
     bdr:TTDC262B3033B14260
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bka' thang mun sel sgron me/"@bo-x-ewts .
     
     bdr:TTDE1F1B1E9BFA6CD5
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "O rgyan Padma ʼbyuṅ gnas kyi ʼkhruṅs rabs Saṅs rgyas bstan paʼi chos ʼbyuṅ mun sel sgron me :the famed life of Guru Padmasambhava revealed from its place of concealment /by Gter-chen Padma-gliṅ-pa. Sprul paʼi sras mchog Zla ba rgyal mtshan gyi rnam thar rin chen rgyan mdzes : the life of Padma-gliṅ-paʼs chief disciple, Thugs-sras Zla-ba-rgyal-mtshan."@en-x-mixed .
 }
