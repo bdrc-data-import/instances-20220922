@@ -1,32 +1,38 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG16928 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG96246474F77F2649
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2014-03-27T16:59:29.859Z"^^xsd:dateTime ;
+        adm:logDate         "2014-03-27T16:59:29.859000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
-        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logDate         "2014-04-22T00:30:13.577000+00:00"^^xsd:dateTime ;
         adm:logMessage      "normalize encoding field for pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00012 .
     
     bda:LGIMD5FAEE0C6C
         a                   adm:UpdateData ;
-        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logDate         "2015-01-05T17:22:13.356000+00:00"^^xsd:dateTime ;
         adm:logMessage      "added hollis field to pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00006 .
@@ -37,55 +43,54 @@ bdg:MW1KG16928 {
         adm:gitPath         "67/MW1KG16928.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG16928 ;
-        adm:logEntry        bda:LG96246474F77F2649 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG96246474F77F2649 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVA2C85344280C0323
-        a                   :PublishedEvent ;
-        :eventWhen          "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2006"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID0477AFFDFC048FF1
         a                   bdr:HollisId ;
         rdf:value           "014256433" .
     
     bdr:ID51948BB777D0E983
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7540932570" .
     
-    bdr:MW1KG16928  a       :Instance ;
+    bdr:MW1KG16928  a       bdo:Instance ;
+        bf:identifiedBy     bdr:ID0477AFFDFC048FF1 , bdr:ID51948BB777D0E983 ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi gnyis pa/"@bo-x-ewts ;
+        bdo:extentStatement  "2, 261 p." ;
+        bdo:hasTitle        bdr:TT382102D4F17E79BD , bdr:TT7C260EFC307E6D91 , bdr:TTCACCAEEB7B3A8967 ;
+        bdo:instanceEvent   bdr:EVA2C85344280C0323 ;
+        bdo:instanceHasReproduction  bdr:W1KG16928 ;
+        bdo:instanceOf      bdr:WA1KG1671 ;
+        bdo:note            bdr:NTA2F9C1DE84E5830A ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
         skos:altLabel       "吉祥颂"@zh-hans ;
-        skos:prefLabel      "zhal 'don phyogs bsgrigs/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0477AFFDFC048FF1 , bdr:ID51948BB777D0E983 ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi gnyis pa/"@bo-x-ewts ;
-        :extentStatement    "2, 261 p." ;
-        :hasTitle           bdr:TT382102D4F17E79BD , bdr:TT7C260EFC307E6D91 , bdr:TTCACCAEEB7B3A8967 ;
-        :instanceEvent      bdr:EVA2C85344280C0323 ;
-        :instanceHasReproduction  bdr:W1KG16928 ;
-        :instanceOf         bdr:WA1KG1671 ;
-        :note               bdr:NTA2F9C1DE84E5830A ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "zhal 'don phyogs bsgrigs/"@bo-x-ewts .
     
     bdr:NTA2F9C1DE84E5830A
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TT382102D4F17E79BD
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "ji xiang song"@zh-latn-pinyin-x-ndia .
     
     bdr:TT7C260EFC307E6D91
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "吉祥颂"@zh-hans .
     
     bdr:TTCACCAEEB7B3A8967
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "zhal 'don phyogs bsgrigs/"@bo-x-ewts .
 }

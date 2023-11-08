@@ -1,31 +1,37 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG14736 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGA9A8B2681CED6001
         a                   adm:UpdateData ;
-        adm:logDate         "2017-04-19T05:52:19.7Z"^^xsd:dateTime ;
+        adm:logDate         "2017-04-19T05:52:19.700000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:LGCF62F6EAF3EB6DA6
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2013-10-22T11:03:59.67Z"^^xsd:dateTime ;
+        adm:logDate         "2013-10-22T11:03:59.670000+00:00"^^xsd:dateTime ;
         adm:logMessage      "accessioned"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
-        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logDate         "2014-04-22T00:30:13.577000+00:00"^^xsd:dateTime ;
         adm:logMessage      "normalize encoding field for pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00012 .
@@ -36,68 +42,67 @@ bdg:MW1KG14736 {
         adm:gitPath         "b3/MW1KG14736.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG14736 ;
-        adm:logEntry        bda:LGA9A8B2681CED6001 , bda:LGCF62F6EAF3EB6DA6 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LGA9A8B2681CED6001 , bda:LGCF62F6EAF3EB6DA6 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR26050B581794C03A
-        a                   :AgentAsCreator ;
-        :agent              bdr:P6271 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P6271 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:CRE1972C7C37D2107E
-        a                   :AgentAsCreator ;
-        :agent              bdr:P6443 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P6443 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV6B1B0EAA2469FC2B
-        a                   :PublishedEvent ;
-        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID7A1409B632FDE795
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787802534667" .
     
-    bdr:MW1KG14736  a       :Instance ;
+    bdr:MW1KG14736  a       bdo:Instance ;
+        bf:identifiedBy     bdr:ID7A1409B632FDE795 ;
+        bdo:authorshipStatement  "bka' ma mkha' 'bum dang tshe rgyal gyis bsgrigs/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:creator         bdr:CR26050B581794C03A , bdr:CRE1972C7C37D2107E ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "2, 353 p." ;
+        bdo:hasTitle        bdr:TT183AA6A4F6317ECD , bdr:TT1C33BAF3260839B5 , bdr:TT769DDE5B3EE9F096 , bdr:TTA83E53A3501580F8 ;
+        bdo:instanceEvent   bdr:EV6B1B0EAA2469FC2B ;
+        bdo:instanceHasReproduction  bdr:W1KG14736 ;
+        bdo:instanceOf      bdr:WA1KG14736 ;
+        bdo:note            bdr:NTADF856012BB08458 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS1KG14729 ;
         skos:altLabel       "藏族民间文学丛书-爱情叙事诗卷"@zh-hans ;
-        skos:prefLabel      "rogs mthun khu byug dbyangs snyan/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID7A1409B632FDE795 ;
-        :authorshipStatement  "bka' ma mkha' 'bum dang tshe rgyal gyis bsgrigs/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CR26050B581794C03A , bdr:CRE1972C7C37D2107E ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "2, 353 p." ;
-        :hasTitle           bdr:TT183AA6A4F6317ECD , bdr:TT1C33BAF3260839B5 , bdr:TT769DDE5B3EE9F096 , bdr:TTA83E53A3501580F8 ;
-        :instanceEvent      bdr:EV6B1B0EAA2469FC2B ;
-        :instanceHasReproduction  bdr:W1KG14736 ;
-        :instanceOf         bdr:WA1KG14736 ;
-        :note               bdr:NTADF856012BB08458 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1KG14729 .
+        skos:prefLabel      "rogs mthun khu byug dbyangs snyan/"@bo-x-ewts .
     
     bdr:NTADF856012BB08458
-        a                   :Note ;
-        :noteText           "in tibetan"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan"@en .
     
     bdr:TT183AA6A4F6317ECD
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "rogs mthun khu byug dbyangs snyan/"@bo-x-ewts .
     
     bdr:TT1C33BAF3260839B5
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "zang zu min jian wen xue cong shu-ai qing xu shi shi juan"@zh-latn-pinyin-x-ndia .
     
     bdr:TT769DDE5B3EE9F096
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "藏族民间文学丛书-爱情叙事诗卷"@zh-hans .
     
     bdr:TTA83E53A3501580F8
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bod kyi dmangs khrod rtsom rig dpe tshogs/ rogs mthun khu byug dbyangs snyan/"@bo-x-ewts .
 }

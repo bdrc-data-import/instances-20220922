@@ -1,50 +1,56 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG6157 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG4A9063465C17E9CA
         a                   adm:UpdateData ;
-        adm:logDate         "2021-06-22T17:41:40.102Z"^^xsd:dateTime ;
+        adm:logDate         "2021-06-22T17:41:40.102000+00:00"^^xsd:dateTime ;
         adm:logMessage      "added print type and encoding"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LG5CA1416458465BE7
         a                   adm:UpdateData ;
-        adm:logDate         "2011-01-10T10:24:32.838Z"^^xsd:dateTime ;
+        adm:logDate         "2011-01-10T10:24:32.838000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00016 .
     
     bda:LGBB367C8DF6943576
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-12-02T09:35:31.979Z"^^xsd:dateTime ;
+        adm:logDate         "2010-12-02T09:35:31.979000+00:00"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGCEC55A528FD5362C
         a                   adm:UpdateData ;
-        adm:logDate         "2011-08-03T15:38:49.169Z"^^xsd:dateTime ;
+        adm:logDate         "2011-08-03T15:38:49.169000+00:00"^^xsd:dateTime ;
         adm:logMessage      "changed provisional to released"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
-        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logDate         "2014-04-22T00:30:13.577000+00:00"^^xsd:dateTime ;
         adm:logMessage      "normalize encoding field for pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00012 .
     
     bda:LGIMD5FAEE0C6C
         a                   adm:UpdateData ;
-        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logDate         "2015-01-05T17:22:13.356000+00:00"^^xsd:dateTime ;
         adm:logMessage      "added hollis field to pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00006 .
@@ -55,52 +61,51 @@ bdg:MW1KG6157 {
         adm:gitPath         "7e/MW1KG6157.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG6157 ;
-        adm:logEntry        bda:LG4A9063465C17E9CA , bda:LG5CA1416458465BE7 , bda:LGBB367C8DF6943576 , bda:LGCEC55A528FD5362C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG4A9063465C17E9CA , bda:LG5CA1416458465BE7 , bda:LGBB367C8DF6943576 , bda:LGCEC55A528FD5362C , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVB22882A87E35838C
-        a                   :PublishedEvent ;
-        :eventWhen          "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2009"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID869867D60173D53B
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787105101313" .
     
     bdr:ID907969314A4933DB
         a                   bdr:HollisId ;
         rdf:value           "014257316" .
     
-    bdr:MW1KG6157  a        :Instance ;
+    bdr:MW1KG6157  a        bdo:Instance ;
+        bf:identifiedBy     bdr:ID869867D60173D53B , bdr:ID907969314A4933DB ;
+        bdo:authorshipStatement  "krung gung drung dbyang dril bsgrags pu'u yi gzhung lugs cus/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "3, 4, 3, 165 p." ;
+        bdo:hasTitle        bdr:TT232B5A51ACA2ADED , bdr:TTA8A4AEAA6BF914E8 , bdr:TTEA378B582281D1A5 ;
+        bdo:instanceEvent   bdr:EVB22882A87E35838C ;
+        bdo:instanceHasReproduction  bdr:W1KG6157 ;
+        bdo:instanceOf      bdr:WA1KG6157 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
         skos:altLabel       "liu ge wei shen me: dui ji ge zhong da wen ti de hui da"@zh-latn-pinyin-x-ndia ;
-        skos:prefLabel      "rgyu mtshan ci yin zhes pa drug"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID869867D60173D53B , bdr:ID907969314A4933DB ;
-        :authorshipStatement  "krung gung drung dbyang dril bsgrags pu'u yi gzhung lugs cus/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/ par thengs dang po/"@bo-x-ewts ;
-        :extentStatement    "3, 4, 3, 165 p." ;
-        :hasTitle           bdr:TT232B5A51ACA2ADED , bdr:TTA8A4AEAA6BF914E8 , bdr:TTEA378B582281D1A5 ;
-        :instanceEvent      bdr:EVB22882A87E35838C ;
-        :instanceHasReproduction  bdr:W1KG6157 ;
-        :instanceOf         bdr:WA1KG6157 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "rgyu mtshan ci yin zhes pa drug"@bo-x-ewts .
     
     bdr:TT232B5A51ACA2ADED
-        a                   :ColophonTitle ;
+        a                   bdo:ColophonTitle ;
         rdfs:label          "liu ge wei shen me: dui ji ge zhong da wen ti de hui da"@zh-latn-pinyin-x-ndia .
     
     bdr:TTA8A4AEAA6BF914E8
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rgyu mtshan ci yin zhes pa drug / gnad don chen po 'ga' zhig skor gyi dris lan zhes pa slob sbyong sgrig 'dzugs nan tan bya dgos pa'i skor gyi krung gu krung dbyang dril bsgrags pu'u yi brda thog"@bo-x-ewts .
     
     bdr:TTEA378B582281D1A5
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "rgyu mtshan ci yin zhes pa drug"@bo-x-ewts .
 }

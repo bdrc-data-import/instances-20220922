@@ -1,26 +1,32 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG18573 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGCB6448FD92E70E70
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2014-10-27T15:46:39.389Z"^^xsd:dateTime ;
+        adm:logDate         "2014-10-27T15:46:39.389000+00:00"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGD7CA8053EC82FB09
         a                   adm:UpdateData ;
-        adm:logDate         "2014-12-10T11:50:46.827Z"^^xsd:dateTime ;
+        adm:logDate         "2014-12-10T11:50:46.827000+00:00"^^xsd:dateTime ;
         adm:logMessage      "added volumemap 3"@en ;
         adm:logWho          bdu:U00016 .
     
@@ -30,55 +36,54 @@ bdg:MW1KG18573 {
         adm:gitPath         "7a/MW1KG18573.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG18573 ;
-        adm:logEntry        bda:LGCB6448FD92E70E70 , bda:LGD7CA8053EC82FB09 ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LGCB6448FD92E70E70 , bda:LGD7CA8053EC82FB09 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVB93FAEEB0CF3D5F2
-        a                   :PublishedEvent ;
-        :eventWhen          "2008,2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2008,2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDC43358D4F6B6423B
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787540939106" .
     
-    bdr:MW1KG18573  a       :Instance , :SerialInstance ;
+    bdr:MW1KG18573  a       bdo:Instance , bdo:SerialInstance ;
+        bf:identifiedBy     bdr:IDC43358D4F6B6423B ;
+        bdo:authorshipStatement  "bod rang skyong ljongs slob deb sgyur sgrig lte gnas/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "3 v." ;
+        bdo:hasTitle        bdr:TT44FC3440E2B1242E , bdr:TT4EA0A97468156A64 , bdr:TT973EFB0E16026303 ;
+        bdo:instanceEvent   bdr:EVB93FAEEB0CF3D5F2 ;
+        bdo:instanceHasReproduction  bdr:W1KG18573 ;
+        bdo:instanceOf      bdr:WA1KG18573 , bdr:WA21881 ;
+        bdo:note            bdr:NTBC9AC15F9B2B7A94 ;
+        bdo:numberOfVolumes  3 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khrin tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS1KG18571 ;
+        bdo:seriesNumber    "[not available]" ;
         skos:altLabel       "青春的风采"@zh-hans ;
-        skos:prefLabel      "lang tsho'i nyams 'gyur/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDC43358D4F6B6423B ;
-        :authorshipStatement  "bod rang skyong ljongs slob deb sgyur sgrig lte gnas/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "3 v." ;
-        :hasTitle           bdr:TT44FC3440E2B1242E , bdr:TT4EA0A97468156A64 , bdr:TT973EFB0E16026303 ;
-        :instanceEvent      bdr:EVB93FAEEB0CF3D5F2 ;
-        :instanceHasReproduction  bdr:W1KG18573 ;
-        :instanceOf         bdr:WA1KG18573 , bdr:WA21881 ;
-        :note               bdr:NTBC9AC15F9B2B7A94 ;
-        :numberOfVolumes    3 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khrin tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron dpe skrun tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1KG18571 ;
-        :seriesNumber       "[not available]" .
+        skos:prefLabel      "lang tsho'i nyams 'gyur/"@bo-x-ewts .
     
     bdr:NTBC9AC15F9B2B7A94
-        a                   :Note ;
-        :noteText           "copy made available from the library of tibetan works and archives; ltwa acc. no. 12328,"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "copy made available from the library of tibetan works and archives; ltwa acc. no. 12328,"@en .
     
     bdr:TT44FC3440E2B1242E
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "qing chun de feng cai"@zh-latn-pinyin-x-ndia .
     
     bdr:TT4EA0A97468156A64
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "青春的风采"@zh-hans .
     
     bdr:TT973EFB0E16026303
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "lang tsho'i nyams 'gyur/"@bo-x-ewts .
 }

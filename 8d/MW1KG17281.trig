@@ -1,26 +1,32 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG17281 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG1A56DADCB9296E88
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2014-06-11T10:15:45.932Z"^^xsd:dateTime ;
+        adm:logDate         "2014-06-11T10:15:45.932000+00:00"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGIMD5FAEE0C6C
         a                   adm:UpdateData ;
-        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logDate         "2015-01-05T17:22:13.356000+00:00"^^xsd:dateTime ;
         adm:logMessage      "added hollis field to pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00006 .
@@ -31,52 +37,51 @@ bdg:MW1KG17281 {
         adm:gitPath         "8d/MW1KG17281.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG17281 ;
-        adm:logEntry        bda:LG1A56DADCB9296E88 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG1A56DADCB9296E88 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVA6DCBF652E602062
-        a                   :PublishedEvent ;
-        :eventWhen          "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2008"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID0BF86EF5B8128E8A
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787105097470" .
     
     bdr:ID17C38C95B10E6C95
         a                   bdr:HollisId ;
         rdf:value           "014256492" .
     
-    bdr:MW1KG17281  a       :Instance , :SerialInstance ;
+    bdr:MW1KG17281  a       bdo:Instance , bdo:SerialInstance ;
+        bf:identifiedBy     bdr:ID0BF86EF5B8128E8A , bdr:ID17C38C95B10E6C95 ;
+        bdo:authorshipStatement  "si khron zhing chen ge sar las don 'go khrid tsho chung gzhung las khang /"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:extentStatement  "2, 5, 280 p." ;
+        bdo:hasTitle        bdr:TT01FDA2E5C28F0F6F , bdr:TT2B4F73D634CD57FF , bdr:TT4B305B4C98B22CA2 ;
+        bdo:instanceEvent   bdr:EVA6DCBF652E602062 ;
+        bdo:instanceHasReproduction  bdr:W1KG17281 ;
+        bdo:instanceOf      bdr:WA1KG17281 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS1KG17157 ;
+        bdo:seriesNumber    "5" ;
         skos:altLabel       "少年格萨尔王"@zh-hans ;
-        skos:prefLabel      "jo ru'i rnam thar/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0BF86EF5B8128E8A , bdr:ID17C38C95B10E6C95 ;
-        :authorshipStatement  "si khron zhing chen ge sar las don 'go khrid tsho chung gzhung las khang /"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :extentStatement    "2, 5, 280 p." ;
-        :hasTitle           bdr:TT01FDA2E5C28F0F6F , bdr:TT2B4F73D634CD57FF , bdr:TT4B305B4C98B22CA2 ;
-        :instanceEvent      bdr:EVA6DCBF652E602062 ;
-        :instanceHasReproduction  bdr:W1KG17281 ;
-        :instanceOf         bdr:WA1KG17281 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1KG17157 ;
-        :seriesNumber       "5" .
+        skos:prefLabel      "jo ru'i rnam thar/"@bo-x-ewts .
     
     bdr:TT01FDA2E5C28F0F6F
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "shao nian ge sa er wang"@zh-latn-pinyin-x-ndia .
     
     bdr:TT2B4F73D634CD57FF
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "jo ru'i rnam thar/"@bo-x-ewts .
     
     bdr:TT4B305B4C98B22CA2
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "少年格萨尔王"@zh-hans .
 }

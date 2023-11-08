@@ -1,20 +1,26 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG20879 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG597FCA1071A778ED
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2015-01-06T15:25:37.205Z"^^xsd:dateTime ;
+        adm:logDate         "2015-01-06T15:25:37.205000+00:00"^^xsd:dateTime ;
         adm:logMessage      "cataloged"@en ;
         adm:logWho          bdu:U00016 .
     
@@ -24,49 +30,48 @@ bdg:MW1KG20879 {
         adm:gitPath         "62/MW1KG20879.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG20879 ;
-        adm:logEntry        bda:LG597FCA1071A778ED ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG597FCA1071A778ED ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV732BA175656094EA
-        a                   :PublishedEvent ;
-        :eventWhen          "1992"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1992"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDFC07D20543796BF8
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787223004213" .
     
-    bdr:MW1KG20879  a       :Instance ;
+    bdr:MW1KG20879  a       bdo:Instance ;
+        bf:identifiedBy     bdr:IDFC07D20543796BF8 ;
+        bdo:authorshipStatement  "krung gung bod rang skyong ljongs u yon lhan khang tang gi lo rgys dpyad yig bsdu sgrig u yon lhan khang gis rtsom sgrig byas/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "8, 622 p." ;
+        bdo:hasTitle        bdr:TTB707F1F7A459CA63 , bdr:TTC29C7376FB75399B , bdr:TTD3150B8BE9B58AE8 ;
+        bdo:illustrations   "ill. (some col.)" ;
+        bdo:instanceEvent   bdr:EV732BA175656094EA ;
+        bdo:instanceHasReproduction  bdr:W1KG20879 ;
+        bdo:instanceOf      bdr:WA20237 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lha sa/"@bo-x-ewts ;
+        bdo:publisherName   "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
         skos:altLabel       "西藏革命史"@zh-hans ;
-        skos:prefLabel      "bod kyi gsar brje'i lo rgyus/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDFC07D20543796BF8 ;
-        :authorshipStatement  "krung gung bod rang skyong ljongs u yon lhan khang tang gi lo rgys dpyad yig bsdu sgrig u yon lhan khang gis rtsom sgrig byas/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "8, 622 p." ;
-        :hasTitle           bdr:TTB707F1F7A459CA63 , bdr:TTC29C7376FB75399B , bdr:TTD3150B8BE9B58AE8 ;
-        :illustrations      "ill. (some col.)" ;
-        :instanceEvent      bdr:EV732BA175656094EA ;
-        :instanceHasReproduction  bdr:W1KG20879 ;
-        :instanceOf         bdr:WA20237 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "lha sa/"@bo-x-ewts ;
-        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "bod kyi gsar brje'i lo rgyus/"@bo-x-ewts .
     
     bdr:TTB707F1F7A459CA63
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "西藏革命史"@zh-hans .
     
     bdr:TTC29C7376FB75399B
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "bod kyi gsar brje'i lo rgyus/"@bo-x-ewts .
     
     bdr:TTD3150B8BE9B58AE8
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "xi zang ge ming shi"@zh-latn-pinyin-x-ndia .
 }

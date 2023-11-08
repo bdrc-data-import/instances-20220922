@@ -1,20 +1,26 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW21595 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGC8C6A59A735DB6A2
         a                   adm:UpdateData ;
-        adm:logDate         "2021-07-09T13:41:18.083Z"^^xsd:dateTime ;
+        adm:logDate         "2021-07-09T13:41:18.083000+00:00"^^xsd:dateTime ;
         adm:logMessage      "added cat info, editor print type, and encoding"@en ;
         adm:logWho          bdu:U00016 .
     
@@ -24,14 +30,14 @@ bdg:MW21595 {
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
-        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logDate         "2014-04-22T00:30:13.577000+00:00"^^xsd:dateTime ;
         adm:logMessage      "normalize encoding field for pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00012 .
     
     bda:LGIMD5FAEE0C6C
         a                   adm:UpdateData ;
-        adm:logDate         "2015-01-05T17:22:13.356Z"^^xsd:dateTime ;
+        adm:logDate         "2015-01-05T17:22:13.356000+00:00"^^xsd:dateTime ;
         adm:logMessage      "added hollis field to pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00006 .
@@ -42,57 +48,56 @@ bdg:MW21595 {
         adm:gitPath         "02/MW21595.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW21595 ;
-        adm:logEntry        bda:LGC8C6A59A735DB6A2 , bda:LGE14F37CB95666ABD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LGC8C6A59A735DB6A2 , bda:LGE14F37CB95666ABD , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:CR8FC783EC4AD07648
-        a                   :AgentAsCreator ;
-        :agent              bdr:P7701 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P7701 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EVAC8B44C7BB33FF46
-        a                   :PublishedEvent ;
-        :eventWhen          "2000,2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2000,2002"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID21972C2EC219DFD0
         a                   bdr:HollisId ;
         rdf:value           "014258345" .
     
     bdr:IDDBF40D52DE480125
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "7223011963" .
     
-    bdr:MW21595  a          :Instance ;
+    bdr:MW21595  a          bdo:Instance ;
+        bf:identifiedBy     bdr:ID21972C2EC219DFD0 , bdr:IDDBF40D52DE480125 ;
+        bdo:authorshipStatement  "rtsom sgrig 'gan 'khur pa rkang btsugs/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:creator         bdr:CR8FC783EC4AD07648 ;
+        bdo:editionStatement  "par gzhi gnyis pa/ par thengs gnyis pa/"@bo-x-ewts ;
+        bdo:extentStatement  "75 p." ;
+        bdo:hasTitle        bdr:TT4617E08A07D99C4A , bdr:TT7E565EB9366ABA53 , bdr:TTDF2FCC3FDA6DAB44 ;
+        bdo:instanceEvent   bdr:EVAC8B44C7BB33FF46 ;
+        bdo:instanceHasReproduction  bdr:W21595 ;
+        bdo:instanceOf      bdr:WA21595 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lha sa/"@bo-x-ewts ;
+        bdo:publisherName   "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
         skos:altLabel       "jimeigundan"@zh-latn-wadegile ;
-        skos:prefLabel      "dri med kun ldan gyi mdzad rnam/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID21972C2EC219DFD0 , bdr:IDDBF40D52DE480125 ;
-        :authorshipStatement  "rtsom sgrig 'gan 'khur pa rkang btsugs/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CR8FC783EC4AD07648 ;
-        :editionStatement   "par gzhi gnyis pa/ par thengs gnyis pa/"@bo-x-ewts ;
-        :extentStatement    "75 p." ;
-        :hasTitle           bdr:TT4617E08A07D99C4A , bdr:TT7E565EB9366ABA53 , bdr:TTDF2FCC3FDA6DAB44 ;
-        :instanceEvent      bdr:EVAC8B44C7BB33FF46 ;
-        :instanceHasReproduction  bdr:W21595 ;
-        :instanceOf         bdr:WA21595 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "lha sa/"@bo-x-ewts ;
-        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "dri med kun ldan gyi mdzad rnam/"@bo-x-ewts .
     
     bdr:TT4617E08A07D99C4A
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "chos kyi rgyal po dri med kun ldan gyi mdzad tshul rgyas pa mu tig phreng ba/"@bo-x-ewts .
     
     bdr:TT7E565EB9366ABA53
-        a                   :ColophonTitle ;
+        a                   bdo:ColophonTitle ;
         rdfs:label          "jimeigundan"@zh-latn-wadegile .
     
     bdr:TTDF2FCC3FDA6DAB44
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "dri med kun ldan gyi mdzad rnam/"@bo-x-ewts .
 }

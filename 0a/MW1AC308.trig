@@ -1,30 +1,36 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1AC308 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG4C357B13D87FFA1F
         a                   adm:UpdateData ;
-        adm:logDate         "2014-11-10T11:17:07.485Z"^^xsd:dateTime ;
+        adm:logDate         "2014-11-10T11:17:07.485000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00029 .
     
     bda:LGD99EB0750AD48520
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2014-11-07T15:23:43.855Z"^^xsd:dateTime ;
+        adm:logDate         "2014-11-07T15:23:43.855000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00029 .
     
     bda:LGE416D90B16552485
         a                   adm:UpdateData ;
-        adm:logDate         "2017-04-18T22:35:56.127Z"^^xsd:dateTime ;
+        adm:logDate         "2017-04-18T22:35:56.127000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:MW1AC308  a         adm:AdminData ;
@@ -33,57 +39,56 @@ bdg:MW1AC308 {
         adm:gitPath         "0a/MW1AC308.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1AC308 ;
-        adm:logEntry        bda:LG4C357B13D87FFA1F , bda:LGD99EB0750AD48520 , bda:LGE416D90B16552485 ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG4C357B13D87FFA1F , bda:LGD99EB0750AD48520 , bda:LGE416D90B16552485 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:CR3285621F2564BE86
-        a                   :AgentAsCreator ;
-        :agent              bdr:P796 ;
-        :role               bdr:R0ER0015 .
+        a                   bdo:AgentAsCreator ;
+        bdo:agent           bdr:P796 ;
+        bdo:role            bdr:R0ER0015 .
     
     bdr:EV23066D031EBC1609
-        a                   :PublishedEvent ;
-        :eventWhen          "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID557AC1D8EA714CEA
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787802536807" .
     
-    bdr:MW1AC308  a         :Instance , :SerialInstance ;
+    bdr:MW1AC308  a         bdo:Instance , bdo:SerialInstance ;
+        bf:identifiedBy     bdr:ID557AC1D8EA714CEA ;
+        bdo:authorshipStatement  "mkhan chen sangs rgyas phun tshogs dang dpal ldan chos skyong gis brtsams/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:creator         bdr:CR3285621F2564BE86 ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "5 v." ;
+        bdo:hasTitle        bdr:TT381F91B1AC5780D2 , bdr:TT78D094A24CCD691E , bdr:TT8DDEA2EDA0043BCD ;
+        bdo:illustrations   "col. ill." ;
+        bdo:instanceEvent   bdr:EV23066D031EBC1609 ;
+        bdo:instanceHasReproduction  bdr:W1AC308 ;
+        bdo:instanceOf      bdr:WA1AC308 ;
+        bdo:numberOfVolumes  5 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS1AC308 ;
+        bdo:seriesNumber    "152－156" ;
         skos:altLabel       "艾旺文集补充集"@zh-hans ;
-        skos:prefLabel      "e waM bka' 'bum kha skong /"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID557AC1D8EA714CEA ;
-        :authorshipStatement  "mkhan chen sangs rgyas phun tshogs dang dpal ldan chos skyong gis brtsams/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :creator            bdr:CR3285621F2564BE86 ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "5 v." ;
-        :hasTitle           bdr:TT381F91B1AC5780D2 , bdr:TT78D094A24CCD691E , bdr:TT8DDEA2EDA0043BCD ;
-        :illustrations      "col. ill." ;
-        :instanceEvent      bdr:EV23066D031EBC1609 ;
-        :instanceHasReproduction  bdr:W1AC308 ;
-        :instanceOf         bdr:WA1AC308 ;
-        :numberOfVolumes    5 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@bo-x-ewts ;
-        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1AC308 ;
-        :seriesNumber       "152－156" .
+        skos:prefLabel      "e waM bka' 'bum kha skong /"@bo-x-ewts .
     
     bdr:TT381F91B1AC5780D2
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "ai wang wen ji bu chong ji"@zh-latn-pinyin-x-ndia .
     
     bdr:TT78D094A24CCD691E
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "艾旺文集补充集"@zh-hans .
     
     bdr:TT8DDEA2EDA0043BCD
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "e waM bka' 'bum kha skong /"@bo-x-ewts .
 }

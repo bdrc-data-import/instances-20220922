@@ -1,31 +1,37 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1PD181143 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG205B20633706F748
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2015-11-24T06:41:31.861Z"^^xsd:dateTime ;
+        adm:logDate         "2015-11-24T06:41:31.861000+00:00"^^xsd:dateTime ;
         adm:logMessage      "gsar du bcug"@en ;
         adm:logWho          bdu:U00021 .
     
     bda:LG25B8E7A5087B25E5
         a                   adm:UpdateData ;
-        adm:logDate         "2017-05-21T22:57:38.331Z"^^xsd:dateTime ;
+        adm:logDate         "2017-05-21T22:57:38.331000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:LG5280F542B1D9891C
         a                   adm:UpdateData ;
-        adm:logDate         "2015-11-24T07:29:02.139Z"^^xsd:dateTime ;
+        adm:logDate         "2015-11-24T07:29:02.139000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:MW1PD181143  a      adm:AdminData ;
@@ -34,47 +40,46 @@ bdg:MW1PD181143 {
         adm:gitPath         "95/MW1PD181143.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1PD181143 ;
-        adm:logEntry        bda:LG205B20633706F748 , bda:LG25B8E7A5087B25E5 , bda:LG5280F542B1D9891C ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG205B20633706F748 , bda:LG25B8E7A5087B25E5 , bda:LG5280F542B1D9891C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV27B6311CE1049BBF
-        a                   :PublishedEvent ;
-        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDF1C8FD2043637525
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "(v.12)9787540954574\n(v.36)9787540954581\n(v.710)9787540954598\n(v.1115)9787540954604\n(v.1617)9787540954611\n(v.18)9787540954628\n(v.19)9787540954635\n(v.20)9787540954642" .
     
-    bdr:MW1PD181143  a      :Instance ;
+    bdr:MW1PD181143  a      bdo:Instance ;
+        bf:identifiedBy     bdr:IDF1C8FD2043637525 ;
+        bdo:authorshipStatement  "si khron bod yig dpe rnying bsdu sgrigs khang gis bsgrigs/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:hasTitle        bdr:TT0542DEC33F2BA804 , bdr:TT3F7A9E13EF389C56 , bdr:TT68922830A96DDA7E ;
+        bdo:instanceEvent   bdr:EV27B6311CE1049BBF ;
+        bdo:instanceHasReproduction  bdr:W1PD181143 ;
+        bdo:instanceOf      bdr:WA1PD181143 ;
+        bdo:numberOfVolumes  20 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khrin tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron dus deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS1AC401 ;
         skos:altLabel       "萨迦文丛"@zh-hans ;
-        skos:prefLabel      "pod chen drug rtsa 'grel phyogs bsgrigs/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDF1C8FD2043637525 ;
-        :authorshipStatement  "si khron bod yig dpe rnying bsdu sgrigs khang gis bsgrigs/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :hasTitle           bdr:TT0542DEC33F2BA804 , bdr:TT3F7A9E13EF389C56 , bdr:TT68922830A96DDA7E ;
-        :instanceEvent      bdr:EV27B6311CE1049BBF ;
-        :instanceHasReproduction  bdr:W1PD181143 ;
-        :instanceOf         bdr:WA1PD181143 ;
-        :numberOfVolumes    20 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khrin tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron dus deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1AC401 .
+        skos:prefLabel      "pod chen drug rtsa 'grel phyogs bsgrigs/"@bo-x-ewts .
     
     bdr:TT0542DEC33F2BA804
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "萨迦文丛"@zh-hans .
     
     bdr:TT3F7A9E13EF389C56
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "sa jia wen cong"@zh-latn-pinyin-x-ndia .
     
     bdr:TT68922830A96DDA7E
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "pod chen drug rtsa 'grel phyogs bsgrigs/"@bo-x-ewts .
 }

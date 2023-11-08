@@ -1,20 +1,26 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25852 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGEA506D689BCF0D9B
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2017-05-31T16:04:42.835Z"^^xsd:dateTime ;
+        adm:logDate         "2017-05-31T16:04:42.835000+00:00"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
@@ -24,41 +30,40 @@ bdg:MW1KG25852 {
         adm:gitPath         "13/MW1KG25852.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25852 ;
-        adm:logEntry        bda:LGEA506D689BCF0D9B ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LGEA506D689BCF0D9B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV3EBFF6827BF1D993
-        a                   :PublishedEvent ;
-        :eventWhen          "2012,2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012,2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID27D62B20E507FEFC
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787540949433" .
     
-    bdr:MW1KG25852  a       :Instance ;
-        skos:prefLabel      "gtam rgyud gces btus/"@bo-x-ewts , "藏族民间故事选"@zh-hans ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID27D62B20E507FEFC ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "2, 2, 193 p." ;
-        :hasTitle           bdr:TT0FD551415657788A , bdr:TTB6D20B29BE0F0EAA ;
-        :instanceEvent      bdr:EV3EBFF6827BF1D993 ;
-        :instanceHasReproduction  bdr:W1KG25852 ;
-        :instanceOf         bdr:WA1KG25852 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron tang deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+    bdr:MW1KG25852  a       bdo:Instance ;
+        bf:identifiedBy     bdr:ID27D62B20E507FEFC ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "2, 2, 193 p." ;
+        bdo:hasTitle        bdr:TT0FD551415657788A , bdr:TTB6D20B29BE0F0EAA ;
+        bdo:instanceEvent   bdr:EV3EBFF6827BF1D993 ;
+        bdo:instanceHasReproduction  bdr:W1KG25852 ;
+        bdo:instanceOf      bdr:WA1KG25852 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron tang deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        skos:prefLabel      "gtam rgyud gces btus/"@bo-x-ewts , "藏族民间故事选"@zh-hans .
     
     bdr:TT0FD551415657788A
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "gtam rgyud gces btus/"@bo-x-ewts .
     
     bdr:TTB6D20B29BE0F0EAA
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "藏族民间故事选"@zh-hans .
 }

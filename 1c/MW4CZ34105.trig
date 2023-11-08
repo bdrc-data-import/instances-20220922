@@ -1,32 +1,38 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ34105 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG69B647788BDE59AC
         a                   adm:UpdateData ;
-        adm:logDate         "2020-04-13T16:34:29.834Z"^^xsd:dateTime ;
+        adm:logDate         "2020-04-13T16:34:29.834000+00:00"^^xsd:dateTime ;
         adm:logMessage      "fixed isbn"@en ;
         adm:logWho          bdu:U00017 .
     
     bda:LG98D7F4E6135FAF75
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2014-02-25T15:44:49.82Z"^^xsd:dateTime ;
+        adm:logDate         "2014-02-25T15:44:49.820000+00:00"^^xsd:dateTime ;
         adm:logMessage      "released for ever"@en ;
         adm:logWho          bdu:U00017 .
     
     bda:LGIM6B433BA01E
         a                   adm:UpdateData ;
-        adm:logDate         "2014-04-22T00:30:13.577Z"^^xsd:dateTime ;
+        adm:logDate         "2014-04-22T00:30:13.577000+00:00"^^xsd:dateTime ;
         adm:logMessage      "normalize encoding field for pub info"@en ;
         adm:logMethod       bda:BatchMethod ;
         adm:logWho          bdu:U00012 .
@@ -37,53 +43,52 @@ bdg:MW4CZ34105 {
         adm:gitPath         "1c/MW4CZ34105.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ34105 ;
-        adm:logEntry        bda:LG69B647788BDE59AC , bda:LG98D7F4E6135FAF75 , bda:LGIM6B433BA01E ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG69B647788BDE59AC , bda:LG98D7F4E6135FAF75 , bda:LGIM6B433BA01E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV605BCB97F7091C5C
-        a                   :PublishedEvent ;
-        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID03316BBD6C470834
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787105124091" .
     
-    bdr:MW4CZ34105  a       :Instance , :SerialInstance ;
-        skos:prefLabel      "gsung 'bum/ blo gros grags pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID03316BBD6C470834 ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :extentStatement    "extendedWylie" ;
-        :hasTitle           bdr:TT6E4E0FE702F82545 , bdr:TT941B545518BFD22B , bdr:TTF52468A18C705031 ;
-        :illustrations      "col. ill." ;
-        :instanceEvent      bdr:EV605BCB97F7091C5C ;
-        :instanceHasReproduction  bdr:W4CZ34105 ;
-        :instanceOf         bdr:WA19762 , bdr:WA4CZ34105 ;
-        :note               bdr:NT1C53AE6DDAA380AC ;
-        :numberOfVolumes    10 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin"@en ;
-        :publisherName      "mi rigs dpe skrun khang"@en ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS1KG9015 ;
-        :seriesNumber       "91-100" .
+    bdr:MW4CZ34105  a       bdo:Instance , bdo:SerialInstance ;
+        bf:identifiedBy     bdr:ID03316BBD6C470834 ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:extentStatement  "extendedWylie" ;
+        bdo:hasTitle        bdr:TT6E4E0FE702F82545 , bdr:TT941B545518BFD22B , bdr:TTF52468A18C705031 ;
+        bdo:illustrations   "col. ill." ;
+        bdo:instanceEvent   bdr:EV605BCB97F7091C5C ;
+        bdo:instanceHasReproduction  bdr:W4CZ34105 ;
+        bdo:instanceOf      bdr:WA19762 , bdr:WA4CZ34105 ;
+        bdo:note            bdr:NT1C53AE6DDAA380AC ;
+        bdo:numberOfVolumes  10 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin"@en ;
+        bdo:publisherName   "mi rigs dpe skrun khang"@en ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS1KG9015 ;
+        bdo:seriesNumber    "91-100" ;
+        skos:prefLabel      "gsung 'bum/ blo gros grags pa/"@bo-x-ewts .
     
     bdr:NT1C53AE6DDAA380AC
-        a                   :Note ;
-        :noteText           "in tibetan, copy made available from mr. dengyi"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan, copy made available from mr. dengyi"@en .
     
     bdr:TT6E4E0FE702F82545
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "gsung 'bum/ blo gros grags pa/"@bo-x-ewts .
     
     bdr:TT941B545518BFD22B
-        a                   :FullTitle ;
+        a                   bdo:FullTitle ;
         rdfs:label          "shar 'dzam thang pa ngag dbang blo gros grags pa'am skyabs mgon ma ti kirti'i gsung 'bum/"@bo-x-ewts .
     
     bdr:TTF52468A18C705031
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "ngag dbang blo gros grags pa'i gsung 'bum/"@bo-x-ewts .
 }

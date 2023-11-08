@@ -1,32 +1,38 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN7042 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG4EBEA35EAD61D4C7
         a                   adm:UpdateData ;
-        adm:logDate         "2020-03-26T17:12:20.276Z"^^xsd:dateTime ;
+        adm:logDate         "2020-03-26T17:12:20.276000+00:00"^^xsd:dateTime ;
         adm:logMessage      "carrected series title"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:LGA9AFAF50B2E9FBB6
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2017-05-24T12:37:29.02Z"^^xsd:dateTime ;
+        adm:logDate         "2017-05-24T12:37:29.020000+00:00"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00017 .
     
     bda:LGBC4F8C1CA3D62D34
         a                   adm:UpdateData ;
-        adm:logDate         "2017-05-24T16:47:38.975Z"^^xsd:dateTime ;
+        adm:logDate         "2017-05-24T16:47:38.975000+00:00"^^xsd:dateTime ;
         adm:logMessage      "full catalog and released"@en ;
         adm:logWho          bdu:U00017 .
     
@@ -36,39 +42,38 @@ bdg:MW3CN7042 {
         adm:gitPath         "59/MW3CN7042.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN7042 ;
-        adm:logEntry        bda:LG4EBEA35EAD61D4C7 , bda:LGA9AFAF50B2E9FBB6 , bda:LGBC4F8C1CA3D62D34 ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG4EBEA35EAD61D4C7 , bda:LGA9AFAF50B2E9FBB6 , bda:LGBC4F8C1CA3D62D34 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVE4374F109C12B48D
-        a                   :PublishedEvent ;
-        :eventWhen          "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2012"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID108309A3CD365B70
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787223036580" .
     
-    bdr:MW3CN7042  a        :Instance ;
-        skos:prefLabel      "zhing 'brog nyer spyod lag rtsal/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID108309A3CD365B70 ;
-        :authorshipStatement  "bod ljongs tshan rtsal tshags par khang /"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/ par theng dang po/"@bo-x-ewts ;
-        :extentStatement    "20, 420 p." ;
-        :hasTitle           bdr:TTF81563D12F609F5F ;
-        :instanceEvent      bdr:EVE4374F109C12B48D ;
-        :instanceHasReproduction  bdr:W3CN7042 ;
-        :instanceOf         bdr:WA3CN7042 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "lha sa/"@bo-x-ewts ;
-        :publisherName      "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS3CN6952 .
+    bdr:MW3CN7042  a        bdo:Instance ;
+        bf:identifiedBy     bdr:ID108309A3CD365B70 ;
+        bdo:authorshipStatement  "bod ljongs tshan rtsal tshags par khang /"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/ par theng dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "20, 420 p." ;
+        bdo:hasTitle        bdr:TTF81563D12F609F5F ;
+        bdo:instanceEvent   bdr:EVE4374F109C12B48D ;
+        bdo:instanceHasReproduction  bdr:W3CN7042 ;
+        bdo:instanceOf      bdr:WA3CN7042 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "lha sa/"@bo-x-ewts ;
+        bdo:publisherName   "bod ljongs mi dmangs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS3CN6952 ;
+        skos:prefLabel      "zhing 'brog nyer spyod lag rtsal/"@bo-x-ewts .
     
     bdr:TTF81563D12F609F5F
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "zhing 'brog nyer spyod lag rtsal/"@bo-x-ewts .
 }

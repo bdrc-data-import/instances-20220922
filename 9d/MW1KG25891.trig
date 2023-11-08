@@ -1,20 +1,26 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG25891 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LG180B66E4B7686EC5
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2017-06-02T09:36:14.487Z"^^xsd:dateTime ;
+        adm:logDate         "2017-06-02T09:36:14.487000+00:00"^^xsd:dateTime ;
         adm:logMessage      "completed cataloging and released"@en ;
         adm:logWho          bdu:U00016 .
     
@@ -24,49 +30,48 @@ bdg:MW1KG25891 {
         adm:gitPath         "9d/MW1KG25891.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG25891 ;
-        adm:logEntry        bda:LG180B66E4B7686EC5 ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LG180B66E4B7686EC5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EV3CE3D83A45419945
-        a                   :PublishedEvent ;
-        :eventWhen          "2008,2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2008,2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDE80B857759A34BCD
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787540938130" .
     
-    bdr:MW1KG25891  a       :Instance ;
+    bdr:MW1KG25891  a       bdo:Instance ;
+        bf:identifiedBy     bdr:IDE80B857759A34BCD ;
+        bdo:authorshipStatement  "dar mdo mi rigs dge 'os mtho rim ched sbyong slob grwa'i bod yig tshan khag gi slob deb rtsom sgrig u yon lhan tshogs/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "381 p." ;
+        bdo:hasTitle        bdr:TTA49ADDAFF45905EB , bdr:TTCAA7BB25CBEBEFF9 , bdr:TTEF4AE4C1E1EDBE1D ;
+        bdo:illustrations   "ill." ;
+        bdo:instanceEvent   bdr:EV3CE3D83A45419945 ;
+        bdo:instanceHasReproduction  bdr:W1KG25891 ;
+        bdo:instanceOf      bdr:WA1KG25891 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khreng tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron dus deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
         skos:altLabel       "公务员及事业单位藏文考前培训制定教材"@zh-hans ;
-        skos:prefLabel      "las zhugs mi sna bsdu len gyi bod yig rgyugs len bskyar sbyangs gtan khel bslab deb dgos 'dod dpal ster/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDE80B857759A34BCD ;
-        :authorshipStatement  "dar mdo mi rigs dge 'os mtho rim ched sbyong slob grwa'i bod yig tshan khag gi slob deb rtsom sgrig u yon lhan tshogs/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "381 p." ;
-        :hasTitle           bdr:TTA49ADDAFF45905EB , bdr:TTCAA7BB25CBEBEFF9 , bdr:TTEF4AE4C1E1EDBE1D ;
-        :illustrations      "ill." ;
-        :instanceEvent      bdr:EV3CE3D83A45419945 ;
-        :instanceHasReproduction  bdr:W1KG25891 ;
-        :instanceOf         bdr:WA1KG25891 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khreng tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron dus deb tshogs pa/ si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        skos:prefLabel      "las zhugs mi sna bsdu len gyi bod yig rgyugs len bskyar sbyangs gtan khel bslab deb dgos 'dod dpal ster/"@bo-x-ewts .
     
     bdr:TTA49ADDAFF45905EB
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "gong wu yuan ji shi ye dan wei zang wen kao qian pei xun zhi ding jiao cai"@zh-latn-pinyin-x-ndia .
     
     bdr:TTCAA7BB25CBEBEFF9
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "公务员及事业单位藏文考前培训制定教材"@zh-hans .
     
     bdr:TTEF4AE4C1E1EDBE1D
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "las zhugs mi sna bsdu len gyi bod yig rgyugs len bskyar sbyangs gtan khel bslab deb dgos 'dod dpal ster/"@bo-x-ewts .
 }

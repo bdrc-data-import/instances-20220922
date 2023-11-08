@@ -1,25 +1,31 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3PD398 {
+    bda:LG0BDSSU1NPOFFX4BM
+        a                   adm:UpdateData ;
+        adm:logAgent        "buda-scripts/batch/batch-change.py" ;
+        adm:logDate         "2023-11-08T12:40:39.876442"^^xsd:dateTime ;
+        adm:logMessage      "update copyright status from spreadsheet"@en ;
+        adm:logMethod       bda:BatchMethod .
+    
     bda:LGDD43EC9512E40E56
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2014-12-19T10:31:22.705Z"^^xsd:dateTime ;
+        adm:logDate         "2014-12-19T10:31:22.705000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:LGEB3A926FA85CE577
         a                   adm:UpdateData ;
-        adm:logDate         "2017-05-23T02:09:32.968Z"^^xsd:dateTime ;
+        adm:logDate         "2017-05-23T02:09:32.968000+00:00"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
     bda:MW3PD398  a         adm:AdminData ;
@@ -28,52 +34,51 @@ bdg:MW3PD398 {
         adm:gitPath         "b8/MW3PD398.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3PD398 ;
-        adm:logEntry        bda:LGDD43EC9512E40E56 , bda:LGEB3A926FA85CE577 ;
+        adm:logEntry        bda:LG0BDSSU1NPOFFX4BM , bda:LGDD43EC9512E40E56 , bda:LGEB3A926FA85CE577 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVBAA457BABA3A498A
-        a                   :PublishedEvent ;
-        :eventWhen          "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2013"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID8586DDE1E441D3DD
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787540953133,9787540953164,9787540953157,9787540953140," .
     
-    bdr:MW3PD398  a         :Instance , :SerialInstance ;
+    bdr:MW3PD398  a         bdo:Instance , bdo:SerialInstance ;
+        bf:identifiedBy     bdr:ID8586DDE1E441D3DD ;
+        bdo:authorshipStatement  "spyi khyab jus 'god pa/ a sngags tshe ring bkra shis/"@bo-x-ewts ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightClaimed ;
+        bdo:editionStatement  "par gzhi dang po/"@bo-x-ewts ;
+        bdo:extentStatement  "32 v." ;
+        bdo:hasTitle        bdr:TT399ECE59F98B9429 , bdr:TT7A280DD6710B6A2E , bdr:TTB96035851DAA7A51 , bdr:TTFD40FA386468407A ;
+        bdo:instanceEvent   bdr:EVBAA457BABA3A498A ;
+        bdo:instanceHasReproduction  bdr:W3PD398 ;
+        bdo:instanceOf      bdr:WA3CN8090 , bdr:WA3PD398 ;
+        bdo:numberOfVolumes  32 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khrin tu'u/"@bo-x-ewts ;
+        bdo:publisherName   "si khron tang deb tshogs pa/_si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:seriesNumber    "1-32" ;
         skos:altLabel       "民族典籍精选"@zh-hans ;
-        skos:prefLabel      "sgo bzhi mdzod lnga'i yang bcud/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID8586DDE1E441D3DD ;
-        :authorshipStatement  "spyi khyab jus 'god pa/ a sngags tshe ring bkra shis/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightUndetermined ;
-        :editionStatement   "par gzhi dang po/"@bo-x-ewts ;
-        :extentStatement    "32 v." ;
-        :hasTitle           bdr:TT399ECE59F98B9429 , bdr:TT7A280DD6710B6A2E , bdr:TTB96035851DAA7A51 , bdr:TTFD40FA386468407A ;
-        :instanceEvent      bdr:EVBAA457BABA3A498A ;
-        :instanceHasReproduction  bdr:W3PD398 ;
-        :instanceOf         bdr:WA3CN8090 , bdr:WA3PD398 ;
-        :numberOfVolumes    32 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khrin tu'u/"@bo-x-ewts ;
-        :publisherName      "si khron tang deb tshogs pa/_si khron mi rigs dpe skrun khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt ;
-        :seriesNumber       "1-32" .
+        skos:prefLabel      "sgo bzhi mdzod lnga'i yang bcud/"@bo-x-ewts .
     
     bdr:TT399ECE59F98B9429
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "min zu dian ji jing xuan"@zh-latn-pinyin-x-ndia .
     
     bdr:TT7A280DD6710B6A2E
-        a                   :CopyrightPageTitle ;
+        a                   bdo:CopyrightPageTitle ;
         rdfs:label          "民族典籍精选"@zh-hans .
     
     bdr:TTB96035851DAA7A51
-        a                   :FullTitle ;
+        a                   bdo:FullTitle ;
         rdfs:label          "zh+w dkar gayung drung bon gyi ches mtho'i slob gnyer ba'i sbyang bya'i glegs bam/ sgo bzhi mdzod lnga'i yang bcud/"@bo-x-ewts .
     
     bdr:TTFD40FA386468407A
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "sgo bzhi mdzod lnga'i yang bcud/"@bo-x-ewts .
 }
