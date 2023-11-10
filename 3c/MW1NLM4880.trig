@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM4880 {
+    bda:LG0MW1NLM4880_B7FL2GTMK5RA
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-10T14:33:20.906741Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM63680260  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2022-06-01T22:02:48.061Z"^^xsd:dateTime ;
@@ -23,27 +26,32 @@ bdg:MW1NLM4880 {
         adm:gitPath         "3c/MW1NLM4880.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM4880 ;
-        adm:logEntry        bda:LGIM63680260 ;
+        adm:logEntry        bda:LG0MW1NLM4880_B7FL2GTMK5RA , bda:LGIM63680260 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM4880  a       :Instance ;
+    bdr:MW1NLM4880  a       bdo:Instance ;
         skos:prefLabel      "dbyangs can dgyes glu'i mchan 'grel snyan ngag kun gyi 'jug sgo sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "47x7" ;
-        :extentStatement    "26 ff., 66 ff., 3 ff., 10 ff., 9 ff., 5 ff., 4 ff., 4 ff., 15 ff., 7 ff., 9 ff., 9 ff., 16 ff., 3 ff., 3 ff., 3 ff.," ;
-        :hasTitle           bdr:TTA65F95EC0AA338FF ;
-        :instanceHasReproduction  bdr:W1NLM4880 ;
-        :instanceOf         bdr:WA1NLM4880 ;
-        :note               bdr:NT8AC6FDE7FE19F90B ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "47x7" ;
+        bdo:extentStatement  "26 ff., 66 ff., 3 ff., 10 ff., 9 ff., 5 ff., 4 ff., 4 ff., 15 ff., 7 ff., 9 ff., 9 ff., 16 ff., 3 ff., 3 ff., 3 ff.," ;
+        bdo:hasTitle        bdr:TTA65F95EC0AA338FF ;
+        bdo:instanceHasReproduction  bdr:W1NLM4880 ;
+        bdo:instanceOf      bdr:WA1NLM4880 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT8AC6FDE7FE19F90B ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "Mongolia "@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT8AC6FDE7FE19F90B
-        a                   :Note ;
-        :noteText           "nlmId: M0062798"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0062798"@en .
     
     bdr:TTA65F95EC0AA338FF
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "dbyangs can dgyes glu'i mchan 'grel snyan ngag kun gyi 'jug sgo sogs/"@bo-x-ewts .
 }
