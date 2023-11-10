@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW27490 {
+    bda:LG0MW27490_I1FKXSMAKBRH
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-10T15:59:42.407016Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་ཁ་སྣོན་བྱས"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LG398EE70DDEF01526
         a                   adm:UpdateData ;
         adm:logDate         "2012-03-16T09:41:55.05Z"^^xsd:dateTime ;
@@ -48,20 +53,20 @@ bdg:MW27490 {
         adm:gitPath         "19/MW27490.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW27490 ;
-        adm:logEntry        bda:LG398EE70DDEF01526 , bda:LG86F7751BD4253708 , bda:LGEF8B1171D5D5C578 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW27490_I1FKXSMAKBRH , bda:LG398EE70DDEF01526 , bda:LG86F7751BD4253708 , bda:LGEF8B1171D5D5C578 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV0F61D55328844534
-        a                   :PublishedEvent ;
-        :eventWhen          "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1984"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID76A3DA8D169436D0
         a                   bdr:PL480 ;
         rdf:value           "bhu-tib-388" .
     
     bdr:ID7863D0316E6CCF7C
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "84901304" .
     
     bdr:ID822B107C415DAF5A
@@ -69,32 +74,33 @@ bdg:MW27490 {
         rdf:value           "014259652" .
     
     bdr:IDA95D956FF0F866A5
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662.4 .P294 1984" .
     
-    bdr:MW27490  a          :Instance ;
+    bdr:MW27490  a          bdo:Instance ;
         skos:altLabel       "a cycle of buddhist practice focussing upon the guru"@en ;
         skos:prefLabel      "bla ma nor bu rgya mtsho'i chos skor/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID76A3DA8D169436D0 , bdr:ID7863D0316E6CCF7C , bdr:ID822B107C415DAF5A , bdr:IDA95D956FF0F866A5 ;
-        :authorshipStatement  "recovered from its place of concealment by padma-glin-pa"@en ;
-        :biblioNote         "reproduced from manuscripts from o-rgyan-chos-glin in bum-than"@en ;
-        :extentStatement    "2 v." ;
-        :hasTitle           bdr:TTB31894736380F19A , bdr:TTB36BA5322F0E243F ;
-        :instanceEvent      bdr:EV0F61D55328844534 ;
-        :instanceHasReproduction  bdr:W27490 ;
-        :instanceOf         bdr:WA27490 ;
-        :numberOfVolumes    2 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "thimphu, bhutan"@en ;
-        :publisherName      "druk sherig press"@en ;
-        :script             bdr:ScriptDbuMed .
+        bf:identifiedBy     bdr:ID76A3DA8D169436D0 , bdr:ID7863D0316E6CCF7C , bdr:ID822B107C415DAF5A , bdr:IDA95D956FF0F866A5 ;
+        bdo:authorshipStatement  "recovered from its place of concealment by padma-glin-pa"@en ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཆོས་རྒྱལ་ཁྲི་སྲོང་གི་སྲས་མོ་ལྷ་ལྕམ་པདྨ་གསལ་གྱི་རྣམ་འཕྲུལ་གཏེར་སྟོན་རྒྱལ་པོ་ལྔའི་ཡ་གྱལ་སྤྲུལ་པའི་གཏེར་ཆེན་བཞི་པ་རིག་འཛིན་ཆེན་པོ་པདྨ་གླིང་པ་ (1450–1521; BDRC: P1693) ཡིས་བསམ་ཡས་མཆིམས་ཕུའི་ལྷོ་བྲག་སྨན་མདོའི་བྲག་སེངྒེའི་གདོང་པ་ཅན་ནས་སྤྱན་དྲངས་པའི་ཟབ་ཆོས་བླ་མ་ནོར་བུ་རྒྱ་མཚོ་དང་འབྲེལ་བའི་ཆོས་སྐོར་པོད་གཉིས་བཞུགས་ཤིང་། པར་བསྐྲུན་གསལ་བཤད་ལྟར་ན་འབྲུག་བུམ་ཐང་ཨོ་རྒྱན་ཆོས་གླིང་དགོན་དུ་བཞུགས་པའི་དཔེ་རྙིང་རྩ་ཆེན་དེ་བསྐྱར་བསྐྲུན་ཡིན་པར་བཤད་ཅིང་། རྒྱུ་ཆ་དེ་ནི་དབུ་མེད་བྲིས་མ་ཡིན་ཞིང་ཀུན་བཟང་སྟོབས་རྒྱལ་གྱི་འབྲུག་ཤེས་རིག་པར་ཁང་ནས་སྤྱི་ལོ་ 1984 ལོར་པར་དུ་བསྐྲུན་པར་བཤད་དོ། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "reproduced from manuscripts from o-rgyan-chos-glin in bum-than"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "2 v." ;
+        bdo:hasTitle        bdr:TTB31894736380F19A , bdr:TTB36BA5322F0E243F ;
+        bdo:instanceEvent   bdr:EV0F61D55328844534 ;
+        bdo:instanceHasReproduction  bdr:W27490 ;
+        bdo:instanceOf      bdr:WA27490 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  2 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "thimphu, bhutan"@en ;
+        bdo:publisherName   "druk sherig press"@en ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TTB31894736380F19A
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "a cycle of buddhist practice focussing upon the guru"@en .
     
     bdr:TTB36BA5322F0E243F
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bla ma nor bu rgya mtsho'i chos skor/"@bo-x-ewts .
 }
