@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM4958 {
+    bda:LG0MW1NLM4958_O404CCHDHZ57
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-10T14:48:35.141481Z"^^xsd:dateTime ;
+        adm:logMessage      "full catalog"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM63680260  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2022-06-01T22:02:48.061Z"^^xsd:dateTime ;
@@ -23,31 +26,36 @@ bdg:MW1NLM4958 {
         adm:gitPath         "37/MW1NLM4958.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM4958 ;
-        adm:logEntry        bda:LGIM63680260 ;
+        adm:logEntry        bda:LG0MW1NLM4958_O404CCHDHZ57 , bda:LGIM63680260 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM4958  a       :Instance ;
+    bdr:MW1NLM4958  a       bdo:Instance ;
         skos:prefLabel      "snyan ngag me long gi rgyan rnams kyi dper brjod dpyid kyi rgyal mo'i glu dbyangs sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "48.5x6.5" ;
-        :extentStatement    "38 ff., 6 ff., 39 ff., 36 ff. end folio missing, 33 ff." ;
-        :hasTitle           bdr:TT16123CEF9A5D75D9 ;
-        :instanceHasReproduction  bdr:W1NLM4958 ;
-        :instanceOf         bdr:WA1NLM4958 ;
-        :note               bdr:NT9CAB09B6C498BAB5 , bdr:NTBB0C198FB0A6A2AB ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :script             bdr:ScriptTibt .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "48.5x6.5" ;
+        bdo:extentStatement  "38 ff., 6 ff., 39 ff., 36 ff. end folio missing, 33 ff." ;
+        bdo:hasTitle        bdr:TT16123CEF9A5D75D9 ;
+        bdo:instanceHasReproduction  bdr:W1NLM4958 ;
+        bdo:instanceOf      bdr:WA1NLM4958 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT9CAB09B6C498BAB5 , bdr:NTBB0C198FB0A6A2AB ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "Mongolia"@en ;
+        bdo:publisherName   "[s.n.]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT9CAB09B6C498BAB5
-        a                   :Note ;
-        :noteText           "missingPages: M0062876-004 [Final pages are missing 37A] Image 239"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0062876-004 [Final pages are missing 37A] Image 239"@en .
     
     bdr:NTBB0C198FB0A6A2AB
-        a                   :Note ;
-        :noteText           "nlmId: M0062876"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0062876"@en .
     
     bdr:TT16123CEF9A5D75D9
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "snyan ngag me long gi rgyan rnams kyi dper brjod dpyid kyi rgyal mo'i glu dbyangs sogs/"@bo-x-ewts .
 }
