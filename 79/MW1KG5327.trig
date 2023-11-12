@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG5327 {
+    bda:LG0MW1KG5327_PTEJGBRIJZUM
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-12T04:58:33.084527Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་བཅོས་"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
     bda:LG1FAAF6E8ACE50889
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-06-03T16:15:13.457Z"^^xsd:dateTime ;
@@ -45,14 +50,14 @@ bdg:MW1KG5327 {
         adm:gitPath         "79/MW1KG5327.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG5327 ;
-        adm:logEntry        bda:LG1FAAF6E8ACE50889 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW1KG5327_PTEJGBRIJZUM , bda:LG1FAAF6E8ACE50889 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVAD9976A5E58EB21F
-        a                   :PublishedEvent ;
-        :eventWhen          "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2010"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID5305195148F1390D
         a                   bdr:HarvardShelfId ;
@@ -63,34 +68,36 @@ bdg:MW1KG5327 {
         rdf:value           "014257114" .
     
     bdr:IDEF28DD236BFDF121
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9789937220552" .
     
-    bdr:MW1KG5327  a        :Instance ;
+    bdr:MW1KG5327  a        bdo:Instance ;
         skos:altLabel       "Gter-chen Padma-gliṅ-paʼi gter byon rtsa gsum chos sruṅ daṅ bcas paʼi sgrub thabs gces btus bźugs so."@en-x-mixed ;
         skos:prefLabel      "gter chen pad+ma gling pa'i gter byon rtsa gsum chos srung dang bcas pa'i sgrub thabs gces btus/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID5305195148F1390D , bdr:IDB04D9309EE8B1E0B , bdr:IDEF28DD236BFDF121 ;
-        :biblioNote         "printed from computerized input"@en ;
-        :extentStatement    "562 p." ;
-        :hasTitle           bdr:TT560C6C626214B751 , bdr:TTC4FEC3CE0907BCFB , bdr:TTFF6CCF0EB4D851A4 ;
-        :instanceEvent      bdr:EVAD9976A5E58EB21F ;
-        :instanceHasReproduction  bdr:W1KG5327 ;
-        :instanceOf         bdr:WA1KG5327 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "kathmandu"@en ;
-        :publisherName      "samten dorji"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID5305195148F1390D , bdr:IDB04D9309EE8B1E0B , bdr:IDEF28DD236BFDF121 ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཆོས་རྒྱལ་ཁྲི་སྲོང་གི་སྲས་མོ་ལྷ་ལྕམ་པདྨ་གསལ་གྱི་རྣམ་འཕྲུལ་གཏེར་སྟོན་རྒྱལ་པོ་ལྔའི་ཡ་གྱལ་སྤྲུལ་པའི་གཏེར་ཆེན་བཞི་པ་རིག་འཛིན་ཆེན་པོ་པདྨ་གླིང་པ་ (1450–1521; BDRC: P1693) ཡི་ཟབ་གཏེར་རྣམས་ལས་བླ་མ་ནོར་རྒྱམ་དང་ཚེ་སྒྲུབ་རྡོར་ཕྲེང་གི་ལས་བྱང་། ཡི་དམ་རྟ་མགྲིན་ཡང་གསང་འདུས་པ། མཁའ་འགྲོ་རྡོ་རྗེ་ཕག་མོ་ཡང་གསང་བླ་མེད་ཀྱི་ལས་བྱང་། བཀའ་སྲུང་མགོན་པོ་སྡེ་བརྒྱད་ཀྱི་གསོལ་མཆོད་ཀྱི་རིགས་དང་སྨད་ལས་གཏོར་ཟློག་གི་རིགས་འབྲུག་བུམ་ཐང་གཏམ་ཞིང་དགོན་གྱི་བླ་མ་ཚེ་བརྟན་རྡོ་རྗེ་ནས་ཕྱི་མོ་ཁུངས་ཡོད་རྣམས་ཀྱི་ཞུ་དག་མཛད་ཅིང་། རྒྱལ་བ་ཞེ་ཆེན་པའི་དགེ་སློང་བསམ་གཏན་རྡོ་རྗེ་དང་། སྐྱེ་རོང་བླ་མ་ཀུན་བཟང་ཕྲིན་ལས་ནས་མ་དཔེ་མཁོ་སྒྲུབ་གནང་སྟེ་བལ་ཡུལ་ཞེ་ཆེན་དགོན་གསུང་རབ་འཕྲུལ་པར་ཁང་ནས་སྤྱི་ལོ་ 2010 པར་དུ་བསྐྲུན་པའོ། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "printed from computerized input"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "562 p." ;
+        bdo:hasTitle        bdr:TT560C6C626214B751 , bdr:TTC4FEC3CE0907BCFB , bdr:TTFF6CCF0EB4D851A4 ;
+        bdo:instanceEvent   bdr:EVAD9976A5E58EB21F ;
+        bdo:instanceHasReproduction  bdr:W1KG5327 ;
+        bdo:instanceOf      bdr:WA1KG5327 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "kathmandu"@en ;
+        bdo:publisherName   "samten dorji"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT560C6C626214B751
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "Gter-chen Padma-gliṅ-paʼi gter byon rtsa gsum chos sruṅ daṅ bcas paʼi sgrub thabs gces btus bźugs so."@en-x-mixed .
     
     bdr:TTC4FEC3CE0907BCFB
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "gter chen pad+ma gling pa'i gter byon rtsa gsum chos srung dang bcas pa'i sgrub thabs gces btus kyi bzhugs byang nor bu'i chun po/"@bo-x-ewts .
     
     bdr:TTFF6CCF0EB4D851A4
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "gter chen pad+ma gling pa'i gter byon rtsa gsum chos srung dang bcas pa'i sgrub thabs gces btus/"@bo-x-ewts .
 }
