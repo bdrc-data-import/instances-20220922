@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW26042 {
@@ -17,6 +16,12 @@ bdg:MW26042 {
         adm:logDate         "2013-09-18T09:00:59.764Z"^^xsd:dateTime ;
         adm:logMessage      "changed print type"@en ;
         adm:logWho          bdu:U00013 .
+    
+    bda:LG0MW26042_SJTLK7DMMEAD
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-13T11:22:30.800978Z"^^xsd:dateTime ;
+        adm:logMessage      "ཟིན་བྲིས་བསྣན་ཡོད"@bo ;
+        adm:logWho          bdu:U0ES1455577796 .
     
     bda:LG66E889B3FE6B7826
         a                   adm:UpdateData ;
@@ -54,51 +59,52 @@ bdg:MW26042 {
         adm:gitPath         "f5/MW26042.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW26042 ;
-        adm:logEntry        bda:LG0E63CEA498EC8835 , bda:LG66E889B3FE6B7826 , bda:LGE4EE759774AE6011 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0E63CEA498EC8835 , bda:LG0MW26042_SJTLK7DMMEAD , bda:LG66E889B3FE6B7826 , bda:LGE4EE759774AE6011 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7F718D7363B4D9DC
-        a                   :PublishedEvent ;
-        :eventWhen          "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1985"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID24F753712D07862B
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662 .P3334 1985" .
     
     bdr:ID5D1D165DE4B06BC5
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "85902624" .
     
     bdr:IDA79E7E1FEE39ABBE
         a                   bdr:HollisId ;
         rdf:value           "014259505" .
     
-    bdr:MW26042  a          :Instance , :SerialInstance ;
+    bdr:MW26042  a          bdo:Instance ;
         skos:altLabel       "klon gsal gsan ba snin bcud : a collection of teachings"@en-x-mixed ;
         skos:prefLabel      "klong gsal gsang ba snying bcud/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID24F753712D07862B , bdr:ID5D1D165DE4B06BC5 , bdr:IDA79E7E1FEE39ABBE ;
-        :authorshipStatement  "revealed by gter-chen padma-glin-pa"@en ;
-        :biblioNote         "reproduced from manuscripts from the library of o-rgyan-chos-glin"@en ;
-        :extentStatement    "752 p." ;
-        :hasTitle           bdr:TT1B68DE7C9FDF3128 , bdr:TTB29084E6160BE4B5 ;
-        :instanceEvent      bdr:EV7F718D7363B4D9DC ;
-        :instanceHasReproduction  bdr:W26042 ;
-        :instanceOf         bdr:WA26042 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "thimphu, bhutan"@en ;
-        :publisherName      "kunsang tobgeyl"@en ;
-        :script             bdr:ScriptDbuCan ;
-        :serialInstanceOf   bdr:WAS23373 ;
-        :seriesNumber       "v. 5" .
+        bf:identifiedBy     bdr:ID24F753712D07862B , bdr:ID5D1D165DE4B06BC5 , bdr:IDA79E7E1FEE39ABBE ;
+        bdo:authorshipStatement  "revealed by gter-chen padma-glin-pa"@en ;
+        bdo:biblioNote      "དཔེ་རྒྱུན་དེ་ནི་ཆོས་རྒྱལ་ཁྲི་སྲོང་གི་སྲས་མོ་ལྷ་ལྕམ་པདྨ་གསལ་གྱི་རྣམ་འཕྲུལ་གཏེར་སྟོན་རྒྱལ་པོ་ལྔའི་ཡ་གྱལ་སྤྲུལ་པའི་གཏེར་ཆེན་བཞི་པ་རིག་འཛིན་ཆེན་པོ་པདྨ་གླིང་པ་ (1450–1521; BDRC: P1693) ཡིས་བུམ་ཐང་མེ་འབར་མཚོ་ནས་གདན་དྲངས་པའི་ཀློང་གསལ་གསང་བ་སྙིང་བཅུད་དང་འབྲེལ་བའི་ཆོས་སྐོར་བཞུགས། དེ་ནི་ཨོ་རྒྱན་ཆོས་གླིང་དཔེ་མཛོད་དུ་བཞུགས་པའི་དཔེ་རྙིང་དབུ་མེད་བྲིས་མ་དེ་ཀུན་བཟང་སྟོབས་རྒྱལ་གྱི་འབྲུག་ཤེས་རིག་པར་ཁང་ནས་སྤྱི་ལོ་ 1985 ལ་བསྐྱར་དུ་བསྐྲུན་པའི་ཚུལ་པར་བསྐྲུན་གསལ་བཤད་དུ་འབྱུང་ངོ་། །\nསྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་ཉམས་ཞིབ་པ་ཨོ་རྒྱན་ཕུན་ཚོགས་ནས།"@bo , "reproduced from manuscripts from the library of o-rgyan-chos-glin"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "752 p." ;
+        bdo:hasTitle        bdr:TT1B68DE7C9FDF3128 , bdr:TTB29084E6160BE4B5 ;
+        bdo:instanceEvent   bdr:EV7F718D7363B4D9DC ;
+        bdo:instanceHasReproduction  bdr:W26042 ;
+        bdo:instanceOf      bdr:WA26042 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "thimphu, bhutan"@en ;
+        bdo:publisherName   "kunsang tobgeyl"@en ;
+        bdo:script          bdr:ScriptDbuCan ;
+        bdo:serialInstanceOf  bdr:WAS23373 ;
+        bdo:seriesNumber    "v. 5" .
     
     bdr:TT1B68DE7C9FDF3128
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "klon gsal gsan ba snin bcud : a collection of teachings"@en-x-mixed .
     
     bdr:TTB29084E6160BE4B5
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "klong gsal gsang ba snying bcud/"@bo-x-ewts .
 }
