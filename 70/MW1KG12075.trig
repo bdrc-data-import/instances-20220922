@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG12075 {
@@ -50,17 +49,17 @@ bdg:MW1KG12075 {
         adm:gitPath         "70/MW1KG12075.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG12075 ;
-        adm:logEntry        bda:LG4101F78863EB9817 , bda:LGBD54FE0D6BC397E5 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG4101F78863EB9817 , bda:LGBD54FE0D6BC397E5 , bda:LGIM3B24E310 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C , bdr:LG0WA1KG12075_KXMZPPDDGQYY ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVBD88E56B4861D9DE
-        a                   :PublishedEvent ;
-        :eventWhen          "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID6E8B26AB32EF5047
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "78905643" .
     
     bdr:ID78D67F3784D7E755
@@ -68,34 +67,40 @@ bdg:MW1KG12075 {
         rdf:value           "014255784" .
     
     bdr:ID9087ABB445783A52
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662.4 .N35 1978" .
     
-    bdr:MW1KG12075  a       :Instance , :SerialInstance ;
+    bdr:LG0WA1KG12075_KXMZPPDDGQYY
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-17T16:13:19.720718Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1KG12075 in favor of WA3CN4615"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
+    bdr:MW1KG12075  a       bdo:Instance , bdo:SerialInstance ;
         skos:altLabel       "bka' brgyad bde gshegs 'dus pa'i chos skor : the complete collection of revelations of mna'-bdag nan-ral ni-ma 'od-zer setting forth the teachings of the eight pronouncements (bka' brgyad) of the rnin-ma-pa tradition"@en ;
         skos:prefLabel      "bka' brgyad bde gshegs 'dus pa'i chos skor/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID6E8B26AB32EF5047 , bdr:ID78D67F3784D7E755 , bdr:ID9087ABB445783A52 ;
-        :biblioNote         "In volume no. 8, after page 271 all the even-numbered pages are missing in this collection. When we get the missing page, we will update the images."@en , "reproduced from the sole known surviving set of prints from the kah-thog blocks from the library of h.h. dudjom rinpoche"@en ;
-        :extentStatement    "13 v." ;
-        :hasSourcePrintery  bdr:G3JT12508 ;
-        :hasTitle           bdr:TTC44C9B25F1F0BAC2 , bdr:TTF23461E44C333FAE ;
-        :instanceEvent      bdr:EVBD88E56B4861D9DE ;
-        :instanceHasReproduction  bdr:W1KG12075 ;
-        :instanceOf         bdr:WA1KG12075 ;
-        :numberOfVolumes    13 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "gangtok, sikkim"@en ;
-        :publisherName      "sonam topgay kazi"@en ;
-        :script             bdr:ScriptTibt ;
-        :serialInstanceOf   bdr:WAS11225 ;
-        :seriesNumber       "v. 75-87" .
+        bf:identifiedBy     bdr:ID6E8B26AB32EF5047 , bdr:ID78D67F3784D7E755 , bdr:ID9087ABB445783A52 ;
+        bdo:biblioNote      "In volume no. 8, after page 271 all the even-numbered pages are missing in this collection. When we get the missing page, we will update the images."@en , "reproduced from the sole known surviving set of prints from the kah-thog blocks from the library of h.h. dudjom rinpoche"@en ;
+        bdo:extentStatement  "13 v." ;
+        bdo:hasSourcePrintery  bdr:G3JT12508 ;
+        bdo:hasTitle        bdr:TTC44C9B25F1F0BAC2 , bdr:TTF23461E44C333FAE ;
+        bdo:instanceEvent   bdr:EVBD88E56B4861D9DE ;
+        bdo:instanceHasReproduction  bdr:W1KG12075 ;
+        bdo:instanceOf      bdr:WA3CN4615 ;
+        bdo:numberOfVolumes  13 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "gangtok, sikkim"@en ;
+        bdo:publisherName   "sonam topgay kazi"@en ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:serialInstanceOf  bdr:WAS11225 ;
+        bdo:seriesNumber    "v. 75-87" .
     
     bdr:TTC44C9B25F1F0BAC2
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bka' brgyad bde gshegs 'dus pa'i chos skor : the complete collection of revelations of mna'-bdag nan-ral ni-ma 'od-zer setting forth the teachings of the eight pronouncements (bka' brgyad) of the rnin-ma-pa tradition"@en .
     
     bdr:TTF23461E44C333FAE
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "bka' brgyad bde gshegs 'dus pa'i chos skor/"@bo-x-ewts .
 }
