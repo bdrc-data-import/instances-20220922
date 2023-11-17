@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG9588 {
@@ -51,61 +50,67 @@ bdg:MW1KG9588 {
         adm:gitPath         "42/MW1KG9588.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG9588 ;
-        adm:logEntry        bda:LG7EF87358ADCED6C1 , bda:LGA6B007E38159BEFF , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG7EF87358ADCED6C1 , bda:LGA6B007E38159BEFF , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C , bdr:LG0WA1KG12075_KXMZPPDDGQYY ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV4C7E43EDE83643A9
-        a                   :PublishedEvent ;
-        :eventWhen          "1977/1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1977/1978"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID03C4628E93B7ACDB
         a                   bdr:HarvardShelfId ;
         rdf:value           "001604759-1" .
     
     bdr:ID1F0F3F7FD4E04CBD
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "78900372" .
     
     bdr:ID3542BB9528595E8F
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ7662.4 .N343 1977" .
     
     bdr:IDD1A2BACDF69A8E25
         a                   bdr:HollisId ;
         rdf:value           "014257595" .
     
-    bdr:MW1KG9588  a        :Instance ;
+    bdr:LG0WA1KG12075_KXMZPPDDGQYY
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-17T16:13:19.720718Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1KG12075 in favor of WA3CN4615"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
+    bdr:MW1KG9588  a        bdo:Instance ;
         skos:altLabel       "bka' brgyad bde gshegs 'dus pa'i chos skor : a reproduction of a manuscript collection of texts from the revelations of mnga'-bdag nyang-ral nyi-ma-'od-zer"@en-x-mixed ;
         skos:prefLabel      "bka' brgyad bde gshegs 'dus pa'i chos skor/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID03C4628E93B7ACDB , bdr:ID1F0F3F7FD4E04CBD , bdr:ID3542BB9528595E8F , bdr:IDD1A2BACDF69A8E25 ;
-        :biblioNote         "reproduced from a collection from the library of kyirong lama kunzang now preserved in the library of tibetan works and archives"@en ;
-        :extentStatement    "4 v." ;
-        :hasTitle           bdr:TT71E73950B5FE6E9A , bdr:TT9988E30308D87530 , bdr:TTE4CAF5A6BF5C1137 ;
-        :instanceEvent      bdr:EV4C7E43EDE83643A9 ;
-        :instanceHasReproduction  bdr:W1KG9588 ;
-        :instanceOf         bdr:WA1KG12075 ;
-        :note               bdr:NT57D71FFEB7719888 ;
-        :numberOfVolumes    4 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "dalhousie, h.p."@en ;
-        :publisherName      "damchoe sangpo"@en ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:ID03C4628E93B7ACDB , bdr:ID1F0F3F7FD4E04CBD , bdr:ID3542BB9528595E8F , bdr:IDD1A2BACDF69A8E25 ;
+        bdo:biblioNote      "reproduced from a collection from the library of kyirong lama kunzang now preserved in the library of tibetan works and archives"@en ;
+        bdo:extentStatement  "4 v." ;
+        bdo:hasTitle        bdr:TT71E73950B5FE6E9A , bdr:TT9988E30308D87530 , bdr:TTE4CAF5A6BF5C1137 ;
+        bdo:instanceEvent   bdr:EV4C7E43EDE83643A9 ;
+        bdo:instanceHasReproduction  bdr:W1KG9588 ;
+        bdo:instanceOf      bdr:WA3CN4615 ;
+        bdo:note            bdr:NT57D71FFEB7719888 ;
+        bdo:numberOfVolumes  4 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "dalhousie, h.p."@en ;
+        bdo:publisherName   "damchoe sangpo"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT57D71FFEB7719888
-        a                   :Note ;
-        :noteText           "in tibetan; preface in english"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan; preface in english"@en .
     
     bdr:TT71E73950B5FE6E9A
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bka' brgyad bde gshegs 'dus pa'i chos skor : a reproduction of a manuscript collection of texts from the revelations of mnga'-bdag nyang-ral nyi-ma-'od-zer"@en-x-mixed .
     
     bdr:TT9988E30308D87530
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "Bkaʾ brgyad Bde gśegs ʾdus paʾi chos skor :a reproduction of a manuscript collection of texts from the revelations of Mṅaʾ-bdag Ñaṅ-ral Ñi-ma-ʾod-zer."@en-x-mixed .
     
     bdr:TTE4CAF5A6BF5C1137
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "bka' brgyad bde gshegs 'dus pa'i chos skor/"@bo-x-ewts .
 }
