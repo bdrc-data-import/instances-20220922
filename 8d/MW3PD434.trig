@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3PD434 {
@@ -34,26 +31,33 @@ bdg:MW3PD434 {
         adm:gitPath         "8d/MW3PD434.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3PD434 ;
-        adm:logEntry        bda:LGAF84EB3D58E50F40 , bda:LGE83AC5E24F7AA71E , bda:LGF35B733448E9740A ;
+        adm:logEntry        bda:LGAF84EB3D58E50F40 , bda:LGE83AC5E24F7AA71E , bda:LGF35B733448E9740A , bdr:LG0WA1KG12075_KXMZPPDDGQYY ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3PD434  a         :Instance ;
+    bdr:LG0WA1KG12075_KXMZPPDDGQYY
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-17T16:13:19.720718Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1KG12075 in favor of WA3CN4615"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1455577796 .
+    
+    bdr:MW3PD434  a         bdo:Instance ;
         skos:prefLabel      "bka' brgyad bde gshegs 'dus pa'i chos skor/"@bo-x-ewts ;
-        :extentStatement    "1 v." ;
-        :hasTitle           bdr:TTA29ECDF27666ABAB ;
-        :instanceHasReproduction  bdr:W3PD434 ;
-        :instanceOf         bdr:WA1KG12075 ;
-        :note               bdr:NT5967606487CE8E53 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:extentStatement  "1 v." ;
+        bdo:hasTitle        bdr:TTA29ECDF27666ABAB ;
+        bdo:instanceHasReproduction  bdr:W3PD434 ;
+        bdo:instanceOf      bdr:WA3CN4615 ;
+        bdo:note            bdr:NT5967606487CE8E53 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NT5967606487CE8E53
-        a                   :Note ;
-        :noteText           "ma dpe 'di bse ru 'gab ma tshang nas byung /"@bo-x-ewts .
+        a                   bdo:Note ;
+        bdo:noteText        "ma dpe 'di bse ru 'gab ma tshang nas byung /"@bo-x-ewts .
     
     bdr:TTA29ECDF27666ABAB
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "bka' brgyad bde gshegs 'dus pa'i chos skor/"@bo-x-ewts .
 }
