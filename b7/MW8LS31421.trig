@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS31421 {
@@ -24,30 +21,37 @@ bdg:MW8LS31421 {
         adm:gitPath         "b7/MW8LS31421.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS31421 ;
-        adm:logEntry        bda:LG6E596B23CDF9AD06 ;
+        adm:logEntry        bda:LG6E596B23CDF9AD06 , bdr:LG0W8LS31421_HWCNLVQ0T4MZ ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS31421  a       :Instance ;
+    bdr:LG0W8LS31421_HWCNLVQ0T4MZ
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-20T12:28:02.713891Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw W8LS31421 in favor of W2PD17382"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW8LS31421  a       bdo:Instance ;
         skos:prefLabel      "skabs sbyor bdun pa'i rgyud/"@bo-x-ewts ;
-        :extentStatement    "735 p." ;
-        :hasTitle           bdr:TT4EEECB23CA5B8BF1 , bdr:TT6F3AE558FAB29573 ;
-        :instanceHasReproduction  bdr:W8LS31421 ;
-        :instanceOf         bdr:WA8LS31421 ;
-        :note               bdr:NT83726CD2C80EACEF ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:extentStatement  "735 p." ;
+        bdo:hasTitle        bdr:TT4EEECB23CA5B8BF1 , bdr:TT6F3AE558FAB29573 ;
+        bdo:instanceHasReproduction  bdr:W2PD17382 ;
+        bdo:instanceOf      bdr:WA8LS31421 ;
+        bdo:note            bdr:NT83726CD2C80EACEF ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NT83726CD2C80EACEF
-        a                   :Note ;
-        :noteText           "Contents:\n\n1\trdzogs pa chen po rin po che 'khor ba rtsad gcod kyi rgyud/\n2\tbyang chub kyi sems gsang ba don gyi snying po/\n3\tbayng chub kyi sems bsgom pa yi ge med pa'i rgyud/\n4\tbayng chub kyi sems kun tu 'od kyi rgyud/\n5\tnor bu rin po che snang byed kyi rgyud/\n6\trdo rje sems dpa' nam mkha' che kun tu bzang po gsang ba snying po bde ba chen po'i rgyud/\n7\tkun tu bzang po rang gnas kyi rgyud/\n8\trdzogs chen 'khor ba rtsad gcod nyi zla dang mnyam pa dri ma med pa'i tantra/\n9\tman ngag dbang chen 'byams pa'i rgyud/\n10\trdzogs chen man ngag gsang skor/\n11\tgcod pa 'khor lo'i rgyud/\n12\trdo rje 'bar ba gsang ba'i rgyud/\n13\tyang 'byed 'phrul gyi lde mig\n14 ye shes bla ma chen po'i rgyud/\n14\trdo rje rtse mo 'dus pa'i rgyud/\n15\tlha rgyud rin chen po spungs pa/\n16\tbyang chub kyi sems ye shes rdzogs pa'i rgyud/\n17\tlha mo 'od zer can gyi rgyud/\n18 rdo rje sprin po rnor ba'i rdo rje mchu can gyi rgyud/ rgyud thams cad kyi snying po 'khor ba dongs dkrug zhes bya'i rgyud bi na ram/\n19\tthig le kun gsal chen po'i rgyud/\n20\t byang sems rgyal mtshan rtse mo'i rgyud/"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Contents:\n\n1\trdzogs pa chen po rin po che 'khor ba rtsad gcod kyi rgyud/\n2\tbyang chub kyi sems gsang ba don gyi snying po/\n3\tbayng chub kyi sems bsgom pa yi ge med pa'i rgyud/\n4\tbayng chub kyi sems kun tu 'od kyi rgyud/\n5\tnor bu rin po che snang byed kyi rgyud/\n6\trdo rje sems dpa' nam mkha' che kun tu bzang po gsang ba snying po bde ba chen po'i rgyud/\n7\tkun tu bzang po rang gnas kyi rgyud/\n8\trdzogs chen 'khor ba rtsad gcod nyi zla dang mnyam pa dri ma med pa'i tantra/\n9\tman ngag dbang chen 'byams pa'i rgyud/\n10\trdzogs chen man ngag gsang skor/\n11\tgcod pa 'khor lo'i rgyud/\n12\trdo rje 'bar ba gsang ba'i rgyud/\n13\tyang 'byed 'phrul gyi lde mig\n14 ye shes bla ma chen po'i rgyud/\n14\trdo rje rtse mo 'dus pa'i rgyud/\n15\tlha rgyud rin chen po spungs pa/\n16\tbyang chub kyi sems ye shes rdzogs pa'i rgyud/\n17\tlha mo 'od zer can gyi rgyud/\n18 rdo rje sprin po rnor ba'i rdo rje mchu can gyi rgyud/ rgyud thams cad kyi snying po 'khor ba dongs dkrug zhes bya'i rgyud bi na ram/\n19\tthig le kun gsal chen po'i rgyud/\n20\t byang sems rgyal mtshan rtse mo'i rgyud/"@en .
     
     bdr:TT4EEECB23CA5B8BF1
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "skabs sbyor bdun pa'i rgyud/"@bo-x-ewts .
     
     bdr:TT6F3AE558FAB29573
-        a                   :FullTitle ;
+        a                   bdo:FullTitle ;
         rdfs:label          "bcom ldan 'das de bzhin gshegs pa thams cad kyi phrin las kyi rgyal po skabs sbyor bdun pa'i rgyud/"@bo-x-ewts .
 }
