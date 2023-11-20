@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS31426 {
@@ -24,35 +21,42 @@ bdg:MW8LS31426 {
         adm:gitPath         "49/MW8LS31426.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS31426 ;
-        adm:logEntry        bda:LGE8D277C52D1AE519 ;
+        adm:logEntry        bda:LGE8D277C52D1AE519 , bdr:LG0W8LS31426_B2170KKFSX9E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS31426  a       :Instance ;
+    bdr:LG0W8LS31426_B2170KKFSX9E
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-20T12:28:54.290626Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw W8LS31426 in favor of W2PD17382"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW8LS31426  a       bdo:Instance ;
         skos:altLabel       "bodhicittasamAdhi"@sa-x-ndia ;
         skos:prefLabel      "byang chub kyi sems rdo la gser zhun/"@bo-x-ewts ;
-        :extentStatement    "1669 p." ;
-        :hasTitle           bdr:TT3F2CE117A4686C43 , bdr:TT76BA13C620369E27 , bdr:TTBE03A8257B27FDA1 ;
-        :instanceHasReproduction  bdr:W8LS31426 ;
-        :instanceOf         bdr:WA8LS31426 ;
-        :note               bdr:NT60C2F14E53B061C1 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:extentStatement  "1669 p." ;
+        bdo:hasTitle        bdr:TT3F2CE117A4686C43 , bdr:TT76BA13C620369E27 , bdr:TTBE03A8257B27FDA1 ;
+        bdo:instanceHasReproduction  bdr:W2PD17382 ;
+        bdo:instanceOf      bdr:WA8LS31426 ;
+        bdo:note            bdr:NT60C2F14E53B061C1 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NT60C2F14E53B061C1
-        a                   :Note ;
-        :noteText           "Contents:\n1\tbkra shis pa'i dpal rig pa'i khu byug\n2\tbang mdzod 'phrul gyi me long las phyi ma'i phyi ma/\n3\t'khor lo rdo rje/\n4\tbyang chub sems rin chen 'khor lo/\n5\trin po che snang byed kyi rgyud/\n6\tchos chen po rmad du byung ba le'u nyi shu pa/\n7\trdzogs pa chen po chos nyid byang chub kyi sems rin po che bkod pa rnam par dbye ba'i rgyud/\n8\tbyang chub kyi sems rmad du byung ba le'u sum bcu dgu pa/\n9\tbyang chub kyi sems rmad du byung pa le'u bcu gcig"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Contents:\n1\tbkra shis pa'i dpal rig pa'i khu byug\n2\tbang mdzod 'phrul gyi me long las phyi ma'i phyi ma/\n3\t'khor lo rdo rje/\n4\tbyang chub sems rin chen 'khor lo/\n5\trin po che snang byed kyi rgyud/\n6\tchos chen po rmad du byung ba le'u nyi shu pa/\n7\trdzogs pa chen po chos nyid byang chub kyi sems rin po che bkod pa rnam par dbye ba'i rgyud/\n8\tbyang chub kyi sems rmad du byung ba le'u sum bcu dgu pa/\n9\tbyang chub kyi sems rmad du byung pa le'u bcu gcig"@en .
     
     bdr:TT3F2CE117A4686C43
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "bodhicittasamAdhi"@sa-x-ndia .
     
     bdr:TT76BA13C620369E27
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "byang chub kyi sems rdo la gser zhun/"@bo-x-ewts .
     
     bdr:TTBE03A8257B27FDA1
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "byang chub sems bsgom pa/"@bo-x-ewts .
 }
