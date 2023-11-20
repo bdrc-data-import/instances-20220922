@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS31538 {
@@ -24,26 +21,33 @@ bdg:MW8LS31538 {
         adm:gitPath         "fa/MW8LS31538.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS31538 ;
-        adm:logEntry        bda:LG000BC9DA5CA84B45 ;
+        adm:logEntry        bda:LG000BC9DA5CA84B45 , bdr:LG0W8LS31538_TPKCL1XZCIM4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS31538  a       :Instance ;
+    bdr:LG0W8LS31538_TPKCL1XZCIM4
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-20T12:29:39.046261Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw W8LS31538 in favor of W2PD17382"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW8LS31538  a       bdo:Instance ;
         skos:prefLabel      "rdo rje sems dpa' snying gi me long zhes bya ba'i rgyud/"@bo-x-ewts ;
-        :extentStatement    "604 p." ;
-        :hasTitle           bdr:TT4218ADA9130CF2D7 ;
-        :instanceHasReproduction  bdr:W8LS31538 ;
-        :instanceOf         bdr:WA8LS31538 ;
-        :note               bdr:NT174AF3E2A6DE93BE ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:extentStatement  "604 p." ;
+        bdo:hasTitle        bdr:TT4218ADA9130CF2D7 ;
+        bdo:instanceHasReproduction  bdr:W2PD17382 ;
+        bdo:instanceOf      bdr:WA8LS31538 ;
+        bdo:note            bdr:NT174AF3E2A6DE93BE ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NT174AF3E2A6DE93BE
-        a                   :Note ;
-        :noteText           "Contents:\n\n1\tnor bu 'phra bkod rang gi don thams cad gsal bar byed pa'i rgyud/\n2\trig pa rang spar chen po'i rgyud/"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Contents:\n\n1\tnor bu 'phra bkod rang gi don thams cad gsal bar byed pa'i rgyud/\n2\trig pa rang spar chen po'i rgyud/"@en .
     
     bdr:TT4218ADA9130CF2D7
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "rdo rje sems dpa' snying gi me long zhes bya ba'i rgyud/"@bo-x-ewts .
 }
