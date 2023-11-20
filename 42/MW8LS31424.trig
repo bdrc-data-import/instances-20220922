@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS31424 {
@@ -24,31 +21,38 @@ bdg:MW8LS31424 {
         adm:gitPath         "42/MW8LS31424.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS31424 ;
-        adm:logEntry        bda:LG520742FACBF76472 ;
+        adm:logEntry        bda:LG520742FACBF76472 , bdr:LG0W8LS31424_VI0IBBK8JNK8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS31424  a       :Instance ;
+    bdr:LG0W8LS31424_VI0IBBK8JNK8
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-20T12:28:32.827816Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw W8LS31424 in favor of W2PD17382"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW8LS31424  a       bdo:Instance ;
         skos:altLabel       "shwa na pra ma rA ja kA li tan+tra nA ma/"@sa-x-ewts ;
         skos:prefLabel      "ma mo e ka dza ti za byed spyang rgyal nag mo'i rgyud/"@bo-x-ewts ;
-        :extentStatement    "1158 p." ;
-        :hasTitle           bdr:TT164C54DDF0A2F1A7 , bdr:TTA6426D180D7DF3A0 ;
-        :instanceHasReproduction  bdr:W8LS31424 ;
-        :instanceOf         bdr:WA8LS31424 ;
-        :note               bdr:NT828A082E82A5D383 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:extentStatement  "1158 p." ;
+        bdo:hasTitle        bdr:TT164C54DDF0A2F1A7 , bdr:TTA6426D180D7DF3A0 ;
+        bdo:instanceHasReproduction  bdr:W2PD17382 ;
+        bdo:instanceOf      bdr:WA8LS31424 ;
+        bdo:note            bdr:NT828A082E82A5D383 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NT828A082E82A5D383
-        a                   :Note ;
-        :noteText           "Contents:\n1\tdpal tshe bdag gi me rlung skyi 'dan 'khrugs pa'i rgyud/\n2\tbse sgrom dmar po'i rgyud/\n3\trdo rje gsang ba'i snying po rtsa ba'i rgyud de kho na nyid nges pa/\n4\trta mchog rol pa'i rgyud chen po/\n5\tdbang rgyal rta mchog rol pa'i rgyud chen po/\n6\tdpal pad+ma dbang chen dregs pa bsrung bzlog yon tan gyi rgyud/\n7\tdpal pad+ma dbang chen dregs pa gnad 'bebs kyi rgyud/"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Contents:\n1\tdpal tshe bdag gi me rlung skyi 'dan 'khrugs pa'i rgyud/\n2\tbse sgrom dmar po'i rgyud/\n3\trdo rje gsang ba'i snying po rtsa ba'i rgyud de kho na nyid nges pa/\n4\trta mchog rol pa'i rgyud chen po/\n5\tdbang rgyal rta mchog rol pa'i rgyud chen po/\n6\tdpal pad+ma dbang chen dregs pa bsrung bzlog yon tan gyi rgyud/\n7\tdpal pad+ma dbang chen dregs pa gnad 'bebs kyi rgyud/"@en .
     
     bdr:TT164C54DDF0A2F1A7
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "shwa na pra ma rA ja kA li tan+tra nA ma/"@sa-x-ewts .
     
     bdr:TTA6426D180D7DF3A0
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "ma mo e ka dza ti za byed spyang rgyal nag mo'i rgyud/"@bo-x-ewts .
 }
