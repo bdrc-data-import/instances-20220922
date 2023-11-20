@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1NLM5098 {
+    bda:LG0MW1NLM5098_FRCCEV3BHTAH
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-20T14:57:04.167029Z"^^xsd:dateTime ;
+        adm:logMessage      "full cataloed"@en ;
+        adm:logWho          bdu:U2089842660 .
+    
     bda:LGIM09D5B0A4  a     adm:UpdateData ;
         adm:logAgent        "NLM Importer" ;
         adm:logDate         "2022-09-12T23:37:41.479Z"^^xsd:dateTime ;
@@ -23,31 +26,36 @@ bdg:MW1NLM5098 {
         adm:gitPath         "f1/MW1NLM5098.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1NLM5098 ;
-        adm:logEntry        bda:LGIM09D5B0A4 ;
+        adm:logEntry        bda:LG0MW1NLM5098_FRCCEV3BHTAH , bda:LGIM09D5B0A4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW1NLM5098  a       :Instance ;
+    bdr:MW1NLM5098  a       bdo:Instance ;
         skos:prefLabel      "chos rje dwags po lha rjes gsungs pa'i bstan bcos gros 'debs bdud rtsi'i phreng ba sogs/"@bo-x-ewts ;
-        :dimensionsStatement  "16x4.5" ;
-        :extentStatement    "20 ff., 6 ff., 9 ff., 12 ff.end folio missing, 2 ff., 7 ff., 4 ff., 8 ff., 3 ff., 6 ff., 4 ff., 4 ff., 9 ff., 4 ff., 6 ff., 3 ff., 7 ff., 5 ff., 9 ff., 2 ff., 5 ff., 3 ff., 8 ff., 3 ff., 4 ff., 3 ff." ;
-        :hasTitle           bdr:TTCC1E59054FD144D9 ;
-        :instanceHasReproduction  bdr:W1NLM5098 ;
-        :instanceOf         bdr:WA1NLM5098 ;
-        :note               bdr:NTA161574088E72F78 , bdr:NTC635B6550421DBEC ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuCan .
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:copyrightStatus  bdr:CopyrightPublicDomain ;
+        bdo:dimensionsStatement  "16x4.5" ;
+        bdo:extentStatement  "20 ff., 6 ff., 9 ff., 12 ff.end folio missing, 2 ff., 7 ff., 4 ff., 8 ff., 3 ff., 6 ff., 4 ff., 4 ff., 9 ff., 4 ff., 6 ff., 3 ff., 7 ff., 5 ff., 9 ff., 2 ff., 5 ff., 3 ff., 8 ff., 3 ff., 4 ff., 3 ff." ;
+        bdo:hasTitle        bdr:TTCC1E59054FD144D9 ;
+        bdo:instanceHasReproduction  bdr:W1NLM5098 ;
+        bdo:instanceOf      bdr:WA1NLM5098 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NTA161574088E72F78 , bdr:NTC635B6550421DBEC ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "sog yul/"@bo-x-ewts ;
+        bdo:publisherName   "[s.n.]"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NTA161574088E72F78
-        a                   :Note ;
-        :noteText           "missingPages: M0063016-004 [Final pages are missing 13A] Image 95. M0063016-006 [Page 2 double numbered] Image 102-105."@en .
+        a                   bdo:Note ;
+        bdo:noteText        "missingPages: M0063016-004 [Final pages are missing 13A] Image 95. M0063016-006 [Page 2 double numbered] Image 102-105."@en .
     
     bdr:NTC635B6550421DBEC
-        a                   :Note ;
-        :noteText           "nlmId: M0063016"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "nlmId: M0063016"@en .
     
     bdr:TTCC1E59054FD144D9
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "chos rje dwags po lha rjes gsungs pa'i bstan bcos gros 'debs bdud rtsi'i phreng ba sogs/"@bo-x-ewts .
 }
