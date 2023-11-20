@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS31427 {
@@ -24,26 +21,33 @@ bdg:MW8LS31427 {
         adm:gitPath         "65/MW8LS31427.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS31427 ;
-        adm:logEntry        bda:LG6EEAD85B19E6EDD5 ;
+        adm:logEntry        bda:LG6EEAD85B19E6EDD5 , bdr:LG0W8LS31427_XIIZL5N4EM9G ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW8LS31427  a       :Instance ;
+    bdr:LG0W8LS31427_XIIZL5N4EM9G
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-20T12:29:03.598618Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw W8LS31427 in favor of W2PD17382"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW8LS31427  a       bdo:Instance ;
         skos:prefLabel      "phur pa bcu gnyis kyi rgyud/"@bo-x-ewts ;
-        :extentStatement    "1210 p." ;
-        :hasTitle           bdr:TT492B7736BFC4D317 ;
-        :instanceHasReproduction  bdr:W8LS31427 ;
-        :instanceOf         bdr:WA8LS31427 ;
-        :note               bdr:NT54F0CD9733A89851 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:extentStatement  "1210 p." ;
+        bdo:hasTitle        bdr:TT492B7736BFC4D317 ;
+        bdo:instanceHasReproduction  bdr:W2PD17382 ;
+        bdo:instanceOf      bdr:WA8LS31427 ;
+        bdo:note            bdr:NT54F0CD9733A89851 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:NT54F0CD9733A89851
-        a                   :Note ;
-        :noteText           "Contents:\n1\t'phags pa thabs kyi zhags pa pad+mo phreng ba'i don bsdus pa zhes pa'i rgyud/\n2\tdpal snying rje rol pa'i rgyud/\t'jig rten las 'das pa gsang ba'i mdo/\n3\tthams cad bdud rtsi lnga'i rang bzhin dngos grub chen po'i nye ba'i snying po mchog\n3\tbdud rtsi chen po chos nyid gsang ba'i rgyud/\n4\tdpal he ru ka'i gal po dur khrod mngon par 'byung ba zhes bya ba'i rgyud phyi ma/\n5\tkhro bo pun+Da ri ka'i rgyud/\n6\t'jig rten las 'das pa'i mdo zhes bya ba'i rgyud/\n7\tbdud rtsi 'khyil pa 'chi med tshe'i rgyud/\n8\tde bzhin rigs kyi bsgrub kthabs gsang ba med dpung thugs kyi rgyud/\n9\tthams cad bdud rtse rang bzhin du 'khrungs shing skye bar byed pa'i 'bras bu rin po che'i 'od ltar bstan pa'i rgyud/\n10\tbdud rtsi las rgya mtsho'i rgyud/"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "Contents:\n1\t'phags pa thabs kyi zhags pa pad+mo phreng ba'i don bsdus pa zhes pa'i rgyud/\n2\tdpal snying rje rol pa'i rgyud/\t'jig rten las 'das pa gsang ba'i mdo/\n3\tthams cad bdud rtsi lnga'i rang bzhin dngos grub chen po'i nye ba'i snying po mchog\n3\tbdud rtsi chen po chos nyid gsang ba'i rgyud/\n4\tdpal he ru ka'i gal po dur khrod mngon par 'byung ba zhes bya ba'i rgyud phyi ma/\n5\tkhro bo pun+Da ri ka'i rgyud/\n6\t'jig rten las 'das pa'i mdo zhes bya ba'i rgyud/\n7\tbdud rtsi 'khyil pa 'chi med tshe'i rgyud/\n8\tde bzhin rigs kyi bsgrub kthabs gsang ba med dpung thugs kyi rgyud/\n9\tthams cad bdud rtse rang bzhin du 'khrungs shing skye bar byed pa'i 'bras bu rin po che'i 'od ltar bstan pa'i rgyud/\n10\tbdud rtsi las rgya mtsho'i rgyud/"@en .
     
     bdr:TT492B7736BFC4D317
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "phur pa bcu gnyis kyi rgyud/"@bo-x-ewts .
 }
