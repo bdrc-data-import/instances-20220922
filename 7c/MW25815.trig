@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW25815 {
+    bda:LG0MW25815_K7PRYQCNMJR5
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-21T17:32:35.290398Z"^^xsd:dateTime ;
+        adm:logMessage      "མཚན་བྱང་ནོར་བ་བཅོས།"@bo ;
+        adm:logWho          bdu:U0ES1099764871 .
+    
     bda:LGD56B1DA156B058F6
         a                   adm:UpdateData ;
         adm:logDate         "2013-07-29T16:41:16.667Z"^^xsd:dateTime ;
@@ -42,41 +47,42 @@ bdg:MW25815 {
         adm:gitPath         "7c/MW25815.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW25815 ;
-        adm:logEntry        bda:LGD56B1DA156B058F6 , bda:LGF459989476C7EFA9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG0MW25815_K7PRYQCNMJR5 , bda:LGD56B1DA156B058F6 , bda:LGF459989476C7EFA9 , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:restrictedInChina  true ;
         adm:status          bda:StatusReleased .
     
     bdr:EVC2B5A7B1106FB5D0
-        a                   :PublishedEvent ;
-        :eventWhen          "2003?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2003?"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDDDD9BADE7134F673
         a                   bdr:HollisId ;
         rdf:value           "014259474" .
     
-    bdr:MW25815  a          :Instance ;
+    bdr:MW25815  a          bdo:Instance ;
         skos:prefLabel      "rnying ma rgyud 'bum gyi kha skong (mtshams brag dgon pa'i bris ma)"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDDD9BADE7134F673 ;
-        :biblioNote         "six supplemental volumes to the mtshams brag rnying ma rgyud 'bum"@en ;
-        :extentStatement    "6 v." ;
-        :hasTitle           bdr:TT910E4E508F53F009 ;
-        :instanceEvent      bdr:EVC2B5A7B1106FB5D0 ;
-        :instanceHasReproduction  bdr:W25815 ;
-        :instanceOf         bdr:WA3JT13481 ;
-        :note               bdr:NT3A350D2BA1133F75 ;
-        :numberOfVolumes    6 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :publisherLocation  "[chengdu]"@en ;
-        :publisherName      "[lho nub mi rigs par khang]"@en ;
-        :script             bdr:ScriptDbuCan .
+        bf:identifiedBy     bdr:IDDDD9BADE7134F673 ;
+        bdo:biblioNote      "six supplemental volumes to the mtshams brag rnying ma rgyud 'bum"@en ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "6 v." ;
+        bdo:hasTitle        bdr:TT910E4E508F53F009 ;
+        bdo:instanceEvent   bdr:EVC2B5A7B1106FB5D0 ;
+        bdo:instanceHasReproduction  bdr:W25815 ;
+        bdo:instanceOf      bdr:WA3JT13481 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:note            bdr:NT3A350D2BA1133F75 ;
+        bdo:numberOfVolumes  6 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:publisherLocation  "[chengdu]"@en ;
+        bdo:publisherName   "[lho nub mi rigs par khang]"@en ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:NT3A350D2BA1133F75
-        a                   :Note ;
-        :noteText           "-3905\n\nincluded on tranche 2 of the tbrc digital library\nsupplementary volumes of tantras of the nyingma tradition recently found in china"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "-3905\n\nincluded on tranche 2 of the tbrc digital library\nsupplementary volumes of tantras of the nyingma tradition recently found in china"@en .
     
     bdr:TT910E4E508F53F009
-        a                   :Title ;
-        rdfs:label          "rnying ma rgyud 'bum gyi kha skong (mtshams brag dgon pa'i bris ma)"@bo-x-ewts .
+        a                   bdo:OtherTitle ;
+        rdfs:label          "rnying ma rgyud 'bum/ (gting skyes rgyud 'bum gyi pod tha ma drug)"@bo-x-ewts .
 }
