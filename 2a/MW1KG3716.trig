@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG3716 {
@@ -38,34 +37,40 @@ bdg:MW1KG3716 {
         adm:gitPath         "2a/MW1KG3716.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG3716 ;
-        adm:logEntry        bda:LGC3B473CEBCE7951B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LGC3B473CEBCE7951B , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C , bdr:LG0WA1KG3716_BFIWXYK4DINQ ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV6196ADB9C8AFE135
-        a                   :PublishedEvent ;
-        :eventWhen          "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1999"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDDB027A29E0B3AB20
         a                   bdr:HollisId ;
         rdf:value           "014256734" .
     
-    bdr:MW1KG3716  a        :Instance ;
+    bdr:LG0WA1KG3716_BFIWXYK4DINQ
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-22T16:14:56.633608Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1KG3716 in favor of WA0XL178B0BD5F1E9"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1944271827 .
+    
+    bdr:MW1KG3716  a        bdo:Instance ;
         skos:prefLabel      "theg pa chen po'i tshul la 'jug pa zhes bya ba'i bstan bcos/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDDB027A29E0B3AB20 ;
-        :biblioNote         "computerized print text"@en ;
-        :extentStatement    "116 ff. (232 p.)" ;
-        :hasTitle           bdr:TTC3611DCFA62878EE ;
-        :instanceEvent      bdr:EV6196ADB9C8AFE135 ;
-        :instanceHasReproduction  bdr:W1KG3716 ;
-        :instanceOf         bdr:WA1KG3716 ;
-        :numberOfVolumes    1 ;
-        :publisherLocation  "[bylakuppe, karnataka]"@en ;
-        :publisherName      "[ngagyur nyingma institute]"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:IDDB027A29E0B3AB20 ;
+        bdo:biblioNote      "computerized print text"@en ;
+        bdo:extentStatement  "116 ff. (232 p.)" ;
+        bdo:hasTitle        bdr:TTC3611DCFA62878EE ;
+        bdo:instanceEvent   bdr:EV6196ADB9C8AFE135 ;
+        bdo:instanceHasReproduction  bdr:W1KG3716 ;
+        bdo:instanceOf      bdr:WA0XL178B0BD5F1E9 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:publisherLocation  "[bylakuppe, karnataka]"@en ;
+        bdo:publisherName   "[ngagyur nyingma institute]"@en ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TTC3611DCFA62878EE
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "theg pa chen po'i tshul la 'jug pa zhes bya ba'i bstan bcos/"@bo-x-ewts .
 }
