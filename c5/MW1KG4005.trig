@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG4005 {
@@ -38,7 +37,7 @@ bdg:MW1KG4005 {
         adm:gitPath         "c5/MW1KG4005.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG4005 ;
-        adm:logEntry        bda:LG013C255E20DDACAA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG013C255E20DDACAA , bda:LGIM6B433BA01E , bda:LGIMD5FAEE0C6C , bdr:LG0WA1KG4005_WM31VQWM0INO ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -46,28 +45,34 @@ bdg:MW1KG4005 {
         a                   bdr:HollisId ;
         rdf:value           "014256806" .
     
-    bdr:MW1KG4005  a        :Instance ;
+    bdr:LG0WA1KG4005_WM31VQWM0INO
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-22T04:26:01.800551Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA1KG4005 in favor of WA0XLC375C7FA0C3D"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1944271827 .
+    
+    bdr:MW1KG4005  a        bdo:Instance ;
         skos:prefLabel      "rgyud rgyal gsang ba snying po'i 'grel pa rong zom chos bzang gis mdzad pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID36605CB4B3179EC0 ;
-        :extentStatement    "240 ff. (480 p.)" ;
-        :hasTitle           bdr:TT7EA862763E10E53C , bdr:TTE83AB444A4A25F72 ;
-        :instanceHasReproduction  bdr:W1KG4005 ;
-        :instanceOf         bdr:WA1KG4005 ;
-        :note               bdr:NT9728A2FB15DFEA2B ;
-        :numberOfVolumes    1 ;
-        :publisherName      "thub bstan nyin byed gling /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID36605CB4B3179EC0 ;
+        bdo:extentStatement  "240 ff. (480 p.)" ;
+        bdo:hasTitle        bdr:TT7EA862763E10E53C , bdr:TTE83AB444A4A25F72 ;
+        bdo:instanceHasReproduction  bdr:W1KG4005 ;
+        bdo:instanceOf      bdr:WA0XLC375C7FA0C3D ;
+        bdo:note            bdr:NT9728A2FB15DFEA2B ;
+        bdo:numberOfVolumes  1 ;
+        bdo:publisherName   "thub bstan nyin byed gling /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:NT9728A2FB15DFEA2B
-        a                   :Note ;
-        :noteText           "wood blocks carved at thub bstan nyin byed gling"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "wood blocks carved at thub bstan nyin byed gling"@en .
     
     bdr:TT7EA862763E10E53C
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "rgyud rgyal gsang ba snying po'i 'grel pa rong zom chos bzang gis mdzad pa/"@bo-x-ewts .
     
     bdr:TTE83AB444A4A25F72
-        a                   :ColophonTitle ;
+        a                   bdo:ColophonTitle ;
         rdfs:label          "dpal gsang ba'i snying po'i dka' 'grel tshul bzhi yan lag bco lngas lung gi spyir bshad pa/"@bo-x-ewts .
 }
