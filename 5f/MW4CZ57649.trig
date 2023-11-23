@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW4CZ57649 {
@@ -23,47 +22,53 @@ bdg:MW4CZ57649 {
         adm:gitPath         "5f/MW4CZ57649.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW4CZ57649 ;
-        adm:logEntry        bda:LG0EAB3981EAAEBC6C ;
+        adm:logEntry        bda:LG0EAB3981EAAEBC6C , bdr:LG0WA4CZ57649_YKWI3B404FG3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV17716751F475B22A
-        a                   :PublishedEvent ;
-        :eventWhen          "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1976"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID0DB0BD91AC02F29F
         a                   bdr:HollisId ;
         rdf:value           "011212067" .
     
     bdr:ID56BAA2CA51C245FB
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ2180.G935 R66 1976" .
     
     bdr:IDA8ECCB178B064F0D
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "76902140" .
     
-    bdr:MW4CZ57649  a       :Instance ;
+    bdr:LG0WA4CZ57649_YKWI3B404FG3
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-23T03:47:55.934026Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA4CZ57649 in favor of WA0XLC375C7FA0C3D"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1944271827 .
+    
+    bdr:MW4CZ57649  a       bdo:Instance ;
         skos:prefLabel      "gsang snying 'grel pa rong zom chos bzang gis mdzad pa/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID0DB0BD91AC02F29F , bdr:ID56BAA2CA51C245FB , bdr:IDA8ECCB178B064F0D ;
-        :biblioNote         "Reproduced from a Zhe chen print edited by Zhe-chen Gyaltsab Pema Namgyal.\" In Tibetan."@en ;
-        :extentStatement    "480 p. ; 8 x 37 cm." ;
-        :hasTitle           bdr:TT5294702B2D96437A , bdr:TTB05A47597B170D83 ;
-        :instanceEvent      bdr:EV17716751F475B22A ;
-        :instanceHasReproduction  bdr:W4CZ57649 ;
-        :instanceOf         bdr:WA4CZ57649 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "gangtok"@en ;
-        :publisherName      "dodrup sangyay lama"@en ;
-        :script             bdr:ScriptTibt .
+        bf:identifiedBy     bdr:ID0DB0BD91AC02F29F , bdr:ID56BAA2CA51C245FB , bdr:IDA8ECCB178B064F0D ;
+        bdo:biblioNote      "Reproduced from a Zhe chen print edited by Zhe-chen Gyaltsab Pema Namgyal.\" In Tibetan."@en ;
+        bdo:extentStatement  "480 p. ; 8 x 37 cm." ;
+        bdo:hasTitle        bdr:TT5294702B2D96437A , bdr:TTB05A47597B170D83 ;
+        bdo:instanceEvent   bdr:EV17716751F475B22A ;
+        bdo:instanceHasReproduction  bdr:W4CZ57649 ;
+        bdo:instanceOf      bdr:WA0XLC375C7FA0C3D ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "gangtok"@en ;
+        bdo:publisherName   "dodrup sangyay lama"@en ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT5294702B2D96437A
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "gsang snying 'grel pa rong zom chos bzang gis mdzad pa/"@bo-x-ewts .
     
     bdr:TTB05A47597B170D83
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "dpal gsang ba'i snying po'i dka' 'grel tshul bzhi yan lag bco lngas lung gi spyir bshad pa/"@bo-x-ewts .
 }
