@@ -1,14 +1,13 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW1KG12542 {
@@ -63,16 +62,16 @@ bdg:MW1KG12542 {
         adm:gitPath         "2b/MW1KG12542.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW1KG12542 ;
-        adm:logEntry        bda:LG07C0F9D130368DF1 , bda:LG199D458F7C50C356 , bda:LGBC5089562B2F8D8C , bda:LGDC70B2F60A768723 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C ;
+        adm:logEntry        bda:LG07C0F9D130368DF1 , bda:LG199D458F7C50C356 , bda:LGBC5089562B2F8D8C , bda:LGDC70B2F60A768723 , bda:LGIM6B433BA01E , bda:LGIMA45794A9D2 , bda:LGIMD5FAEE0C6C , bdr:LG0W1KG12542_7F3CANCU8CCE ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVCC59BF49B6A0B629
-        a                   :PublishedEvent ;
-        :eventWhen          "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "1975"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:ID81DE06D568CE6F87
-        a                   <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+        a                   bf:Lccn ;
         rdf:value           "75903142" .
     
     bdr:ID83F796DF9892E7AC
@@ -84,49 +83,55 @@ bdg:MW1KG12542 {
         rdf:value           "014255905" .
     
     bdr:ID92F99EEEE6DC0876
-        a                   <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+        a                   bf:ShelfMarkLcc ;
         rdf:value           "BQ2180.5.G935 K56 1975" .
     
-    bdr:MW1KG12542  a       :Instance ;
+    bdr:LG0W1KG12542_7F3CANCU8CCE
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-11-27T16:40:46.544684Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw W1KG12542 in favor of MW25983"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U0ES1062566167 .
+    
+    bdr:MW1KG12542  a       bdo:Instance ;
         skos:altLabel       "dpal gsang ba'i snying po de kho na nyid nges pa'i rgyud kyi 'grel pa phyogs bcu'i mun pa thams cad rnam par sel ba : a detailed commentary on the guhyagarbha tantra"@en ;
         skos:prefLabel      "gsang snying 'grel pa phyogs bcu mun sel/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:ID81DE06D568CE6F87 , bdr:ID83F796DF9892E7AC , bdr:ID872B6A6572068F6E , bdr:ID92F99EEEE6DC0876 ;
-        :extentStatement    "627 p." ;
-        :hasSourcePrintery  bdr:G188 ;
-        :hasTitle           bdr:TT45550245D52200FC , bdr:TT4AE211E0065D97FE , bdr:TT8846DE90F32AAB98 , bdr:TT9A78F274F965C37A , bdr:TTFDEB4E89DC64FB97 ;
-        :instanceEvent      bdr:EVCC59BF49B6A0B629 ;
-        :instanceHasReproduction  bdr:W1KG12542 ;
-        :instanceOf         bdr:WA1KG12542 ;
-        :note               bdr:NTC12752E7E555C066 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "paro"@en ;
-        :publisherName      "ngodup"@en ;
-        :script             bdr:ScriptTibt ;
-        :sourceNote         "reproduced from a print from the a-'dzom 'brug-pa chos-sgar blocks"@en .
+        bf:identifiedBy     bdr:ID81DE06D568CE6F87 , bdr:ID83F796DF9892E7AC , bdr:ID872B6A6572068F6E , bdr:ID92F99EEEE6DC0876 ;
+        bdo:extentStatement  "627 p." ;
+        bdo:hasSourcePrintery  bdr:G188 ;
+        bdo:hasTitle        bdr:TT45550245D52200FC , bdr:TT4AE211E0065D97FE , bdr:TT8846DE90F32AAB98 , bdr:TT9A78F274F965C37A , bdr:TTFDEB4E89DC64FB97 ;
+        bdo:instanceEvent   bdr:EVCC59BF49B6A0B629 ;
+        bdo:instanceHasReproduction  bdr:MW25983 ;
+        bdo:instanceOf      bdr:WA1KG12542 ;
+        bdo:note            bdr:NTC12752E7E555C066 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "paro"@en ;
+        bdo:publisherName   "ngodup"@en ;
+        bdo:script          bdr:ScriptTibt ;
+        bdo:sourceNote      "reproduced from a print from the a-'dzom 'brug-pa chos-sgar blocks"@en .
     
     bdr:NTC12752E7E555C066
-        a                   :Note ;
-        :noteText           "in tibetan; preface in english"@en .
+        a                   bdo:Note ;
+        bdo:noteText        "in tibetan; preface in english"@en .
     
     bdr:TT45550245D52200FC
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "Dpal Gsaṅ baʾi sñiṅ po de kho na ñid ṅes paʾi rgyud kyiʾgrel pa phyogs bcuʾi mun pa thams cad rnam par sel ba :a detailed commentary on the Guhyagarbha Tantra /by Kloṅ-chen Rab-ʾbyams-pa Dri-med-ʾod-zer."@en-x-mixed .
     
     bdr:TT4AE211E0065D97FE
-        a                   :CoverTitle ;
+        a                   bdo:CoverTitle ;
         rdfs:label          "kun mkhyen klong chen pa'i gsung rgyud gsang snying gi 'grel chen phyogs bcu mun sel/"@bo-x-ewts .
     
     bdr:TT8846DE90F32AAB98
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "gsang snying 'grel pa phyogs bcu mun sel/"@bo-x-ewts .
     
     bdr:TT9A78F274F965C37A
-        a                   :FullTitle ;
+        a                   bdo:FullTitle ;
         rdfs:label          "dpal gsang ba'i snying po de kho na nyid nges pa'i rgyud kyi 'grel pa phyogs bcu'i mun pa thams cad rnam par sel ba/"@bo-x-ewts .
     
     bdr:TTFDEB4E89DC64FB97
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "dpal gsang ba'i snying po de kho na nyid nges pa'i rgyud kyi 'grel pa phyogs bcu'i mun pa thams cad rnam par sel ba : a detailed commentary on the guhyagarbha tantra"@en .
 }
