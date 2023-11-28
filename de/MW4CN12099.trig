@@ -4,6 +4,8 @@
 @prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -21,17 +23,28 @@ bdg:MW4CN12099 {
         adm:logMessage      "testing"@bo ;
         adm:logWho          bdu:U0ES1788534075 .
     
+    bda:LG0MW4CN12099_TWYDKUQHLQBL
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-11-28T22:35:12.764452Z"^^xsd:dateTime ;
+        adm:logMessage      "saved"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:MW4CN12099  a       adm:AdminData ;
         adm:adminAbout      bdr:MW4CN12099 ;
         adm:graphId         bdg:MW4CN12099 ;
-        adm:logEntry        bda:LG0MW4CN12099_N5VK2WUUFPR1 , bda:LG0MW4CN12099_NWPTVEU9NJHV ;
+        adm:logEntry        bda:LG0MW4CN12099_N5VK2WUUFPR1 , bda:LG0MW4CN12099_NWPTVEU9NJHV , bda:LG0MW4CN12099_TWYDKUQHLQBL ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:IDMW4CN12099WX8Y5TI6
+        a                   bf:Isbn ;
+        rdf:value           "9787501042784" .
     
     bdr:MW4CN12099  a       bdo:Instance ;
         skos:altLabel       "藏文书法精粹"@zh-hans ;
         skos:prefLabel      "bod kyi yig gzugs gces btus skal bzang bgrod pa'i myur lam/"@bo-x-ewts ;
-        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bf:identifiedBy     bdr:IDMW4CN12099WX8Y5TI6 ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
         bdo:extentStatement  "179" ;
         bdo:hasTitle        bdr:TTMW4CN12099AIJZMDH6 ;
         bdo:material        bdr:MaterialPaper ;
