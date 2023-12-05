@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS19497 {
+    bda:LG0MW8LS19497_5RDDV90HYZ1E
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-12-05T03:31:04.903608Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw"@en ;
+        adm:logWho          bdu:U1653882847 .
+    
     bda:LGB8ABD0620AB783EF
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-01-31T11:49:47.236Z"^^xsd:dateTime ;
@@ -24,21 +27,24 @@ bdg:MW8LS19497 {
         adm:gitPath         "6c/MW8LS19497.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS19497 ;
-        adm:logEntry        bda:LGB8ABD0620AB783EF ;
+        adm:logEntry        bda:LG0MW8LS19497_5RDDV90HYZ1E , bda:LGB8ABD0620AB783EF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:replaceWith     bdr:MW2PD17382 ;
+        adm:status          bda:StatusWithdrawn .
     
-    bdr:MW8LS19497  a       :Instance ;
+    bdr:MW8LS19497  a       bdo:Instance ;
         skos:prefLabel      "bcom ldan phyag rgya zil gnon gyi dbang gi cho ga nges pa'i don bde blag tu 'jug pa la sogs/"@bo-x-ewts ;
-        :extentStatement    "1916 p." ;
-        :hasTitle           bdr:TTF935B1C7325A8C7A ;
-        :instanceHasReproduction  bdr:W8LS19497 ;
-        :instanceOf         bdr:WA8LS19497 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Manuscript ;
-        :script             bdr:ScriptDbuMed .
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:extentStatement  "1916 p." ;
+        bdo:hasTitle        bdr:TTF935B1C7325A8C7A ;
+        bdo:instanceHasReproduction  bdr:W8LS19497 ;
+        bdo:instanceOf      bdr:WA8LS19497 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Manuscript ;
+        bdo:script          bdr:ScriptDbuMed .
     
     bdr:TTF935B1C7325A8C7A
-        a                   :TitlePageTitle ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "bcom ldan phyag rgya zil gnon gyi dbang gi cho ga nges pa'i don bde blag tu 'jug pa la sogs/"@bo-x-ewts .
 }
