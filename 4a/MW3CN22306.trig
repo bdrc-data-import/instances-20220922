@@ -1,14 +1,11 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN22306 {
@@ -30,28 +27,35 @@ bdg:MW3CN22306 {
         adm:gitPath         "4a/MW3CN22306.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN22306 ;
-        adm:logEntry        bda:LG986E8C7987BB3BA8 , bda:LG9FAB5E28D7739B09 ;
+        adm:logEntry        bda:LG986E8C7987BB3BA8 , bda:LG9FAB5E28D7739B09 , bdr:LG0WA3CN22306_670VAKCOYH06 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:MW3CN22306  a       :Instance ;
+    bdr:LG0WA3CN22306_670VAKCOYH06
+        a                   adm:WithdrawData ;
+        adm:logDate         "2023-12-13T08:01:54.254880Z"^^xsd:dateTime ;
+        adm:logMessage      "withdraw WA3CN22306 in favor of WA00CHZ0103344"@en ;
+        adm:logMethod       bda:BatchMethod ;
+        adm:logWho          bdu:U1653882847 .
+    
+    bdr:MW3CN22306  a       bdo:Instance ;
         skos:prefLabel      "rgya nag yul du dam pa'i chos dar tshul gtso bor bshad pa blo gsal kun tu dga' ba'i rna rgyan/"@bo-x-ewts ;
-        :extentStatement    "110 ff." ;
-        :hasSourcePrintery  bdr:G1PD129185 ;
-        :hasTitle           bdr:TT1765E8705D2BBB6D , bdr:TTA35DF354C61D117F ;
-        :instanceHasReproduction  bdr:W3CN22306 ;
-        :instanceOf         bdr:WA3CN22306 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Relief_WoodBlock ;
-        :publisherLocation  "lha sa/"@bo-x-ewts ;
-        :publisherName      "zhol par khang chen mo/"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:extentStatement  "110 ff." ;
+        bdo:hasSourcePrintery  bdr:G1PD129185 ;
+        bdo:hasTitle        bdr:TT1765E8705D2BBB6D , bdr:TTA35DF354C61D117F ;
+        bdo:instanceHasReproduction  bdr:W3CN22306 ;
+        bdo:instanceOf      bdr:WA00CHZ0103344 ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Relief_WoodBlock ;
+        bdo:publisherLocation  "lha sa/"@bo-x-ewts ;
+        bdo:publisherName   "zhol par khang chen mo/"@bo-x-ewts ;
+        bdo:script          bdr:ScriptTibt .
     
     bdr:TT1765E8705D2BBB6D
-        a                   :OtherTitle ;
+        a                   bdo:OtherTitle ;
         rdfs:label          "rgya nag chos 'byung /"@bo-x-ewts .
     
     bdr:TTA35DF354C61D117F
-        a                   :Title ;
+        a                   bdo:Title ;
         rdfs:label          "rgya nag yul du dam pa'i chos dar tshul gtso bor bshad pa blo gsal kun tu dga' ba'i rna rgyan/"@bo-x-ewts .
 }
