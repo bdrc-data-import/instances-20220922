@@ -1,17 +1,22 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW8LS20245 {
+    bda:LG0MW8LS20245_HC4SFDMPJONX
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-12-20T18:01:13.526870Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected typo"@en ;
+        adm:logWho          bdu:U1426146149 .
+    
     bda:LG5CD5EE307C1A9FC0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-05-10T15:07:41.807Z"^^xsd:dateTime ;
@@ -23,36 +28,41 @@ bdg:MW8LS20245 {
         adm:gitPath         "0c/MW8LS20245.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW8LS20245 ;
-        adm:logEntry        bda:LG5CD5EE307C1A9FC0 ;
+        adm:logEntry        bda:LG0MW8LS20245_HC4SFDMPJONX , bda:LG5CD5EE307C1A9FC0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV16D8B2D82D146F16
-        a                   :PublishedEvent ;
-        :eventWhen          "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2016"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
     bdr:IDB4BA958543099E0B
-        a                   <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+        a                   bf:Isbn ;
         rdf:value           "9787802534216" .
     
-    bdr:MW8LS20245  a       :Instance ;
-        skos:prefLabel      "bzo rig phyogs bsgrigs ri chen sgrom bu/"@bo-x-ewts ;
-        <http://id.loc.gov/ontologies/bibframe/identifiedBy>
-            bdr:IDB4BA958543099E0B ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :copyrightStatus    bdr:CopyrightInCopyright ;
-        :extentStatement    "884 p." ;
-        :hasTitle           bdr:TT5688DE266539E5FA ;
-        :instanceEvent      bdr:EV16D8B2D82D146F16 ;
-        :instanceHasReproduction  bdr:W8LS20245 ;
-        :instanceOf         bdr:WA8LS20245 ;
-        :numberOfVolumes    1 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "pe cin/"@en ;
-        :publisherName      "krung go'i bod rig pa dpe skrun khang /"@en ;
-        :script             bdr:ScriptTibt .
+    bdr:MW8LS20245  a       bdo:Instance ;
+        skos:prefLabel      "bzo rig phyogs bsgrigs rin chen sgrom bu/"@bo-x-ewts ;
+        bf:identifiedBy     bdr:IDB4BA958543099E0B ;
+        bdo:binding         bdr:Binding_Codex_Perfect ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightInCopyright ;
+        bdo:extentStatement  "884 p." ;
+        bdo:hasTitle        bdr:TT5688DE266539E5FA , bdr:TTMW8LS20245VECI5Y90 ;
+        bdo:instanceEvent   bdr:EV16D8B2D82D146F16 ;
+        bdo:instanceHasReproduction  bdr:W8LS20245 ;
+        bdo:instanceOf      bdr:WA8LS20245 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  1 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "pe cin/"@bo-x-ewts ;
+        bdo:publisherName   "krung go'i bod rig pa dpe skrun khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT5688DE266539E5FA
-        a                   :TitlePageTitle ;
-        rdfs:label          "bzo rig phyogs bsgrigs ri chen sgrom bu/"@bo-x-ewts .
+        a                   bdo:TitlePageTitle ;
+        rdfs:label          "bzo rig phyogs bsgrigs rin chen sgrom bu/"@bo-x-ewts .
+    
+    bdr:TTMW8LS20245VECI5Y90
+        a                   bdo:OtherTitle ;
+        rdfs:label          "藏族工艺学经典汇编"@zh-hans .
 }
