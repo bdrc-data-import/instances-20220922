@@ -1,17 +1,20 @@
-@prefix :      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:MW3CN26455 {
+    bda:LG0MW3CN26455_NOPX3WEXBQD7
+        a                   adm:UpdateData ;
+        adm:logDate         "2023-12-30T02:15:23.586329Z"^^xsd:dateTime ;
+        adm:logMessage      "added etexts & image VM"@bo ;
+        adm:logWho          bdu:U0ES1788534075 .
+    
     bda:LG2FC02451566FC23B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2021-06-17T13:09:21.408Z"^^xsd:dateTime ;
@@ -35,31 +38,36 @@ bdg:MW3CN26455 {
         adm:gitPath         "c8/MW3CN26455.trig" ;
         adm:gitRepo         bda:GR0012 ;
         adm:graphId         bdg:MW3CN26455 ;
-        adm:logEntry        bda:LG2FC02451566FC23B , bda:LGC8AA377A83B8F97A , bda:LGCAB8517A8231C69E ;
+        adm:logEntry        bda:LG0MW3CN26455_NOPX3WEXBQD7 , bda:LG2FC02451566FC23B , bda:LGC8AA377A83B8F97A , bda:LGCAB8517A8231C69E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV589C7CD88F4D738F
-        a                   :PublishedEvent ;
-        :eventWhen          "2021"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
+        a                   bdo:PublishedEvent ;
+        bdo:eventWhen       "2021"^^<http://id.loc.gov/datatypes/edtf/EDTF> .
     
-    bdr:MW3CN26455  a       :Instance ;
+    bdr:MW3CN26455  a       bdo:Instance ;
         skos:prefLabel      "gsung 'bum/ karma chags med/"@bo-x-ewts ;
-        :contentMethod      bdr:ContentMethod_ComputerInput ;
-        :extentStatement    "65v（55v+10v）" ;
-        :hasTitle           bdr:TT7E8022CE43861264 , bdr:TTDCD2641FF69F56FA ;
-        :instanceEvent      bdr:EV589C7CD88F4D738F ;
-        :instanceOf         bdr:WA00EGS1017082 ;
-        :printMethod        bdr:PrintMethod_Modern ;
-        :publisherLocation  "khams nang chen/"@bo-x-ewts ;
-        :publisherName      "gnas mdo'i dpe tshogs khang /"@bo-x-ewts ;
-        :script             bdr:ScriptTibt .
+        bdo:biblioNote      "གསུང་འབུམ་ཕྱོགས་བསྒྲིགས་འདིའི་ནང་དུ་ཀརྨ་ཆགས་མེད་ཀྱི་གསུང་རྐྱང་པ་པོད་55དང་ཆགས་མེད་སྐུ་ཕྲེང་བཞི་པ་དང་ལྔ་པ་གཉིས་ཀྱི་གསུང་པོད་10ཡང་བསྣན་ཡོད་འདུག"@bo ;
+        bdo:binding         bdr:Binding_LooseLeaf_Pecha ;
+        bdo:contentMethod   bdr:ContentMethod_ComputerInput ;
+        bdo:copyrightStatus  bdr:CopyrightUndetermined ;
+        bdo:hasTitle        bdr:TT7E8022CE43861264 , bdr:TTDCD2641FF69F56FA ;
+        bdo:instanceEvent   bdr:EV589C7CD88F4D738F ;
+        bdo:instanceHasReproduction  bdr:IE3CN26455 , bdr:W3CN26455 ;
+        bdo:instanceOf      bdr:WA00EGS1017082 ;
+        bdo:material        bdr:MaterialPaper ;
+        bdo:numberOfVolumes  65 ;
+        bdo:printMethod     bdr:PrintMethod_Modern ;
+        bdo:publisherLocation  "khams nang chen/"@bo-x-ewts ;
+        bdo:publisherName   "gnas mdo'i dpe tshogs khang /"@bo-x-ewts ;
+        bdo:script          bdr:ScriptDbuCan .
     
     bdr:TT7E8022CE43861264
-        a                   :Title ;
+        a                   bdo:TitlePageTitle ;
         rdfs:label          "mkhas grub karma chags med kyi bka' 'bum yongs 'dus ngo mtshar dgos 'dod kun 'byung /"@bo-x-ewts .
     
     bdr:TTDCD2641FF69F56FA
-        a                   :Title ;
+        a                   bdo:BibliographicalTitle ;
         rdfs:label          "gsung 'bum/ karma chags med/"@bo-x-ewts .
 }
